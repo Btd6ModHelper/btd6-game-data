@@ -1,0 +1,474 @@
+{
+  "$type": "Assets.Scripts.Models.Powers.PowerModel, Assembly-CSharp",
+  "cost": 80,
+  "canBeActivatedBetweenRounds": true,
+  "icon": {
+    "$type": "Assets.Scripts.Utils.SpriteReference, Assembly-CSharp",
+    "GUID": "PowerIcons[EnergisingTotemIcon]",
+    "IsValid": true,
+    "guidRef": "PowerIcons[EnergisingTotemIcon]"
+  },
+  "behaviors": [
+    {
+      "$type": "Assets.Scripts.Models.Powers.Effects.CreateEffectOnPowerModel, Assembly-CSharp",
+      "effectModel": {
+        "$type": "Assets.Scripts.Models.Effects.EffectModel, Assembly-CSharp",
+        "assetId": {
+          "$type": "Assets.Scripts.Utils.PrefabReference, Assembly-CSharp",
+          "GUID": "cc4e51ecd049ee249a5bd51db3612483",
+          "IsValid": true,
+          "guidRef": "cc4e51ecd049ee249a5bd51db3612483"
+        },
+        "scale": 1.0,
+        "lifespan": 1.0,
+        "fullscreen": 0,
+        "useCenterPosition": false,
+        "useTransformPosition": false,
+        "useTransfromRotation": false,
+        "destroyOnTransformDestroy": false,
+        "alwaysUseAge": false,
+        "useRoundTime": false,
+        "name": "EffectModel_",
+        "ImplementationType": null
+      },
+      "name": "CreateEffectOnPowerModel_EnergisingTotem",
+      "ImplementationType": "Assets.Scripts.Simulation.Powers.Effects.CreateEffectOnPower, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    }
+  ],
+  "mods": null,
+  "tower": {
+    "$type": "Assets.Scripts.Models.Towers.TowerModel, Assembly-CSharp",
+    "display": {
+      "$type": "Assets.Scripts.Utils.PrefabReference, Assembly-CSharp",
+      "GUID": "65bf98ead18ff0643b31acfd2736ce57",
+      "IsValid": true,
+      "guidRef": "65bf98ead18ff0643b31acfd2736ce57"
+    },
+    "baseId": "EnergisingTotem",
+    "cost": 0.0,
+    "radius": 5.0,
+    "radiusSquared": 25.0,
+    "range": 40.0,
+    "ignoreBlockers": false,
+    "isGlobalRange": false,
+    "tier": 0,
+    "tiers": [
+      0,
+      0,
+      0
+    ],
+    "towerSet": 64,
+    "icon": {
+      "$type": "Assets.Scripts.Utils.SpriteReference, Assembly-CSharp",
+      "GUID": null,
+      "IsValid": false,
+      "guidRef": null
+    },
+    "portrait": {
+      "$type": "Assets.Scripts.Utils.SpriteReference, Assembly-CSharp",
+      "GUID": "a85517293ef6c45f4a153082e065cc4e",
+      "IsValid": true,
+      "guidRef": "a85517293ef6c45f4a153082e065cc4e"
+    },
+    "instaIcon": {
+      "$type": "Assets.Scripts.Utils.SpriteReference, Assembly-CSharp",
+      "GUID": null,
+      "IsValid": false,
+      "guidRef": null
+    },
+    "areaTypes": [
+      2
+    ],
+    "mods": [],
+    "ignoreTowerForSelection": false,
+    "behaviors": [
+      {
+        "$type": "Assets.Scripts.Models.Towers.Behaviors.RateSupportModel, Assembly-CSharp",
+        "multiplier": 0.75,
+        "isUnique": true,
+        "mutatorId": "EnergisingTotemRate",
+        "priority": 0,
+        "filters": null,
+        "isGlobal": false,
+        "isCustomRadius": false,
+        "customRadius": 0.0,
+        "appliesToOwningTower": false,
+        "showBuffIcon": false,
+        "buffLocsName": "",
+        "buffIconName": "",
+        "maxStackSize": 0,
+        "onlyShowBuffIfMutated": false,
+        "onlyAffectParagon": false,
+        "name": "RateSupportModel_EnergisingTotem_",
+        "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.RateSupport, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+      },
+      {
+        "$type": "Assets.Scripts.Models.Towers.Behaviors.EnergisingTotemBehaviorModel, Assembly-CSharp",
+        "rounds": 5,
+        "monkeyMoneyCost": 20,
+        "animationStates": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "effectModels": [
+          {
+            "$type": "Assets.Scripts.Models.Effects.EffectModel, Assembly-CSharp",
+            "assetId": {
+              "$type": "Assets.Scripts.Utils.PrefabReference, Assembly-CSharp",
+              "GUID": "faf5bc32286af5a4fb2920dbc6d59458",
+              "IsValid": true,
+              "guidRef": "faf5bc32286af5a4fb2920dbc6d59458"
+            },
+            "scale": 1.0,
+            "lifespan": 5.0,
+            "fullscreen": 0,
+            "useCenterPosition": false,
+            "useTransformPosition": true,
+            "useTransfromRotation": false,
+            "destroyOnTransformDestroy": true,
+            "alwaysUseAge": false,
+            "useRoundTime": false,
+            "name": "EffectModel_5_rounds_remaining",
+            "ImplementationType": null
+          },
+          {
+            "$type": "Assets.Scripts.Models.Effects.EffectModel, Assembly-CSharp",
+            "assetId": {
+              "$type": "Assets.Scripts.Utils.PrefabReference, Assembly-CSharp",
+              "GUID": "ce3c938a0738a4b45befbedc06f70826",
+              "IsValid": true,
+              "guidRef": "ce3c938a0738a4b45befbedc06f70826"
+            },
+            "scale": 1.0,
+            "lifespan": 5.0,
+            "fullscreen": 0,
+            "useCenterPosition": false,
+            "useTransformPosition": true,
+            "useTransfromRotation": false,
+            "destroyOnTransformDestroy": true,
+            "alwaysUseAge": false,
+            "useRoundTime": false,
+            "name": "EffectModel_4_rounds_remaining",
+            "ImplementationType": null
+          },
+          {
+            "$type": "Assets.Scripts.Models.Effects.EffectModel, Assembly-CSharp",
+            "assetId": {
+              "$type": "Assets.Scripts.Utils.PrefabReference, Assembly-CSharp",
+              "GUID": "de3ebdf601370fa4394f12adb6b57ee7",
+              "IsValid": true,
+              "guidRef": "de3ebdf601370fa4394f12adb6b57ee7"
+            },
+            "scale": 1.0,
+            "lifespan": 5.0,
+            "fullscreen": 0,
+            "useCenterPosition": false,
+            "useTransformPosition": true,
+            "useTransfromRotation": false,
+            "destroyOnTransformDestroy": true,
+            "alwaysUseAge": false,
+            "useRoundTime": false,
+            "name": "EffectModel_3_rounds_remaining",
+            "ImplementationType": null
+          },
+          {
+            "$type": "Assets.Scripts.Models.Effects.EffectModel, Assembly-CSharp",
+            "assetId": {
+              "$type": "Assets.Scripts.Utils.PrefabReference, Assembly-CSharp",
+              "GUID": "49a91c88765958c4988da09479abbe56",
+              "IsValid": true,
+              "guidRef": "49a91c88765958c4988da09479abbe56"
+            },
+            "scale": 1.0,
+            "lifespan": 5.0,
+            "fullscreen": 0,
+            "useCenterPosition": false,
+            "useTransformPosition": true,
+            "useTransfromRotation": false,
+            "destroyOnTransformDestroy": true,
+            "alwaysUseAge": false,
+            "useRoundTime": false,
+            "name": "EffectModel_2_rounds_remaining",
+            "ImplementationType": null
+          },
+          {
+            "$type": "Assets.Scripts.Models.Effects.EffectModel, Assembly-CSharp",
+            "assetId": {
+              "$type": "Assets.Scripts.Utils.PrefabReference, Assembly-CSharp",
+              "GUID": "8105af7e7b334f8429cbceb3cef8b333",
+              "IsValid": true,
+              "guidRef": "8105af7e7b334f8429cbceb3cef8b333"
+            },
+            "scale": 1.0,
+            "lifespan": 5.0,
+            "fullscreen": 0,
+            "useCenterPosition": false,
+            "useTransformPosition": true,
+            "useTransfromRotation": false,
+            "destroyOnTransformDestroy": true,
+            "alwaysUseAge": false,
+            "useRoundTime": false,
+            "name": "EffectModel_1_rounds_remaining",
+            "ImplementationType": null
+          },
+          {
+            "$type": "Assets.Scripts.Models.Effects.EffectModel, Assembly-CSharp",
+            "assetId": {
+              "$type": "Assets.Scripts.Utils.PrefabReference, Assembly-CSharp",
+              "GUID": null,
+              "IsValid": false,
+              "guidRef": null
+            },
+            "scale": 1.0,
+            "lifespan": 0.0,
+            "fullscreen": 0,
+            "useCenterPosition": false,
+            "useTransformPosition": true,
+            "useTransfromRotation": false,
+            "destroyOnTransformDestroy": true,
+            "alwaysUseAge": false,
+            "useRoundTime": false,
+            "name": "EffectModel_0_rounds_remaining",
+            "ImplementationType": null
+          }
+        ],
+        "name": "EnergisingTotemBehaviorModel_",
+        "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.EnergisingTotemBehavior, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+      },
+      {
+        "$type": "Assets.Scripts.Models.Towers.Behaviors.CreateEffectOnSellModel, Assembly-CSharp",
+        "effectModel": {
+          "$type": "Assets.Scripts.Models.Effects.EffectModel, Assembly-CSharp",
+          "assetId": {
+            "$type": "Assets.Scripts.Utils.PrefabReference, Assembly-CSharp",
+            "GUID": "b1dec8a8d79593843bc2e2410eae944e",
+            "IsValid": true,
+            "guidRef": "b1dec8a8d79593843bc2e2410eae944e"
+          },
+          "scale": 1.0,
+          "lifespan": 1.0,
+          "fullscreen": 0,
+          "useCenterPosition": false,
+          "useTransformPosition": false,
+          "useTransfromRotation": false,
+          "destroyOnTransformDestroy": false,
+          "alwaysUseAge": false,
+          "useRoundTime": false,
+          "name": "EffectModel_",
+          "ImplementationType": null
+        },
+        "name": "CreateEffectOnSellModel_EnergisingTotem",
+        "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.CreateEffectOnSell, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+      },
+      {
+        "$type": "Assets.Scripts.Models.Towers.Behaviors.CreateEffectOnPlaceModel, Assembly-CSharp",
+        "effectModel": null,
+        "name": "CreateEffectOnPlaceModel_EnergisingTotem",
+        "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.CreateEffectOnPlace, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+      },
+      {
+        "$type": "Assets.Scripts.Models.Towers.Behaviors.PlayAnimationIndexModel, Assembly-CSharp",
+        "placeAnimation": 1,
+        "upgradeAnimation": 1,
+        "name": "PlayAnimationIndexModel_EnergisingTotem",
+        "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.PlayAnimationIndex, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+      },
+      {
+        "$type": "Assets.Scripts.Models.Towers.Behaviors.CreateSoundOnTowerPlaceModel, Assembly-CSharp",
+        "sound1": {
+          "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
+          "assetId": {
+            "$type": "Assets.Scripts.Utils.AudioSourceReference, Assembly-CSharp",
+            "GUID": "0782b04f742eb2542bc8266a38241c5b",
+            "IsValid": true,
+            "guidRef": "0782b04f742eb2542bc8266a38241c5b"
+          },
+          "name": "SoundModel_PlaceSound1",
+          "ImplementationType": null
+        },
+        "sound2": {
+          "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
+          "assetId": {
+            "$type": "Assets.Scripts.Utils.AudioSourceReference, Assembly-CSharp",
+            "GUID": "80580fcd99708624ab85e37036ca124c",
+            "IsValid": true,
+            "guidRef": "80580fcd99708624ab85e37036ca124c"
+          },
+          "name": "SoundModel_PlaceSound2",
+          "ImplementationType": null
+        },
+        "heroSound1": null,
+        "heroSound2": null,
+        "name": "CreateSoundOnTowerPlaceModel_EnergisingTotem",
+        "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.CreateSoundOnTowerPlace, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+      },
+      {
+        "$type": "Assets.Scripts.Models.Towers.Behaviors.CreateSoundOnSellModel, Assembly-CSharp",
+        "sound": {
+          "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
+          "assetId": {
+            "$type": "Assets.Scripts.Utils.AudioSourceReference, Assembly-CSharp",
+            "GUID": "df4c691ccf8a3c7408ed6f156740c8b7",
+            "IsValid": true,
+            "guidRef": "df4c691ccf8a3c7408ed6f156740c8b7"
+          },
+          "name": "SoundModel_SellSound",
+          "ImplementationType": null
+        },
+        "name": "CreateSoundOnSellModel_EnergisingTotem",
+        "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.CreateSoundOnSell, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+      },
+      {
+        "$type": "Assets.Scripts.Models.Towers.Behaviors.EnergisingTotemAnimStateModel, Assembly-CSharp",
+        "name": "EnergisingTotemAnimStateModel_EnergisingTotem",
+        "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.EnergisingTotemAnimState, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+      },
+      {
+        "$type": "Assets.Scripts.Models.Towers.Behaviors.EnergisingTotemAnimStateModel, Assembly-CSharp",
+        "name": "EnergisingTotemAnimStateModel_EnergisingTotem",
+        "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.EnergisingTotemAnimState, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+      },
+      {
+        "$type": "Assets.Scripts.Models.Towers.Behaviors.EnergisingTotemAnimStateModel, Assembly-CSharp",
+        "name": "EnergisingTotemAnimStateModel_EnergisingTotem",
+        "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.EnergisingTotemAnimState, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+      },
+      {
+        "$type": "Assets.Scripts.Models.Towers.Behaviors.EnergisingTotemAnimStateModel, Assembly-CSharp",
+        "name": "EnergisingTotemAnimStateModel_EnergisingTotem",
+        "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.EnergisingTotemAnimState, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+      },
+      {
+        "$type": "Assets.Scripts.Models.Towers.Behaviors.EnergisingTotemAnimStateModel, Assembly-CSharp",
+        "name": "EnergisingTotemAnimStateModel_EnergisingTotem",
+        "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.EnergisingTotemAnimState, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+      },
+      {
+        "$type": "Assets.Scripts.Models.Towers.Behaviors.EnergisingTotemAnimStateModel, Assembly-CSharp",
+        "name": "EnergisingTotemAnimStateModel_EnergisingTotem",
+        "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.EnergisingTotemAnimState, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+      },
+      {
+        "$type": "Assets.Scripts.Models.Towers.Behaviors.CreateSoundOnMonkeyMoneyActivatedModel, Assembly-CSharp",
+        "sound": {
+          "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
+          "assetId": {
+            "$type": "Assets.Scripts.Utils.AudioSourceReference, Assembly-CSharp",
+            "GUID": "88f5a627ab821d74c94c30bebce1e4c5",
+            "IsValid": true,
+            "guidRef": "88f5a627ab821d74c94c30bebce1e4c5"
+          },
+          "name": "SoundModel_EnergizingTotemRecharge",
+          "ImplementationType": null
+        },
+        "name": "CreateSoundOnMonkeyMoneyActivatedModel_EnergisingTotem",
+        "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.CreateSoundOnMonkeyMoneyActivated, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+      },
+      {
+        "$type": "Assets.Scripts.Models.Towers.Behaviors.MutationImunityTowerModel, Assembly-CSharp",
+        "mutationIds": [
+          "EnergisingTotemRate"
+        ],
+        "effectScale": 0.0,
+        "durationScale": 0.0,
+        "modifyEffectScale": false,
+        "modifyDurationScale": false,
+        "preventMutation": true,
+        "name": "MutationImunityTowerModel_",
+        "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.MutationImunityTower, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+      },
+      {
+        "$type": "Assets.Scripts.Models.GenericBehaviors.DisplayModel, Assembly-CSharp",
+        "display": {
+          "$type": "Assets.Scripts.Utils.PrefabReference, Assembly-CSharp",
+          "GUID": "65bf98ead18ff0643b31acfd2736ce57",
+          "IsValid": true,
+          "guidRef": "65bf98ead18ff0643b31acfd2736ce57"
+        },
+        "layer": -1,
+        "positionOffset": {
+          "$type": "Assets.Scripts.Simulation.SMath.Vector3, Assembly-CSharp",
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "MagnitudeSquared": 0.0,
+          "Magnitude": 0.0,
+          "Rotation": 0.0,
+          "SimToDispRotation": 180.0
+        },
+        "scale": 1.0,
+        "ignoreRotation": false,
+        "animationChanges": null,
+        "delayedReveal": 0.0,
+        "category": 4,
+        "name": "DisplayModel_TowerDisplay",
+        "ImplementationType": "Assets.Scripts.Simulation.Behaviors.DisplayBehavior, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+      }
+    ],
+    "footprint": {
+      "$type": "Assets.Scripts.Models.Towers.Behaviors.CircleFootprintModel, Assembly-CSharp",
+      "radius": 5.0,
+      "doesntBlockTowerPlacement": false,
+      "ignoresPlacementCheck": false,
+      "ignoresTowerOverlap": false,
+      "name": "CircleFootprintModel_Circle Footprint",
+      "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.CircleFootprint, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    "dontDisplayUpgrades": true,
+    "emoteSpriteSmall": {
+      "$type": "Assets.Scripts.Utils.SpriteReference, Assembly-CSharp",
+      "GUID": null,
+      "IsValid": false,
+      "guidRef": null
+    },
+    "emoteSpriteLarge": {
+      "$type": "Assets.Scripts.Utils.SpriteReference, Assembly-CSharp",
+      "GUID": null,
+      "IsValid": false,
+      "guidRef": null
+    },
+    "doesntRotate": true,
+    "upgrades": [],
+    "appliedUpgrades": [],
+    "targetTypes": null,
+    "paragonUpgrade": null,
+    "isSubTower": false,
+    "isBakable": false,
+    "powerName": "EnergisingTotem",
+    "showPowerTowerBuffs": true,
+    "animationSpeed": 1.0,
+    "towerSelectionMenuThemeId": "EnergisingTotem",
+    "ignoreCoopAreas": false,
+    "canAlwaysBeSold": false,
+    "blockSelling": false,
+    "isParagon": false,
+    "ignoreMaxSellPercent": false,
+    "isStunned": false,
+    "geraldoItemName": null,
+    "sellbackModifierAdd": 0.0,
+    "skinName": null,
+    "dontAddMutatorsFromParent": false,
+    "displayScale": 1.0,
+    "showBuffs": true,
+    "destroyTowerOnRedistribution": false,
+    "isPowerTower": true,
+    "isGeraldoItem": false,
+    "IsBeastHandlerPet": false,
+    "BeastHandlerLeashMutationId": "BeastHandlerContributionEnergisingTotem",
+    "IsBaseTower": true,
+    "TargetTypes": null,
+    "IsExclusivelyWaterBased": false,
+    "name": "EnergisingTotem",
+    "ImplementationType": "Assets.Scripts.Simulation.Towers.Tower, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+  },
+  "isDisabledByGameMode": false,
+  "isHidden": false,
+  "showBuffsForTower": true,
+  "quantity": 1,
+  "name": "EnergisingTotem",
+  "ImplementationType": "Assets.Scripts.Simulation.Powers.Power, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+}

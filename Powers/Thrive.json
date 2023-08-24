@@ -1,0 +1,83 @@
+{
+  "$type": "Assets.Scripts.Models.Powers.PowerModel, Assembly-CSharp",
+  "cost": 70,
+  "canBeActivatedBetweenRounds": false,
+  "icon": {
+    "$type": "Assets.Scripts.Utils.SpriteReference, Assembly-CSharp",
+    "GUID": "PowerIcons[ThriveIcon]",
+    "IsValid": true,
+    "guidRef": "PowerIcons[ThriveIcon]"
+  },
+  "behaviors": [
+    {
+      "$type": "Assets.Scripts.Models.Powers.ThriveModel, Assembly-CSharp",
+      "cashScale": 1.25,
+      "increaseBloonWorthSimBehaviorModel": {
+        "$type": "Assets.Scripts.Models.SimulationBehaviors.IncreaseBloonWorthSimBehaviorModel, Assembly-CSharp",
+        "cashScale": 1.25,
+        "isUnique": true,
+        "name": "IncreaseBloonWorthSimBehaviorModel_Thrive",
+        "ImplementationType": "Assets.Scripts.Simulation.SimulationBehaviors.IncreaseBloonWorthSimBehavior, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+      },
+      "name": "ThriveModel_Thrive",
+      "ImplementationType": "Assets.Scripts.Simulation.Powers.Thrive, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+      "$type": "Assets.Scripts.Models.Powers.Effects.CreateEffectOnPowerModel, Assembly-CSharp",
+      "effectModel": {
+        "$type": "Assets.Scripts.Models.Effects.EffectModel, Assembly-CSharp",
+        "assetId": {
+          "$type": "Assets.Scripts.Utils.PrefabReference, Assembly-CSharp",
+          "GUID": "01199848c0216e542b43650fb4686458",
+          "IsValid": true,
+          "guidRef": "01199848c0216e542b43650fb4686458"
+        },
+        "scale": 1.0,
+        "lifespan": 2.0,
+        "fullscreen": 1,
+        "useCenterPosition": true,
+        "useTransformPosition": false,
+        "useTransfromRotation": false,
+        "destroyOnTransformDestroy": false,
+        "alwaysUseAge": false,
+        "useRoundTime": true,
+        "name": "EffectModel_",
+        "ImplementationType": null
+      },
+      "name": "CreateEffectOnPowerModel_Thrive",
+      "ImplementationType": "Assets.Scripts.Simulation.Powers.Effects.CreateEffectOnPower, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+      "$type": "Assets.Scripts.Models.Powers.Effects.CreateSoundOnPowerModel, Assembly-CSharp",
+      "sound": {
+        "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
+        "assetId": {
+          "$type": "Assets.Scripts.Utils.AudioSourceReference, Assembly-CSharp",
+          "GUID": "5558aaafb7c33304db9e4e44a321271f",
+          "IsValid": true,
+          "guidRef": "5558aaafb7c33304db9e4e44a321271f"
+        },
+        "name": "SoundModel_PowerThrive",
+        "ImplementationType": null
+      },
+      "name": "CreateSoundOnPowerModel_Thrive",
+      "ImplementationType": "Assets.Scripts.Simulation.Powers.Effects.CreateSoundOnPower, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    }
+  ],
+  "mods": [
+    {
+      "$type": "Assets.Scripts.Models.Towers.Mods.ApplyModModel, Assembly-CSharp",
+      "mod": "SupaThrive",
+      "target": "",
+      "name": "Thrive",
+      "ImplementationType": null
+    }
+  ],
+  "tower": null,
+  "isDisabledByGameMode": false,
+  "isHidden": false,
+  "showBuffsForTower": false,
+  "quantity": 1,
+  "name": "Thrive",
+  "ImplementationType": "Assets.Scripts.Simulation.Powers.Power, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+}

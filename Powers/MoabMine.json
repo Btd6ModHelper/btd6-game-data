@@ -1,0 +1,308 @@
+{
+  "$type": "Assets.Scripts.Models.Powers.PowerModel, Assembly-CSharp",
+  "cost": 50,
+  "canBeActivatedBetweenRounds": true,
+  "icon": {
+    "$type": "Assets.Scripts.Utils.SpriteReference, Assembly-CSharp",
+    "GUID": "PowerIcons[MoabMineIcon]",
+    "IsValid": true,
+    "guidRef": "PowerIcons[MoabMineIcon]"
+  },
+  "behaviors": [
+    {
+      "$type": "Assets.Scripts.Models.Powers.MoabMineModel, Assembly-CSharp",
+      "projectileModel": {
+        "$type": "Assets.Scripts.Models.Towers.Projectiles.ProjectileModel, Assembly-CSharp",
+        "display": {
+          "$type": "Assets.Scripts.Utils.PrefabReference, Assembly-CSharp",
+          "GUID": "092c7228eb278d04e81fac7f87631e5f",
+          "IsValid": true,
+          "guidRef": "092c7228eb278d04e81fac7f87631e5f"
+        },
+        "id": "MoabMine",
+        "maxPierce": 10.0,
+        "pierce": 10.0,
+        "scale": 1.0,
+        "ignoreBlockers": true,
+        "usePointCollisionWithBloons": false,
+        "canCollisionBeBlockedByMapLos": false,
+        "filters": [
+          {
+            "$type": "Assets.Scripts.Models.Towers.Filters.FilterInvisibleModel, Assembly-CSharp",
+            "isActive": false,
+            "ignoreBroadPhase": false,
+            "name": "FilterInvisibleModel_",
+            "ImplementationType": "Assets.Scripts.Simulation.Towers.Filters.FilterInvisible, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+          },
+          {
+            "$type": "Assets.Scripts.Models.Towers.Filters.FilterWithTagModel, Assembly-CSharp",
+            "moabTag": true,
+            "camoTag": false,
+            "growTag": false,
+            "fortifiedTag": false,
+            "tag": "Moabs",
+            "inclusive": false,
+            "hasMoabTag": true,
+            "name": "FilterWithTagModel_",
+            "ImplementationType": "Assets.Scripts.Simulation.Towers.Filters.FilterWithTag, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+          }
+        ],
+        "behaviors": [
+          {
+            "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.AgeModel, Assembly-CSharp",
+            "rounds": 9999999,
+            "useRoundTime": false,
+            "endOfRoundClearBypassModel": null,
+            "collisionPass": 0,
+            "Lifespan": 9999999.0,
+            "name": "AgeModel_MoabMine",
+            "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Age, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+            "lifespan": 9999999.0
+          },
+          {
+            "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModel, Assembly-CSharp",
+            "damage": 300.0,
+            "maxDamage": 0.0,
+            "distributeToChildren": false,
+            "overrideDistributeBlocker": false,
+            "createPopEffect": false,
+            "immuneBloonProperties": 0,
+            "immuneBloonPropertiesOriginal": 0,
+            "collisionPass": 0,
+            "CappedDamage": 300.0,
+            "name": "DamageModel_MoabMine_",
+            "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Damage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+          },
+          {
+            "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.ProjectileFilterModel, Assembly-CSharp",
+            "filters": [
+              {
+                "$type": "Assets.Scripts.Models.Towers.Filters.FilterInvisibleModel, Assembly-CSharp",
+                "isActive": false,
+                "ignoreBroadPhase": false,
+                "name": "FilterInvisibleModel_",
+                "ImplementationType": "Assets.Scripts.Simulation.Towers.Filters.FilterInvisible, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+              },
+              {
+                "$type": "Assets.Scripts.Models.Towers.Filters.FilterWithTagModel, Assembly-CSharp",
+                "moabTag": true,
+                "camoTag": false,
+                "growTag": false,
+                "fortifiedTag": false,
+                "tag": "Moabs",
+                "inclusive": false,
+                "hasMoabTag": true,
+                "name": "FilterWithTagModel_",
+                "ImplementationType": "Assets.Scripts.Simulation.Towers.Filters.FilterWithTag, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+              }
+            ],
+            "collisionPass": 0,
+            "name": "ProjectileFilterModel_MoabMine",
+            "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.ProjectileFilter, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+          },
+          {
+            "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.CreateSoundOnProjectileCollisionModel, Assembly-CSharp",
+            "sound1": {
+              "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
+              "assetId": {
+                "$type": "Assets.Scripts.Utils.AudioSourceReference, Assembly-CSharp",
+                "GUID": "c3f64a62b08dc3e4eb885cc534d8362f",
+                "IsValid": true,
+                "guidRef": "c3f64a62b08dc3e4eb885cc534d8362f"
+              },
+              "name": "SoundModel_ExplosionSound01",
+              "ImplementationType": null
+            },
+            "sound2": {
+              "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
+              "assetId": {
+                "$type": "Assets.Scripts.Utils.AudioSourceReference, Assembly-CSharp",
+                "GUID": "644009e031551ad449a36fb19be7e80c",
+                "IsValid": true,
+                "guidRef": "644009e031551ad449a36fb19be7e80c"
+              },
+              "name": "SoundModel_ExplosionSound02",
+              "ImplementationType": null
+            },
+            "sound3": {
+              "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
+              "assetId": {
+                "$type": "Assets.Scripts.Utils.AudioSourceReference, Assembly-CSharp",
+                "GUID": "bc84177cfa4a5e449b1e765818a66ca3",
+                "IsValid": true,
+                "guidRef": "bc84177cfa4a5e449b1e765818a66ca3"
+              },
+              "name": "SoundModel_ExplosionSound03",
+              "ImplementationType": null
+            },
+            "sound4": {
+              "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
+              "assetId": {
+                "$type": "Assets.Scripts.Utils.AudioSourceReference, Assembly-CSharp",
+                "GUID": "902b4a026f80e504c9e49cef5acefb51",
+                "IsValid": true,
+                "guidRef": "902b4a026f80e504c9e49cef5acefb51"
+              },
+              "name": "SoundModel_ExplosionSound04",
+              "ImplementationType": null
+            },
+            "sound5": {
+              "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
+              "assetId": {
+                "$type": "Assets.Scripts.Utils.AudioSourceReference, Assembly-CSharp",
+                "GUID": "a1b6610be487ea747981e9b59b4ef51c",
+                "IsValid": true,
+                "guidRef": "a1b6610be487ea747981e9b59b4ef51c"
+              },
+              "name": "SoundModel_ExplosionSound05",
+              "ImplementationType": null
+            },
+            "collisionPass": 0,
+            "name": "CreateSoundOnProjectileCollisionModel_MoabMine",
+            "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.CreateSoundOnProjectileCollision, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+          },
+          {
+            "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.CreateEffectOnContactModel, Assembly-CSharp",
+            "effectModel": {
+              "$type": "Assets.Scripts.Models.Effects.EffectModel, Assembly-CSharp",
+              "assetId": {
+                "$type": "Assets.Scripts.Utils.PrefabReference, Assembly-CSharp",
+                "GUID": "9e1d07331a0c6634bbe805787ac37e9b",
+                "IsValid": true,
+                "guidRef": "9e1d07331a0c6634bbe805787ac37e9b"
+              },
+              "scale": 1.0,
+              "lifespan": 2.0,
+              "fullscreen": 0,
+              "useCenterPosition": false,
+              "useTransformPosition": false,
+              "useTransfromRotation": false,
+              "destroyOnTransformDestroy": false,
+              "alwaysUseAge": false,
+              "useRoundTime": false,
+              "name": "EffectModel_",
+              "ImplementationType": null
+            },
+            "collisionPass": 0,
+            "name": "CreateEffectOnContactModel_",
+            "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.CreateEffectOnContact, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+          },
+          {
+            "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.PowerProjectileModel, Assembly-CSharp",
+            "collisionPass": 0,
+            "name": "PowerProjectileModel_",
+            "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.PowerProjectile, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+          },
+          {
+            "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.ClearHitBloonsWhenNoLongerCollidingModel, Assembly-CSharp",
+            "collisionPass": 0,
+            "name": "ClearHitBloonsWhenNoLongerCollidingModel_",
+            "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.ClearHitBloonsWhenNoLongerColliding, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+            "interval": 1.0
+          },
+          {
+            "$type": "Assets.Scripts.Models.GenericBehaviors.DisplayModel, Assembly-CSharp",
+            "display": {
+              "$type": "Assets.Scripts.Utils.PrefabReference, Assembly-CSharp",
+              "GUID": "092c7228eb278d04e81fac7f87631e5f",
+              "IsValid": true,
+              "guidRef": "092c7228eb278d04e81fac7f87631e5f"
+            },
+            "layer": 0,
+            "positionOffset": {
+              "$type": "Assets.Scripts.Simulation.SMath.Vector3, Assembly-CSharp",
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "MagnitudeSquared": 0.0,
+              "Magnitude": 0.0,
+              "Rotation": 0.0,
+              "SimToDispRotation": 180.0
+            },
+            "scale": 1.0,
+            "ignoreRotation": false,
+            "animationChanges": null,
+            "delayedReveal": 0.0,
+            "category": 16,
+            "name": "DisplayModel_ProjectileDisplay",
+            "ImplementationType": "Assets.Scripts.Simulation.Behaviors.DisplayBehavior, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+          }
+        ],
+        "collisionPasses": [
+          0
+        ],
+        "canCollideWithBloons": true,
+        "radius": 14.0,
+        "vsBlockerRadius": 0.0,
+        "hasDamageModifiers": false,
+        "dontUseCollisionChecker": false,
+        "checkCollisionFrames": 0,
+        "ignoreNonTargetable": false,
+        "ignorePierceExhaustion": false,
+        "saveId": null,
+        "CappedPierce": 10.0,
+        "name": "ProjectileModel_MoabMine",
+        "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Projectile, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+      },
+      "name": "MoabMineModel_MoabMine",
+      "ImplementationType": "Assets.Scripts.Simulation.Powers.MoabMine, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+      "$type": "Assets.Scripts.Models.Powers.Effects.CreateEffectOnPowerModel, Assembly-CSharp",
+      "effectModel": {
+        "$type": "Assets.Scripts.Models.Effects.EffectModel, Assembly-CSharp",
+        "assetId": {
+          "$type": "Assets.Scripts.Utils.PrefabReference, Assembly-CSharp",
+          "GUID": "cc4e51ecd049ee249a5bd51db3612483",
+          "IsValid": true,
+          "guidRef": "cc4e51ecd049ee249a5bd51db3612483"
+        },
+        "scale": 1.0,
+        "lifespan": 1.0,
+        "fullscreen": 0,
+        "useCenterPosition": false,
+        "useTransformPosition": false,
+        "useTransfromRotation": false,
+        "destroyOnTransformDestroy": false,
+        "alwaysUseAge": false,
+        "useRoundTime": false,
+        "name": "EffectModel_",
+        "ImplementationType": null
+      },
+      "name": "CreateEffectOnPowerModel_MoabMine",
+      "ImplementationType": "Assets.Scripts.Simulation.Powers.Effects.CreateEffectOnPower, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+      "$type": "Assets.Scripts.Models.Powers.Effects.CreateSoundOnPowerModel, Assembly-CSharp",
+      "sound": {
+        "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
+        "assetId": {
+          "$type": "Assets.Scripts.Utils.AudioSourceReference, Assembly-CSharp",
+          "GUID": "8079fb02674673744b403bcedcfda18f",
+          "IsValid": true,
+          "guidRef": "8079fb02674673744b403bcedcfda18f"
+        },
+        "name": "SoundModel_PlaceMOABMine",
+        "ImplementationType": null
+      },
+      "name": "CreateSoundOnPowerModel_MoabMine",
+      "ImplementationType": "Assets.Scripts.Simulation.Powers.Effects.CreateSoundOnPower, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    }
+  ],
+  "mods": [
+    {
+      "$type": "Assets.Scripts.Models.Towers.Mods.ApplyModModel, Assembly-CSharp",
+      "mod": "MaulingMoabMines",
+      "target": "",
+      "name": "MoabMine",
+      "ImplementationType": null
+    }
+  ],
+  "tower": null,
+  "isDisabledByGameMode": false,
+  "isHidden": false,
+  "showBuffsForTower": false,
+  "quantity": 1,
+  "name": "MoabMine",
+  "ImplementationType": "Assets.Scripts.Simulation.Powers.Power, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+}

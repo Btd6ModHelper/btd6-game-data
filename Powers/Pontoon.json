@@ -1,0 +1,336 @@
+{
+  "$type": "Assets.Scripts.Models.Powers.PowerModel, Assembly-CSharp",
+  "cost": 50,
+  "canBeActivatedBetweenRounds": true,
+  "icon": {
+    "$type": "Assets.Scripts.Utils.SpriteReference, Assembly-CSharp",
+    "GUID": "PowerIcons[PontoonIcon]",
+    "IsValid": true,
+    "guidRef": "PowerIcons[PontoonIcon]"
+  },
+  "behaviors": null,
+  "mods": [
+    {
+      "$type": "Assets.Scripts.Models.Towers.Mods.ApplyModModel, Assembly-CSharp",
+      "mod": "BudgetPontoons",
+      "target": "",
+      "name": "Pontoon",
+      "ImplementationType": null
+    }
+  ],
+  "tower": {
+    "$type": "Assets.Scripts.Models.Towers.TowerModel, Assembly-CSharp",
+    "display": {
+      "$type": "Assets.Scripts.Utils.PrefabReference, Assembly-CSharp",
+      "GUID": "1e263cd2dd8b8244dbacdfc7c56eed02",
+      "IsValid": true,
+      "guidRef": "1e263cd2dd8b8244dbacdfc7c56eed02"
+    },
+    "baseId": "Pontoon",
+    "cost": 0.0,
+    "radius": 9.0,
+    "radiusSquared": 81.0,
+    "range": 20.0,
+    "ignoreBlockers": false,
+    "isGlobalRange": false,
+    "tier": 0,
+    "tiers": [
+      0,
+      0,
+      0
+    ],
+    "towerSet": 64,
+    "icon": {
+      "$type": "Assets.Scripts.Utils.SpriteReference, Assembly-CSharp",
+      "GUID": null,
+      "IsValid": false,
+      "guidRef": null
+    },
+    "portrait": {
+      "$type": "Assets.Scripts.Utils.SpriteReference, Assembly-CSharp",
+      "GUID": "8be040ba9a5e57845b7c932297cd53ef",
+      "IsValid": true,
+      "guidRef": "8be040ba9a5e57845b7c932297cd53ef"
+    },
+    "instaIcon": {
+      "$type": "Assets.Scripts.Utils.SpriteReference, Assembly-CSharp",
+      "GUID": null,
+      "IsValid": false,
+      "guidRef": null
+    },
+    "areaTypes": [
+      1
+    ],
+    "mods": [],
+    "ignoreTowerForSelection": false,
+    "behaviors": [
+      {
+        "$type": "Assets.Scripts.Models.Towers.Behaviors.SellStackedTowersModel, Assembly-CSharp",
+        "name": "SellStackedTowersModel_Pontoon",
+        "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.SellStackedTowers, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+      },
+      {
+        "$type": "Assets.Scripts.Models.Towers.Behaviors.AddMakeshiftAreaModel, Assembly-CSharp",
+        "points": [
+          {
+            "$type": "Assets.Scripts.Simulation.SMath.Vector3, Assembly-CSharp",
+            "x": -13.6,
+            "y": -20.366888,
+            "z": 12.5000057,
+            "MagnitudeSquared": 756.020264,
+            "Magnitude": 27.4958229,
+            "Rotation": -146.266953,
+            "SimToDispRotation": -33.73304
+          },
+          {
+            "$type": "Assets.Scripts.Simulation.SMath.Vector3, Assembly-CSharp",
+            "x": 13.54,
+            "y": -20.366888,
+            "z": 12.5000057,
+            "MagnitudeSquared": 754.391846,
+            "Magnitude": 27.4661942,
+            "Rotation": 146.383865,
+            "SimToDispRotation": 33.6161423
+          },
+          {
+            "$type": "Assets.Scripts.Simulation.SMath.Vector3, Assembly-CSharp",
+            "x": 13.48,
+            "y": 7.29312563,
+            "z": 12.5000057,
+            "MagnitudeSquared": 391.1502,
+            "Magnitude": 19.7775173,
+            "Rotation": 61.585144,
+            "SimToDispRotation": 118.414856
+          },
+          {
+            "$type": "Assets.Scripts.Simulation.SMath.Vector3, Assembly-CSharp",
+            "x": -13.74,
+            "y": 7.353125,
+            "z": 12.5000057,
+            "MagnitudeSquared": 399.1062,
+            "Magnitude": 19.9776421,
+            "Rotation": -61.8460045,
+            "SimToDispRotation": -118.154
+          },
+          {
+            "$type": "Assets.Scripts.Simulation.SMath.Vector3, Assembly-CSharp",
+            "x": -13.6,
+            "y": -20.366888,
+            "z": 12.5000057,
+            "MagnitudeSquared": 756.020264,
+            "Magnitude": 27.4958229,
+            "Rotation": -146.266953,
+            "SimToDispRotation": -33.73304
+          }
+        ],
+        "newAreaType": 2,
+        "filterInTowerSizes": [
+          "small",
+          "medium",
+          "large",
+          "XL"
+        ],
+        "filterInTowerSets": [],
+        "filterOutSpecificTowers": [
+          "PortableLake"
+        ],
+        "renderHeightOffset": 0.0,
+        "ignoreZAxisTowerCollision": true,
+        "destroyTowersOnAreaWhenSold": true,
+        "dontDestroyTowersWhenAreaChanges": false,
+        "name": "AddMakeshiftAreaModel_Pontoon",
+        "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.AddMakeshiftArea, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+      },
+      {
+        "$type": "Assets.Scripts.Models.Towers.Behaviors.IgnoreTowersBlockerModel, Assembly-CSharp",
+        "filteredTowers": [
+          "Land"
+        ],
+        "name": "IgnoreTowersBlockerModel_",
+        "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.IgnoreTowersBlocker, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+      },
+      {
+        "$type": "Assets.Scripts.Models.Towers.Behaviors.CreateEffectOnSellModel, Assembly-CSharp",
+        "effectModel": {
+          "$type": "Assets.Scripts.Models.Effects.EffectModel, Assembly-CSharp",
+          "assetId": {
+            "$type": "Assets.Scripts.Utils.PrefabReference, Assembly-CSharp",
+            "GUID": "b1dec8a8d79593843bc2e2410eae944e",
+            "IsValid": true,
+            "guidRef": "b1dec8a8d79593843bc2e2410eae944e"
+          },
+          "scale": 1.0,
+          "lifespan": 1.0,
+          "fullscreen": 0,
+          "useCenterPosition": false,
+          "useTransformPosition": false,
+          "useTransfromRotation": false,
+          "destroyOnTransformDestroy": false,
+          "alwaysUseAge": false,
+          "useRoundTime": false,
+          "name": "EffectModel_",
+          "ImplementationType": null
+        },
+        "name": "CreateEffectOnSellModel_Pontoon",
+        "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.CreateEffectOnSell, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+      },
+      {
+        "$type": "Assets.Scripts.Models.Towers.Behaviors.CreateEffectOnPlaceModel, Assembly-CSharp",
+        "effectModel": null,
+        "name": "CreateEffectOnPlaceModel_Pontoon",
+        "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.CreateEffectOnPlace, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+      },
+      {
+        "$type": "Assets.Scripts.Models.Towers.Behaviors.CreateSoundOnTowerPlaceModel, Assembly-CSharp",
+        "sound1": {
+          "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
+          "assetId": {
+            "$type": "Assets.Scripts.Utils.AudioSourceReference, Assembly-CSharp",
+            "GUID": "66f98ce4d8caa2b4a952aa2aebb86853",
+            "IsValid": true,
+            "guidRef": "66f98ce4d8caa2b4a952aa2aebb86853"
+          },
+          "name": "SoundModel_PlacementSound1",
+          "ImplementationType": null
+        },
+        "sound2": {
+          "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
+          "assetId": {
+            "$type": "Assets.Scripts.Utils.AudioSourceReference, Assembly-CSharp",
+            "GUID": "fa9f893ef5154a443b784bdb76d85cf8",
+            "IsValid": true,
+            "guidRef": "fa9f893ef5154a443b784bdb76d85cf8"
+          },
+          "name": "SoundModel_PlacementSound2",
+          "ImplementationType": null
+        },
+        "heroSound1": null,
+        "heroSound2": null,
+        "name": "CreateSoundOnTowerPlaceModel_Pontoon",
+        "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.CreateSoundOnTowerPlace, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+      },
+      {
+        "$type": "Assets.Scripts.Models.Towers.Behaviors.CreateSoundOnSellModel, Assembly-CSharp",
+        "sound": {
+          "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
+          "assetId": {
+            "$type": "Assets.Scripts.Utils.AudioSourceReference, Assembly-CSharp",
+            "GUID": "df4c691ccf8a3c7408ed6f156740c8b7",
+            "IsValid": true,
+            "guidRef": "df4c691ccf8a3c7408ed6f156740c8b7"
+          },
+          "name": "SoundModel_SellSound",
+          "ImplementationType": null
+        },
+        "name": "CreateSoundOnSellModel_Pontoon",
+        "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.CreateSoundOnSell, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+      },
+      {
+        "$type": "Assets.Scripts.Models.Towers.Behaviors.RectangleFootprintModel, Assembly-CSharp",
+        "xWidth": 27.0,
+        "yWidth": 27.0,
+        "doesntBlockTowerPlacement": false,
+        "ignoresPlacementCheck": false,
+        "ignoresTowerOverlap": false,
+        "name": "RectangleFootprintModel_",
+        "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.RectangleFootprint, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+      },
+      {
+        "$type": "Assets.Scripts.Models.Towers.Behaviors.PlayAnimationIndexModel, Assembly-CSharp",
+        "placeAnimation": 1,
+        "upgradeAnimation": 1,
+        "name": "PlayAnimationIndexModel_Pontoon",
+        "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.PlayAnimationIndex, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+      },
+      {
+        "$type": "Assets.Scripts.Models.GenericBehaviors.DisplayModel, Assembly-CSharp",
+        "display": {
+          "$type": "Assets.Scripts.Utils.PrefabReference, Assembly-CSharp",
+          "GUID": "1e263cd2dd8b8244dbacdfc7c56eed02",
+          "IsValid": true,
+          "guidRef": "1e263cd2dd8b8244dbacdfc7c56eed02"
+        },
+        "layer": -1,
+        "positionOffset": {
+          "$type": "Assets.Scripts.Simulation.SMath.Vector3, Assembly-CSharp",
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "MagnitudeSquared": 0.0,
+          "Magnitude": 0.0,
+          "Rotation": 0.0,
+          "SimToDispRotation": 180.0
+        },
+        "scale": 1.0,
+        "ignoreRotation": false,
+        "animationChanges": null,
+        "delayedReveal": 0.0,
+        "category": 4,
+        "name": "DisplayModel_TowerDisplay",
+        "ImplementationType": "Assets.Scripts.Simulation.Behaviors.DisplayBehavior, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+      }
+    ],
+    "footprint": {
+      "$type": "Assets.Scripts.Models.Towers.Behaviors.RectangleFootprintModel, Assembly-CSharp",
+      "xWidth": 27.0,
+      "yWidth": 27.0,
+      "doesntBlockTowerPlacement": false,
+      "ignoresPlacementCheck": false,
+      "ignoresTowerOverlap": false,
+      "name": "RectangleFootprintModel_",
+      "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.RectangleFootprint, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    "dontDisplayUpgrades": true,
+    "emoteSpriteSmall": {
+      "$type": "Assets.Scripts.Utils.SpriteReference, Assembly-CSharp",
+      "GUID": null,
+      "IsValid": false,
+      "guidRef": null
+    },
+    "emoteSpriteLarge": {
+      "$type": "Assets.Scripts.Utils.SpriteReference, Assembly-CSharp",
+      "GUID": null,
+      "IsValid": false,
+      "guidRef": null
+    },
+    "doesntRotate": false,
+    "upgrades": [],
+    "appliedUpgrades": [],
+    "targetTypes": null,
+    "paragonUpgrade": null,
+    "isSubTower": false,
+    "isBakable": false,
+    "powerName": "Pontoon",
+    "showPowerTowerBuffs": false,
+    "animationSpeed": 1.0,
+    "towerSelectionMenuThemeId": "Default",
+    "ignoreCoopAreas": false,
+    "canAlwaysBeSold": false,
+    "blockSelling": false,
+    "isParagon": false,
+    "ignoreMaxSellPercent": false,
+    "isStunned": false,
+    "geraldoItemName": null,
+    "sellbackModifierAdd": 0.0,
+    "skinName": null,
+    "dontAddMutatorsFromParent": false,
+    "displayScale": 1.0,
+    "showBuffs": true,
+    "destroyTowerOnRedistribution": false,
+    "isPowerTower": true,
+    "isGeraldoItem": false,
+    "IsBeastHandlerPet": false,
+    "BeastHandlerLeashMutationId": "BeastHandlerContributionPontoon",
+    "IsBaseTower": true,
+    "TargetTypes": null,
+    "IsExclusivelyWaterBased": true,
+    "name": "Pontoon",
+    "ImplementationType": "Assets.Scripts.Simulation.Towers.Tower, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+  },
+  "isDisabledByGameMode": false,
+  "isHidden": false,
+  "showBuffsForTower": false,
+  "quantity": 1,
+  "name": "Pontoon",
+  "ImplementationType": "Assets.Scripts.Simulation.Powers.Power, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+}

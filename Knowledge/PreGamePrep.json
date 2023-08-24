@@ -1,0 +1,289 @@
+{
+  "$type": "Assets.Scripts.Models.Knowledge.KnowledgeModel, Assembly-CSharp",
+  "idx": 8,
+  "category": 5,
+  "investmentRequired": 3,
+  "monkeyMoneyCost": 250,
+  "prerequisiteIds": [
+    "LongerBoosts"
+  ],
+  "mod": {
+    "$type": "Assets.Scripts.Models.ModModel, Assembly-CSharp",
+    "mutatorMods": [
+      {
+        "$type": "Assets.Scripts.Models.Powers.Mods.PreGamePrepModModel, Assembly-CSharp",
+        "distFromEdgeOfMap": 9.0,
+        "projectileModel": {
+          "$type": "Assets.Scripts.Models.Towers.Projectiles.ProjectileModel, Assembly-CSharp",
+          "display": {
+            "$type": "Assets.Scripts.Utils.PrefabReference, Assembly-CSharp",
+            "GUID": null,
+            "IsValid": false,
+            "guidRef": null
+          },
+          "id": "PreGamePrep",
+          "maxPierce": 0.0,
+          "pierce": 20.0,
+          "scale": 1.0,
+          "ignoreBlockers": true,
+          "usePointCollisionWithBloons": false,
+          "canCollisionBeBlockedByMapLos": false,
+          "filters": [
+            {
+              "$type": "Assets.Scripts.Models.Towers.Filters.FilterInvisibleModel, Assembly-CSharp",
+              "isActive": false,
+              "ignoreBroadPhase": false,
+              "name": "FilterInvisibleModel_",
+              "ImplementationType": "Assets.Scripts.Simulation.Towers.Filters.FilterInvisible, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+            }
+          ],
+          "behaviors": [
+            {
+              "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.AgeModel, Assembly-CSharp",
+              "rounds": 9999999,
+              "useRoundTime": false,
+              "endOfRoundClearBypassModel": {
+                "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.EndOfRoundClearBypassModel, Assembly-CSharp",
+                "gameModes": "",
+                "gameModesList": [],
+                "collisionPass": 0,
+                "name": "",
+                "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.EndOfRoundClearBypass, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+              },
+              "collisionPass": 0,
+              "Lifespan": 9999999.0,
+              "name": "AgeModel_",
+              "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Age, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+              "lifespan": 9999999.0
+            },
+            {
+              "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.ProjectileFilterModel, Assembly-CSharp",
+              "filters": [
+                {
+                  "$type": "Assets.Scripts.Models.Towers.Filters.FilterInvisibleModel, Assembly-CSharp",
+                  "isActive": false,
+                  "ignoreBroadPhase": false,
+                  "name": "FilterInvisibleModel_",
+                  "ImplementationType": "Assets.Scripts.Simulation.Towers.Filters.FilterInvisible, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+                }
+              ],
+              "collisionPass": 0,
+              "name": "ProjectileFilterModel_",
+              "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.ProjectileFilter, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+            },
+            {
+              "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModel, Assembly-CSharp",
+              "damage": 1.0,
+              "maxDamage": 0.0,
+              "distributeToChildren": true,
+              "overrideDistributeBlocker": false,
+              "createPopEffect": true,
+              "immuneBloonProperties": 0,
+              "immuneBloonPropertiesOriginal": 0,
+              "collisionPass": 0,
+              "CappedDamage": 1.0,
+              "name": "DamageModel_",
+              "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Damage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+            },
+            {
+              "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.ClearHitBloonsModel, Assembly-CSharp",
+              "collisionPass": 0,
+              "name": "ClearHitBloonsModel_",
+              "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.ClearHitBloons, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+              "interval": 0.001
+            },
+            {
+              "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.SetSpriteFromPierceModel, Assembly-CSharp",
+              "sprites": [
+                {
+                  "$type": "Assets.Scripts.Utils.PrefabReference, Assembly-CSharp",
+                  "GUID": "1d5afb7fdd4b31644b2f62d1ee3d593c",
+                  "IsValid": true,
+                  "guidRef": "1d5afb7fdd4b31644b2f62d1ee3d593c"
+                },
+                {
+                  "$type": "Assets.Scripts.Utils.PrefabReference, Assembly-CSharp",
+                  "GUID": "88a9e91cec9612f4dba8a2706c3bed61",
+                  "IsValid": true,
+                  "guidRef": "88a9e91cec9612f4dba8a2706c3bed61"
+                },
+                {
+                  "$type": "Assets.Scripts.Utils.PrefabReference, Assembly-CSharp",
+                  "GUID": "bb09f100284139942bfa113f94077537",
+                  "IsValid": true,
+                  "guidRef": "bb09f100284139942bfa113f94077537"
+                },
+                {
+                  "$type": "Assets.Scripts.Utils.PrefabReference, Assembly-CSharp",
+                  "GUID": "89a1917453d785a4884a099cdac285c3",
+                  "IsValid": true,
+                  "guidRef": "89a1917453d785a4884a099cdac285c3"
+                },
+                {
+                  "$type": "Assets.Scripts.Utils.PrefabReference, Assembly-CSharp",
+                  "GUID": "82c3abfa0ae20824cbd3a683629b05f0",
+                  "IsValid": true,
+                  "guidRef": "82c3abfa0ae20824cbd3a683629b05f0"
+                },
+                {
+                  "$type": "Assets.Scripts.Utils.PrefabReference, Assembly-CSharp",
+                  "GUID": "a1e6e51d80018314f8fcd1a887bf90b5",
+                  "IsValid": true,
+                  "guidRef": "a1e6e51d80018314f8fcd1a887bf90b5"
+                },
+                {
+                  "$type": "Assets.Scripts.Utils.PrefabReference, Assembly-CSharp",
+                  "GUID": "5c6d66e1045e37f479ee46b268d52268",
+                  "IsValid": true,
+                  "guidRef": "5c6d66e1045e37f479ee46b268d52268"
+                },
+                {
+                  "$type": "Assets.Scripts.Utils.PrefabReference, Assembly-CSharp",
+                  "GUID": "1eeb1ad8754104f49b589901b5716063",
+                  "IsValid": true,
+                  "guidRef": "1eeb1ad8754104f49b589901b5716063"
+                },
+                {
+                  "$type": "Assets.Scripts.Utils.PrefabReference, Assembly-CSharp",
+                  "GUID": "4ae57daff9d776f4195c0c9f530efda0",
+                  "IsValid": true,
+                  "guidRef": "4ae57daff9d776f4195c0c9f530efda0"
+                },
+                {
+                  "$type": "Assets.Scripts.Utils.PrefabReference, Assembly-CSharp",
+                  "GUID": "7320b150913f2384187e19b4c55133e4",
+                  "IsValid": true,
+                  "guidRef": "7320b150913f2384187e19b4c55133e4"
+                },
+                {
+                  "$type": "Assets.Scripts.Utils.PrefabReference, Assembly-CSharp",
+                  "GUID": "5b9fffc70d4060f41968f35ae3e36877",
+                  "IsValid": true,
+                  "guidRef": "5b9fffc70d4060f41968f35ae3e36877"
+                },
+                {
+                  "$type": "Assets.Scripts.Utils.PrefabReference, Assembly-CSharp",
+                  "GUID": "20063d1be62a388448892330b5485fa6",
+                  "IsValid": true,
+                  "guidRef": "20063d1be62a388448892330b5485fa6"
+                },
+                {
+                  "$type": "Assets.Scripts.Utils.PrefabReference, Assembly-CSharp",
+                  "GUID": "4b313214235eeaf4eaad08a8fa91f8db",
+                  "IsValid": true,
+                  "guidRef": "4b313214235eeaf4eaad08a8fa91f8db"
+                },
+                {
+                  "$type": "Assets.Scripts.Utils.PrefabReference, Assembly-CSharp",
+                  "GUID": "1a1b3dea3c6c66640a286482fa3af1dd",
+                  "IsValid": true,
+                  "guidRef": "1a1b3dea3c6c66640a286482fa3af1dd"
+                },
+                {
+                  "$type": "Assets.Scripts.Utils.PrefabReference, Assembly-CSharp",
+                  "GUID": "24cd24f1247297144a47d6df861c6d96",
+                  "IsValid": true,
+                  "guidRef": "24cd24f1247297144a47d6df861c6d96"
+                },
+                {
+                  "$type": "Assets.Scripts.Utils.PrefabReference, Assembly-CSharp",
+                  "GUID": "550ca40ac21eb204a8ca605717ae8a19",
+                  "IsValid": true,
+                  "guidRef": "550ca40ac21eb204a8ca605717ae8a19"
+                },
+                {
+                  "$type": "Assets.Scripts.Utils.PrefabReference, Assembly-CSharp",
+                  "GUID": "41a4287a70ad5bf478a0853815959ee4",
+                  "IsValid": true,
+                  "guidRef": "41a4287a70ad5bf478a0853815959ee4"
+                },
+                {
+                  "$type": "Assets.Scripts.Utils.PrefabReference, Assembly-CSharp",
+                  "GUID": "947e03a4832e9ef48bab0fb74c4ccc21",
+                  "IsValid": true,
+                  "guidRef": "947e03a4832e9ef48bab0fb74c4ccc21"
+                },
+                {
+                  "$type": "Assets.Scripts.Utils.PrefabReference, Assembly-CSharp",
+                  "GUID": "1463a0d2e11c4634cafa868e0afc93e8",
+                  "IsValid": true,
+                  "guidRef": "1463a0d2e11c4634cafa868e0afc93e8"
+                },
+                {
+                  "$type": "Assets.Scripts.Utils.PrefabReference, Assembly-CSharp",
+                  "GUID": "4652c42576e23464dac9a0e3e03fbb9d",
+                  "IsValid": true,
+                  "guidRef": "4652c42576e23464dac9a0e3e03fbb9d"
+                },
+                {
+                  "$type": "Assets.Scripts.Utils.PrefabReference, Assembly-CSharp",
+                  "GUID": "08673b73cc580cc43a4d73a3f8e5d163",
+                  "IsValid": true,
+                  "guidRef": "08673b73cc580cc43a4d73a3f8e5d163"
+                }
+              ],
+              "loopMode": "Clamp",
+              "collisionPass": 0,
+              "name": "SetSpriteFromPierceModel_",
+              "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.SetSpriteFromPierce, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+            },
+            {
+              "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.DontDestroyOnContinueModel, Assembly-CSharp",
+              "collisionPass": 0,
+              "name": "DontDestroyOnContinueModel_",
+              "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.DontDestroyOnContinue, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+            },
+            {
+              "$type": "Assets.Scripts.Models.GenericBehaviors.DisplayModel, Assembly-CSharp",
+              "display": {
+                "$type": "Assets.Scripts.Utils.PrefabReference, Assembly-CSharp",
+                "GUID": null,
+                "IsValid": false,
+                "guidRef": null
+              },
+              "layer": 0,
+              "positionOffset": {
+                "$type": "Assets.Scripts.Simulation.SMath.Vector3, Assembly-CSharp",
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "MagnitudeSquared": 0.0,
+                "Magnitude": 0.0,
+                "Rotation": 0.0,
+                "SimToDispRotation": 180.0
+              },
+              "scale": 1.0,
+              "ignoreRotation": false,
+              "animationChanges": null,
+              "delayedReveal": 0.0,
+              "category": 0,
+              "name": "DisplayModel_",
+              "ImplementationType": "Assets.Scripts.Simulation.Behaviors.DisplayBehavior, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+            }
+          ],
+          "collisionPasses": [
+            0
+          ],
+          "canCollideWithBloons": true,
+          "radius": 6.0,
+          "vsBlockerRadius": 0.0,
+          "hasDamageModifiers": false,
+          "dontUseCollisionChecker": false,
+          "checkCollisionFrames": 0,
+          "ignoreNonTargetable": false,
+          "ignorePierceExhaustion": false,
+          "saveId": "ProjectileModel_RoadSpikes",
+          "CappedPierce": 20.0,
+          "name": "ProjectileModel_PreGamePrep",
+          "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Projectile, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+        },
+        "name": "PreGamePrep",
+        "ImplementationType": null
+      }
+    ],
+    "name": "PreGamePrep",
+    "ImplementationType": null
+  },
+  "name": "PreGamePrep",
+  "ImplementationType": null
+}

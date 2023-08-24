@@ -1,0 +1,432 @@
+{
+  "$type": "Assets.Scripts.Models.GeraldoItems.GeraldoItemModel, Assembly-CSharp",
+  "behaviorModels": [
+    {
+      "$type": "Assets.Scripts.Models.GeraldoItems.GeraldoCreateProjectileModel, Assembly-CSharp",
+      "projectileModel": {
+        "$type": "Assets.Scripts.Models.Towers.Projectiles.ProjectileModel, Assembly-CSharp",
+        "display": {
+          "$type": "Assets.Scripts.Utils.PrefabReference, Assembly-CSharp",
+          "GUID": "958b42cf30bc23c4698e4ee5a37df10f",
+          "IsValid": true,
+          "guidRef": "958b42cf30bc23c4698e4ee5a37df10f"
+        },
+        "id": "TubeOfAmazoGlueProjectile",
+        "maxPierce": 0.0,
+        "pierce": 100.0,
+        "scale": 1.0,
+        "ignoreBlockers": true,
+        "usePointCollisionWithBloons": false,
+        "canCollisionBeBlockedByMapLos": false,
+        "filters": [
+          {
+            "$type": "Assets.Scripts.Models.Towers.Filters.FilterOutTagModel, Assembly-CSharp",
+            "tag": "Moabs",
+            "disableWhenSupportMutatorIDs": [],
+            "name": "FilterOutTagModel_TubeOfAmazoGlueProjectile",
+            "ImplementationType": "Assets.Scripts.Simulation.Towers.Filters.FilterOutTag, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+          },
+          {
+            "$type": "Assets.Scripts.Models.Towers.Filters.FilterGlueLevelModel, Assembly-CSharp",
+            "glueLevel": 5,
+            "name": "FilterGlueLevelModel_TubeOfAmazoGlueProjectile",
+            "ImplementationType": "Assets.Scripts.Simulation.Towers.Filters.FilterGlueLevel, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+          }
+        ],
+        "behaviors": [
+          {
+            "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.AgeModel, Assembly-CSharp",
+            "rounds": 4,
+            "useRoundTime": false,
+            "endOfRoundClearBypassModel": null,
+            "collisionPass": 0,
+            "Lifespan": 9999999.0,
+            "name": "AgeModel_TubeOfAmazoGlueProjectile",
+            "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Age, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+            "lifespan": 9999999.0
+          },
+          {
+            "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.SlowModel, Assembly-CSharp",
+            "effectModel": null,
+            "layers": 9999999,
+            "overlayLayer": 0,
+            "glueLevel": 5,
+            "isUnique": true,
+            "dontRefreshDuration": false,
+            "cascadeMutators": false,
+            "removeMutatorIfNotMatching": false,
+            "mutationId": "Glue",
+            "countGlueAchievement": true,
+            "overlayType": "GlueBasic",
+            "collisionPass": -1,
+            "Lifespan": 30.0,
+            "Multiplier": 0.5,
+            "Mutator": {
+              "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.SlowModel+SlowMutator, Assembly-CSharp",
+              "mutationId": "Glue",
+              "overlayType": "GlueBasic",
+              "slowModifierForTagModels": {
+                "$type": "Assets.Scripts.Models.Model+ChildSearchEnumerable`1[[Assets.Scripts.Models.Towers.Projectiles.Behaviors.SlowModifierForTagModel, Assembly-CSharp]], Assembly-CSharp",
+                "IsValid": false
+              },
+              "dontRefreshDuration": false,
+              "didMutatorAffectBloon": false,
+              "multiplier": 0.5,
+              "filters": [],
+              "id": "Glue",
+              "isExclusiveInMutationList": false,
+              "priority": 1,
+              "glueLevel": 5,
+              "dontCopy": false,
+              "buffIndicator": null,
+              "saveId": null,
+              "isAreaBuff": false,
+              "isGeraldoBuff": false
+            },
+            "name": "SlowModel_",
+            "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Slow, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+            "lifespan": 30.0,
+            "multiplier": 0.5
+          },
+          {
+            "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.ClearHitBloonsModel, Assembly-CSharp",
+            "collisionPass": 0,
+            "name": "ClearHitBloonsModel_",
+            "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.ClearHitBloons, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+            "interval": 0.05
+          },
+          {
+            "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.ProjectileFilterModel, Assembly-CSharp",
+            "filters": [
+              {
+                "$type": "Assets.Scripts.Models.Towers.Filters.FilterOutTagModel, Assembly-CSharp",
+                "tag": "Moabs",
+                "disableWhenSupportMutatorIDs": [],
+                "name": "FilterOutTagModel_TubeOfAmazoGlueProjectile",
+                "ImplementationType": "Assets.Scripts.Simulation.Towers.Filters.FilterOutTag, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+              },
+              {
+                "$type": "Assets.Scripts.Models.Towers.Filters.FilterGlueLevelModel, Assembly-CSharp",
+                "glueLevel": 5,
+                "name": "FilterGlueLevelModel_TubeOfAmazoGlueProjectile",
+                "ImplementationType": "Assets.Scripts.Simulation.Towers.Filters.FilterGlueLevel, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+              }
+            ],
+            "collisionPass": 0,
+            "name": "ProjectileFilterModel_TubeOfAmazoGlueProjectile",
+            "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.ProjectileFilter, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+          },
+          {
+            "$type": "Assets.Scripts.Models.GenericBehaviors.DisplayModel, Assembly-CSharp",
+            "display": {
+              "$type": "Assets.Scripts.Utils.PrefabReference, Assembly-CSharp",
+              "GUID": "958b42cf30bc23c4698e4ee5a37df10f",
+              "IsValid": true,
+              "guidRef": "958b42cf30bc23c4698e4ee5a37df10f"
+            },
+            "layer": 0,
+            "positionOffset": {
+              "$type": "Assets.Scripts.Simulation.SMath.Vector3, Assembly-CSharp",
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "MagnitudeSquared": 0.0,
+              "Magnitude": 0.0,
+              "Rotation": 0.0,
+              "SimToDispRotation": 180.0
+            },
+            "scale": 1.0,
+            "ignoreRotation": false,
+            "animationChanges": null,
+            "delayedReveal": 0.0,
+            "category": 16,
+            "name": "DisplayModel_ProjectileDisplay",
+            "ImplementationType": "Assets.Scripts.Simulation.Behaviors.DisplayBehavior, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+          }
+        ],
+        "collisionPasses": [
+          -1,
+          0
+        ],
+        "canCollideWithBloons": true,
+        "radius": 14.0,
+        "vsBlockerRadius": 0.0,
+        "hasDamageModifiers": false,
+        "dontUseCollisionChecker": false,
+        "checkCollisionFrames": 0,
+        "ignoreNonTargetable": false,
+        "ignorePierceExhaustion": false,
+        "saveId": "TubeOfAmazoGlueProjectile",
+        "CappedPierce": 100.0,
+        "name": "ProjectileModel_TubeOfAmazoGlueProjectile",
+        "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Projectile, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+      },
+      "projectileModelUpgrades": [
+        {
+          "$type": "Assets.Scripts.Models.Towers.Projectiles.ProjectileModel, Assembly-CSharp",
+          "display": {
+            "$type": "Assets.Scripts.Utils.PrefabReference, Assembly-CSharp",
+            "GUID": "958b42cf30bc23c4698e4ee5a37df10f",
+            "IsValid": true,
+            "guidRef": "958b42cf30bc23c4698e4ee5a37df10f"
+          },
+          "id": "TubeOfAmazoGlueProjectileV2",
+          "maxPierce": 0.0,
+          "pierce": 100.0,
+          "scale": 1.0,
+          "ignoreBlockers": true,
+          "usePointCollisionWithBloons": false,
+          "canCollisionBeBlockedByMapLos": false,
+          "filters": [
+            {
+              "$type": "Assets.Scripts.Models.Towers.Filters.FilterGlueLevelModel, Assembly-CSharp",
+              "glueLevel": 5,
+              "name": "FilterGlueLevelModel_TubeOfAmazoGlueProjectileV2",
+              "ImplementationType": "Assets.Scripts.Simulation.Towers.Filters.FilterGlueLevel, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+            },
+            {
+              "$type": "Assets.Scripts.Models.Towers.Filters.FilterOutTagModel, Assembly-CSharp",
+              "tag": "Bad",
+              "disableWhenSupportMutatorIDs": [],
+              "name": "FilterOutTagModel_TubeOfAmazoGlueProjectileV2",
+              "ImplementationType": "Assets.Scripts.Simulation.Towers.Filters.FilterOutTag, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+            }
+          ],
+          "behaviors": [
+            {
+              "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.AgeModel, Assembly-CSharp",
+              "rounds": 4,
+              "useRoundTime": false,
+              "endOfRoundClearBypassModel": null,
+              "collisionPass": 0,
+              "Lifespan": 9999999.0,
+              "name": "AgeModel_TubeOfAmazoGlueProjectileV2",
+              "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Age, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+              "lifespan": 9999999.0
+            },
+            {
+              "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.SlowModel, Assembly-CSharp",
+              "effectModel": null,
+              "layers": 9999999,
+              "overlayLayer": 0,
+              "glueLevel": 5,
+              "isUnique": true,
+              "dontRefreshDuration": false,
+              "cascadeMutators": false,
+              "removeMutatorIfNotMatching": false,
+              "mutationId": "Glue",
+              "countGlueAchievement": true,
+              "overlayType": "GlueBasic",
+              "collisionPass": -1,
+              "Lifespan": 30.0,
+              "Multiplier": 0.45,
+              "Mutator": {
+                "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.SlowModel+SlowMutator, Assembly-CSharp",
+                "mutationId": "Glue",
+                "overlayType": "GlueBasic",
+                "slowModifierForTagModels": {
+                  "$type": "Assets.Scripts.Models.Model+ChildSearchEnumerable`1[[Assets.Scripts.Models.Towers.Projectiles.Behaviors.SlowModifierForTagModel, Assembly-CSharp]], Assembly-CSharp",
+                  "IsValid": false
+                },
+                "dontRefreshDuration": false,
+                "didMutatorAffectBloon": false,
+                "multiplier": 0.45,
+                "filters": [],
+                "id": "Glue",
+                "isExclusiveInMutationList": false,
+                "priority": 1,
+                "glueLevel": 5,
+                "dontCopy": false,
+                "buffIndicator": null,
+                "saveId": null,
+                "isAreaBuff": false,
+                "isGeraldoBuff": false
+              },
+              "name": "SlowModel_",
+              "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Slow, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+              "lifespan": 30.0,
+              "multiplier": 0.45
+            },
+            {
+              "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.ClearHitBloonsModel, Assembly-CSharp",
+              "collisionPass": 0,
+              "name": "ClearHitBloonsModel_",
+              "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.ClearHitBloons, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+              "interval": 0.05
+            },
+            {
+              "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.ProjectileFilterModel, Assembly-CSharp",
+              "filters": [
+                {
+                  "$type": "Assets.Scripts.Models.Towers.Filters.FilterGlueLevelModel, Assembly-CSharp",
+                  "glueLevel": 5,
+                  "name": "FilterGlueLevelModel_TubeOfAmazoGlueProjectileV2",
+                  "ImplementationType": "Assets.Scripts.Simulation.Towers.Filters.FilterGlueLevel, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+                },
+                {
+                  "$type": "Assets.Scripts.Models.Towers.Filters.FilterOutTagModel, Assembly-CSharp",
+                  "tag": "Bad",
+                  "disableWhenSupportMutatorIDs": [],
+                  "name": "FilterOutTagModel_TubeOfAmazoGlueProjectileV2",
+                  "ImplementationType": "Assets.Scripts.Simulation.Towers.Filters.FilterOutTag, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+                }
+              ],
+              "collisionPass": 0,
+              "name": "ProjectileFilterModel_TubeOfAmazoGlueProjectileV2",
+              "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.ProjectileFilter, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+            },
+            {
+              "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.CollideExtraPierceReductionModel, Assembly-CSharp",
+              "bloonTag": "Moab",
+              "extraAmount": 4,
+              "destroyProjectileIfPierceNotEnough": false,
+              "collisionPass": -1,
+              "name": "CollideExtraPierceReductionModel_",
+              "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.CollideExtraPierceReduction, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+            },
+            {
+              "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.CollideExtraPierceReductionModel, Assembly-CSharp",
+              "bloonTag": "Bfb",
+              "extraAmount": 9,
+              "destroyProjectileIfPierceNotEnough": false,
+              "collisionPass": -1,
+              "name": "CollideExtraPierceReductionModel_",
+              "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.CollideExtraPierceReduction, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+            },
+            {
+              "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.CollideExtraPierceReductionModel, Assembly-CSharp",
+              "bloonTag": "Ddt",
+              "extraAmount": 9,
+              "destroyProjectileIfPierceNotEnough": false,
+              "collisionPass": -1,
+              "name": "CollideExtraPierceReductionModel_",
+              "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.CollideExtraPierceReduction, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+            },
+            {
+              "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.CollideExtraPierceReductionModel, Assembly-CSharp",
+              "bloonTag": "Zomg",
+              "extraAmount": 24,
+              "destroyProjectileIfPierceNotEnough": false,
+              "collisionPass": -1,
+              "name": "CollideExtraPierceReductionModel_",
+              "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.CollideExtraPierceReduction, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+            },
+            {
+              "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.SlowModifierForTagModel, Assembly-CSharp",
+              "tag": "Moabs",
+              "slowId": "Glue",
+              "slowMultiplier": 1.38888884,
+              "resetToUnmodified": false,
+              "preventMutation": false,
+              "lifespanOverride": 0.0,
+              "makeNotTag": false,
+              "collisionPass": 0,
+              "name": "SlowModifierForTagModel_SlowModifierTag",
+              "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.SlowModifierForTag, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+            },
+            {
+              "$type": "Assets.Scripts.Models.GenericBehaviors.DisplayModel, Assembly-CSharp",
+              "display": {
+                "$type": "Assets.Scripts.Utils.PrefabReference, Assembly-CSharp",
+                "GUID": "958b42cf30bc23c4698e4ee5a37df10f",
+                "IsValid": true,
+                "guidRef": "958b42cf30bc23c4698e4ee5a37df10f"
+              },
+              "layer": 0,
+              "positionOffset": {
+                "$type": "Assets.Scripts.Simulation.SMath.Vector3, Assembly-CSharp",
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "MagnitudeSquared": 0.0,
+                "Magnitude": 0.0,
+                "Rotation": 0.0,
+                "SimToDispRotation": 180.0
+              },
+              "scale": 1.0,
+              "ignoreRotation": false,
+              "animationChanges": null,
+              "delayedReveal": 0.0,
+              "category": 16,
+              "name": "DisplayModel_ProjectileDisplay",
+              "ImplementationType": "Assets.Scripts.Simulation.Behaviors.DisplayBehavior, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+            }
+          ],
+          "collisionPasses": [
+            -1,
+            0
+          ],
+          "canCollideWithBloons": true,
+          "radius": 14.0,
+          "vsBlockerRadius": 0.0,
+          "hasDamageModifiers": false,
+          "dontUseCollisionChecker": false,
+          "checkCollisionFrames": 0,
+          "ignoreNonTargetable": false,
+          "ignorePierceExhaustion": false,
+          "saveId": "TubeOfAmazoGlueProjectile",
+          "CappedPierce": 100.0,
+          "name": "ProjectileModel_TubeOfAmazoGlueProjectileV2",
+          "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Projectile, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+        }
+      ],
+      "projectileModelUpgradeAtLevels": [
+        17
+      ],
+      "randomRotation": false,
+      "name": "GeraldoCreateProjectileModel_GeraldoCreateProjectile",
+      "ImplementationType": "Assets.Scripts.Simulation.GeraldoItems.GeraldoCreateProjectile, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+      "$type": "Assets.Scripts.Models.GeraldoItems.CreateEffectOnGeraldoItemModel, Assembly-CSharp",
+      "effectId": {
+        "$type": "Assets.Scripts.Utils.PrefabReference, Assembly-CSharp",
+        "GUID": "cc4e51ecd049ee249a5bd51db3612483",
+        "IsValid": true,
+        "guidRef": "cc4e51ecd049ee249a5bd51db3612483"
+      },
+      "lifespan": 0.0,
+      "fullScreen": false,
+      "useCenterPosition": false,
+      "name": "CreateEffectOnGeraldoItemModel_CreateEffectOnGeraldoItem",
+      "ImplementationType": "Assets.Scripts.Simulation.GeraldoItems.CreateEffectOnGeraldoItem, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+      "$type": "Assets.Scripts.Models.GeraldoItems.CreateSoundOnGeraldoItemModel, Assembly-CSharp",
+      "soundId": {
+        "$type": "Assets.Scripts.Utils.AudioSourceReference, Assembly-CSharp",
+        "GUID": "f1ce6716c425e7049b7cb220e91e4305",
+        "IsValid": true,
+        "guidRef": "f1ce6716c425e7049b7cb220e91e4305"
+      },
+      "name": "CreateSoundOnGeraldoItemModel_CreateSoundOnGeraldoItem",
+      "ImplementationType": "Assets.Scripts.Simulation.GeraldoItems.CreateSoundOnGeraldoItem, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    }
+  ],
+  "locsId": "Tube of amaz-o-glue",
+  "cost": 100,
+  "canBeActivatedBetweenRounds": true,
+  "icon": {
+    "$type": "Assets.Scripts.Utils.SpriteReference, Assembly-CSharp",
+    "GUID": "616499f813e7d4b4caeaa848c4db0183",
+    "IsValid": true,
+    "guidRef": "616499f813e7d4b4caeaa848c4db0183"
+  },
+  "towerId": "",
+  "onlyReplenishIfNonePlaced": false,
+  "showBuffsForTower": false,
+  "startingQuantity": 2,
+  "maxQuantity": 3,
+  "roundsToReplenish": 3,
+  "amountToReplenish": 1,
+  "levelUnlockedAt": 4,
+  "bannedForModes": "",
+  "bannedForModesList": [],
+  "maxPurchases": 0,
+  "showGeraldoRangeCircle": false,
+  "blockPurchaseIfTowerPlaced": "",
+  "iconSwaps": null,
+  "iconSwapLevels": null,
+  "name": "TubeOfAmazoGlue",
+  "ImplementationType": "Assets.Scripts.Simulation.GeraldoItems.GeraldoItem, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+}

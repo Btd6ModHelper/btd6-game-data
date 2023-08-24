@@ -1,0 +1,1 @@
+This is the information currently exported through BTD Mod Helper's "Export Game Data" button.
