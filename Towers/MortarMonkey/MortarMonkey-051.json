@@ -336,7 +336,7 @@
                   },
                   "id": "Explosion",
                   "maxPierce": 0.0,
-                  "pierce": 40.0,
+                  "pierce": 25.0,
                   "scale": 1.0,
                   "ignoreBlockers": false,
                   "usePointCollisionWithBloons": false,
@@ -353,7 +353,7 @@
                   "behaviors": [
                     {
                       "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModel, Assembly-CSharp",
-                      "damage": 1.0,
+                      "damage": 2.0,
                       "maxDamage": 9999999.0,
                       "distributeToChildren": true,
                       "overrideDistributeBlocker": false,
@@ -361,7 +361,7 @@
                       "immuneBloonProperties": 0,
                       "immuneBloonPropertiesOriginal": 0,
                       "collisionPass": 0,
-                      "CappedDamage": 1.0,
+                      "CappedDamage": 2.0,
                       "name": "DamageModel_Explosion_",
                       "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Damage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
                     },
@@ -398,7 +398,7 @@
                         "Ceramic"
                       ],
                       "damageMultiplier": 1.0,
-                      "damageAddative": 12.0,
+                      "damageAddative": 3.0,
                       "mustIncludeAllTags": true,
                       "applyOverMaxDamage": false,
                       "collisionPass": 0,
@@ -407,15 +407,12 @@
                     },
                     {
                       "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModifierForTagModel, Assembly-CSharp",
-                      "tag": "Lead,Fortified,Ddt,Moabs",
+                      "tag": "Moabs",
                       "tags": [
-                        "Lead",
-                        "Fortified",
-                        "Ddt",
                         "Moabs"
                       ],
                       "damageMultiplier": 1.0,
-                      "damageAddative": 4.0,
+                      "damageAddative": 1.0,
                       "mustIncludeAllTags": false,
                       "applyOverMaxDamage": false,
                       "collisionPass": 0,
@@ -521,6 +518,35 @@
                       "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.DamageModifierForTag, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
                     },
                     {
+                      "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModifierForTagModel, Assembly-CSharp",
+                      "tag": "Lead,Ddt",
+                      "tags": [
+                        "Lead",
+                        "Ddt"
+                      ],
+                      "damageMultiplier": 1.0,
+                      "damageAddative": 1.0,
+                      "mustIncludeAllTags": false,
+                      "applyOverMaxDamage": false,
+                      "collisionPass": 0,
+                      "name": "DamageModifierForTagModel_Explosion",
+                      "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.DamageModifierForTag, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+                    },
+                    {
+                      "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModifierForTagModel, Assembly-CSharp",
+                      "tag": "Fortified",
+                      "tags": [
+                        "Fortified"
+                      ],
+                      "damageMultiplier": 1.0,
+                      "damageAddative": 1.0,
+                      "mustIncludeAllTags": false,
+                      "applyOverMaxDamage": false,
+                      "collisionPass": 0,
+                      "name": "DamageModifierForTagModel_Explosion",
+                      "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.DamageModifierForTag, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+                    },
+                    {
                       "$type": "Assets.Scripts.Models.GenericBehaviors.DisplayModel, Assembly-CSharp",
                       "display": {
                         "$type": "Assets.Scripts.Utils.PrefabReference, Assembly-CSharp",
@@ -533,11 +559,7 @@
                         "$type": "Assets.Scripts.Simulation.SMath.Vector3, Assembly-CSharp",
                         "x": 0.0,
                         "y": 0.0,
-                        "z": 0.0,
-                        "MagnitudeSquared": 0.0,
-                        "Magnitude": 0.0,
-                        "Rotation": 0.0,
-                        "SimToDispRotation": 180.0
+                        "z": 0.0
                       },
                       "scale": 1.0,
                       "ignoreRotation": false,
@@ -552,7 +574,7 @@
                     0
                   ],
                   "canCollideWithBloons": true,
-                  "radius": 20.0,
+                  "radius": 23.0,
                   "vsBlockerRadius": 0.0,
                   "hasDamageModifiers": true,
                   "dontUseCollisionChecker": false,
@@ -560,7 +582,7 @@
                   "ignoreNonTargetable": false,
                   "ignorePierceExhaustion": false,
                   "saveId": null,
-                  "CappedPierce": 40.0,
+                  "CappedPierce": 25.0,
                   "name": "ProjectileModel_Explosion",
                   "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Projectile, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
                 },
@@ -706,11 +728,7 @@
                   "$type": "Assets.Scripts.Simulation.SMath.Vector3, Assembly-CSharp",
                   "x": 0.0,
                   "y": 0.0,
-                  "z": 0.0,
-                  "MagnitudeSquared": 0.0,
-                  "Magnitude": 0.0,
-                  "Rotation": 0.0,
-                  "SimToDispRotation": 180.0
+                  "z": 0.0
                 },
                 "scale": 1.0,
                 "ignoreRotation": false,
@@ -813,27 +831,16 @@
           "startInCooldown": false,
           "animateOnMainAttack": false,
           "isStunned": false,
-          "Rate": 0.27,
+          "Rate": 0.0675,
           "UseThrowMarker": true,
           "name": "WeaponModel_Weapon",
           "ImplementationType": "Assets.Scripts.Simulation.Towers.Weapons.Weapon, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
           "animationOffset": 0.0,
-          "rate": 0.27,
+          "rate": 0.0675,
           "customStartCooldown": 0.0
         }
       ],
       "behaviors": [
-        {
-          "$type": "Assets.Scripts.Models.Towers.Behaviors.Attack.Behaviors.RotateToTargetModel, Assembly-CSharp",
-          "onlyRotateDuringThrow": true,
-          "useThrowMarkerHeight": false,
-          "rotateOnlyOnThrow": true,
-          "additionalRotation": 0,
-          "rotateTower": true,
-          "useMainAttackRotation": false,
-          "name": "RotateToTargetModel_",
-          "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.Attack.Behaviors.RotateToTarget, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-        },
         {
           "$type": "Assets.Scripts.Models.Towers.Behaviors.Attack.Behaviors.AttackFilterModel, Assembly-CSharp",
           "filters": [
@@ -873,35 +880,19 @@
           "isOnSubTower": false,
           "name": "TargetSelectedPointModel_",
           "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.Attack.Behaviors.TargetSelectedPoint, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+        },
+        {
+          "$type": "Assets.Scripts.Models.Towers.Behaviors.Attack.Behaviors.RotateToPointerModel, Assembly-CSharp",
+          "rate": 9999999.0,
+          "rotateTower": true,
+          "rotateOnlyOnEmit": true,
+          "weaponEjectZ": 0.0,
+          "name": "RotateToPointerModel_",
+          "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.Attack.Behaviors.RotateToPointer, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
         }
       ],
       "range": 9999999.0,
-      "targetProvider": {
-        "$type": "Assets.Scripts.Models.Towers.Behaviors.Attack.Behaviors.TargetSelectedPointModel, Assembly-CSharp",
-        "isSelectable": true,
-        "display": {
-          "$type": "Assets.Scripts.Utils.PrefabReference, Assembly-CSharp",
-          "GUID": "4e88dd78c6e800d41a6df5b02d592082",
-          "IsValid": true,
-          "guidRef": "4e88dd78c6e800d41a6df5b02d592082"
-        },
-        "scale": 1.0,
-        "customName": "",
-        "lockToInsideTowerRange": false,
-        "startWithClosestTrackPoint": false,
-        "displayInvalid": {
-          "$type": "Assets.Scripts.Utils.PrefabReference, Assembly-CSharp",
-          "GUID": null,
-          "IsValid": false,
-          "guidRef": null
-        },
-        "alwaysShowTarget": false,
-        "projectileToExpireOnTargetChangeModel": null,
-        "useTerrainHeight": true,
-        "isOnSubTower": false,
-        "name": "TargetSelectedPointModel_",
-        "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.Attack.Behaviors.TargetSelectedPoint, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-      },
+      "targetProvider": null,
       "offsetX": 0.0,
       "offsetY": 0.0,
       "offsetZ": 0.0,
@@ -1054,11 +1045,7 @@
                           "$type": "Assets.Scripts.Simulation.SMath.Vector3, Assembly-CSharp",
                           "x": 0.0,
                           "y": 0.0,
-                          "z": 0.0,
-                          "MagnitudeSquared": 0.0,
-                          "Magnitude": 0.0,
-                          "Rotation": 0.0,
-                          "SimToDispRotation": 180.0
+                          "z": 0.0
                         },
                         "scale": 1.0,
                         "ignoreRotation": false,
@@ -1295,11 +1282,7 @@
         "$type": "Assets.Scripts.Simulation.SMath.Vector3, Assembly-CSharp",
         "x": 0.0,
         "y": 0.0,
-        "z": 0.0,
-        "MagnitudeSquared": 0.0,
-        "Magnitude": 0.0,
-        "Rotation": 0.0,
-        "SimToDispRotation": 180.0
+        "z": 0.0
       },
       "scale": 1.0,
       "ignoreRotation": false,
@@ -1353,7 +1336,7 @@
       "$type": "Assets.Scripts.Models.Towers.TargetType, Assembly-CSharp",
       "id": "TargetSelectedPoint",
       "isActionable": true,
-      "actionOnCreate": true,
+      "actionOnCreate": false,
       "intID": -1
     }
   ],
@@ -1364,6 +1347,12 @@
   "showPowerTowerBuffs": false,
   "animationSpeed": 1.0,
   "towerSelectionMenuThemeId": "MortarMonkey",
+  "secondarySelectionMenu": {
+    "$type": "Assets.Scripts.Utils.PrefabReference, Assembly-CSharp",
+    "GUID": null,
+    "IsValid": false,
+    "guidRef": null
+  },
   "ignoreCoopAreas": false,
   "canAlwaysBeSold": false,
   "blockSelling": false,

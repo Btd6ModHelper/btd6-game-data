@@ -287,7 +287,7 @@
           "distributeToChildren": true,
           "damageModifierModels": [],
           "Interval": 0.5,
-          "name": "DamageOverTimeCustomModel_Far",
+          "name": "DamageOverTimeCustomModel_FarSpiritOfTheForest",
           "ImplementationType": "Assets.Scripts.Simulation.Bloons.Behaviors.DamageOverTimeCustom, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
           "interval": 0.5,
           "initialDelay": 0.0
@@ -297,7 +297,7 @@
         "filterInvisible": false,
         "onlyAffectOnscreen": true,
         "mutatorId": "SpiritOfTheForestFar",
-        "name": "DamageOverTimeZoneModel_Far",
+        "name": "DamageOverTimeZoneModel_FarSpiritOfTheForest",
         "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.DamageOverTimeZone, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
       },
       "damageOverTimeZoneModelMiddle": {
@@ -327,7 +327,7 @@
           "distributeToChildren": true,
           "damageModifierModels": [],
           "Interval": 0.5,
-          "name": "DamageOverTimeCustomModel_Medium",
+          "name": "DamageOverTimeCustomModel_MediumSpiritOfTheForest",
           "ImplementationType": "Assets.Scripts.Simulation.Bloons.Behaviors.DamageOverTimeCustom, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
           "interval": 0.5,
           "initialDelay": 0.0
@@ -367,7 +367,7 @@
           "distributeToChildren": true,
           "damageModifierModels": [],
           "Interval": 0.5,
-          "name": "DamageOverTimeCustomModel_Close",
+          "name": "DamageOverTimeCustomModel_CloseSpiritOfTheForest",
           "ImplementationType": "Assets.Scripts.Simulation.Bloons.Behaviors.DamageOverTimeCustom, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
           "interval": 0.5,
           "initialDelay": 0.0
@@ -377,7 +377,7 @@
         "filterInvisible": false,
         "onlyAffectOnscreen": true,
         "mutatorId": "SpiritOfTheForestClose",
-        "name": "DamageOverTimeZoneModel_Close",
+        "name": "DamageOverTimeZoneModel_CloseSpiritOfTheForest",
         "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.DamageOverTimeZone, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
       },
       "middleRange": 100.0,
@@ -400,21 +400,13 @@
         "$type": "Assets.Scripts.Simulation.SMath.Vector3, Assembly-CSharp",
         "x": 0.0,
         "y": 0.0,
-        "z": 0.0,
-        "MagnitudeSquared": 0.0,
-        "Magnitude": 0.0,
-        "Rotation": 0.0,
-        "SimToDispRotation": 180.0
+        "z": 0.0
       },
       "maxScaleVector3": {
         "$type": "Assets.Scripts.Simulation.SMath.Vector3, Assembly-CSharp",
         "x": 1.0,
         "y": 1.0,
-        "z": 1.0,
-        "MagnitudeSquared": 3.0,
-        "Magnitude": 1.73205078,
-        "Rotation": 45.0,
-        "SimToDispRotation": 135.0
+        "z": 1.0
       },
       "name": "SpiritOfTheForestModel_",
       "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.SpiritOfTheForest, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
@@ -661,6 +653,19 @@
       "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.CreateEffectOnSell, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
     },
     {
+      "$type": "Assets.Scripts.Models.Towers.Behaviors.BonusLivesPerRoundModel, Assembly-CSharp",
+      "amount": 1,
+      "lifespan": 1.0,
+      "assetId": {
+        "$type": "Assets.Scripts.Utils.PrefabReference, Assembly-CSharp",
+        "GUID": "9bef6b3a7356f834eb953cc79622cdef",
+        "IsValid": true,
+        "guidRef": "9bef6b3a7356f834eb953cc79622cdef"
+      },
+      "name": "BonusLivesPerRoundModel_",
+      "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.BonusLivesPerRound, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
       "$type": "Assets.Scripts.Models.Towers.Behaviors.Attack.AttackModel, Assembly-CSharp",
       "weapons": [
         {
@@ -772,11 +777,7 @@
                   "$type": "Assets.Scripts.Simulation.SMath.Vector3, Assembly-CSharp",
                   "x": 0.0,
                   "y": 0.0,
-                  "z": 0.0,
-                  "MagnitudeSquared": 0.0,
-                  "Magnitude": 0.0,
-                  "Rotation": 0.0,
-                  "SimToDispRotation": 180.0
+                  "z": 0.0
                 },
                 "scale": 1.0,
                 "ignoreRotation": false,
@@ -813,6 +814,14 @@
               "angleOffset": 0.0,
               "name": "OffsetModel_",
               "ImplementationType": "Assets.Scripts.Simulation.Towers.Weapons.Behaviors.Offset, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+            },
+            {
+              "$type": "Assets.Scripts.Models.Towers.Weapons.Behaviors.PierceFromLivesGainedModel, Assembly-CSharp",
+              "piercePercentPerLife": 0.01,
+              "lifeCap": 100,
+              "saveId": "",
+              "name": "PierceFromLivesGainedModel_",
+              "ImplementationType": "Assets.Scripts.Simulation.Towers.Weapons.Behaviors.PierceFromLivesGained, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
             }
           ],
           "useAttackPosition": false,
@@ -1045,11 +1054,7 @@
                     "$type": "Assets.Scripts.Simulation.SMath.Vector3, Assembly-CSharp",
                     "x": 0.0,
                     "y": 0.0,
-                    "z": 0.0,
-                    "MagnitudeSquared": 0.0,
-                    "Magnitude": 0.0,
-                    "Rotation": 0.0,
-                    "SimToDispRotation": 180.0
+                    "z": 0.0
                   },
                   "scale": 1.0,
                   "ignoreRotation": false,
@@ -1072,11 +1077,7 @@
                     "$type": "Assets.Scripts.Simulation.SMath.Vector3, Assembly-CSharp",
                     "x": 0.0,
                     "y": 0.0,
-                    "z": 0.0,
-                    "MagnitudeSquared": 0.0,
-                    "Magnitude": 0.0,
-                    "Rotation": 0.0,
-                    "SimToDispRotation": 180.0
+                    "z": 0.0
                   },
                   "scale": 1.0,
                   "ignoreRotation": false,
@@ -1099,11 +1100,7 @@
                     "$type": "Assets.Scripts.Simulation.SMath.Vector3, Assembly-CSharp",
                     "x": 0.0,
                     "y": 0.0,
-                    "z": 0.0,
-                    "MagnitudeSquared": 0.0,
-                    "Magnitude": 0.0,
-                    "Rotation": 0.0,
-                    "SimToDispRotation": 180.0
+                    "z": 0.0
                   },
                   "scale": 1.0,
                   "ignoreRotation": false,
@@ -1228,7 +1225,7 @@
                   },
                   "id": "Projectile",
                   "maxPierce": 0.0,
-                  "pierce": 40.0,
+                  "pierce": 30.0,
                   "scale": 1.0,
                   "ignoreBlockers": true,
                   "usePointCollisionWithBloons": false,
@@ -1341,11 +1338,7 @@
                         "$type": "Assets.Scripts.Simulation.SMath.Vector3, Assembly-CSharp",
                         "x": 0.0,
                         "y": 0.0,
-                        "z": 0.0,
-                        "MagnitudeSquared": 0.0,
-                        "Magnitude": 0.0,
-                        "Rotation": 0.0,
-                        "SimToDispRotation": 180.0
+                        "z": 0.0
                       },
                       "scale": 1.0,
                       "ignoreRotation": false,
@@ -1369,7 +1362,7 @@
                   "ignoreNonTargetable": false,
                   "ignorePierceExhaustion": true,
                   "saveId": null,
-                  "CappedPierce": 40.0,
+                  "CappedPierce": 30.0,
                   "name": "ProjectileModel_Projectile",
                   "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Projectile, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
                 },
@@ -1399,11 +1392,7 @@
                   "$type": "Assets.Scripts.Simulation.SMath.Vector3, Assembly-CSharp",
                   "x": 0.0,
                   "y": 0.0,
-                  "z": 0.0,
-                  "MagnitudeSquared": 0.0,
-                  "Magnitude": 0.0,
-                  "Rotation": 0.0,
-                  "SimToDispRotation": 180.0
+                  "z": 0.0
                 },
                 "scale": 1.0,
                 "ignoreRotation": false,
@@ -1477,6 +1466,14 @@
               "useMainAttackRotation": false,
               "name": "EjectEffectModel_",
               "ImplementationType": "Assets.Scripts.Simulation.Towers.Weapons.Behaviors.EjectEffect, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+            },
+            {
+              "$type": "Assets.Scripts.Models.Towers.Weapons.Behaviors.PierceFromLivesGainedModel, Assembly-CSharp",
+              "piercePercentPerLife": 0.01,
+              "lifeCap": 90,
+              "saveId": "",
+              "name": "PierceFromLivesGainedModel_",
+              "ImplementationType": "Assets.Scripts.Simulation.Towers.Weapons.Behaviors.PierceFromLivesGained, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
             }
           ],
           "useAttackPosition": false,
@@ -1585,7 +1582,7 @@
     {
       "$type": "Assets.Scripts.Models.Towers.Behaviors.Abilities.AbilityModel, Assembly-CSharp",
       "displayName": "Jungle's Bounty",
-      "description": "Farms in the radius generate 50% more money for 15 seconds (excludes banks and markets, cannot stack) cooldown 40 seconds",
+      "description": "",
       "icon": {
         "$type": "Assets.Scripts.Utils.SpriteReference, Assembly-CSharp",
         "GUID": "f688ec8804cbe404997d17e850b6d600",
@@ -1608,7 +1605,7 @@
           },
           "heroSound": null,
           "heroSound2": null,
-          "name": "CreateSoundOnAbilityModel_JunglesBounty",
+          "name": "CreateSoundOnAbilityModel_Ability",
           "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.Abilities.Behaviors.CreateSoundOnAbility, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
         },
         {
@@ -1651,7 +1648,7 @@
       "AnimationOffset": 0.0,
       "IsPassive": false,
       "Cooldown": 60.0,
-      "name": "AbilityModel_JunglesBounty",
+      "name": "AbilityModel_Ability",
       "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.Abilities.Ability, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
       "cooldownSpeedScale": 0.0,
       "animationOffset": 0.0,
@@ -1670,11 +1667,7 @@
         "$type": "Assets.Scripts.Simulation.SMath.Vector3, Assembly-CSharp",
         "x": 0.0,
         "y": 0.0,
-        "z": 0.0,
-        "MagnitudeSquared": 0.0,
-        "Magnitude": 0.0,
-        "Rotation": 0.0,
-        "SimToDispRotation": 180.0
+        "z": 0.0
       },
       "scale": 1.0,
       "ignoreRotation": false,
@@ -1760,6 +1753,12 @@
   "showPowerTowerBuffs": false,
   "animationSpeed": 1.0,
   "towerSelectionMenuThemeId": "Default",
+  "secondarySelectionMenu": {
+    "$type": "Assets.Scripts.Utils.PrefabReference, Assembly-CSharp",
+    "GUID": null,
+    "IsValid": false,
+    "guidRef": null
+  },
   "ignoreCoopAreas": false,
   "canAlwaysBeSold": false,
   "blockSelling": false,

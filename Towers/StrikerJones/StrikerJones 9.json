@@ -801,11 +801,7 @@
                         "$type": "Assets.Scripts.Simulation.SMath.Vector3, Assembly-CSharp",
                         "x": 0.0,
                         "y": 0.0,
-                        "z": 0.0,
-                        "MagnitudeSquared": 0.0,
-                        "Magnitude": 0.0,
-                        "Rotation": 0.0,
-                        "SimToDispRotation": 180.0
+                        "z": 0.0
                       },
                       "scale": 1.0,
                       "ignoreRotation": false,
@@ -899,11 +895,7 @@
                   "$type": "Assets.Scripts.Simulation.SMath.Vector3, Assembly-CSharp",
                   "x": 0.0,
                   "y": 0.0,
-                  "z": 0.0,
-                  "MagnitudeSquared": 0.0,
-                  "Magnitude": 0.0,
-                  "Rotation": 0.0,
-                  "SimToDispRotation": 180.0
+                  "z": 0.0
                 },
                 "scale": 1.0,
                 "ignoreRotation": false,
@@ -1379,11 +1371,7 @@
                                 "$type": "Assets.Scripts.Simulation.SMath.Vector3, Assembly-CSharp",
                                 "x": 0.0,
                                 "y": 0.0,
-                                "z": 0.0,
-                                "MagnitudeSquared": 0.0,
-                                "Magnitude": 0.0,
-                                "Rotation": 0.0,
-                                "SimToDispRotation": 180.0
+                                "z": 0.0
                               },
                               "scale": 1.0,
                               "ignoreRotation": false,
@@ -1498,11 +1486,7 @@
                           "$type": "Assets.Scripts.Simulation.SMath.Vector3, Assembly-CSharp",
                           "x": 0.0,
                           "y": 0.0,
-                          "z": 0.0,
-                          "MagnitudeSquared": 0.0,
-                          "Magnitude": 0.0,
-                          "Rotation": 0.0,
-                          "SimToDispRotation": 180.0
+                          "z": 0.0
                         },
                         "scale": 1.0,
                         "ignoreRotation": false,
@@ -1749,6 +1733,133 @@
       "cooldown": 16.0
     },
     {
+      "$type": "Assets.Scripts.Models.Towers.Behaviors.Abilities.AbilityModel, Assembly-CSharp",
+      "displayName": "Target Focus",
+      "description": "",
+      "icon": {
+        "$type": "Assets.Scripts.Utils.SpriteReference, Assembly-CSharp",
+        "GUID": "5cf1c19f31fd94928acdc2a0884f9e9b",
+        "IsValid": true,
+        "guidRef": "5cf1c19f31fd94928acdc2a0884f9e9b"
+      },
+      "behaviors": [
+        {
+          "$type": "Assets.Scripts.Models.Towers.Behaviors.Abilities.Behaviors.CreateSoundOnAbilityModel, Assembly-CSharp",
+          "sound": {
+            "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
+            "assetId": {
+              "$type": "Assets.Scripts.Utils.AudioSourceReference, Assembly-CSharp",
+              "GUID": "ac32fecdf4f1c364cbf7c36d6470b908",
+              "IsValid": true,
+              "guidRef": "ac32fecdf4f1c364cbf7c36d6470b908"
+            },
+            "name": "SoundModel_TargetFocusNoVO",
+            "ImplementationType": null
+          },
+          "heroSound": null,
+          "heroSound2": null,
+          "name": "CreateSoundOnAbilityModel_TargetFocus",
+          "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.Abilities.Behaviors.CreateSoundOnAbility, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+        },
+        {
+          "$type": "Assets.Scripts.Models.Towers.Behaviors.Abilities.Behaviors.ActivateTempTargetPrioSupportZoneModel, Assembly-CSharp",
+          "range": 9999999.0,
+          "rateModifier": 0.0,
+          "maxNumTowersModified": 9999999.0,
+          "mutatorId": "TargetFocus",
+          "isUnique": true,
+          "canEffectThisTower": false,
+          "displayModel": null,
+          "filters": [
+            {
+              "$type": "Assets.Scripts.Models.Towers.TowerFilters.FilterInBaseTowerIdModel, Assembly-CSharp",
+              "baseIds": [
+                "MortarMonkey"
+              ],
+              "name": "FilterInBaseTowerIdModel_",
+              "ImplementationType": "Assets.Scripts.Simulation.Towers.TowerFilters.FilterInBaseTowerId, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+            },
+            {
+              "$type": "Assets.Scripts.Models.Towers.TowerFilters.FilterInOwnedByModel, Assembly-CSharp",
+              "name": "FilterInOwnedByModel_",
+              "ImplementationType": "Assets.Scripts.Simulation.Towers.TowerFilters.FilterInOwnedBy, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+            }
+          ],
+          "useTowerRange": false,
+          "targetSupplierModel": {
+            "$type": "Assets.Scripts.Models.Towers.Behaviors.Attack.Behaviors.TargetPointerModel, Assembly-CSharp",
+            "isSelectable": false,
+            "customName": "FollowTouch",
+            "setOnAttached": false,
+            "isOnSubTower": false,
+            "name": "TargetPointerModel_",
+            "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.Attack.Behaviors.TargetPointer, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+          },
+          "accuracyImprovementPercent": 0.3,
+          "showBuffIcon": false,
+          "isGlobal": false,
+          "buffLocsName": "",
+          "buffIconName": "",
+          "name": "ActivateTempTargetPrioSupportZoneModel_",
+          "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.Abilities.Behaviors.ActivateTempTargetPrioSupportZone, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+          "lifespan": 15.0
+        },
+        {
+          "$type": "Assets.Scripts.Models.Towers.Behaviors.Abilities.Behaviors.CreateEffectOnAbilityModel, Assembly-CSharp",
+          "effectModel": {
+            "$type": "Assets.Scripts.Models.Effects.EffectModel, Assembly-CSharp",
+            "assetId": {
+              "$type": "Assets.Scripts.Utils.PrefabReference, Assembly-CSharp",
+              "GUID": "be583aed607ef124a998b791d02c4863",
+              "IsValid": true,
+              "guidRef": "be583aed607ef124a998b791d02c4863"
+            },
+            "scale": 1.0,
+            "lifespan": 1.0,
+            "fullscreen": 0,
+            "useCenterPosition": false,
+            "useTransformPosition": true,
+            "useTransfromRotation": false,
+            "destroyOnTransformDestroy": true,
+            "alwaysUseAge": false,
+            "useRoundTime": false,
+            "name": "EffectModel_TargetFocusFx",
+            "ImplementationType": null
+          },
+          "randomRotation": false,
+          "centerEffect": false,
+          "destroyOnEnd": true,
+          "useAttackTransform": false,
+          "canSave": true,
+          "name": "CreateEffectOnAbilityModel_ActivateSupport_TargetFocusFx",
+          "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.Abilities.Behaviors.CreateEffectOnAbility, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+        }
+      ],
+      "activateOnPreLeak": false,
+      "activateOnLeak": false,
+      "addedViaUpgrade": "Coordinated Shots",
+      "livesCost": 0,
+      "maxActivationsPerRound": -1,
+      "animation": -1,
+      "enabled": true,
+      "canActivateBetweenRounds": false,
+      "resetCooldownOnTierUpgrade": false,
+      "activateOnLivesLost": false,
+      "sharedCooldown": false,
+      "dontShowStacked": false,
+      "animateOnMainAttackDisplay": false,
+      "restrictAbilityAfterMaxRoundTimer": false,
+      "CooldownSpeedScale": 0.0,
+      "AnimationOffset": 0.0,
+      "IsPassive": false,
+      "Cooldown": 45.0,
+      "name": "AbilityModel_TargetFocus",
+      "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.Abilities.Ability, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "cooldownSpeedScale": 0.0,
+      "animationOffset": 0.0,
+      "cooldown": 45.0
+    },
+    {
       "$type": "Assets.Scripts.Models.Towers.Behaviors.RateSupportBombExpertModel, Assembly-CSharp",
       "rangeMultiplier": 0.05,
       "pierceMultiplier": 0.25,
@@ -1882,11 +1993,7 @@
         "$type": "Assets.Scripts.Simulation.SMath.Vector3, Assembly-CSharp",
         "x": 0.0,
         "y": 0.0,
-        "z": 0.0,
-        "MagnitudeSquared": 0.0,
-        "Magnitude": 0.0,
-        "Rotation": 0.0,
-        "SimToDispRotation": 180.0
+        "z": 0.0
       },
       "scale": 1.0,
       "ignoreRotation": false,
@@ -1974,6 +2081,12 @@
   "showPowerTowerBuffs": false,
   "animationSpeed": 1.0,
   "towerSelectionMenuThemeId": "Default",
+  "secondarySelectionMenu": {
+    "$type": "Assets.Scripts.Utils.PrefabReference, Assembly-CSharp",
+    "GUID": null,
+    "IsValid": false,
+    "guidRef": null
+  },
   "ignoreCoopAreas": false,
   "canAlwaysBeSold": false,
   "blockSelling": false,

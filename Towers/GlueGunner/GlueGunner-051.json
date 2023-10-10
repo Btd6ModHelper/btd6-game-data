@@ -573,11 +573,7 @@
                         "$type": "Assets.Scripts.Simulation.SMath.Vector3, Assembly-CSharp",
                         "x": 0.0,
                         "y": 0.0,
-                        "z": 0.0,
-                        "MagnitudeSquared": 0.0,
-                        "Magnitude": 0.0,
-                        "Rotation": 0.0,
-                        "SimToDispRotation": 180.0
+                        "z": 0.0
                       },
                       "scale": 1.0,
                       "ignoreRotation": false,
@@ -759,11 +755,7 @@
                   "$type": "Assets.Scripts.Simulation.SMath.Vector3, Assembly-CSharp",
                   "x": 0.0,
                   "y": 0.0,
-                  "z": 0.0,
-                  "MagnitudeSquared": 0.0,
-                  "Magnitude": 0.0,
-                  "Rotation": 0.0,
-                  "SimToDispRotation": 180.0
+                  "z": 0.0
                 },
                 "scale": 1.0,
                 "ignoreRotation": false,
@@ -932,20 +924,12 @@
                     "ignoreBlockers": true,
                     "usePointCollisionWithBloons": false,
                     "canCollisionBeBlockedByMapLos": false,
-                    "filters": [
-                      {
-                        "$type": "Assets.Scripts.Models.Towers.Filters.FilterOutTagModel, Assembly-CSharp",
-                        "tag": "Moabs",
-                        "disableWhenSupportMutatorIDs": [],
-                        "name": "FilterOutTagModel_Projectile",
-                        "ImplementationType": "Assets.Scripts.Simulation.Towers.Filters.FilterOutTag, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-                      }
-                    ],
+                    "filters": [],
                     "behaviors": [
                       {
                         "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.SlowModel, Assembly-CSharp",
                         "effectModel": null,
-                        "layers": 9,
+                        "layers": 3,
                         "overlayLayer": 0,
                         "glueLevel": 1,
                         "isUnique": true,
@@ -998,15 +982,7 @@
                       },
                       {
                         "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.ProjectileFilterModel, Assembly-CSharp",
-                        "filters": [
-                          {
-                            "$type": "Assets.Scripts.Models.Towers.Filters.FilterOutTagModel, Assembly-CSharp",
-                            "tag": "Moabs",
-                            "disableWhenSupportMutatorIDs": [],
-                            "name": "FilterOutTagModel_Projectile",
-                            "ImplementationType": "Assets.Scripts.Simulation.Towers.Filters.FilterOutTag, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-                          }
-                        ],
+                        "filters": [],
                         "collisionPass": 0,
                         "name": "ProjectileFilterModel_Projectile",
                         "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.ProjectileFilter, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
@@ -1032,10 +1008,12 @@
                         "isUnique": true,
                         "lastAppliesFirst": false,
                         "cascadeMutators": true,
+                        "overlayType": "GlueBasic",
                         "collisionPass": 0,
                         "mutator": {
                           "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.AddBonusDamagePerHitToBloonModel+Mutator, Assembly-CSharp",
                           "perHitDamageAddition": 2.0,
+                          "overlayType": "GlueBasic",
                           "id": "Glue:Regular:DamageBoost",
                           "isExclusiveInMutationList": false,
                           "priority": 1,
@@ -1145,11 +1123,7 @@
                           "$type": "Assets.Scripts.Simulation.SMath.Vector3, Assembly-CSharp",
                           "x": 0.0,
                           "y": 0.0,
-                          "z": 0.0,
-                          "MagnitudeSquared": 0.0,
-                          "Magnitude": 0.0,
-                          "Rotation": 0.0,
-                          "SimToDispRotation": 180.0
+                          "z": 0.0
                         },
                         "scale": 1.0,
                         "ignoreRotation": false,
@@ -1184,12 +1158,12 @@
                   "startInCooldown": false,
                   "animateOnMainAttack": false,
                   "isStunned": false,
-                  "Rate": 2.0,
+                  "Rate": 1.0,
                   "UseThrowMarker": false,
                   "name": "WeaponModel_Weapon",
                   "ImplementationType": "Assets.Scripts.Simulation.Towers.Weapons.Weapon, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
                   "animationOffset": 0.0,
-                  "rate": 2.0,
+                  "rate": 1.0,
                   "customStartCooldown": 0.0
                 }
               ],
@@ -1212,11 +1186,7 @@
                     "$type": "Assets.Scripts.Simulation.SMath.Vector3, Assembly-CSharp",
                     "x": 0.0,
                     "y": 0.0,
-                    "z": 0.0,
-                    "MagnitudeSquared": 0.0,
-                    "Magnitude": 0.0,
-                    "Rotation": 0.0,
-                    "SimToDispRotation": 180.0
+                    "z": 0.0
                   },
                   "scale": 1.0,
                   "ignoreRotation": false,
@@ -1368,11 +1338,7 @@
         "$type": "Assets.Scripts.Simulation.SMath.Vector3, Assembly-CSharp",
         "x": 0.0,
         "y": 0.0,
-        "z": 0.0,
-        "MagnitudeSquared": 0.0,
-        "Magnitude": 0.0,
-        "Rotation": 0.0,
-        "SimToDispRotation": 180.0
+        "z": 0.0
       },
       "scale": 1.0,
       "ignoreRotation": false,
@@ -1458,6 +1424,12 @@
   "showPowerTowerBuffs": false,
   "animationSpeed": 1.0,
   "towerSelectionMenuThemeId": "Default",
+  "secondarySelectionMenu": {
+    "$type": "Assets.Scripts.Utils.PrefabReference, Assembly-CSharp",
+    "GUID": null,
+    "IsValid": false,
+    "guidRef": null
+  },
   "ignoreCoopAreas": false,
   "canAlwaysBeSold": false,
   "blockSelling": false,
