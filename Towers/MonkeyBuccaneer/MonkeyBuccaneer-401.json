@@ -1016,7 +1016,7 @@
                             },
                             "id": "Projectile",
                             "maxPierce": 0.0,
-                            "pierce": 11.0,
+                            "pierce": 6.0,
                             "scale": 1.0,
                             "ignoreBlockers": true,
                             "usePointCollisionWithBloons": false,
@@ -1033,7 +1033,7 @@
                             "behaviors": [
                               {
                                 "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModel, Assembly-CSharp",
-                                "damage": 1.0,
+                                "damage": 2.0,
                                 "maxDamage": 0.0,
                                 "distributeToChildren": true,
                                 "overrideDistributeBlocker": false,
@@ -1042,7 +1042,7 @@
                                 "immuneBloonPropertiesOriginal": 17,
                                 "ignoreImmunityDestroy": false,
                                 "collisionPass": 0,
-                                "CappedDamage": 1.0,
+                                "CappedDamage": 2.0,
                                 "name": "DamageModel_Projectile_",
                                 "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Damage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
                               },
@@ -1050,11 +1050,11 @@
                                 "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.TravelStraitModel, Assembly-CSharp",
                                 "collisionPass": 0,
                                 "Speed": 350.0,
-                                "Lifespan": 0.6571429,
+                                "Lifespan": 0.8,
                                 "name": "TravelStraitModel_Projectile",
                                 "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.TravelStrait, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
                                 "speed": 350.0,
-                                "lifespan": 0.6571429
+                                "lifespan": 0.8
                               },
                               {
                                 "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.ProjectileFilterModel, Assembly-CSharp",
@@ -1070,6 +1070,21 @@
                                 "collisionPass": 0,
                                 "name": "ProjectileFilterModel_Projectile",
                                 "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.ProjectileFilter, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+                              },
+                              {
+                                "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.TrackTargetModel, Assembly-CSharp",
+                                "distance": 9999999.0,
+                                "trackNewTargets": false,
+                                "constantlyAquireNewTarget": false,
+                                "maxSeekAngle": 30.0,
+                                "ignoreSeekAngle": false,
+                                "overrideRotation": false,
+                                "useLifetimeAsDistance": true,
+                                "collisionPass": 0,
+                                "TurnRate": 9999999.0,
+                                "name": "TrackTargetModel_",
+                                "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.TrackTarget, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                "turnRate": 9999999.0
                               },
                               {
                                 "$type": "Assets.Scripts.Models.GenericBehaviors.DisplayModel, Assembly-CSharp",
@@ -1108,7 +1123,7 @@
                             "ignoreNonTargetable": false,
                             "ignorePierceExhaustion": false,
                             "saveId": null,
-                            "CappedPierce": 11.0,
+                            "CappedPierce": 6.0,
                             "name": "ProjectileModel_Projectile",
                             "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Projectile, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
                           },
@@ -1268,7 +1283,7 @@
                             "behaviors": [
                               {
                                 "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModel, Assembly-CSharp",
-                                "damage": 2.0,
+                                "damage": 4.0,
                                 "maxDamage": 0.0,
                                 "distributeToChildren": true,
                                 "overrideDistributeBlocker": false,
@@ -1277,7 +1292,7 @@
                                 "immuneBloonPropertiesOriginal": 17,
                                 "ignoreImmunityDestroy": false,
                                 "collisionPass": 0,
-                                "CappedDamage": 2.0,
+                                "CappedDamage": 4.0,
                                 "name": "DamageModel_Projectile_",
                                 "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Damage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
                               },
@@ -1285,11 +1300,11 @@
                                 "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.TravelStraitModel, Assembly-CSharp",
                                 "collisionPass": 0,
                                 "Speed": 100.0,
-                                "Lifespan": 1.8,
+                                "Lifespan": 0.75,
                                 "name": "TravelStraitModel_Projectile",
                                 "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.TravelStrait, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
                                 "speed": 100.0,
-                                "lifespan": 1.8
+                                "lifespan": 0.75
                               },
                               {
                                 "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.ProjectileFilterModel, Assembly-CSharp",
@@ -1954,28 +1969,32 @@
                       "id": "First",
                       "isActionable": false,
                       "actionOnCreate": false,
-                      "intID": 0
+                      "intID": 0,
+                      "continueToNextPriority": false
                     },
                     {
                       "$type": "Assets.Scripts.Models.Towers.TargetType, Assembly-CSharp",
                       "id": "Close",
                       "isActionable": false,
                       "actionOnCreate": false,
-                      "intID": 2
+                      "intID": 2,
+                      "continueToNextPriority": false
                     },
                     {
                       "$type": "Assets.Scripts.Models.Towers.TargetType, Assembly-CSharp",
                       "id": "Last",
                       "isActionable": false,
                       "actionOnCreate": false,
-                      "intID": 1
+                      "intID": 1,
+                      "continueToNextPriority": false
                     },
                     {
                       "$type": "Assets.Scripts.Models.Towers.TargetType, Assembly-CSharp",
                       "id": "Strong",
                       "isActionable": false,
                       "actionOnCreate": false,
-                      "intID": 3
+                      "intID": 3,
+                      "continueToNextPriority": false
                     }
                   ],
                   "paragonUpgrade": null,
@@ -2015,28 +2034,32 @@
                       "id": "First",
                       "isActionable": false,
                       "actionOnCreate": false,
-                      "intID": 0
+                      "intID": 0,
+                      "continueToNextPriority": false
                     },
                     {
                       "$type": "Assets.Scripts.Models.Towers.TargetType, Assembly-CSharp",
                       "id": "Close",
                       "isActionable": false,
                       "actionOnCreate": false,
-                      "intID": 2
+                      "intID": 2,
+                      "continueToNextPriority": false
                     },
                     {
                       "$type": "Assets.Scripts.Models.Towers.TargetType, Assembly-CSharp",
                       "id": "Last",
                       "isActionable": false,
                       "actionOnCreate": false,
-                      "intID": 1
+                      "intID": 1,
+                      "continueToNextPriority": false
                     },
                     {
                       "$type": "Assets.Scripts.Models.Towers.TargetType, Assembly-CSharp",
                       "id": "Strong",
                       "isActionable": false,
                       "actionOnCreate": false,
-                      "intID": 3
+                      "intID": 3,
+                      "continueToNextPriority": false
                     }
                   ],
                   "IsExclusivelyWaterBased": false,
@@ -2209,28 +2232,32 @@
       "id": "First",
       "isActionable": false,
       "actionOnCreate": false,
-      "intID": 0
+      "intID": 0,
+      "continueToNextPriority": false
     },
     {
       "$type": "Assets.Scripts.Models.Towers.TargetType, Assembly-CSharp",
       "id": "Last",
       "isActionable": false,
       "actionOnCreate": false,
-      "intID": 1
+      "intID": 1,
+      "continueToNextPriority": false
     },
     {
       "$type": "Assets.Scripts.Models.Towers.TargetType, Assembly-CSharp",
       "id": "Close",
       "isActionable": false,
       "actionOnCreate": false,
-      "intID": 2
+      "intID": 2,
+      "continueToNextPriority": false
     },
     {
       "$type": "Assets.Scripts.Models.Towers.TargetType, Assembly-CSharp",
       "id": "Strong",
       "isActionable": false,
       "actionOnCreate": false,
-      "intID": 3
+      "intID": 3,
+      "continueToNextPriority": false
     }
   ],
   "paragonUpgrade": null,
@@ -2270,28 +2297,32 @@
       "id": "First",
       "isActionable": false,
       "actionOnCreate": false,
-      "intID": 0
+      "intID": 0,
+      "continueToNextPriority": false
     },
     {
       "$type": "Assets.Scripts.Models.Towers.TargetType, Assembly-CSharp",
       "id": "Last",
       "isActionable": false,
       "actionOnCreate": false,
-      "intID": 1
+      "intID": 1,
+      "continueToNextPriority": false
     },
     {
       "$type": "Assets.Scripts.Models.Towers.TargetType, Assembly-CSharp",
       "id": "Close",
       "isActionable": false,
       "actionOnCreate": false,
-      "intID": 2
+      "intID": 2,
+      "continueToNextPriority": false
     },
     {
       "$type": "Assets.Scripts.Models.Towers.TargetType, Assembly-CSharp",
       "id": "Strong",
       "isActionable": false,
       "actionOnCreate": false,
-      "intID": 3
+      "intID": 3,
+      "continueToNextPriority": false
     }
   ],
   "IsExclusivelyWaterBased": true,

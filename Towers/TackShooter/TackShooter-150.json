@@ -550,7 +550,7 @@
                     },
                     "id": "Projectile",
                     "maxPierce": -1.0,
-                    "pierce": 400.0,
+                    "pierce": 500.0,
                     "scale": 1.0,
                     "ignoreBlockers": true,
                     "usePointCollisionWithBloons": false,
@@ -572,8 +572,8 @@
                         "distributeToChildren": true,
                         "overrideDistributeBlocker": false,
                         "createPopEffect": true,
-                        "immuneBloonProperties": 0,
-                        "immuneBloonPropertiesOriginal": 0,
+                        "immuneBloonProperties": 1,
+                        "immuneBloonPropertiesOriginal": 1,
                         "ignoreImmunityDestroy": false,
                         "collisionPass": 0,
                         "CappedDamage": 2.0,
@@ -642,7 +642,7 @@
                     "ignoreNonTargetable": false,
                     "ignorePierceExhaustion": false,
                     "saveId": null,
-                    "CappedPierce": 400.0,
+                    "CappedPierce": 500.0,
                     "name": "ProjectileModel_Projectile",
                     "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Projectile, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
                   },
@@ -660,12 +660,12 @@
                   "startInCooldown": false,
                   "animateOnMainAttack": false,
                   "isStunned": false,
-                  "Rate": 0.033333,
+                  "Rate": 0.03825,
                   "UseThrowMarker": true,
                   "name": "WeaponModel_Weapon",
                   "ImplementationType": "Assets.Scripts.Simulation.Towers.Weapons.Weapon, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
                   "animationOffset": 0.0,
-                  "rate": 0.033333,
+                  "rate": 0.03825,
                   "customStartCooldown": 0.0
                 }
               ],
@@ -697,7 +697,17 @@
         },
         {
           "$type": "Assets.Scripts.Models.Towers.Behaviors.Abilities.Behaviors.CreateSoundOnAbilityModel, Assembly-CSharp",
-          "sound": null,
+          "sound": {
+            "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
+            "assetId": {
+              "$type": "Assets.Scripts.Utils.AudioSourceReference, Assembly-CSharp",
+              "GUID": "49f9ecf541ad2734396f0a3b45db3b37",
+              "IsValid": true,
+              "guidRef": "49f9ecf541ad2734396f0a3b45db3b37"
+            },
+            "name": "SoundModel_ActivatedAbilitySound",
+            "ImplementationType": null
+          },
           "heroSound": null,
           "heroSound2": null,
           "name": "CreateSoundOnAbilityModel_Ability",
@@ -797,7 +807,8 @@
       "id": "Close",
       "isActionable": false,
       "actionOnCreate": false,
-      "intID": 2
+      "intID": 2,
+      "continueToNextPriority": false
     }
   ],
   "paragonUpgrade": null,
@@ -837,7 +848,8 @@
       "id": "Close",
       "isActionable": false,
       "actionOnCreate": false,
-      "intID": 2
+      "intID": 2,
+      "continueToNextPriority": false
     }
   ],
   "IsExclusivelyWaterBased": false,

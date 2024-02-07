@@ -465,7 +465,7 @@
             },
             "id": "Projectile",
             "maxPierce": 0.0,
-            "pierce": 100.0,
+            "pierce": 80.0,
             "scale": 1.0,
             "ignoreBlockers": true,
             "usePointCollisionWithBloons": false,
@@ -497,14 +497,15 @@
               },
               {
                 "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.RetargetOnContactModel, Assembly-CSharp",
-                "distance": 180.0,
+                "distance": 9999999.0,
                 "maxBounces": 9999999,
                 "targetType": {
                   "$type": "Assets.Scripts.Models.Towers.TargetType, Assembly-CSharp",
                   "id": "Close",
                   "isActionable": false,
                   "actionOnCreate": false,
-                  "intID": 2
+                  "intID": 2,
+                  "continueToNextPriority": false
                 },
                 "expireIfNoTargetFound": true,
                 "collisionPass": 0,
@@ -740,7 +741,7 @@
             "ignoreNonTargetable": false,
             "ignorePierceExhaustion": false,
             "saveId": null,
-            "CappedPierce": 100.0,
+            "CappedPierce": 80.0,
             "name": "ProjectileModel_Projectile",
             "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Projectile, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
           },
@@ -779,12 +780,12 @@
           "startInCooldown": false,
           "animateOnMainAttack": false,
           "isStunned": false,
-          "Rate": 0.3375,
+          "Rate": 0.225,
           "UseThrowMarker": true,
           "name": "WeaponModel_Weapon",
           "ImplementationType": "Assets.Scripts.Simulation.Towers.Weapons.Weapon, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
           "animationOffset": -1.0,
-          "rate": 0.3375,
+          "rate": 0.225,
           "customStartCooldown": 0.0
         }
       ],
@@ -973,20 +974,6 @@
                 "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.DamageModifierForTag, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
               },
               {
-                "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModifierForTagModel, Assembly-CSharp",
-                "tag": "Fortified",
-                "tags": [
-                  "Fortified"
-                ],
-                "damageMultiplier": 1.0,
-                "damageAddative": 2.0,
-                "mustIncludeAllTags": false,
-                "applyOverMaxDamage": false,
-                "collisionPass": 0,
-                "name": "DamageModifierForTagModel_Projectile",
-                "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.DamageModifierForTag, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-              },
-              {
                 "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.CantBeReflectedModel, Assembly-CSharp",
                 "collisionPass": 0,
                 "name": "CantBeReflectedModel_Projectile",
@@ -1046,12 +1033,12 @@
           "startInCooldown": false,
           "animateOnMainAttack": false,
           "isStunned": false,
-          "Rate": 0.1,
+          "Rate": 0.08,
           "UseThrowMarker": false,
           "name": "WeaponModel_OrbitDamage",
           "ImplementationType": "Assets.Scripts.Simulation.Towers.Weapons.Weapon, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
           "animationOffset": 0.0,
-          "rate": 0.1,
+          "rate": 0.08,
           "customStartCooldown": 0.0
         }
       ],
@@ -1148,28 +1135,32 @@
       "id": "First",
       "isActionable": false,
       "actionOnCreate": false,
-      "intID": 0
+      "intID": 0,
+      "continueToNextPriority": false
     },
     {
       "$type": "Assets.Scripts.Models.Towers.TargetType, Assembly-CSharp",
       "id": "Last",
       "isActionable": false,
       "actionOnCreate": false,
-      "intID": 1
+      "intID": 1,
+      "continueToNextPriority": false
     },
     {
       "$type": "Assets.Scripts.Models.Towers.TargetType, Assembly-CSharp",
       "id": "Close",
       "isActionable": false,
       "actionOnCreate": false,
-      "intID": 2
+      "intID": 2,
+      "continueToNextPriority": false
     },
     {
       "$type": "Assets.Scripts.Models.Towers.TargetType, Assembly-CSharp",
       "id": "Strong",
       "isActionable": false,
       "actionOnCreate": false,
-      "intID": 3
+      "intID": 3,
+      "continueToNextPriority": false
     }
   ],
   "paragonUpgrade": {
@@ -1213,28 +1204,32 @@
       "id": "First",
       "isActionable": false,
       "actionOnCreate": false,
-      "intID": 0
+      "intID": 0,
+      "continueToNextPriority": false
     },
     {
       "$type": "Assets.Scripts.Models.Towers.TargetType, Assembly-CSharp",
       "id": "Last",
       "isActionable": false,
       "actionOnCreate": false,
-      "intID": 1
+      "intID": 1,
+      "continueToNextPriority": false
     },
     {
       "$type": "Assets.Scripts.Models.Towers.TargetType, Assembly-CSharp",
       "id": "Close",
       "isActionable": false,
       "actionOnCreate": false,
-      "intID": 2
+      "intID": 2,
+      "continueToNextPriority": false
     },
     {
       "$type": "Assets.Scripts.Models.Towers.TargetType, Assembly-CSharp",
       "id": "Strong",
       "isActionable": false,
       "actionOnCreate": false,
-      "intID": 3
+      "intID": 3,
+      "continueToNextPriority": false
     }
   ],
   "IsExclusivelyWaterBased": false,

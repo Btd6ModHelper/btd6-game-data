@@ -579,26 +579,15 @@
       "$type": "Assets.Scripts.Models.Towers.Behaviors.ObynGlobalSupportModel, Assembly-CSharp",
       "dotjRangeMultiplier": 0.2,
       "dotsProjectileRadius": 1.2,
-      "dotsMoabDamage": 1.0,
+      "dotsMoabDamage": 0.0,
+      "tornadoAttackCooldownReduction": 0.7,
       "mmAbilityCooldownMultiplier": 0.0,
       "mutatorIdRange": "ObynGlobalRange",
       "mutatorIdProjectileRadius": "ObynGlobalProjectileRadius",
       "mutatorIdMoabDamage": "ObynGlobalMoabDamage",
       "mutatorIdCooldownMultiplier": "ObynGlobalCooldown",
-      "damageModifierForTag": {
-        "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModifierForTagModel, Assembly-CSharp",
-        "tag": "Moabs",
-        "tags": [
-          "Moabs"
-        ],
-        "damageMultiplier": 1.0,
-        "damageAddative": 1.0,
-        "mustIncludeAllTags": false,
-        "applyOverMaxDamage": false,
-        "collisionPass": 0,
-        "name": "DamageModifierForTagModel_ObynGlobalSupportDamageModifier",
-        "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.DamageModifierForTag, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-      },
+      "mutatorIdTornadoRateMultiplier": "ObynGlobalTornadoRate",
+      "damageModifierForTag": null,
       "RangeMutator": {
         "$type": "Assets.Scripts.Models.Towers.Behaviors.ObynGlobalSupportModel+RangeMutatorClass, Assembly-CSharp",
         "rangeModifier": 0.2,
@@ -640,6 +629,18 @@
       "AbilityCooldownMutator": {
         "$type": "Assets.Scripts.Models.Towers.Behaviors.ObynGlobalSupportModel+AbilityCooldownMutatorClass, Assembly-CSharp",
         "id": "ObynGlobalCooldown",
+        "isExclusiveInMutationList": false,
+        "priority": 1,
+        "glueLevel": 0,
+        "dontCopy": false,
+        "buffIndicator": null,
+        "saveId": null,
+        "isAreaBuff": false,
+        "isGeraldoBuff": false
+      },
+      "TornadoRateMutator": {
+        "$type": "Assets.Scripts.Models.Towers.Behaviors.ObynGlobalSupportModel+TornadoRateMutatorClass, Assembly-CSharp",
+        "id": "ObynGlobalTornadoRate",
         "isExclusiveInMutationList": false,
         "priority": 1,
         "glueLevel": 0,
@@ -1809,7 +1810,7 @@
               "baseSubTowerIds": [
                 "NaturesWardTotem"
               ],
-              "maxNumberOfSubTowers": 1.0,
+              "maxNumberOfSubTowers": 5.0,
               "checkForPreExisting": false,
               "name": "SubTowerFilterModel_",
               "ImplementationType": "Assets.Scripts.Simulation.Towers.Weapons.Behaviors.SubTowerFilter, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
@@ -1844,7 +1845,7 @@
           "$type": "Assets.Scripts.Models.Towers.Behaviors.Attack.Behaviors.TargetTrackModel, Assembly-CSharp",
           "isSelectable": false,
           "maxOffset": 0.0,
-          "onlyTargetPathsWithBloons": false,
+          "onlyTargetPathsWithBloons": true,
           "isOnSubTower": false,
           "name": "TargetTrackModel_",
           "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.Attack.Behaviors.TargetTrack, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
@@ -1855,7 +1856,7 @@
         "$type": "Assets.Scripts.Models.Towers.Behaviors.Attack.Behaviors.TargetTrackModel, Assembly-CSharp",
         "isSelectable": false,
         "maxOffset": 0.0,
-        "onlyTargetPathsWithBloons": false,
+        "onlyTargetPathsWithBloons": true,
         "isOnSubTower": false,
         "name": "TargetTrackModel_",
         "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.Attack.Behaviors.TargetTrack, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
@@ -1970,28 +1971,32 @@
       "id": "First",
       "isActionable": false,
       "actionOnCreate": false,
-      "intID": 0
+      "intID": 0,
+      "continueToNextPriority": false
     },
     {
       "$type": "Assets.Scripts.Models.Towers.TargetType, Assembly-CSharp",
       "id": "Last",
       "isActionable": false,
       "actionOnCreate": false,
-      "intID": 1
+      "intID": 1,
+      "continueToNextPriority": false
     },
     {
       "$type": "Assets.Scripts.Models.Towers.TargetType, Assembly-CSharp",
       "id": "Close",
       "isActionable": false,
       "actionOnCreate": false,
-      "intID": 2
+      "intID": 2,
+      "continueToNextPriority": false
     },
     {
       "$type": "Assets.Scripts.Models.Towers.TargetType, Assembly-CSharp",
       "id": "Strong",
       "isActionable": false,
       "actionOnCreate": false,
-      "intID": 3
+      "intID": 3,
+      "continueToNextPriority": false
     }
   ],
   "paragonUpgrade": null,
@@ -2031,28 +2036,32 @@
       "id": "First",
       "isActionable": false,
       "actionOnCreate": false,
-      "intID": 0
+      "intID": 0,
+      "continueToNextPriority": false
     },
     {
       "$type": "Assets.Scripts.Models.Towers.TargetType, Assembly-CSharp",
       "id": "Last",
       "isActionable": false,
       "actionOnCreate": false,
-      "intID": 1
+      "intID": 1,
+      "continueToNextPriority": false
     },
     {
       "$type": "Assets.Scripts.Models.Towers.TargetType, Assembly-CSharp",
       "id": "Close",
       "isActionable": false,
       "actionOnCreate": false,
-      "intID": 2
+      "intID": 2,
+      "continueToNextPriority": false
     },
     {
       "$type": "Assets.Scripts.Models.Towers.TargetType, Assembly-CSharp",
       "id": "Strong",
       "isActionable": false,
       "actionOnCreate": false,
-      "intID": 3
+      "intID": 3,
+      "continueToNextPriority": false
     }
   ],
   "IsExclusivelyWaterBased": false,

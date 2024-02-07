@@ -410,8 +410,8 @@
                 "distributeToChildren": true,
                 "overrideDistributeBlocker": false,
                 "createPopEffect": true,
-                "immuneBloonProperties": 0,
-                "immuneBloonPropertiesOriginal": 0,
+                "immuneBloonProperties": 17,
+                "immuneBloonPropertiesOriginal": 17,
                 "ignoreImmunityDestroy": false,
                 "collisionPass": 0,
                 "CappedDamage": 1.0,
@@ -472,7 +472,7 @@
               0
             ],
             "canCollideWithBloons": true,
-            "radius": 6.0,
+            "radius": 4.0,
             "vsBlockerRadius": 0.0,
             "hasDamageModifiers": false,
             "dontUseCollisionChecker": false,
@@ -568,8 +568,8 @@
                 "distributeToChildren": true,
                 "overrideDistributeBlocker": false,
                 "createPopEffect": true,
-                "immuneBloonProperties": 0,
-                "immuneBloonPropertiesOriginal": 0,
+                "immuneBloonProperties": 17,
+                "immuneBloonPropertiesOriginal": 17,
                 "ignoreImmunityDestroy": false,
                 "collisionPass": 0,
                 "CappedDamage": 1.0,
@@ -630,7 +630,7 @@
               0
             ],
             "canCollideWithBloons": true,
-            "radius": 6.0,
+            "radius": 4.0,
             "vsBlockerRadius": 0.0,
             "hasDamageModifiers": false,
             "dontUseCollisionChecker": false,
@@ -1386,21 +1386,36 @@
                           "$type": "Assets.Scripts.Models.Towers.Weapons.WeaponModel, Assembly-CSharp",
                           "animation": 1,
                           "emission": {
-                            "$type": "Assets.Scripts.Models.Towers.Behaviors.Emissions.SingleEmissionModel, Assembly-CSharp",
-                            "behaviors": [
+                            "$type": "Assets.Scripts.Models.Towers.Behaviors.Emissions.EmissionWithOffsetsModel, Assembly-CSharp",
+                            "throwMarkerOffsetModels": [
                               {
-                                "$type": "Assets.Scripts.Models.Towers.Behaviors.Emissions.Behaviors.EmissionRotationOffBloonDirectionModel, Assembly-CSharp",
-                                "useAirUnitPosition": false,
-                                "dontSetAfterEmit": false,
-                                "name": "EmissionRotationOffBloonDirectionModel_",
-                                "ImplementationType": "Assets.Scripts.Simulation.Towers.Emissions.Behaviors.EmissionRotationOffBloonDirection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+                                "$type": "Assets.Scripts.Models.Towers.Weapons.Behaviors.ThrowMarkerOffsetModel, Assembly-CSharp",
+                                "ejectX": 2.49999976,
+                                "ejectY": 10.0,
+                                "ejectZ": 0.0,
+                                "rotation": 0.0,
+                                "name": "ThrowMarkerOffsetModel_OffsetLeft",
+                                "ImplementationType": "Assets.Scripts.Simulation.Towers.Weapons.Behaviors.ThrowMarkerOffset, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+                              },
+                              {
+                                "$type": "Assets.Scripts.Models.Towers.Weapons.Behaviors.ThrowMarkerOffsetModel, Assembly-CSharp",
+                                "ejectX": -2.49999976,
+                                "ejectY": 10.0,
+                                "ejectZ": 0.0,
+                                "rotation": 0.0,
+                                "name": "ThrowMarkerOffsetModel_OffsetRight",
+                                "ImplementationType": "Assets.Scripts.Simulation.Towers.Weapons.Behaviors.ThrowMarkerOffset, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
                               }
                             ],
-                            "name": "SingleEmissionModel_",
-                            "ImplementationType": "Assets.Scripts.Simulation.Towers.Emissions.SingleEmission, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+                            "projectileCount": 2,
+                            "rotateProjectileWithTower": true,
+                            "randomRotationCone": 0.0,
+                            "behaviors": null,
+                            "name": "EmissionWithOffsetsModel_",
+                            "ImplementationType": "Assets.Scripts.Simulation.Towers.Emissions.EmissionWithOffsets, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
                           },
                           "ejectX": 0.0,
-                          "ejectY": 10.0,
+                          "ejectY": 0.0,
                           "ejectZ": 0.0,
                           "projectile": {
                             "$type": "Assets.Scripts.Models.Towers.Projectiles.ProjectileModel, Assembly-CSharp",
@@ -1412,7 +1427,7 @@
                             },
                             "id": "Projectile",
                             "maxPierce": 0.0,
-                            "pierce": 14.0,
+                            "pierce": 7.0,
                             "scale": 1.0,
                             "ignoreBlockers": true,
                             "usePointCollisionWithBloons": false,
@@ -1434,8 +1449,8 @@
                                 "distributeToChildren": true,
                                 "overrideDistributeBlocker": false,
                                 "createPopEffect": true,
-                                "immuneBloonProperties": 0,
-                                "immuneBloonPropertiesOriginal": 0,
+                                "immuneBloonProperties": 17,
+                                "immuneBloonPropertiesOriginal": 17,
                                 "ignoreImmunityDestroy": false,
                                 "collisionPass": 0,
                                 "CappedDamage": 2.0,
@@ -1445,12 +1460,12 @@
                               {
                                 "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.TravelStraitModel, Assembly-CSharp",
                                 "collisionPass": 0,
-                                "Speed": 600.0,
-                                "Lifespan": 0.6666667,
+                                "Speed": 300.0,
+                                "Lifespan": 0.8333333,
                                 "name": "TravelStraitModel_Projectile",
                                 "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.TravelStrait, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
-                                "speed": 600.0,
-                                "lifespan": 0.6666667
+                                "speed": 300.0,
+                                "lifespan": 0.8333333
                               },
                               {
                                 "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.ProjectileFilterModel, Assembly-CSharp",
@@ -1485,16 +1500,16 @@
                                 "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.TrackTargetModel, Assembly-CSharp",
                                 "distance": 9999999.0,
                                 "trackNewTargets": false,
-                                "constantlyAquireNewTarget": true,
+                                "constantlyAquireNewTarget": false,
                                 "maxSeekAngle": 45.0,
-                                "ignoreSeekAngle": true,
+                                "ignoreSeekAngle": false,
                                 "overrideRotation": false,
-                                "useLifetimeAsDistance": false,
+                                "useLifetimeAsDistance": true,
                                 "collisionPass": 0,
-                                "TurnRate": 90.0,
+                                "TurnRate": 9999999.0,
                                 "name": "TrackTargetModel_",
                                 "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.TrackTarget, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
-                                "turnRate": 90.0
+                                "turnRate": 9999999.0
                               },
                               {
                                 "$type": "Assets.Scripts.Models.GenericBehaviors.DisplayModel, Assembly-CSharp",
@@ -1525,7 +1540,7 @@
                               0
                             ],
                             "canCollideWithBloons": true,
-                            "radius": 6.0,
+                            "radius": 4.0,
                             "vsBlockerRadius": 0.0,
                             "hasDamageModifiers": true,
                             "dontUseCollisionChecker": false,
@@ -1533,7 +1548,7 @@
                             "ignoreNonTargetable": false,
                             "ignorePierceExhaustion": false,
                             "saveId": null,
-                            "CappedPierce": 14.0,
+                            "CappedPierce": 7.0,
                             "name": "ProjectileModel_Projectile",
                             "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Projectile, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
                           },
@@ -1544,6 +1559,24 @@
                               "$type": "Assets.Scripts.Models.Towers.Weapons.Behaviors.FireFromAirUnitModel, Assembly-CSharp",
                               "name": "FireFromAirUnitModel_",
                               "ImplementationType": "Assets.Scripts.Simulation.Towers.Weapons.Behaviors.FireFromAirUnit, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+                            },
+                            {
+                              "$type": "Assets.Scripts.Models.Towers.Weapons.Behaviors.ThrowMarkerOffsetModel, Assembly-CSharp",
+                              "ejectX": 2.49999976,
+                              "ejectY": 10.0,
+                              "ejectZ": 0.0,
+                              "rotation": 0.0,
+                              "name": "ThrowMarkerOffsetModel_OffsetLeft",
+                              "ImplementationType": "Assets.Scripts.Simulation.Towers.Weapons.Behaviors.ThrowMarkerOffset, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+                            },
+                            {
+                              "$type": "Assets.Scripts.Models.Towers.Weapons.Behaviors.ThrowMarkerOffsetModel, Assembly-CSharp",
+                              "ejectX": -2.49999976,
+                              "ejectY": 10.0,
+                              "ejectZ": 0.0,
+                              "rotation": 0.0,
+                              "name": "ThrowMarkerOffsetModel_OffsetRight",
+                              "ImplementationType": "Assets.Scripts.Simulation.Towers.Weapons.Behaviors.ThrowMarkerOffset, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
                             }
                           ],
                           "useAttackPosition": false,
@@ -1551,7 +1584,7 @@
                           "animateOnMainAttack": false,
                           "isStunned": false,
                           "Rate": 0.15,
-                          "UseThrowMarker": true,
+                          "UseThrowMarker": false,
                           "name": "WeaponModel_Weapon",
                           "ImplementationType": "Assets.Scripts.Simulation.Towers.Weapons.Weapon, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
                           "animationOffset": 0.0,
@@ -1668,28 +1701,28 @@
                             "behaviors": [
                               {
                                 "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModel, Assembly-CSharp",
-                                "damage": 2.0,
+                                "damage": 4.0,
                                 "maxDamage": 0.0,
                                 "distributeToChildren": true,
                                 "overrideDistributeBlocker": false,
                                 "createPopEffect": true,
-                                "immuneBloonProperties": 0,
-                                "immuneBloonPropertiesOriginal": 0,
+                                "immuneBloonProperties": 8,
+                                "immuneBloonPropertiesOriginal": 8,
                                 "ignoreImmunityDestroy": false,
                                 "collisionPass": 0,
-                                "CappedDamage": 2.0,
+                                "CappedDamage": 4.0,
                                 "name": "DamageModel_Projectile_",
                                 "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Damage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
                               },
                               {
                                 "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.TravelStraitModel, Assembly-CSharp",
                                 "collisionPass": 0,
-                                "Speed": 200.0,
-                                "Lifespan": 1.5,
+                                "Speed": 100.0,
+                                "Lifespan": 0.6,
                                 "name": "TravelStraitModel_Projectile",
                                 "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.TravelStrait, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
-                                "speed": 200.0,
-                                "lifespan": 1.5
+                                "speed": 100.0,
+                                "lifespan": 0.6
                               },
                               {
                                 "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.ProjectileFilterModel, Assembly-CSharp",
@@ -1721,6 +1754,53 @@
                                 "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.DamageModifierForTag, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
                               },
                               {
+                                "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.AddBehaviorToBloonModel, Assembly-CSharp",
+                                "mutationId": "Dot:Buccaneer",
+                                "layers": 9999999,
+                                "filter": null,
+                                "filters": null,
+                                "behaviors": [
+                                  {
+                                    "$type": "Assets.Scripts.Models.Bloons.Behaviors.DamageOverTimeModel, Assembly-CSharp",
+                                    "damage": 2.0,
+                                    "payloadCount": 0,
+                                    "immuneBloonProperties": 8,
+                                    "displayPath": {
+                                      "$type": "Assets.Scripts.Utils.PrefabReference, Assembly-CSharp",
+                                      "GUID": null,
+                                      "IsValid": false,
+                                      "guidRef": null
+                                    },
+                                    "displayLifetime": 1.5,
+                                    "triggerImmediate": false,
+                                    "rotateEffectWithBloon": false,
+                                    "damageOnDestroy": false,
+                                    "overrideDistributionBlocker": false,
+                                    "distributeToChildren": true,
+                                    "damageModifierModels": null,
+                                    "Interval": 0.5,
+                                    "name": "DamageOverTimeModel_Dot:Buccaneer",
+                                    "ImplementationType": "Assets.Scripts.Simulation.Bloons.Behaviors.DamageOverTime, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                    "interval": 0.5,
+                                    "initialDelay": 0.0
+                                  }
+                                ],
+                                "isUnique": true,
+                                "lastAppliesFirst": false,
+                                "collideThisFrame": true,
+                                "cascadeMutators": false,
+                                "glueLevel": 0,
+                                "applyOnlyIfDamaged": false,
+                                "stackCount": 0,
+                                "dontCopy": false,
+                                "parentDamageModel": null,
+                                "overlayType": "Fire",
+                                "collisionPass": -1,
+                                "name": "AddBehaviorToBloonModel_",
+                                "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.AddBehaviorToBloon, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                "lifespan": 3.1
+                              },
+                              {
                                 "$type": "Assets.Scripts.Models.GenericBehaviors.DisplayModel, Assembly-CSharp",
                                 "display": {
                                   "$type": "Assets.Scripts.Utils.PrefabReference, Assembly-CSharp",
@@ -1746,10 +1826,11 @@
                               }
                             ],
                             "collisionPasses": [
+                              -1,
                               0
                             ],
                             "canCollideWithBloons": true,
-                            "radius": 8.0,
+                            "radius": 4.0,
                             "vsBlockerRadius": 0.0,
                             "hasDamageModifiers": true,
                             "dontUseCollisionChecker": false,
@@ -2368,28 +2449,32 @@
                       "id": "First",
                       "isActionable": false,
                       "actionOnCreate": false,
-                      "intID": 0
+                      "intID": 0,
+                      "continueToNextPriority": false
                     },
                     {
                       "$type": "Assets.Scripts.Models.Towers.TargetType, Assembly-CSharp",
                       "id": "Close",
                       "isActionable": false,
                       "actionOnCreate": false,
-                      "intID": 2
+                      "intID": 2,
+                      "continueToNextPriority": false
                     },
                     {
                       "$type": "Assets.Scripts.Models.Towers.TargetType, Assembly-CSharp",
                       "id": "Last",
                       "isActionable": false,
                       "actionOnCreate": false,
-                      "intID": 1
+                      "intID": 1,
+                      "continueToNextPriority": false
                     },
                     {
                       "$type": "Assets.Scripts.Models.Towers.TargetType, Assembly-CSharp",
                       "id": "Strong",
                       "isActionable": false,
                       "actionOnCreate": false,
-                      "intID": 3
+                      "intID": 3,
+                      "continueToNextPriority": false
                     }
                   ],
                   "paragonUpgrade": null,
@@ -2429,28 +2514,32 @@
                       "id": "First",
                       "isActionable": false,
                       "actionOnCreate": false,
-                      "intID": 0
+                      "intID": 0,
+                      "continueToNextPriority": false
                     },
                     {
                       "$type": "Assets.Scripts.Models.Towers.TargetType, Assembly-CSharp",
                       "id": "Close",
                       "isActionable": false,
                       "actionOnCreate": false,
-                      "intID": 2
+                      "intID": 2,
+                      "continueToNextPriority": false
                     },
                     {
                       "$type": "Assets.Scripts.Models.Towers.TargetType, Assembly-CSharp",
                       "id": "Last",
                       "isActionable": false,
                       "actionOnCreate": false,
-                      "intID": 1
+                      "intID": 1,
+                      "continueToNextPriority": false
                     },
                     {
                       "$type": "Assets.Scripts.Models.Towers.TargetType, Assembly-CSharp",
                       "id": "Strong",
                       "isActionable": false,
                       "actionOnCreate": false,
-                      "intID": 3
+                      "intID": 3,
+                      "continueToNextPriority": false
                     }
                   ],
                   "IsExclusivelyWaterBased": false,
@@ -2730,28 +2819,32 @@
       "id": "First",
       "isActionable": false,
       "actionOnCreate": false,
-      "intID": 0
+      "intID": 0,
+      "continueToNextPriority": false
     },
     {
       "$type": "Assets.Scripts.Models.Towers.TargetType, Assembly-CSharp",
       "id": "Last",
       "isActionable": false,
       "actionOnCreate": false,
-      "intID": 1
+      "intID": 1,
+      "continueToNextPriority": false
     },
     {
       "$type": "Assets.Scripts.Models.Towers.TargetType, Assembly-CSharp",
       "id": "Close",
       "isActionable": false,
       "actionOnCreate": false,
-      "intID": 2
+      "intID": 2,
+      "continueToNextPriority": false
     },
     {
       "$type": "Assets.Scripts.Models.Towers.TargetType, Assembly-CSharp",
       "id": "Strong",
       "isActionable": false,
       "actionOnCreate": false,
-      "intID": 3
+      "intID": 3,
+      "continueToNextPriority": false
     }
   ],
   "paragonUpgrade": {
@@ -2795,28 +2888,32 @@
       "id": "First",
       "isActionable": false,
       "actionOnCreate": false,
-      "intID": 0
+      "intID": 0,
+      "continueToNextPriority": false
     },
     {
       "$type": "Assets.Scripts.Models.Towers.TargetType, Assembly-CSharp",
       "id": "Last",
       "isActionable": false,
       "actionOnCreate": false,
-      "intID": 1
+      "intID": 1,
+      "continueToNextPriority": false
     },
     {
       "$type": "Assets.Scripts.Models.Towers.TargetType, Assembly-CSharp",
       "id": "Close",
       "isActionable": false,
       "actionOnCreate": false,
-      "intID": 2
+      "intID": 2,
+      "continueToNextPriority": false
     },
     {
       "$type": "Assets.Scripts.Models.Towers.TargetType, Assembly-CSharp",
       "id": "Strong",
       "isActionable": false,
       "actionOnCreate": false,
-      "intID": 3
+      "intID": 3,
+      "continueToNextPriority": false
     }
   ],
   "IsExclusivelyWaterBased": true,

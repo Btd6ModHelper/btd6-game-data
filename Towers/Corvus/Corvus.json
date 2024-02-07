@@ -1197,8 +1197,8 @@
                     "guidRef": "9aabb72162324944a9afa625975ecb54"
                   },
                   "id": "Projectile",
-                  "maxPierce": 0.0,
-                  "pierce": 9999999.0,
+                  "maxPierce": 10.0,
+                  "pierce": 10.0,
                   "scale": 1.0,
                   "ignoreBlockers": true,
                   "usePointCollisionWithBloons": false,
@@ -1418,7 +1418,7 @@
                       },
                       "pierceInterval": 1.0,
                       "count": 9999999,
-                      "minimumTimeDifferenceInFrames": 3,
+                      "minimumTimeDifferenceInFrames": 9,
                       "destroyProjectile": true,
                       "assetId": {
                         "$type": "Assets.Scripts.Utils.PrefabReference, Assembly-CSharp",
@@ -1560,7 +1560,7 @@
                   "ignoreNonTargetable": false,
                   "ignorePierceExhaustion": false,
                   "saveId": "false",
-                  "CappedPierce": 9999999.0,
+                  "CappedPierce": 10.0,
                   "name": "ProjectileModel_Projectile",
                   "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Projectile, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
                 },
@@ -1734,7 +1734,8 @@
             "id": "Strong",
             "isActionable": false,
             "actionOnCreate": false,
-            "intID": 3
+            "intID": 3,
+            "continueToNextPriority": false
           }
         ],
         "paragonUpgrade": null,
@@ -1774,7 +1775,8 @@
             "id": "Strong",
             "isActionable": false,
             "actionOnCreate": false,
-            "intID": 3
+            "intID": 3,
+            "continueToNextPriority": false
           }
         ],
         "IsExclusivelyWaterBased": false,
@@ -1811,8 +1813,8 @@
                 "guidRef": "9aabb72162324944a9afa625975ecb54"
               },
               "id": "Projectile",
-              "maxPierce": 0.0,
-              "pierce": 9999999.0,
+              "maxPierce": 10.0,
+              "pierce": 10.0,
               "scale": 1.0,
               "ignoreBlockers": true,
               "usePointCollisionWithBloons": false,
@@ -2032,7 +2034,7 @@
                   },
                   "pierceInterval": 1.0,
                   "count": 9999999,
-                  "minimumTimeDifferenceInFrames": 3,
+                  "minimumTimeDifferenceInFrames": 9,
                   "destroyProjectile": true,
                   "assetId": {
                     "$type": "Assets.Scripts.Utils.PrefabReference, Assembly-CSharp",
@@ -2174,7 +2176,7 @@
               "ignoreNonTargetable": false,
               "ignorePierceExhaustion": false,
               "saveId": "false",
-              "CappedPierce": 9999999.0,
+              "CappedPierce": 10.0,
               "name": "ProjectileModel_Projectile",
               "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Projectile, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
             },
@@ -3102,6 +3104,13 @@
               "ignoreBroadPhase": false,
               "name": "FilterInvisibleModel_",
               "ImplementationType": "Assets.Scripts.Simulation.Towers.Filters.FilterInvisible, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+            },
+            {
+              "$type": "Assets.Scripts.Models.Towers.Filters.FilterOutTagModel, Assembly-CSharp",
+              "tag": "Golden",
+              "disableWhenSupportMutatorIDs": [],
+              "name": "FilterOutTagModel_Haunt",
+              "ImplementationType": "Assets.Scripts.Simulation.Towers.Filters.FilterOutTag, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
             }
           ],
           "name": "AttackFilterModel_",
@@ -3183,28 +3192,32 @@
       "id": "First",
       "isActionable": false,
       "actionOnCreate": false,
-      "intID": 0
+      "intID": 0,
+      "continueToNextPriority": false
     },
     {
       "$type": "Assets.Scripts.Models.Towers.TargetType, Assembly-CSharp",
       "id": "Last",
       "isActionable": false,
       "actionOnCreate": false,
-      "intID": 1
+      "intID": 1,
+      "continueToNextPriority": false
     },
     {
       "$type": "Assets.Scripts.Models.Towers.TargetType, Assembly-CSharp",
       "id": "Close",
       "isActionable": false,
       "actionOnCreate": false,
-      "intID": 2
+      "intID": 2,
+      "continueToNextPriority": false
     },
     {
       "$type": "Assets.Scripts.Models.Towers.TargetType, Assembly-CSharp",
       "id": "Strong",
       "isActionable": false,
       "actionOnCreate": false,
-      "intID": 3
+      "intID": 3,
+      "continueToNextPriority": false
     }
   ],
   "paragonUpgrade": null,
@@ -3244,28 +3257,32 @@
       "id": "First",
       "isActionable": false,
       "actionOnCreate": false,
-      "intID": 0
+      "intID": 0,
+      "continueToNextPriority": false
     },
     {
       "$type": "Assets.Scripts.Models.Towers.TargetType, Assembly-CSharp",
       "id": "Last",
       "isActionable": false,
       "actionOnCreate": false,
-      "intID": 1
+      "intID": 1,
+      "continueToNextPriority": false
     },
     {
       "$type": "Assets.Scripts.Models.Towers.TargetType, Assembly-CSharp",
       "id": "Close",
       "isActionable": false,
       "actionOnCreate": false,
-      "intID": 2
+      "intID": 2,
+      "continueToNextPriority": false
     },
     {
       "$type": "Assets.Scripts.Models.Towers.TargetType, Assembly-CSharp",
       "id": "Strong",
       "isActionable": false,
       "actionOnCreate": false,
-      "intID": 3
+      "intID": 3,
+      "continueToNextPriority": false
     }
   ],
   "IsExclusivelyWaterBased": false,

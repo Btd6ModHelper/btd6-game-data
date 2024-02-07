@@ -87,7 +87,7 @@
     {
       "$type": "Assets.Scripts.Models.Towers.Mods.ApplyModModel, Assembly-CSharp",
       "mod": "SubAdmiral",
-      "target": "",
+      "target": "SubCommanderSupport",
       "name": "MonkeySubUpgrades",
       "ImplementationType": null
     },
@@ -582,6 +582,9 @@
       "throwOffsetX": 0.0,
       "throwOffsetY": -6.0,
       "throwOffsetZ": 11.2,
+      "throwOffsetSecondX": 0.0,
+      "throwOffsetSecondY": 0.0,
+      "throwOffsetSecondZ": 0.0,
       "ejectEffectModel": {
         "$type": "Assets.Scripts.Models.Effects.EffectModel, Assembly-CSharp",
         "assetId": {
@@ -603,6 +606,7 @@
         "ImplementationType": null
       },
       "animationState": 2,
+      "animationStateSecond": 0,
       "name": "PreEmptiveStrikeLauncherModel_",
       "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.PreEmptiveStrikeLauncher, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
     },
@@ -1162,7 +1166,7 @@
                   },
                   "id": "MissileExplosion",
                   "maxPierce": 0.0,
-                  "pierce": 100.0,
+                  "pierce": 60.0,
                   "scale": 1.0,
                   "ignoreBlockers": true,
                   "usePointCollisionWithBloons": false,
@@ -1279,7 +1283,7 @@
                   "ignoreNonTargetable": false,
                   "ignorePierceExhaustion": false,
                   "saveId": null,
-                  "CappedPierce": 100.0,
+                  "CappedPierce": 60.0,
                   "name": "ProjectileModel_MissileExplosion",
                   "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Projectile, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
                 },
@@ -2188,37 +2192,45 @@
       "id": "First",
       "isActionable": false,
       "actionOnCreate": false,
-      "intID": 0
+      "intID": 0,
+      "continueToNextPriority": false
     },
     {
       "$type": "Assets.Scripts.Models.Towers.TargetType, Assembly-CSharp",
       "id": "Last",
       "isActionable": false,
       "actionOnCreate": false,
-      "intID": 1
+      "intID": 1,
+      "continueToNextPriority": false
     },
     {
       "$type": "Assets.Scripts.Models.Towers.TargetType, Assembly-CSharp",
       "id": "Close",
       "isActionable": false,
       "actionOnCreate": false,
-      "intID": 2
+      "intID": 2,
+      "continueToNextPriority": false
     },
     {
       "$type": "Assets.Scripts.Models.Towers.TargetType, Assembly-CSharp",
       "id": "Strong",
       "isActionable": false,
       "actionOnCreate": false,
-      "intID": 3
+      "intID": 3,
+      "continueToNextPriority": false
     }
   ],
-  "paragonUpgrade": null,
+  "paragonUpgrade": {
+    "$type": "Assets.Scripts.Models.Towers.Upgrades.UpgradePathModel, Assembly-CSharp",
+    "tower": "MonkeySub-Paragon",
+    "upgrade": "MonkeySub Paragon"
+  },
   "isSubTower": false,
   "isBakable": true,
   "powerName": null,
   "showPowerTowerBuffs": false,
   "animationSpeed": 1.0,
-  "towerSelectionMenuThemeId": "Default",
+  "towerSelectionMenuThemeId": "MonkeySub",
   "secondarySelectionMenu": {
     "$type": "Assets.Scripts.Utils.PrefabReference, Assembly-CSharp",
     "GUID": null,
@@ -2249,28 +2261,32 @@
       "id": "First",
       "isActionable": false,
       "actionOnCreate": false,
-      "intID": 0
+      "intID": 0,
+      "continueToNextPriority": false
     },
     {
       "$type": "Assets.Scripts.Models.Towers.TargetType, Assembly-CSharp",
       "id": "Last",
       "isActionable": false,
       "actionOnCreate": false,
-      "intID": 1
+      "intID": 1,
+      "continueToNextPriority": false
     },
     {
       "$type": "Assets.Scripts.Models.Towers.TargetType, Assembly-CSharp",
       "id": "Close",
       "isActionable": false,
       "actionOnCreate": false,
-      "intID": 2
+      "intID": 2,
+      "continueToNextPriority": false
     },
     {
       "$type": "Assets.Scripts.Models.Towers.TargetType, Assembly-CSharp",
       "id": "Strong",
       "isActionable": false,
       "actionOnCreate": false,
-      "intID": 3
+      "intID": 3,
+      "continueToNextPriority": false
     }
   ],
   "IsExclusivelyWaterBased": true,
