@@ -6,7 +6,7 @@
     "guidRef": "1e83b52818863bc4aa3eccd13c60e5b4"
   },
   "baseId": "WizardMonkey",
-  "cost": 375.0,
+  "cost": 325.0,
   "radius": 7.0,
   "radiusSquared": 49.0,
   "range": 40.0,
@@ -554,10 +554,16 @@
           "$type": "Assets.Scripts.Models.Towers.Weapons.WeaponModel, Assembly-CSharp",
           "animation": 1,
           "emission": {
-            "$type": "Assets.Scripts.Models.Towers.Behaviors.Emissions.SingleEmissionModel, Assembly-CSharp",
+            "$type": "Assets.Scripts.Models.Towers.Behaviors.Emissions.ArcEmissionModel, Assembly-CSharp",
+            "angle": 60.0,
+            "offset": 0.0,
+            "useProjectileRotation": false,
+            "useAirUnitRotation": false,
             "behaviors": null,
-            "name": "SingleEmissionModel_",
-            "ImplementationType": "Assets.Scripts.Simulation.Towers.Emissions.SingleEmission, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+            "count": 3,
+            "name": "ArcEmissionModel_",
+            "ImplementationType": "Assets.Scripts.Simulation.Towers.Emissions.ArcEmission, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+            "Count": 3
           },
           "ejectX": 0.0,
           "ejectY": 8.17,
@@ -654,7 +660,7 @@
                   "behaviors": [
                     {
                       "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModel, Assembly-CSharp",
-                      "damage": 9.0,
+                      "damage": 3.0,
                       "maxDamage": 0.0,
                       "distributeToChildren": true,
                       "overrideDistributeBlocker": false,
@@ -663,7 +669,7 @@
                       "immuneBloonPropertiesOriginal": 2,
                       "ignoreImmunityDestroy": false,
                       "collisionPass": 0,
-                      "CappedDamage": 9.0,
+                      "CappedDamage": 3.0,
                       "name": "DamageModel_Explosion_",
                       "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Damage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
                     },
@@ -1063,6 +1069,7 @@
               {
                 "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.InstantModel, Assembly-CSharp",
                 "destroyIfInvalid": false,
+                "ignoreTargetZ": false,
                 "collisionPass": 0,
                 "name": "InstantModel_",
                 "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Instant, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
