@@ -361,7 +361,7 @@
       "offsetMax": 1.0,
       "circleRadius": 360.0,
       "generateRadius": 6.0,
-      "amountPerFrame": 0.06,
+      "amountPerFrame": 0.05,
       "minScale": 0.0,
       "maxScale": 1.0,
       "scaleTime": 0.5,
@@ -527,6 +527,8 @@
         "name": "SoundModel_PlaceSound2",
         "ImplementationType": null
       },
+      "waterSound1": null,
+      "waterSound2": null,
       "heroSound1": null,
       "heroSound2": null,
       "name": "CreateSoundOnTowerPlaceModel_Druid-150",
@@ -1073,6 +1075,7 @@
                 "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.InstantModel, Assembly-CSharp",
                 "destroyIfInvalid": false,
                 "ignoreTargetZ": false,
+                "dontFollowTarget": false,
                 "collisionPass": 0,
                 "name": "InstantModel_",
                 "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Instant, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
@@ -1198,6 +1201,7 @@
                     },
                     {
                       "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.RefreshPierceModel, Assembly-CSharp",
+                      "isBuffedByRate": false,
                       "collisionPass": 0,
                       "name": "RefreshPierceModel_",
                       "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.RefreshPierce, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
@@ -1419,12 +1423,12 @@
           "startInCooldown": false,
           "animateOnMainAttack": false,
           "isStunned": false,
-          "Rate": 0.0625,
+          "Rate": 0.65,
           "UseThrowMarker": true,
           "name": "WeaponModel_Weapon",
           "ImplementationType": "Assets.Scripts.Simulation.Towers.Weapons.Weapon, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
           "animationOffset": 0.0,
-          "rate": 0.0625,
+          "rate": 0.65,
           "customStartCooldown": 0.0
         }
       ],
@@ -1531,7 +1535,16 @@
       "behaviors": [
         {
           "$type": "Assets.Scripts.Models.Towers.Behaviors.Abilities.Behaviors.CreateSoundOnAbilityModel, Assembly-CSharp",
-          "sound": null,
+          "sound": {
+            "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
+            "assetId": {
+              "$type": "NinjaKiwi.Common.ResourceUtils.AudioSourceReference, NinjaKiwi.Common",
+              "GUID": "ad07af061745a124dadbf44a43ff1982",
+              "guidRef": "ad07af061745a124dadbf44a43ff1982"
+            },
+            "name": "SoundModel_AbilityJunglesBounty",
+            "ImplementationType": null
+          },
           "heroSound": null,
           "heroSound2": null,
           "name": "CreateSoundOnAbilityModel_Ability",
@@ -1710,6 +1723,7 @@
   "isPowerTower": false,
   "isGeraldoItem": false,
   "IsBeastHandlerPet": false,
+  "SelectParentOnSelected": false,
   "BeastHandlerLeashMutationId": "BeastHandlerContributionDruid",
   "IsBaseTower": false,
   "TargetTypes": [

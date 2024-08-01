@@ -270,6 +270,8 @@
         "name": "SoundModel_PlaceTower2",
         "ImplementationType": null
       },
+      "waterSound1": null,
+      "waterSound2": null,
       "heroSound1": null,
       "heroSound2": null,
       "name": "CreateSoundOnTowerPlaceModel_IceMonkey-204",
@@ -397,6 +399,165 @@
                       "name": "AgeModel_BaseProjectile",
                       "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Age, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
                       "lifespan": 0.05
+                    },
+                    {
+                      "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.ProjectileFilterModel, Assembly-CSharp",
+                      "filters": [
+                        {
+                          "$type": "Assets.Scripts.Models.Towers.Filters.FilterInvisibleModel, Assembly-CSharp",
+                          "isActive": false,
+                          "ignoreBroadPhase": false,
+                          "name": "FilterInvisibleModel_",
+                          "ImplementationType": "Assets.Scripts.Simulation.Towers.Filters.FilterInvisible, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+                        },
+                        {
+                          "$type": "Assets.Scripts.Models.Towers.Filters.FilterOveridingMutatedTargetModel, Assembly-CSharp",
+                          "mutationId": null,
+                          "mutationOverideOrder": [
+                            "SuperBrittle",
+                            "Embrilttlement"
+                          ],
+                          "highestPriorityMutationId": "SuperBrittle",
+                          "defaultMutationId": "Embrilttlement",
+                          "name": "FilterOveridingMutatedTargetModel_",
+                          "ImplementationType": "Assets.Scripts.Simulation.Towers.Filters.FilterOveridingMutatedTarget, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+                        }
+                      ],
+                      "collisionPass": 0,
+                      "name": "ProjectileFilterModel_BaseProjectile",
+                      "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.ProjectileFilter, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+                    },
+                    {
+                      "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.FreezeModel, Assembly-CSharp",
+                      "speed": 0.0,
+                      "layers": 3,
+                      "mutationId": "Ice:Regular:Freeze",
+                      "percentChanceToFreeze": 0.0,
+                      "enablePercentChanceToFreeze": false,
+                      "damageModel": {
+                        "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModel, Assembly-CSharp",
+                        "damage": 2.0,
+                        "maxDamage": -1.0,
+                        "distributeToChildren": true,
+                        "overrideDistributeBlocker": false,
+                        "createPopEffect": true,
+                        "immuneBloonProperties": 4,
+                        "immuneBloonPropertiesOriginal": 4,
+                        "ignoreImmunityDestroy": false,
+                        "collisionPass": 0,
+                        "CappedDamage": 2.0,
+                        "name": "DamageModel_BaseProjectile_Snapfreeze",
+                        "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Damage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+                      },
+                      "canFreezeMoabs": false,
+                      "cascadeMutators": true,
+                      "growBlockModel": {
+                        "$type": "Assets.Scripts.Models.Bloons.Behaviors.GrowBlockModel, Assembly-CSharp",
+                        "name": "GrowBlockModel_FreezeGrowBlock",
+                        "ImplementationType": "Assets.Scripts.Simulation.Bloons.Behaviors.GrowBlock, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+                      },
+                      "applyAfterDamage": false,
+                      "overlayType": "Ice",
+                      "collisionPass": -1,
+                      "Lifespan": 1.2,
+                      "mutator": {
+                        "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.FreezeModel+Mutator, Assembly-CSharp",
+                        "speed": 0.0,
+                        "overlayType": "Ice",
+                        "mutationId": "Ice:Regular:Freeze",
+                        "growBlockModel": {
+                          "$type": "Assets.Scripts.Models.Bloons.Behaviors.GrowBlockModel, Assembly-CSharp",
+                          "name": "GrowBlockModel_FreezeGrowBlock",
+                          "ImplementationType": "Assets.Scripts.Simulation.Bloons.Behaviors.GrowBlock, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+                        },
+                        "damageModel": {
+                          "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModel, Assembly-CSharp",
+                          "damage": 2.0,
+                          "maxDamage": -1.0,
+                          "distributeToChildren": true,
+                          "overrideDistributeBlocker": false,
+                          "createPopEffect": true,
+                          "immuneBloonProperties": 4,
+                          "immuneBloonPropertiesOriginal": 4,
+                          "ignoreImmunityDestroy": false,
+                          "collisionPass": 0,
+                          "CappedDamage": 2.0,
+                          "name": "DamageModel_BaseProjectile_Snapfreeze",
+                          "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Damage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+                        },
+                        "canFreezeMoabs": false,
+                        "id": "Ice:Regular:Freeze",
+                        "isExclusiveInMutationList": false,
+                        "priority": 5,
+                        "glueLevel": 0,
+                        "dontCopy": false,
+                        "buffIndicator": null,
+                        "saveId": null,
+                        "isAreaBuff": false,
+                        "isGeraldoBuff": false
+                      },
+                      "name": "FreezeModel_Ice",
+                      "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Freeze, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                      "lifespan": 1.2
+                    },
+                    {
+                      "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.SlowModel, Assembly-CSharp",
+                      "effectModel": null,
+                      "layers": 3,
+                      "overlayLayer": 0,
+                      "glueLevel": 0,
+                      "isUnique": true,
+                      "dontRefreshDuration": false,
+                      "cascadeMutators": true,
+                      "removeMutatorIfNotMatching": false,
+                      "matchLayersWithDamage": false,
+                      "mutationId": "Permafrost:Normal",
+                      "countGlueAchievement": false,
+                      "overlayType": "",
+                      "collisionPass": -1,
+                      "Lifespan": 9999999.0,
+                      "Multiplier": 0.5,
+                      "Mutator": {
+                        "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.SlowModel+SlowMutator, Assembly-CSharp",
+                        "mutationId": "Permafrost:Normal",
+                        "overlayType": "",
+                        "slowModifierForTagModels": {
+                          "$type": "Assets.Scripts.Models.Model+ChildSearchEnumerable`1[[Assets.Scripts.Models.Towers.Projectiles.Behaviors.SlowModifierForTagModel, Assembly-CSharp]], Assembly-CSharp",
+                          "IsValid": false
+                        },
+                        "dontRefreshDuration": false,
+                        "didMutatorAffectBloon": false,
+                        "multiplier": 0.5,
+                        "filters": [],
+                        "id": "Permafrost:Normal",
+                        "isExclusiveInMutationList": false,
+                        "priority": 1,
+                        "glueLevel": 0,
+                        "dontCopy": false,
+                        "buffIndicator": null,
+                        "saveId": null,
+                        "isAreaBuff": false,
+                        "isGeraldoBuff": false
+                      },
+                      "name": "SlowModel_Permafrost",
+                      "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Slow, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                      "lifespan": 9999999.0,
+                      "multiplier": 0.5
+                    },
+                    {
+                      "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModel, Assembly-CSharp",
+                      "damage": 2.0,
+                      "maxDamage": -1.0,
+                      "distributeToChildren": true,
+                      "overrideDistributeBlocker": false,
+                      "createPopEffect": true,
+                      "immuneBloonProperties": 4,
+                      "immuneBloonPropertiesOriginal": 4,
+                      "ignoreImmunityDestroy": false,
+                      "collisionPass": 0,
+                      "CappedDamage": 2.0,
+                      "name": "DamageModel_BaseProjectile_Snapfreeze",
+                      "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Damage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
                     },
                     {
                       "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.AddBehaviorToBloonModel, Assembly-CSharp",
@@ -579,164 +740,6 @@
                       "lifespan": 1.2
                     },
                     {
-                      "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.ProjectileFilterModel, Assembly-CSharp",
-                      "filters": [
-                        {
-                          "$type": "Assets.Scripts.Models.Towers.Filters.FilterInvisibleModel, Assembly-CSharp",
-                          "isActive": false,
-                          "ignoreBroadPhase": false,
-                          "name": "FilterInvisibleModel_",
-                          "ImplementationType": "Assets.Scripts.Simulation.Towers.Filters.FilterInvisible, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-                        },
-                        {
-                          "$type": "Assets.Scripts.Models.Towers.Filters.FilterOveridingMutatedTargetModel, Assembly-CSharp",
-                          "mutationId": null,
-                          "mutationOverideOrder": [
-                            "SuperBrittle",
-                            "Embrilttlement"
-                          ],
-                          "highestPriorityMutationId": "SuperBrittle",
-                          "defaultMutationId": "Embrilttlement",
-                          "name": "FilterOveridingMutatedTargetModel_",
-                          "ImplementationType": "Assets.Scripts.Simulation.Towers.Filters.FilterOveridingMutatedTarget, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-                        }
-                      ],
-                      "collisionPass": 0,
-                      "name": "ProjectileFilterModel_BaseProjectile",
-                      "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.ProjectileFilter, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-                    },
-                    {
-                      "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.FreezeModel, Assembly-CSharp",
-                      "speed": 0.0,
-                      "layers": 3,
-                      "mutationId": "Ice:Regular:Freeze",
-                      "percentChanceToFreeze": 0.0,
-                      "enablePercentChanceToFreeze": false,
-                      "damageModel": {
-                        "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModel, Assembly-CSharp",
-                        "damage": 2.0,
-                        "maxDamage": -1.0,
-                        "distributeToChildren": true,
-                        "overrideDistributeBlocker": false,
-                        "createPopEffect": true,
-                        "immuneBloonProperties": 4,
-                        "immuneBloonPropertiesOriginal": 4,
-                        "ignoreImmunityDestroy": false,
-                        "collisionPass": 0,
-                        "CappedDamage": 2.0,
-                        "name": "DamageModel_BaseProjectile_Snapfreeze",
-                        "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Damage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-                      },
-                      "canFreezeMoabs": false,
-                      "cascadeMutators": true,
-                      "growBlockModel": {
-                        "$type": "Assets.Scripts.Models.Bloons.Behaviors.GrowBlockModel, Assembly-CSharp",
-                        "name": "GrowBlockModel_FreezeGrowBlock",
-                        "ImplementationType": "Assets.Scripts.Simulation.Bloons.Behaviors.GrowBlock, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-                      },
-                      "overlayType": "Ice",
-                      "collisionPass": -1,
-                      "Lifespan": 1.2,
-                      "mutator": {
-                        "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.FreezeModel+Mutator, Assembly-CSharp",
-                        "speed": 0.0,
-                        "overlayType": "Ice",
-                        "mutationId": "Ice:Regular:Freeze",
-                        "growBlockModel": {
-                          "$type": "Assets.Scripts.Models.Bloons.Behaviors.GrowBlockModel, Assembly-CSharp",
-                          "name": "GrowBlockModel_FreezeGrowBlock",
-                          "ImplementationType": "Assets.Scripts.Simulation.Bloons.Behaviors.GrowBlock, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-                        },
-                        "damageModel": {
-                          "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModel, Assembly-CSharp",
-                          "damage": 2.0,
-                          "maxDamage": -1.0,
-                          "distributeToChildren": true,
-                          "overrideDistributeBlocker": false,
-                          "createPopEffect": true,
-                          "immuneBloonProperties": 4,
-                          "immuneBloonPropertiesOriginal": 4,
-                          "ignoreImmunityDestroy": false,
-                          "collisionPass": 0,
-                          "CappedDamage": 2.0,
-                          "name": "DamageModel_BaseProjectile_Snapfreeze",
-                          "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Damage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-                        },
-                        "canFreezeMoabs": false,
-                        "id": "Ice:Regular:Freeze",
-                        "isExclusiveInMutationList": false,
-                        "priority": 5,
-                        "glueLevel": 0,
-                        "dontCopy": false,
-                        "buffIndicator": null,
-                        "saveId": null,
-                        "isAreaBuff": false,
-                        "isGeraldoBuff": false
-                      },
-                      "name": "FreezeModel_Ice",
-                      "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Freeze, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
-                      "lifespan": 1.2
-                    },
-                    {
-                      "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.SlowModel, Assembly-CSharp",
-                      "effectModel": null,
-                      "layers": 3,
-                      "overlayLayer": 0,
-                      "glueLevel": 0,
-                      "isUnique": true,
-                      "dontRefreshDuration": false,
-                      "cascadeMutators": true,
-                      "removeMutatorIfNotMatching": false,
-                      "matchLayersWithDamage": false,
-                      "mutationId": "Permafrost:Normal",
-                      "countGlueAchievement": false,
-                      "overlayType": "",
-                      "collisionPass": -1,
-                      "Lifespan": 9999999.0,
-                      "Multiplier": 0.5,
-                      "Mutator": {
-                        "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.SlowModel+SlowMutator, Assembly-CSharp",
-                        "mutationId": "Permafrost:Normal",
-                        "overlayType": "",
-                        "slowModifierForTagModels": {
-                          "$type": "Assets.Scripts.Models.Model+ChildSearchEnumerable`1[[Assets.Scripts.Models.Towers.Projectiles.Behaviors.SlowModifierForTagModel, Assembly-CSharp]], Assembly-CSharp",
-                          "IsValid": false
-                        },
-                        "dontRefreshDuration": false,
-                        "didMutatorAffectBloon": false,
-                        "multiplier": 0.5,
-                        "filters": [],
-                        "id": "Permafrost:Normal",
-                        "isExclusiveInMutationList": false,
-                        "priority": 1,
-                        "glueLevel": 0,
-                        "dontCopy": false,
-                        "buffIndicator": null,
-                        "saveId": null,
-                        "isAreaBuff": false,
-                        "isGeraldoBuff": false
-                      },
-                      "name": "SlowModel_Permafrost",
-                      "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Slow, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
-                      "lifespan": 9999999.0,
-                      "multiplier": 0.5
-                    },
-                    {
-                      "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModel, Assembly-CSharp",
-                      "damage": 2.0,
-                      "maxDamage": -1.0,
-                      "distributeToChildren": true,
-                      "overrideDistributeBlocker": false,
-                      "createPopEffect": true,
-                      "immuneBloonProperties": 4,
-                      "immuneBloonPropertiesOriginal": 4,
-                      "ignoreImmunityDestroy": false,
-                      "collisionPass": 0,
-                      "CappedDamage": 2.0,
-                      "name": "DamageModel_BaseProjectile_Snapfreeze",
-                      "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Damage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-                    },
-                    {
                       "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.RemoveMutatorsFromBloonModel, Assembly-CSharp",
                       "key": "",
                       "keys": [],
@@ -775,6 +778,20 @@
                       "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.SlowModifierForTag, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
                     },
                     {
+                      "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModifierForTagModel, Assembly-CSharp",
+                      "tag": "Moabs",
+                      "tags": [
+                        "Moabs"
+                      ],
+                      "damageMultiplier": 1.0,
+                      "damageAddative": 8.0,
+                      "mustIncludeAllTags": false,
+                      "applyOverMaxDamage": false,
+                      "collisionPass": 0,
+                      "name": "DamageModifierForTagModel_BaseProjectile",
+                      "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.DamageModifierForTag, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+                    },
+                    {
                       "$type": "Assets.Scripts.Models.GenericBehaviors.DisplayModel, Assembly-CSharp",
                       "display": {
                         "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
@@ -806,7 +823,7 @@
                   "canCollideWithBloons": true,
                   "radius": 20.0,
                   "vsBlockerRadius": 0.0,
-                  "hasDamageModifiers": false,
+                  "hasDamageModifiers": true,
                   "dontUseCollisionChecker": false,
                   "ignoreNonTargetable": false,
                   "ignorePierceExhaustion": false,
@@ -1214,6 +1231,7 @@
   "isPowerTower": false,
   "isGeraldoItem": false,
   "IsBeastHandlerPet": false,
+  "SelectParentOnSelected": false,
   "BeastHandlerLeashMutationId": "BeastHandlerContributionIceMonkey",
   "IsBaseTower": false,
   "TargetTypes": [

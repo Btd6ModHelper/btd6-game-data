@@ -217,6 +217,8 @@
         "name": "SoundModel_PlaceStructureSound2",
         "ImplementationType": null
       },
+      "waterSound1": null,
+      "waterSound2": null,
       "heroSound1": {
         "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
         "assetId": {
@@ -548,7 +550,7 @@
     },
     {
       "$type": "Assets.Scripts.Models.Towers.Behaviors.DiscountZoneModel, Assembly-CSharp",
-      "discountMultiplier": 0.05,
+      "discountMultiplier": 0.1,
       "stackLimit": 1,
       "stackName": "RosaliaAircraftEffenciency",
       "groupName": "RosaliaAircraftEffenciency",
@@ -981,7 +983,7 @@
                             "Ceramic"
                           ],
                           "damageMultiplier": 1.0,
-                          "damageAddative": 4.0,
+                          "damageAddative": 5.0,
                           "mustIncludeAllTags": false,
                           "applyOverMaxDamage": false,
                           "collisionPass": 0,
@@ -1263,7 +1265,7 @@
                                   "Ceramic"
                                 ],
                                 "damageMultiplier": 1.0,
-                                "damageAddative": 2.0,
+                                "damageAddative": 3.0,
                                 "mustIncludeAllTags": false,
                                 "applyOverMaxDamage": false,
                                 "collisionPass": 0,
@@ -1692,7 +1694,7 @@
                             "Ceramic"
                           ],
                           "damageMultiplier": 1.0,
-                          "damageAddative": 4.0,
+                          "damageAddative": 5.0,
                           "mustIncludeAllTags": false,
                           "applyOverMaxDamage": false,
                           "collisionPass": 0,
@@ -1974,7 +1976,7 @@
                                   "Ceramic"
                                 ],
                                 "damageMultiplier": 1.0,
-                                "damageAddative": 2.0,
+                                "damageAddative": 3.0,
                                 "mustIncludeAllTags": false,
                                 "applyOverMaxDamage": false,
                                 "collisionPass": 0,
@@ -2638,6 +2640,7 @@
                   },
                   {
                     "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.RefreshPierceModel, Assembly-CSharp",
+                    "isBuffedByRate": false,
                     "collisionPass": 0,
                     "name": "RefreshPierceModel_",
                     "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.RefreshPierce, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
@@ -2749,17 +2752,6 @@
       ],
       "behaviors": [
         {
-          "$type": "Assets.Scripts.Models.Towers.Behaviors.Attack.Behaviors.RotateToTargetAirUnitModel, Assembly-CSharp",
-          "onlyRotateDuringThrow": false,
-          "useThrowMarkerHeight": false,
-          "rotateOnlyOnThrow": false,
-          "additionalRotation": 0,
-          "rotateTower": true,
-          "useMainAttackRotation": false,
-          "name": "RotateToTargetAirUnitModel_",
-          "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.Attack.Behaviors.RotateToTargetAirUnit, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-        },
-        {
           "$type": "Assets.Scripts.Models.Towers.Behaviors.Attack.Behaviors.TargetFirstAirUnitModel, Assembly-CSharp",
           "isSelectable": true,
           "isOnSubTower": false,
@@ -2786,6 +2778,17 @@
           "isOnSubTower": false,
           "name": "TargetStrongAirUnitModel_",
           "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.Attack.Behaviors.TargetStrongAirUnit, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+        },
+        {
+          "$type": "Assets.Scripts.Models.Towers.Behaviors.Attack.Behaviors.RotateToTargetAirUnitModel, Assembly-CSharp",
+          "onlyRotateDuringThrow": false,
+          "useThrowMarkerHeight": false,
+          "rotateOnlyOnThrow": false,
+          "additionalRotation": 0,
+          "rotateTower": true,
+          "useMainAttackRotation": false,
+          "name": "RotateToTargetAirUnitModel_",
+          "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.Attack.Behaviors.RotateToTargetAirUnit, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
         },
         {
           "$type": "Assets.Scripts.Models.Towers.Behaviors.Attack.Behaviors.AttackFilterModel, Assembly-CSharp",
@@ -2917,6 +2920,7 @@
                         "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.InstantModel, Assembly-CSharp",
                         "destroyIfInvalid": false,
                         "ignoreTargetZ": true,
+                        "dontFollowTarget": false,
                         "collisionPass": 0,
                         "name": "InstantModel_",
                         "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Instant, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
@@ -3187,7 +3191,7 @@
                           "name": "SingleEmissionModel_",
                           "ImplementationType": "Assets.Scripts.Simulation.Towers.Emissions.SingleEmission, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
                         },
-                        "intervalFrames": 12,
+                        "intervalFrames": 15,
                         "range": 40.0,
                         "effectAtProjectileModel": {
                           "$type": "Assets.Scripts.Models.Effects.EffectModel, Assembly-CSharp",
@@ -3227,8 +3231,8 @@
                           "name": "EffectModel_MissileDown",
                           "ImplementationType": null
                         },
-                        "delayBeforeEffectFrames": -15,
-                        "initialDelayFrames": 50,
+                        "delayBeforeEffectFrames": -18,
+                        "initialDelayFrames": 60,
                         "maxProjectileCount": 30,
                         "collisionPass": 0,
                         "name": "CreateProjectilesInAreaModel_",
@@ -3419,12 +3423,12 @@
       "CooldownSpeedScale": 0.0,
       "AnimationOffset": 0.0,
       "IsPassive": false,
-      "Cooldown": 60.0,
+      "Cooldown": 45.0,
       "name": "AbilityModel_ScatterMissileAbility",
       "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.Abilities.Ability, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
       "cooldownSpeedScale": 0.0,
       "animationOffset": 0.0,
-      "cooldown": 60.0
+      "cooldown": 45.0
     },
     {
       "$type": "Assets.Scripts.Models.Towers.Behaviors.Abilities.AbilityModel, Assembly-CSharp",
@@ -3474,7 +3478,7 @@
         {
           "$type": "Assets.Scripts.Models.Towers.Behaviors.Abilities.Behaviors.FlightBoostAbilityModel, Assembly-CSharp",
           "lifespan": 20.0,
-          "lifespanFrames": 1000,
+          "lifespanFrames": 1200,
           "moveSpeedMultiplier": 1.3,
           "effectDuringWorkshopModel": {
             "$type": "Assets.Scripts.Models.Effects.EffectModel, Assembly-CSharp",
@@ -3672,11 +3676,11 @@
                       {
                         "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.KineticChargeProjectileModel, Assembly-CSharp",
                         "deployRadiusMax": 30.0,
-                        "deployTime": 2.0,
-                        "deployTimeFrames": 100,
+                        "deployTime": 1.0,
+                        "deployTimeFrames": 60,
                         "duration": 10.0,
-                        "durationFrames": 500,
-                        "travelSpeed": 250.0,
+                        "durationFrames": 600,
+                        "travelSpeed": 350.0,
                         "maxAdditionalDamageAmount": 3000,
                         "damageTakenMaxAmount": 6000,
                         "projectileExplosionModel": {
@@ -4033,9 +4037,9 @@
           "pursuitDistance": 30.4,
           "groupingOffset": 19.2,
           "jumpUpTime": 0.1,
-          "jumpUpTimeFrames": 5.0,
+          "jumpUpTimeFrames": 6.0,
           "jumpDownTime": 0.34,
-          "jumpDownTimeFrames": 17.0,
+          "jumpDownTimeFrames": 20.0,
           "jumpUpAnimationState": 1,
           "jumpRelocateAnimationState": 2,
           "jumpDownAnimationState": 3,
@@ -4334,6 +4338,7 @@
   "isPowerTower": false,
   "isGeraldoItem": false,
   "IsBeastHandlerPet": false,
+  "SelectParentOnSelected": false,
   "BeastHandlerLeashMutationId": "BeastHandlerContributionRosalia",
   "IsBaseTower": false,
   "TargetTypes": [

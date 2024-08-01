@@ -263,6 +263,8 @@
         "name": "SoundModel_PlaceTower2",
         "ImplementationType": null
       },
+      "waterSound1": null,
+      "waterSound2": null,
       "heroSound1": null,
       "heroSound2": null,
       "name": "CreateSoundOnTowerPlaceModel_IceMonkey-004",
@@ -461,6 +463,7 @@
                         "name": "GrowBlockModel_FreezeGrowBlock",
                         "ImplementationType": "Assets.Scripts.Simulation.Bloons.Behaviors.GrowBlock, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
                       },
+                      "applyAfterDamage": false,
                       "overlayType": "Ice",
                       "collisionPass": -1,
                       "Lifespan": 1.2,
@@ -738,6 +741,20 @@
                       "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.SlowModifierForTag, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
                     },
                     {
+                      "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModifierForTagModel, Assembly-CSharp",
+                      "tag": "Moabs",
+                      "tags": [
+                        "Moabs"
+                      ],
+                      "damageMultiplier": 1.0,
+                      "damageAddative": 8.0,
+                      "mustIncludeAllTags": false,
+                      "applyOverMaxDamage": false,
+                      "collisionPass": 0,
+                      "name": "DamageModifierForTagModel_BaseProjectile",
+                      "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.DamageModifierForTag, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+                    },
+                    {
                       "$type": "Assets.Scripts.Models.GenericBehaviors.DisplayModel, Assembly-CSharp",
                       "display": {
                         "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
@@ -769,7 +786,7 @@
                   "canCollideWithBloons": true,
                   "radius": 20.0,
                   "vsBlockerRadius": 0.0,
-                  "hasDamageModifiers": false,
+                  "hasDamageModifiers": true,
                   "dontUseCollisionChecker": false,
                   "ignoreNonTargetable": false,
                   "ignorePierceExhaustion": false,
@@ -1178,6 +1195,7 @@
   "isPowerTower": false,
   "isGeraldoItem": false,
   "IsBeastHandlerPet": false,
+  "SelectParentOnSelected": false,
   "BeastHandlerLeashMutationId": "BeastHandlerContributionIceMonkey",
   "IsBaseTower": false,
   "TargetTypes": [

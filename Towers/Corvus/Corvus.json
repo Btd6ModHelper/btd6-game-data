@@ -467,6 +467,8 @@
         "name": "SoundModel_PlaceSound2",
         "ImplementationType": null
       },
+      "waterSound1": null,
+      "waterSound2": null,
       "heroSound1": {
         "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
         "assetId": {
@@ -694,12 +696,12 @@
             "distance": 50.0,
             "tolerance": 1.41,
             "acceleration": 10.0,
-            "accelerationPerFrame": 0.199999988,
+            "accelerationPerFrame": 0.166666672,
             "speed": 1.0,
             "minSpeed": 20.0,
-            "minSpeedPerFrame": 0.399999976,
+            "minSpeedPerFrame": 0.333333343,
             "maxSpeed": 125.0,
-            "maxSpeedPerFrame": 2.5,
+            "maxSpeedPerFrame": 2.08333349,
             "rotation": 9.0,
             "accelerateInAngle": 10.0,
             "startDeceleratingIfAngleGreaterThan": 25.0,
@@ -846,7 +848,7 @@
                       "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.AnimateParentTowerOnCollideModel, Assembly-CSharp",
                       "animationState": 3,
                       "minTimeBetween": 0.25,
-                      "minTimeBetweenFrames": 12,
+                      "minTimeBetweenFrames": 14,
                       "collisionPass": 0,
                       "name": "AnimateParentTowerOnCollideModel_MainProjectile",
                       "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.AnimateParentTowerOnCollide, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
@@ -874,6 +876,7 @@
                     },
                     {
                       "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.RefreshPierceModel, Assembly-CSharp",
+                      "isBuffedByRate": false,
                       "collisionPass": 0,
                       "name": "RefreshPierceModel_",
                       "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.RefreshPierce, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
@@ -1007,7 +1010,7 @@
                           "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.AnimateParentTowerOnCollideModel, Assembly-CSharp",
                           "animationState": 3,
                           "minTimeBetween": 0.25,
-                          "minTimeBetweenFrames": 12,
+                          "minTimeBetweenFrames": 14,
                           "collisionPass": 0,
                           "name": "AnimateParentTowerOnCollideModel_MainProjectile",
                           "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.AnimateParentTowerOnCollide, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
@@ -1035,6 +1038,7 @@
                         },
                         {
                           "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.RefreshPierceModel, Assembly-CSharp",
+                          "isBuffedByRate": false,
                           "collisionPass": 0,
                           "name": "RefreshPierceModel_",
                           "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.RefreshPierce, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
@@ -1365,7 +1369,7 @@
                       },
                       "pierceInterval": 1.0,
                       "count": 9999999,
-                      "minimumTimeDifferenceInFrames": 7,
+                      "minimumTimeDifferenceInFrames": 9,
                       "destroyProjectile": true,
                       "assetId": {
                         "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
@@ -1374,6 +1378,7 @@
                       },
                       "displayLifetime": 6.0,
                       "displayFullscreen": false,
+                      "useBloonPosition": false,
                       "collisionPass": 0,
                       "name": "CreateProjectileOnExhaustPierceModel_MainProjectileCPOEP",
                       "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.CreateProjectileOnExhaustPierce, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
@@ -1698,6 +1703,7 @@
         "isPowerTower": false,
         "isGeraldoItem": false,
         "IsBeastHandlerPet": false,
+        "SelectParentOnSelected": false,
         "BeastHandlerLeashMutationId": "BeastHandlerContributionSpirit-Tower",
         "IsBaseTower": false,
         "TargetTypes": [
@@ -1953,7 +1959,7 @@
                   },
                   "pierceInterval": 1.0,
                   "count": 9999999,
-                  "minimumTimeDifferenceInFrames": 7,
+                  "minimumTimeDifferenceInFrames": 9,
                   "destroyProjectile": true,
                   "assetId": {
                     "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
@@ -1962,6 +1968,7 @@
                   },
                   "displayLifetime": 6.0,
                   "displayFullscreen": false,
+                  "useBloonPosition": false,
                   "collisionPass": 0,
                   "name": "CreateProjectileOnExhaustPierceModel_MainProjectileCPOEP",
                   "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.CreateProjectileOnExhaustPierce, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
@@ -2440,6 +2447,7 @@
           },
           {
             "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.RefreshPierceModel, Assembly-CSharp",
+            "isBuffedByRate": false,
             "collisionPass": 0,
             "name": "RefreshPierceModel_",
             "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.RefreshPierce, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
@@ -3170,6 +3178,7 @@
   "isPowerTower": false,
   "isGeraldoItem": false,
   "IsBeastHandlerPet": false,
+  "SelectParentOnSelected": false,
   "BeastHandlerLeashMutationId": "BeastHandlerContributionCorvus",
   "IsBaseTower": true,
   "TargetTypes": [

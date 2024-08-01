@@ -426,6 +426,8 @@
               "name": "SoundModel_PlaceFishMedium02",
               "ImplementationType": null
             },
+            "waterSound1": null,
+            "waterSound2": null,
             "heroSound1": null,
             "heroSound2": null,
             "name": "CreateSoundOnTowerPlaceModel_Piranha",
@@ -1055,7 +1057,7 @@
                                     "name": "SingleEmissionModel_",
                                     "ImplementationType": "Assets.Scripts.Simulation.Towers.Emissions.SingleEmission, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
                                   },
-                                  "intervalFrames": 15,
+                                  "intervalFrames": 18,
                                   "onlyIfHasTarget": false,
                                   "range": 0.0,
                                   "targetType": {
@@ -1067,6 +1069,8 @@
                                     "continueToNextPriority": false
                                   },
                                   "isBuffedByRate": true,
+                                  "useRawWeaponRate": false,
+                                  "onlyEmitOnce": false,
                                   "collisionPass": 0,
                                   "name": "CreateProjectileOnIntervalModel_",
                                   "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.CreateProjectileOnInterval, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
@@ -1105,7 +1109,7 @@
                                   "animationStateOnSetTarget": 4,
                                   "animationStateOnTowerOnDestroy": 7,
                                   "postBloonDestroyTime": 1.1,
-                                  "postBloonDestroyTimeFrames": 55,
+                                  "postBloonDestroyTimeFrames": 65,
                                   "bloonSpeedMultiplier": 0.6,
                                   "collisionPass": 0,
                                   "SlowMutator": {
@@ -1657,6 +1661,7 @@
         "isPowerTower": false,
         "isGeraldoItem": false,
         "IsBeastHandlerPet": true,
+        "SelectParentOnSelected": false,
         "BeastHandlerLeashMutationId": "BeastHandlerContributionPiranha",
         "IsBaseTower": true,
         "TargetTypes": [
@@ -2027,6 +2032,8 @@
               "name": "SoundModel_PlaceFalcon",
               "ImplementationType": null
             },
+            "waterSound1": null,
+            "waterSound2": null,
             "heroSound1": null,
             "heroSound2": null,
             "name": "CreateSoundOnTowerPlaceModel_Gyrfalcon",
@@ -2052,7 +2059,7 @@
                 "hoverAnimationState": 2,
                 "snapDistance": 5.0,
                 "cooldown": 1.0,
-                "cooldownFrames": 50,
+                "cooldownFrames": 60,
                 "initialDamageModel": {
                   "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModel, Assembly-CSharp",
                   "damage": 1.0,
@@ -2163,7 +2170,7 @@
                   "checkCollisionInterval": 0.0
                 },
                 "grappleDamageRate": 1.0,
-                "grappleDamageRateFrames": 50,
+                "grappleDamageRateFrames": 60,
                 "selectPointDisplay": {
                   "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
                   "GUID": "f10d129bc99697a46a1d6caf0fa71d05",
@@ -2179,6 +2186,7 @@
                 "moabPiercePenalty": 0,
                 "bfbPiercePenalty": 0,
                 "zomgPiercePenalty": 0,
+                "ddtPiercePenalty": 0,
                 "continuePickingUpBloons": false,
                 "moabSpeedScale": 0.7,
                 "enableAdjacentHover": false,
@@ -2205,9 +2213,9 @@
                   "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.DamageModifierForTag, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
                 },
                 "idleMinTime": 3.0,
-                "idleMinTimeFrames": 150,
+                "idleMinTimeFrames": 179,
                 "idleMaxTime": 8.0,
-                "idleMaxTimeFrames": 400,
+                "idleMaxTimeFrames": 479,
                 "initialYOffset": 30.0,
                 "keepPickingBloonsRange": 32.0,
                 "noGrabEffectModel": null,
@@ -2288,7 +2296,7 @@
               "hoverAnimationState": 2,
               "snapDistance": 5.0,
               "cooldown": 1.0,
-              "cooldownFrames": 50,
+              "cooldownFrames": 60,
               "initialDamageModel": {
                 "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModel, Assembly-CSharp",
                 "damage": 1.0,
@@ -2399,7 +2407,7 @@
                 "checkCollisionInterval": 0.0
               },
               "grappleDamageRate": 1.0,
-              "grappleDamageRateFrames": 50,
+              "grappleDamageRateFrames": 60,
               "selectPointDisplay": {
                 "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
                 "GUID": "f10d129bc99697a46a1d6caf0fa71d05",
@@ -2415,6 +2423,7 @@
               "moabPiercePenalty": 0,
               "bfbPiercePenalty": 0,
               "zomgPiercePenalty": 0,
+              "ddtPiercePenalty": 0,
               "continuePickingUpBloons": false,
               "moabSpeedScale": 0.7,
               "enableAdjacentHover": false,
@@ -2441,9 +2450,9 @@
                 "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.DamageModifierForTag, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
               },
               "idleMinTime": 3.0,
-              "idleMinTimeFrames": 150,
+              "idleMinTimeFrames": 179,
               "idleMaxTime": 8.0,
-              "idleMaxTimeFrames": 400,
+              "idleMaxTimeFrames": 479,
               "initialYOffset": 30.0,
               "keepPickingBloonsRange": 32.0,
               "noGrabEffectModel": null,
@@ -2595,6 +2604,7 @@
         "isPowerTower": false,
         "isGeraldoItem": false,
         "IsBeastHandlerPet": true,
+        "SelectParentOnSelected": false,
         "BeastHandlerLeashMutationId": "BeastHandlerContributionGyrfalcon",
         "IsBaseTower": true,
         "TargetTypes": [
@@ -2870,6 +2880,8 @@
         "name": "SoundModel_PlaceSound2",
         "ImplementationType": null
       },
+      "waterSound1": null,
+      "waterSound2": null,
       "heroSound1": null,
       "heroSound2": null,
       "name": "CreateSoundOnTowerPlaceModel_BeastHandler-302",
@@ -3383,6 +3395,7 @@
   "isPowerTower": false,
   "isGeraldoItem": false,
   "IsBeastHandlerPet": false,
+  "SelectParentOnSelected": false,
   "BeastHandlerLeashMutationId": "BeastHandlerContributionBeastHandler",
   "IsBaseTower": false,
   "TargetTypes": [

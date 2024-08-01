@@ -217,6 +217,8 @@
         "name": "SoundModel_PlaceStructureSound2",
         "ImplementationType": null
       },
+      "waterSound1": null,
+      "waterSound2": null,
       "heroSound1": {
         "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
         "assetId": {
@@ -788,17 +790,6 @@
       ],
       "behaviors": [
         {
-          "$type": "Assets.Scripts.Models.Towers.Behaviors.Attack.Behaviors.RotateToTargetAirUnitModel, Assembly-CSharp",
-          "onlyRotateDuringThrow": false,
-          "useThrowMarkerHeight": false,
-          "rotateOnlyOnThrow": false,
-          "additionalRotation": 0,
-          "rotateTower": true,
-          "useMainAttackRotation": false,
-          "name": "RotateToTargetAirUnitModel_",
-          "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.Attack.Behaviors.RotateToTargetAirUnit, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-        },
-        {
           "$type": "Assets.Scripts.Models.Towers.Behaviors.Attack.Behaviors.TargetFirstAirUnitModel, Assembly-CSharp",
           "isSelectable": true,
           "isOnSubTower": false,
@@ -825,6 +816,17 @@
           "isOnSubTower": false,
           "name": "TargetStrongAirUnitModel_",
           "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.Attack.Behaviors.TargetStrongAirUnit, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+        },
+        {
+          "$type": "Assets.Scripts.Models.Towers.Behaviors.Attack.Behaviors.RotateToTargetAirUnitModel, Assembly-CSharp",
+          "onlyRotateDuringThrow": false,
+          "useThrowMarkerHeight": false,
+          "rotateOnlyOnThrow": false,
+          "additionalRotation": 0,
+          "rotateTower": true,
+          "useMainAttackRotation": false,
+          "name": "RotateToTargetAirUnitModel_",
+          "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.Attack.Behaviors.RotateToTargetAirUnit, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
         },
         {
           "$type": "Assets.Scripts.Models.Towers.Behaviors.Attack.Behaviors.AttackFilterModel, Assembly-CSharp",
@@ -875,9 +877,9 @@
           "pursuitDistance": 30.4,
           "groupingOffset": 19.2,
           "jumpUpTime": 1.0,
-          "jumpUpTimeFrames": 50.0,
+          "jumpUpTimeFrames": 60.0,
           "jumpDownTime": 1.0,
-          "jumpDownTimeFrames": 50.0,
+          "jumpDownTimeFrames": 60.0,
           "jumpUpAnimationState": 1,
           "jumpRelocateAnimationState": 2,
           "jumpDownAnimationState": 3,
@@ -1161,6 +1163,7 @@
   "isPowerTower": false,
   "isGeraldoItem": false,
   "IsBeastHandlerPet": false,
+  "SelectParentOnSelected": false,
   "BeastHandlerLeashMutationId": "BeastHandlerContributionRosalia",
   "IsBaseTower": true,
   "TargetTypes": [

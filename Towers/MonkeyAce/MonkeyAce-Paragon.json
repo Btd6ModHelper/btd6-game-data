@@ -332,6 +332,8 @@
         "name": "SoundModel_PlacementSound2",
         "ImplementationType": null
       },
+      "waterSound1": null,
+      "waterSound2": null,
       "heroSound1": null,
       "heroSound2": null,
       "name": "CreateSoundOnTowerPlaceModel_MonkeyAce-Paragon",
@@ -1721,7 +1723,7 @@
                     },
                     {
                       "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModel, Assembly-CSharp",
-                      "damage": 20000.0,
+                      "damage": 30000.0,
                       "maxDamage": 0.0,
                       "distributeToChildren": true,
                       "overrideDistributeBlocker": true,
@@ -1730,23 +1732,9 @@
                       "immuneBloonPropertiesOriginal": 0,
                       "ignoreImmunityDestroy": false,
                       "collisionPass": 0,
-                      "CappedDamage": 20000.0,
+                      "CappedDamage": 30000.0,
                       "name": "DamageModel_ProjectileDamage_",
                       "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Damage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-                    },
-                    {
-                      "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModifierForTagModel, Assembly-CSharp",
-                      "tag": "Boss",
-                      "tags": [
-                        "Boss"
-                      ],
-                      "damageMultiplier": 1.0,
-                      "damageAddative": 20000.0,
-                      "mustIncludeAllTags": false,
-                      "applyOverMaxDamage": false,
-                      "collisionPass": 0,
-                      "name": "DamageModifierForTagModel_ProjectileDamage",
-                      "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.DamageModifierForTag, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
                     },
                     {
                       "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.AgeModel, Assembly-CSharp",
@@ -1890,7 +1878,7 @@
                   "canCollideWithBloons": true,
                   "radius": 50.0,
                   "vsBlockerRadius": 0.0,
-                  "hasDamageModifiers": true,
+                  "hasDamageModifiers": false,
                   "dontUseCollisionChecker": false,
                   "ignoreNonTargetable": false,
                   "ignorePierceExhaustion": false,
@@ -2022,12 +2010,12 @@
       "CooldownSpeedScale": 0.0,
       "AnimationOffset": 0.7,
       "IsPassive": false,
-      "Cooldown": 50.0,
+      "Cooldown": 60.0,
       "name": "AbilityModel_Ability-CarpetBomb",
       "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.Abilities.Ability, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
       "cooldownSpeedScale": 0.0,
       "animationOffset": 0.7,
-      "cooldown": 50.0
+      "cooldown": 60.0
     },
     {
       "$type": "Assets.Scripts.Models.Towers.Behaviors.AirUnitModel, Assembly-CSharp",
@@ -2182,6 +2170,7 @@
   "isPowerTower": false,
   "isGeraldoItem": false,
   "IsBeastHandlerPet": false,
+  "SelectParentOnSelected": false,
   "BeastHandlerLeashMutationId": "BeastHandlerContributionMonkeyAce",
   "IsBaseTower": false,
   "TargetTypes": [

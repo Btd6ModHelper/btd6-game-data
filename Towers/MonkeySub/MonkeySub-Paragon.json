@@ -1095,6 +1095,8 @@
         "name": "SoundModel_PlacementSound02",
         "ImplementationType": null
       },
+      "waterSound1": null,
+      "waterSound2": null,
       "heroSound1": null,
       "heroSound2": null,
       "name": "CreateSoundOnTowerPlaceModel_MonkeySub-Paragon",
@@ -1351,6 +1353,7 @@
             "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.InstantModel, Assembly-CSharp",
             "destroyIfInvalid": false,
             "ignoreTargetZ": false,
+            "dontFollowTarget": false,
             "collisionPass": 0,
             "name": "InstantModel_",
             "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Instant, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
@@ -2732,6 +2735,7 @@
                 "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.InstantModel, Assembly-CSharp",
                 "destroyIfInvalid": false,
                 "ignoreTargetZ": false,
+                "dontFollowTarget": false,
                 "collisionPass": 0,
                 "name": "InstantModel_",
                 "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Instant, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
@@ -2946,7 +2950,7 @@
                           },
                           {
                             "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModel, Assembly-CSharp",
-                            "damage": 10000.0,
+                            "damage": 15000.0,
                             "maxDamage": 0.0,
                             "distributeToChildren": true,
                             "overrideDistributeBlocker": false,
@@ -2955,23 +2959,9 @@
                             "immuneBloonPropertiesOriginal": 0,
                             "ignoreImmunityDestroy": false,
                             "collisionPass": 0,
-                            "CappedDamage": 10000.0,
+                            "CappedDamage": 15000.0,
                             "name": "DamageModel_Aftershock_",
                             "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Damage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-                          },
-                          {
-                            "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModifierForTagModel, Assembly-CSharp",
-                            "tag": "Boss",
-                            "tags": [
-                              "Boss"
-                            ],
-                            "damageMultiplier": 1.0,
-                            "damageAddative": 5000.0,
-                            "mustIncludeAllTags": false,
-                            "applyOverMaxDamage": false,
-                            "collisionPass": 0,
-                            "name": "DamageModifierForTagModel_Aftershock",
-                            "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.DamageModifierForTag, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
                           },
                           {
                             "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.CreateProjectilesOnTrackOnExpireModel, Assembly-CSharp",
@@ -3039,21 +3029,7 @@
                                     "Moabs"
                                   ],
                                   "damageMultiplier": 1.0,
-                                  "damageAddative": 60.0,
-                                  "mustIncludeAllTags": false,
-                                  "applyOverMaxDamage": false,
-                                  "collisionPass": 0,
-                                  "name": "DamageModifierForTagModel_Fallout",
-                                  "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.DamageModifierForTag, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-                                },
-                                {
-                                  "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModifierForTagModel, Assembly-CSharp",
-                                  "tag": "Boss",
-                                  "tags": [
-                                    "Boss"
-                                  ],
-                                  "damageMultiplier": 1.0,
-                                  "damageAddative": 30.0,
+                                  "damageAddative": 90.0,
                                   "mustIncludeAllTags": false,
                                   "applyOverMaxDamage": false,
                                   "collisionPass": 0,
@@ -3062,6 +3038,7 @@
                                 },
                                 {
                                   "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.RefreshPierceModel, Assembly-CSharp",
+                                  "isBuffedByRate": false,
                                   "collisionPass": 0,
                                   "name": "RefreshPierceModel_",
                                   "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.RefreshPierce, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
@@ -3171,7 +3148,7 @@
                         "canCollideWithBloons": true,
                         "radius": 180.0,
                         "vsBlockerRadius": 0.0,
-                        "hasDamageModifiers": true,
+                        "hasDamageModifiers": false,
                         "dontUseCollisionChecker": false,
                         "ignoreNonTargetable": true,
                         "ignorePierceExhaustion": false,
@@ -3194,7 +3171,7 @@
                     },
                     {
                       "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModel, Assembly-CSharp",
-                      "damage": 50000.0,
+                      "damage": 60000.0,
                       "maxDamage": 0.0,
                       "distributeToChildren": true,
                       "overrideDistributeBlocker": false,
@@ -3203,23 +3180,9 @@
                       "immuneBloonPropertiesOriginal": 0,
                       "ignoreImmunityDestroy": false,
                       "collisionPass": 0,
-                      "CappedDamage": 50000.0,
+                      "CappedDamage": 60000.0,
                       "name": "DamageModel_Explosion_",
                       "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Damage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-                    },
-                    {
-                      "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModifierForTagModel, Assembly-CSharp",
-                      "tag": "Boss",
-                      "tags": [
-                        "Boss"
-                      ],
-                      "damageMultiplier": 1.0,
-                      "damageAddative": 10000.0,
-                      "mustIncludeAllTags": false,
-                      "applyOverMaxDamage": false,
-                      "collisionPass": 0,
-                      "name": "DamageModifierForTagModel_Explosion",
-                      "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.DamageModifierForTag, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
                     },
                     {
                       "$type": "Assets.Scripts.Models.GenericBehaviors.DisplayModel, Assembly-CSharp",
@@ -3251,7 +3214,7 @@
                   "canCollideWithBloons": true,
                   "radius": 60.0,
                   "vsBlockerRadius": 0.0,
-                  "hasDamageModifiers": true,
+                  "hasDamageModifiers": false,
                   "dontUseCollisionChecker": false,
                   "ignoreNonTargetable": true,
                   "ignorePierceExhaustion": true,
@@ -3601,6 +3564,7 @@
   "isPowerTower": false,
   "isGeraldoItem": false,
   "IsBeastHandlerPet": false,
+  "SelectParentOnSelected": false,
   "BeastHandlerLeashMutationId": "BeastHandlerContributionMonkeySub",
   "IsBaseTower": false,
   "TargetTypes": [

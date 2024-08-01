@@ -284,6 +284,8 @@
         "name": "SoundModel_PlaceSound2",
         "ImplementationType": null
       },
+      "waterSound1": null,
+      "waterSound2": null,
       "heroSound1": null,
       "heroSound2": null,
       "name": "CreateSoundOnTowerPlaceModel_Druid-402",
@@ -779,7 +781,7 @@
                   "name": "SingleEmissionModel_",
                   "ImplementationType": "Assets.Scripts.Simulation.Towers.Emissions.SingleEmission, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
                 },
-                "intervalFrames": 17,
+                "intervalFrames": 21,
                 "onlyIfHasTarget": true,
                 "range": 43.0,
                 "targetType": {
@@ -791,6 +793,8 @@
                   "continueToNextPriority": false
                 },
                 "isBuffedByRate": false,
+                "useRawWeaponRate": false,
+                "onlyEmitOnce": false,
                 "collisionPass": 0,
                 "name": "CreateProjectileOnIntervalModel_",
                 "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.CreateProjectileOnInterval, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
@@ -802,7 +806,21 @@
                 "mutationId": "Ice:Regular:Freeze",
                 "percentChanceToFreeze": 1.0,
                 "enablePercentChanceToFreeze": false,
-                "damageModel": null,
+                "damageModel": {
+                  "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModel, Assembly-CSharp",
+                  "damage": 0.0,
+                  "maxDamage": 0.0,
+                  "distributeToChildren": false,
+                  "overrideDistributeBlocker": false,
+                  "createPopEffect": false,
+                  "immuneBloonProperties": 5,
+                  "immuneBloonPropertiesOriginal": 5,
+                  "ignoreImmunityDestroy": false,
+                  "collisionPass": 0,
+                  "CappedDamage": 0.0,
+                  "name": "DamageModel_SpawningProjectile_BallLightningFreeze",
+                  "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Damage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+                },
                 "canFreezeMoabs": false,
                 "cascadeMutators": false,
                 "growBlockModel": {
@@ -810,6 +828,7 @@
                   "name": "GrowBlockModel_FreezeGrowBlock",
                   "ImplementationType": "Assets.Scripts.Simulation.Bloons.Behaviors.GrowBlock, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
                 },
+                "applyAfterDamage": false,
                 "overlayType": "Ice",
                 "collisionPass": -1,
                 "Lifespan": 1.5,
@@ -823,7 +842,21 @@
                     "name": "GrowBlockModel_FreezeGrowBlock",
                     "ImplementationType": "Assets.Scripts.Simulation.Bloons.Behaviors.GrowBlock, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
                   },
-                  "damageModel": null,
+                  "damageModel": {
+                    "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModel, Assembly-CSharp",
+                    "damage": 0.0,
+                    "maxDamage": 0.0,
+                    "distributeToChildren": false,
+                    "overrideDistributeBlocker": false,
+                    "createPopEffect": false,
+                    "immuneBloonProperties": 5,
+                    "immuneBloonPropertiesOriginal": 5,
+                    "ignoreImmunityDestroy": false,
+                    "collisionPass": 0,
+                    "CappedDamage": 0.0,
+                    "name": "DamageModel_SpawningProjectile_BallLightningFreeze",
+                    "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Damage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+                  },
                   "canFreezeMoabs": false,
                   "id": "Ice:Regular:Freeze",
                   "isExclusiveInMutationList": false,
@@ -838,6 +871,21 @@
                 "name": "FreezeModel_",
                 "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Freeze, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
                 "lifespan": 1.5
+              },
+              {
+                "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModel, Assembly-CSharp",
+                "damage": 0.0,
+                "maxDamage": 0.0,
+                "distributeToChildren": false,
+                "overrideDistributeBlocker": false,
+                "createPopEffect": false,
+                "immuneBloonProperties": 5,
+                "immuneBloonPropertiesOriginal": 5,
+                "ignoreImmunityDestroy": false,
+                "collisionPass": 0,
+                "CappedDamage": 0.0,
+                "name": "DamageModel_SpawningProjectile_BallLightningFreeze",
+                "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Damage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
               },
               {
                 "$type": "Assets.Scripts.Models.GenericBehaviors.DisplayModel, Assembly-CSharp",
@@ -1815,6 +1863,7 @@
   "isPowerTower": false,
   "isGeraldoItem": false,
   "IsBeastHandlerPet": false,
+  "SelectParentOnSelected": false,
   "BeastHandlerLeashMutationId": "BeastHandlerContributionDruid",
   "IsBaseTower": false,
   "TargetTypes": [
