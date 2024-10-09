@@ -1,227 +1,227 @@
 {
- "cost": 325.0,
- "radius": 7.0,
- "radiusSquared": 49.0,
- "range": 52.0,
- "isGlobalRange": true,
- "tier": 2,
- "tiers": [
-  2,
-  1
- ],
- "towerSet": 2,
- "areaTypes": [
-  1
- ],
- "mods": [
-  {
-   "mod": "GlobalAbilityCooldowns"
-  },
-  {
-   "mod": "VeteranMonkeyTraining"
-  },
-  {
-   "mod": "MonkeyEducation"
-  },
-  {
-   "mod": "BetterSellDeals"
-  },
-  {
-   "mod": "NavalUpgrades"
-  },
-  {
-   "mod": "SubAdmiral",
-   "target": "SubCommanderSupport"
-  },
-  {
-   "mod": "EliteMilitaryTraining"
-  },
-  {
-   "mod": "FlankingManeuvers"
-  }
- ],
- "behaviors": [
-  {
-   "effectModel": {
-    "scale": 1.0,
-    "lifespan": 6.0
-   }
-  },
-  {
-   "effectModel": {
-    "scale": 1.0,
-    "lifespan": 1.0
-   }
-  },
-  {
-   "effectModel": {
-    "scale": 1.0,
-    "lifespan": 6.0
-   }
-  },
-  {
-   "weapons": [
+  "cost": 325.0,
+  "radius": 7.0,
+  "radiusSquared": 49.0,
+  "range": 52.0,
+  "isGlobalRange": true,
+  "tier": 2,
+  "tiers": [
+    2,
+    1
+  ],
+  "towerSet": 2,
+  "areaTypes": [
+    1
+  ],
+  "mods": [
     {
-     "animation": -1,
-     "emission": {
-      "projectileCount": 1,
-      "rotateProjectileWithTower": true
-     },
-     "ejectY": 16.0,
-     "ejectZ": 8.5,
-     "projectile": {
-      "id": "Projectile",
-      "pierce": 5.0,
-      "scale": 1.0,
-      "filters": [
-       {
-        "isActive": true
-       }
+      "mod": "GlobalAbilityCooldowns"
+    },
+    {
+      "mod": "VeteranMonkeyTraining"
+    },
+    {
+      "mod": "MonkeyEducation"
+    },
+    {
+      "mod": "BetterSellDeals"
+    },
+    {
+      "mod": "NavalUpgrades"
+    },
+    {
+      "mod": "SubAdmiral",
+      "target": "SubCommanderSupport"
+    },
+    {
+      "mod": "EliteMilitaryTraining"
+    },
+    {
+      "mod": "FlankingManeuvers"
+    }
+  ],
+  "behaviors": [
+    {
+      "effectModel": {
+        "scale": 1.0,
+        "lifespan": 6.0
+      }
+    },
+    {
+      "effectModel": {
+        "scale": 1.0,
+        "lifespan": 1.0
+      }
+    },
+    {
+      "effectModel": {
+        "scale": 1.0,
+        "lifespan": 6.0
+      }
+    },
+    {
+      "weapons": [
+        {
+          "animation": -1,
+          "emission": {
+            "projectileCount": 1,
+            "rotateProjectileWithTower": true
+          },
+          "ejectY": 16.0,
+          "ejectZ": 8.5,
+          "projectile": {
+            "id": "Projectile",
+            "pierce": 5.0,
+            "scale": 1.0,
+            "filters": [
+              {
+                "isActive": true
+              }
+            ],
+            "behaviors": [
+              {
+                "Speed": 170.0,
+                "Lifespan": 1.5,
+                "speed": 170.0,
+                "lifespan": 1.5
+              },
+              {
+                "filters": [
+                  {
+                    "isActive": true
+                  }
+                ]
+              },
+              {
+                "damage": 1.0,
+                "distributeToChildren": true,
+                "createPopEffect": true,
+                "immuneBloonProperties": 17,
+                "immuneBloonPropertiesOriginal": 17,
+                "CappedDamage": 1.0
+              },
+              {
+                "distance": 9999.0,
+                "trackNewTargets": true,
+                "maxSeekAngle": 180.0,
+                "useLifetimeAsDistance": true,
+                "TurnRate": 360.0,
+                "turnRate": 360.0
+              },
+              {
+                "scale": 1.0,
+                "category": 16
+              }
+            ],
+            "canCollideWithBloons": true,
+            "radius": 2.0,
+            "CappedPierce": 5.0
+          },
+          "behaviors": [
+            {
+              "states": 1
+            }
+          ],
+          "Rate": 0.75,
+          "UseThrowMarker": true,
+          "animationOffset": 0.05,
+          "rate": 0.75
+        }
       ],
       "behaviors": [
-       {
-        "Speed": 170.0,
-        "Lifespan": 1.5,
-        "speed": 170.0,
-        "lifespan": 1.5
-       },
-       {
-        "filters": [
-         {
-          "isActive": true
-         }
-        ]
-       },
-       {
-        "damage": 1.0,
-        "distributeToChildren": true,
-        "createPopEffect": true,
-        "immuneBloonProperties": 17,
-        "immuneBloonPropertiesOriginal": 17,
-        "CappedDamage": 1.0
-       },
-       {
-        "distance": 9999.0,
-        "trackNewTargets": true,
-        "maxSeekAngle": 180.0,
-        "useLifetimeAsDistance": true,
-        "TurnRate": 360.0,
-        "turnRate": 360.0
-       },
-       {
-        "scale": 1.0,
-        "category": 16
-       }
+        {
+          "onlyRotateDuringThrow": true,
+          "rotateTower": true
+        },
+        {
+          "filters": [
+            {
+              "isActive": true,
+              "ignoreBroadPhase": true
+            }
+          ]
+        },
+        {
+          "isSelectable": true,
+          "isSharedRangeEnabled": true
+        },
+        {
+          "isSelectable": true,
+          "isSharedRangeEnabled": true
+        },
+        {
+          "isSelectable": true,
+          "isSharedRangeEnabled": true
+        },
+        {
+          "isSelectable": true,
+          "isSharedRangeEnabled": true
+        }
       ],
-      "canCollideWithBloons": true,
-      "radius": 2.0,
-      "CappedPierce": 5.0
-     },
-     "behaviors": [
-      {
-       "states": 1
-      }
-     ],
-     "Rate": 0.75,
-     "UseThrowMarker": true,
-     "animationOffset": 0.05,
-     "rate": 0.75
+      "range": 52.0,
+      "addsToSharedGrid": true
+    },
+    {
+      "layer": -1,
+      "scale": 1.0,
+      "category": 4
     }
-   ],
-   "behaviors": [
+  ],
+  "footprint": {
+    "radius": 7.0
+  },
+  "upgrades": [
     {
-     "onlyRotateDuringThrow": true,
-     "rotateTower": true
+      "tower": "MonkeySub-220",
+      "upgrade": "Heat-tipped Darts"
     },
     {
-     "filters": [
-      {
-       "isActive": true,
-       "ignoreBroadPhase": true
-      }
-     ]
-    },
-    {
-     "isSelectable": true,
-     "isSharedRangeEnabled": true
-    },
-    {
-     "isSelectable": true,
-     "isSharedRangeEnabled": true
-    },
-    {
-     "isSelectable": true,
-     "isSharedRangeEnabled": true
-    },
-    {
-     "isSelectable": true,
-     "isSharedRangeEnabled": true
+      "tower": "MonkeySub-310",
+      "upgrade": "Submerge and Support"
     }
-   ],
-   "range": 52.0,
-   "addsToSharedGrid": true
-  },
-  {
-   "layer": -1,
-   "scale": 1.0,
-   "category": 4
-  }
- ],
- "footprint": {
-  "radius": 7.0
- },
- "upgrades": [
-  {
-   "tower": "MonkeySub-220",
-   "upgrade": "Heat-tipped Darts"
-  },
-  {
-   "tower": "MonkeySub-310",
-   "upgrade": "Submerge and Support"
-  }
- ],
- "appliedUpgrades": [
-  "Longer Range",
-  "Advanced Intel",
-  "Barbed Darts"
- ],
- "targetTypes": [
-  {
-   "id": "First"
-  },
-  {
-   "id": "Last",
-   "intID": 1
-  },
-  {
-   "id": "Close",
-   "intID": 2
-  },
-  {
-   "id": "Strong",
-   "intID": 3
-  }
- ],
- "isBakable": true,
- "animationSpeed": 1.0,
- "displayScale": 1.0,
- "showBuffs": true,
- "TargetTypes": [
-  {
-   "id": "First"
-  },
-  {
-   "id": "Last",
-   "intID": 1
-  },
-  {
-   "id": "Close",
-   "intID": 2
-  },
-  {
-   "id": "Strong",
-   "intID": 3
-  }
- ],
- "IsExclusivelyWaterBased": true
+  ],
+  "appliedUpgrades": [
+    "Longer Range",
+    "Advanced Intel",
+    "Barbed Darts"
+  ],
+  "targetTypes": [
+    {
+      "id": "First"
+    },
+    {
+      "id": "Last",
+      "intID": 1
+    },
+    {
+      "id": "Close",
+      "intID": 2
+    },
+    {
+      "id": "Strong",
+      "intID": 3
+    }
+  ],
+  "isBakable": true,
+  "animationSpeed": 1.0,
+  "displayScale": 1.0,
+  "showBuffs": true,
+  "TargetTypes": [
+    {
+      "id": "First"
+    },
+    {
+      "id": "Last",
+      "intID": 1
+    },
+    {
+      "id": "Close",
+      "intID": 2
+    },
+    {
+      "id": "Strong",
+      "intID": 3
+    }
+  ],
+  "IsExclusivelyWaterBased": true
 }

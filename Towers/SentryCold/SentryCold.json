@@ -1,327 +1,327 @@
 {
- "range": 50.0,
- "towerSet": 8,
- "areaTypes": [
-  2
- ],
- "mods": [
-  {
-   "mod": "VigilantSentries"
-  },
-  {
-   "mod": "GlobalAbilityCooldowns"
-  },
-  {
-   "mod": "VeteranMonkeyTraining"
-  },
-  {
-   "mod": "BetterSellDeals"
-  },
-  {
-   "mod": "MonkeyEducation"
-  }
- ],
- "behaviors": [
-  {
-   "Lifespan": 25.0,
-   "lifespan": 25.0
-  },
-  {
-   "placeAnimation": 2,
-   "upgradeAnimation": -1
-  },
-  {
-   "radius": 4.0,
-   "doesntBlockTowerPlacement": true
-  },
-  {
-   "effectModel": {
-    "scale": 1.0,
-    "lifespan": 6.0
-   }
-  },
-  {
-   "effectModel": {
-    "scale": 1.0,
-    "lifespan": 6.0
-   }
-  },
-  {
-   "effectModel": {
-    "scale": 1.0,
-    "lifespan": 1.0
-   }
-  },
-  {
-   "weapons": [
+  "range": 50.0,
+  "towerSet": 8,
+  "areaTypes": [
+    2
+  ],
+  "mods": [
     {
-     "animation": 1,
-     "ejectY": 7.1,
-     "ejectZ": 7.78,
-     "projectile": {
-      "id": "Projectile",
-      "maxPierce": 1.0,
-      "pierce": 1.0,
-      "scale": 1.0,
-      "filters": [
-       {
-        "isActive": true
-       }
+      "mod": "VigilantSentries"
+    },
+    {
+      "mod": "GlobalAbilityCooldowns"
+    },
+    {
+      "mod": "VeteranMonkeyTraining"
+    },
+    {
+      "mod": "BetterSellDeals"
+    },
+    {
+      "mod": "MonkeyEducation"
+    }
+  ],
+  "behaviors": [
+    {
+      "Lifespan": 25.0,
+      "lifespan": 25.0
+    },
+    {
+      "placeAnimation": 2,
+      "upgradeAnimation": -1
+    },
+    {
+      "radius": 4.0,
+      "doesntBlockTowerPlacement": true
+    },
+    {
+      "effectModel": {
+        "scale": 1.0,
+        "lifespan": 6.0
+      }
+    },
+    {
+      "effectModel": {
+        "scale": 1.0,
+        "lifespan": 6.0
+      }
+    },
+    {
+      "effectModel": {
+        "scale": 1.0,
+        "lifespan": 1.0
+      }
+    },
+    {
+      "weapons": [
+        {
+          "animation": 1,
+          "ejectY": 7.1,
+          "ejectZ": 7.78,
+          "projectile": {
+            "id": "Projectile",
+            "maxPierce": 1.0,
+            "pierce": 1.0,
+            "scale": 1.0,
+            "filters": [
+              {
+                "isActive": true
+              }
+            ],
+            "behaviors": [
+              {
+                "Speed": 180.0,
+                "Lifespan": 0.6,
+                "speed": 180.0,
+                "lifespan": 0.6
+              },
+              {
+                "projectile": {
+                  "id": "Explosion",
+                  "pierce": 25.0,
+                  "scale": 1.0,
+                  "ignoreBlockers": true,
+                  "filters": [
+                    {
+                      "isActive": true
+                    },
+                    {
+                      "tag": "Moabs"
+                    },
+                    {
+                      "mutationIds": [
+                        "Ice"
+                      ]
+                    },
+                    {
+                      "mutationOverideOrder": [
+                        "SuperBrittle",
+                        "Embrittlement"
+                      ]
+                    },
+                    {
+                      "ifCantHitBloonProperties": 16
+                    },
+                    {
+                      "ifCantHitBloonProperties": 1
+                    }
+                  ],
+                  "behaviors": [
+                    {
+                      "Lifespan": 0.05,
+                      "lifespan": 0.05
+                    },
+                    {
+                      "filters": [
+                        {
+                          "isActive": true
+                        },
+                        {
+                          "tag": "Moabs"
+                        },
+                        {
+                          "mutationIds": [
+                            "Ice"
+                          ]
+                        },
+                        {
+                          "mutationOverideOrder": [
+                            "SuperBrittle",
+                            "Embrittlement"
+                          ]
+                        },
+                        {
+                          "ifCantHitBloonProperties": 16
+                        },
+                        {
+                          "ifCantHitBloonProperties": 1
+                        }
+                      ]
+                    },
+                    {
+                      "layers": 2,
+                      "damageModel": {
+                        "damage": 1.0,
+                        "maxDamage": -1.0,
+                        "distributeToChildren": true,
+                        "createPopEffect": true,
+                        "immuneBloonProperties": 5,
+                        "immuneBloonPropertiesOriginal": 5,
+                        "CappedDamage": 1.0
+                      },
+                      "cascadeMutators": true,
+                      "overlayType": "Ice",
+                      "collisionPass": -1,
+                      "Lifespan": 1.5,
+                      "mutator": {
+                        "overlayType": "Ice",
+                        "damageModel": {
+                          "damage": 1.0,
+                          "maxDamage": -1.0,
+                          "distributeToChildren": true,
+                          "createPopEffect": true,
+                          "immuneBloonProperties": 5,
+                          "immuneBloonPropertiesOriginal": 5,
+                          "CappedDamage": 1.0
+                        },
+                        "id": "Ice:Regular:Freeze",
+                        "priority": 5
+                      },
+                      "lifespan": 1.5
+                    },
+                    {
+                      "layers": 2,
+                      "isUnique": true,
+                      "cascadeMutators": true,
+                      "collisionPass": -1,
+                      "Lifespan": 9999999.0,
+                      "Multiplier": 0.5,
+                      "Mutator": {
+                        "multiplier": 0.5,
+                        "id": "Permafrost:Normal",
+                        "priority": 1
+                      },
+                      "lifespan": 9999999.0,
+                      "multiplier": 0.5
+                    },
+                    {
+                      "damage": 1.0,
+                      "maxDamage": -1.0,
+                      "distributeToChildren": true,
+                      "createPopEffect": true,
+                      "immuneBloonProperties": 5,
+                      "immuneBloonPropertiesOriginal": 5,
+                      "CappedDamage": 1.0
+                    },
+                    {
+                      "scale": 1.0,
+                      "category": 16
+                    }
+                  ],
+                  "collisionPasses": [
+                    -1
+                  ],
+                  "canCollideWithBloons": true,
+                  "radius": 18.0,
+                  "CappedPierce": 25.0
+                }
+              },
+              {
+                "filters": [
+                  {
+                    "isActive": true
+                  }
+                ]
+              },
+              {
+                "effectModel": {
+                  "scale": 1.0,
+                  "lifespan": 1.0
+                }
+              },
+              {
+                "scale": 1.0,
+                "category": 16
+              }
+            ],
+            "canCollideWithBloons": true,
+            "radius": 4.0,
+            "CappedPierce": 1.0
+          },
+          "Rate": 1.5,
+          "UseThrowMarker": true,
+          "rate": 1.5
+        }
       ],
       "behaviors": [
-       {
-        "Speed": 180.0,
-        "Lifespan": 0.6,
-        "speed": 180.0,
-        "lifespan": 0.6
-       },
-       {
-        "projectile": {
-         "id": "Explosion",
-         "pierce": 25.0,
-         "scale": 1.0,
-         "ignoreBlockers": true,
-         "filters": [
-          {
-           "isActive": true
-          },
-          {
-           "tag": "Moabs"
-          },
-          {
-           "mutationIds": [
-            "Ice"
-           ]
-          },
-          {
-           "mutationOverideOrder": [
-            "SuperBrittle",
-            "Embrittlement"
-           ]
-          },
-          {
-           "ifCantHitBloonProperties": 16
-          },
-          {
-           "ifCantHitBloonProperties": 1
-          }
-         ],
-         "behaviors": [
-          {
-           "Lifespan": 0.05,
-           "lifespan": 0.05
-          },
-          {
-           "filters": [
+        {
+          "onlyRotateDuringThrow": true
+        },
+        {
+          "filters": [
             {
-             "isActive": true
+              "isActive": true
             },
             {
-             "tag": "Moabs"
-            },
-            {
-             "mutationIds": [
-              "Ice"
-             ]
-            },
-            {
-             "mutationOverideOrder": [
-              "SuperBrittle",
-              "Embrittlement"
-             ]
-            },
-            {
-             "ifCantHitBloonProperties": 16
-            },
-            {
-             "ifCantHitBloonProperties": 1
+              "tag": "Moabs",
+              "disableWhenSupportMutatorIDs": [
+                "false"
+              ]
             }
-           ]
-          },
-          {
-           "layers": 2,
-           "damageModel": {
-            "damage": 1.0,
-            "maxDamage": -1.0,
-            "distributeToChildren": true,
-            "createPopEffect": true,
-            "immuneBloonProperties": 5,
-            "immuneBloonPropertiesOriginal": 5,
-            "CappedDamage": 1.0
-           },
-           "cascadeMutators": true,
-           "overlayType": "Ice",
-           "collisionPass": -1,
-           "Lifespan": 1.5,
-           "mutator": {
-            "overlayType": "Ice",
-            "damageModel": {
-             "damage": 1.0,
-             "maxDamage": -1.0,
-             "distributeToChildren": true,
-             "createPopEffect": true,
-             "immuneBloonProperties": 5,
-             "immuneBloonPropertiesOriginal": 5,
-             "CappedDamage": 1.0
-            },
-            "id": "Ice:Regular:Freeze",
-            "priority": 5
-           },
-           "lifespan": 1.5
-          },
-          {
-           "layers": 2,
-           "isUnique": true,
-           "cascadeMutators": true,
-           "collisionPass": -1,
-           "Lifespan": 9999999.0,
-           "Multiplier": 0.5,
-           "Mutator": {
-            "multiplier": 0.5,
-            "id": "Permafrost:Normal",
-            "priority": 1
-           },
-           "lifespan": 9999999.0,
-           "multiplier": 0.5
-          },
-          {
-           "damage": 1.0,
-           "maxDamage": -1.0,
-           "distributeToChildren": true,
-           "createPopEffect": true,
-           "immuneBloonProperties": 5,
-           "immuneBloonPropertiesOriginal": 5,
-           "CappedDamage": 1.0
-          },
-          {
-           "scale": 1.0,
-           "category": 16
-          }
-         ],
-         "collisionPasses": [
-          -1
-         ],
-         "canCollideWithBloons": true,
-         "radius": 18.0,
-         "CappedPierce": 25.0
+          ]
+        },
+        {
+          "isSelectable": true,
+          "isOnSubTower": true
+        },
+        {
+          "isSelectable": true,
+          "isOnSubTower": true
+        },
+        {
+          "isSelectable": true,
+          "isOnSubTower": true
+        },
+        {
+          "isSelectable": true,
+          "isOnSubTower": true
+        },
+        {
+          "scale": 1.0,
+          "category": 1
         }
-       },
-       {
-        "filters": [
-         {
-          "isActive": true
-         }
-        ]
-       },
-       {
-        "effectModel": {
-         "scale": 1.0,
-         "lifespan": 1.0
-        }
-       },
-       {
-        "scale": 1.0,
-        "category": 16
-       }
       ],
-      "canCollideWithBloons": true,
-      "radius": 4.0,
-      "CappedPierce": 1.0
-     },
-     "Rate": 1.5,
-     "UseThrowMarker": true,
-     "rate": 1.5
+      "range": 50.0,
+      "addsToSharedGrid": true
+    },
+    {
+      "layer": -1,
+      "scale": 1.0,
+      "category": 4
     }
-   ],
-   "behaviors": [
+  ],
+  "footprint": {
+    "radius": 4.0,
+    "doesntBlockTowerPlacement": true
+  },
+  "targetTypes": [
     {
-     "onlyRotateDuringThrow": true
+      "id": "First"
     },
     {
-     "filters": [
-      {
-       "isActive": true
-      },
-      {
-       "tag": "Moabs",
-       "disableWhenSupportMutatorIDs": [
-        "false"
-       ]
-      }
-     ]
+      "id": "Last",
+      "intID": 1
     },
     {
-     "isSelectable": true,
-     "isOnSubTower": true
+      "id": "Close",
+      "intID": 2
     },
     {
-     "isSelectable": true,
-     "isOnSubTower": true
-    },
-    {
-     "isSelectable": true,
-     "isOnSubTower": true
-    },
-    {
-     "isSelectable": true,
-     "isOnSubTower": true
-    },
-    {
-     "scale": 1.0,
-     "category": 1
+      "id": "Strong",
+      "intID": 3
     }
-   ],
-   "range": 50.0,
-   "addsToSharedGrid": true
-  },
-  {
-   "layer": -1,
-   "scale": 1.0,
-   "category": 4
-  }
- ],
- "footprint": {
-  "radius": 4.0,
-  "doesntBlockTowerPlacement": true
- },
- "targetTypes": [
-  {
-   "id": "First"
-  },
-  {
-   "id": "Last",
-   "intID": 1
-  },
-  {
-   "id": "Close",
-   "intID": 2
-  },
-  {
-   "id": "Strong",
-   "intID": 3
-  }
- ],
- "isSubTower": true,
- "isBakable": true,
- "animationSpeed": 1.0,
- "displayScale": 1.0,
- "showBuffs": true,
- "IsBaseTower": true,
- "TargetTypes": [
-  {
-   "id": "First"
-  },
-  {
-   "id": "Last",
-   "intID": 1
-  },
-  {
-   "id": "Close",
-   "intID": 2
-  },
-  {
-   "id": "Strong",
-   "intID": 3
-  }
- ]
+  ],
+  "isSubTower": true,
+  "isBakable": true,
+  "animationSpeed": 1.0,
+  "displayScale": 1.0,
+  "showBuffs": true,
+  "IsBaseTower": true,
+  "TargetTypes": [
+    {
+      "id": "First"
+    },
+    {
+      "id": "Last",
+      "intID": 1
+    },
+    {
+      "id": "Close",
+      "intID": 2
+    },
+    {
+      "id": "Strong",
+      "intID": 3
+    }
+  ]
 }

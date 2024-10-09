@@ -1,377 +1,377 @@
 {
- "cost": 750.0,
- "radius": 11.0,
- "radiusSquared": 121.0,
- "range": 30.0,
- "ignoreBlockers": true,
- "tier": 4,
- "tiers": [
-  4,
-  2
- ],
- "towerSet": 2,
- "areaTypes": [
-  2
- ],
- "mods": [
-  {
-   "mod": "ExtraBurnyStuff"
-  },
-  {
-   "mod": "BudgetBattery"
-  },
-  {
-   "mod": "GlobalAbilityCooldowns"
-  },
-  {
-   "mod": "MonkeyEducation"
-  },
-  {
-   "mod": "BetterSellDeals"
-  },
-  {
-   "mod": "VeteranMonkeyTraining"
-  }
- ],
- "behaviors": [
-  {
-   "effectModel": {
-    "scale": 1.0,
-    "lifespan": 6.0
-   }
-  },
-  {
-   "effectModel": {
-    "scale": 1.0,
-    "lifespan": 1.0
-   }
-  },
-  {
-   "effectModel": {
-    "scale": 1.0,
-    "lifespan": 6.0
-   }
-  },
-  {
-   "firstPath": -1,
-   "secondPath": 5,
-   "thirdPath": -1,
-   "paths": [
-    -1,
-    5,
-    -1
-   ]
-  },
-  {
-   "weapons": [
+  "cost": 750.0,
+  "radius": 11.0,
+  "radiusSquared": 121.0,
+  "range": 30.0,
+  "ignoreBlockers": true,
+  "tier": 4,
+  "tiers": [
+    4,
+    2
+  ],
+  "towerSet": 2,
+  "areaTypes": [
+    2
+  ],
+  "mods": [
     {
-     "animation": 1,
-     "emission": {
-      "spread": 8.0,
-      "throwMarkerOffsets": [
-       {
-        "ejectX": -8.8,
-        "ejectY": 5.89,
-        "ejectZ": 22.87
-       },
-       {
-        "ejectX": -3.88,
-        "ejectY": -2.76,
-        "ejectZ": 22.87
-       },
-       {
-        "ejectX": 1.07,
-        "ejectY": 5.81,
-        "ejectZ": 22.87
-       }
+      "mod": "ExtraBurnyStuff"
+    },
+    {
+      "mod": "BudgetBattery"
+    },
+    {
+      "mod": "GlobalAbilityCooldowns"
+    },
+    {
+      "mod": "MonkeyEducation"
+    },
+    {
+      "mod": "BetterSellDeals"
+    },
+    {
+      "mod": "VeteranMonkeyTraining"
+    }
+  ],
+  "behaviors": [
+    {
+      "effectModel": {
+        "scale": 1.0,
+        "lifespan": 6.0
+      }
+    },
+    {
+      "effectModel": {
+        "scale": 1.0,
+        "lifespan": 1.0
+      }
+    },
+    {
+      "effectModel": {
+        "scale": 1.0,
+        "lifespan": 6.0
+      }
+    },
+    {
+      "firstPath": -1,
+      "secondPath": 5,
+      "thirdPath": -1,
+      "paths": [
+        -1,
+        5,
+        -1
       ]
-     },
-     "projectile": {
-      "id": "Projectile",
-      "maxPierce": 1.0,
-      "pierce": 1.0,
-      "scale": 1.0,
-      "ignoreBlockers": true,
-      "behaviors": [
-       {
-        "Lifespan": 0.5,
-        "lifespan": 0.5
-       },
-       {
-        "destroyIfInvalid": true
-       },
-       {
-        "projectile": {
-         "id": "Explosion",
-         "pierce": 25.0,
-         "scale": 1.0,
-         "filters": [
-          {
-           "isActive": true
-          }
-         ],
-         "behaviors": [
-          {
-           "layers": 9999999,
-           "filters": [
+    },
+    {
+      "weapons": [
+        {
+          "animation": 1,
+          "emission": {
+            "spread": 8.0,
+            "throwMarkerOffsets": [
+              {
+                "ejectX": -8.8,
+                "ejectY": 5.89,
+                "ejectZ": 22.87
+              },
+              {
+                "ejectX": -3.88,
+                "ejectY": -2.76,
+                "ejectZ": 22.87
+              },
+              {
+                "ejectX": 1.07,
+                "ejectY": 5.81,
+                "ejectZ": 22.87
+              }
+            ]
+          },
+          "projectile": {
+            "id": "Projectile",
+            "maxPierce": 1.0,
+            "pierce": 1.0,
+            "scale": 1.0,
+            "ignoreBlockers": true,
+            "behaviors": [
+              {
+                "Lifespan": 0.5,
+                "lifespan": 0.5
+              },
+              {
+                "destroyIfInvalid": true
+              },
+              {
+                "projectile": {
+                  "id": "Explosion",
+                  "pierce": 25.0,
+                  "scale": 1.0,
+                  "filters": [
+                    {
+                      "isActive": true
+                    }
+                  ],
+                  "behaviors": [
+                    {
+                      "layers": 9999999,
+                      "filters": [
+                        {
+                          "tag": "Ddt",
+                          "disableWhenSupportMutatorIDs": [
+                            "MibMutator",
+                            "Striker:Level9BlackBuff"
+                          ]
+                        }
+                      ],
+                      "behaviors": [
+                        {
+                          "damage": 3.0,
+                          "displayLifetime": 3.85,
+                          "distributeToChildren": true,
+                          "Interval": 1.25,
+                          "interval": 1.25
+                        }
+                      ],
+                      "isUnique": true,
+                      "collideThisFrame": true,
+                      "applyOnlyIfDamaged": true,
+                      "overlayType": "Fire",
+                      "collisionPass": -1,
+                      "lifespan": 3.85
+                    },
+                    {
+                      "damage": 2.0,
+                      "maxDamage": 9999999.0,
+                      "distributeToChildren": true,
+                      "CappedDamage": 2.0
+                    },
+                    {
+                      "Lifespan": 0.05,
+                      "lifespan": 0.05
+                    },
+                    {
+                      "filters": [
+                        {
+                          "isActive": true
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "Ceramic",
+                      "tags": [
+                        "Ceramic"
+                      ],
+                      "damageMultiplier": 1.0,
+                      "damageAddative": 3.0,
+                      "mustIncludeAllTags": true
+                    },
+                    {
+                      "tag": "Moabs",
+                      "tags": [
+                        "Moabs"
+                      ],
+                      "damageMultiplier": 1.0,
+                      "damageAddative": 1.0
+                    },
+                    {
+                      "chipTag": "ChipCaveMonkey"
+                    },
+                    {
+                      "bloonState": "Stun",
+                      "bloonStates": [
+                        "Stun"
+                      ],
+                      "damageMultiplier": 1.0,
+                      "damageAdditive": 2.0,
+                      "mustBeModified": true
+                    },
+                    {
+                      "tag": "Bad,Boss",
+                      "tags": [
+                        "Bad",
+                        "Boss"
+                      ],
+                      "damageMultiplier": 1.0,
+                      "damageAddative": 1.0
+                    },
+                    {
+                      "tag": "Lead,Ddt",
+                      "tags": [
+                        "Lead",
+                        "Ddt"
+                      ],
+                      "damageMultiplier": 1.0,
+                      "damageAddative": 1.0
+                    },
+                    {
+                      "tag": "Fortified",
+                      "tags": [
+                        "Fortified"
+                      ],
+                      "damageMultiplier": 1.0,
+                      "damageAddative": 1.0
+                    },
+                    {
+                      "scale": 1.0,
+                      "category": 16
+                    }
+                  ],
+                  "collisionPasses": [
+                    -1
+                  ],
+                  "canCollideWithBloons": true,
+                  "radius": 20.0,
+                  "hasDamageModifiers": true,
+                  "CappedPierce": 25.0
+                },
+                "fraction": 1.0,
+                "durationfraction": -1.0
+              },
+              {
+                "lifespan": -1.0,
+                "fraction": 0.7,
+                "effectModel": {
+                  "scale": 1.0,
+                  "lifespan": 1.0,
+                  "useTransformPosition": true,
+                  "useTransfromRotation": true
+                }
+              },
+              {
+                "lifespan": 2.6,
+                "randomRotation": true
+              },
+              {
+                "scale": 1.0,
+                "category": 16
+              }
+            ],
+            "radius": 2.0,
+            "dontUseCollisionChecker": true,
+            "CappedPierce": 1.0
+          },
+          "behaviors": [
             {
-             "tag": "Ddt",
-             "disableWhenSupportMutatorIDs": [
-              "MibMutator",
-              "Striker:Level9BlackBuff"
-             ]
-            }
-           ],
-           "behaviors": [
+              "minAnimationState": 1,
+              "maxAnimationState": 3,
+              "loopMode": "Loop"
+            },
             {
-             "damage": 3.0,
-             "displayLifetime": 3.85,
-             "distributeToChildren": true,
-             "Interval": 1.25,
-             "interval": 1.25
-            }
-           ],
-           "isUnique": true,
-           "collideThisFrame": true,
-           "applyOnlyIfDamaged": true,
-           "overlayType": "Fire",
-           "collisionPass": -1,
-           "lifespan": 3.85
-          },
-          {
-           "damage": 2.0,
-           "maxDamage": 9999999.0,
-           "distributeToChildren": true,
-           "CappedDamage": 2.0
-          },
-          {
-           "Lifespan": 0.05,
-           "lifespan": 0.05
-          },
-          {
-           "filters": [
+              "effectModel": {
+                "scale": 1.0,
+                "lifespan": 2.0
+              }
+            },
             {
-             "isActive": true
+              "ejectX": -8.8,
+              "ejectY": 5.89,
+              "ejectZ": 22.87
+            },
+            {
+              "ejectX": -3.88,
+              "ejectY": -2.76,
+              "ejectZ": 22.87
+            },
+            {
+              "ejectX": 1.07,
+              "ejectY": 5.81,
+              "ejectZ": 22.87
             }
-           ]
-          },
-          {
-           "tag": "Ceramic",
-           "tags": [
-            "Ceramic"
-           ],
-           "damageMultiplier": 1.0,
-           "damageAddative": 3.0,
-           "mustIncludeAllTags": true
-          },
-          {
-           "tag": "Moabs",
-           "tags": [
-            "Moabs"
-           ],
-           "damageMultiplier": 1.0,
-           "damageAddative": 1.0
-          },
-          {
-           "chipTag": "ChipCaveMonkey"
-          },
-          {
-           "bloonState": "Stun",
-           "bloonStates": [
-            "Stun"
-           ],
-           "damageMultiplier": 1.0,
-           "damageAdditive": 2.0,
-           "mustBeModified": true
-          },
-          {
-           "tag": "Bad,Boss",
-           "tags": [
-            "Bad",
-            "Boss"
-           ],
-           "damageMultiplier": 1.0,
-           "damageAddative": 1.0
-          },
-          {
-           "tag": "Lead,Ddt",
-           "tags": [
-            "Lead",
-            "Ddt"
-           ],
-           "damageMultiplier": 1.0,
-           "damageAddative": 1.0
-          },
-          {
-           "tag": "Fortified",
-           "tags": [
-            "Fortified"
-           ],
-           "damageMultiplier": 1.0,
-           "damageAddative": 1.0
-          },
-          {
-           "scale": 1.0,
-           "category": 16
-          }
-         ],
-         "collisionPasses": [
-          -1
-         ],
-         "canCollideWithBloons": true,
-         "radius": 20.0,
-         "hasDamageModifiers": true,
-         "CappedPierce": 25.0
-        },
-        "fraction": 1.0,
-        "durationfraction": -1.0
-       },
-       {
-        "lifespan": -1.0,
-        "fraction": 0.7,
-        "effectModel": {
-         "scale": 1.0,
-         "lifespan": 1.0,
-         "useTransformPosition": true,
-         "useTransfromRotation": true
+          ],
+          "Rate": 0.27,
+          "rate": 0.27
         }
-       },
-       {
-        "lifespan": 2.6,
-        "randomRotation": true
-       },
-       {
-        "scale": 1.0,
-        "category": 16
-       }
       ],
-      "radius": 2.0,
-      "dontUseCollisionChecker": true,
-      "CappedPierce": 1.0
-     },
-     "behaviors": [
-      {
-       "minAnimationState": 1,
-       "maxAnimationState": 3,
-       "loopMode": "Loop"
-      },
-      {
-       "effectModel": {
-        "scale": 1.0,
-        "lifespan": 2.0
-       }
-      },
-      {
-       "ejectX": -8.8,
-       "ejectY": 5.89,
-       "ejectZ": 22.87
-      },
-      {
-       "ejectX": -3.88,
-       "ejectY": -2.76,
-       "ejectZ": 22.87
-      },
-      {
-       "ejectX": 1.07,
-       "ejectY": 5.81,
-       "ejectZ": 22.87
-      }
-     ],
-     "Rate": 0.27,
-     "rate": 0.27
-    }
-   ],
-   "behaviors": [
-    {
-     "filters": [
-      {
-       "isActive": true
-      }
-     ]
+      "behaviors": [
+        {
+          "filters": [
+            {
+              "isActive": true
+            }
+          ]
+        },
+        {
+          "isSelectable": true,
+          "scale": 0.4444444,
+          "useTerrainHeight": true
+        },
+        {
+          "rate": 9999999.0,
+          "rotateTower": true,
+          "rotateOnlyOnEmit": true
+        }
+      ],
+      "range": 9999999.0,
+      "attackThroughWalls": true,
+      "addsToSharedGrid": true,
+      "sharedGridRange": 30.0
     },
     {
-     "isSelectable": true,
-     "scale": 0.4444444,
-     "useTerrainHeight": true
+      "behaviors": [
+        {
+          "effectModel": {
+            "scale": 1.0,
+            "lifespan": 8.0,
+            "useTransformPosition": true
+          },
+          "destroyOnEnd": true
+        },
+        {
+          "multiplier": 0.25,
+          "projectileRadiusScaleBonus": 0.15,
+          "dontRemoveMutatorOnDestroy": true,
+          "Lifespan": 8.0,
+          "lifespan": 8.0
+        }
+      ],
+      "maxActivationsPerRound": 9999999,
+      "animation": -1,
+      "enabled": true,
+      "AnimationOffset": -1.0,
+      "Cooldown": 60.0,
+      "animationOffset": -1.0,
+      "cooldown": 60.0
     },
     {
-     "rate": 9999999.0,
-     "rotateTower": true,
-     "rotateOnlyOnEmit": true
-    }
-   ],
-   "range": 9999999.0,
-   "attackThroughWalls": true,
-   "addsToSharedGrid": true,
-   "sharedGridRange": 30.0
-  },
-  {
-   "behaviors": [
-    {
-     "effectModel": {
+      "layer": -1,
       "scale": 1.0,
-      "lifespan": 8.0,
-      "useTransformPosition": true
-     },
-     "destroyOnEnd": true
-    },
-    {
-     "multiplier": 0.25,
-     "projectileRadiusScaleBonus": 0.15,
-     "dontRemoveMutatorOnDestroy": true,
-     "Lifespan": 8.0,
-     "lifespan": 8.0
+      "category": 4
     }
-   ],
-   "maxActivationsPerRound": 9999999,
-   "animation": -1,
-   "enabled": true,
-   "AnimationOffset": -1.0,
-   "Cooldown": 60.0,
-   "animationOffset": -1.0,
-   "cooldown": 60.0
+  ],
+  "footprint": {
+    "radius": 11.0
   },
-  {
-   "layer": -1,
-   "scale": 1.0,
-   "category": 4
-  }
- ],
- "footprint": {
-  "radius": 11.0
- },
- "upgrades": [
-  {
-   "tower": "MortarMonkey-052",
-   "upgrade": "Pop and Awe"
-  }
- ],
- "appliedUpgrades": [
-  "Mortar Faster Reload",
-  "Mortar Rapid Reload",
-  "Increased Accuracy",
-  "Burny Stuff",
-  "Heavy Shells",
-  "Artillery Battery"
- ],
- "targetTypes": [
-  {
-   "id": "TargetSelectedPoint",
-   "isActionable": true,
-   "actionOnCreate": true,
-   "intID": -1
-  }
- ],
- "isBakable": true,
- "animationSpeed": 1.0,
- "displayScale": 1.0,
- "showBuffs": true,
- "TargetTypes": [
-  {
-   "id": "TargetSelectedPoint",
-   "isActionable": true,
-   "actionOnCreate": true,
-   "intID": -1
-  }
- ]
+  "upgrades": [
+    {
+      "tower": "MortarMonkey-052",
+      "upgrade": "Pop and Awe"
+    }
+  ],
+  "appliedUpgrades": [
+    "Mortar Faster Reload",
+    "Mortar Rapid Reload",
+    "Increased Accuracy",
+    "Burny Stuff",
+    "Heavy Shells",
+    "Artillery Battery"
+  ],
+  "targetTypes": [
+    {
+      "id": "TargetSelectedPoint",
+      "isActionable": true,
+      "actionOnCreate": true,
+      "intID": -1
+    }
+  ],
+  "isBakable": true,
+  "animationSpeed": 1.0,
+  "displayScale": 1.0,
+  "showBuffs": true,
+  "TargetTypes": [
+    {
+      "id": "TargetSelectedPoint",
+      "isActionable": true,
+      "actionOnCreate": true,
+      "intID": -1
+    }
+  ]
 }

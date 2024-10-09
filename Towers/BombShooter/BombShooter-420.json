@@ -1,281 +1,281 @@
 {
- "cost": 375.0,
- "radius": 7.0,
- "radiusSquared": 49.0,
- "range": 47.0,
- "tier": 4,
- "tiers": [
-  4,
-  2
- ],
- "towerSet": 1,
- "areaTypes": [
-  2
- ],
- "mods": [
-  {
-   "mod": "GlobalAbilityCooldowns"
-  },
-  {
-   "mod": "VeteranMonkeyTraining"
-  },
-  {
-   "mod": "MonkeyEducation"
-  },
-  {
-   "mod": "BetterSellDeals"
-  },
-  {
-   "mod": "IncreasedLifespan"
-  },
-  {
-   "mod": "ViolentImpact"
-  }
- ],
- "behaviors": [
-  {
-   "effectModel": {
-    "scale": 1.0,
-    "lifespan": 6.0
-   }
-  },
-  {
-   "effectModel": {
-    "scale": 1.0,
-    "lifespan": 1.0
-   }
-  },
-  {
-   "effectModel": {
-    "scale": 1.0,
-    "lifespan": 6.0
-   }
-  },
-  {
-   "weapons": [
+  "cost": 375.0,
+  "radius": 7.0,
+  "radiusSquared": 49.0,
+  "range": 47.0,
+  "tier": 4,
+  "tiers": [
+    4,
+    2
+  ],
+  "towerSet": 1,
+  "areaTypes": [
+    2
+  ],
+  "mods": [
     {
-     "animation": 1,
-     "ejectY": 13.3,
-     "ejectZ": 11.7,
-     "projectile": {
-      "id": "Projectile",
-      "maxPierce": 1.0,
-      "pierce": 1.0,
-      "scale": 1.0,
-      "filters": [
-       {
-        "isActive": true
-       }
+      "mod": "GlobalAbilityCooldowns"
+    },
+    {
+      "mod": "VeteranMonkeyTraining"
+    },
+    {
+      "mod": "MonkeyEducation"
+    },
+    {
+      "mod": "BetterSellDeals"
+    },
+    {
+      "mod": "IncreasedLifespan"
+    },
+    {
+      "mod": "ViolentImpact"
+    }
+  ],
+  "behaviors": [
+    {
+      "effectModel": {
+        "scale": 1.0,
+        "lifespan": 6.0
+      }
+    },
+    {
+      "effectModel": {
+        "scale": 1.0,
+        "lifespan": 1.0
+      }
+    },
+    {
+      "effectModel": {
+        "scale": 1.0,
+        "lifespan": 6.0
+      }
+    },
+    {
+      "weapons": [
+        {
+          "animation": 1,
+          "ejectY": 13.3,
+          "ejectZ": 11.7,
+          "projectile": {
+            "id": "Projectile",
+            "maxPierce": 1.0,
+            "pierce": 1.0,
+            "scale": 1.0,
+            "filters": [
+              {
+                "isActive": true
+              }
+            ],
+            "behaviors": [
+              {
+                "Speed": 270.0,
+                "Lifespan": 0.6,
+                "speed": 270.0,
+                "lifespan": 0.6
+              },
+              {
+                "projectile": {
+                  "id": "Explosion",
+                  "pierce": 80.0,
+                  "scale": 1.0,
+                  "ignoreBlockers": true,
+                  "canCollisionBeBlockedByMapLos": true,
+                  "filters": [
+                    {
+                      "isActive": true
+                    },
+                    {
+                      "ifCantHitBloonProperties": 2
+                    }
+                  ],
+                  "behaviors": [
+                    {
+                      "effectModel": {
+                        "scale": 1.0,
+                        "lifespan": -1.0
+                      },
+                      "layers": 9999999,
+                      "isUnique": true,
+                      "overlayType": "Stun",
+                      "collisionPass": -1,
+                      "Lifespan": 1.4,
+                      "Mutator": {
+                        "overlayType": "Stun",
+                        "id": "Stun:Weak",
+                        "priority": 1
+                      },
+                      "lifespan": 1.4
+                    },
+                    {
+                      "damage": 3.0,
+                      "distributeToChildren": true,
+                      "immuneBloonProperties": 2,
+                      "immuneBloonPropertiesOriginal": 2,
+                      "CappedDamage": 3.0
+                    },
+                    {
+                      "rounds": 1,
+                      "Lifespan": 0.1,
+                      "lifespan": 0.1
+                    },
+                    {
+                      "filters": [
+                        {
+                          "isActive": true
+                        },
+                        {
+                          "ifCantHitBloonProperties": 2
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "Moabs",
+                      "slowMultiplier": 1.0,
+                      "preventMutation": true
+                    },
+                    {
+                      "pushAmount": 10.0,
+                      "onlyIfDamaged": true
+                    },
+                    {
+                      "scale": 1.0,
+                      "category": 16
+                    }
+                  ],
+                  "collisionPasses": [
+                    -1
+                  ],
+                  "canCollideWithBloons": true,
+                  "radius": 27.0,
+                  "CappedPierce": 80.0
+                }
+              },
+              {
+                "filters": [
+                  {
+                    "isActive": true
+                  }
+                ]
+              },
+              {
+                "effectModel": {
+                  "scale": 1.0,
+                  "lifespan": 2.0
+                }
+              },
+              {
+                "scale": 1.0,
+                "category": 16
+              }
+            ],
+            "canCollideWithBloons": true,
+            "radius": 5.0,
+            "CappedPierce": 1.0
+          },
+          "behaviors": [
+            {
+              "effectModel": {
+                "scale": 1.0,
+                "lifespan": -1.0,
+                "useTransfromRotation": true
+              },
+              "rotateToWeapon": true,
+              "useEjectPoint": true
+            }
+          ],
+          "Rate": 0.825,
+          "UseThrowMarker": true,
+          "rate": 0.825
+        }
       ],
       "behaviors": [
-       {
-        "Speed": 270.0,
-        "Lifespan": 0.6,
-        "speed": 270.0,
-        "lifespan": 0.6
-       },
-       {
-        "projectile": {
-         "id": "Explosion",
-         "pierce": 80.0,
-         "scale": 1.0,
-         "ignoreBlockers": true,
-         "canCollisionBeBlockedByMapLos": true,
-         "filters": [
-          {
-           "isActive": true
-          },
-          {
-           "ifCantHitBloonProperties": 2
-          }
-         ],
-         "behaviors": [
-          {
-           "effectModel": {
-            "scale": 1.0,
-            "lifespan": -1.0
-           },
-           "layers": 9999999,
-           "isUnique": true,
-           "overlayType": "Stun",
-           "collisionPass": -1,
-           "Lifespan": 1.4,
-           "Mutator": {
-            "overlayType": "Stun",
-            "id": "Stun:Weak",
-            "priority": 1
-           },
-           "lifespan": 1.4
-          },
-          {
-           "damage": 3.0,
-           "distributeToChildren": true,
-           "immuneBloonProperties": 2,
-           "immuneBloonPropertiesOriginal": 2,
-           "CappedDamage": 3.0
-          },
-          {
-           "rounds": 1,
-           "Lifespan": 0.1,
-           "lifespan": 0.1
-          },
-          {
-           "filters": [
+        {
+          "onlyRotateDuringThrow": true,
+          "rotateTower": true
+        },
+        {
+          "filters": [
             {
-             "isActive": true
-            },
-            {
-             "ifCantHitBloonProperties": 2
+              "isActive": true
             }
-           ]
-          },
-          {
-           "tag": "Moabs",
-           "slowMultiplier": 1.0,
-           "preventMutation": true
-          },
-          {
-           "pushAmount": 10.0,
-           "onlyIfDamaged": true
-          },
-          {
-           "scale": 1.0,
-           "category": 16
-          }
-         ],
-         "collisionPasses": [
-          -1
-         ],
-         "canCollideWithBloons": true,
-         "radius": 27.0,
-         "CappedPierce": 80.0
+          ]
+        },
+        {
+          "isSelectable": true
+        },
+        {
+          "isSelectable": true
+        },
+        {
+          "isSelectable": true
+        },
+        {
+          "isSelectable": true
         }
-       },
-       {
-        "filters": [
-         {
-          "isActive": true
-         }
-        ]
-       },
-       {
-        "effectModel": {
-         "scale": 1.0,
-         "lifespan": 2.0
-        }
-       },
-       {
-        "scale": 1.0,
-        "category": 16
-       }
       ],
-      "canCollideWithBloons": true,
-      "radius": 5.0,
-      "CappedPierce": 1.0
-     },
-     "behaviors": [
-      {
-       "effectModel": {
-        "scale": 1.0,
-        "lifespan": -1.0,
-        "useTransfromRotation": true
-       },
-       "rotateToWeapon": true,
-       "useEjectPoint": true
-      }
-     ],
-     "Rate": 0.825,
-     "UseThrowMarker": true,
-     "rate": 0.825
+      "range": 47.0,
+      "addsToSharedGrid": true
+    },
+    {
+      "layer": -1,
+      "scale": 1.0,
+      "category": 4
     }
-   ],
-   "behaviors": [
+  ],
+  "footprint": {
+    "radius": 7.0
+  },
+  "upgrades": [
     {
-     "onlyRotateDuringThrow": true,
-     "rotateTower": true
-    },
-    {
-     "filters": [
-      {
-       "isActive": true
-      }
-     ]
-    },
-    {
-     "isSelectable": true
-    },
-    {
-     "isSelectable": true
-    },
-    {
-     "isSelectable": true
-    },
-    {
-     "isSelectable": true
+      "tower": "BombShooter-520",
+      "upgrade": "Bloon Crush"
     }
-   ],
-   "range": 47.0,
-   "addsToSharedGrid": true
-  },
-  {
-   "layer": -1,
-   "scale": 1.0,
-   "category": 4
-  }
- ],
- "footprint": {
-  "radius": 7.0
- },
- "upgrades": [
-  {
-   "tower": "BombShooter-520",
-   "upgrade": "Bloon Crush"
-  }
- ],
- "appliedUpgrades": [
-  "Bigger Bombs",
-  "Heavy Bombs",
-  "Faster Reload",
-  "Missile Launcher",
-  "Really Big Bombs",
-  "Bloon Impact"
- ],
- "targetTypes": [
-  {
-   "id": "First"
-  },
-  {
-   "id": "Last",
-   "intID": 1
-  },
-  {
-   "id": "Close",
-   "intID": 2
-  },
-  {
-   "id": "Strong",
-   "intID": 3
-  }
- ],
- "isBakable": true,
- "animationSpeed": 1.0,
- "displayScale": 1.0,
- "showBuffs": true,
- "TargetTypes": [
-  {
-   "id": "First"
-  },
-  {
-   "id": "Last",
-   "intID": 1
-  },
-  {
-   "id": "Close",
-   "intID": 2
-  },
-  {
-   "id": "Strong",
-   "intID": 3
-  }
- ]
+  ],
+  "appliedUpgrades": [
+    "Bigger Bombs",
+    "Heavy Bombs",
+    "Faster Reload",
+    "Missile Launcher",
+    "Really Big Bombs",
+    "Bloon Impact"
+  ],
+  "targetTypes": [
+    {
+      "id": "First"
+    },
+    {
+      "id": "Last",
+      "intID": 1
+    },
+    {
+      "id": "Close",
+      "intID": 2
+    },
+    {
+      "id": "Strong",
+      "intID": 3
+    }
+  ],
+  "isBakable": true,
+  "animationSpeed": 1.0,
+  "displayScale": 1.0,
+  "showBuffs": true,
+  "TargetTypes": [
+    {
+      "id": "First"
+    },
+    {
+      "id": "Last",
+      "intID": 1
+    },
+    {
+      "id": "Close",
+      "intID": 2
+    },
+    {
+      "id": "Strong",
+      "intID": 3
+    }
+  ]
 }

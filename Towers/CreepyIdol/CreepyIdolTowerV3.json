@@ -1,263 +1,263 @@
 {
- "radius": 3.0,
- "radiusSquared": 9.0,
- "range": 32.0,
- "tier": 3,
- "tiers": [
-  3
- ],
- "towerSet": 8,
- "areaTypes": [
-  2
- ],
- "mods": [
-  {
-   "mod": "GlobalAbilityCooldowns"
-  },
-  {
-   "mod": "VeteranMonkeyTraining"
-  },
-  {
-   "mod": "MonkeyEducation"
-  },
-  {
-   "mod": "BetterSellDeals"
-  },
-  {
-   "mod": "BigBloonBlueprints",
-   "target": "LightningProj,Explosion"
-  },
-  {
-   "mod": "EmpoweredHeroes"
-  },
-  {
-   "mod": "HeroicReach"
-  },
-  {
-   "mod": "HeroicVelocity"
-  },
-  {
-   "mod": "MoreSplody",
-   "target": "Explosion"
-  },
-  {
-   "mod": "QuickHands"
-  },
-  {
-   "mod": "Scholarships"
-  },
-  {
-   "mod": "SelfTaughtHeroes"
-  },
-  {
-   "mod": "WeakPoint"
-  }
- ],
- "behaviors": [
-  {
-   "rounds": 2,
-   "Lifespan": 9999999.0,
-   "lifespan": 9999999.0
-  },
-  {
-   "distanceMin": 100.0,
-   "distanceMax": 200.0,
-   "chance": 1.0,
-   "oneInHowMany": 4,
-   "distanceScaleForTags": 1.0,
-   "speedMultiplier": 1.0,
-   "filters": [
+  "radius": 3.0,
+  "radiusSquared": 9.0,
+  "range": 32.0,
+  "tier": 3,
+  "tiers": [
+    3
+  ],
+  "towerSet": 8,
+  "areaTypes": [
+    2
+  ],
+  "mods": [
     {
-     "isActive": true
+      "mod": "GlobalAbilityCooldowns"
+    },
+    {
+      "mod": "VeteranMonkeyTraining"
+    },
+    {
+      "mod": "MonkeyEducation"
+    },
+    {
+      "mod": "BetterSellDeals"
+    },
+    {
+      "mod": "BigBloonBlueprints",
+      "target": "LightningProj,Explosion"
+    },
+    {
+      "mod": "EmpoweredHeroes"
+    },
+    {
+      "mod": "HeroicReach"
+    },
+    {
+      "mod": "HeroicVelocity"
+    },
+    {
+      "mod": "MoreSplody",
+      "target": "Explosion"
+    },
+    {
+      "mod": "QuickHands"
+    },
+    {
+      "mod": "Scholarships"
+    },
+    {
+      "mod": "SelfTaughtHeroes"
+    },
+    {
+      "mod": "WeakPoint"
     }
-   ],
-   "WindMutator": {
-    "distanceScaleForTags": 1.0,
-    "speedMultiplier": 1.0,
-    "id": "Wind",
-    "priority": 1
-   },
-   "SlowMutator": {
-    "id": "WindZoneSlow",
-    "priority": 1
-   },
-   "stunDurationMoab": 3.0,
-   "stunDurationBfb": 2.0,
-   "stunDurationZomg": 1.0
-  },
-  {
-   "projectileModel": {
-    "id": "UnstableSplash",
-    "pierce": 3.0,
-    "scale": 1.0,
-    "ignoreBlockers": true,
-    "filters": [
-     {
-      "isActive": true
-     },
-     {
-      "mutationIds": [
-       "UnstableExplosion"
-      ]
-     }
-    ],
-    "behaviors": [
-     {
-      "Lifespan": 0.05,
-      "lifespan": 0.05
-     },
-     {
+  ],
+  "behaviors": [
+    {
+      "rounds": 2,
+      "Lifespan": 9999999.0,
+      "lifespan": 9999999.0
+    },
+    {
+      "distanceMin": 100.0,
+      "distanceMax": 200.0,
+      "chance": 1.0,
+      "oneInHowMany": 4,
+      "distanceScaleForTags": 1.0,
+      "speedMultiplier": 1.0,
       "filters": [
-       {
-        "isActive": true
-       },
-       {
-        "mutationIds": [
-         "UnstableExplosion"
-        ]
-       }
-      ]
-     },
-     {
-      "layers": 2,
-      "behaviors": [
-       {
-        "baseIdToBloonDmg": {
-         "Moab": 2.0,
-         "Bfb": 3.0,
-         "Zomg": 4.0
-        },
-        "defaultBloonDmg": 4.0,
-        "baseIdToMoabDmg": {
-         "Moab": 20.0,
-         "Bfb": 70.0,
-         "Zomg": 400.0,
-         "Ddt": 40.0,
-         "Bad": 400.0
-        },
-        "bossToMoabDmg": 1000.0,
-        "defaultMoabDmg": 20.0,
-        "projectile": {
-         "id": "MoabExplode",
-         "pierce": 50.0,
-         "scale": 1.0,
-         "ignoreBlockers": true,
-         "filters": [
-          {
-           "isActive": true
-          }
-         ],
-         "behaviors": [
-          {
-           "Lifespan": 0.05,
-           "lifespan": 0.05
-          },
-          {
-           "distributeToChildren": true
-          },
-          {
-           "effectModel": {
-            "scale": 1.0,
-            "lifespan": 2.0
-           }
-          },
-          {
-           "bloonTag": "Moab",
-           "extraAmount": 1,
-           "collisionPass": -1
-          },
-          {
-           "bloonTag": "Bfb",
-           "extraAmount": 1,
-           "collisionPass": -1
-          },
-          {
-           "bloonTag": "Zomg",
-           "extraAmount": 3,
-           "collisionPass": -1
-          },
-          {
-           "bloonTag": "Bad",
-           "extraAmount": 9,
-           "collisionPass": -1
-          },
-          {
-           "bloonTag": "Ddt",
-           "extraAmount": 3,
-           "collisionPass": -1
-          },
-          {
-           "filters": [
-            {
-             "isActive": true
-            }
-           ]
-          },
-          {
-           "scale": 1.0,
-           "category": 16
-          }
-         ],
-         "collisionPasses": [
-          -1
-         ],
-         "canCollideWithBloons": true,
-         "radius": 40.0,
-         "hasDamageModifiers": true,
-         "CappedPierce": 50.0
-        },
-        "pierceOverride": -1.0
-       }
+        {
+          "isActive": true
+        }
       ],
-      "isUnique": true,
-      "collideThisFrame": true,
-      "overlayType": "AlchemistUnstableConcoction",
-      "collisionPass": -1,
-      "lifespan": -1.0
-     },
-     {
-      "createPopEffect": true
-     },
-     {
-      "scale": 1.0,
-      "category": 16
-     }
-    ],
-    "collisionPasses": [
-     -1
-    ],
-    "canCollideWithBloons": true,
-    "radius": 32.0,
-    "CappedPierce": 3.0
-   }
-  },
-  {
-   "behaviors": [
+      "WindMutator": {
+        "distanceScaleForTags": 1.0,
+        "speedMultiplier": 1.0,
+        "id": "Wind",
+        "priority": 1
+      },
+      "SlowMutator": {
+        "id": "WindZoneSlow",
+        "priority": 1
+      },
+      "stunDurationMoab": 3.0,
+      "stunDurationBfb": 2.0,
+      "stunDurationZomg": 1.0
+    },
     {
-     "filters": [
-      {
-       "isActive": true
+      "projectileModel": {
+        "id": "UnstableSplash",
+        "pierce": 3.0,
+        "scale": 1.0,
+        "ignoreBlockers": true,
+        "filters": [
+          {
+            "isActive": true
+          },
+          {
+            "mutationIds": [
+              "UnstableExplosion"
+            ]
+          }
+        ],
+        "behaviors": [
+          {
+            "Lifespan": 0.05,
+            "lifespan": 0.05
+          },
+          {
+            "filters": [
+              {
+                "isActive": true
+              },
+              {
+                "mutationIds": [
+                  "UnstableExplosion"
+                ]
+              }
+            ]
+          },
+          {
+            "layers": 2,
+            "behaviors": [
+              {
+                "baseIdToBloonDmg": {
+                  "Moab": 2.0,
+                  "Bfb": 3.0,
+                  "Zomg": 4.0
+                },
+                "defaultBloonDmg": 4.0,
+                "baseIdToMoabDmg": {
+                  "Moab": 20.0,
+                  "Bfb": 70.0,
+                  "Zomg": 400.0,
+                  "Ddt": 40.0,
+                  "Bad": 400.0
+                },
+                "bossToMoabDmg": 1000.0,
+                "defaultMoabDmg": 20.0,
+                "projectile": {
+                  "id": "MoabExplode",
+                  "pierce": 50.0,
+                  "scale": 1.0,
+                  "ignoreBlockers": true,
+                  "filters": [
+                    {
+                      "isActive": true
+                    }
+                  ],
+                  "behaviors": [
+                    {
+                      "Lifespan": 0.05,
+                      "lifespan": 0.05
+                    },
+                    {
+                      "distributeToChildren": true
+                    },
+                    {
+                      "effectModel": {
+                        "scale": 1.0,
+                        "lifespan": 2.0
+                      }
+                    },
+                    {
+                      "bloonTag": "Moab",
+                      "extraAmount": 1,
+                      "collisionPass": -1
+                    },
+                    {
+                      "bloonTag": "Bfb",
+                      "extraAmount": 1,
+                      "collisionPass": -1
+                    },
+                    {
+                      "bloonTag": "Zomg",
+                      "extraAmount": 3,
+                      "collisionPass": -1
+                    },
+                    {
+                      "bloonTag": "Bad",
+                      "extraAmount": 9,
+                      "collisionPass": -1
+                    },
+                    {
+                      "bloonTag": "Ddt",
+                      "extraAmount": 3,
+                      "collisionPass": -1
+                    },
+                    {
+                      "filters": [
+                        {
+                          "isActive": true
+                        }
+                      ]
+                    },
+                    {
+                      "scale": 1.0,
+                      "category": 16
+                    }
+                  ],
+                  "collisionPasses": [
+                    -1
+                  ],
+                  "canCollideWithBloons": true,
+                  "radius": 40.0,
+                  "hasDamageModifiers": true,
+                  "CappedPierce": 50.0
+                },
+                "pierceOverride": -1.0
+              }
+            ],
+            "isUnique": true,
+            "collideThisFrame": true,
+            "overlayType": "AlchemistUnstableConcoction",
+            "collisionPass": -1,
+            "lifespan": -1.0
+          },
+          {
+            "createPopEffect": true
+          },
+          {
+            "scale": 1.0,
+            "category": 16
+          }
+        ],
+        "collisionPasses": [
+          -1
+        ],
+        "canCollideWithBloons": true,
+        "radius": 32.0,
+        "CappedPierce": 3.0
       }
-     ]
+    },
+    {
+      "behaviors": [
+        {
+          "filters": [
+            {
+              "isActive": true
+            }
+          ]
+        }
+      ],
+      "range": 32.0,
+      "addsToSharedGrid": true
+    },
+    {
+      "layer": -1,
+      "scale": 1.0,
+      "category": 4
     }
-   ],
-   "range": 32.0,
-   "addsToSharedGrid": true
+  ],
+  "footprint": {
+    "radius": 3.0
   },
-  {
-   "layer": -1,
-   "scale": 1.0,
-   "category": 4
-  }
- ],
- "footprint": {
-  "radius": 3.0
- },
- "dontDisplayUpgrades": true,
- "isSubTower": true,
- "animationSpeed": 1.0,
- "canAlwaysBeSold": true,
- "displayScale": 1.0,
- "showBuffs": true,
- "isGeraldoItem": true
+  "dontDisplayUpgrades": true,
+  "isSubTower": true,
+  "animationSpeed": 1.0,
+  "canAlwaysBeSold": true,
+  "displayScale": 1.0,
+  "showBuffs": true,
+  "isGeraldoItem": true
 }

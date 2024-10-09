@@ -1,227 +1,227 @@
 {
- "cost": 2500.0,
- "radius": 11.0,
- "radiusSquared": 121.0,
- "range": 50.0,
- "tier": 1,
- "tiers": [
-  1,
-  1
- ],
- "towerSet": 4,
- "areaTypes": [
-  2
- ],
- "mods": [
-  {
-   "mod": "GlobalAbilityCooldowns"
-  },
-  {
-   "mod": "VeteranMonkeyTraining"
-  },
-  {
-   "mod": "MonkeyEducation"
-  },
-  {
-   "mod": "BetterSellDeals"
-  },
-  {
-   "mod": "LingeringMagic"
-  },
-  {
-   "mod": "HeavyKnockback"
-  },
-  {
-   "mod": "HotMagic"
-  }
- ],
- "behaviors": [
-  {
-   "effectModel": {
-    "scale": 1.0,
-    "lifespan": 1.0
-   }
-  },
-  {
-   "effectModel": {
-    "scale": 1.0,
-    "lifespan": 6.0
-   }
-  },
-  {
-   "effectModel": {
-    "scale": 1.0,
-    "lifespan": 6.0
-   }
-  },
-  {
-   "weapons": [
+  "cost": 2500.0,
+  "radius": 11.0,
+  "radiusSquared": 121.0,
+  "range": 50.0,
+  "tier": 1,
+  "tiers": [
+    1,
+    1
+  ],
+  "towerSet": 4,
+  "areaTypes": [
+    2
+  ],
+  "mods": [
     {
-     "animation": 1,
-     "emission": {
-      "randomAngle": 8.0,
-      "startOffset": 1.0,
-      "count": 1
-     },
-     "ejectY": 9.05,
-     "ejectZ": 18.48,
-     "projectile": {
-      "id": "Projectile",
-      "pierce": 2.0,
-      "scale": 1.0,
-      "filters": [
-       {
-        "isActive": true
-       }
+      "mod": "GlobalAbilityCooldowns"
+    },
+    {
+      "mod": "VeteranMonkeyTraining"
+    },
+    {
+      "mod": "MonkeyEducation"
+    },
+    {
+      "mod": "BetterSellDeals"
+    },
+    {
+      "mod": "LingeringMagic"
+    },
+    {
+      "mod": "HeavyKnockback"
+    },
+    {
+      "mod": "HotMagic"
+    }
+  ],
+  "behaviors": [
+    {
+      "effectModel": {
+        "scale": 1.0,
+        "lifespan": 1.0
+      }
+    },
+    {
+      "effectModel": {
+        "scale": 1.0,
+        "lifespan": 6.0
+      }
+    },
+    {
+      "effectModel": {
+        "scale": 1.0,
+        "lifespan": 6.0
+      }
+    },
+    {
+      "weapons": [
+        {
+          "animation": 1,
+          "emission": {
+            "randomAngle": 8.0,
+            "startOffset": 1.0,
+            "count": 1
+          },
+          "ejectY": 9.05,
+          "ejectZ": 18.48,
+          "projectile": {
+            "id": "Projectile",
+            "pierce": 2.0,
+            "scale": 1.0,
+            "filters": [
+              {
+                "isActive": true
+              }
+            ],
+            "behaviors": [
+              {
+                "Speed": 200.0,
+                "Lifespan": 0.6,
+                "speed": 200.0,
+                "lifespan": 0.6
+              },
+              {
+                "damage": 1.0,
+                "distributeToChildren": true,
+                "createPopEffect": true,
+                "immuneBloonProperties": 9,
+                "immuneBloonPropertiesOriginal": 9,
+                "CappedDamage": 1.0
+              },
+              {
+                "filters": [
+                  {
+                    "isActive": true
+                  }
+                ]
+              },
+              {
+                "moabMultiplier": 0.3,
+                "heavyMultiplier": 0.6,
+                "lightMultiplier": 1.25,
+                "collisionPass": -1,
+                "Lifespan": 0.5,
+                "mutator": {
+                  "id": "KnockbackKnockback",
+                  "priority": 1
+                },
+                "lifespan": 0.5
+              },
+              {
+                "tag": "Camo",
+                "tags": [
+                  "Camo"
+                ],
+                "damageMultiplier": 1.0
+              },
+              {
+                "scale": 1.0,
+                "category": 16
+              }
+            ],
+            "collisionPasses": [
+              -1
+            ],
+            "canCollideWithBloons": true,
+            "radius": 5.0,
+            "hasDamageModifiers": true,
+            "CappedPierce": 2.0
+          },
+          "Rate": 0.045,
+          "UseThrowMarker": true,
+          "rate": 0.045
+        }
       ],
       "behaviors": [
-       {
-        "Speed": 200.0,
-        "Lifespan": 0.6,
-        "speed": 200.0,
-        "lifespan": 0.6
-       },
-       {
-        "damage": 1.0,
-        "distributeToChildren": true,
-        "createPopEffect": true,
-        "immuneBloonProperties": 9,
-        "immuneBloonPropertiesOriginal": 9,
-        "CappedDamage": 1.0
-       },
-       {
-        "filters": [
-         {
-          "isActive": true
-         }
-        ]
-       },
-       {
-        "moabMultiplier": 0.3,
-        "heavyMultiplier": 0.6,
-        "lightMultiplier": 1.25,
-        "collisionPass": -1,
-        "Lifespan": 0.5,
-        "mutator": {
-         "id": "KnockbackKnockback",
-         "priority": 1
+        {
+          "onlyRotateDuringThrow": true,
+          "rotateTower": true
         },
-        "lifespan": 0.5
-       },
-       {
-        "tag": "Camo",
-        "tags": [
-         "Camo"
-        ],
-        "damageMultiplier": 1.0
-       },
-       {
-        "scale": 1.0,
-        "category": 16
-       }
+        {
+          "filters": [
+            {
+              "isActive": true
+            }
+          ]
+        },
+        {
+          "isSelectable": true
+        },
+        {
+          "isSelectable": true
+        },
+        {
+          "isSelectable": true
+        },
+        {
+          "isSelectable": true
+        }
       ],
-      "collisionPasses": [
-       -1
-      ],
-      "canCollideWithBloons": true,
-      "radius": 5.0,
-      "hasDamageModifiers": true,
-      "CappedPierce": 2.0
-     },
-     "Rate": 0.045,
-     "UseThrowMarker": true,
-     "rate": 0.045
+      "range": 50.0,
+      "offsetX": -29.9999866,
+      "offsetZ": 30.0,
+      "addsToSharedGrid": true
+    },
+    {
+      "layer": -1,
+      "scale": 1.0,
+      "category": 4
     }
-   ],
-   "behaviors": [
+  ],
+  "footprint": {
+    "radius": 11.0
+  },
+  "upgrades": [
     {
-     "onlyRotateDuringThrow": true,
-     "rotateTower": true
+      "tower": "SuperMonkey-102",
+      "upgrade": "Ultravision"
     },
     {
-     "filters": [
-      {
-       "isActive": true
-      }
-     ]
-    },
-    {
-     "isSelectable": true
-    },
-    {
-     "isSelectable": true
-    },
-    {
-     "isSelectable": true
-    },
-    {
-     "isSelectable": true
+      "tower": "SuperMonkey-201",
+      "upgrade": "Plasma Blasts"
     }
-   ],
-   "range": 50.0,
-   "offsetX": -29.9999866,
-   "offsetZ": 30.0,
-   "addsToSharedGrid": true
-  },
-  {
-   "layer": -1,
-   "scale": 1.0,
-   "category": 4
-  }
- ],
- "footprint": {
-  "radius": 11.0
- },
- "upgrades": [
-  {
-   "tower": "SuperMonkey-102",
-   "upgrade": "Ultravision"
-  },
-  {
-   "tower": "SuperMonkey-201",
-   "upgrade": "Plasma Blasts"
-  }
- ],
- "appliedUpgrades": [
-  "Laser Blasts",
-  "Knockback"
- ],
- "targetTypes": [
-  {
-   "id": "First"
-  },
-  {
-   "id": "Last",
-   "intID": 1
-  },
-  {
-   "id": "Close",
-   "intID": 2
-  },
-  {
-   "id": "Strong",
-   "intID": 3
-  }
- ],
- "isBakable": true,
- "animationSpeed": 1.0,
- "displayScale": 1.0,
- "showBuffs": true,
- "TargetTypes": [
-  {
-   "id": "First"
-  },
-  {
-   "id": "Last",
-   "intID": 1
-  },
-  {
-   "id": "Close",
-   "intID": 2
-  },
-  {
-   "id": "Strong",
-   "intID": 3
-  }
- ]
+  ],
+  "appliedUpgrades": [
+    "Laser Blasts",
+    "Knockback"
+  ],
+  "targetTypes": [
+    {
+      "id": "First"
+    },
+    {
+      "id": "Last",
+      "intID": 1
+    },
+    {
+      "id": "Close",
+      "intID": 2
+    },
+    {
+      "id": "Strong",
+      "intID": 3
+    }
+  ],
+  "isBakable": true,
+  "animationSpeed": 1.0,
+  "displayScale": 1.0,
+  "showBuffs": true,
+  "TargetTypes": [
+    {
+      "id": "First"
+    },
+    {
+      "id": "Last",
+      "intID": 1
+    },
+    {
+      "id": "Close",
+      "intID": 2
+    },
+    {
+      "id": "Strong",
+      "intID": 3
+    }
+  ]
 }

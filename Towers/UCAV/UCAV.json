@@ -1,192 +1,192 @@
 {
- "range": 9999999.0,
- "ignoreBlockers": true,
- "towerSet": 16,
- "mods": [
-  {
-   "mod": "GlobalAbilityCooldowns"
-  },
-  {
-   "mod": "VeteranMonkeyTraining"
-  },
-  {
-   "mod": "MonkeyEducation"
-  },
-  {
-   "mod": "BetterSellDeals"
-  },
-  {
-   "mod": "AbilityDiscipline",
-   "target": "UCAVAbility"
-  },
-  {
-   "mod": "BigBloonBlueprints",
-   "target": "BaseProjectile"
-  },
-  {
-   "mod": "EmpoweredHeroes"
-  },
-  {
-   "mod": "HeroicReach"
-  },
-  {
-   "mod": "HeroicVelocity"
-  },
-  {
-   "mod": "QuickHands"
-  },
-  {
-   "mod": "Scholarships"
-  },
-  {
-   "mod": "SelfTaughtHeroes"
-  },
-  {
-   "mod": "WeakPoint"
-  },
-  {
-   "mod": "MoreSplody",
-   "target": "Explosion"
-  }
- ],
- "ignoreTowerForSelection": true,
- "behaviors": [
-  {
-   "isUnique": true,
-   "showBuffIcon": true
-  },
-  {
-   "weapons": [
+  "range": 9999999.0,
+  "ignoreBlockers": true,
+  "towerSet": 16,
+  "mods": [
     {
-     "animation": -1,
-     "emission": {
-      "angle": 240.0,
-      "behaviors": [
-       {
-        "useAirUnitPosition": true,
-        "dontSetAfterEmit": true
-       }
+      "mod": "GlobalAbilityCooldowns"
+    },
+    {
+      "mod": "VeteranMonkeyTraining"
+    },
+    {
+      "mod": "MonkeyEducation"
+    },
+    {
+      "mod": "BetterSellDeals"
+    },
+    {
+      "mod": "AbilityDiscipline",
+      "target": "UCAVAbility"
+    },
+    {
+      "mod": "BigBloonBlueprints",
+      "target": "BaseProjectile"
+    },
+    {
+      "mod": "EmpoweredHeroes"
+    },
+    {
+      "mod": "HeroicReach"
+    },
+    {
+      "mod": "HeroicVelocity"
+    },
+    {
+      "mod": "QuickHands"
+    },
+    {
+      "mod": "Scholarships"
+    },
+    {
+      "mod": "SelfTaughtHeroes"
+    },
+    {
+      "mod": "WeakPoint"
+    },
+    {
+      "mod": "MoreSplody",
+      "target": "Explosion"
+    }
+  ],
+  "ignoreTowerForSelection": true,
+  "behaviors": [
+    {
+      "isUnique": true,
+      "showBuffIcon": true
+    },
+    {
+      "weapons": [
+        {
+          "animation": -1,
+          "emission": {
+            "angle": 240.0,
+            "behaviors": [
+              {
+                "useAirUnitPosition": true,
+                "dontSetAfterEmit": true
+              }
+            ],
+            "count": 10,
+            "Count": 10
+          },
+          "ejectY": 15.9,
+          "ejectZ": -3.6,
+          "projectile": {
+            "id": "UCAVMissile",
+            "maxPierce": 1.0,
+            "pierce": 1.0,
+            "scale": 1.0,
+            "ignoreBlockers": true,
+            "behaviors": [
+              {
+                "Speed": 200.0,
+                "Lifespan": 2.25,
+                "speed": 200.0,
+                "lifespan": 2.25
+              },
+              {
+                "distance": 9999999.0,
+                "trackNewTargets": true,
+                "maxSeekAngle": 360.0,
+                "ignoreSeekAngle": true,
+                "TurnRate": 360.0,
+                "turnRate": 360.0
+              },
+              {
+                "projectile": {
+                  "id": "Explosion",
+                  "pierce": 30.0,
+                  "scale": 1.0,
+                  "ignoreBlockers": true,
+                  "behaviors": [
+                    {
+                      "damage": 10.0,
+                      "distributeToChildren": true,
+                      "CappedDamage": 10.0
+                    },
+                    {
+                      "Lifespan": 0.1,
+                      "lifespan": 0.1
+                    },
+                    {
+                      "scale": 1.0,
+                      "category": 16
+                    }
+                  ],
+                  "canCollideWithBloons": true,
+                  "radius": 20.0,
+                  "CappedPierce": 30.0
+                }
+              },
+              {
+                "effectModel": {
+                  "scale": 1.0,
+                  "lifespan": 2.0
+                }
+              },
+              {
+                "scale": 1.0,
+                "category": 16
+              }
+            ],
+            "canCollideWithBloons": true,
+            "radius": 4.0,
+            "CappedPierce": 1.0
+          },
+          "Rate": 0.6,
+          "UseThrowMarker": true,
+          "rate": 0.6
+        }
       ],
-      "count": 10,
-      "Count": 10
-     },
-     "ejectY": 15.9,
-     "ejectZ": -3.6,
-     "projectile": {
-      "id": "UCAVMissile",
-      "maxPierce": 1.0,
-      "pierce": 1.0,
+      "behaviors": [
+        {
+          "widthRadius": 144.0,
+          "heightRadius": 144.0,
+          "isSelectable": true,
+          "reverse": true,
+          "isOnSubTower": true
+        }
+      ],
+      "range": 2000.0,
+      "attackThroughWalls": true
+    },
+    {
+      "behaviors": [
+        {
+          "speed": 90.0,
+          "rotation": 360.0,
+          "bankRotation": 50.0,
+          "bankRotationMul": 0.45,
+          "catchUpSpeed": 1.2,
+          "takeOffPitch": 45.0,
+          "takeOffPitchExponent": 1.0
+        }
+      ],
+      "displayScale": 1.0
+    },
+    {
+      "layer": -1,
       "scale": 1.0,
-      "ignoreBlockers": true,
-      "behaviors": [
-       {
-        "Speed": 200.0,
-        "Lifespan": 2.25,
-        "speed": 200.0,
-        "lifespan": 2.25
-       },
-       {
-        "distance": 9999999.0,
-        "trackNewTargets": true,
-        "maxSeekAngle": 360.0,
-        "ignoreSeekAngle": true,
-        "TurnRate": 360.0,
-        "turnRate": 360.0
-       },
-       {
-        "projectile": {
-         "id": "Explosion",
-         "pierce": 30.0,
-         "scale": 1.0,
-         "ignoreBlockers": true,
-         "behaviors": [
-          {
-           "damage": 10.0,
-           "distributeToChildren": true,
-           "CappedDamage": 10.0
-          },
-          {
-           "Lifespan": 0.1,
-           "lifespan": 0.1
-          },
-          {
-           "scale": 1.0,
-           "category": 16
-          }
-         ],
-         "canCollideWithBloons": true,
-         "radius": 20.0,
-         "CappedPierce": 30.0
-        }
-       },
-       {
-        "effectModel": {
-         "scale": 1.0,
-         "lifespan": 2.0
-        }
-       },
-       {
-        "scale": 1.0,
-        "category": 16
-       }
-      ],
-      "canCollideWithBloons": true,
-      "radius": 4.0,
-      "CappedPierce": 1.0
-     },
-     "Rate": 0.6,
-     "UseThrowMarker": true,
-     "rate": 0.6
+      "category": 4
     }
-   ],
-   "behaviors": [
+  ],
+  "doesntRotate": true,
+  "targetTypes": [
     {
-     "widthRadius": 144.0,
-     "heightRadius": 144.0,
-     "isSelectable": true,
-     "reverse": true,
-     "isOnSubTower": true
+      "id": "Centered",
+      "intID": -1
     }
-   ],
-   "range": 2000.0,
-   "attackThroughWalls": true
-  },
-  {
-   "behaviors": [
+  ],
+  "isSubTower": true,
+  "animationSpeed": 1.0,
+  "displayScale": 1.0,
+  "showBuffs": true,
+  "IsBaseTower": true,
+  "TargetTypes": [
     {
-     "speed": 90.0,
-     "rotation": 360.0,
-     "bankRotation": 50.0,
-     "bankRotationMul": 0.45,
-     "catchUpSpeed": 1.2,
-     "takeOffPitch": 45.0,
-     "takeOffPitchExponent": 1.0
+      "id": "Centered",
+      "intID": -1
     }
-   ],
-   "displayScale": 1.0
-  },
-  {
-   "layer": -1,
-   "scale": 1.0,
-   "category": 4
-  }
- ],
- "doesntRotate": true,
- "targetTypes": [
-  {
-   "id": "Centered",
-   "intID": -1
-  }
- ],
- "isSubTower": true,
- "animationSpeed": 1.0,
- "displayScale": 1.0,
- "showBuffs": true,
- "IsBaseTower": true,
- "TargetTypes": [
-  {
-   "id": "Centered",
-   "intID": -1
-  }
- ]
+  ]
 }

@@ -1,307 +1,307 @@
 {
- "cost": 350.0,
- "radius": 6.0,
- "radiusSquared": 36.0,
- "range": 20.0,
- "isGlobalRange": true,
- "tier": 5,
- "tiers": [
-  5,
-  1
- ],
- "towerSet": 2,
- "areaTypes": [
-  2
- ],
- "mods": [
-  {
-   "mod": "CheaperMaiming"
-  },
-  {
-   "mod": "CheaperMaiming"
-  },
-  {
-   "mod": "GlobalAbilityCooldowns"
-  },
-  {
-   "mod": "VeteranMonkeyTraining"
-  },
-  {
-   "mod": "MonkeyEducation"
-  },
-  {
-   "mod": "BetterSellDeals"
-  },
-  {
-   "mod": "EliteMilitaryTraining"
-  },
-  {
-   "mod": "CeramicShock"
-  },
-  {
-   "mod": "FlankingManeuvers"
-  }
- ],
- "behaviors": [
-  {
-   "effectModel": {
-    "scale": 1.0,
-    "lifespan": 6.0
-   }
-  },
-  {
-   "effectModel": {
-    "scale": 1.0,
-    "lifespan": 1.0
-   }
-  },
-  {
-   "effectModel": {
-    "scale": 1.0,
-    "lifespan": 6.0
-   }
-  },
-  {
-   "weapons": [
+  "cost": 350.0,
+  "radius": 6.0,
+  "radiusSquared": 36.0,
+  "range": 20.0,
+  "isGlobalRange": true,
+  "tier": 5,
+  "tiers": [
+    5,
+    1
+  ],
+  "towerSet": 2,
+  "areaTypes": [
+    2
+  ],
+  "mods": [
     {
-     "animation": 1,
-     "ejectX": -1.59,
-     "ejectY": 18.57,
-     "ejectZ": 11.0,
-     "projectile": {
-      "id": "Projectile",
-      "pierce": 1.0,
-      "scale": 1.0,
-      "filters": [
-       {
-        "isActive": true
-       }
+      "mod": "CheaperMaiming"
+    },
+    {
+      "mod": "CheaperMaiming"
+    },
+    {
+      "mod": "GlobalAbilityCooldowns"
+    },
+    {
+      "mod": "VeteranMonkeyTraining"
+    },
+    {
+      "mod": "MonkeyEducation"
+    },
+    {
+      "mod": "BetterSellDeals"
+    },
+    {
+      "mod": "EliteMilitaryTraining"
+    },
+    {
+      "mod": "CeramicShock"
+    },
+    {
+      "mod": "FlankingManeuvers"
+    }
+  ],
+  "behaviors": [
+    {
+      "effectModel": {
+        "scale": 1.0,
+        "lifespan": 6.0
+      }
+    },
+    {
+      "effectModel": {
+        "scale": 1.0,
+        "lifespan": 1.0
+      }
+    },
+    {
+      "effectModel": {
+        "scale": 1.0,
+        "lifespan": 6.0
+      }
+    },
+    {
+      "weapons": [
+        {
+          "animation": 1,
+          "ejectX": -1.59,
+          "ejectY": 18.57,
+          "ejectZ": 11.0,
+          "projectile": {
+            "id": "Projectile",
+            "pierce": 1.0,
+            "scale": 1.0,
+            "filters": [
+              {
+                "isActive": true
+              }
+            ],
+            "behaviors": [
+              {
+                "filters": [
+                  {
+                    "isActive": true
+                  }
+                ]
+              },
+              {
+                "Lifespan": 0.1,
+                "lifespan": 0.1
+              },
+              {
+                "bloonPerHitDamageAddition": 5.0,
+                "overlayType": "SniperStun",
+                "collisionPass": 1,
+                "moabMutator": {
+                  "overlayType": "SniperStun",
+                  "bloonPerHitDamageAddition": 5.0,
+                  "id": "Stun:MaimMoab",
+                  "priority": 1
+                },
+                "bfbMutator": {
+                  "overlayType": "SniperStun",
+                  "bloonPerHitDamageAddition": 5.0,
+                  "id": "Stun:MaimBfb",
+                  "priority": 1
+                },
+                "zomgMutator": {
+                  "overlayType": "SniperStun",
+                  "bloonPerHitDamageAddition": 5.0,
+                  "id": "Stun:MaimZomg",
+                  "priority": 1
+                },
+                "ddtMutator": {
+                  "overlayType": "SniperStun",
+                  "bloonPerHitDamageAddition": 5.0,
+                  "id": "Stun:MaimDdt",
+                  "priority": 1
+                },
+                "badMutator": {
+                  "multiplier": 1.0,
+                  "overlayType": "SniperStun",
+                  "bloonPerHitDamageAddition": 5.0,
+                  "id": "MaimBad",
+                  "priority": 1
+                },
+                "moabDuration": 7.0,
+                "bfbDuration": 6.0,
+                "zomgDuration": 3.0,
+                "ddtDuration": 4.0,
+                "badDuration": 0.75
+              },
+              {
+                "damage": 280.0,
+                "distributeToChildren": true,
+                "createPopEffect": true,
+                "CappedDamage": 280.0
+              },
+              {
+                "tag": "Ceramic",
+                "tags": [
+                  "Ceramic"
+                ],
+                "damageMultiplier": 1.0,
+                "damageAddative": 15.0
+              },
+              {
+                "projectile": {
+                  "id": "Explosion",
+                  "pierce": 10.0,
+                  "scale": 1.0,
+                  "ignoreBlockers": true,
+                  "canCollisionBeBlockedByMapLos": true,
+                  "filters": [
+                    {
+                      "isActive": true
+                    }
+                  ],
+                  "behaviors": [
+                    {
+                      "damage": 28.0,
+                      "distributeToChildren": true,
+                      "immuneBloonProperties": 2,
+                      "immuneBloonPropertiesOriginal": 2,
+                      "CappedDamage": 28.0
+                    },
+                    {
+                      "rounds": 1,
+                      "Lifespan": 0.1,
+                      "lifespan": 0.1
+                    },
+                    {
+                      "filters": [
+                        {
+                          "isActive": true
+                        }
+                      ]
+                    },
+                    {
+                      "scale": 1.0,
+                      "category": 16
+                    }
+                  ],
+                  "canCollideWithBloons": true,
+                  "radius": 8.0,
+                  "CappedPierce": 10.0
+                }
+              },
+              {
+                "scale": 1.0,
+                "category": 16
+              }
+            ],
+            "collisionPasses": [
+              1
+            ],
+            "canCollideWithBloons": true,
+            "hasDamageModifiers": true,
+            "CappedPierce": 1.0
+          },
+          "behaviors": [
+            {
+              "effectModel": {
+                "scale": 1.0,
+                "lifespan": 0.2
+              },
+              "lifespan": 0.2,
+              "rotateToWeapon": true,
+              "useEjectPoint": true
+            }
+          ],
+          "Rate": 1.113,
+          "UseThrowMarker": true,
+          "rate": 1.113
+        }
       ],
       "behaviors": [
-       {
-        "filters": [
-         {
-          "isActive": true
-         }
-        ]
-       },
-       {
-        "Lifespan": 0.1,
-        "lifespan": 0.1
-       },
-       {
-        "bloonPerHitDamageAddition": 5.0,
-        "overlayType": "SniperStun",
-        "collisionPass": 1,
-        "moabMutator": {
-         "overlayType": "SniperStun",
-         "bloonPerHitDamageAddition": 5.0,
-         "id": "Stun:MaimMoab",
-         "priority": 1
+        {
+          "onlyRotateDuringThrow": true,
+          "rotateTower": true
         },
-        "bfbMutator": {
-         "overlayType": "SniperStun",
-         "bloonPerHitDamageAddition": 5.0,
-         "id": "Stun:MaimBfb",
-         "priority": 1
-        },
-        "zomgMutator": {
-         "overlayType": "SniperStun",
-         "bloonPerHitDamageAddition": 5.0,
-         "id": "Stun:MaimZomg",
-         "priority": 1
-        },
-        "ddtMutator": {
-         "overlayType": "SniperStun",
-         "bloonPerHitDamageAddition": 5.0,
-         "id": "Stun:MaimDdt",
-         "priority": 1
-        },
-        "badMutator": {
-         "multiplier": 1.0,
-         "overlayType": "SniperStun",
-         "bloonPerHitDamageAddition": 5.0,
-         "id": "MaimBad",
-         "priority": 1
-        },
-        "moabDuration": 7.0,
-        "bfbDuration": 6.0,
-        "zomgDuration": 3.0,
-        "ddtDuration": 4.0,
-        "badDuration": 0.75
-       },
-       {
-        "damage": 280.0,
-        "distributeToChildren": true,
-        "createPopEffect": true,
-        "CappedDamage": 280.0
-       },
-       {
-        "tag": "Ceramic",
-        "tags": [
-         "Ceramic"
-        ],
-        "damageMultiplier": 1.0,
-        "damageAddative": 15.0
-       },
-       {
-        "projectile": {
-         "id": "Explosion",
-         "pierce": 10.0,
-         "scale": 1.0,
-         "ignoreBlockers": true,
-         "canCollisionBeBlockedByMapLos": true,
-         "filters": [
-          {
-           "isActive": true
-          }
-         ],
-         "behaviors": [
-          {
-           "damage": 28.0,
-           "distributeToChildren": true,
-           "immuneBloonProperties": 2,
-           "immuneBloonPropertiesOriginal": 2,
-           "CappedDamage": 28.0
-          },
-          {
-           "rounds": 1,
-           "Lifespan": 0.1,
-           "lifespan": 0.1
-          },
-          {
-           "filters": [
+        {
+          "filters": [
             {
-             "isActive": true
+              "isActive": true
             }
-           ]
-          },
-          {
-           "scale": 1.0,
-           "category": 16
-          }
-         ],
-         "canCollideWithBloons": true,
-         "radius": 8.0,
-         "CappedPierce": 10.0
+          ]
+        },
+        {
+          "isSelectable": true
+        },
+        {
+          "isSelectable": true
+        },
+        {
+          "isSelectable": true
+        },
+        {
+          "isSelectable": true
         }
-       },
-       {
-        "scale": 1.0,
-        "category": 16
-       }
       ],
-      "collisionPasses": [
-       1
-      ],
-      "canCollideWithBloons": true,
-      "hasDamageModifiers": true,
-      "CappedPierce": 1.0
-     },
-     "behaviors": [
-      {
-       "effectModel": {
-        "scale": 1.0,
-        "lifespan": 0.2
-       },
-       "lifespan": 0.2,
-       "rotateToWeapon": true,
-       "useEjectPoint": true
-      }
-     ],
-     "Rate": 1.113,
-     "UseThrowMarker": true,
-     "rate": 1.113
+      "range": 9999999.0,
+      "addsToSharedGrid": true,
+      "sharedGridRange": 20.0
+    },
+    {
+      "layer": -1,
+      "scale": 1.0,
+      "category": 4
     }
-   ],
-   "behaviors": [
+  ],
+  "footprint": {
+    "radius": 6.0
+  },
+  "upgrades": [
     {
-     "onlyRotateDuringThrow": true,
-     "rotateTower": true
-    },
-    {
-     "filters": [
-      {
-       "isActive": true
-      }
-     ]
-    },
-    {
-     "isSelectable": true
-    },
-    {
-     "isSelectable": true
-    },
-    {
-     "isSelectable": true
-    },
-    {
-     "isSelectable": true
+      "tower": "SniperMonkey-502",
+      "upgrade": "Even Faster Firing"
     }
-   ],
-   "range": 9999999.0,
-   "addsToSharedGrid": true,
-   "sharedGridRange": 20.0
-  },
-  {
-   "layer": -1,
-   "scale": 1.0,
-   "category": 4
-  }
- ],
- "footprint": {
-  "radius": 6.0
- },
- "upgrades": [
-  {
-   "tower": "SniperMonkey-502",
-   "upgrade": "Even Faster Firing"
-  }
- ],
- "appliedUpgrades": [
-  "Full Metal Jacket",
-  "Large Calibre",
-  "Deadly Precision",
-  "Maim MOAB",
-  "Cripple MOAB",
-  "Fast Firing"
- ],
- "targetTypes": [
-  {
-   "id": "First"
-  },
-  {
-   "id": "Last",
-   "intID": 1
-  },
-  {
-   "id": "Close",
-   "intID": 2
-  },
-  {
-   "id": "Strong",
-   "intID": 3
-  }
- ],
- "isBakable": true,
- "animationSpeed": 1.0,
- "displayScale": 1.0,
- "showBuffs": true,
- "TargetTypes": [
-  {
-   "id": "First"
-  },
-  {
-   "id": "Last",
-   "intID": 1
-  },
-  {
-   "id": "Close",
-   "intID": 2
-  },
-  {
-   "id": "Strong",
-   "intID": 3
-  }
- ]
+  ],
+  "appliedUpgrades": [
+    "Full Metal Jacket",
+    "Large Calibre",
+    "Deadly Precision",
+    "Maim MOAB",
+    "Cripple MOAB",
+    "Fast Firing"
+  ],
+  "targetTypes": [
+    {
+      "id": "First"
+    },
+    {
+      "id": "Last",
+      "intID": 1
+    },
+    {
+      "id": "Close",
+      "intID": 2
+    },
+    {
+      "id": "Strong",
+      "intID": 3
+    }
+  ],
+  "isBakable": true,
+  "animationSpeed": 1.0,
+  "displayScale": 1.0,
+  "showBuffs": true,
+  "TargetTypes": [
+    {
+      "id": "First"
+    },
+    {
+      "id": "Last",
+      "intID": 1
+    },
+    {
+      "id": "Close",
+      "intID": 2
+    },
+    {
+      "id": "Strong",
+      "intID": 3
+    }
+  ]
 }

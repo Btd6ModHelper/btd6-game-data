@@ -1,1162 +1,1162 @@
 {
- "cost": 325.0,
- "radius": 7.0,
- "radiusSquared": 49.0,
- "range": 52.0,
- "isGlobalRange": true,
- "tier": 6,
- "tiers": [
-  6
- ],
- "towerSet": 2,
- "areaTypes": [
-  1
- ],
- "mods": [
-  {
-   "mod": "GlobalAbilityCooldowns"
-  },
-  {
-   "mod": "VeteranMonkeyTraining"
-  },
-  {
-   "mod": "MonkeyEducation"
-  },
-  {
-   "mod": "BetterSellDeals"
-  },
-  {
-   "mod": "NavalUpgrades"
-  },
-  {
-   "mod": "SubAdmiral",
-   "target": "SubCommanderSupport"
-  },
-  {
-   "mod": "EliteMilitaryTraining"
-  },
-  {
-   "mod": "FlankingManeuvers"
-  }
- ],
- "behaviors": [
-  {
-   "effectModel": {
-    "scale": 1.0,
-    "lifespan": 6.0
-   }
-  },
-  {
-   "effectModel": {
-    "scale": 1.0,
-    "lifespan": 1.0
-   }
-  },
-  {
-   "submergeAttackModel": {
-    "weapons": [
-     {
-      "animation": -1,
-      "projectile": {
-       "id": "Pulse",
-       "pierce": 1000.0,
-       "scale": 1.0,
-       "ignoreBlockers": true,
-       "usePointCollisionWithBloons": true,
-       "filters": [
-        {
-         "tag": "ReactorDamageParagon"
-        }
-       ],
-       "behaviors": [
-        {
-         "rounds": 1,
-         "Lifespan": 0.1,
-         "lifespan": 0.1
-        },
-        {
-         "cleanseRegen": true,
-         "cleanseCamo": true,
-         "collisionPass": -1
-        },
-        {
-         "damage": 50.0,
-         "distributeToChildren": true,
-         "createPopEffect": true,
-         "CappedDamage": 50.0
-        },
-        {
-         "tag": "Ceramic",
-         "tags": [
-          "Ceramic"
-         ],
-         "damageMultiplier": 1.0,
-         "damageAddative": 50.0
-        },
-        {
-         "tag": "Boss",
-         "tags": [
-          "Boss"
-         ],
-         "damageMultiplier": 1.0,
-         "damageAddative": 500.0
-        },
-        {
-         "filters": [
-          {
-           "tag": "ReactorDamageParagon"
-          }
-         ]
-        },
-        {
-         "bloonTag": "ReactorDamageParagon",
-         "layers": 9999999,
-         "isUnique": true,
-         "overlayType": "MonkeySubRadiation",
-         "collisionPass": -1,
-         "mutator": {
-          "bloonTag": "ReactorDamageParagon",
-          "overlayType": "MonkeySubRadiation",
-          "id": "ReactorDamage",
-          "priority": 1
-         },
-         "Lifespan": 0.5,
-         "lifespan": 0.5
-        },
-        {
-         "scale": 1.0,
-         "category": 16
-        }
-       ],
-       "collisionPasses": [
-        -1
-       ],
-       "canCollideWithBloons": true,
-       "radius": 52.0,
-       "hasDamageModifiers": true,
-       "CappedPierce": 1000.0
-      },
-      "fireWithoutTarget": true,
-      "behaviors": [
-       {
-        "min": 0.5
-       }
-      ],
-      "Rate": 0.5,
-      "rate": 0.5
-     }
-    ],
-    "range": 2000.0,
-    "fireWithoutTarget": true
-   },
-   "abilityCooldownSpeedScale": 1.3,
-   "abilityCooldownSpeedScaleGlobal": 1.2,
-   "heroXpScale": 1.0,
-   "supportMutatorPriority": 2,
-   "monkeySubParagonSupportModel": {
-    "subBonusDamageMultiplier": 6.0,
-    "subBonusPierceMultiplier": 2.0,
-    "heroBonusDamageMultiplier": 5.0,
-    "heroBonusPierceMultiplier": 2.0,
-    "heroRateMultiplier": 1.3,
-    "heroXpMultiplier": 5.0,
-    "showBuffIcon": true
-   },
-   "abilityCooldownSpeedScaleParagon": 1.1,
-   "animateOnSubmerge": 14,
-   "animateOnExitSubmerge": 6,
-   "submergeEffectModel": {
-    "scale": 1.0,
-    "lifespan": 2.0,
-    "useTransfromRotation": true
-   },
-   "unsubmergeEffectModel": {
-    "scale": 1.0,
-    "lifespan": 2.0,
-    "useTransfromRotation": true
-   }
-  },
-  {
-   "effectModel": {
-    "scale": 1.0,
-    "lifespan": 9999999.0
-   },
-   "baseTowerRange": 52.0,
-   "projectileModel": {
-    "id": "Pulse",
-    "pierce": 1000.0,
-    "scale": 1.0,
-    "ignoreBlockers": true,
-    "usePointCollisionWithBloons": true,
-    "filters": [
-     {
-      "tag": "ReactorDamageParagon"
-     }
-    ],
-    "behaviors": [
-     {
-      "rounds": 1,
-      "Lifespan": 0.1,
-      "lifespan": 0.1
-     },
-     {
-      "cleanseRegen": true,
-      "cleanseCamo": true,
-      "collisionPass": -1
-     },
-     {
-      "damage": 50.0,
-      "distributeToChildren": true,
-      "createPopEffect": true,
-      "CappedDamage": 50.0
-     },
-     {
-      "tag": "Ceramic",
-      "tags": [
-       "Ceramic"
-      ],
-      "damageMultiplier": 1.0,
-      "damageAddative": 50.0
-     },
-     {
-      "tag": "Boss",
-      "tags": [
-       "Boss"
-      ],
-      "damageMultiplier": 1.0,
-      "damageAddative": 500.0
-     },
-     {
-      "filters": [
-       {
-        "tag": "ReactorDamageParagon"
-       }
-      ]
-     },
-     {
-      "bloonTag": "ReactorDamageParagon",
-      "layers": 9999999,
-      "isUnique": true,
-      "overlayType": "MonkeySubRadiation",
-      "collisionPass": -1,
-      "mutator": {
-       "bloonTag": "ReactorDamageParagon",
-       "overlayType": "MonkeySubRadiation",
-       "id": "ReactorDamage",
-       "priority": 1
-      },
-      "Lifespan": 0.5,
-      "lifespan": 0.5
-     },
-     {
-      "scale": 1.0,
-      "category": 16
-     }
-    ],
-    "collisionPasses": [
-     -1
-    ],
-    "canCollideWithBloons": true,
-    "radius": 52.0,
-    "hasDamageModifiers": true,
-    "CappedPierce": 1000.0
-   },
-   "displayRadius": 50.0
-  },
-  {
-   "projectileModel": {
-    "id": "Pulse",
-    "pierce": 1000.0,
-    "scale": 1.0,
-    "ignoreBlockers": true,
-    "usePointCollisionWithBloons": true,
-    "behaviors": [
-     {
-      "rounds": 1,
-      "Lifespan": 0.1,
-      "lifespan": 0.1
-     },
-     {
-      "cleanseCamo": true,
-      "collisionPass": -1
-     },
-     {
-      "scale": 1.0,
-      "category": 16
-     }
-    ],
-    "collisionPasses": [
-     -1
-    ],
-    "canCollideWithBloons": true,
-    "radius": 52.0,
-    "CappedPierce": 1000.0
-   },
-   "baseTowerRange": 52.0,
-   "displayRadius": 50.0
-  },
-  {
-   "projectileModel": {
-    "id": "Pulse",
-    "pierce": 1000.0,
-    "scale": 1.0,
-    "ignoreBlockers": true,
-    "usePointCollisionWithBloons": true,
-    "filters": [
-     {
-      "tag": "ReactorDamageParagon"
-     }
-    ],
-    "behaviors": [
-     {
-      "rounds": 1,
-      "Lifespan": 0.1,
-      "lifespan": 0.1
-     },
-     {
-      "cleanseRegen": true,
-      "cleanseCamo": true,
-      "collisionPass": -1
-     },
-     {
-      "damage": 50.0,
-      "distributeToChildren": true,
-      "createPopEffect": true,
-      "CappedDamage": 50.0
-     },
-     {
-      "tag": "Ceramic",
-      "tags": [
-       "Ceramic"
-      ],
-      "damageMultiplier": 1.0,
-      "damageAddative": 50.0
-     },
-     {
-      "tag": "Boss",
-      "tags": [
-       "Boss"
-      ],
-      "damageMultiplier": 1.0,
-      "damageAddative": 500.0
-     },
-     {
-      "filters": [
-       {
-        "tag": "ReactorDamageParagon"
-       }
-      ]
-     },
-     {
-      "bloonTag": "ReactorDamageParagon",
-      "layers": 9999999,
-      "isUnique": true,
-      "overlayType": "MonkeySubRadiation",
-      "collisionPass": -1,
-      "mutator": {
-       "bloonTag": "ReactorDamageParagon",
-       "overlayType": "MonkeySubRadiation",
-       "id": "ReactorDamage",
-       "priority": 1
-      },
-      "Lifespan": 0.5,
-      "lifespan": 0.5
-     },
-     {
-      "scale": 1.0,
-      "category": 16
-     }
-    ],
-    "collisionPasses": [
-     -1
-    ],
-    "canCollideWithBloons": true,
-    "radius": 52.0,
-    "hasDamageModifiers": true,
-    "CappedPierce": 1000.0
-   },
-   "baseTowerRange": 52.0,
-   "displayRadius": 50.0
-  },
-  {
-   "effectModel": {
-    "scale": 1.0,
-    "lifespan": 6.0
-   }
-  },
-  {
-   "effectDuringModel": {
-    "scale": 1.0,
-    "lifespan": 9999999.0
-   },
-   "endEffectModel": {
-    "scale": 1.0,
-    "lifespan": 6.0
-   },
-   "investmentEffectModel": {
-    "scale": 1.0,
-    "lifespan": 9999999.0
-   },
-   "investmentEffectTier5Model": {
-    "scale": 1.0,
-    "lifespan": 9999999.0
-   },
-   "effectMinScale": 0.5,
-   "effectMaxScale": 1.25,
-   "investStartScale": 1000.0,
-   "investEndScale": 10000.0,
-   "endAnimationState": 8,
-   "investmentEffectHeight": 200.0,
-   "investmentEffectDestYOffset": -12.0,
-   "degreeTextEffectLifespan": 2.0,
-   "investmentEffectExponent": 5.0,
-   "inactiveDuration": 2.0,
-   "effectsStartMovingAt": 0.5,
-   "effectsDontStartMovingAt": 1.5,
-   "effectScaleDownTime": 0.15
-  },
-  {
-   "projectileModel": {
-    "id": "PreEmptiveStrikeProjectile",
-    "maxPierce": 1.0,
-    "pierce": 1.0,
-    "scale": 1.0,
-    "ignoreBlockers": true,
-    "behaviors": [
-     {
-      "rounds": 1,
-      "Lifespan": 0.6,
-      "lifespan": 0.6
-     },
-     {
+  "cost": 325.0,
+  "radius": 7.0,
+  "radiusSquared": 49.0,
+  "range": 52.0,
+  "isGlobalRange": true,
+  "tier": 6,
+  "tiers": [
+    6
+  ],
+  "towerSet": 2,
+  "areaTypes": [
+    1
+  ],
+  "mods": [
+    {
+      "mod": "GlobalAbilityCooldowns"
+    },
+    {
+      "mod": "VeteranMonkeyTraining"
+    },
+    {
+      "mod": "MonkeyEducation"
+    },
+    {
+      "mod": "BetterSellDeals"
+    },
+    {
+      "mod": "NavalUpgrades"
+    },
+    {
+      "mod": "SubAdmiral",
+      "target": "SubCommanderSupport"
+    },
+    {
+      "mod": "EliteMilitaryTraining"
+    },
+    {
+      "mod": "FlankingManeuvers"
+    }
+  ],
+  "behaviors": [
+    {
       "effectModel": {
-       "scale": 1.0,
-       "lifespan": 0.3,
-       "useTransformPosition": true
+        "scale": 1.0,
+        "lifespan": 6.0
+      }
+    },
+    {
+      "effectModel": {
+        "scale": 1.0,
+        "lifespan": 1.0
+      }
+    },
+    {
+      "submergeAttackModel": {
+        "weapons": [
+          {
+            "animation": -1,
+            "projectile": {
+              "id": "Pulse",
+              "pierce": 1000.0,
+              "scale": 1.0,
+              "ignoreBlockers": true,
+              "usePointCollisionWithBloons": true,
+              "filters": [
+                {
+                  "tag": "ReactorDamageParagon"
+                }
+              ],
+              "behaviors": [
+                {
+                  "rounds": 1,
+                  "Lifespan": 0.1,
+                  "lifespan": 0.1
+                },
+                {
+                  "cleanseRegen": true,
+                  "cleanseCamo": true,
+                  "collisionPass": -1
+                },
+                {
+                  "damage": 50.0,
+                  "distributeToChildren": true,
+                  "createPopEffect": true,
+                  "CappedDamage": 50.0
+                },
+                {
+                  "tag": "Ceramic",
+                  "tags": [
+                    "Ceramic"
+                  ],
+                  "damageMultiplier": 1.0,
+                  "damageAddative": 50.0
+                },
+                {
+                  "tag": "Boss",
+                  "tags": [
+                    "Boss"
+                  ],
+                  "damageMultiplier": 1.0,
+                  "damageAddative": 500.0
+                },
+                {
+                  "filters": [
+                    {
+                      "tag": "ReactorDamageParagon"
+                    }
+                  ]
+                },
+                {
+                  "bloonTag": "ReactorDamageParagon",
+                  "layers": 9999999,
+                  "isUnique": true,
+                  "overlayType": "MonkeySubRadiation",
+                  "collisionPass": -1,
+                  "mutator": {
+                    "bloonTag": "ReactorDamageParagon",
+                    "overlayType": "MonkeySubRadiation",
+                    "id": "ReactorDamage",
+                    "priority": 1
+                  },
+                  "Lifespan": 0.5,
+                  "lifespan": 0.5
+                },
+                {
+                  "scale": 1.0,
+                  "category": 16
+                }
+              ],
+              "collisionPasses": [
+                -1
+              ],
+              "canCollideWithBloons": true,
+              "radius": 52.0,
+              "hasDamageModifiers": true,
+              "CappedPierce": 1000.0
+            },
+            "fireWithoutTarget": true,
+            "behaviors": [
+              {
+                "min": 0.5
+              }
+            ],
+            "Rate": 0.5,
+            "rate": 0.5
+          }
+        ],
+        "range": 2000.0,
+        "fireWithoutTarget": true
       },
-      "time": 0.3
-     },
-     {
-      "lifespan": 2.6
-     },
-     {
-      "projectile": {
-       "id": "TargetDamage",
-       "maxPierce": 1.0,
-       "pierce": 1.0,
-       "scale": 1.0,
-       "ignoreBlockers": true,
-       "behaviors": [
-        {
-         "damage": 1000.0,
-         "distributeToChildren": true,
-         "CappedDamage": 1000.0
-        },
-        {
-         "rounds": 1,
-         "Lifespan": 0.1,
-         "lifespan": 0.1
-        },
-        {
-         "projectile": {
-          "id": "Explosion",
-          "pierce": 10.0,
-          "scale": 1.0,
-          "ignoreBlockers": true,
-          "behaviors": [
-           {
-            "damage": 350.0,
-            "distributeToChildren": true,
-            "CappedDamage": 350.0
-           },
-           {
+      "abilityCooldownSpeedScale": 1.3,
+      "abilityCooldownSpeedScaleGlobal": 1.2,
+      "heroXpScale": 1.0,
+      "supportMutatorPriority": 2,
+      "monkeySubParagonSupportModel": {
+        "subBonusDamageMultiplier": 6.0,
+        "subBonusPierceMultiplier": 2.0,
+        "heroBonusDamageMultiplier": 5.0,
+        "heroBonusPierceMultiplier": 2.0,
+        "heroRateMultiplier": 1.3,
+        "heroXpMultiplier": 5.0,
+        "showBuffIcon": true
+      },
+      "abilityCooldownSpeedScaleParagon": 1.1,
+      "animateOnSubmerge": 14,
+      "animateOnExitSubmerge": 6,
+      "submergeEffectModel": {
+        "scale": 1.0,
+        "lifespan": 2.0,
+        "useTransfromRotation": true
+      },
+      "unsubmergeEffectModel": {
+        "scale": 1.0,
+        "lifespan": 2.0,
+        "useTransfromRotation": true
+      }
+    },
+    {
+      "effectModel": {
+        "scale": 1.0,
+        "lifespan": 9999999.0
+      },
+      "baseTowerRange": 52.0,
+      "projectileModel": {
+        "id": "Pulse",
+        "pierce": 1000.0,
+        "scale": 1.0,
+        "ignoreBlockers": true,
+        "usePointCollisionWithBloons": true,
+        "filters": [
+          {
+            "tag": "ReactorDamageParagon"
+          }
+        ],
+        "behaviors": [
+          {
             "rounds": 1,
             "Lifespan": 0.1,
             "lifespan": 0.1
-           },
-           {
+          },
+          {
+            "cleanseRegen": true,
+            "cleanseCamo": true,
+            "collisionPass": -1
+          },
+          {
+            "damage": 50.0,
+            "distributeToChildren": true,
+            "createPopEffect": true,
+            "CappedDamage": 50.0
+          },
+          {
+            "tag": "Ceramic",
+            "tags": [
+              "Ceramic"
+            ],
+            "damageMultiplier": 1.0,
+            "damageAddative": 50.0
+          },
+          {
+            "tag": "Boss",
+            "tags": [
+              "Boss"
+            ],
+            "damageMultiplier": 1.0,
+            "damageAddative": 500.0
+          },
+          {
+            "filters": [
+              {
+                "tag": "ReactorDamageParagon"
+              }
+            ]
+          },
+          {
+            "bloonTag": "ReactorDamageParagon",
+            "layers": 9999999,
+            "isUnique": true,
+            "overlayType": "MonkeySubRadiation",
+            "collisionPass": -1,
+            "mutator": {
+              "bloonTag": "ReactorDamageParagon",
+              "overlayType": "MonkeySubRadiation",
+              "id": "ReactorDamage",
+              "priority": 1
+            },
+            "Lifespan": 0.5,
+            "lifespan": 0.5
+          },
+          {
             "scale": 1.0,
             "category": 16
-           }
-          ],
-          "canCollideWithBloons": true,
-          "radius": 12.0,
-          "ignoreNonTargetable": true,
-          "CappedPierce": 10.0
-         }
-        },
-        {
-         "tag": "Ceramic",
-         "tags": [
-          "Ceramic"
-         ],
-         "damageMultiplier": 1.0,
-         "damageAddative": 1000.0
-        },
-        {
-         "tag": "Boss",
-         "tags": [
-          "Boss"
-         ],
-         "damageMultiplier": 1.0,
-         "damageAddative": 20000.0
-        },
-        {
-         "scale": 1.0,
-         "category": 16
-        }
-       ],
-       "canCollideWithBloons": true,
-       "radius": 30.0,
-       "hasDamageModifiers": true,
-       "ignoreNonTargetable": true,
-       "ignorePierceExhaustion": true,
-       "CappedPierce": 1.0
-      }
-     },
-     {
-      "scale": 1.0,
-      "category": 16
-     }
-    ],
-    "radius": 5.0,
-    "ignoreNonTargetable": true,
-    "CappedPierce": 1.0
-   },
-   "throwOffsetX": 8.5,
-   "throwOffsetY": 12.0,
-   "throwOffsetZ": 37.0,
-   "throwOffsetSecondX": -8.5,
-   "throwOffsetSecondY": 12.0,
-   "throwOffsetSecondZ": 37.0,
-   "ejectEffectModel": {
-    "scale": 1.0,
-    "lifespan": 2.0
-   },
-   "animationState": 11,
-   "animationStateSecond": 12
-  },
-  {
-   "weapons": [
+          }
+        ],
+        "collisionPasses": [
+          -1
+        ],
+        "canCollideWithBloons": true,
+        "radius": 52.0,
+        "hasDamageModifiers": true,
+        "CappedPierce": 1000.0
+      },
+      "displayRadius": 50.0
+    },
     {
-     "animation": 1,
-     "emission": {
-      "throwMarkerOffsetModels": [
-       {
-        "ejectX": 4.5,
-        "ejectY": 18.0,
-        "ejectZ": 20.0
-       },
-       {
-        "ejectY": 19.5,
-        "ejectZ": 20.0
-       },
-       {
-        "ejectX": -4.5,
-        "ejectY": 19.0,
-        "ejectZ": 20.0
-       }
-      ],
-      "projectileCount": 1,
-      "rotateProjectileWithTower": true,
-      "behaviors": [
-       {
-        "startingOffset": -25.0,
-        "angleInBetween": 25.0
-       }
-      ]
-     },
-     "projectile": {
-      "id": "Projectile",
-      "maxPierce": 1.0,
-      "pierce": 1.0,
-      "scale": 1.0,
-      "behaviors": [
-       {
-        "Speed": 170.0,
-        "Lifespan": 2.94117641,
-        "speed": 170.0,
-        "lifespan": 2.94117641
-       },
-       {
-        "projectile": {
-         "id": "AirburstSplit",
-         "pierce": 9.0,
-         "scale": 1.0,
-         "ignoreBlockers": true,
-         "behaviors": [
-          {
-           "Speed": 340.0,
-           "Lifespan": 0.279411763,
-           "speed": 340.0,
-           "lifespan": 0.279411763
-          },
-          {
-           "damage": 40.0,
-           "distributeToChildren": true,
-           "createPopEffect": true,
-           "CappedDamage": 40.0
-          },
-          {
-           "tag": "Moabs",
-           "tags": [
-            "Moabs"
-           ],
-           "damageMultiplier": 1.0,
-           "damageAddative": 80.0
-          },
-          {
-           "tag": "Boss",
-           "tags": [
-            "Boss"
-           ],
-           "damageMultiplier": 1.0,
-           "damageAddative": 180.0
-          },
-          {
-           "effectModel": {
-            "scale": 1.0,
-            "lifespan": 2.0
-           }
-          },
-          {
-           "scale": 1.0,
-           "category": 16
-          }
-         ],
-         "canCollideWithBloons": true,
-         "radius": 12.0,
-         "hasDamageModifiers": true,
-         "CappedPierce": 9.0
-        },
-        "emission": {
-         "behaviors": [
-          {
-           "startingOffset": -25.0,
-           "angleInBetween": 25.0
-          }
-         ],
-         "count": 3,
-         "Count": 3
-        },
-        "fraction": 1.0,
-        "durationfraction": -1.0
-       },
-       {
-        "projectile": {
-         "id": "AirburstSplit",
-         "pierce": 9.0,
-         "scale": 1.0,
-         "ignoreBlockers": true,
-         "behaviors": [
-          {
-           "Speed": 340.0,
-           "Lifespan": 0.279411763,
-           "speed": 340.0,
-           "lifespan": 0.279411763
-          },
-          {
-           "damage": 40.0,
-           "distributeToChildren": true,
-           "createPopEffect": true,
-           "CappedDamage": 40.0
-          },
-          {
-           "tag": "Moabs",
-           "tags": [
-            "Moabs"
-           ],
-           "damageMultiplier": 1.0,
-           "damageAddative": 80.0
-          },
-          {
-           "tag": "Boss",
-           "tags": [
-            "Boss"
-           ],
-           "damageMultiplier": 1.0,
-           "damageAddative": 180.0
-          },
-          {
-           "effectModel": {
-            "scale": 1.0,
-            "lifespan": 2.0
-           }
-          },
-          {
-           "scale": 1.0,
-           "category": 16
-          }
-         ],
-         "canCollideWithBloons": true,
-         "radius": 12.0,
-         "hasDamageModifiers": true,
-         "CappedPierce": 9.0
-        },
-        "emission": {
-         "behaviors": [
-          {
-           "startingOffset": -25.0,
-           "angleInBetween": 25.0
-          }
-         ],
-         "count": 3,
-         "Count": 3
-        }
-       },
-       {
-        "damage": 40.0,
-        "distributeToChildren": true,
-        "createPopEffect": true,
-        "CappedDamage": 40.0
-       },
-       {
-        "distance": 9999.0,
-        "trackNewTargets": true,
-        "maxSeekAngle": 180.0,
-        "useLifetimeAsDistance": true,
-        "TurnRate": 360.0,
-        "turnRate": 360.0
-       },
-       {
-        "tag": "Moabs",
-        "tags": [
-         "Moabs"
-        ],
-        "damageMultiplier": 1.0,
-        "damageAddative": 160.0
-       },
-       {
-        "tag": "Boss",
-        "tags": [
-         "Boss"
-        ],
-        "damageMultiplier": 1.0,
-        "damageAddative": 300.0
-       },
-       {
+      "projectileModel": {
+        "id": "Pulse",
+        "pierce": 1000.0,
         "scale": 1.0,
-        "category": 16
-       }
-      ],
-      "canCollideWithBloons": true,
-      "radius": 2.0,
-      "hasDamageModifiers": true,
-      "CappedPierce": 1.0
-     },
-     "behaviors": [
-      {
-       "ejectX": 4.5,
-       "ejectY": 18.0,
-       "ejectZ": 20.0
-      },
-      {
-       "ejectY": 19.5,
-       "ejectZ": 20.0
-      },
-      {
-       "ejectX": -4.5,
-       "ejectY": 19.0,
-       "ejectZ": 20.0
-      },
-      {
-       "states": 3
-      }
-     ],
-     "Rate": 0.15,
-     "rate": 0.15
-    }
-   ],
-   "behaviors": [
-    {
-     "onlyRotateDuringThrow": true,
-     "rotateTower": true
-    },
-    {
-     "isSelectable": true,
-     "isSharedRangeEnabled": true
-    },
-    {
-     "isSelectable": true,
-     "isSharedRangeEnabled": true
-    },
-    {
-     "isSelectable": true,
-     "isSharedRangeEnabled": true
-    },
-    {
-     "isSelectable": true,
-     "isSharedRangeEnabled": true
-    },
-    {
-     "isSelectable": true
-    }
-   ],
-   "range": 52.0,
-   "addsToSharedGrid": true
-  },
-  {
-   "weapons": [
-    {
-     "animation": -1,
-     "projectile": {
-      "id": "Pulse",
-      "pierce": 1000.0,
-      "scale": 1.0,
-      "ignoreBlockers": true,
-      "usePointCollisionWithBloons": true,
-      "filters": [
-       {
-        "tag": "ReactorDamageParagon"
-       }
-      ],
-      "behaviors": [
-       {
-        "rounds": 1,
-        "Lifespan": 0.1,
-        "lifespan": 0.1
-       },
-       {
-        "cleanseRegen": true,
-        "cleanseCamo": true,
-        "collisionPass": -1
-       },
-       {
-        "damage": 50.0,
-        "distributeToChildren": true,
-        "createPopEffect": true,
-        "CappedDamage": 50.0
-       },
-       {
-        "tag": "Ceramic",
-        "tags": [
-         "Ceramic"
+        "ignoreBlockers": true,
+        "usePointCollisionWithBloons": true,
+        "behaviors": [
+          {
+            "rounds": 1,
+            "Lifespan": 0.1,
+            "lifespan": 0.1
+          },
+          {
+            "cleanseCamo": true,
+            "collisionPass": -1
+          },
+          {
+            "scale": 1.0,
+            "category": 16
+          }
         ],
-        "damageMultiplier": 1.0,
-        "damageAddative": 50.0
-       },
-       {
-        "tag": "Boss",
-        "tags": [
-         "Boss"
+        "collisionPasses": [
+          -1
         ],
-        "damageMultiplier": 1.0,
-        "damageAddative": 500.0
-       },
-       {
+        "canCollideWithBloons": true,
+        "radius": 52.0,
+        "CappedPierce": 1000.0
+      },
+      "baseTowerRange": 52.0,
+      "displayRadius": 50.0
+    },
+    {
+      "projectileModel": {
+        "id": "Pulse",
+        "pierce": 1000.0,
+        "scale": 1.0,
+        "ignoreBlockers": true,
+        "usePointCollisionWithBloons": true,
         "filters": [
-         {
-          "tag": "ReactorDamageParagon"
-         }
-        ]
-       },
-       {
-        "bloonTag": "ReactorDamageParagon",
-        "layers": 9999999,
-        "isUnique": true,
-        "overlayType": "MonkeySubRadiation",
-        "collisionPass": -1,
-        "mutator": {
-         "bloonTag": "ReactorDamageParagon",
-         "overlayType": "MonkeySubRadiation",
-         "id": "ReactorDamage",
-         "priority": 1
-        },
-        "Lifespan": 0.5,
-        "lifespan": 0.5
-       },
-       {
-        "scale": 1.0,
-        "category": 16
-       }
-      ],
-      "collisionPasses": [
-       -1
-      ],
-      "canCollideWithBloons": true,
-      "radius": 52.0,
-      "hasDamageModifiers": true,
-      "CappedPierce": 1000.0
-     },
-     "fireWithoutTarget": true,
-     "behaviors": [
-      {
-       "min": 0.5
-      }
-     ],
-     "Rate": 0.5,
-     "rate": 0.5
-    }
-   ],
-   "range": 2000.0,
-   "fireWithoutTarget": true
-  },
-  {
-   "behaviors": [
-    {
-     "countdown": 15.05,
-     "launchRate": 0.2,
-     "projectileModel": {
-      "id": "FinalStrikeProjectile",
-      "maxPierce": 1.0,
-      "pierce": 1.0,
-      "scale": 1.0,
-      "ignoreBlockers": true,
-      "behaviors": [
-       {
-        "rounds": 1,
-        "Lifespan": 0.6,
-        "lifespan": 0.6
-       },
-       {
-        "effectModel": {
-         "scale": 1.0,
-         "lifespan": 0.3,
-         "useTransformPosition": true
-        },
-        "time": 0.3
-       },
-       {
-        "lifespan": 2.6
-       },
-       {
-        "projectile": {
-         "id": "Explosion",
-         "pierce": 30.0,
-         "scale": 1.0,
-         "ignoreBlockers": true,
-         "behaviors": [
           {
-           "rounds": 1,
-           "Lifespan": 0.05,
-           "lifespan": 0.05
+            "tag": "ReactorDamageParagon"
+          }
+        ],
+        "behaviors": [
+          {
+            "rounds": 1,
+            "Lifespan": 0.1,
+            "lifespan": 0.1
           },
           {
-           "projectile": {
-            "id": "Aftershock",
-            "pierce": 120.0,
+            "cleanseRegen": true,
+            "cleanseCamo": true,
+            "collisionPass": -1
+          },
+          {
+            "damage": 50.0,
+            "distributeToChildren": true,
+            "createPopEffect": true,
+            "CappedDamage": 50.0
+          },
+          {
+            "tag": "Ceramic",
+            "tags": [
+              "Ceramic"
+            ],
+            "damageMultiplier": 1.0,
+            "damageAddative": 50.0
+          },
+          {
+            "tag": "Boss",
+            "tags": [
+              "Boss"
+            ],
+            "damageMultiplier": 1.0,
+            "damageAddative": 500.0
+          },
+          {
+            "filters": [
+              {
+                "tag": "ReactorDamageParagon"
+              }
+            ]
+          },
+          {
+            "bloonTag": "ReactorDamageParagon",
+            "layers": 9999999,
+            "isUnique": true,
+            "overlayType": "MonkeySubRadiation",
+            "collisionPass": -1,
+            "mutator": {
+              "bloonTag": "ReactorDamageParagon",
+              "overlayType": "MonkeySubRadiation",
+              "id": "ReactorDamage",
+              "priority": 1
+            },
+            "Lifespan": 0.5,
+            "lifespan": 0.5
+          },
+          {
+            "scale": 1.0,
+            "category": 16
+          }
+        ],
+        "collisionPasses": [
+          -1
+        ],
+        "canCollideWithBloons": true,
+        "radius": 52.0,
+        "hasDamageModifiers": true,
+        "CappedPierce": 1000.0
+      },
+      "baseTowerRange": 52.0,
+      "displayRadius": 50.0
+    },
+    {
+      "effectModel": {
+        "scale": 1.0,
+        "lifespan": 6.0
+      }
+    },
+    {
+      "effectDuringModel": {
+        "scale": 1.0,
+        "lifespan": 9999999.0
+      },
+      "endEffectModel": {
+        "scale": 1.0,
+        "lifespan": 6.0
+      },
+      "investmentEffectModel": {
+        "scale": 1.0,
+        "lifespan": 9999999.0
+      },
+      "investmentEffectTier5Model": {
+        "scale": 1.0,
+        "lifespan": 9999999.0
+      },
+      "effectMinScale": 0.5,
+      "effectMaxScale": 1.25,
+      "investStartScale": 1000.0,
+      "investEndScale": 10000.0,
+      "endAnimationState": 8,
+      "investmentEffectHeight": 200.0,
+      "investmentEffectDestYOffset": -12.0,
+      "degreeTextEffectLifespan": 2.0,
+      "investmentEffectExponent": 5.0,
+      "inactiveDuration": 2.0,
+      "effectsStartMovingAt": 0.5,
+      "effectsDontStartMovingAt": 1.5,
+      "effectScaleDownTime": 0.15
+    },
+    {
+      "projectileModel": {
+        "id": "PreEmptiveStrikeProjectile",
+        "maxPierce": 1.0,
+        "pierce": 1.0,
+        "scale": 1.0,
+        "ignoreBlockers": true,
+        "behaviors": [
+          {
+            "rounds": 1,
+            "Lifespan": 0.6,
+            "lifespan": 0.6
+          },
+          {
+            "effectModel": {
+              "scale": 1.0,
+              "lifespan": 0.3,
+              "useTransformPosition": true
+            },
+            "time": 0.3
+          },
+          {
+            "lifespan": 2.6
+          },
+          {
+            "projectile": {
+              "id": "TargetDamage",
+              "maxPierce": 1.0,
+              "pierce": 1.0,
+              "scale": 1.0,
+              "ignoreBlockers": true,
+              "behaviors": [
+                {
+                  "damage": 1000.0,
+                  "distributeToChildren": true,
+                  "CappedDamage": 1000.0
+                },
+                {
+                  "rounds": 1,
+                  "Lifespan": 0.1,
+                  "lifespan": 0.1
+                },
+                {
+                  "projectile": {
+                    "id": "Explosion",
+                    "pierce": 10.0,
+                    "scale": 1.0,
+                    "ignoreBlockers": true,
+                    "behaviors": [
+                      {
+                        "damage": 350.0,
+                        "distributeToChildren": true,
+                        "CappedDamage": 350.0
+                      },
+                      {
+                        "rounds": 1,
+                        "Lifespan": 0.1,
+                        "lifespan": 0.1
+                      },
+                      {
+                        "scale": 1.0,
+                        "category": 16
+                      }
+                    ],
+                    "canCollideWithBloons": true,
+                    "radius": 12.0,
+                    "ignoreNonTargetable": true,
+                    "CappedPierce": 10.0
+                  }
+                },
+                {
+                  "tag": "Ceramic",
+                  "tags": [
+                    "Ceramic"
+                  ],
+                  "damageMultiplier": 1.0,
+                  "damageAddative": 1000.0
+                },
+                {
+                  "tag": "Boss",
+                  "tags": [
+                    "Boss"
+                  ],
+                  "damageMultiplier": 1.0,
+                  "damageAddative": 20000.0
+                },
+                {
+                  "scale": 1.0,
+                  "category": 16
+                }
+              ],
+              "canCollideWithBloons": true,
+              "radius": 30.0,
+              "hasDamageModifiers": true,
+              "ignoreNonTargetable": true,
+              "ignorePierceExhaustion": true,
+              "CappedPierce": 1.0
+            }
+          },
+          {
+            "scale": 1.0,
+            "category": 16
+          }
+        ],
+        "radius": 5.0,
+        "ignoreNonTargetable": true,
+        "CappedPierce": 1.0
+      },
+      "throwOffsetX": 8.5,
+      "throwOffsetY": 12.0,
+      "throwOffsetZ": 37.0,
+      "throwOffsetSecondX": -8.5,
+      "throwOffsetSecondY": 12.0,
+      "throwOffsetSecondZ": 37.0,
+      "ejectEffectModel": {
+        "scale": 1.0,
+        "lifespan": 2.0
+      },
+      "animationState": 11,
+      "animationStateSecond": 12
+    },
+    {
+      "weapons": [
+        {
+          "animation": 1,
+          "emission": {
+            "throwMarkerOffsetModels": [
+              {
+                "ejectX": 4.5,
+                "ejectY": 18.0,
+                "ejectZ": 20.0
+              },
+              {
+                "ejectY": 19.5,
+                "ejectZ": 20.0
+              },
+              {
+                "ejectX": -4.5,
+                "ejectY": 19.0,
+                "ejectZ": 20.0
+              }
+            ],
+            "projectileCount": 1,
+            "rotateProjectileWithTower": true,
+            "behaviors": [
+              {
+                "startingOffset": -25.0,
+                "angleInBetween": 25.0
+              }
+            ]
+          },
+          "projectile": {
+            "id": "Projectile",
+            "maxPierce": 1.0,
+            "pierce": 1.0,
+            "scale": 1.0,
+            "behaviors": [
+              {
+                "Speed": 170.0,
+                "Lifespan": 2.94117641,
+                "speed": 170.0,
+                "lifespan": 2.94117641
+              },
+              {
+                "projectile": {
+                  "id": "AirburstSplit",
+                  "pierce": 9.0,
+                  "scale": 1.0,
+                  "ignoreBlockers": true,
+                  "behaviors": [
+                    {
+                      "Speed": 340.0,
+                      "Lifespan": 0.279411763,
+                      "speed": 340.0,
+                      "lifespan": 0.279411763
+                    },
+                    {
+                      "damage": 40.0,
+                      "distributeToChildren": true,
+                      "createPopEffect": true,
+                      "CappedDamage": 40.0
+                    },
+                    {
+                      "tag": "Moabs",
+                      "tags": [
+                        "Moabs"
+                      ],
+                      "damageMultiplier": 1.0,
+                      "damageAddative": 80.0
+                    },
+                    {
+                      "tag": "Boss",
+                      "tags": [
+                        "Boss"
+                      ],
+                      "damageMultiplier": 1.0,
+                      "damageAddative": 180.0
+                    },
+                    {
+                      "effectModel": {
+                        "scale": 1.0,
+                        "lifespan": 2.0
+                      }
+                    },
+                    {
+                      "scale": 1.0,
+                      "category": 16
+                    }
+                  ],
+                  "canCollideWithBloons": true,
+                  "radius": 12.0,
+                  "hasDamageModifiers": true,
+                  "CappedPierce": 9.0
+                },
+                "emission": {
+                  "behaviors": [
+                    {
+                      "startingOffset": -25.0,
+                      "angleInBetween": 25.0
+                    }
+                  ],
+                  "count": 3,
+                  "Count": 3
+                },
+                "fraction": 1.0,
+                "durationfraction": -1.0
+              },
+              {
+                "projectile": {
+                  "id": "AirburstSplit",
+                  "pierce": 9.0,
+                  "scale": 1.0,
+                  "ignoreBlockers": true,
+                  "behaviors": [
+                    {
+                      "Speed": 340.0,
+                      "Lifespan": 0.279411763,
+                      "speed": 340.0,
+                      "lifespan": 0.279411763
+                    },
+                    {
+                      "damage": 40.0,
+                      "distributeToChildren": true,
+                      "createPopEffect": true,
+                      "CappedDamage": 40.0
+                    },
+                    {
+                      "tag": "Moabs",
+                      "tags": [
+                        "Moabs"
+                      ],
+                      "damageMultiplier": 1.0,
+                      "damageAddative": 80.0
+                    },
+                    {
+                      "tag": "Boss",
+                      "tags": [
+                        "Boss"
+                      ],
+                      "damageMultiplier": 1.0,
+                      "damageAddative": 180.0
+                    },
+                    {
+                      "effectModel": {
+                        "scale": 1.0,
+                        "lifespan": 2.0
+                      }
+                    },
+                    {
+                      "scale": 1.0,
+                      "category": 16
+                    }
+                  ],
+                  "canCollideWithBloons": true,
+                  "radius": 12.0,
+                  "hasDamageModifiers": true,
+                  "CappedPierce": 9.0
+                },
+                "emission": {
+                  "behaviors": [
+                    {
+                      "startingOffset": -25.0,
+                      "angleInBetween": 25.0
+                    }
+                  ],
+                  "count": 3,
+                  "Count": 3
+                }
+              },
+              {
+                "damage": 40.0,
+                "distributeToChildren": true,
+                "createPopEffect": true,
+                "CappedDamage": 40.0
+              },
+              {
+                "distance": 9999.0,
+                "trackNewTargets": true,
+                "maxSeekAngle": 180.0,
+                "useLifetimeAsDistance": true,
+                "TurnRate": 360.0,
+                "turnRate": 360.0
+              },
+              {
+                "tag": "Moabs",
+                "tags": [
+                  "Moabs"
+                ],
+                "damageMultiplier": 1.0,
+                "damageAddative": 160.0
+              },
+              {
+                "tag": "Boss",
+                "tags": [
+                  "Boss"
+                ],
+                "damageMultiplier": 1.0,
+                "damageAddative": 300.0
+              },
+              {
+                "scale": 1.0,
+                "category": 16
+              }
+            ],
+            "canCollideWithBloons": true,
+            "radius": 2.0,
+            "hasDamageModifiers": true,
+            "CappedPierce": 1.0
+          },
+          "behaviors": [
+            {
+              "ejectX": 4.5,
+              "ejectY": 18.0,
+              "ejectZ": 20.0
+            },
+            {
+              "ejectY": 19.5,
+              "ejectZ": 20.0
+            },
+            {
+              "ejectX": -4.5,
+              "ejectY": 19.0,
+              "ejectZ": 20.0
+            },
+            {
+              "states": 3
+            }
+          ],
+          "Rate": 0.15,
+          "rate": 0.15
+        }
+      ],
+      "behaviors": [
+        {
+          "onlyRotateDuringThrow": true,
+          "rotateTower": true
+        },
+        {
+          "isSelectable": true,
+          "isSharedRangeEnabled": true
+        },
+        {
+          "isSelectable": true,
+          "isSharedRangeEnabled": true
+        },
+        {
+          "isSelectable": true,
+          "isSharedRangeEnabled": true
+        },
+        {
+          "isSelectable": true,
+          "isSharedRangeEnabled": true
+        },
+        {
+          "isSelectable": true
+        }
+      ],
+      "range": 52.0,
+      "addsToSharedGrid": true
+    },
+    {
+      "weapons": [
+        {
+          "animation": -1,
+          "projectile": {
+            "id": "Pulse",
+            "pierce": 1000.0,
+            "scale": 1.0,
+            "ignoreBlockers": true,
+            "usePointCollisionWithBloons": true,
+            "filters": [
+              {
+                "tag": "ReactorDamageParagon"
+              }
+            ],
+            "behaviors": [
+              {
+                "rounds": 1,
+                "Lifespan": 0.1,
+                "lifespan": 0.1
+              },
+              {
+                "cleanseRegen": true,
+                "cleanseCamo": true,
+                "collisionPass": -1
+              },
+              {
+                "damage": 50.0,
+                "distributeToChildren": true,
+                "createPopEffect": true,
+                "CappedDamage": 50.0
+              },
+              {
+                "tag": "Ceramic",
+                "tags": [
+                  "Ceramic"
+                ],
+                "damageMultiplier": 1.0,
+                "damageAddative": 50.0
+              },
+              {
+                "tag": "Boss",
+                "tags": [
+                  "Boss"
+                ],
+                "damageMultiplier": 1.0,
+                "damageAddative": 500.0
+              },
+              {
+                "filters": [
+                  {
+                    "tag": "ReactorDamageParagon"
+                  }
+                ]
+              },
+              {
+                "bloonTag": "ReactorDamageParagon",
+                "layers": 9999999,
+                "isUnique": true,
+                "overlayType": "MonkeySubRadiation",
+                "collisionPass": -1,
+                "mutator": {
+                  "bloonTag": "ReactorDamageParagon",
+                  "overlayType": "MonkeySubRadiation",
+                  "id": "ReactorDamage",
+                  "priority": 1
+                },
+                "Lifespan": 0.5,
+                "lifespan": 0.5
+              },
+              {
+                "scale": 1.0,
+                "category": 16
+              }
+            ],
+            "collisionPasses": [
+              -1
+            ],
+            "canCollideWithBloons": true,
+            "radius": 52.0,
+            "hasDamageModifiers": true,
+            "CappedPierce": 1000.0
+          },
+          "fireWithoutTarget": true,
+          "behaviors": [
+            {
+              "min": 0.5
+            }
+          ],
+          "Rate": 0.5,
+          "rate": 0.5
+        }
+      ],
+      "range": 2000.0,
+      "fireWithoutTarget": true
+    },
+    {
+      "behaviors": [
+        {
+          "countdown": 15.05,
+          "launchRate": 0.2,
+          "projectileModel": {
+            "id": "FinalStrikeProjectile",
+            "maxPierce": 1.0,
+            "pierce": 1.0,
             "scale": 1.0,
             "ignoreBlockers": true,
             "behaviors": [
-             {
-              "rounds": 1,
-              "Lifespan": 0.05,
-              "lifespan": 0.05
-             },
-             {
-              "layers": 9999999,
-              "isUnique": true,
-              "overlayType": "Stun",
-              "collisionPass": -1,
-              "Lifespan": 15.0,
-              "Mutator": {
-               "overlayType": "Stun",
-               "id": "Stun:Strong",
-               "priority": 1
+              {
+                "rounds": 1,
+                "Lifespan": 0.6,
+                "lifespan": 0.6
               },
-              "lifespan": 15.0
-             },
-             {
-              "damage": 15000.0,
-              "distributeToChildren": true,
-              "CappedDamage": 15000.0
-             },
-             {
-              "projectile": {
-               "id": "Fallout",
-               "pierce": 60.0,
-               "scale": 1.0,
-               "ignoreBlockers": true,
-               "behaviors": [
-                {
-                 "rounds": 9999999,
-                 "useRoundTime": true,
-                 "Lifespan": 36.0,
-                 "lifespan": 36.0
+              {
+                "effectModel": {
+                  "scale": 1.0,
+                  "lifespan": 0.3,
+                  "useTransformPosition": true
                 },
-                {
-                 "lifespan": 6.0
-                },
-                {
-                 "damage": 10.0,
-                 "distributeToChildren": true,
-                 "createPopEffect": true,
-                 "CappedDamage": 10.0
-                },
-                {
-                 "tag": "Moabs",
-                 "tags": [
-                  "Moabs"
-                 ],
-                 "damageMultiplier": 1.0,
-                 "damageAddative": 90.0
-                },
-                {
-                 "interval": 0.1
-                },
-                {
-                 "interval": 0.1
-                },
-                {
-                 "scale": 1.0,
-                 "category": 16
+                "time": 0.3
+              },
+              {
+                "lifespan": 2.6
+              },
+              {
+                "projectile": {
+                  "id": "Explosion",
+                  "pierce": 30.0,
+                  "scale": 1.0,
+                  "ignoreBlockers": true,
+                  "behaviors": [
+                    {
+                      "rounds": 1,
+                      "Lifespan": 0.05,
+                      "lifespan": 0.05
+                    },
+                    {
+                      "projectile": {
+                        "id": "Aftershock",
+                        "pierce": 120.0,
+                        "scale": 1.0,
+                        "ignoreBlockers": true,
+                        "behaviors": [
+                          {
+                            "rounds": 1,
+                            "Lifespan": 0.05,
+                            "lifespan": 0.05
+                          },
+                          {
+                            "layers": 9999999,
+                            "isUnique": true,
+                            "overlayType": "Stun",
+                            "collisionPass": -1,
+                            "Lifespan": 15.0,
+                            "Mutator": {
+                              "overlayType": "Stun",
+                              "id": "Stun:Strong",
+                              "priority": 1
+                            },
+                            "lifespan": 15.0
+                          },
+                          {
+                            "damage": 15000.0,
+                            "distributeToChildren": true,
+                            "CappedDamage": 15000.0
+                          },
+                          {
+                            "projectile": {
+                              "id": "Fallout",
+                              "pierce": 60.0,
+                              "scale": 1.0,
+                              "ignoreBlockers": true,
+                              "behaviors": [
+                                {
+                                  "rounds": 9999999,
+                                  "useRoundTime": true,
+                                  "Lifespan": 36.0,
+                                  "lifespan": 36.0
+                                },
+                                {
+                                  "lifespan": 6.0
+                                },
+                                {
+                                  "damage": 10.0,
+                                  "distributeToChildren": true,
+                                  "createPopEffect": true,
+                                  "CappedDamage": 10.0
+                                },
+                                {
+                                  "tag": "Moabs",
+                                  "tags": [
+                                    "Moabs"
+                                  ],
+                                  "damageMultiplier": 1.0,
+                                  "damageAddative": 90.0
+                                },
+                                {
+                                  "interval": 0.1
+                                },
+                                {
+                                  "interval": 0.1
+                                },
+                                {
+                                  "scale": 1.0,
+                                  "category": 16
+                                }
+                              ],
+                              "canCollideWithBloons": true,
+                              "radius": 15.0,
+                              "hasDamageModifiers": true,
+                              "ignoreNonTargetable": true,
+                              "ignorePierceExhaustion": true,
+                              "CappedPierce": 60.0
+                            },
+                            "count": 5,
+                            "range": 60.0
+                          },
+                          {
+                            "scale": 1.0,
+                            "category": 16
+                          }
+                        ],
+                        "collisionPasses": [
+                          -1
+                        ],
+                        "canCollideWithBloons": true,
+                        "radius": 180.0,
+                        "ignoreNonTargetable": true,
+                        "CappedPierce": 120.0
+                      }
+                    },
+                    {
+                      "damage": 60000.0,
+                      "distributeToChildren": true,
+                      "CappedDamage": 60000.0
+                    },
+                    {
+                      "scale": 1.0,
+                      "category": 16
+                    }
+                  ],
+                  "canCollideWithBloons": true,
+                  "radius": 60.0,
+                  "ignoreNonTargetable": true,
+                  "ignorePierceExhaustion": true,
+                  "CappedPierce": 30.0
                 }
-               ],
-               "canCollideWithBloons": true,
-               "radius": 15.0,
-               "hasDamageModifiers": true,
-               "ignoreNonTargetable": true,
-               "ignorePierceExhaustion": true,
-               "CappedPierce": 60.0
               },
-              "count": 5,
-              "range": 60.0
-             },
-             {
-              "scale": 1.0,
-              "category": 16
-             }
+              {
+                "scale": 1.0,
+                "category": 16
+              }
             ],
-            "collisionPasses": [
-             -1
-            ],
-            "canCollideWithBloons": true,
-            "radius": 180.0,
+            "radius": 5.0,
             "ignoreNonTargetable": true,
-            "CappedPierce": 120.0
-           }
+            "CappedPierce": 1.0
           },
-          {
-           "damage": 60000.0,
-           "distributeToChildren": true,
-           "CappedDamage": 60000.0
+          "throwOffsetY": 25.0,
+          "throwOffsetZ": -7.0,
+          "effectDuringCountdownModel": {
+            "scale": 1.0,
+            "lifespan": 9999999.0,
+            "useTransformPosition": true,
+            "useTransfromRotation": true
           },
-          {
-           "scale": 1.0,
-           "category": 16
-          }
-         ],
-         "canCollideWithBloons": true,
-         "radius": 60.0,
-         "ignoreNonTargetable": true,
-         "ignorePierceExhaustion": true,
-         "CappedPierce": 30.0
+          "launchEffectModel": {
+            "scale": 1.0,
+            "lifespan": 2.0,
+            "useTransformPosition": true
+          },
+          "launchEjectEffectModel": {
+            "scale": 1.0,
+            "lifespan": 1.0
+          },
+          "countdownAnimationStateSubmerged": 7,
+          "countdownAnimationStateUnsubmerged": 10,
+          "launchAnimationStateSubmerged": 13,
+          "launchAnimationStateUnsubmerged": 9,
+          "missileLaunchTime": 7
+        },
+        {
+          "effectModel": {
+            "scale": 1.0,
+            "lifespan": 2.0,
+            "useTransformPosition": true
+          },
+          "destroyOnEnd": true
         }
-       },
-       {
-        "scale": 1.0,
-        "category": 16
-       }
       ],
-      "radius": 5.0,
-      "ignoreNonTargetable": true,
-      "CappedPierce": 1.0
-     },
-     "throwOffsetY": 25.0,
-     "throwOffsetZ": -7.0,
-     "effectDuringCountdownModel": {
-      "scale": 1.0,
-      "lifespan": 9999999.0,
-      "useTransformPosition": true,
-      "useTransfromRotation": true
-     },
-     "launchEffectModel": {
-      "scale": 1.0,
-      "lifespan": 2.0,
-      "useTransformPosition": true
-     },
-     "launchEjectEffectModel": {
-      "scale": 1.0,
-      "lifespan": 1.0
-     },
-     "countdownAnimationStateSubmerged": 7,
-     "countdownAnimationStateUnsubmerged": 10,
-     "launchAnimationStateSubmerged": 13,
-     "launchAnimationStateUnsubmerged": 9,
-     "missileLaunchTime": 7
+      "addedViaUpgrade": "MonkeySub Paragon",
+      "animation": -1,
+      "enabled": true,
+      "resetCooldownOnTierUpgrade": true,
+      "AnimationOffset": -1.0,
+      "Cooldown": 240.0,
+      "animationOffset": -1.0,
+      "cooldown": 240.0
     },
     {
-     "effectModel": {
+      "layer": -1,
       "scale": 1.0,
-      "lifespan": 2.0,
-      "useTransformPosition": true
-     },
-     "destroyOnEnd": true
+      "category": 4
     }
-   ],
-   "addedViaUpgrade": "MonkeySub Paragon",
-   "animation": -1,
-   "enabled": true,
-   "resetCooldownOnTierUpgrade": true,
-   "AnimationOffset": -1.0,
-   "Cooldown": 240.0,
-   "animationOffset": -1.0,
-   "cooldown": 240.0
+  ],
+  "footprint": {
+    "radius": 7.0
   },
-  {
-   "layer": -1,
-   "scale": 1.0,
-   "category": 4
-  }
- ],
- "footprint": {
-  "radius": 7.0
- },
- "appliedUpgrades": [
-  "Longer Range",
-  "Advanced Intel",
-  "Submerge and Support",
-  "Bloontonium Reactor",
-  "Energizer",
-  "MonkeySub Paragon"
- ],
- "targetTypes": [
-  {
-   "id": "First"
-  },
-  {
-   "id": "Last",
-   "intID": 1
-  },
-  {
-   "id": "Close",
-   "intID": 2
-  },
-  {
-   "id": "Strong",
-   "intID": 3
-  },
-  {
-   "id": "Submerge",
-   "intID": -1,
-   "continueToNextPriority": true
-  }
- ],
- "animationSpeed": 1.0,
- "isParagon": true,
- "displayScale": 1.0,
- "showBuffs": true,
- "TargetTypes": [
-  {
-   "id": "First"
-  },
-  {
-   "id": "Last",
-   "intID": 1
-  },
-  {
-   "id": "Close",
-   "intID": 2
-  },
-  {
-   "id": "Strong",
-   "intID": 3
-  },
-  {
-   "id": "Submerge",
-   "intID": -1,
-   "continueToNextPriority": true
-  }
- ],
- "IsExclusivelyWaterBased": true
+  "appliedUpgrades": [
+    "Longer Range",
+    "Advanced Intel",
+    "Submerge and Support",
+    "Bloontonium Reactor",
+    "Energizer",
+    "MonkeySub Paragon"
+  ],
+  "targetTypes": [
+    {
+      "id": "First"
+    },
+    {
+      "id": "Last",
+      "intID": 1
+    },
+    {
+      "id": "Close",
+      "intID": 2
+    },
+    {
+      "id": "Strong",
+      "intID": 3
+    },
+    {
+      "id": "Submerge",
+      "intID": -1,
+      "continueToNextPriority": true
+    }
+  ],
+  "animationSpeed": 1.0,
+  "isParagon": true,
+  "displayScale": 1.0,
+  "showBuffs": true,
+  "TargetTypes": [
+    {
+      "id": "First"
+    },
+    {
+      "id": "Last",
+      "intID": 1
+    },
+    {
+      "id": "Close",
+      "intID": 2
+    },
+    {
+      "id": "Strong",
+      "intID": 3
+    },
+    {
+      "id": "Submerge",
+      "intID": -1,
+      "continueToNextPriority": true
+    }
+  ],
+  "IsExclusivelyWaterBased": true
 }

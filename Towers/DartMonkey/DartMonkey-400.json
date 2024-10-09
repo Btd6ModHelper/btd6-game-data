@@ -1,237 +1,237 @@
 {
- "cost": 200.0,
- "radius": 6.0,
- "radiusSquared": 36.0,
- "range": 36.8,
- "tier": 4,
- "tiers": [
-  4
- ],
- "towerSet": 1,
- "areaTypes": [
-  2
- ],
- "mods": [
-  {
-   "mod": "ForceVsForce",
-   "target": "Projectile,JuggernautProjectile"
-  },
-  {
-   "mod": "GlobalAbilityCooldowns"
-  },
-  {
-   "mod": "VeteranMonkeyTraining"
-  },
-  {
-   "mod": "MonkeyEducation"
-  },
-  {
-   "mod": "BetterSellDeals"
-  },
-  {
-   "mod": "IncreasedLifespan"
-  },
-  {
-   "mod": "ExtraDartPops"
-  }
- ],
- "behaviors": [
-  {
-   "effectModel": {
-    "scale": 1.0,
-    "lifespan": 6.0
-   }
-  },
-  {
-   "effectModel": {
-    "scale": 1.0,
-    "lifespan": 1.0
-   }
-  },
-  {
-   "effectModel": {
-    "scale": 1.0,
-    "lifespan": 6.0
-   }
-  },
-  {
-   "weapons": [
+  "cost": 200.0,
+  "radius": 6.0,
+  "radiusSquared": 36.0,
+  "range": 36.8,
+  "tier": 4,
+  "tiers": [
+    4
+  ],
+  "towerSet": 1,
+  "areaTypes": [
+    2
+  ],
+  "mods": [
     {
-     "animation": 1,
-     "ejectX": -0.2,
-     "ejectY": 9.0,
-     "ejectZ": 17.0,
-     "projectile": {
-      "id": "Projectile",
-      "pierce": 60.0,
-      "scale": 1.0,
-      "filters": [
-       {
-        "isActive": true
-       }
+      "mod": "ForceVsForce",
+      "target": "Projectile,JuggernautProjectile"
+    },
+    {
+      "mod": "GlobalAbilityCooldowns"
+    },
+    {
+      "mod": "VeteranMonkeyTraining"
+    },
+    {
+      "mod": "MonkeyEducation"
+    },
+    {
+      "mod": "BetterSellDeals"
+    },
+    {
+      "mod": "IncreasedLifespan"
+    },
+    {
+      "mod": "ExtraDartPops"
+    }
+  ],
+  "behaviors": [
+    {
+      "effectModel": {
+        "scale": 1.0,
+        "lifespan": 6.0
+      }
+    },
+    {
+      "effectModel": {
+        "scale": 1.0,
+        "lifespan": 1.0
+      }
+    },
+    {
+      "effectModel": {
+        "scale": 1.0,
+        "lifespan": 6.0
+      }
+    },
+    {
+      "weapons": [
+        {
+          "animation": 1,
+          "ejectX": -0.2,
+          "ejectY": 9.0,
+          "ejectZ": 17.0,
+          "projectile": {
+            "id": "Projectile",
+            "pierce": 60.0,
+            "scale": 1.0,
+            "filters": [
+              {
+                "isActive": true
+              }
+            ],
+            "behaviors": [
+              {
+                "damage": 2.0,
+                "distributeToChildren": true,
+                "createPopEffect": true,
+                "CappedDamage": 2.0
+              },
+              {
+                "Speed": 300.0,
+                "Lifespan": 1.0,
+                "speed": 300.0,
+                "lifespan": 1.0
+              },
+              {
+                "filters": [
+                  {
+                    "isActive": true
+                  }
+                ]
+              },
+              {
+                "clearCollidedWith": true
+              },
+              {
+                "tag": "Ceramic",
+                "tags": [
+                  "Ceramic"
+                ],
+                "damageMultiplier": 1.0,
+                "damageAddative": 3.0
+              },
+              {
+                "heavyMultiplier": 1.5,
+                "lightMultiplier": 3.0,
+                "collisionPass": -1,
+                "Lifespan": 0.15,
+                "mutator": {
+                  "id": "KnockbackKnockback",
+                  "priority": 1
+                },
+                "lifespan": 0.15
+              },
+              {
+                "tag": "Fortified",
+                "tags": [
+                  "Fortified"
+                ],
+                "damageMultiplier": 1.0,
+                "damageAddative": 2.0
+              },
+              {
+                "scale": 1.0,
+                "category": 16
+              }
+            ],
+            "collisionPasses": [
+              -1
+            ],
+            "canCollideWithBloons": true,
+            "radius": 7.0,
+            "hasDamageModifiers": true,
+            "CappedPierce": 60.0
+          },
+          "Rate": 1.0,
+          "UseThrowMarker": true,
+          "animationOffset": 0.15,
+          "rate": 1.0
+        }
       ],
       "behaviors": [
-       {
-        "damage": 2.0,
-        "distributeToChildren": true,
-        "createPopEffect": true,
-        "CappedDamage": 2.0
-       },
-       {
-        "Speed": 300.0,
-        "Lifespan": 1.0,
-        "speed": 300.0,
-        "lifespan": 1.0
-       },
-       {
-        "filters": [
-         {
-          "isActive": true
-         }
-        ]
-       },
-       {
-        "clearCollidedWith": true
-       },
-       {
-        "tag": "Ceramic",
-        "tags": [
-         "Ceramic"
-        ],
-        "damageMultiplier": 1.0,
-        "damageAddative": 3.0
-       },
-       {
-        "heavyMultiplier": 1.5,
-        "lightMultiplier": 3.0,
-        "collisionPass": -1,
-        "Lifespan": 0.15,
-        "mutator": {
-         "id": "KnockbackKnockback",
-         "priority": 1
+        {
+          "onlyRotateDuringThrow": true,
+          "rotateTower": true
         },
-        "lifespan": 0.15
-       },
-       {
-        "tag": "Fortified",
-        "tags": [
-         "Fortified"
-        ],
-        "damageMultiplier": 1.0,
-        "damageAddative": 2.0
-       },
-       {
-        "scale": 1.0,
-        "category": 16
-       }
+        {
+          "filters": [
+            {
+              "isActive": true
+            }
+          ]
+        },
+        {
+          "isSelectable": true
+        },
+        {
+          "isSelectable": true
+        },
+        {
+          "isSelectable": true
+        },
+        {
+          "isSelectable": true
+        }
       ],
-      "collisionPasses": [
-       -1
-      ],
-      "canCollideWithBloons": true,
-      "radius": 7.0,
-      "hasDamageModifiers": true,
-      "CappedPierce": 60.0
-     },
-     "Rate": 1.0,
-     "UseThrowMarker": true,
-     "animationOffset": 0.15,
-     "rate": 1.0
+      "range": 36.8,
+      "addsToSharedGrid": true
+    },
+    {
+      "layer": -1,
+      "scale": 1.0,
+      "category": 4
     }
-   ],
-   "behaviors": [
+  ],
+  "footprint": {
+    "radius": 6.0
+  },
+  "upgrades": [
     {
-     "onlyRotateDuringThrow": true,
-     "rotateTower": true
+      "tower": "DartMonkey-500",
+      "upgrade": "Ultra-Juggernaut"
     },
     {
-     "filters": [
-      {
-       "isActive": true
-      }
-     ]
+      "tower": "DartMonkey-410",
+      "upgrade": "Quick Shots"
     },
     {
-     "isSelectable": true
-    },
-    {
-     "isSelectable": true
-    },
-    {
-     "isSelectable": true
-    },
-    {
-     "isSelectable": true
+      "tower": "DartMonkey-401",
+      "upgrade": "Long Range Darts"
     }
-   ],
-   "range": 36.8,
-   "addsToSharedGrid": true
-  },
-  {
-   "layer": -1,
-   "scale": 1.0,
-   "category": 4
-  }
- ],
- "footprint": {
-  "radius": 6.0
- },
- "upgrades": [
-  {
-   "tower": "DartMonkey-500",
-   "upgrade": "Ultra-Juggernaut"
-  },
-  {
-   "tower": "DartMonkey-410",
-   "upgrade": "Quick Shots"
-  },
-  {
-   "tower": "DartMonkey-401",
-   "upgrade": "Long Range Darts"
-  }
- ],
- "appliedUpgrades": [
-  "Sharp Shots",
-  "Razor Sharp Shots",
-  "Spike-o-pult",
-  "Juggernaut"
- ],
- "targetTypes": [
-  {
-   "id": "First"
-  },
-  {
-   "id": "Last",
-   "intID": 1
-  },
-  {
-   "id": "Close",
-   "intID": 2
-  },
-  {
-   "id": "Strong",
-   "intID": 3
-  }
- ],
- "isBakable": true,
- "animationSpeed": 1.0,
- "displayScale": 1.0,
- "showBuffs": true,
- "TargetTypes": [
-  {
-   "id": "First"
-  },
-  {
-   "id": "Last",
-   "intID": 1
-  },
-  {
-   "id": "Close",
-   "intID": 2
-  },
-  {
-   "id": "Strong",
-   "intID": 3
-  }
- ]
+  ],
+  "appliedUpgrades": [
+    "Sharp Shots",
+    "Razor Sharp Shots",
+    "Spike-o-pult",
+    "Juggernaut"
+  ],
+  "targetTypes": [
+    {
+      "id": "First"
+    },
+    {
+      "id": "Last",
+      "intID": 1
+    },
+    {
+      "id": "Close",
+      "intID": 2
+    },
+    {
+      "id": "Strong",
+      "intID": 3
+    }
+  ],
+  "isBakable": true,
+  "animationSpeed": 1.0,
+  "displayScale": 1.0,
+  "showBuffs": true,
+  "TargetTypes": [
+    {
+      "id": "First"
+    },
+    {
+      "id": "Last",
+      "intID": 1
+    },
+    {
+      "id": "Close",
+      "intID": 2
+    },
+    {
+      "id": "Strong",
+      "intID": 3
+    }
+  ]
 }
