@@ -1,14 +1,6 @@
 {
   "$type": "Assets.Scripts.Models.Towers.TowerModel, Assembly-CSharp",
-  "display": {
-    "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-    "GUID": "c2ca641e5b2249a47b1e6f7dd53db1db",
-    "guidRef": "c2ca641e5b2249a47b1e6f7dd53db1db"
-  },
-  "baseId": "Alchemist",
   "cost": 0.0,
-  "radius": 6.0,
-  "radiusSquared": 36.0,
   "range": 72.0,
   "ignoreBlockers": true,
   "isGlobalRange": false,
@@ -21,17 +13,22 @@
   "towerSet": 4,
   "icon": {
     "$type": "NinjaKiwi.Common.ResourceUtils.SpriteReference, NinjaKiwi.Common",
-    "GUID": null,
+    "AssetGUID": null,
+    "guidRef": null
+  },
+  "icon3D": {
+    "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
+    "AssetGUID": null,
     "guidRef": null
   },
   "portrait": {
     "$type": "NinjaKiwi.Common.ResourceUtils.SpriteReference, NinjaKiwi.Common",
-    "GUID": null,
+    "AssetGUID": null,
     "guidRef": null
   },
   "instaIcon": {
     "$type": "NinjaKiwi.Common.ResourceUtils.SpriteReference, NinjaKiwi.Common",
-    "GUID": null,
+    "AssetGUID": null,
     "guidRef": null
   },
   "areaTypes": [
@@ -82,27 +79,115 @@
     }
   ],
   "ignoreTowerForSelection": false,
+  "footprint": {
+    "$type": "Assets.Scripts.Models.Towers.Behaviors.CircleFootprintModel, Assembly-CSharp",
+    "radius": 6.0,
+    "doesntBlockTowerPlacement": false,
+    "ignoresPlacementCheck": false,
+    "ignoresTowerOverlap": false,
+    "name": "CircleFootprintModel_Circle Footprint",
+    "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.CircleFootprint, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+  },
+  "dontDisplayUpgrades": false,
+  "emoteSpriteSmall": {
+    "$type": "NinjaKiwi.Common.ResourceUtils.SpriteReference, NinjaKiwi.Common",
+    "AssetGUID": null,
+    "guidRef": null
+  },
+  "emoteSpriteLarge": {
+    "$type": "NinjaKiwi.Common.ResourceUtils.SpriteReference, NinjaKiwi.Common",
+    "AssetGUID": null,
+    "guidRef": null
+  },
+  "doesntRotate": false,
+  "upgrades": [],
+  "appliedUpgrades": [],
+  "targetTypes": [
+    {
+      "$type": "Assets.Scripts.Models.Towers.TargetType, Assembly-CSharp",
+      "id": "First",
+      "isActionable": false,
+      "actionOnCreate": false,
+      "intID": 0,
+      "continueToNextPriority": false
+    },
+    {
+      "$type": "Assets.Scripts.Models.Towers.TargetType, Assembly-CSharp",
+      "id": "Last",
+      "isActionable": false,
+      "actionOnCreate": false,
+      "intID": 1,
+      "continueToNextPriority": false
+    },
+    {
+      "$type": "Assets.Scripts.Models.Towers.TargetType, Assembly-CSharp",
+      "id": "Close",
+      "isActionable": false,
+      "actionOnCreate": false,
+      "intID": 2,
+      "continueToNextPriority": false
+    },
+    {
+      "$type": "Assets.Scripts.Models.Towers.TargetType, Assembly-CSharp",
+      "id": "Strong",
+      "isActionable": false,
+      "actionOnCreate": false,
+      "intID": 3,
+      "continueToNextPriority": false
+    }
+  ],
+  "paragonUpgrade": null,
+  "isSubTower": false,
+  "isBakable": true,
+  "powerName": null,
+  "showPowerTowerBuffs": false,
+  "animationSpeed": 1.0,
+  "towerSelectionMenuThemeId": "Default",
+  "secondarySelectionMenu": {
+    "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
+    "AssetGUID": null,
+    "guidRef": null
+  },
+  "ignoreCoopAreas": false,
+  "canAlwaysBeSold": false,
+  "blockSelling": false,
+  "isParagon": false,
+  "ignoreMaxSellPercent": false,
+  "isStunned": false,
+  "geraldoItemName": null,
+  "sellbackModifierAdd": 0.0,
+  "skinName": null,
+  "dontAddMutatorsFromParent": false,
+  "showBuffs": true,
+  "destroyTowerOnRedistribution": false,
+  "displayScale": 1.0,
+  "baseId": "Alchemist",
+  "display": {
+    "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
+    "AssetGUID": "c2ca641e5b2249a47b1e6f7dd53db1db",
+    "guidRef": "c2ca641e5b2249a47b1e6f7dd53db1db"
+  },
   "behaviors": [
     {
       "$type": "Assets.Scripts.Models.Towers.Behaviors.CreateSoundOnTowerPlaceModel, Assembly-CSharp",
       "sound1": {
         "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
         "assetId": {
-          "$type": "NinjaKiwi.Common.ResourceUtils.AudioSourceReference, NinjaKiwi.Common",
-          "GUID": "0782b04f742eb2542bc8266a38241c5b",
-          "guidRef": "0782b04f742eb2542bc8266a38241c5b"
+          "$type": "NinjaKiwi.Common.ResourceUtils.AudioClipReference, NinjaKiwi.Common",
+          "AssetGUID": "b680997e404133143997d51105f59451",
+          "guidRef": "b680997e404133143997d51105f59451"
         },
-        "name": "SoundModel_PlaceSound1",
+        "name": "SoundModel_PlaceTowerMonkey01",
         "ImplementationType": null
       },
       "sound2": {
         "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
         "assetId": {
-          "$type": "NinjaKiwi.Common.ResourceUtils.AudioSourceReference, NinjaKiwi.Common",
-          "GUID": "80580fcd99708624ab85e37036ca124c",
-          "guidRef": "80580fcd99708624ab85e37036ca124c"
+          "$type": "NinjaKiwi.Common.ResourceUtils.AudioClipReference, NinjaKiwi.Common",
+          "AssetGUID": "133e6e045f566e44ba09748ed2457a1f",
+          "guidRef": "133e6e045f566e44ba09748ed2457a1f"
         },
-        "name": "SoundModel_PlaceSound2",
+        "name": "SoundModel_PlaceTowerMonkey02",
         "ImplementationType": null
       },
       "waterSound1": null,
@@ -144,7 +229,7 @@
             "$type": "Assets.Scripts.Models.Towers.Projectiles.ProjectileModel, Assembly-CSharp",
             "display": {
               "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-              "GUID": "7e672209db39b9e4db63c13dbe11cad5",
+              "AssetGUID": "7e672209db39b9e4db63c13dbe11cad5",
               "guidRef": "7e672209db39b9e4db63c13dbe11cad5"
             },
             "id": "Projectile",
@@ -208,7 +293,7 @@
                 "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.CreateEffectOnExhaustFractionModel, Assembly-CSharp",
                 "assetId": {
                   "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                  "GUID": null,
+                  "AssetGUID": null,
                   "guidRef": null
                 },
                 "lifespan": -1.0,
@@ -220,7 +305,7 @@
                   "$type": "Assets.Scripts.Models.Effects.EffectModel, Assembly-CSharp",
                   "assetId": {
                     "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                    "GUID": null,
+                    "AssetGUID": null,
                     "guidRef": null
                   },
                   "scale": 1.0,
@@ -243,7 +328,7 @@
                 "$type": "Assets.Scripts.Models.GenericBehaviors.DisplayModel, Assembly-CSharp",
                 "display": {
                   "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                  "GUID": "7e672209db39b9e4db63c13dbe11cad5",
+                  "AssetGUID": "7e672209db39b9e4db63c13dbe11cad5",
                   "guidRef": "7e672209db39b9e4db63c13dbe11cad5"
                 },
                 "layer": 0,
@@ -274,6 +359,7 @@
             "ignoreNonTargetable": false,
             "ignorePierceExhaustion": false,
             "saveId": null,
+            "displayModel": null,
             "CappedPierce": 10.0,
             "name": "ProjectileModel_Projectile",
             "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Projectile, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
@@ -286,14 +372,14 @@
               "$type": "Assets.Scripts.Models.Towers.Weapons.Behaviors.EjectEffectModel, Assembly-CSharp",
               "assetId": {
                 "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                "GUID": null,
+                "AssetGUID": null,
                 "guidRef": null
               },
               "effectModel": {
                 "$type": "Assets.Scripts.Models.Effects.EffectModel, Assembly-CSharp",
                 "assetId": {
                   "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                  "GUID": "1bcf82604d2fadf42b93c765dde244b0",
+                  "AssetGUID": "1bcf82604d2fadf42b93c765dde244b0",
                   "guidRef": "1bcf82604d2fadf42b93c765dde244b0"
                 },
                 "scale": 1.0,
@@ -403,7 +489,7 @@
       "$type": "Assets.Scripts.Models.GenericBehaviors.DisplayModel, Assembly-CSharp",
       "display": {
         "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-        "GUID": "c2ca641e5b2249a47b1e6f7dd53db1db",
+        "AssetGUID": "c2ca641e5b2249a47b1e6f7dd53db1db",
         "guidRef": "c2ca641e5b2249a47b1e6f7dd53db1db"
       },
       "layer": -1,
@@ -423,92 +509,13 @@
       "ImplementationType": "Assets.Scripts.Simulation.Behaviors.DisplayBehavior, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
     }
   ],
-  "footprint": {
-    "$type": "Assets.Scripts.Models.Towers.Behaviors.CircleFootprintModel, Assembly-CSharp",
-    "radius": 6.0,
-    "doesntBlockTowerPlacement": false,
-    "ignoresPlacementCheck": false,
-    "ignoresTowerOverlap": false,
-    "name": "CircleFootprintModel_Circle Footprint",
-    "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.CircleFootprint, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-  },
-  "dontDisplayUpgrades": false,
-  "emoteSpriteSmall": {
-    "$type": "NinjaKiwi.Common.ResourceUtils.SpriteReference, NinjaKiwi.Common",
-    "GUID": null,
-    "guidRef": null
-  },
-  "emoteSpriteLarge": {
-    "$type": "NinjaKiwi.Common.ResourceUtils.SpriteReference, NinjaKiwi.Common",
-    "GUID": null,
-    "guidRef": null
-  },
-  "doesntRotate": false,
-  "upgrades": [],
-  "appliedUpgrades": [],
-  "targetTypes": [
-    {
-      "$type": "Assets.Scripts.Models.Towers.TargetType, Assembly-CSharp",
-      "id": "First",
-      "isActionable": false,
-      "actionOnCreate": false,
-      "intID": 0,
-      "continueToNextPriority": false
-    },
-    {
-      "$type": "Assets.Scripts.Models.Towers.TargetType, Assembly-CSharp",
-      "id": "Last",
-      "isActionable": false,
-      "actionOnCreate": false,
-      "intID": 1,
-      "continueToNextPriority": false
-    },
-    {
-      "$type": "Assets.Scripts.Models.Towers.TargetType, Assembly-CSharp",
-      "id": "Close",
-      "isActionable": false,
-      "actionOnCreate": false,
-      "intID": 2,
-      "continueToNextPriority": false
-    },
-    {
-      "$type": "Assets.Scripts.Models.Towers.TargetType, Assembly-CSharp",
-      "id": "Strong",
-      "isActionable": false,
-      "actionOnCreate": false,
-      "intID": 3,
-      "continueToNextPriority": false
-    }
-  ],
-  "paragonUpgrade": null,
-  "isSubTower": false,
-  "isBakable": true,
-  "powerName": null,
-  "showPowerTowerBuffs": false,
-  "animationSpeed": 1.0,
-  "towerSelectionMenuThemeId": "Default",
-  "secondarySelectionMenu": {
-    "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-    "GUID": null,
-    "guidRef": null
-  },
-  "ignoreCoopAreas": false,
-  "canAlwaysBeSold": false,
-  "blockSelling": false,
-  "isParagon": false,
-  "ignoreMaxSellPercent": false,
-  "isStunned": false,
-  "geraldoItemName": null,
-  "sellbackModifierAdd": 0.0,
-  "skinName": null,
-  "dontAddMutatorsFromParent": false,
-  "displayScale": 1.0,
-  "showBuffs": true,
-  "destroyTowerOnRedistribution": false,
+  "radius": 6.0,
   "isPowerTower": false,
   "isGeraldoItem": false,
   "IsBeastHandlerPet": false,
   "SelectParentOnSelected": false,
+  "DisplayScale": 1.0,
+  "IsSubEntity": false,
   "BeastHandlerLeashMutationId": "BeastHandlerContributionAlchemist",
   "IsBaseTower": false,
   "TargetTypes": [
@@ -546,6 +553,7 @@
     }
   ],
   "IsExclusivelyWaterBased": false,
+  "RadiusSquared": 0.0,
   "name": "TransformedBaseMonkey",
   "ImplementationType": "Assets.Scripts.Simulation.Towers.Tower, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
 }

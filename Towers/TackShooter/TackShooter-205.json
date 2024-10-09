@@ -1,14 +1,6 @@
 {
   "$type": "Assets.Scripts.Models.Towers.TowerModel, Assembly-CSharp",
-  "display": {
-    "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-    "GUID": "31b430825256d3146b420d5ad89e21fc",
-    "guidRef": "31b430825256d3146b420d5ad89e21fc"
-  },
-  "baseId": "TackShooter",
   "cost": 260.0,
-  "radius": 6.0,
-  "radiusSquared": 36.0,
   "range": 30.0,
   "ignoreBlockers": false,
   "isGlobalRange": false,
@@ -21,17 +13,22 @@
   "towerSet": 1,
   "icon": {
     "$type": "NinjaKiwi.Common.ResourceUtils.SpriteReference, NinjaKiwi.Common",
-    "GUID": "2afffe199cfadd24aae1d8c51e8970e6",
+    "AssetGUID": "2afffe199cfadd24aae1d8c51e8970e6",
     "guidRef": "2afffe199cfadd24aae1d8c51e8970e6"
+  },
+  "icon3D": {
+    "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
+    "AssetGUID": null,
+    "guidRef": null
   },
   "portrait": {
     "$type": "NinjaKiwi.Common.ResourceUtils.SpriteReference, NinjaKiwi.Common",
-    "GUID": "081e201114ea69945b89e809bdd49527",
+    "AssetGUID": "081e201114ea69945b89e809bdd49527",
     "guidRef": "081e201114ea69945b89e809bdd49527"
   },
   "instaIcon": {
     "$type": "NinjaKiwi.Common.ResourceUtils.SpriteReference, NinjaKiwi.Common",
-    "GUID": "6aae0907490be436aab368f33778c2e0",
+    "AssetGUID": "6aae0907490be436aab368f33778c2e0",
     "guidRef": "6aae0907490be436aab368f33778c2e0"
   },
   "areaTypes": [
@@ -89,6 +86,78 @@
     }
   ],
   "ignoreTowerForSelection": false,
+  "footprint": {
+    "$type": "Assets.Scripts.Models.Towers.Behaviors.CircleFootprintModel, Assembly-CSharp",
+    "radius": 6.0,
+    "doesntBlockTowerPlacement": false,
+    "ignoresPlacementCheck": false,
+    "ignoresTowerOverlap": false,
+    "name": "CircleFootprintModel_Circle Footprint",
+    "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.CircleFootprint, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+  },
+  "dontDisplayUpgrades": false,
+  "emoteSpriteSmall": {
+    "$type": "NinjaKiwi.Common.ResourceUtils.SpriteReference, NinjaKiwi.Common",
+    "AssetGUID": null,
+    "guidRef": null
+  },
+  "emoteSpriteLarge": {
+    "$type": "NinjaKiwi.Common.ResourceUtils.SpriteReference, NinjaKiwi.Common",
+    "AssetGUID": null,
+    "guidRef": null
+  },
+  "doesntRotate": false,
+  "upgrades": [],
+  "appliedUpgrades": [
+    "Faster Shooting",
+    "Even Faster Shooting",
+    "More Tacks",
+    "Even More Tacks",
+    "Tack Sprayer",
+    "Overdrive",
+    "The Tack Zone"
+  ],
+  "targetTypes": [
+    {
+      "$type": "Assets.Scripts.Models.Towers.TargetType, Assembly-CSharp",
+      "id": "Close",
+      "isActionable": false,
+      "actionOnCreate": false,
+      "intID": 2,
+      "continueToNextPriority": false
+    }
+  ],
+  "paragonUpgrade": null,
+  "isSubTower": false,
+  "isBakable": true,
+  "powerName": null,
+  "showPowerTowerBuffs": false,
+  "animationSpeed": 1.0,
+  "towerSelectionMenuThemeId": "Default",
+  "secondarySelectionMenu": {
+    "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
+    "AssetGUID": null,
+    "guidRef": null
+  },
+  "ignoreCoopAreas": false,
+  "canAlwaysBeSold": false,
+  "blockSelling": false,
+  "isParagon": false,
+  "ignoreMaxSellPercent": false,
+  "isStunned": false,
+  "geraldoItemName": null,
+  "sellbackModifierAdd": 0.0,
+  "skinName": null,
+  "dontAddMutatorsFromParent": false,
+  "showBuffs": true,
+  "destroyTowerOnRedistribution": false,
+  "displayScale": 1.0,
+  "baseId": "TackShooter",
+  "display": {
+    "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
+    "AssetGUID": "31b430825256d3146b420d5ad89e21fc",
+    "guidRef": "31b430825256d3146b420d5ad89e21fc"
+  },
   "behaviors": [
     {
       "$type": "Assets.Scripts.Models.Towers.Behaviors.CreateEffectOnPlaceModel, Assembly-CSharp",
@@ -96,7 +165,7 @@
         "$type": "Assets.Scripts.Models.Effects.EffectModel, Assembly-CSharp",
         "assetId": {
           "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-          "GUID": "d2bcad0f16bb76e408a107e13b2c0da3",
+          "AssetGUID": "d2bcad0f16bb76e408a107e13b2c0da3",
           "guidRef": "d2bcad0f16bb76e408a107e13b2c0da3"
         },
         "scale": 1.0,
@@ -119,91 +188,91 @@
       "sound": {
         "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
         "assetId": {
-          "$type": "NinjaKiwi.Common.ResourceUtils.AudioSourceReference, NinjaKiwi.Common",
-          "GUID": "23a777b9950195f4f8f4bf745ef84031",
-          "guidRef": "23a777b9950195f4f8f4bf745ef84031"
+          "$type": "NinjaKiwi.Common.ResourceUtils.AudioClipReference, NinjaKiwi.Common",
+          "AssetGUID": "f91dc7ea1b37815459e81e99254863ab",
+          "guidRef": "f91dc7ea1b37815459e81e99254863ab"
         },
-        "name": "SoundModel_UpgradeSound",
+        "name": "SoundModel_TowerUpgrade",
         "ImplementationType": null
       },
       "sound1": {
         "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
         "assetId": {
-          "$type": "NinjaKiwi.Common.ResourceUtils.AudioSourceReference, NinjaKiwi.Common",
-          "GUID": "23a777b9950195f4f8f4bf745ef84031",
-          "guidRef": "23a777b9950195f4f8f4bf745ef84031"
+          "$type": "NinjaKiwi.Common.ResourceUtils.AudioClipReference, NinjaKiwi.Common",
+          "AssetGUID": "f91dc7ea1b37815459e81e99254863ab",
+          "guidRef": "f91dc7ea1b37815459e81e99254863ab"
         },
-        "name": "SoundModel_UpgradeSound",
+        "name": "SoundModel_TowerUpgrade",
         "ImplementationType": null
       },
       "sound2": {
         "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
         "assetId": {
-          "$type": "NinjaKiwi.Common.ResourceUtils.AudioSourceReference, NinjaKiwi.Common",
-          "GUID": "23a777b9950195f4f8f4bf745ef84031",
-          "guidRef": "23a777b9950195f4f8f4bf745ef84031"
+          "$type": "NinjaKiwi.Common.ResourceUtils.AudioClipReference, NinjaKiwi.Common",
+          "AssetGUID": "f91dc7ea1b37815459e81e99254863ab",
+          "guidRef": "f91dc7ea1b37815459e81e99254863ab"
         },
-        "name": "SoundModel_UpgradeSound",
+        "name": "SoundModel_TowerUpgrade",
         "ImplementationType": null
       },
       "sound3": {
         "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
         "assetId": {
-          "$type": "NinjaKiwi.Common.ResourceUtils.AudioSourceReference, NinjaKiwi.Common",
-          "GUID": "23a777b9950195f4f8f4bf745ef84031",
-          "guidRef": "23a777b9950195f4f8f4bf745ef84031"
+          "$type": "NinjaKiwi.Common.ResourceUtils.AudioClipReference, NinjaKiwi.Common",
+          "AssetGUID": "f91dc7ea1b37815459e81e99254863ab",
+          "guidRef": "f91dc7ea1b37815459e81e99254863ab"
         },
-        "name": "SoundModel_UpgradeSound",
+        "name": "SoundModel_TowerUpgrade",
         "ImplementationType": null
       },
       "sound4": {
         "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
         "assetId": {
-          "$type": "NinjaKiwi.Common.ResourceUtils.AudioSourceReference, NinjaKiwi.Common",
-          "GUID": "23a777b9950195f4f8f4bf745ef84031",
-          "guidRef": "23a777b9950195f4f8f4bf745ef84031"
+          "$type": "NinjaKiwi.Common.ResourceUtils.AudioClipReference, NinjaKiwi.Common",
+          "AssetGUID": "f91dc7ea1b37815459e81e99254863ab",
+          "guidRef": "f91dc7ea1b37815459e81e99254863ab"
         },
-        "name": "SoundModel_UpgradeSound",
+        "name": "SoundModel_TowerUpgrade",
         "ImplementationType": null
       },
       "sound5": {
         "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
         "assetId": {
-          "$type": "NinjaKiwi.Common.ResourceUtils.AudioSourceReference, NinjaKiwi.Common",
-          "GUID": "23a777b9950195f4f8f4bf745ef84031",
-          "guidRef": "23a777b9950195f4f8f4bf745ef84031"
+          "$type": "NinjaKiwi.Common.ResourceUtils.AudioClipReference, NinjaKiwi.Common",
+          "AssetGUID": "f91dc7ea1b37815459e81e99254863ab",
+          "guidRef": "f91dc7ea1b37815459e81e99254863ab"
         },
-        "name": "SoundModel_UpgradeSound",
+        "name": "SoundModel_TowerUpgrade",
         "ImplementationType": null
       },
       "sound6": {
         "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
         "assetId": {
-          "$type": "NinjaKiwi.Common.ResourceUtils.AudioSourceReference, NinjaKiwi.Common",
-          "GUID": "23a777b9950195f4f8f4bf745ef84031",
-          "guidRef": "23a777b9950195f4f8f4bf745ef84031"
+          "$type": "NinjaKiwi.Common.ResourceUtils.AudioClipReference, NinjaKiwi.Common",
+          "AssetGUID": "f91dc7ea1b37815459e81e99254863ab",
+          "guidRef": "f91dc7ea1b37815459e81e99254863ab"
         },
-        "name": "SoundModel_UpgradeSound",
+        "name": "SoundModel_TowerUpgrade",
         "ImplementationType": null
       },
       "sound7": {
         "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
         "assetId": {
-          "$type": "NinjaKiwi.Common.ResourceUtils.AudioSourceReference, NinjaKiwi.Common",
-          "GUID": "23a777b9950195f4f8f4bf745ef84031",
-          "guidRef": "23a777b9950195f4f8f4bf745ef84031"
+          "$type": "NinjaKiwi.Common.ResourceUtils.AudioClipReference, NinjaKiwi.Common",
+          "AssetGUID": "f91dc7ea1b37815459e81e99254863ab",
+          "guidRef": "f91dc7ea1b37815459e81e99254863ab"
         },
-        "name": "SoundModel_UpgradeSound",
+        "name": "SoundModel_TowerUpgrade",
         "ImplementationType": null
       },
       "sound8": {
         "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
         "assetId": {
-          "$type": "NinjaKiwi.Common.ResourceUtils.AudioSourceReference, NinjaKiwi.Common",
-          "GUID": "23a777b9950195f4f8f4bf745ef84031",
-          "guidRef": "23a777b9950195f4f8f4bf745ef84031"
+          "$type": "NinjaKiwi.Common.ResourceUtils.AudioClipReference, NinjaKiwi.Common",
+          "AssetGUID": "f91dc7ea1b37815459e81e99254863ab",
+          "guidRef": "f91dc7ea1b37815459e81e99254863ab"
         },
-        "name": "SoundModel_UpgradeSound",
+        "name": "SoundModel_TowerUpgrade",
         "ImplementationType": null
       },
       "name": "CreateSoundOnUpgradeModel_TackShooter-205",
@@ -214,11 +283,11 @@
       "sound": {
         "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
         "assetId": {
-          "$type": "NinjaKiwi.Common.ResourceUtils.AudioSourceReference, NinjaKiwi.Common",
-          "GUID": "df4c691ccf8a3c7408ed6f156740c8b7",
-          "guidRef": "df4c691ccf8a3c7408ed6f156740c8b7"
+          "$type": "NinjaKiwi.Common.ResourceUtils.AudioClipReference, NinjaKiwi.Common",
+          "AssetGUID": "a8c789893d4275749af12c1efda9dd3e",
+          "guidRef": "a8c789893d4275749af12c1efda9dd3e"
         },
-        "name": "SoundModel_SellSound",
+        "name": "SoundModel_UISell",
         "ImplementationType": null
       },
       "name": "CreateSoundOnSellModel_TackShooter-205",
@@ -230,7 +299,7 @@
         "$type": "Assets.Scripts.Models.Effects.EffectModel, Assembly-CSharp",
         "assetId": {
           "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-          "GUID": "b1dec8a8d79593843bc2e2410eae944e",
+          "AssetGUID": "b1dec8a8d79593843bc2e2410eae944e",
           "guidRef": "b1dec8a8d79593843bc2e2410eae944e"
         },
         "scale": 1.0,
@@ -253,21 +322,21 @@
       "sound1": {
         "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
         "assetId": {
-          "$type": "NinjaKiwi.Common.ResourceUtils.AudioSourceReference, NinjaKiwi.Common",
-          "GUID": "432da2691e8684d4890db8228c70f225",
-          "guidRef": "432da2691e8684d4890db8228c70f225"
+          "$type": "NinjaKiwi.Common.ResourceUtils.AudioClipReference, NinjaKiwi.Common",
+          "AssetGUID": "d45ab9a635be95440b881d55c0092036",
+          "guidRef": "d45ab9a635be95440b881d55c0092036"
         },
-        "name": "SoundModel_PlaceStructureSound1",
+        "name": "SoundModel_PlaceTowerStructure01",
         "ImplementationType": null
       },
       "sound2": {
         "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
         "assetId": {
-          "$type": "NinjaKiwi.Common.ResourceUtils.AudioSourceReference, NinjaKiwi.Common",
-          "GUID": "f6963c719015dd040a4cdd3c1aab644e",
-          "guidRef": "f6963c719015dd040a4cdd3c1aab644e"
+          "$type": "NinjaKiwi.Common.ResourceUtils.AudioClipReference, NinjaKiwi.Common",
+          "AssetGUID": "19f1268664ef35b4ba50c8daecfd7f43",
+          "guidRef": "19f1268664ef35b4ba50c8daecfd7f43"
         },
-        "name": "SoundModel_PlaceStructureSound2",
+        "name": "SoundModel_PlaceTowerStructure02",
         "ImplementationType": null
       },
       "waterSound1": null,
@@ -283,7 +352,7 @@
         "$type": "Assets.Scripts.Models.Effects.EffectModel, Assembly-CSharp",
         "assetId": {
           "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-          "GUID": "823809b31a6cbab4cab5efc530f919f7",
+          "AssetGUID": "823809b31a6cbab4cab5efc530f919f7",
           "guidRef": "823809b31a6cbab4cab5efc530f919f7"
         },
         "scale": 1.0,
@@ -327,7 +396,7 @@
             "$type": "Assets.Scripts.Models.Towers.Projectiles.ProjectileModel, Assembly-CSharp",
             "display": {
               "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-              "GUID": "26e9c99e89180fd468cb47d76c7536b6",
+              "AssetGUID": "26e9c99e89180fd468cb47d76c7536b6",
               "guidRef": "26e9c99e89180fd468cb47d76c7536b6"
             },
             "id": "Projectile",
@@ -405,7 +474,7 @@
                 "$type": "Assets.Scripts.Models.GenericBehaviors.DisplayModel, Assembly-CSharp",
                 "display": {
                   "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                  "GUID": "26e9c99e89180fd468cb47d76c7536b6",
+                  "AssetGUID": "26e9c99e89180fd468cb47d76c7536b6",
                   "guidRef": "26e9c99e89180fd468cb47d76c7536b6"
                 },
                 "layer": 0,
@@ -436,6 +505,7 @@
             "ignoreNonTargetable": false,
             "ignorePierceExhaustion": false,
             "saveId": null,
+            "displayModel": null,
             "CappedPierce": 2.0,
             "name": "ProjectileModel_Projectile",
             "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Projectile, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
@@ -497,7 +567,7 @@
       "$type": "Assets.Scripts.Models.GenericBehaviors.DisplayModel, Assembly-CSharp",
       "display": {
         "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-        "GUID": "31b430825256d3146b420d5ad89e21fc",
+        "AssetGUID": "31b430825256d3146b420d5ad89e21fc",
         "guidRef": "31b430825256d3146b420d5ad89e21fc"
       },
       "layer": -1,
@@ -517,76 +587,13 @@
       "ImplementationType": "Assets.Scripts.Simulation.Behaviors.DisplayBehavior, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
     }
   ],
-  "footprint": {
-    "$type": "Assets.Scripts.Models.Towers.Behaviors.CircleFootprintModel, Assembly-CSharp",
-    "radius": 6.0,
-    "doesntBlockTowerPlacement": false,
-    "ignoresPlacementCheck": false,
-    "ignoresTowerOverlap": false,
-    "name": "CircleFootprintModel_Circle Footprint",
-    "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.CircleFootprint, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-  },
-  "dontDisplayUpgrades": false,
-  "emoteSpriteSmall": {
-    "$type": "NinjaKiwi.Common.ResourceUtils.SpriteReference, NinjaKiwi.Common",
-    "GUID": null,
-    "guidRef": null
-  },
-  "emoteSpriteLarge": {
-    "$type": "NinjaKiwi.Common.ResourceUtils.SpriteReference, NinjaKiwi.Common",
-    "GUID": null,
-    "guidRef": null
-  },
-  "doesntRotate": false,
-  "upgrades": [],
-  "appliedUpgrades": [
-    "Faster Shooting",
-    "Even Faster Shooting",
-    "More Tacks",
-    "Even More Tacks",
-    "Tack Sprayer",
-    "Overdrive",
-    "The Tack Zone"
-  ],
-  "targetTypes": [
-    {
-      "$type": "Assets.Scripts.Models.Towers.TargetType, Assembly-CSharp",
-      "id": "Close",
-      "isActionable": false,
-      "actionOnCreate": false,
-      "intID": 2,
-      "continueToNextPriority": false
-    }
-  ],
-  "paragonUpgrade": null,
-  "isSubTower": false,
-  "isBakable": true,
-  "powerName": null,
-  "showPowerTowerBuffs": false,
-  "animationSpeed": 1.0,
-  "towerSelectionMenuThemeId": "Default",
-  "secondarySelectionMenu": {
-    "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-    "GUID": null,
-    "guidRef": null
-  },
-  "ignoreCoopAreas": false,
-  "canAlwaysBeSold": false,
-  "blockSelling": false,
-  "isParagon": false,
-  "ignoreMaxSellPercent": false,
-  "isStunned": false,
-  "geraldoItemName": null,
-  "sellbackModifierAdd": 0.0,
-  "skinName": null,
-  "dontAddMutatorsFromParent": false,
-  "displayScale": 1.0,
-  "showBuffs": true,
-  "destroyTowerOnRedistribution": false,
+  "radius": 6.0,
   "isPowerTower": false,
   "isGeraldoItem": false,
   "IsBeastHandlerPet": false,
   "SelectParentOnSelected": false,
+  "DisplayScale": 1.0,
+  "IsSubEntity": false,
   "BeastHandlerLeashMutationId": "BeastHandlerContributionTackShooter",
   "IsBaseTower": false,
   "TargetTypes": [
@@ -600,6 +607,7 @@
     }
   ],
   "IsExclusivelyWaterBased": false,
+  "RadiusSquared": 0.0,
   "name": "TackShooter-205",
   "ImplementationType": "Assets.Scripts.Simulation.Towers.Tower, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
 }

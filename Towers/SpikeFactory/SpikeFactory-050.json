@@ -1,14 +1,6 @@
 {
   "$type": "Assets.Scripts.Models.Towers.TowerModel, Assembly-CSharp",
-  "display": {
-    "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-    "GUID": "f29c3becdd07c854c96af4eb5735d7b3",
-    "guidRef": "f29c3becdd07c854c96af4eb5735d7b3"
-  },
-  "baseId": "SpikeFactory",
   "cost": 1000.0,
-  "radius": 8.0,
-  "radiusSquared": 64.0,
   "range": 50.0,
   "ignoreBlockers": true,
   "isGlobalRange": false,
@@ -21,17 +13,22 @@
   "towerSet": 8,
   "icon": {
     "$type": "NinjaKiwi.Common.ResourceUtils.SpriteReference, NinjaKiwi.Common",
-    "GUID": "MonkeyIcons[SpikeFactoryIcon]",
+    "AssetGUID": "MonkeyIcons[SpikeFactoryIcon]",
     "guidRef": "MonkeyIcons[SpikeFactoryIcon]"
+  },
+  "icon3D": {
+    "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
+    "AssetGUID": "22302b6c930fb464b8b19a4af1ef8145",
+    "guidRef": "22302b6c930fb464b8b19a4af1ef8145"
   },
   "portrait": {
     "$type": "NinjaKiwi.Common.ResourceUtils.SpriteReference, NinjaKiwi.Common",
-    "GUID": "162105a141d511e469a8ef130bf26d66",
+    "AssetGUID": "162105a141d511e469a8ef130bf26d66",
     "guidRef": "162105a141d511e469a8ef130bf26d66"
   },
   "instaIcon": {
     "$type": "NinjaKiwi.Common.ResourceUtils.SpriteReference, NinjaKiwi.Common",
-    "GUID": "57112484a36644ba19722350745ff46e",
+    "AssetGUID": "57112484a36644ba19722350745ff46e",
     "guidRef": "57112484a36644ba19722350745ff46e"
   },
   "areaTypes": [
@@ -82,6 +79,91 @@
     }
   ],
   "ignoreTowerForSelection": false,
+  "footprint": {
+    "$type": "Assets.Scripts.Models.Towers.Behaviors.CircleFootprintModel, Assembly-CSharp",
+    "radius": 8.0,
+    "doesntBlockTowerPlacement": false,
+    "ignoresPlacementCheck": false,
+    "ignoresTowerOverlap": false,
+    "name": "CircleFootprintModel_Circle Footprint",
+    "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.CircleFootprint, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+  },
+  "dontDisplayUpgrades": false,
+  "emoteSpriteSmall": {
+    "$type": "NinjaKiwi.Common.ResourceUtils.SpriteReference, NinjaKiwi.Common",
+    "AssetGUID": null,
+    "guidRef": null
+  },
+  "emoteSpriteLarge": {
+    "$type": "NinjaKiwi.Common.ResourceUtils.SpriteReference, NinjaKiwi.Common",
+    "AssetGUID": null,
+    "guidRef": null
+  },
+  "doesntRotate": true,
+  "upgrades": [
+    {
+      "$type": "Assets.Scripts.Models.Towers.Upgrades.UpgradePathModel, Assembly-CSharp",
+      "tower": "SpikeFactory-150",
+      "upgrade": "Bigger Stacks",
+      "name": "UpgradePathModel_UpgradePathModel",
+      "ImplementationType": null
+    },
+    {
+      "$type": "Assets.Scripts.Models.Towers.Upgrades.UpgradePathModel, Assembly-CSharp",
+      "tower": "SpikeFactory-051",
+      "upgrade": "Long Reach",
+      "name": "UpgradePathModel_UpgradePathModel",
+      "ImplementationType": null
+    }
+  ],
+  "appliedUpgrades": [
+    "Faster Production",
+    "Even Faster Production",
+    "MOAB SHREDR",
+    "Spike Storm",
+    "Carpet of Spikes"
+  ],
+  "targetTypes": [
+    {
+      "$type": "Assets.Scripts.Models.Towers.TargetType, Assembly-CSharp",
+      "id": "Track",
+      "isActionable": false,
+      "actionOnCreate": false,
+      "intID": -1,
+      "continueToNextPriority": false
+    }
+  ],
+  "paragonUpgrade": null,
+  "isSubTower": false,
+  "isBakable": true,
+  "powerName": null,
+  "showPowerTowerBuffs": false,
+  "animationSpeed": 1.0,
+  "towerSelectionMenuThemeId": "Default",
+  "secondarySelectionMenu": {
+    "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
+    "AssetGUID": null,
+    "guidRef": null
+  },
+  "ignoreCoopAreas": false,
+  "canAlwaysBeSold": false,
+  "blockSelling": false,
+  "isParagon": false,
+  "ignoreMaxSellPercent": false,
+  "isStunned": false,
+  "geraldoItemName": null,
+  "sellbackModifierAdd": 0.0,
+  "skinName": null,
+  "dontAddMutatorsFromParent": false,
+  "showBuffs": true,
+  "destroyTowerOnRedistribution": false,
+  "displayScale": 1.0,
+  "baseId": "SpikeFactory",
+  "display": {
+    "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
+    "AssetGUID": "f29c3becdd07c854c96af4eb5735d7b3",
+    "guidRef": "f29c3becdd07c854c96af4eb5735d7b3"
+  },
   "behaviors": [
     {
       "$type": "Assets.Scripts.Models.Towers.Behaviors.CreateEffectOnPlaceModel, Assembly-CSharp",
@@ -89,7 +171,7 @@
         "$type": "Assets.Scripts.Models.Effects.EffectModel, Assembly-CSharp",
         "assetId": {
           "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-          "GUID": "d2bcad0f16bb76e408a107e13b2c0da3",
+          "AssetGUID": "d2bcad0f16bb76e408a107e13b2c0da3",
           "guidRef": "d2bcad0f16bb76e408a107e13b2c0da3"
         },
         "scale": 1.0,
@@ -115,7 +197,7 @@
         "description": "Shoots out a thick layer of spikes over the entire track.",
         "icon": {
           "$type": "NinjaKiwi.Common.ResourceUtils.SpriteReference, NinjaKiwi.Common",
-          "GUID": "4f77b816539d5445a853457ec1b9a70c",
+          "AssetGUID": "4f77b816539d5445a853457ec1b9a70c",
           "guidRef": "4f77b816539d5445a853457ec1b9a70c"
         },
         "behaviors": [
@@ -142,7 +224,7 @@
                       "$type": "Assets.Scripts.Models.Towers.Projectiles.ProjectileModel, Assembly-CSharp",
                       "display": {
                         "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                        "GUID": null,
+                        "AssetGUID": null,
                         "guidRef": null
                       },
                       "id": "Projectile",
@@ -268,102 +350,102 @@
                           "sprites": [
                             {
                               "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                              "GUID": "ff7ada25698ff484f87767a8c4b01865",
+                              "AssetGUID": "ff7ada25698ff484f87767a8c4b01865",
                               "guidRef": "ff7ada25698ff484f87767a8c4b01865"
                             },
                             {
                               "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                              "GUID": "44f458dc60fb8834eaf6677455998e6f",
+                              "AssetGUID": "44f458dc60fb8834eaf6677455998e6f",
                               "guidRef": "44f458dc60fb8834eaf6677455998e6f"
                             },
                             {
                               "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                              "GUID": "85f9b4d05a53e644ca31e7ed6de494f6",
+                              "AssetGUID": "85f9b4d05a53e644ca31e7ed6de494f6",
                               "guidRef": "85f9b4d05a53e644ca31e7ed6de494f6"
                             },
                             {
                               "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                              "GUID": "ac2e0f6dd632c9049b2ddcfed21454c8",
+                              "AssetGUID": "ac2e0f6dd632c9049b2ddcfed21454c8",
                               "guidRef": "ac2e0f6dd632c9049b2ddcfed21454c8"
                             },
                             {
                               "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                              "GUID": "2d9755bf10a45cb4d8dcb1ea56ac829a",
+                              "AssetGUID": "2d9755bf10a45cb4d8dcb1ea56ac829a",
                               "guidRef": "2d9755bf10a45cb4d8dcb1ea56ac829a"
                             },
                             {
                               "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                              "GUID": "b3049788c3b19724fa85a5ca2e34dff3",
+                              "AssetGUID": "b3049788c3b19724fa85a5ca2e34dff3",
                               "guidRef": "b3049788c3b19724fa85a5ca2e34dff3"
                             },
                             {
                               "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                              "GUID": "f450fd35ab8825b48b4a9457bf771f9a",
+                              "AssetGUID": "f450fd35ab8825b48b4a9457bf771f9a",
                               "guidRef": "f450fd35ab8825b48b4a9457bf771f9a"
                             },
                             {
                               "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                              "GUID": "d07b55cb3f1b96a439a796af3f38f44c",
+                              "AssetGUID": "d07b55cb3f1b96a439a796af3f38f44c",
                               "guidRef": "d07b55cb3f1b96a439a796af3f38f44c"
                             },
                             {
                               "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                              "GUID": "06efb9f746a60574a8060cedc72c2998",
+                              "AssetGUID": "06efb9f746a60574a8060cedc72c2998",
                               "guidRef": "06efb9f746a60574a8060cedc72c2998"
                             },
                             {
                               "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                              "GUID": "b399227a1df969f42810d4c132382795",
+                              "AssetGUID": "b399227a1df969f42810d4c132382795",
                               "guidRef": "b399227a1df969f42810d4c132382795"
                             },
                             {
                               "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                              "GUID": "86f8f1775a83a684dab5562a4f2fa1cf",
+                              "AssetGUID": "86f8f1775a83a684dab5562a4f2fa1cf",
                               "guidRef": "86f8f1775a83a684dab5562a4f2fa1cf"
                             },
                             {
                               "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                              "GUID": "67871f62bb9f70a4b8bc1d87f58f57ba",
+                              "AssetGUID": "67871f62bb9f70a4b8bc1d87f58f57ba",
                               "guidRef": "67871f62bb9f70a4b8bc1d87f58f57ba"
                             },
                             {
                               "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                              "GUID": "909d3637af681e248a5ec65ff414c13f",
+                              "AssetGUID": "909d3637af681e248a5ec65ff414c13f",
                               "guidRef": "909d3637af681e248a5ec65ff414c13f"
                             },
                             {
                               "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                              "GUID": "f7af270b4bf613d4b93cab43442fc4ef",
+                              "AssetGUID": "f7af270b4bf613d4b93cab43442fc4ef",
                               "guidRef": "f7af270b4bf613d4b93cab43442fc4ef"
                             },
                             {
                               "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                              "GUID": "10da519ce46d9054eb3624a041b9fcb0",
+                              "AssetGUID": "10da519ce46d9054eb3624a041b9fcb0",
                               "guidRef": "10da519ce46d9054eb3624a041b9fcb0"
                             },
                             {
                               "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                              "GUID": "f7215612ecce85d4eb6fc54e1ba43492",
+                              "AssetGUID": "f7215612ecce85d4eb6fc54e1ba43492",
                               "guidRef": "f7215612ecce85d4eb6fc54e1ba43492"
                             },
                             {
                               "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                              "GUID": "57b53f7bdfaa86d499745d6f4998ee61",
+                              "AssetGUID": "57b53f7bdfaa86d499745d6f4998ee61",
                               "guidRef": "57b53f7bdfaa86d499745d6f4998ee61"
                             },
                             {
                               "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                              "GUID": "04798a9599f1fdf4b83c91aca80240e7",
+                              "AssetGUID": "04798a9599f1fdf4b83c91aca80240e7",
                               "guidRef": "04798a9599f1fdf4b83c91aca80240e7"
                             },
                             {
                               "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                              "GUID": "a45b9d1f1df836c4da410ff21f8bc1f9",
+                              "AssetGUID": "a45b9d1f1df836c4da410ff21f8bc1f9",
                               "guidRef": "a45b9d1f1df836c4da410ff21f8bc1f9"
                             },
                             {
                               "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                              "GUID": "8e2802d4bd3d42e4cb192c6bbcef0173",
+                              "AssetGUID": "8e2802d4bd3d42e4cb192c6bbcef0173",
                               "guidRef": "8e2802d4bd3d42e4cb192c6bbcef0173"
                             }
                           ],
@@ -575,7 +657,7 @@
                           "$type": "Assets.Scripts.Models.GenericBehaviors.DisplayModel, Assembly-CSharp",
                           "display": {
                             "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                            "GUID": null,
+                            "AssetGUID": null,
                             "guidRef": null
                           },
                           "layer": 0,
@@ -606,6 +688,7 @@
                       "ignoreNonTargetable": false,
                       "ignorePierceExhaustion": false,
                       "saveId": null,
+                      "displayModel": null,
                       "CappedPierce": 10.0,
                       "name": "ProjectileModel_Projectile",
                       "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Projectile, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
@@ -691,7 +774,7 @@
                       "$type": "Assets.Scripts.Models.Towers.Projectiles.ProjectileModel, Assembly-CSharp",
                       "display": {
                         "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                        "GUID": null,
+                        "AssetGUID": null,
                         "guidRef": null
                       },
                       "id": "Projectile",
@@ -817,102 +900,102 @@
                           "sprites": [
                             {
                               "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                              "GUID": "ff7ada25698ff484f87767a8c4b01865",
+                              "AssetGUID": "ff7ada25698ff484f87767a8c4b01865",
                               "guidRef": "ff7ada25698ff484f87767a8c4b01865"
                             },
                             {
                               "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                              "GUID": "44f458dc60fb8834eaf6677455998e6f",
+                              "AssetGUID": "44f458dc60fb8834eaf6677455998e6f",
                               "guidRef": "44f458dc60fb8834eaf6677455998e6f"
                             },
                             {
                               "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                              "GUID": "85f9b4d05a53e644ca31e7ed6de494f6",
+                              "AssetGUID": "85f9b4d05a53e644ca31e7ed6de494f6",
                               "guidRef": "85f9b4d05a53e644ca31e7ed6de494f6"
                             },
                             {
                               "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                              "GUID": "ac2e0f6dd632c9049b2ddcfed21454c8",
+                              "AssetGUID": "ac2e0f6dd632c9049b2ddcfed21454c8",
                               "guidRef": "ac2e0f6dd632c9049b2ddcfed21454c8"
                             },
                             {
                               "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                              "GUID": "2d9755bf10a45cb4d8dcb1ea56ac829a",
+                              "AssetGUID": "2d9755bf10a45cb4d8dcb1ea56ac829a",
                               "guidRef": "2d9755bf10a45cb4d8dcb1ea56ac829a"
                             },
                             {
                               "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                              "GUID": "b3049788c3b19724fa85a5ca2e34dff3",
+                              "AssetGUID": "b3049788c3b19724fa85a5ca2e34dff3",
                               "guidRef": "b3049788c3b19724fa85a5ca2e34dff3"
                             },
                             {
                               "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                              "GUID": "f450fd35ab8825b48b4a9457bf771f9a",
+                              "AssetGUID": "f450fd35ab8825b48b4a9457bf771f9a",
                               "guidRef": "f450fd35ab8825b48b4a9457bf771f9a"
                             },
                             {
                               "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                              "GUID": "d07b55cb3f1b96a439a796af3f38f44c",
+                              "AssetGUID": "d07b55cb3f1b96a439a796af3f38f44c",
                               "guidRef": "d07b55cb3f1b96a439a796af3f38f44c"
                             },
                             {
                               "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                              "GUID": "06efb9f746a60574a8060cedc72c2998",
+                              "AssetGUID": "06efb9f746a60574a8060cedc72c2998",
                               "guidRef": "06efb9f746a60574a8060cedc72c2998"
                             },
                             {
                               "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                              "GUID": "b399227a1df969f42810d4c132382795",
+                              "AssetGUID": "b399227a1df969f42810d4c132382795",
                               "guidRef": "b399227a1df969f42810d4c132382795"
                             },
                             {
                               "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                              "GUID": "86f8f1775a83a684dab5562a4f2fa1cf",
+                              "AssetGUID": "86f8f1775a83a684dab5562a4f2fa1cf",
                               "guidRef": "86f8f1775a83a684dab5562a4f2fa1cf"
                             },
                             {
                               "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                              "GUID": "67871f62bb9f70a4b8bc1d87f58f57ba",
+                              "AssetGUID": "67871f62bb9f70a4b8bc1d87f58f57ba",
                               "guidRef": "67871f62bb9f70a4b8bc1d87f58f57ba"
                             },
                             {
                               "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                              "GUID": "909d3637af681e248a5ec65ff414c13f",
+                              "AssetGUID": "909d3637af681e248a5ec65ff414c13f",
                               "guidRef": "909d3637af681e248a5ec65ff414c13f"
                             },
                             {
                               "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                              "GUID": "f7af270b4bf613d4b93cab43442fc4ef",
+                              "AssetGUID": "f7af270b4bf613d4b93cab43442fc4ef",
                               "guidRef": "f7af270b4bf613d4b93cab43442fc4ef"
                             },
                             {
                               "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                              "GUID": "10da519ce46d9054eb3624a041b9fcb0",
+                              "AssetGUID": "10da519ce46d9054eb3624a041b9fcb0",
                               "guidRef": "10da519ce46d9054eb3624a041b9fcb0"
                             },
                             {
                               "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                              "GUID": "f7215612ecce85d4eb6fc54e1ba43492",
+                              "AssetGUID": "f7215612ecce85d4eb6fc54e1ba43492",
                               "guidRef": "f7215612ecce85d4eb6fc54e1ba43492"
                             },
                             {
                               "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                              "GUID": "57b53f7bdfaa86d499745d6f4998ee61",
+                              "AssetGUID": "57b53f7bdfaa86d499745d6f4998ee61",
                               "guidRef": "57b53f7bdfaa86d499745d6f4998ee61"
                             },
                             {
                               "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                              "GUID": "04798a9599f1fdf4b83c91aca80240e7",
+                              "AssetGUID": "04798a9599f1fdf4b83c91aca80240e7",
                               "guidRef": "04798a9599f1fdf4b83c91aca80240e7"
                             },
                             {
                               "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                              "GUID": "a45b9d1f1df836c4da410ff21f8bc1f9",
+                              "AssetGUID": "a45b9d1f1df836c4da410ff21f8bc1f9",
                               "guidRef": "a45b9d1f1df836c4da410ff21f8bc1f9"
                             },
                             {
                               "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                              "GUID": "8e2802d4bd3d42e4cb192c6bbcef0173",
+                              "AssetGUID": "8e2802d4bd3d42e4cb192c6bbcef0173",
                               "guidRef": "8e2802d4bd3d42e4cb192c6bbcef0173"
                             }
                           ],
@@ -1124,7 +1207,7 @@
                           "$type": "Assets.Scripts.Models.GenericBehaviors.DisplayModel, Assembly-CSharp",
                           "display": {
                             "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                            "GUID": null,
+                            "AssetGUID": null,
                             "guidRef": null
                           },
                           "layer": 0,
@@ -1155,6 +1238,7 @@
                       "ignoreNonTargetable": false,
                       "ignorePierceExhaustion": false,
                       "saveId": null,
+                      "displayModel": null,
                       "CappedPierce": 10.0,
                       "name": "ProjectileModel_Projectile",
                       "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Projectile, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
@@ -1240,7 +1324,7 @@
                       "$type": "Assets.Scripts.Models.Towers.Projectiles.ProjectileModel, Assembly-CSharp",
                       "display": {
                         "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                        "GUID": null,
+                        "AssetGUID": null,
                         "guidRef": null
                       },
                       "id": "Projectile",
@@ -1366,102 +1450,102 @@
                           "sprites": [
                             {
                               "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                              "GUID": "ff7ada25698ff484f87767a8c4b01865",
+                              "AssetGUID": "ff7ada25698ff484f87767a8c4b01865",
                               "guidRef": "ff7ada25698ff484f87767a8c4b01865"
                             },
                             {
                               "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                              "GUID": "44f458dc60fb8834eaf6677455998e6f",
+                              "AssetGUID": "44f458dc60fb8834eaf6677455998e6f",
                               "guidRef": "44f458dc60fb8834eaf6677455998e6f"
                             },
                             {
                               "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                              "GUID": "85f9b4d05a53e644ca31e7ed6de494f6",
+                              "AssetGUID": "85f9b4d05a53e644ca31e7ed6de494f6",
                               "guidRef": "85f9b4d05a53e644ca31e7ed6de494f6"
                             },
                             {
                               "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                              "GUID": "ac2e0f6dd632c9049b2ddcfed21454c8",
+                              "AssetGUID": "ac2e0f6dd632c9049b2ddcfed21454c8",
                               "guidRef": "ac2e0f6dd632c9049b2ddcfed21454c8"
                             },
                             {
                               "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                              "GUID": "2d9755bf10a45cb4d8dcb1ea56ac829a",
+                              "AssetGUID": "2d9755bf10a45cb4d8dcb1ea56ac829a",
                               "guidRef": "2d9755bf10a45cb4d8dcb1ea56ac829a"
                             },
                             {
                               "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                              "GUID": "b3049788c3b19724fa85a5ca2e34dff3",
+                              "AssetGUID": "b3049788c3b19724fa85a5ca2e34dff3",
                               "guidRef": "b3049788c3b19724fa85a5ca2e34dff3"
                             },
                             {
                               "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                              "GUID": "f450fd35ab8825b48b4a9457bf771f9a",
+                              "AssetGUID": "f450fd35ab8825b48b4a9457bf771f9a",
                               "guidRef": "f450fd35ab8825b48b4a9457bf771f9a"
                             },
                             {
                               "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                              "GUID": "d07b55cb3f1b96a439a796af3f38f44c",
+                              "AssetGUID": "d07b55cb3f1b96a439a796af3f38f44c",
                               "guidRef": "d07b55cb3f1b96a439a796af3f38f44c"
                             },
                             {
                               "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                              "GUID": "06efb9f746a60574a8060cedc72c2998",
+                              "AssetGUID": "06efb9f746a60574a8060cedc72c2998",
                               "guidRef": "06efb9f746a60574a8060cedc72c2998"
                             },
                             {
                               "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                              "GUID": "b399227a1df969f42810d4c132382795",
+                              "AssetGUID": "b399227a1df969f42810d4c132382795",
                               "guidRef": "b399227a1df969f42810d4c132382795"
                             },
                             {
                               "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                              "GUID": "86f8f1775a83a684dab5562a4f2fa1cf",
+                              "AssetGUID": "86f8f1775a83a684dab5562a4f2fa1cf",
                               "guidRef": "86f8f1775a83a684dab5562a4f2fa1cf"
                             },
                             {
                               "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                              "GUID": "67871f62bb9f70a4b8bc1d87f58f57ba",
+                              "AssetGUID": "67871f62bb9f70a4b8bc1d87f58f57ba",
                               "guidRef": "67871f62bb9f70a4b8bc1d87f58f57ba"
                             },
                             {
                               "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                              "GUID": "909d3637af681e248a5ec65ff414c13f",
+                              "AssetGUID": "909d3637af681e248a5ec65ff414c13f",
                               "guidRef": "909d3637af681e248a5ec65ff414c13f"
                             },
                             {
                               "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                              "GUID": "f7af270b4bf613d4b93cab43442fc4ef",
+                              "AssetGUID": "f7af270b4bf613d4b93cab43442fc4ef",
                               "guidRef": "f7af270b4bf613d4b93cab43442fc4ef"
                             },
                             {
                               "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                              "GUID": "10da519ce46d9054eb3624a041b9fcb0",
+                              "AssetGUID": "10da519ce46d9054eb3624a041b9fcb0",
                               "guidRef": "10da519ce46d9054eb3624a041b9fcb0"
                             },
                             {
                               "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                              "GUID": "f7215612ecce85d4eb6fc54e1ba43492",
+                              "AssetGUID": "f7215612ecce85d4eb6fc54e1ba43492",
                               "guidRef": "f7215612ecce85d4eb6fc54e1ba43492"
                             },
                             {
                               "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                              "GUID": "57b53f7bdfaa86d499745d6f4998ee61",
+                              "AssetGUID": "57b53f7bdfaa86d499745d6f4998ee61",
                               "guidRef": "57b53f7bdfaa86d499745d6f4998ee61"
                             },
                             {
                               "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                              "GUID": "04798a9599f1fdf4b83c91aca80240e7",
+                              "AssetGUID": "04798a9599f1fdf4b83c91aca80240e7",
                               "guidRef": "04798a9599f1fdf4b83c91aca80240e7"
                             },
                             {
                               "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                              "GUID": "a45b9d1f1df836c4da410ff21f8bc1f9",
+                              "AssetGUID": "a45b9d1f1df836c4da410ff21f8bc1f9",
                               "guidRef": "a45b9d1f1df836c4da410ff21f8bc1f9"
                             },
                             {
                               "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                              "GUID": "8e2802d4bd3d42e4cb192c6bbcef0173",
+                              "AssetGUID": "8e2802d4bd3d42e4cb192c6bbcef0173",
                               "guidRef": "8e2802d4bd3d42e4cb192c6bbcef0173"
                             }
                           ],
@@ -1673,7 +1757,7 @@
                           "$type": "Assets.Scripts.Models.GenericBehaviors.DisplayModel, Assembly-CSharp",
                           "display": {
                             "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                            "GUID": null,
+                            "AssetGUID": null,
                             "guidRef": null
                           },
                           "layer": 0,
@@ -1704,6 +1788,7 @@
                       "ignoreNonTargetable": false,
                       "ignorePierceExhaustion": false,
                       "saveId": null,
+                      "displayModel": null,
                       "CappedPierce": 10.0,
                       "name": "ProjectileModel_Projectile",
                       "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Projectile, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
@@ -1789,7 +1874,7 @@
                       "$type": "Assets.Scripts.Models.Towers.Projectiles.ProjectileModel, Assembly-CSharp",
                       "display": {
                         "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                        "GUID": null,
+                        "AssetGUID": null,
                         "guidRef": null
                       },
                       "id": "Projectile",
@@ -1915,102 +2000,102 @@
                           "sprites": [
                             {
                               "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                              "GUID": "ff7ada25698ff484f87767a8c4b01865",
+                              "AssetGUID": "ff7ada25698ff484f87767a8c4b01865",
                               "guidRef": "ff7ada25698ff484f87767a8c4b01865"
                             },
                             {
                               "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                              "GUID": "44f458dc60fb8834eaf6677455998e6f",
+                              "AssetGUID": "44f458dc60fb8834eaf6677455998e6f",
                               "guidRef": "44f458dc60fb8834eaf6677455998e6f"
                             },
                             {
                               "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                              "GUID": "85f9b4d05a53e644ca31e7ed6de494f6",
+                              "AssetGUID": "85f9b4d05a53e644ca31e7ed6de494f6",
                               "guidRef": "85f9b4d05a53e644ca31e7ed6de494f6"
                             },
                             {
                               "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                              "GUID": "ac2e0f6dd632c9049b2ddcfed21454c8",
+                              "AssetGUID": "ac2e0f6dd632c9049b2ddcfed21454c8",
                               "guidRef": "ac2e0f6dd632c9049b2ddcfed21454c8"
                             },
                             {
                               "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                              "GUID": "2d9755bf10a45cb4d8dcb1ea56ac829a",
+                              "AssetGUID": "2d9755bf10a45cb4d8dcb1ea56ac829a",
                               "guidRef": "2d9755bf10a45cb4d8dcb1ea56ac829a"
                             },
                             {
                               "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                              "GUID": "b3049788c3b19724fa85a5ca2e34dff3",
+                              "AssetGUID": "b3049788c3b19724fa85a5ca2e34dff3",
                               "guidRef": "b3049788c3b19724fa85a5ca2e34dff3"
                             },
                             {
                               "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                              "GUID": "f450fd35ab8825b48b4a9457bf771f9a",
+                              "AssetGUID": "f450fd35ab8825b48b4a9457bf771f9a",
                               "guidRef": "f450fd35ab8825b48b4a9457bf771f9a"
                             },
                             {
                               "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                              "GUID": "d07b55cb3f1b96a439a796af3f38f44c",
+                              "AssetGUID": "d07b55cb3f1b96a439a796af3f38f44c",
                               "guidRef": "d07b55cb3f1b96a439a796af3f38f44c"
                             },
                             {
                               "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                              "GUID": "06efb9f746a60574a8060cedc72c2998",
+                              "AssetGUID": "06efb9f746a60574a8060cedc72c2998",
                               "guidRef": "06efb9f746a60574a8060cedc72c2998"
                             },
                             {
                               "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                              "GUID": "b399227a1df969f42810d4c132382795",
+                              "AssetGUID": "b399227a1df969f42810d4c132382795",
                               "guidRef": "b399227a1df969f42810d4c132382795"
                             },
                             {
                               "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                              "GUID": "86f8f1775a83a684dab5562a4f2fa1cf",
+                              "AssetGUID": "86f8f1775a83a684dab5562a4f2fa1cf",
                               "guidRef": "86f8f1775a83a684dab5562a4f2fa1cf"
                             },
                             {
                               "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                              "GUID": "67871f62bb9f70a4b8bc1d87f58f57ba",
+                              "AssetGUID": "67871f62bb9f70a4b8bc1d87f58f57ba",
                               "guidRef": "67871f62bb9f70a4b8bc1d87f58f57ba"
                             },
                             {
                               "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                              "GUID": "909d3637af681e248a5ec65ff414c13f",
+                              "AssetGUID": "909d3637af681e248a5ec65ff414c13f",
                               "guidRef": "909d3637af681e248a5ec65ff414c13f"
                             },
                             {
                               "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                              "GUID": "f7af270b4bf613d4b93cab43442fc4ef",
+                              "AssetGUID": "f7af270b4bf613d4b93cab43442fc4ef",
                               "guidRef": "f7af270b4bf613d4b93cab43442fc4ef"
                             },
                             {
                               "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                              "GUID": "10da519ce46d9054eb3624a041b9fcb0",
+                              "AssetGUID": "10da519ce46d9054eb3624a041b9fcb0",
                               "guidRef": "10da519ce46d9054eb3624a041b9fcb0"
                             },
                             {
                               "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                              "GUID": "f7215612ecce85d4eb6fc54e1ba43492",
+                              "AssetGUID": "f7215612ecce85d4eb6fc54e1ba43492",
                               "guidRef": "f7215612ecce85d4eb6fc54e1ba43492"
                             },
                             {
                               "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                              "GUID": "57b53f7bdfaa86d499745d6f4998ee61",
+                              "AssetGUID": "57b53f7bdfaa86d499745d6f4998ee61",
                               "guidRef": "57b53f7bdfaa86d499745d6f4998ee61"
                             },
                             {
                               "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                              "GUID": "04798a9599f1fdf4b83c91aca80240e7",
+                              "AssetGUID": "04798a9599f1fdf4b83c91aca80240e7",
                               "guidRef": "04798a9599f1fdf4b83c91aca80240e7"
                             },
                             {
                               "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                              "GUID": "a45b9d1f1df836c4da410ff21f8bc1f9",
+                              "AssetGUID": "a45b9d1f1df836c4da410ff21f8bc1f9",
                               "guidRef": "a45b9d1f1df836c4da410ff21f8bc1f9"
                             },
                             {
                               "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                              "GUID": "8e2802d4bd3d42e4cb192c6bbcef0173",
+                              "AssetGUID": "8e2802d4bd3d42e4cb192c6bbcef0173",
                               "guidRef": "8e2802d4bd3d42e4cb192c6bbcef0173"
                             }
                           ],
@@ -2222,7 +2307,7 @@
                           "$type": "Assets.Scripts.Models.GenericBehaviors.DisplayModel, Assembly-CSharp",
                           "display": {
                             "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                            "GUID": null,
+                            "AssetGUID": null,
                             "guidRef": null
                           },
                           "layer": 0,
@@ -2253,6 +2338,7 @@
                       "ignoreNonTargetable": false,
                       "ignorePierceExhaustion": false,
                       "saveId": null,
+                      "displayModel": null,
                       "CappedPierce": 10.0,
                       "name": "ProjectileModel_Projectile",
                       "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Projectile, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
@@ -2335,9 +2421,9 @@
             "sound": {
               "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
               "assetId": {
-                "$type": "NinjaKiwi.Common.ResourceUtils.AudioSourceReference, NinjaKiwi.Common",
-                "GUID": "fdbde1ab68c7dde46bb25cdcc7d6a00a",
-                "guidRef": "fdbde1ab68c7dde46bb25cdcc7d6a00a"
+                "$type": "NinjaKiwi.Common.ResourceUtils.AudioClipReference, NinjaKiwi.Common",
+                "AssetGUID": "37c9ca9c50444e74eaa009656e326f9b",
+                "guidRef": "37c9ca9c50444e74eaa009656e326f9b"
               },
               "name": "SoundModel_ActivatedCarpetOfSpikes",
               "ImplementationType": null
@@ -2353,7 +2439,7 @@
               "$type": "Assets.Scripts.Models.Effects.EffectModel, Assembly-CSharp",
               "assetId": {
                 "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                "GUID": "d824462fe7b1feb498568ad299bc547e",
+                "AssetGUID": "d824462fe7b1feb498568ad299bc547e",
                 "guidRef": "d824462fe7b1feb498568ad299bc547e"
               },
               "scale": 1.0,
@@ -2410,21 +2496,21 @@
       "sound1": {
         "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
         "assetId": {
-          "$type": "NinjaKiwi.Common.ResourceUtils.AudioSourceReference, NinjaKiwi.Common",
-          "GUID": "432da2691e8684d4890db8228c70f225",
-          "guidRef": "432da2691e8684d4890db8228c70f225"
+          "$type": "NinjaKiwi.Common.ResourceUtils.AudioClipReference, NinjaKiwi.Common",
+          "AssetGUID": "d45ab9a635be95440b881d55c0092036",
+          "guidRef": "d45ab9a635be95440b881d55c0092036"
         },
-        "name": "SoundModel_PlaceStructureSound1",
+        "name": "SoundModel_PlaceTowerStructure01",
         "ImplementationType": null
       },
       "sound2": {
         "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
         "assetId": {
-          "$type": "NinjaKiwi.Common.ResourceUtils.AudioSourceReference, NinjaKiwi.Common",
-          "GUID": "f6963c719015dd040a4cdd3c1aab644e",
-          "guidRef": "f6963c719015dd040a4cdd3c1aab644e"
+          "$type": "NinjaKiwi.Common.ResourceUtils.AudioClipReference, NinjaKiwi.Common",
+          "AssetGUID": "19f1268664ef35b4ba50c8daecfd7f43",
+          "guidRef": "19f1268664ef35b4ba50c8daecfd7f43"
         },
-        "name": "SoundModel_PlaceStructureSound2",
+        "name": "SoundModel_PlaceTowerStructure02",
         "ImplementationType": null
       },
       "waterSound1": null,
@@ -2439,11 +2525,11 @@
       "sound": {
         "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
         "assetId": {
-          "$type": "NinjaKiwi.Common.ResourceUtils.AudioSourceReference, NinjaKiwi.Common",
-          "GUID": "df4c691ccf8a3c7408ed6f156740c8b7",
-          "guidRef": "df4c691ccf8a3c7408ed6f156740c8b7"
+          "$type": "NinjaKiwi.Common.ResourceUtils.AudioClipReference, NinjaKiwi.Common",
+          "AssetGUID": "a8c789893d4275749af12c1efda9dd3e",
+          "guidRef": "a8c789893d4275749af12c1efda9dd3e"
         },
-        "name": "SoundModel_SellSound",
+        "name": "SoundModel_UISell",
         "ImplementationType": null
       },
       "name": "CreateSoundOnSellModel_SpikeFactory-050",
@@ -2454,91 +2540,91 @@
       "sound": {
         "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
         "assetId": {
-          "$type": "NinjaKiwi.Common.ResourceUtils.AudioSourceReference, NinjaKiwi.Common",
-          "GUID": "23a777b9950195f4f8f4bf745ef84031",
-          "guidRef": "23a777b9950195f4f8f4bf745ef84031"
+          "$type": "NinjaKiwi.Common.ResourceUtils.AudioClipReference, NinjaKiwi.Common",
+          "AssetGUID": "f91dc7ea1b37815459e81e99254863ab",
+          "guidRef": "f91dc7ea1b37815459e81e99254863ab"
         },
-        "name": "SoundModel_UpgradeSound",
+        "name": "SoundModel_TowerUpgrade",
         "ImplementationType": null
       },
       "sound1": {
         "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
         "assetId": {
-          "$type": "NinjaKiwi.Common.ResourceUtils.AudioSourceReference, NinjaKiwi.Common",
-          "GUID": "23a777b9950195f4f8f4bf745ef84031",
-          "guidRef": "23a777b9950195f4f8f4bf745ef84031"
+          "$type": "NinjaKiwi.Common.ResourceUtils.AudioClipReference, NinjaKiwi.Common",
+          "AssetGUID": "f91dc7ea1b37815459e81e99254863ab",
+          "guidRef": "f91dc7ea1b37815459e81e99254863ab"
         },
-        "name": "SoundModel_UpgradeSound",
+        "name": "SoundModel_TowerUpgrade",
         "ImplementationType": null
       },
       "sound2": {
         "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
         "assetId": {
-          "$type": "NinjaKiwi.Common.ResourceUtils.AudioSourceReference, NinjaKiwi.Common",
-          "GUID": "23a777b9950195f4f8f4bf745ef84031",
-          "guidRef": "23a777b9950195f4f8f4bf745ef84031"
+          "$type": "NinjaKiwi.Common.ResourceUtils.AudioClipReference, NinjaKiwi.Common",
+          "AssetGUID": "f91dc7ea1b37815459e81e99254863ab",
+          "guidRef": "f91dc7ea1b37815459e81e99254863ab"
         },
-        "name": "SoundModel_UpgradeSound",
+        "name": "SoundModel_TowerUpgrade",
         "ImplementationType": null
       },
       "sound3": {
         "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
         "assetId": {
-          "$type": "NinjaKiwi.Common.ResourceUtils.AudioSourceReference, NinjaKiwi.Common",
-          "GUID": "23a777b9950195f4f8f4bf745ef84031",
-          "guidRef": "23a777b9950195f4f8f4bf745ef84031"
+          "$type": "NinjaKiwi.Common.ResourceUtils.AudioClipReference, NinjaKiwi.Common",
+          "AssetGUID": "f91dc7ea1b37815459e81e99254863ab",
+          "guidRef": "f91dc7ea1b37815459e81e99254863ab"
         },
-        "name": "SoundModel_UpgradeSound",
+        "name": "SoundModel_TowerUpgrade",
         "ImplementationType": null
       },
       "sound4": {
         "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
         "assetId": {
-          "$type": "NinjaKiwi.Common.ResourceUtils.AudioSourceReference, NinjaKiwi.Common",
-          "GUID": "23a777b9950195f4f8f4bf745ef84031",
-          "guidRef": "23a777b9950195f4f8f4bf745ef84031"
+          "$type": "NinjaKiwi.Common.ResourceUtils.AudioClipReference, NinjaKiwi.Common",
+          "AssetGUID": "f91dc7ea1b37815459e81e99254863ab",
+          "guidRef": "f91dc7ea1b37815459e81e99254863ab"
         },
-        "name": "SoundModel_UpgradeSound",
+        "name": "SoundModel_TowerUpgrade",
         "ImplementationType": null
       },
       "sound5": {
         "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
         "assetId": {
-          "$type": "NinjaKiwi.Common.ResourceUtils.AudioSourceReference, NinjaKiwi.Common",
-          "GUID": "23a777b9950195f4f8f4bf745ef84031",
-          "guidRef": "23a777b9950195f4f8f4bf745ef84031"
+          "$type": "NinjaKiwi.Common.ResourceUtils.AudioClipReference, NinjaKiwi.Common",
+          "AssetGUID": "f91dc7ea1b37815459e81e99254863ab",
+          "guidRef": "f91dc7ea1b37815459e81e99254863ab"
         },
-        "name": "SoundModel_UpgradeSound",
+        "name": "SoundModel_TowerUpgrade",
         "ImplementationType": null
       },
       "sound6": {
         "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
         "assetId": {
-          "$type": "NinjaKiwi.Common.ResourceUtils.AudioSourceReference, NinjaKiwi.Common",
-          "GUID": "23a777b9950195f4f8f4bf745ef84031",
-          "guidRef": "23a777b9950195f4f8f4bf745ef84031"
+          "$type": "NinjaKiwi.Common.ResourceUtils.AudioClipReference, NinjaKiwi.Common",
+          "AssetGUID": "f91dc7ea1b37815459e81e99254863ab",
+          "guidRef": "f91dc7ea1b37815459e81e99254863ab"
         },
-        "name": "SoundModel_UpgradeSound",
+        "name": "SoundModel_TowerUpgrade",
         "ImplementationType": null
       },
       "sound7": {
         "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
         "assetId": {
-          "$type": "NinjaKiwi.Common.ResourceUtils.AudioSourceReference, NinjaKiwi.Common",
-          "GUID": "23a777b9950195f4f8f4bf745ef84031",
-          "guidRef": "23a777b9950195f4f8f4bf745ef84031"
+          "$type": "NinjaKiwi.Common.ResourceUtils.AudioClipReference, NinjaKiwi.Common",
+          "AssetGUID": "f91dc7ea1b37815459e81e99254863ab",
+          "guidRef": "f91dc7ea1b37815459e81e99254863ab"
         },
-        "name": "SoundModel_UpgradeSound",
+        "name": "SoundModel_TowerUpgrade",
         "ImplementationType": null
       },
       "sound8": {
         "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
         "assetId": {
-          "$type": "NinjaKiwi.Common.ResourceUtils.AudioSourceReference, NinjaKiwi.Common",
-          "GUID": "23a777b9950195f4f8f4bf745ef84031",
-          "guidRef": "23a777b9950195f4f8f4bf745ef84031"
+          "$type": "NinjaKiwi.Common.ResourceUtils.AudioClipReference, NinjaKiwi.Common",
+          "AssetGUID": "f91dc7ea1b37815459e81e99254863ab",
+          "guidRef": "f91dc7ea1b37815459e81e99254863ab"
         },
-        "name": "SoundModel_UpgradeSound",
+        "name": "SoundModel_TowerUpgrade",
         "ImplementationType": null
       },
       "name": "CreateSoundOnUpgradeModel_SpikeFactory-050",
@@ -2550,7 +2636,7 @@
         "$type": "Assets.Scripts.Models.Effects.EffectModel, Assembly-CSharp",
         "assetId": {
           "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-          "GUID": "b1dec8a8d79593843bc2e2410eae944e",
+          "AssetGUID": "b1dec8a8d79593843bc2e2410eae944e",
           "guidRef": "b1dec8a8d79593843bc2e2410eae944e"
         },
         "scale": 1.0,
@@ -2574,7 +2660,7 @@
         "$type": "Assets.Scripts.Models.Effects.EffectModel, Assembly-CSharp",
         "assetId": {
           "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-          "GUID": "823809b31a6cbab4cab5efc530f919f7",
+          "AssetGUID": "823809b31a6cbab4cab5efc530f919f7",
           "guidRef": "823809b31a6cbab4cab5efc530f919f7"
         },
         "scale": 1.0,
@@ -2613,7 +2699,7 @@
             "$type": "Assets.Scripts.Models.Towers.Projectiles.ProjectileModel, Assembly-CSharp",
             "display": {
               "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-              "GUID": null,
+              "AssetGUID": null,
               "guidRef": null
             },
             "id": "Projectile",
@@ -2759,102 +2845,102 @@
                 "sprites": [
                   {
                     "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                    "GUID": "ff7ada25698ff484f87767a8c4b01865",
+                    "AssetGUID": "ff7ada25698ff484f87767a8c4b01865",
                     "guidRef": "ff7ada25698ff484f87767a8c4b01865"
                   },
                   {
                     "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                    "GUID": "44f458dc60fb8834eaf6677455998e6f",
+                    "AssetGUID": "44f458dc60fb8834eaf6677455998e6f",
                     "guidRef": "44f458dc60fb8834eaf6677455998e6f"
                   },
                   {
                     "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                    "GUID": "85f9b4d05a53e644ca31e7ed6de494f6",
+                    "AssetGUID": "85f9b4d05a53e644ca31e7ed6de494f6",
                     "guidRef": "85f9b4d05a53e644ca31e7ed6de494f6"
                   },
                   {
                     "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                    "GUID": "ac2e0f6dd632c9049b2ddcfed21454c8",
+                    "AssetGUID": "ac2e0f6dd632c9049b2ddcfed21454c8",
                     "guidRef": "ac2e0f6dd632c9049b2ddcfed21454c8"
                   },
                   {
                     "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                    "GUID": "2d9755bf10a45cb4d8dcb1ea56ac829a",
+                    "AssetGUID": "2d9755bf10a45cb4d8dcb1ea56ac829a",
                     "guidRef": "2d9755bf10a45cb4d8dcb1ea56ac829a"
                   },
                   {
                     "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                    "GUID": "b3049788c3b19724fa85a5ca2e34dff3",
+                    "AssetGUID": "b3049788c3b19724fa85a5ca2e34dff3",
                     "guidRef": "b3049788c3b19724fa85a5ca2e34dff3"
                   },
                   {
                     "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                    "GUID": "f450fd35ab8825b48b4a9457bf771f9a",
+                    "AssetGUID": "f450fd35ab8825b48b4a9457bf771f9a",
                     "guidRef": "f450fd35ab8825b48b4a9457bf771f9a"
                   },
                   {
                     "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                    "GUID": "d07b55cb3f1b96a439a796af3f38f44c",
+                    "AssetGUID": "d07b55cb3f1b96a439a796af3f38f44c",
                     "guidRef": "d07b55cb3f1b96a439a796af3f38f44c"
                   },
                   {
                     "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                    "GUID": "06efb9f746a60574a8060cedc72c2998",
+                    "AssetGUID": "06efb9f746a60574a8060cedc72c2998",
                     "guidRef": "06efb9f746a60574a8060cedc72c2998"
                   },
                   {
                     "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                    "GUID": "b399227a1df969f42810d4c132382795",
+                    "AssetGUID": "b399227a1df969f42810d4c132382795",
                     "guidRef": "b399227a1df969f42810d4c132382795"
                   },
                   {
                     "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                    "GUID": "86f8f1775a83a684dab5562a4f2fa1cf",
+                    "AssetGUID": "86f8f1775a83a684dab5562a4f2fa1cf",
                     "guidRef": "86f8f1775a83a684dab5562a4f2fa1cf"
                   },
                   {
                     "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                    "GUID": "67871f62bb9f70a4b8bc1d87f58f57ba",
+                    "AssetGUID": "67871f62bb9f70a4b8bc1d87f58f57ba",
                     "guidRef": "67871f62bb9f70a4b8bc1d87f58f57ba"
                   },
                   {
                     "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                    "GUID": "909d3637af681e248a5ec65ff414c13f",
+                    "AssetGUID": "909d3637af681e248a5ec65ff414c13f",
                     "guidRef": "909d3637af681e248a5ec65ff414c13f"
                   },
                   {
                     "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                    "GUID": "f7af270b4bf613d4b93cab43442fc4ef",
+                    "AssetGUID": "f7af270b4bf613d4b93cab43442fc4ef",
                     "guidRef": "f7af270b4bf613d4b93cab43442fc4ef"
                   },
                   {
                     "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                    "GUID": "10da519ce46d9054eb3624a041b9fcb0",
+                    "AssetGUID": "10da519ce46d9054eb3624a041b9fcb0",
                     "guidRef": "10da519ce46d9054eb3624a041b9fcb0"
                   },
                   {
                     "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                    "GUID": "f7215612ecce85d4eb6fc54e1ba43492",
+                    "AssetGUID": "f7215612ecce85d4eb6fc54e1ba43492",
                     "guidRef": "f7215612ecce85d4eb6fc54e1ba43492"
                   },
                   {
                     "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                    "GUID": "57b53f7bdfaa86d499745d6f4998ee61",
+                    "AssetGUID": "57b53f7bdfaa86d499745d6f4998ee61",
                     "guidRef": "57b53f7bdfaa86d499745d6f4998ee61"
                   },
                   {
                     "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                    "GUID": "04798a9599f1fdf4b83c91aca80240e7",
+                    "AssetGUID": "04798a9599f1fdf4b83c91aca80240e7",
                     "guidRef": "04798a9599f1fdf4b83c91aca80240e7"
                   },
                   {
                     "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                    "GUID": "a45b9d1f1df836c4da410ff21f8bc1f9",
+                    "AssetGUID": "a45b9d1f1df836c4da410ff21f8bc1f9",
                     "guidRef": "a45b9d1f1df836c4da410ff21f8bc1f9"
                   },
                   {
                     "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                    "GUID": "8e2802d4bd3d42e4cb192c6bbcef0173",
+                    "AssetGUID": "8e2802d4bd3d42e4cb192c6bbcef0173",
                     "guidRef": "8e2802d4bd3d42e4cb192c6bbcef0173"
                   }
                 ],
@@ -3045,7 +3131,7 @@
                 "$type": "Assets.Scripts.Models.GenericBehaviors.DisplayModel, Assembly-CSharp",
                 "display": {
                   "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                  "GUID": null,
+                  "AssetGUID": null,
                   "guidRef": null
                 },
                 "layer": 0,
@@ -3076,6 +3162,7 @@
             "ignoreNonTargetable": false,
             "ignorePierceExhaustion": false,
             "saveId": null,
+            "displayModel": null,
             "CappedPierce": 10.0,
             "name": "ProjectileModel_Projectile",
             "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Projectile, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
@@ -3147,7 +3234,7 @@
       "description": "Shoots out a thick layer of spikes over the entire track.",
       "icon": {
         "$type": "NinjaKiwi.Common.ResourceUtils.SpriteReference, NinjaKiwi.Common",
-        "GUID": "4f77b816539d5445a853457ec1b9a70c",
+        "AssetGUID": "4f77b816539d5445a853457ec1b9a70c",
         "guidRef": "4f77b816539d5445a853457ec1b9a70c"
       },
       "behaviors": [
@@ -3174,7 +3261,7 @@
                     "$type": "Assets.Scripts.Models.Towers.Projectiles.ProjectileModel, Assembly-CSharp",
                     "display": {
                       "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                      "GUID": null,
+                      "AssetGUID": null,
                       "guidRef": null
                     },
                     "id": "Projectile",
@@ -3300,102 +3387,102 @@
                         "sprites": [
                           {
                             "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                            "GUID": "ff7ada25698ff484f87767a8c4b01865",
+                            "AssetGUID": "ff7ada25698ff484f87767a8c4b01865",
                             "guidRef": "ff7ada25698ff484f87767a8c4b01865"
                           },
                           {
                             "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                            "GUID": "44f458dc60fb8834eaf6677455998e6f",
+                            "AssetGUID": "44f458dc60fb8834eaf6677455998e6f",
                             "guidRef": "44f458dc60fb8834eaf6677455998e6f"
                           },
                           {
                             "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                            "GUID": "85f9b4d05a53e644ca31e7ed6de494f6",
+                            "AssetGUID": "85f9b4d05a53e644ca31e7ed6de494f6",
                             "guidRef": "85f9b4d05a53e644ca31e7ed6de494f6"
                           },
                           {
                             "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                            "GUID": "ac2e0f6dd632c9049b2ddcfed21454c8",
+                            "AssetGUID": "ac2e0f6dd632c9049b2ddcfed21454c8",
                             "guidRef": "ac2e0f6dd632c9049b2ddcfed21454c8"
                           },
                           {
                             "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                            "GUID": "2d9755bf10a45cb4d8dcb1ea56ac829a",
+                            "AssetGUID": "2d9755bf10a45cb4d8dcb1ea56ac829a",
                             "guidRef": "2d9755bf10a45cb4d8dcb1ea56ac829a"
                           },
                           {
                             "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                            "GUID": "b3049788c3b19724fa85a5ca2e34dff3",
+                            "AssetGUID": "b3049788c3b19724fa85a5ca2e34dff3",
                             "guidRef": "b3049788c3b19724fa85a5ca2e34dff3"
                           },
                           {
                             "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                            "GUID": "f450fd35ab8825b48b4a9457bf771f9a",
+                            "AssetGUID": "f450fd35ab8825b48b4a9457bf771f9a",
                             "guidRef": "f450fd35ab8825b48b4a9457bf771f9a"
                           },
                           {
                             "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                            "GUID": "d07b55cb3f1b96a439a796af3f38f44c",
+                            "AssetGUID": "d07b55cb3f1b96a439a796af3f38f44c",
                             "guidRef": "d07b55cb3f1b96a439a796af3f38f44c"
                           },
                           {
                             "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                            "GUID": "06efb9f746a60574a8060cedc72c2998",
+                            "AssetGUID": "06efb9f746a60574a8060cedc72c2998",
                             "guidRef": "06efb9f746a60574a8060cedc72c2998"
                           },
                           {
                             "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                            "GUID": "b399227a1df969f42810d4c132382795",
+                            "AssetGUID": "b399227a1df969f42810d4c132382795",
                             "guidRef": "b399227a1df969f42810d4c132382795"
                           },
                           {
                             "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                            "GUID": "86f8f1775a83a684dab5562a4f2fa1cf",
+                            "AssetGUID": "86f8f1775a83a684dab5562a4f2fa1cf",
                             "guidRef": "86f8f1775a83a684dab5562a4f2fa1cf"
                           },
                           {
                             "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                            "GUID": "67871f62bb9f70a4b8bc1d87f58f57ba",
+                            "AssetGUID": "67871f62bb9f70a4b8bc1d87f58f57ba",
                             "guidRef": "67871f62bb9f70a4b8bc1d87f58f57ba"
                           },
                           {
                             "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                            "GUID": "909d3637af681e248a5ec65ff414c13f",
+                            "AssetGUID": "909d3637af681e248a5ec65ff414c13f",
                             "guidRef": "909d3637af681e248a5ec65ff414c13f"
                           },
                           {
                             "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                            "GUID": "f7af270b4bf613d4b93cab43442fc4ef",
+                            "AssetGUID": "f7af270b4bf613d4b93cab43442fc4ef",
                             "guidRef": "f7af270b4bf613d4b93cab43442fc4ef"
                           },
                           {
                             "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                            "GUID": "10da519ce46d9054eb3624a041b9fcb0",
+                            "AssetGUID": "10da519ce46d9054eb3624a041b9fcb0",
                             "guidRef": "10da519ce46d9054eb3624a041b9fcb0"
                           },
                           {
                             "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                            "GUID": "f7215612ecce85d4eb6fc54e1ba43492",
+                            "AssetGUID": "f7215612ecce85d4eb6fc54e1ba43492",
                             "guidRef": "f7215612ecce85d4eb6fc54e1ba43492"
                           },
                           {
                             "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                            "GUID": "57b53f7bdfaa86d499745d6f4998ee61",
+                            "AssetGUID": "57b53f7bdfaa86d499745d6f4998ee61",
                             "guidRef": "57b53f7bdfaa86d499745d6f4998ee61"
                           },
                           {
                             "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                            "GUID": "04798a9599f1fdf4b83c91aca80240e7",
+                            "AssetGUID": "04798a9599f1fdf4b83c91aca80240e7",
                             "guidRef": "04798a9599f1fdf4b83c91aca80240e7"
                           },
                           {
                             "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                            "GUID": "a45b9d1f1df836c4da410ff21f8bc1f9",
+                            "AssetGUID": "a45b9d1f1df836c4da410ff21f8bc1f9",
                             "guidRef": "a45b9d1f1df836c4da410ff21f8bc1f9"
                           },
                           {
                             "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                            "GUID": "8e2802d4bd3d42e4cb192c6bbcef0173",
+                            "AssetGUID": "8e2802d4bd3d42e4cb192c6bbcef0173",
                             "guidRef": "8e2802d4bd3d42e4cb192c6bbcef0173"
                           }
                         ],
@@ -3607,7 +3694,7 @@
                         "$type": "Assets.Scripts.Models.GenericBehaviors.DisplayModel, Assembly-CSharp",
                         "display": {
                           "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                          "GUID": null,
+                          "AssetGUID": null,
                           "guidRef": null
                         },
                         "layer": 0,
@@ -3638,6 +3725,7 @@
                     "ignoreNonTargetable": false,
                     "ignorePierceExhaustion": false,
                     "saveId": null,
+                    "displayModel": null,
                     "CappedPierce": 10.0,
                     "name": "ProjectileModel_Projectile",
                     "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Projectile, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
@@ -3723,7 +3811,7 @@
                     "$type": "Assets.Scripts.Models.Towers.Projectiles.ProjectileModel, Assembly-CSharp",
                     "display": {
                       "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                      "GUID": null,
+                      "AssetGUID": null,
                       "guidRef": null
                     },
                     "id": "Projectile",
@@ -3849,102 +3937,102 @@
                         "sprites": [
                           {
                             "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                            "GUID": "ff7ada25698ff484f87767a8c4b01865",
+                            "AssetGUID": "ff7ada25698ff484f87767a8c4b01865",
                             "guidRef": "ff7ada25698ff484f87767a8c4b01865"
                           },
                           {
                             "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                            "GUID": "44f458dc60fb8834eaf6677455998e6f",
+                            "AssetGUID": "44f458dc60fb8834eaf6677455998e6f",
                             "guidRef": "44f458dc60fb8834eaf6677455998e6f"
                           },
                           {
                             "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                            "GUID": "85f9b4d05a53e644ca31e7ed6de494f6",
+                            "AssetGUID": "85f9b4d05a53e644ca31e7ed6de494f6",
                             "guidRef": "85f9b4d05a53e644ca31e7ed6de494f6"
                           },
                           {
                             "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                            "GUID": "ac2e0f6dd632c9049b2ddcfed21454c8",
+                            "AssetGUID": "ac2e0f6dd632c9049b2ddcfed21454c8",
                             "guidRef": "ac2e0f6dd632c9049b2ddcfed21454c8"
                           },
                           {
                             "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                            "GUID": "2d9755bf10a45cb4d8dcb1ea56ac829a",
+                            "AssetGUID": "2d9755bf10a45cb4d8dcb1ea56ac829a",
                             "guidRef": "2d9755bf10a45cb4d8dcb1ea56ac829a"
                           },
                           {
                             "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                            "GUID": "b3049788c3b19724fa85a5ca2e34dff3",
+                            "AssetGUID": "b3049788c3b19724fa85a5ca2e34dff3",
                             "guidRef": "b3049788c3b19724fa85a5ca2e34dff3"
                           },
                           {
                             "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                            "GUID": "f450fd35ab8825b48b4a9457bf771f9a",
+                            "AssetGUID": "f450fd35ab8825b48b4a9457bf771f9a",
                             "guidRef": "f450fd35ab8825b48b4a9457bf771f9a"
                           },
                           {
                             "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                            "GUID": "d07b55cb3f1b96a439a796af3f38f44c",
+                            "AssetGUID": "d07b55cb3f1b96a439a796af3f38f44c",
                             "guidRef": "d07b55cb3f1b96a439a796af3f38f44c"
                           },
                           {
                             "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                            "GUID": "06efb9f746a60574a8060cedc72c2998",
+                            "AssetGUID": "06efb9f746a60574a8060cedc72c2998",
                             "guidRef": "06efb9f746a60574a8060cedc72c2998"
                           },
                           {
                             "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                            "GUID": "b399227a1df969f42810d4c132382795",
+                            "AssetGUID": "b399227a1df969f42810d4c132382795",
                             "guidRef": "b399227a1df969f42810d4c132382795"
                           },
                           {
                             "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                            "GUID": "86f8f1775a83a684dab5562a4f2fa1cf",
+                            "AssetGUID": "86f8f1775a83a684dab5562a4f2fa1cf",
                             "guidRef": "86f8f1775a83a684dab5562a4f2fa1cf"
                           },
                           {
                             "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                            "GUID": "67871f62bb9f70a4b8bc1d87f58f57ba",
+                            "AssetGUID": "67871f62bb9f70a4b8bc1d87f58f57ba",
                             "guidRef": "67871f62bb9f70a4b8bc1d87f58f57ba"
                           },
                           {
                             "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                            "GUID": "909d3637af681e248a5ec65ff414c13f",
+                            "AssetGUID": "909d3637af681e248a5ec65ff414c13f",
                             "guidRef": "909d3637af681e248a5ec65ff414c13f"
                           },
                           {
                             "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                            "GUID": "f7af270b4bf613d4b93cab43442fc4ef",
+                            "AssetGUID": "f7af270b4bf613d4b93cab43442fc4ef",
                             "guidRef": "f7af270b4bf613d4b93cab43442fc4ef"
                           },
                           {
                             "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                            "GUID": "10da519ce46d9054eb3624a041b9fcb0",
+                            "AssetGUID": "10da519ce46d9054eb3624a041b9fcb0",
                             "guidRef": "10da519ce46d9054eb3624a041b9fcb0"
                           },
                           {
                             "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                            "GUID": "f7215612ecce85d4eb6fc54e1ba43492",
+                            "AssetGUID": "f7215612ecce85d4eb6fc54e1ba43492",
                             "guidRef": "f7215612ecce85d4eb6fc54e1ba43492"
                           },
                           {
                             "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                            "GUID": "57b53f7bdfaa86d499745d6f4998ee61",
+                            "AssetGUID": "57b53f7bdfaa86d499745d6f4998ee61",
                             "guidRef": "57b53f7bdfaa86d499745d6f4998ee61"
                           },
                           {
                             "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                            "GUID": "04798a9599f1fdf4b83c91aca80240e7",
+                            "AssetGUID": "04798a9599f1fdf4b83c91aca80240e7",
                             "guidRef": "04798a9599f1fdf4b83c91aca80240e7"
                           },
                           {
                             "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                            "GUID": "a45b9d1f1df836c4da410ff21f8bc1f9",
+                            "AssetGUID": "a45b9d1f1df836c4da410ff21f8bc1f9",
                             "guidRef": "a45b9d1f1df836c4da410ff21f8bc1f9"
                           },
                           {
                             "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                            "GUID": "8e2802d4bd3d42e4cb192c6bbcef0173",
+                            "AssetGUID": "8e2802d4bd3d42e4cb192c6bbcef0173",
                             "guidRef": "8e2802d4bd3d42e4cb192c6bbcef0173"
                           }
                         ],
@@ -4156,7 +4244,7 @@
                         "$type": "Assets.Scripts.Models.GenericBehaviors.DisplayModel, Assembly-CSharp",
                         "display": {
                           "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                          "GUID": null,
+                          "AssetGUID": null,
                           "guidRef": null
                         },
                         "layer": 0,
@@ -4187,6 +4275,7 @@
                     "ignoreNonTargetable": false,
                     "ignorePierceExhaustion": false,
                     "saveId": null,
+                    "displayModel": null,
                     "CappedPierce": 10.0,
                     "name": "ProjectileModel_Projectile",
                     "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Projectile, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
@@ -4272,7 +4361,7 @@
                     "$type": "Assets.Scripts.Models.Towers.Projectiles.ProjectileModel, Assembly-CSharp",
                     "display": {
                       "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                      "GUID": null,
+                      "AssetGUID": null,
                       "guidRef": null
                     },
                     "id": "Projectile",
@@ -4398,102 +4487,102 @@
                         "sprites": [
                           {
                             "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                            "GUID": "ff7ada25698ff484f87767a8c4b01865",
+                            "AssetGUID": "ff7ada25698ff484f87767a8c4b01865",
                             "guidRef": "ff7ada25698ff484f87767a8c4b01865"
                           },
                           {
                             "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                            "GUID": "44f458dc60fb8834eaf6677455998e6f",
+                            "AssetGUID": "44f458dc60fb8834eaf6677455998e6f",
                             "guidRef": "44f458dc60fb8834eaf6677455998e6f"
                           },
                           {
                             "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                            "GUID": "85f9b4d05a53e644ca31e7ed6de494f6",
+                            "AssetGUID": "85f9b4d05a53e644ca31e7ed6de494f6",
                             "guidRef": "85f9b4d05a53e644ca31e7ed6de494f6"
                           },
                           {
                             "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                            "GUID": "ac2e0f6dd632c9049b2ddcfed21454c8",
+                            "AssetGUID": "ac2e0f6dd632c9049b2ddcfed21454c8",
                             "guidRef": "ac2e0f6dd632c9049b2ddcfed21454c8"
                           },
                           {
                             "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                            "GUID": "2d9755bf10a45cb4d8dcb1ea56ac829a",
+                            "AssetGUID": "2d9755bf10a45cb4d8dcb1ea56ac829a",
                             "guidRef": "2d9755bf10a45cb4d8dcb1ea56ac829a"
                           },
                           {
                             "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                            "GUID": "b3049788c3b19724fa85a5ca2e34dff3",
+                            "AssetGUID": "b3049788c3b19724fa85a5ca2e34dff3",
                             "guidRef": "b3049788c3b19724fa85a5ca2e34dff3"
                           },
                           {
                             "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                            "GUID": "f450fd35ab8825b48b4a9457bf771f9a",
+                            "AssetGUID": "f450fd35ab8825b48b4a9457bf771f9a",
                             "guidRef": "f450fd35ab8825b48b4a9457bf771f9a"
                           },
                           {
                             "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                            "GUID": "d07b55cb3f1b96a439a796af3f38f44c",
+                            "AssetGUID": "d07b55cb3f1b96a439a796af3f38f44c",
                             "guidRef": "d07b55cb3f1b96a439a796af3f38f44c"
                           },
                           {
                             "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                            "GUID": "06efb9f746a60574a8060cedc72c2998",
+                            "AssetGUID": "06efb9f746a60574a8060cedc72c2998",
                             "guidRef": "06efb9f746a60574a8060cedc72c2998"
                           },
                           {
                             "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                            "GUID": "b399227a1df969f42810d4c132382795",
+                            "AssetGUID": "b399227a1df969f42810d4c132382795",
                             "guidRef": "b399227a1df969f42810d4c132382795"
                           },
                           {
                             "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                            "GUID": "86f8f1775a83a684dab5562a4f2fa1cf",
+                            "AssetGUID": "86f8f1775a83a684dab5562a4f2fa1cf",
                             "guidRef": "86f8f1775a83a684dab5562a4f2fa1cf"
                           },
                           {
                             "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                            "GUID": "67871f62bb9f70a4b8bc1d87f58f57ba",
+                            "AssetGUID": "67871f62bb9f70a4b8bc1d87f58f57ba",
                             "guidRef": "67871f62bb9f70a4b8bc1d87f58f57ba"
                           },
                           {
                             "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                            "GUID": "909d3637af681e248a5ec65ff414c13f",
+                            "AssetGUID": "909d3637af681e248a5ec65ff414c13f",
                             "guidRef": "909d3637af681e248a5ec65ff414c13f"
                           },
                           {
                             "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                            "GUID": "f7af270b4bf613d4b93cab43442fc4ef",
+                            "AssetGUID": "f7af270b4bf613d4b93cab43442fc4ef",
                             "guidRef": "f7af270b4bf613d4b93cab43442fc4ef"
                           },
                           {
                             "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                            "GUID": "10da519ce46d9054eb3624a041b9fcb0",
+                            "AssetGUID": "10da519ce46d9054eb3624a041b9fcb0",
                             "guidRef": "10da519ce46d9054eb3624a041b9fcb0"
                           },
                           {
                             "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                            "GUID": "f7215612ecce85d4eb6fc54e1ba43492",
+                            "AssetGUID": "f7215612ecce85d4eb6fc54e1ba43492",
                             "guidRef": "f7215612ecce85d4eb6fc54e1ba43492"
                           },
                           {
                             "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                            "GUID": "57b53f7bdfaa86d499745d6f4998ee61",
+                            "AssetGUID": "57b53f7bdfaa86d499745d6f4998ee61",
                             "guidRef": "57b53f7bdfaa86d499745d6f4998ee61"
                           },
                           {
                             "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                            "GUID": "04798a9599f1fdf4b83c91aca80240e7",
+                            "AssetGUID": "04798a9599f1fdf4b83c91aca80240e7",
                             "guidRef": "04798a9599f1fdf4b83c91aca80240e7"
                           },
                           {
                             "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                            "GUID": "a45b9d1f1df836c4da410ff21f8bc1f9",
+                            "AssetGUID": "a45b9d1f1df836c4da410ff21f8bc1f9",
                             "guidRef": "a45b9d1f1df836c4da410ff21f8bc1f9"
                           },
                           {
                             "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                            "GUID": "8e2802d4bd3d42e4cb192c6bbcef0173",
+                            "AssetGUID": "8e2802d4bd3d42e4cb192c6bbcef0173",
                             "guidRef": "8e2802d4bd3d42e4cb192c6bbcef0173"
                           }
                         ],
@@ -4705,7 +4794,7 @@
                         "$type": "Assets.Scripts.Models.GenericBehaviors.DisplayModel, Assembly-CSharp",
                         "display": {
                           "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                          "GUID": null,
+                          "AssetGUID": null,
                           "guidRef": null
                         },
                         "layer": 0,
@@ -4736,6 +4825,7 @@
                     "ignoreNonTargetable": false,
                     "ignorePierceExhaustion": false,
                     "saveId": null,
+                    "displayModel": null,
                     "CappedPierce": 10.0,
                     "name": "ProjectileModel_Projectile",
                     "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Projectile, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
@@ -4821,7 +4911,7 @@
                     "$type": "Assets.Scripts.Models.Towers.Projectiles.ProjectileModel, Assembly-CSharp",
                     "display": {
                       "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                      "GUID": null,
+                      "AssetGUID": null,
                       "guidRef": null
                     },
                     "id": "Projectile",
@@ -4947,102 +5037,102 @@
                         "sprites": [
                           {
                             "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                            "GUID": "ff7ada25698ff484f87767a8c4b01865",
+                            "AssetGUID": "ff7ada25698ff484f87767a8c4b01865",
                             "guidRef": "ff7ada25698ff484f87767a8c4b01865"
                           },
                           {
                             "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                            "GUID": "44f458dc60fb8834eaf6677455998e6f",
+                            "AssetGUID": "44f458dc60fb8834eaf6677455998e6f",
                             "guidRef": "44f458dc60fb8834eaf6677455998e6f"
                           },
                           {
                             "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                            "GUID": "85f9b4d05a53e644ca31e7ed6de494f6",
+                            "AssetGUID": "85f9b4d05a53e644ca31e7ed6de494f6",
                             "guidRef": "85f9b4d05a53e644ca31e7ed6de494f6"
                           },
                           {
                             "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                            "GUID": "ac2e0f6dd632c9049b2ddcfed21454c8",
+                            "AssetGUID": "ac2e0f6dd632c9049b2ddcfed21454c8",
                             "guidRef": "ac2e0f6dd632c9049b2ddcfed21454c8"
                           },
                           {
                             "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                            "GUID": "2d9755bf10a45cb4d8dcb1ea56ac829a",
+                            "AssetGUID": "2d9755bf10a45cb4d8dcb1ea56ac829a",
                             "guidRef": "2d9755bf10a45cb4d8dcb1ea56ac829a"
                           },
                           {
                             "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                            "GUID": "b3049788c3b19724fa85a5ca2e34dff3",
+                            "AssetGUID": "b3049788c3b19724fa85a5ca2e34dff3",
                             "guidRef": "b3049788c3b19724fa85a5ca2e34dff3"
                           },
                           {
                             "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                            "GUID": "f450fd35ab8825b48b4a9457bf771f9a",
+                            "AssetGUID": "f450fd35ab8825b48b4a9457bf771f9a",
                             "guidRef": "f450fd35ab8825b48b4a9457bf771f9a"
                           },
                           {
                             "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                            "GUID": "d07b55cb3f1b96a439a796af3f38f44c",
+                            "AssetGUID": "d07b55cb3f1b96a439a796af3f38f44c",
                             "guidRef": "d07b55cb3f1b96a439a796af3f38f44c"
                           },
                           {
                             "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                            "GUID": "06efb9f746a60574a8060cedc72c2998",
+                            "AssetGUID": "06efb9f746a60574a8060cedc72c2998",
                             "guidRef": "06efb9f746a60574a8060cedc72c2998"
                           },
                           {
                             "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                            "GUID": "b399227a1df969f42810d4c132382795",
+                            "AssetGUID": "b399227a1df969f42810d4c132382795",
                             "guidRef": "b399227a1df969f42810d4c132382795"
                           },
                           {
                             "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                            "GUID": "86f8f1775a83a684dab5562a4f2fa1cf",
+                            "AssetGUID": "86f8f1775a83a684dab5562a4f2fa1cf",
                             "guidRef": "86f8f1775a83a684dab5562a4f2fa1cf"
                           },
                           {
                             "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                            "GUID": "67871f62bb9f70a4b8bc1d87f58f57ba",
+                            "AssetGUID": "67871f62bb9f70a4b8bc1d87f58f57ba",
                             "guidRef": "67871f62bb9f70a4b8bc1d87f58f57ba"
                           },
                           {
                             "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                            "GUID": "909d3637af681e248a5ec65ff414c13f",
+                            "AssetGUID": "909d3637af681e248a5ec65ff414c13f",
                             "guidRef": "909d3637af681e248a5ec65ff414c13f"
                           },
                           {
                             "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                            "GUID": "f7af270b4bf613d4b93cab43442fc4ef",
+                            "AssetGUID": "f7af270b4bf613d4b93cab43442fc4ef",
                             "guidRef": "f7af270b4bf613d4b93cab43442fc4ef"
                           },
                           {
                             "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                            "GUID": "10da519ce46d9054eb3624a041b9fcb0",
+                            "AssetGUID": "10da519ce46d9054eb3624a041b9fcb0",
                             "guidRef": "10da519ce46d9054eb3624a041b9fcb0"
                           },
                           {
                             "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                            "GUID": "f7215612ecce85d4eb6fc54e1ba43492",
+                            "AssetGUID": "f7215612ecce85d4eb6fc54e1ba43492",
                             "guidRef": "f7215612ecce85d4eb6fc54e1ba43492"
                           },
                           {
                             "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                            "GUID": "57b53f7bdfaa86d499745d6f4998ee61",
+                            "AssetGUID": "57b53f7bdfaa86d499745d6f4998ee61",
                             "guidRef": "57b53f7bdfaa86d499745d6f4998ee61"
                           },
                           {
                             "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                            "GUID": "04798a9599f1fdf4b83c91aca80240e7",
+                            "AssetGUID": "04798a9599f1fdf4b83c91aca80240e7",
                             "guidRef": "04798a9599f1fdf4b83c91aca80240e7"
                           },
                           {
                             "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                            "GUID": "a45b9d1f1df836c4da410ff21f8bc1f9",
+                            "AssetGUID": "a45b9d1f1df836c4da410ff21f8bc1f9",
                             "guidRef": "a45b9d1f1df836c4da410ff21f8bc1f9"
                           },
                           {
                             "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                            "GUID": "8e2802d4bd3d42e4cb192c6bbcef0173",
+                            "AssetGUID": "8e2802d4bd3d42e4cb192c6bbcef0173",
                             "guidRef": "8e2802d4bd3d42e4cb192c6bbcef0173"
                           }
                         ],
@@ -5254,7 +5344,7 @@
                         "$type": "Assets.Scripts.Models.GenericBehaviors.DisplayModel, Assembly-CSharp",
                         "display": {
                           "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                          "GUID": null,
+                          "AssetGUID": null,
                           "guidRef": null
                         },
                         "layer": 0,
@@ -5285,6 +5375,7 @@
                     "ignoreNonTargetable": false,
                     "ignorePierceExhaustion": false,
                     "saveId": null,
+                    "displayModel": null,
                     "CappedPierce": 10.0,
                     "name": "ProjectileModel_Projectile",
                     "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Projectile, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
@@ -5367,9 +5458,9 @@
           "sound": {
             "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
             "assetId": {
-              "$type": "NinjaKiwi.Common.ResourceUtils.AudioSourceReference, NinjaKiwi.Common",
-              "GUID": "fdbde1ab68c7dde46bb25cdcc7d6a00a",
-              "guidRef": "fdbde1ab68c7dde46bb25cdcc7d6a00a"
+              "$type": "NinjaKiwi.Common.ResourceUtils.AudioClipReference, NinjaKiwi.Common",
+              "AssetGUID": "37c9ca9c50444e74eaa009656e326f9b",
+              "guidRef": "37c9ca9c50444e74eaa009656e326f9b"
             },
             "name": "SoundModel_ActivatedCarpetOfSpikes",
             "ImplementationType": null
@@ -5385,7 +5476,7 @@
             "$type": "Assets.Scripts.Models.Effects.EffectModel, Assembly-CSharp",
             "assetId": {
               "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-              "GUID": "d824462fe7b1feb498568ad299bc547e",
+              "AssetGUID": "d824462fe7b1feb498568ad299bc547e",
               "guidRef": "d824462fe7b1feb498568ad299bc547e"
             },
             "scale": 1.0,
@@ -5437,7 +5528,7 @@
       "$type": "Assets.Scripts.Models.GenericBehaviors.DisplayModel, Assembly-CSharp",
       "display": {
         "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-        "GUID": "f29c3becdd07c854c96af4eb5735d7b3",
+        "AssetGUID": "f29c3becdd07c854c96af4eb5735d7b3",
         "guidRef": "f29c3becdd07c854c96af4eb5735d7b3"
       },
       "layer": -1,
@@ -5457,85 +5548,13 @@
       "ImplementationType": "Assets.Scripts.Simulation.Behaviors.DisplayBehavior, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
     }
   ],
-  "footprint": {
-    "$type": "Assets.Scripts.Models.Towers.Behaviors.CircleFootprintModel, Assembly-CSharp",
-    "radius": 8.0,
-    "doesntBlockTowerPlacement": false,
-    "ignoresPlacementCheck": false,
-    "ignoresTowerOverlap": false,
-    "name": "CircleFootprintModel_Circle Footprint",
-    "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.CircleFootprint, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-  },
-  "dontDisplayUpgrades": false,
-  "emoteSpriteSmall": {
-    "$type": "NinjaKiwi.Common.ResourceUtils.SpriteReference, NinjaKiwi.Common",
-    "GUID": null,
-    "guidRef": null
-  },
-  "emoteSpriteLarge": {
-    "$type": "NinjaKiwi.Common.ResourceUtils.SpriteReference, NinjaKiwi.Common",
-    "GUID": null,
-    "guidRef": null
-  },
-  "doesntRotate": true,
-  "upgrades": [
-    {
-      "$type": "Assets.Scripts.Models.Towers.Upgrades.UpgradePathModel, Assembly-CSharp",
-      "tower": "SpikeFactory-150",
-      "upgrade": "Bigger Stacks"
-    },
-    {
-      "$type": "Assets.Scripts.Models.Towers.Upgrades.UpgradePathModel, Assembly-CSharp",
-      "tower": "SpikeFactory-051",
-      "upgrade": "Long Reach"
-    }
-  ],
-  "appliedUpgrades": [
-    "Faster Production",
-    "Even Faster Production",
-    "MOAB SHREDR",
-    "Spike Storm",
-    "Carpet of Spikes"
-  ],
-  "targetTypes": [
-    {
-      "$type": "Assets.Scripts.Models.Towers.TargetType, Assembly-CSharp",
-      "id": "Track",
-      "isActionable": false,
-      "actionOnCreate": false,
-      "intID": -1,
-      "continueToNextPriority": false
-    }
-  ],
-  "paragonUpgrade": null,
-  "isSubTower": false,
-  "isBakable": true,
-  "powerName": null,
-  "showPowerTowerBuffs": false,
-  "animationSpeed": 1.0,
-  "towerSelectionMenuThemeId": "Default",
-  "secondarySelectionMenu": {
-    "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-    "GUID": null,
-    "guidRef": null
-  },
-  "ignoreCoopAreas": false,
-  "canAlwaysBeSold": false,
-  "blockSelling": false,
-  "isParagon": false,
-  "ignoreMaxSellPercent": false,
-  "isStunned": false,
-  "geraldoItemName": null,
-  "sellbackModifierAdd": 0.0,
-  "skinName": null,
-  "dontAddMutatorsFromParent": false,
-  "displayScale": 1.0,
-  "showBuffs": true,
-  "destroyTowerOnRedistribution": false,
+  "radius": 8.0,
   "isPowerTower": false,
   "isGeraldoItem": false,
   "IsBeastHandlerPet": false,
   "SelectParentOnSelected": false,
+  "DisplayScale": 1.0,
+  "IsSubEntity": false,
   "BeastHandlerLeashMutationId": "BeastHandlerContributionSpikeFactory",
   "IsBaseTower": false,
   "TargetTypes": [
@@ -5549,6 +5568,7 @@
     }
   ],
   "IsExclusivelyWaterBased": false,
+  "RadiusSquared": 0.0,
   "name": "SpikeFactory-050",
   "ImplementationType": "Assets.Scripts.Simulation.Towers.Tower, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
 }

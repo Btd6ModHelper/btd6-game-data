@@ -1,14 +1,6 @@
 {
   "$type": "Assets.Scripts.Models.Towers.TowerModel, Assembly-CSharp",
-  "display": {
-    "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-    "GUID": "cddca470955e4e64da4063f1aa110f2b",
-    "guidRef": "cddca470955e4e64da4063f1aa110f2b"
-  },
-  "baseId": "Quincy",
   "cost": 540.0,
-  "radius": 7.0,
-  "radiusSquared": 49.0,
   "range": 50.0,
   "ignoreBlockers": false,
   "isGlobalRange": false,
@@ -21,17 +13,22 @@
   "towerSet": 16,
   "icon": {
     "$type": "NinjaKiwi.Common.ResourceUtils.SpriteReference, NinjaKiwi.Common",
-    "GUID": "MonkeyIcons[QuincyIcon]",
+    "AssetGUID": "MonkeyIcons[QuincyIcon]",
     "guidRef": "MonkeyIcons[QuincyIcon]"
+  },
+  "icon3D": {
+    "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
+    "AssetGUID": null,
+    "guidRef": null
   },
   "portrait": {
     "$type": "NinjaKiwi.Common.ResourceUtils.SpriteReference, NinjaKiwi.Common",
-    "GUID": "f49307e95b921974cb9e1baadf2352fb",
+    "AssetGUID": "f49307e95b921974cb9e1baadf2352fb",
     "guidRef": "f49307e95b921974cb9e1baadf2352fb"
   },
   "instaIcon": {
     "$type": "NinjaKiwi.Common.ResourceUtils.SpriteReference, NinjaKiwi.Common",
-    "GUID": null,
+    "AssetGUID": null,
     "guidRef": null
   },
   "areaTypes": [
@@ -138,6 +135,104 @@
     }
   ],
   "ignoreTowerForSelection": false,
+  "footprint": {
+    "$type": "Assets.Scripts.Models.Towers.Behaviors.CircleFootprintModel, Assembly-CSharp",
+    "radius": 7.0,
+    "doesntBlockTowerPlacement": false,
+    "ignoresPlacementCheck": false,
+    "ignoresTowerOverlap": false,
+    "name": "CircleFootprintModel_Circle Footprint",
+    "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.CircleFootprint, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+  },
+  "dontDisplayUpgrades": false,
+  "emoteSpriteSmall": {
+    "$type": "NinjaKiwi.Common.ResourceUtils.SpriteReference, NinjaKiwi.Common",
+    "AssetGUID": "UiEmoteIcons[EmoteQuincy]",
+    "guidRef": "UiEmoteIcons[EmoteQuincy]"
+  },
+  "emoteSpriteLarge": {
+    "$type": "NinjaKiwi.Common.ResourceUtils.SpriteReference, NinjaKiwi.Common",
+    "AssetGUID": "58425d8460442024b9f76b31851c8e7f",
+    "guidRef": "58425d8460442024b9f76b31851c8e7f"
+  },
+  "doesntRotate": false,
+  "upgrades": [
+    {
+      "$type": "Assets.Scripts.Models.Towers.Upgrades.UpgradePathModel, Assembly-CSharp",
+      "tower": "Quincy 3",
+      "upgrade": "Quincy Rapid Shot",
+      "name": "UpgradePathModel_UpgradePathModel",
+      "ImplementationType": null
+    }
+  ],
+  "appliedUpgrades": [
+    "Quincy Ricochet 4"
+  ],
+  "targetTypes": [
+    {
+      "$type": "Assets.Scripts.Models.Towers.TargetType, Assembly-CSharp",
+      "id": "First",
+      "isActionable": false,
+      "actionOnCreate": false,
+      "intID": 0,
+      "continueToNextPriority": false
+    },
+    {
+      "$type": "Assets.Scripts.Models.Towers.TargetType, Assembly-CSharp",
+      "id": "Last",
+      "isActionable": false,
+      "actionOnCreate": false,
+      "intID": 1,
+      "continueToNextPriority": false
+    },
+    {
+      "$type": "Assets.Scripts.Models.Towers.TargetType, Assembly-CSharp",
+      "id": "Close",
+      "isActionable": false,
+      "actionOnCreate": false,
+      "intID": 2,
+      "continueToNextPriority": false
+    },
+    {
+      "$type": "Assets.Scripts.Models.Towers.TargetType, Assembly-CSharp",
+      "id": "Strong",
+      "isActionable": false,
+      "actionOnCreate": false,
+      "intID": 3,
+      "continueToNextPriority": false
+    }
+  ],
+  "paragonUpgrade": null,
+  "isSubTower": false,
+  "isBakable": true,
+  "powerName": null,
+  "showPowerTowerBuffs": false,
+  "animationSpeed": 1.0,
+  "towerSelectionMenuThemeId": "Default",
+  "secondarySelectionMenu": {
+    "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
+    "AssetGUID": null,
+    "guidRef": null
+  },
+  "ignoreCoopAreas": false,
+  "canAlwaysBeSold": false,
+  "blockSelling": false,
+  "isParagon": false,
+  "ignoreMaxSellPercent": false,
+  "isStunned": false,
+  "geraldoItemName": null,
+  "sellbackModifierAdd": 0.0,
+  "skinName": null,
+  "dontAddMutatorsFromParent": false,
+  "showBuffs": true,
+  "destroyTowerOnRedistribution": false,
+  "displayScale": 1.0,
+  "baseId": "Quincy",
+  "display": {
+    "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
+    "AssetGUID": "cddca470955e4e64da4063f1aa110f2b",
+    "guidRef": "cddca470955e4e64da4063f1aa110f2b"
+  },
   "behaviors": [
     {
       "$type": "Assets.Scripts.Models.Towers.Behaviors.HeroModel, Assembly-CSharp",
@@ -152,7 +247,7 @@
         "$type": "Assets.Scripts.Models.Effects.EffectModel, Assembly-CSharp",
         "assetId": {
           "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-          "GUID": "708be580149dc444d89314b6d9f388e9",
+          "AssetGUID": "708be580149dc444d89314b6d9f388e9",
           "guidRef": "708be580149dc444d89314b6d9f388e9"
         },
         "scale": 1.0,
@@ -175,11 +270,11 @@
       "sound": {
         "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
         "assetId": {
-          "$type": "NinjaKiwi.Common.ResourceUtils.AudioSourceReference, NinjaKiwi.Common",
-          "GUID": "df4c691ccf8a3c7408ed6f156740c8b7",
-          "guidRef": "df4c691ccf8a3c7408ed6f156740c8b7"
+          "$type": "NinjaKiwi.Common.ResourceUtils.AudioClipReference, NinjaKiwi.Common",
+          "AssetGUID": "a8c789893d4275749af12c1efda9dd3e",
+          "guidRef": "a8c789893d4275749af12c1efda9dd3e"
         },
-        "name": "SoundModel_SellSound",
+        "name": "SoundModel_UISell",
         "ImplementationType": null
       },
       "name": "CreateSoundOnSellModel_Quincy 2",
@@ -190,91 +285,91 @@
       "sound": {
         "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
         "assetId": {
-          "$type": "NinjaKiwi.Common.ResourceUtils.AudioSourceReference, NinjaKiwi.Common",
-          "GUID": "23a777b9950195f4f8f4bf745ef84031",
-          "guidRef": "23a777b9950195f4f8f4bf745ef84031"
+          "$type": "NinjaKiwi.Common.ResourceUtils.AudioClipReference, NinjaKiwi.Common",
+          "AssetGUID": "f91dc7ea1b37815459e81e99254863ab",
+          "guidRef": "f91dc7ea1b37815459e81e99254863ab"
         },
-        "name": "SoundModel_UpgradeSound",
+        "name": "SoundModel_TowerUpgrade",
         "ImplementationType": null
       },
       "sound1": {
         "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
         "assetId": {
-          "$type": "NinjaKiwi.Common.ResourceUtils.AudioSourceReference, NinjaKiwi.Common",
-          "GUID": "3580f59e1453ee844ae4269efd0a8f5e",
-          "guidRef": "3580f59e1453ee844ae4269efd0a8f5e"
+          "$type": "NinjaKiwi.Common.ResourceUtils.AudioClipReference, NinjaKiwi.Common",
+          "AssetGUID": "a937cb85c220162408f765709527106e",
+          "guidRef": "a937cb85c220162408f765709527106e"
         },
-        "name": "SoundModel_UpgradeSound1",
+        "name": "SoundModel_UpgradeQuincy01",
         "ImplementationType": null
       },
       "sound2": {
         "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
         "assetId": {
-          "$type": "NinjaKiwi.Common.ResourceUtils.AudioSourceReference, NinjaKiwi.Common",
-          "GUID": "aeb6ab526df8fde4791eb9bc76b6a4ca",
-          "guidRef": "aeb6ab526df8fde4791eb9bc76b6a4ca"
+          "$type": "NinjaKiwi.Common.ResourceUtils.AudioClipReference, NinjaKiwi.Common",
+          "AssetGUID": "adc460006f199e444a934cd4c407740b",
+          "guidRef": "adc460006f199e444a934cd4c407740b"
         },
-        "name": "SoundModel_UpgradeSound2",
+        "name": "SoundModel_UpgradeQuincy02",
         "ImplementationType": null
       },
       "sound3": {
         "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
         "assetId": {
-          "$type": "NinjaKiwi.Common.ResourceUtils.AudioSourceReference, NinjaKiwi.Common",
-          "GUID": "6346ecb368aaf07468fcdac3eb938e89",
-          "guidRef": "6346ecb368aaf07468fcdac3eb938e89"
+          "$type": "NinjaKiwi.Common.ResourceUtils.AudioClipReference, NinjaKiwi.Common",
+          "AssetGUID": "aaa5394eda0c4e549801d1e6f41bef76",
+          "guidRef": "aaa5394eda0c4e549801d1e6f41bef76"
         },
-        "name": "SoundModel_UpgradeSound3",
+        "name": "SoundModel_UpgradeQuincy03",
         "ImplementationType": null
       },
       "sound4": {
         "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
         "assetId": {
-          "$type": "NinjaKiwi.Common.ResourceUtils.AudioSourceReference, NinjaKiwi.Common",
-          "GUID": "b99fb9b92ac3e914aa02409b159c29e1",
-          "guidRef": "b99fb9b92ac3e914aa02409b159c29e1"
+          "$type": "NinjaKiwi.Common.ResourceUtils.AudioClipReference, NinjaKiwi.Common",
+          "AssetGUID": "20dcd0d32d2a22b4e98585ff913d8594",
+          "guidRef": "20dcd0d32d2a22b4e98585ff913d8594"
         },
-        "name": "SoundModel_UpgradeSound4",
+        "name": "SoundModel_UpgradeQuincy04",
         "ImplementationType": null
       },
       "sound5": {
         "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
         "assetId": {
-          "$type": "NinjaKiwi.Common.ResourceUtils.AudioSourceReference, NinjaKiwi.Common",
-          "GUID": "b0a3fb8d2a22c4e4d870aa14b9727f10",
-          "guidRef": "b0a3fb8d2a22c4e4d870aa14b9727f10"
+          "$type": "NinjaKiwi.Common.ResourceUtils.AudioClipReference, NinjaKiwi.Common",
+          "AssetGUID": "7b4eb246aa444634db32d1815ec96fb0",
+          "guidRef": "7b4eb246aa444634db32d1815ec96fb0"
         },
-        "name": "SoundModel_UpgradeSound5",
+        "name": "SoundModel_UpgradeQuincy05",
         "ImplementationType": null
       },
       "sound6": {
         "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
         "assetId": {
-          "$type": "NinjaKiwi.Common.ResourceUtils.AudioSourceReference, NinjaKiwi.Common",
-          "GUID": "6fe3bad8a310a4f45a96b02593a19328",
-          "guidRef": "6fe3bad8a310a4f45a96b02593a19328"
+          "$type": "NinjaKiwi.Common.ResourceUtils.AudioClipReference, NinjaKiwi.Common",
+          "AssetGUID": "bcf8fa8eccabd1044a982f02c9618a1c",
+          "guidRef": "bcf8fa8eccabd1044a982f02c9618a1c"
         },
-        "name": "SoundModel_UpgradeSound6",
+        "name": "SoundModel_UpgradeQuincy06",
         "ImplementationType": null
       },
       "sound7": {
         "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
         "assetId": {
-          "$type": "NinjaKiwi.Common.ResourceUtils.AudioSourceReference, NinjaKiwi.Common",
-          "GUID": "02c983c76c5e59e47ae1b753c99c58be",
-          "guidRef": "02c983c76c5e59e47ae1b753c99c58be"
+          "$type": "NinjaKiwi.Common.ResourceUtils.AudioClipReference, NinjaKiwi.Common",
+          "AssetGUID": "397fd79afea67134ab05e9451ecc1206",
+          "guidRef": "397fd79afea67134ab05e9451ecc1206"
         },
-        "name": "SoundModel_UpgradeSound7",
+        "name": "SoundModel_UpgradeQuincy07",
         "ImplementationType": null
       },
       "sound8": {
         "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
         "assetId": {
-          "$type": "NinjaKiwi.Common.ResourceUtils.AudioSourceReference, NinjaKiwi.Common",
-          "GUID": "f9d4b11f9107a6e44b919fadc40ddfb6",
-          "guidRef": "f9d4b11f9107a6e44b919fadc40ddfb6"
+          "$type": "NinjaKiwi.Common.ResourceUtils.AudioClipReference, NinjaKiwi.Common",
+          "AssetGUID": "3968ad4ad18f7644591efecbf5464979",
+          "guidRef": "3968ad4ad18f7644591efecbf5464979"
         },
-        "name": "SoundModel_UpgradeSound8",
+        "name": "SoundModel_UpgradeQuincy08",
         "ImplementationType": null
       },
       "name": "CreateSoundOnUpgradeModel_Quincy 2",
@@ -285,51 +380,51 @@
       "moabSound": {
         "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
         "assetId": {
-          "$type": "NinjaKiwi.Common.ResourceUtils.AudioSourceReference, NinjaKiwi.Common",
-          "GUID": "4055a01a4f9ec8d478b5e7df6922e43c",
-          "guidRef": "4055a01a4f9ec8d478b5e7df6922e43c"
+          "$type": "NinjaKiwi.Common.ResourceUtils.AudioClipReference, NinjaKiwi.Common",
+          "AssetGUID": "c935490018724114b9ed0b4f97f460bb",
+          "guidRef": "c935490018724114b9ed0b4f97f460bb"
         },
-        "name": "SoundModel_MoabWarningSound",
+        "name": "SoundModel_MoabWarningQuincy",
         "ImplementationType": null
       },
       "bfbSound": {
         "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
         "assetId": {
-          "$type": "NinjaKiwi.Common.ResourceUtils.AudioSourceReference, NinjaKiwi.Common",
-          "GUID": "00d4ea2dd92011848b6c7396c0005e9a",
-          "guidRef": "00d4ea2dd92011848b6c7396c0005e9a"
+          "$type": "NinjaKiwi.Common.ResourceUtils.AudioClipReference, NinjaKiwi.Common",
+          "AssetGUID": "77b65f86b0ac2f2408c3db91b19ced39",
+          "guidRef": "77b65f86b0ac2f2408c3db91b19ced39"
         },
-        "name": "SoundModel_BfbWarningSound",
+        "name": "SoundModel_BfbWarningQuincy",
         "ImplementationType": null
       },
       "ddtSound": {
         "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
         "assetId": {
-          "$type": "NinjaKiwi.Common.ResourceUtils.AudioSourceReference, NinjaKiwi.Common",
-          "GUID": "eb92c8d20fc2aae4b8c0f8e27ca86c3b",
-          "guidRef": "eb92c8d20fc2aae4b8c0f8e27ca86c3b"
+          "$type": "NinjaKiwi.Common.ResourceUtils.AudioClipReference, NinjaKiwi.Common",
+          "AssetGUID": "186c45e1035ada640bef399380804f39",
+          "guidRef": "186c45e1035ada640bef399380804f39"
         },
-        "name": "SoundModel_DdtWarningSound",
+        "name": "SoundModel_DdtWarningQuincy",
         "ImplementationType": null
       },
       "zomgSound": {
         "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
         "assetId": {
-          "$type": "NinjaKiwi.Common.ResourceUtils.AudioSourceReference, NinjaKiwi.Common",
-          "GUID": "722ec1c0c8f6b6449a49dc36f0bfd68a",
-          "guidRef": "722ec1c0c8f6b6449a49dc36f0bfd68a"
+          "$type": "NinjaKiwi.Common.ResourceUtils.AudioClipReference, NinjaKiwi.Common",
+          "AssetGUID": "55206fa33f4c41346bf2410479514657",
+          "guidRef": "55206fa33f4c41346bf2410479514657"
         },
-        "name": "SoundModel_ZomgWarningSound",
+        "name": "SoundModel_ZomgWarningQuincy",
         "ImplementationType": null
       },
       "badSound": {
         "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
         "assetId": {
-          "$type": "NinjaKiwi.Common.ResourceUtils.AudioSourceReference, NinjaKiwi.Common",
-          "GUID": "2c97d9e37cc55294f8b80011446d5834",
-          "guidRef": "2c97d9e37cc55294f8b80011446d5834"
+          "$type": "NinjaKiwi.Common.ResourceUtils.AudioClipReference, NinjaKiwi.Common",
+          "AssetGUID": "0b0ea907dc4b0674eb9ac7274c2fb44b",
+          "guidRef": "0b0ea907dc4b0674eb9ac7274c2fb44b"
         },
-        "name": "SoundModel_BadWarningSound",
+        "name": "SoundModel_BadWarningQuincy",
         "ImplementationType": null
       },
       "name": "CreateSoundOnBloonEnterTrackModel_Quincy 2",
@@ -340,21 +435,21 @@
       "sound1": {
         "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
         "assetId": {
-          "$type": "NinjaKiwi.Common.ResourceUtils.AudioSourceReference, NinjaKiwi.Common",
-          "GUID": "b77a70ec8554daa4a84c0539971b650b",
-          "guidRef": "b77a70ec8554daa4a84c0539971b650b"
+          "$type": "NinjaKiwi.Common.ResourceUtils.AudioClipReference, NinjaKiwi.Common",
+          "AssetGUID": "03ca68d39121a4a43ac16b07ae86df2c",
+          "guidRef": "03ca68d39121a4a43ac16b07ae86df2c"
         },
-        "name": "SoundModel_LeakSound01",
+        "name": "SoundModel_LeakQuincy01",
         "ImplementationType": null
       },
       "sound2": {
         "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
         "assetId": {
-          "$type": "NinjaKiwi.Common.ResourceUtils.AudioSourceReference, NinjaKiwi.Common",
-          "GUID": "fbae9f8e1b83781499d26f0c7af159b8",
-          "guidRef": "fbae9f8e1b83781499d26f0c7af159b8"
+          "$type": "NinjaKiwi.Common.ResourceUtils.AudioClipReference, NinjaKiwi.Common",
+          "AssetGUID": "02cece0a14a054845a3c2bd4290fc56a",
+          "guidRef": "02cece0a14a054845a3c2bd4290fc56a"
         },
-        "name": "SoundModel_LeakSound02",
+        "name": "SoundModel_LeakQuincy02",
         "ImplementationType": null
       },
       "name": "CreateSoundOnBloonLeakModel_Quincy 2",
@@ -365,81 +460,81 @@
       "sound1": {
         "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
         "assetId": {
-          "$type": "NinjaKiwi.Common.ResourceUtils.AudioSourceReference, NinjaKiwi.Common",
-          "GUID": "059a69b38a6566c4aa92e400fa3ddf1d",
-          "guidRef": "059a69b38a6566c4aa92e400fa3ddf1d"
+          "$type": "NinjaKiwi.Common.ResourceUtils.AudioClipReference, NinjaKiwi.Common",
+          "AssetGUID": "0ade22bbae9b57943aa75146712736a6",
+          "guidRef": "0ade22bbae9b57943aa75146712736a6"
         },
-        "name": "SoundModel_SelectedSound1",
+        "name": "SoundModel_SelectQuincy01",
         "ImplementationType": null
       },
       "sound2": {
         "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
         "assetId": {
-          "$type": "NinjaKiwi.Common.ResourceUtils.AudioSourceReference, NinjaKiwi.Common",
-          "GUID": "f8d98cef52e31f14da35279b2bec5b80",
-          "guidRef": "f8d98cef52e31f14da35279b2bec5b80"
+          "$type": "NinjaKiwi.Common.ResourceUtils.AudioClipReference, NinjaKiwi.Common",
+          "AssetGUID": "1c04d7f5c86013f4cb29f076d34f2ea3",
+          "guidRef": "1c04d7f5c86013f4cb29f076d34f2ea3"
         },
-        "name": "SoundModel_SelectedSound2",
+        "name": "SoundModel_SelectQuincy02",
         "ImplementationType": null
       },
       "sound3": {
         "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
         "assetId": {
-          "$type": "NinjaKiwi.Common.ResourceUtils.AudioSourceReference, NinjaKiwi.Common",
-          "GUID": "d823e0a9c746a6d4287d3bde7793ac3a",
-          "guidRef": "d823e0a9c746a6d4287d3bde7793ac3a"
+          "$type": "NinjaKiwi.Common.ResourceUtils.AudioClipReference, NinjaKiwi.Common",
+          "AssetGUID": "8ab9965cf42693e44a948dbd2df7b2d6",
+          "guidRef": "8ab9965cf42693e44a948dbd2df7b2d6"
         },
-        "name": "SoundModel_SelectedSound3",
+        "name": "SoundModel_SelectQuincy03",
         "ImplementationType": null
       },
       "sound4": {
         "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
         "assetId": {
-          "$type": "NinjaKiwi.Common.ResourceUtils.AudioSourceReference, NinjaKiwi.Common",
-          "GUID": "8a74968bbf585c0498c87eda2b96ae7a",
-          "guidRef": "8a74968bbf585c0498c87eda2b96ae7a"
+          "$type": "NinjaKiwi.Common.ResourceUtils.AudioClipReference, NinjaKiwi.Common",
+          "AssetGUID": "f9301521e67c7de4c94ea63fd737a738",
+          "guidRef": "f9301521e67c7de4c94ea63fd737a738"
         },
-        "name": "SoundModel_SelectedSound4",
+        "name": "SoundModel_SelectQuincy04",
         "ImplementationType": null
       },
       "sound5": {
         "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
         "assetId": {
-          "$type": "NinjaKiwi.Common.ResourceUtils.AudioSourceReference, NinjaKiwi.Common",
-          "GUID": "5bdee678045b1f54496bb72f8d1f2b25",
-          "guidRef": "5bdee678045b1f54496bb72f8d1f2b25"
+          "$type": "NinjaKiwi.Common.ResourceUtils.AudioClipReference, NinjaKiwi.Common",
+          "AssetGUID": "74296eaf72e0a0b4083d5f5cbe736060",
+          "guidRef": "74296eaf72e0a0b4083d5f5cbe736060"
         },
-        "name": "SoundModel_SelectedSound5",
+        "name": "SoundModel_SelectQuincy05",
         "ImplementationType": null
       },
       "sound6": {
         "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
         "assetId": {
-          "$type": "NinjaKiwi.Common.ResourceUtils.AudioSourceReference, NinjaKiwi.Common",
-          "GUID": "84c6f9a23736f914b8946ebaff6b6fb6",
-          "guidRef": "84c6f9a23736f914b8946ebaff6b6fb6"
+          "$type": "NinjaKiwi.Common.ResourceUtils.AudioClipReference, NinjaKiwi.Common",
+          "AssetGUID": "8653894cf8e297e47af63a930341e39f",
+          "guidRef": "8653894cf8e297e47af63a930341e39f"
         },
-        "name": "SoundModel_SelectedSound6",
+        "name": "SoundModel_SelectQuincy06",
         "ImplementationType": null
       },
       "altSound1": {
         "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
         "assetId": {
-          "$type": "NinjaKiwi.Common.ResourceUtils.AudioSourceReference, NinjaKiwi.Common",
-          "GUID": "e97a9fdf954993d479b64ebc332bc833",
-          "guidRef": "e97a9fdf954993d479b64ebc332bc833"
+          "$type": "NinjaKiwi.Common.ResourceUtils.AudioClipReference, NinjaKiwi.Common",
+          "AssetGUID": "b3e07149ae48abe4ea06e4fcb109bb20",
+          "guidRef": "b3e07149ae48abe4ea06e4fcb109bb20"
         },
-        "name": "SoundModel_AltSelectedSound1",
+        "name": "SoundModel_SelectAltQuincy01",
         "ImplementationType": null
       },
       "altSound2": {
         "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
         "assetId": {
-          "$type": "NinjaKiwi.Common.ResourceUtils.AudioSourceReference, NinjaKiwi.Common",
-          "GUID": "2ee6f9b19cdebb4409b8f75a4fe03989",
-          "guidRef": "2ee6f9b19cdebb4409b8f75a4fe03989"
+          "$type": "NinjaKiwi.Common.ResourceUtils.AudioClipReference, NinjaKiwi.Common",
+          "AssetGUID": "92f54b26aa21f954dbd2c48378ab658f",
+          "guidRef": "92f54b26aa21f954dbd2c48378ab658f"
         },
-        "name": "SoundModel_AltSelectedSound2",
+        "name": "SoundModel_SelectAltQuincy02",
         "ImplementationType": null
       },
       "name": "CreateSoundOnSelectedModel_Quincy 2",
@@ -451,7 +546,7 @@
         "$type": "Assets.Scripts.Models.Effects.EffectModel, Assembly-CSharp",
         "assetId": {
           "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-          "GUID": "b1dec8a8d79593843bc2e2410eae944e",
+          "AssetGUID": "b1dec8a8d79593843bc2e2410eae944e",
           "guidRef": "b1dec8a8d79593843bc2e2410eae944e"
         },
         "scale": 1.0,
@@ -481,21 +576,21 @@
       "sound1": {
         "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
         "assetId": {
-          "$type": "NinjaKiwi.Common.ResourceUtils.AudioSourceReference, NinjaKiwi.Common",
-          "GUID": "0782b04f742eb2542bc8266a38241c5b",
-          "guidRef": "0782b04f742eb2542bc8266a38241c5b"
+          "$type": "NinjaKiwi.Common.ResourceUtils.AudioClipReference, NinjaKiwi.Common",
+          "AssetGUID": "b680997e404133143997d51105f59451",
+          "guidRef": "b680997e404133143997d51105f59451"
         },
-        "name": "SoundModel_PlaceSound1",
+        "name": "SoundModel_PlaceTowerMonkey01",
         "ImplementationType": null
       },
       "sound2": {
         "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
         "assetId": {
-          "$type": "NinjaKiwi.Common.ResourceUtils.AudioSourceReference, NinjaKiwi.Common",
-          "GUID": "80580fcd99708624ab85e37036ca124c",
-          "guidRef": "80580fcd99708624ab85e37036ca124c"
+          "$type": "NinjaKiwi.Common.ResourceUtils.AudioClipReference, NinjaKiwi.Common",
+          "AssetGUID": "133e6e045f566e44ba09748ed2457a1f",
+          "guidRef": "133e6e045f566e44ba09748ed2457a1f"
         },
-        "name": "SoundModel_PlaceSound2",
+        "name": "SoundModel_PlaceTowerMonkey02",
         "ImplementationType": null
       },
       "waterSound1": null,
@@ -503,21 +598,21 @@
       "heroSound1": {
         "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
         "assetId": {
-          "$type": "NinjaKiwi.Common.ResourceUtils.AudioSourceReference, NinjaKiwi.Common",
-          "GUID": "c4472adcfd388b74cbf062d971513935",
-          "guidRef": "c4472adcfd388b74cbf062d971513935"
+          "$type": "NinjaKiwi.Common.ResourceUtils.AudioClipReference, NinjaKiwi.Common",
+          "AssetGUID": "72ba3cca5857ab948b26e3e3615ca0af",
+          "guidRef": "72ba3cca5857ab948b26e3e3615ca0af"
         },
-        "name": "SoundModel_PlacementSound1",
+        "name": "SoundModel_PlaceQuincy01",
         "ImplementationType": null
       },
       "heroSound2": {
         "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
         "assetId": {
-          "$type": "NinjaKiwi.Common.ResourceUtils.AudioSourceReference, NinjaKiwi.Common",
-          "GUID": "ac341f38516f21a48b39f6f474e4af18",
-          "guidRef": "ac341f38516f21a48b39f6f474e4af18"
+          "$type": "NinjaKiwi.Common.ResourceUtils.AudioClipReference, NinjaKiwi.Common",
+          "AssetGUID": "dec7a5f0b008dcb439b29efda3eb30f2",
+          "guidRef": "dec7a5f0b008dcb439b29efda3eb30f2"
         },
-        "name": "SoundModel_PlacementSound2",
+        "name": "SoundModel_PlaceQuincy02",
         "ImplementationType": null
       },
       "name": "CreateSoundOnTowerPlaceModel_Quincy 2",
@@ -529,7 +624,7 @@
         "$type": "Assets.Scripts.Models.Effects.EffectModel, Assembly-CSharp",
         "assetId": {
           "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-          "GUID": "9e800b22f83685141bcb398b78331495",
+          "AssetGUID": "9e800b22f83685141bcb398b78331495",
           "guidRef": "9e800b22f83685141bcb398b78331495"
         },
         "scale": 1.0,
@@ -553,21 +648,21 @@
       "sound1": {
         "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
         "assetId": {
-          "$type": "NinjaKiwi.Common.ResourceUtils.AudioSourceReference, NinjaKiwi.Common",
-          "GUID": "88194b9420e646041834834242038cbe",
-          "guidRef": "88194b9420e646041834834242038cbe"
+          "$type": "NinjaKiwi.Common.ResourceUtils.AudioClipReference, NinjaKiwi.Common",
+          "AssetGUID": "6a2ae7d1c1648874d917556b7c1cfaa5",
+          "guidRef": "6a2ae7d1c1648874d917556b7c1cfaa5"
         },
-        "name": "SoundModel_MoabDegradeSound1",
+        "name": "SoundModel_MoabDestroyedQuincy01",
         "ImplementationType": null
       },
       "sound2": {
         "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
         "assetId": {
-          "$type": "NinjaKiwi.Common.ResourceUtils.AudioSourceReference, NinjaKiwi.Common",
-          "GUID": "b058eb3281650674d801255200bafa8f",
-          "guidRef": "b058eb3281650674d801255200bafa8f"
+          "$type": "NinjaKiwi.Common.ResourceUtils.AudioClipReference, NinjaKiwi.Common",
+          "AssetGUID": "a975db52e4145a44cbfd496e1c0dca9e",
+          "guidRef": "a975db52e4145a44cbfd496e1c0dca9e"
         },
-        "name": "SoundModel_MoabDegradeSound2",
+        "name": "SoundModel_MoabDestroyedQuincy02",
         "ImplementationType": null
       },
       "tag": "Moabs",
@@ -593,7 +688,7 @@
             "$type": "Assets.Scripts.Models.Towers.Projectiles.ProjectileModel, Assembly-CSharp",
             "display": {
               "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-              "GUID": "d17c2a5dd3eaea04492e47828050e554",
+              "AssetGUID": "d17c2a5dd3eaea04492e47828050e554",
               "guidRef": "d17c2a5dd3eaea04492e47828050e554"
             },
             "id": "BaseProjectile",
@@ -690,7 +785,7 @@
                 "$type": "Assets.Scripts.Models.GenericBehaviors.DisplayModel, Assembly-CSharp",
                 "display": {
                   "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                  "GUID": "d17c2a5dd3eaea04492e47828050e554",
+                  "AssetGUID": "d17c2a5dd3eaea04492e47828050e554",
                   "guidRef": "d17c2a5dd3eaea04492e47828050e554"
                 },
                 "layer": 0,
@@ -721,6 +816,7 @@
             "ignoreNonTargetable": false,
             "ignorePierceExhaustion": false,
             "saveId": null,
+            "displayModel": null,
             "CappedPierce": 4.0,
             "name": "ProjectileModel_BaseProjectile",
             "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Projectile, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
@@ -814,7 +910,7 @@
       "$type": "Assets.Scripts.Models.GenericBehaviors.DisplayModel, Assembly-CSharp",
       "display": {
         "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-        "GUID": "cddca470955e4e64da4063f1aa110f2b",
+        "AssetGUID": "cddca470955e4e64da4063f1aa110f2b",
         "guidRef": "cddca470955e4e64da4063f1aa110f2b"
       },
       "layer": -1,
@@ -834,100 +930,13 @@
       "ImplementationType": "Assets.Scripts.Simulation.Behaviors.DisplayBehavior, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
     }
   ],
-  "footprint": {
-    "$type": "Assets.Scripts.Models.Towers.Behaviors.CircleFootprintModel, Assembly-CSharp",
-    "radius": 7.0,
-    "doesntBlockTowerPlacement": false,
-    "ignoresPlacementCheck": false,
-    "ignoresTowerOverlap": false,
-    "name": "CircleFootprintModel_Circle Footprint",
-    "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.CircleFootprint, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-  },
-  "dontDisplayUpgrades": false,
-  "emoteSpriteSmall": {
-    "$type": "NinjaKiwi.Common.ResourceUtils.SpriteReference, NinjaKiwi.Common",
-    "GUID": "UiEmoteIcons[EmoteQuincy]",
-    "guidRef": "UiEmoteIcons[EmoteQuincy]"
-  },
-  "emoteSpriteLarge": {
-    "$type": "NinjaKiwi.Common.ResourceUtils.SpriteReference, NinjaKiwi.Common",
-    "GUID": "58425d8460442024b9f76b31851c8e7f",
-    "guidRef": "58425d8460442024b9f76b31851c8e7f"
-  },
-  "doesntRotate": false,
-  "upgrades": [
-    {
-      "$type": "Assets.Scripts.Models.Towers.Upgrades.UpgradePathModel, Assembly-CSharp",
-      "tower": "Quincy 3",
-      "upgrade": "Quincy Rapid Shot"
-    }
-  ],
-  "appliedUpgrades": [
-    "Quincy Ricochet 4"
-  ],
-  "targetTypes": [
-    {
-      "$type": "Assets.Scripts.Models.Towers.TargetType, Assembly-CSharp",
-      "id": "First",
-      "isActionable": false,
-      "actionOnCreate": false,
-      "intID": 0,
-      "continueToNextPriority": false
-    },
-    {
-      "$type": "Assets.Scripts.Models.Towers.TargetType, Assembly-CSharp",
-      "id": "Last",
-      "isActionable": false,
-      "actionOnCreate": false,
-      "intID": 1,
-      "continueToNextPriority": false
-    },
-    {
-      "$type": "Assets.Scripts.Models.Towers.TargetType, Assembly-CSharp",
-      "id": "Close",
-      "isActionable": false,
-      "actionOnCreate": false,
-      "intID": 2,
-      "continueToNextPriority": false
-    },
-    {
-      "$type": "Assets.Scripts.Models.Towers.TargetType, Assembly-CSharp",
-      "id": "Strong",
-      "isActionable": false,
-      "actionOnCreate": false,
-      "intID": 3,
-      "continueToNextPriority": false
-    }
-  ],
-  "paragonUpgrade": null,
-  "isSubTower": false,
-  "isBakable": true,
-  "powerName": null,
-  "showPowerTowerBuffs": false,
-  "animationSpeed": 1.0,
-  "towerSelectionMenuThemeId": "Default",
-  "secondarySelectionMenu": {
-    "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-    "GUID": null,
-    "guidRef": null
-  },
-  "ignoreCoopAreas": false,
-  "canAlwaysBeSold": false,
-  "blockSelling": false,
-  "isParagon": false,
-  "ignoreMaxSellPercent": false,
-  "isStunned": false,
-  "geraldoItemName": null,
-  "sellbackModifierAdd": 0.0,
-  "skinName": null,
-  "dontAddMutatorsFromParent": false,
-  "displayScale": 1.0,
-  "showBuffs": true,
-  "destroyTowerOnRedistribution": false,
+  "radius": 7.0,
   "isPowerTower": false,
   "isGeraldoItem": false,
   "IsBeastHandlerPet": false,
   "SelectParentOnSelected": false,
+  "DisplayScale": 1.0,
+  "IsSubEntity": false,
   "BeastHandlerLeashMutationId": "BeastHandlerContributionQuincy",
   "IsBaseTower": false,
   "TargetTypes": [
@@ -965,6 +974,7 @@
     }
   ],
   "IsExclusivelyWaterBased": false,
+  "RadiusSquared": 0.0,
   "name": "Quincy 2",
   "ImplementationType": "Assets.Scripts.Simulation.Towers.Tower, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
 }
