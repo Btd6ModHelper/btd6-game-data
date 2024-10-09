@@ -1,305 +1,52 @@
 {
-  "$type": "Assets.Scripts.Models.Powers.PowerModel, Assembly-CSharp",
-  "cost": 50,
-  "canBeActivatedBetweenRounds": true,
-  "icon": {
-    "$type": "NinjaKiwi.Common.ResourceUtils.SpriteReference, NinjaKiwi.Common",
-    "GUID": "PowerIcons[HotSpikesIcon]",
-    "guidRef": "PowerIcons[HotSpikesIcon]"
+ "cost": 50,
+ "canBeActivatedBetweenRounds": true,
+ "behaviors": [
+  {
+   "projectileModel": {
+    "id": "RoadSpikes",
+    "pierce": 20.0,
+    "scale": 1.0,
+    "ignoreBlockers": true,
+    "behaviors": [
+     {
+      "rounds": 9999999,
+      "Lifespan": 9999999.0,
+      "lifespan": 9999999.0
+     },
+     {
+      "damage": 1.0,
+      "distributeToChildren": true,
+      "createPopEffect": true,
+      "CappedDamage": 1.0
+     },
+     {
+      "interval": 0.001
+     },
+     {
+      "loopMode": "Clamp"
+     },
+     {
+      "scale": 1.0,
+      "category": 16
+     }
+    ],
+    "canCollideWithBloons": true,
+    "radius": 6.0,
+    "CappedPierce": 20.0
+   }
   },
-  "behaviors": [
-    {
-      "$type": "Assets.Scripts.Models.Powers.RoadSpikesModel, Assembly-CSharp",
-      "projectileModel": {
-        "$type": "Assets.Scripts.Models.Towers.Projectiles.ProjectileModel, Assembly-CSharp",
-        "display": {
-          "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-          "GUID": null,
-          "guidRef": null
-        },
-        "id": "RoadSpikes",
-        "maxPierce": 0.0,
-        "pierce": 20.0,
-        "scale": 1.0,
-        "ignoreBlockers": true,
-        "usePointCollisionWithBloons": false,
-        "canCollisionBeBlockedByMapLos": false,
-        "filters": [
-          {
-            "$type": "Assets.Scripts.Models.Towers.Filters.FilterInvisibleModel, Assembly-CSharp",
-            "isActive": false,
-            "ignoreBroadPhase": false,
-            "name": "FilterInvisibleModel_",
-            "ImplementationType": "Assets.Scripts.Simulation.Towers.Filters.FilterInvisible, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-          }
-        ],
-        "behaviors": [
-          {
-            "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.AgeModel, Assembly-CSharp",
-            "rounds": 9999999,
-            "useRoundTime": false,
-            "endOfRoundClearBypassModel": null,
-            "collisionPass": 0,
-            "Lifespan": 9999999.0,
-            "name": "AgeModel_RoadSpikes",
-            "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Age, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
-            "lifespan": 9999999.0
-          },
-          {
-            "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.ProjectileFilterModel, Assembly-CSharp",
-            "filters": [
-              {
-                "$type": "Assets.Scripts.Models.Towers.Filters.FilterInvisibleModel, Assembly-CSharp",
-                "isActive": false,
-                "ignoreBroadPhase": false,
-                "name": "FilterInvisibleModel_",
-                "ImplementationType": "Assets.Scripts.Simulation.Towers.Filters.FilterInvisible, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-              }
-            ],
-            "collisionPass": 0,
-            "name": "ProjectileFilterModel_RoadSpikes",
-            "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.ProjectileFilter, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-          },
-          {
-            "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModel, Assembly-CSharp",
-            "damage": 1.0,
-            "maxDamage": 0.0,
-            "distributeToChildren": true,
-            "overrideDistributeBlocker": false,
-            "createPopEffect": true,
-            "immuneBloonProperties": 0,
-            "immuneBloonPropertiesOriginal": 0,
-            "ignoreImmunityDestroy": false,
-            "collisionPass": 0,
-            "CappedDamage": 1.0,
-            "name": "DamageModel_RoadSpikes_",
-            "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Damage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-          },
-          {
-            "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.ClearHitBloonsModel, Assembly-CSharp",
-            "collisionPass": 0,
-            "name": "ClearHitBloonsModel_",
-            "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.ClearHitBloons, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
-            "interval": 0.001
-          },
-          {
-            "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.SetSpriteFromPierceModel, Assembly-CSharp",
-            "sprites": [
-              {
-                "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                "GUID": "1d5afb7fdd4b31644b2f62d1ee3d593c",
-                "guidRef": "1d5afb7fdd4b31644b2f62d1ee3d593c"
-              },
-              {
-                "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                "GUID": "88a9e91cec9612f4dba8a2706c3bed61",
-                "guidRef": "88a9e91cec9612f4dba8a2706c3bed61"
-              },
-              {
-                "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                "GUID": "bb09f100284139942bfa113f94077537",
-                "guidRef": "bb09f100284139942bfa113f94077537"
-              },
-              {
-                "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                "GUID": "89a1917453d785a4884a099cdac285c3",
-                "guidRef": "89a1917453d785a4884a099cdac285c3"
-              },
-              {
-                "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                "GUID": "82c3abfa0ae20824cbd3a683629b05f0",
-                "guidRef": "82c3abfa0ae20824cbd3a683629b05f0"
-              },
-              {
-                "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                "GUID": "a1e6e51d80018314f8fcd1a887bf90b5",
-                "guidRef": "a1e6e51d80018314f8fcd1a887bf90b5"
-              },
-              {
-                "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                "GUID": "5c6d66e1045e37f479ee46b268d52268",
-                "guidRef": "5c6d66e1045e37f479ee46b268d52268"
-              },
-              {
-                "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                "GUID": "1eeb1ad8754104f49b589901b5716063",
-                "guidRef": "1eeb1ad8754104f49b589901b5716063"
-              },
-              {
-                "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                "GUID": "4ae57daff9d776f4195c0c9f530efda0",
-                "guidRef": "4ae57daff9d776f4195c0c9f530efda0"
-              },
-              {
-                "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                "GUID": "7320b150913f2384187e19b4c55133e4",
-                "guidRef": "7320b150913f2384187e19b4c55133e4"
-              },
-              {
-                "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                "GUID": "5b9fffc70d4060f41968f35ae3e36877",
-                "guidRef": "5b9fffc70d4060f41968f35ae3e36877"
-              },
-              {
-                "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                "GUID": "20063d1be62a388448892330b5485fa6",
-                "guidRef": "20063d1be62a388448892330b5485fa6"
-              },
-              {
-                "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                "GUID": "4b313214235eeaf4eaad08a8fa91f8db",
-                "guidRef": "4b313214235eeaf4eaad08a8fa91f8db"
-              },
-              {
-                "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                "GUID": "1a1b3dea3c6c66640a286482fa3af1dd",
-                "guidRef": "1a1b3dea3c6c66640a286482fa3af1dd"
-              },
-              {
-                "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                "GUID": "24cd24f1247297144a47d6df861c6d96",
-                "guidRef": "24cd24f1247297144a47d6df861c6d96"
-              },
-              {
-                "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                "GUID": "550ca40ac21eb204a8ca605717ae8a19",
-                "guidRef": "550ca40ac21eb204a8ca605717ae8a19"
-              },
-              {
-                "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                "GUID": "41a4287a70ad5bf478a0853815959ee4",
-                "guidRef": "41a4287a70ad5bf478a0853815959ee4"
-              },
-              {
-                "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                "GUID": "947e03a4832e9ef48bab0fb74c4ccc21",
-                "guidRef": "947e03a4832e9ef48bab0fb74c4ccc21"
-              },
-              {
-                "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                "GUID": "1463a0d2e11c4634cafa868e0afc93e8",
-                "guidRef": "1463a0d2e11c4634cafa868e0afc93e8"
-              },
-              {
-                "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                "GUID": "4652c42576e23464dac9a0e3e03fbb9d",
-                "guidRef": "4652c42576e23464dac9a0e3e03fbb9d"
-              },
-              {
-                "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                "GUID": "08673b73cc580cc43a4d73a3f8e5d163",
-                "guidRef": "08673b73cc580cc43a4d73a3f8e5d163"
-              }
-            ],
-            "loopMode": "Clamp",
-            "collisionPass": 0,
-            "name": "SetSpriteFromPierceModel_",
-            "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.SetSpriteFromPierce, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-          },
-          {
-            "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.PowerProjectileModel, Assembly-CSharp",
-            "collisionPass": 0,
-            "name": "PowerProjectileModel_",
-            "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.PowerProjectile, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-          },
-          {
-            "$type": "Assets.Scripts.Models.GenericBehaviors.DisplayModel, Assembly-CSharp",
-            "display": {
-              "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-              "GUID": null,
-              "guidRef": null
-            },
-            "layer": 0,
-            "positionOffset": {
-              "$type": "Assets.Scripts.Simulation.SMath.Vector3, Assembly-CSharp",
-              "x": 0.0,
-              "y": 0.0,
-              "z": 0.0
-            },
-            "scale": 1.0,
-            "ignoreRotation": false,
-            "animationChanges": null,
-            "delayedReveal": 0.0,
-            "category": 16,
-            "isAnimationPaused": false,
-            "name": "DisplayModel_ProjectileDisplay",
-            "ImplementationType": "Assets.Scripts.Simulation.Behaviors.DisplayBehavior, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-          }
-        ],
-        "collisionPasses": [
-          0
-        ],
-        "canCollideWithBloons": true,
-        "radius": 6.0,
-        "vsBlockerRadius": 0.0,
-        "hasDamageModifiers": false,
-        "dontUseCollisionChecker": false,
-        "ignoreNonTargetable": false,
-        "ignorePierceExhaustion": false,
-        "saveId": null,
-        "CappedPierce": 20.0,
-        "name": "ProjectileModel_RoadSpikes",
-        "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Projectile, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
-        "checkCollisionInterval": 0.0
-      },
-      "name": "RoadSpikesModel_RoadSpikes",
-      "ImplementationType": "Assets.Scripts.Simulation.Powers.RoadSpikes, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-    },
-    {
-      "$type": "Assets.Scripts.Models.Powers.Effects.CreateEffectOnPowerModel, Assembly-CSharp",
-      "effectModel": {
-        "$type": "Assets.Scripts.Models.Effects.EffectModel, Assembly-CSharp",
-        "assetId": {
-          "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-          "GUID": "cc4e51ecd049ee249a5bd51db3612483",
-          "guidRef": "cc4e51ecd049ee249a5bd51db3612483"
-        },
-        "scale": 1.0,
-        "lifespan": 1.0,
-        "fullscreen": 0,
-        "useCenterPosition": false,
-        "useTransformPosition": false,
-        "useTransfromRotation": false,
-        "destroyOnTransformDestroy": false,
-        "alwaysUseAge": false,
-        "useRoundTime": false,
-        "name": "EffectModel_",
-        "ImplementationType": null
-      },
-      "name": "CreateEffectOnPowerModel_RoadSpikes",
-      "ImplementationType": "Assets.Scripts.Simulation.Powers.Effects.CreateEffectOnPower, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-    },
-    {
-      "$type": "Assets.Scripts.Models.Powers.Effects.CreateSoundOnPowerModel, Assembly-CSharp",
-      "sound": {
-        "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
-        "assetId": {
-          "$type": "NinjaKiwi.Common.ResourceUtils.AudioSourceReference, NinjaKiwi.Common",
-          "GUID": "15db4f9d2c26e5d4593cfa299ef5307a",
-          "guidRef": "15db4f9d2c26e5d4593cfa299ef5307a"
-        },
-        "name": "SoundModel_PlaceSpikes",
-        "ImplementationType": null
-      },
-      "name": "CreateSoundOnPowerModel_RoadSpikes",
-      "ImplementationType": "Assets.Scripts.Simulation.Powers.Effects.CreateSoundOnPower, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-    }
-  ],
-  "mods": [
-    {
-      "$type": "Assets.Scripts.Models.Towers.Mods.ApplyModModel, Assembly-CSharp",
-      "mod": "JustOneMore",
-      "target": "",
-      "name": "RoadSpikes",
-      "ImplementationType": null
-    }
-  ],
-  "tower": null,
-  "isDisabledByGameMode": false,
-  "isHidden": false,
-  "showBuffsForTower": false,
-  "quantity": 5,
-  "saveImmediately": false,
-  "name": "RoadSpikes",
-  "ImplementationType": "Assets.Scripts.Simulation.Powers.Power, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+  {
+   "effectModel": {
+    "scale": 1.0,
+    "lifespan": 1.0
+   }
+  }
+ ],
+ "mods": [
+  {
+   "mod": "JustOneMore"
+  }
+ ],
+ "quantity": 5
 }

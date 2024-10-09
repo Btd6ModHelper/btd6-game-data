@@ -1,683 +1,162 @@
 {
-  "$type": "Assets.Scripts.Models.Towers.TowerModel, Assembly-CSharp",
-  "display": {
-    "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-    "GUID": "482a273a5f7105242a528ba030c28b09",
-    "guidRef": "482a273a5f7105242a528ba030c28b09"
+ "cost": 1200.0,
+ "radius": 11.0,
+ "radiusSquared": 121.0,
+ "range": 40.0,
+ "ignoreBlockers": true,
+ "tier": 4,
+ "tiers": [
+  4
+ ],
+ "towerSet": 8,
+ "areaTypes": [
+  2
+ ],
+ "mods": [
+  {
+   "mod": "InlandRevenueStreams"
   },
-  "baseId": "MonkeyVillage",
-  "cost": 1200.0,
-  "radius": 11.0,
-  "radiusSquared": 121.0,
-  "range": 40.0,
-  "ignoreBlockers": true,
-  "isGlobalRange": false,
-  "tier": 4,
-  "tiers": [
-    0,
-    4,
-    0
-  ],
-  "towerSet": 8,
-  "icon": {
-    "$type": "NinjaKiwi.Common.ResourceUtils.SpriteReference, NinjaKiwi.Common",
-    "GUID": "MonkeyIcons[MonkeyVillageIcon]",
-    "guidRef": "MonkeyIcons[MonkeyVillageIcon]"
+  {
+   "mod": "ToArms"
   },
-  "portrait": {
-    "$type": "NinjaKiwi.Common.ResourceUtils.SpriteReference, NinjaKiwi.Common",
-    "GUID": "6e5d211c21ab8c043bf3499b109a761f",
-    "guidRef": "6e5d211c21ab8c043bf3499b109a761f"
+  {
+   "mod": "GlobalAbilityCooldowns"
   },
-  "instaIcon": {
-    "$type": "NinjaKiwi.Common.ResourceUtils.SpriteReference, NinjaKiwi.Common",
-    "GUID": "7134b8d310b9b41bdb40997e6943d963",
-    "guidRef": "7134b8d310b9b41bdb40997e6943d963"
+  {
+   "mod": "VeteranMonkeyTraining"
   },
-  "areaTypes": [
-    2
-  ],
-  "mods": [
+  {
+   "mod": "MonkeyEducation"
+  },
+  {
+   "mod": "BetterSellDeals"
+  },
+  {
+   "mod": "FlatPackBuildings"
+  }
+ ],
+ "behaviors": [
+  {
+   "effectModel": {
+    "scale": 1.0,
+    "lifespan": 6.0
+   }
+  },
+  {
+   "effectModel": {
+    "scale": 1.0,
+    "lifespan": 6.0
+   }
+  },
+  {
+   "effectModel": {
+    "scale": 1.0,
+    "lifespan": 1.0
+   }
+  },
+  {
+   "range": 40.0,
+   "addsToSharedGrid": true
+  },
+  {
+   "multiplier": 0.1,
+   "isUnique": true,
+   "showBuffIcon": true
+  },
+  {
+   "isUnique": true,
+   "showBuffIcon": true
+  },
+  {
+   "isUnique": true,
+   "showBuffIcon": true
+  },
+  {
+   "customRadius": -1.0,
+   "showBuffIcon": true,
+   "onlyShowBuffIfMutated": true
+  },
+  {
+   "zoneRadius": 40.0,
+   "isUnique": true,
+   "filters": [
     {
-      "$type": "Assets.Scripts.Models.Towers.Mods.ApplyModModel, Assembly-CSharp",
-      "mod": "InlandRevenueStreams",
-      "target": "",
-      "name": "MonkeyVillageUpgrades",
-      "ImplementationType": null
-    },
-    {
-      "$type": "Assets.Scripts.Models.Towers.Mods.ApplyModModel, Assembly-CSharp",
-      "mod": "ToArms",
-      "target": "",
-      "name": "MonkeyVillageUpgrades",
-      "ImplementationType": null
-    },
-    {
-      "$type": "Assets.Scripts.Models.Towers.Mods.ApplyModModel, Assembly-CSharp",
-      "mod": "GlobalAbilityCooldowns",
-      "target": "",
-      "name": "MonkeyVillageUpgrades",
-      "ImplementationType": null
-    },
-    {
-      "$type": "Assets.Scripts.Models.Towers.Mods.ApplyModModel, Assembly-CSharp",
-      "mod": "VeteranMonkeyTraining",
-      "target": "",
-      "name": "MonkeyVillageUpgrades",
-      "ImplementationType": null
-    },
-    {
-      "$type": "Assets.Scripts.Models.Towers.Mods.ApplyModModel, Assembly-CSharp",
-      "mod": "MonkeyEducation",
-      "target": "",
-      "name": "MonkeyVillageUpgrades",
-      "ImplementationType": null
-    },
-    {
-      "$type": "Assets.Scripts.Models.Towers.Mods.ApplyModModel, Assembly-CSharp",
-      "mod": "BetterSellDeals",
-      "target": "",
-      "name": "MonkeyVillageUpgrades",
-      "ImplementationType": null
-    },
-    {
-      "$type": "Assets.Scripts.Models.Towers.Mods.ApplyModModel, Assembly-CSharp",
-      "mod": "FlatPackBuildings",
-      "target": "",
-      "name": "MonkeyVillageUpgrades",
-      "ImplementationType": null
+     "growTag": true,
+     "tag": "Grow"
     }
-  ],
-  "ignoreTowerForSelection": false,
-  "behaviors": [
+   ],
+   "overlayType": "GrowBlock",
+   "mutator": {
+    "overlayType": "GrowBlock",
+    "id": "GrowBlock",
+    "priority": 1,
+    "dontCopy": true
+   }
+  },
+  {
+   "description": "Call to Arms Ability: Gives all nearby Monkeys DOUBLE attack speed and pops for 10 seconds.",
+   "behaviors": [
     {
-      "$type": "Assets.Scripts.Models.Towers.Behaviors.CreateSoundOnTowerPlaceModel, Assembly-CSharp",
-      "sound1": {
-        "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
-        "assetId": {
-          "$type": "NinjaKiwi.Common.ResourceUtils.AudioSourceReference, NinjaKiwi.Common",
-          "GUID": "564ed9d9a54a58c4fa568dc5a2155ffe",
-          "guidRef": "564ed9d9a54a58c4fa568dc5a2155ffe"
-        },
-        "name": "SoundModel_PlaceBananaFarm01",
-        "ImplementationType": null
-      },
-      "sound2": {
-        "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
-        "assetId": {
-          "$type": "NinjaKiwi.Common.ResourceUtils.AudioSourceReference, NinjaKiwi.Common",
-          "GUID": "c2cee210faaf2b64f963003be9ac0aa6",
-          "guidRef": "c2cee210faaf2b64f963003be9ac0aa6"
-        },
-        "name": "SoundModel_PlaceBananaFarm02",
-        "ImplementationType": null
-      },
-      "waterSound1": null,
-      "waterSound2": null,
-      "heroSound1": null,
-      "heroSound2": null,
-      "name": "CreateSoundOnTowerPlaceModel_MonkeyVillage-040",
-      "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.CreateSoundOnTowerPlace, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+     "multiplier": 1.5,
+     "Lifespan": 15.0,
+     "Mutator": {
+      "id": "CallToArms",
+      "priority": 10,
+      "buffIndicator": {
+       "globalRange": true
+      }
+     },
+     "lifespan": 15.0
     },
     {
-      "$type": "Assets.Scripts.Models.Towers.Behaviors.CreateSoundOnUpgradeModel, Assembly-CSharp",
-      "sound": {
-        "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
-        "assetId": {
-          "$type": "NinjaKiwi.Common.ResourceUtils.AudioSourceReference, NinjaKiwi.Common",
-          "GUID": "23a777b9950195f4f8f4bf745ef84031",
-          "guidRef": "23a777b9950195f4f8f4bf745ef84031"
-        },
-        "name": "SoundModel_UpgradeSound",
-        "ImplementationType": null
-      },
-      "sound1": {
-        "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
-        "assetId": {
-          "$type": "NinjaKiwi.Common.ResourceUtils.AudioSourceReference, NinjaKiwi.Common",
-          "GUID": "23a777b9950195f4f8f4bf745ef84031",
-          "guidRef": "23a777b9950195f4f8f4bf745ef84031"
-        },
-        "name": "SoundModel_UpgradeSound",
-        "ImplementationType": null
-      },
-      "sound2": {
-        "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
-        "assetId": {
-          "$type": "NinjaKiwi.Common.ResourceUtils.AudioSourceReference, NinjaKiwi.Common",
-          "GUID": "23a777b9950195f4f8f4bf745ef84031",
-          "guidRef": "23a777b9950195f4f8f4bf745ef84031"
-        },
-        "name": "SoundModel_UpgradeSound",
-        "ImplementationType": null
-      },
-      "sound3": {
-        "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
-        "assetId": {
-          "$type": "NinjaKiwi.Common.ResourceUtils.AudioSourceReference, NinjaKiwi.Common",
-          "GUID": "23a777b9950195f4f8f4bf745ef84031",
-          "guidRef": "23a777b9950195f4f8f4bf745ef84031"
-        },
-        "name": "SoundModel_UpgradeSound",
-        "ImplementationType": null
-      },
-      "sound4": {
-        "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
-        "assetId": {
-          "$type": "NinjaKiwi.Common.ResourceUtils.AudioSourceReference, NinjaKiwi.Common",
-          "GUID": "23a777b9950195f4f8f4bf745ef84031",
-          "guidRef": "23a777b9950195f4f8f4bf745ef84031"
-        },
-        "name": "SoundModel_UpgradeSound",
-        "ImplementationType": null
-      },
-      "sound5": {
-        "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
-        "assetId": {
-          "$type": "NinjaKiwi.Common.ResourceUtils.AudioSourceReference, NinjaKiwi.Common",
-          "GUID": "23a777b9950195f4f8f4bf745ef84031",
-          "guidRef": "23a777b9950195f4f8f4bf745ef84031"
-        },
-        "name": "SoundModel_UpgradeSound",
-        "ImplementationType": null
-      },
-      "sound6": {
-        "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
-        "assetId": {
-          "$type": "NinjaKiwi.Common.ResourceUtils.AudioSourceReference, NinjaKiwi.Common",
-          "GUID": "23a777b9950195f4f8f4bf745ef84031",
-          "guidRef": "23a777b9950195f4f8f4bf745ef84031"
-        },
-        "name": "SoundModel_UpgradeSound",
-        "ImplementationType": null
-      },
-      "sound7": {
-        "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
-        "assetId": {
-          "$type": "NinjaKiwi.Common.ResourceUtils.AudioSourceReference, NinjaKiwi.Common",
-          "GUID": "23a777b9950195f4f8f4bf745ef84031",
-          "guidRef": "23a777b9950195f4f8f4bf745ef84031"
-        },
-        "name": "SoundModel_UpgradeSound",
-        "ImplementationType": null
-      },
-      "sound8": {
-        "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
-        "assetId": {
-          "$type": "NinjaKiwi.Common.ResourceUtils.AudioSourceReference, NinjaKiwi.Common",
-          "GUID": "23a777b9950195f4f8f4bf745ef84031",
-          "guidRef": "23a777b9950195f4f8f4bf745ef84031"
-        },
-        "name": "SoundModel_UpgradeSound",
-        "ImplementationType": null
-      },
-      "name": "CreateSoundOnUpgradeModel_MonkeyVillage-040",
-      "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.CreateSoundOnUpgrade, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-    },
-    {
-      "$type": "Assets.Scripts.Models.Towers.Behaviors.CreateSoundOnSellModel, Assembly-CSharp",
-      "sound": {
-        "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
-        "assetId": {
-          "$type": "NinjaKiwi.Common.ResourceUtils.AudioSourceReference, NinjaKiwi.Common",
-          "GUID": "df4c691ccf8a3c7408ed6f156740c8b7",
-          "guidRef": "df4c691ccf8a3c7408ed6f156740c8b7"
-        },
-        "name": "SoundModel_SellSound",
-        "ImplementationType": null
-      },
-      "name": "CreateSoundOnSellModel_MonkeyVillage-040",
-      "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.CreateSoundOnSell, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-    },
-    {
-      "$type": "Assets.Scripts.Models.Towers.Behaviors.CreateEffectOnUpgradeModel, Assembly-CSharp",
-      "effectModel": {
-        "$type": "Assets.Scripts.Models.Effects.EffectModel, Assembly-CSharp",
-        "assetId": {
-          "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-          "GUID": "823809b31a6cbab4cab5efc530f919f7",
-          "guidRef": "823809b31a6cbab4cab5efc530f919f7"
-        },
-        "scale": 1.0,
-        "lifespan": 6.0,
-        "fullscreen": 0,
-        "useCenterPosition": false,
-        "useTransformPosition": false,
-        "useTransfromRotation": false,
-        "destroyOnTransformDestroy": false,
-        "alwaysUseAge": false,
-        "useRoundTime": false,
-        "name": "EffectModel_UpgradeEffectTier5",
-        "ImplementationType": null
-      },
-      "createOnAirUnit": false,
-      "name": "CreateEffectOnUpgradeModel_MonkeyVillage-040",
-      "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.CreateEffectOnUpgrade, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-    },
-    {
-      "$type": "Assets.Scripts.Models.Towers.Behaviors.CreateEffectOnPlaceModel, Assembly-CSharp",
-      "effectModel": {
-        "$type": "Assets.Scripts.Models.Effects.EffectModel, Assembly-CSharp",
-        "assetId": {
-          "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-          "GUID": "d2bcad0f16bb76e408a107e13b2c0da3",
-          "guidRef": "d2bcad0f16bb76e408a107e13b2c0da3"
-        },
-        "scale": 1.0,
-        "lifespan": 6.0,
-        "fullscreen": 0,
-        "useCenterPosition": false,
-        "useTransformPosition": false,
-        "useTransfromRotation": false,
-        "destroyOnTransformDestroy": false,
-        "alwaysUseAge": false,
-        "useRoundTime": false,
-        "name": "EffectModel_PlacementEffect",
-        "ImplementationType": null
-      },
-      "name": "CreateEffectOnPlaceModel_MonkeyVillage-040",
-      "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.CreateEffectOnPlace, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-    },
-    {
-      "$type": "Assets.Scripts.Models.Towers.Behaviors.CreateEffectOnSellModel, Assembly-CSharp",
-      "effectModel": {
-        "$type": "Assets.Scripts.Models.Effects.EffectModel, Assembly-CSharp",
-        "assetId": {
-          "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-          "GUID": "b1dec8a8d79593843bc2e2410eae944e",
-          "guidRef": "b1dec8a8d79593843bc2e2410eae944e"
-        },
-        "scale": 1.0,
-        "lifespan": 1.0,
-        "fullscreen": 0,
-        "useCenterPosition": false,
-        "useTransformPosition": false,
-        "useTransfromRotation": false,
-        "destroyOnTransformDestroy": false,
-        "alwaysUseAge": false,
-        "useRoundTime": false,
-        "name": "EffectModel_SellEffect",
-        "ImplementationType": null
-      },
-      "name": "CreateEffectOnSellModel_MonkeyVillage-040",
-      "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.CreateEffectOnSell, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-    },
-    {
-      "$type": "Assets.Scripts.Models.Towers.Behaviors.Attack.AttackModel, Assembly-CSharp",
-      "weapons": [],
-      "behaviors": [
-        {
-          "$type": "Assets.Scripts.Models.Towers.Behaviors.Attack.Behaviors.AttackFilterModel, Assembly-CSharp",
-          "filters": [
-            {
-              "$type": "Assets.Scripts.Models.Towers.Filters.FilterInvisibleModel, Assembly-CSharp",
-              "isActive": false,
-              "ignoreBroadPhase": false,
-              "name": "FilterInvisibleModel_",
-              "ImplementationType": "Assets.Scripts.Simulation.Towers.Filters.FilterInvisible, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-            }
-          ],
-          "name": "AttackFilterModel_",
-          "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.Attack.Behaviors.AttackFilter, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-        }
-      ],
-      "range": 40.0,
-      "targetProvider": null,
-      "offsetX": 0.0,
-      "offsetY": 0.0,
-      "offsetZ": 0.0,
-      "attackThroughWalls": false,
-      "fireWithoutTarget": false,
-      "framesBeforeRetarget": 0,
-      "addsToSharedGrid": true,
-      "sharedGridRange": 0.0,
-      "name": "AttackModel_SharedAttack_",
-      "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.Attack.Attack, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-    },
-    {
-      "$type": "Assets.Scripts.Models.Towers.Behaviors.RangeSupportModel, Assembly-CSharp",
-      "multiplier": 0.1,
-      "additive": 0.0,
-      "mutatorId": "Range:Support",
-      "isUnique": true,
-      "filters": null,
-      "isGlobal": false,
-      "isCustomRadius": false,
-      "customRadius": 0.0,
-      "appliesToOwningTower": false,
-      "showBuffIcon": true,
-      "buffLocsName": "BiggerRadiusBuff",
-      "buffIconName": "BuffIconVillage1xx",
-      "maxStackSize": 0,
-      "onlyShowBuffIfMutated": false,
-      "onlyAffectParagon": false,
-      "name": "RangeSupportModel_RangeSupport_",
-      "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.RangeSupport, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-    },
-    {
-      "$type": "Assets.Scripts.Models.Towers.Behaviors.VisibilitySupportModel, Assembly-CSharp",
-      "isUnique": true,
-      "mutatorId": "Village:Visibility",
-      "filters": null,
-      "isGlobal": false,
-      "isCustomRadius": false,
-      "customRadius": 0.0,
-      "appliesToOwningTower": false,
-      "showBuffIcon": true,
-      "buffLocsName": "RadarScannerBuff",
-      "buffIconName": "BuffIconVillagex2x",
-      "maxStackSize": 0,
-      "onlyShowBuffIfMutated": false,
-      "onlyAffectParagon": false,
-      "name": "VisibilitySupportModel_Support_",
-      "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.VisibilitySupport, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-    },
-    {
-      "$type": "Assets.Scripts.Models.Towers.Behaviors.DamageTypeSupportModel, Assembly-CSharp",
-      "mutatorId": "Village:DamageType",
-      "immuneBloonProperties": 0,
-      "isUnique": true,
-      "filters": null,
-      "isGlobal": false,
-      "isCustomRadius": false,
-      "customRadius": 0.0,
-      "appliesToOwningTower": false,
-      "showBuffIcon": true,
-      "buffLocsName": "MibBuff",
-      "buffIconName": "BuffIconVillagex3x",
-      "maxStackSize": 0,
-      "onlyShowBuffIfMutated": false,
-      "onlyAffectParagon": false,
-      "name": "DamageTypeSupportModel_Support_",
-      "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.DamageTypeSupport, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-    },
-    {
-      "$type": "Assets.Scripts.Models.Towers.Behaviors.SupportRemoveFilterOutTagModel, Assembly-CSharp",
-      "mutatorId": "Village:DdtDamageModifier",
-      "removeScriptWithSupportMutatorId": "MibMutator",
-      "filters": null,
-      "isGlobal": false,
-      "isCustomRadius": false,
-      "customRadius": -1.0,
-      "appliesToOwningTower": false,
-      "showBuffIcon": true,
-      "buffLocsName": "MibBuff",
-      "buffIconName": "BuffIconVillagex3x",
-      "maxStackSize": 0,
-      "onlyShowBuffIfMutated": true,
-      "onlyAffectParagon": false,
-      "name": "SupportRemoveFilterOutTagModel_Support_",
-      "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.SupportRemoveFilterOutTag, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-    },
-    {
-      "$type": "Assets.Scripts.Models.Towers.Behaviors.AddBehaviorToBloonInZoneModel, Assembly-CSharp",
-      "zoneRadius": 40.0,
-      "mutationId": "GrowBlock",
-      "isUnique": true,
-      "behaviors": [
-        {
-          "$type": "Assets.Scripts.Models.Bloons.Behaviors.GrowBlockModel, Assembly-CSharp",
-          "name": "GrowBlockModel_",
-          "ImplementationType": "Assets.Scripts.Simulation.Bloons.Behaviors.GrowBlock, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-        }
-      ],
-      "filters": [
-        {
-          "$type": "Assets.Scripts.Models.Towers.Filters.FilterWithTagModel, Assembly-CSharp",
-          "moabTag": false,
-          "camoTag": false,
-          "growTag": true,
-          "fortifiedTag": false,
-          "tag": "Grow",
-          "inclusive": false,
-          "hasMoabTag": false,
-          "name": "FilterWithTagModel_",
-          "ImplementationType": "Assets.Scripts.Simulation.Towers.Filters.FilterWithTag, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-        }
-      ],
-      "overlayType": "GrowBlock",
-      "mutator": {
-        "$type": "Assets.Scripts.Models.Towers.Behaviors.AddBehaviorToBloonInZoneModel+AddBehaviorToBloonMutator, Assembly-CSharp",
-        "overlayType": "GrowBlock",
-        "behaviors": [
-          {
-            "$type": "Assets.Scripts.Models.Bloons.Behaviors.GrowBlockModel, Assembly-CSharp",
-            "name": "GrowBlockModel_",
-            "ImplementationType": "Assets.Scripts.Simulation.Bloons.Behaviors.GrowBlock, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-          }
-        ],
-        "mutationId": "GrowBlock",
-        "id": "GrowBlock",
-        "isExclusiveInMutationList": false,
-        "priority": 1,
-        "glueLevel": 0,
-        "dontCopy": true,
-        "buffIndicator": null,
-        "saveId": null,
-        "isAreaBuff": false,
-        "isGeraldoBuff": false
-      },
-      "name": "AddBehaviorToBloonInZoneModel_",
-      "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.AddBehaviorToBloonInZone, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-    },
-    {
-      "$type": "Assets.Scripts.Models.Towers.Behaviors.Abilities.AbilityModel, Assembly-CSharp",
-      "displayName": "Call to Arms",
-      "description": "Call to Arms Ability: Gives all nearby Monkeys DOUBLE attack speed and pops for 10 seconds.",
-      "icon": {
-        "$type": "NinjaKiwi.Common.ResourceUtils.SpriteReference, NinjaKiwi.Common",
-        "GUID": "672fd1683668e4f048490f106dc941ad",
-        "guidRef": "672fd1683668e4f048490f106dc941ad"
-      },
-      "behaviors": [
-        {
-          "$type": "Assets.Scripts.Models.Towers.Behaviors.Abilities.Behaviors.CreateSoundOnAbilityModel, Assembly-CSharp",
-          "sound": {
-            "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
-            "assetId": {
-              "$type": "NinjaKiwi.Common.ResourceUtils.AudioSourceReference, NinjaKiwi.Common",
-              "GUID": "74975c36b1ae450429d06cbeb4a837c2",
-              "guidRef": "74975c36b1ae450429d06cbeb4a837c2"
-            },
-            "name": "SoundModel_ActivatedCallToArms",
-            "ImplementationType": null
-          },
-          "heroSound": null,
-          "heroSound2": null,
-          "name": "CreateSoundOnAbilityModel_Ability",
-          "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.Abilities.Behaviors.CreateSoundOnAbility, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-        },
-        {
-          "$type": "Assets.Scripts.Models.Towers.Behaviors.Abilities.Behaviors.CallToArmsModel, Assembly-CSharp",
-          "multiplier": 1.5,
-          "useRadius": false,
-          "buffLocsName": null,
-          "buffIconName": null,
-          "Lifespan": 15.0,
-          "Mutator": {
-            "$type": "Assets.Scripts.Models.Towers.Behaviors.Abilities.Behaviors.CallToArmsModel+CallToArmsMutator, Assembly-CSharp",
-            "id": "CallToArms",
-            "isExclusiveInMutationList": false,
-            "priority": 10,
-            "glueLevel": 0,
-            "dontCopy": false,
-            "buffIndicator": {
-              "$type": "Assets.Scripts.Models.GenericBehaviors.BuffIndicatorModel, Assembly-CSharp",
-              "buffName": "CallToArmsBuff",
-              "iconName": "BuffIconVillagex4x",
-              "stackable": false,
-              "maxStackSize": 0,
-              "globalRange": true,
-              "onlyShowBuffIfMutated": false,
-              "dontShowX": false,
-              "FullName": "BuffIconVillagex4xCallToArmsBuff",
-              "name": "BuffIndicatorModel_BuffIconVillagex4x-CallToArmsBuff",
-              "ImplementationType": "Assets.Scripts.Simulation.GenericBehavior.BuffIndicator, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-            },
-            "saveId": null,
-            "isAreaBuff": false,
-            "isGeraldoBuff": false
-          },
-          "name": "CallToArmsModel_",
-          "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.Abilities.Behaviors.CallToArms, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
-          "lifespan": 15.0
-        },
-        {
-          "$type": "Assets.Scripts.Models.Towers.Behaviors.Abilities.Behaviors.CreateEffectOnAbilityModel, Assembly-CSharp",
-          "effectModel": {
-            "$type": "Assets.Scripts.Models.Effects.EffectModel, Assembly-CSharp",
-            "assetId": {
-              "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-              "GUID": "c8b3ce088c0145c48a38345667c2d3bc",
-              "guidRef": "c8b3ce088c0145c48a38345667c2d3bc"
-            },
-            "scale": 1.0,
-            "lifespan": 2.0,
-            "fullscreen": 0,
-            "useCenterPosition": false,
-            "useTransformPosition": true,
-            "useTransfromRotation": false,
-            "destroyOnTransformDestroy": true,
-            "alwaysUseAge": false,
-            "useRoundTime": false,
-            "name": "EffectModel_CallToArmsFX",
-            "ImplementationType": null
-          },
-          "randomRotation": false,
-          "centerEffect": false,
-          "destroyOnEnd": true,
-          "useAttackTransform": false,
-          "canSave": false,
-          "name": "CreateEffectOnAbilityModel_CallToArms_CallToArmsFX",
-          "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.Abilities.Behaviors.CreateEffectOnAbility, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-        }
-      ],
-      "activateOnPreLeak": false,
-      "activateOnLeak": false,
-      "addedViaUpgrade": "Call to Arms",
-      "livesCost": 0,
-      "maxActivationsPerRound": -1,
-      "animation": -1,
-      "enabled": true,
-      "canActivateBetweenRounds": false,
-      "resetCooldownOnTierUpgrade": false,
-      "activateOnLivesLost": false,
-      "sharedCooldown": false,
-      "dontShowStacked": false,
-      "animateOnMainAttackDisplay": false,
-      "restrictAbilityAfterMaxRoundTimer": false,
-      "CooldownSpeedScale": 0.0,
-      "AnimationOffset": 0.0,
-      "IsPassive": false,
-      "Cooldown": 45.0,
-      "name": "AbilityModel_Ability",
-      "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.Abilities.Ability, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
-      "cooldownSpeedScale": 0.0,
-      "animationOffset": 0.0,
-      "cooldown": 45.0
-    },
-    {
-      "$type": "Assets.Scripts.Models.GenericBehaviors.DisplayModel, Assembly-CSharp",
-      "display": {
-        "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-        "GUID": "482a273a5f7105242a528ba030c28b09",
-        "guidRef": "482a273a5f7105242a528ba030c28b09"
-      },
-      "layer": -1,
-      "positionOffset": {
-        "$type": "Assets.Scripts.Simulation.SMath.Vector3, Assembly-CSharp",
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0
-      },
+     "effectModel": {
       "scale": 1.0,
-      "ignoreRotation": false,
-      "animationChanges": null,
-      "delayedReveal": 0.0,
-      "category": 4,
-      "isAnimationPaused": false,
-      "name": "DisplayModel_TowerDisplay",
-      "ImplementationType": "Assets.Scripts.Simulation.Behaviors.DisplayBehavior, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+      "lifespan": 2.0,
+      "useTransformPosition": true,
+      "destroyOnTransformDestroy": true
+     },
+     "destroyOnEnd": true
     }
-  ],
-  "footprint": {
-    "$type": "Assets.Scripts.Models.Towers.Behaviors.CircleFootprintModel, Assembly-CSharp",
-    "radius": 11.0,
-    "doesntBlockTowerPlacement": false,
-    "ignoresPlacementCheck": false,
-    "ignoresTowerOverlap": false,
-    "name": "CircleFootprintModel_Circle Footprint",
-    "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.CircleFootprint, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+   ],
+   "addedViaUpgrade": "Call to Arms",
+   "maxActivationsPerRound": -1,
+   "animation": -1,
+   "enabled": true,
+   "Cooldown": 45.0,
+   "cooldown": 45.0
   },
-  "dontDisplayUpgrades": false,
-  "emoteSpriteSmall": {
-    "$type": "NinjaKiwi.Common.ResourceUtils.SpriteReference, NinjaKiwi.Common",
-    "GUID": null,
-    "guidRef": null
+  {
+   "layer": -1,
+   "scale": 1.0,
+   "category": 4
+  }
+ ],
+ "footprint": {
+  "radius": 11.0
+ },
+ "doesntRotate": true,
+ "upgrades": [
+  {
+   "tower": "MonkeyVillage-050",
+   "upgrade": "Homeland Defense"
   },
-  "emoteSpriteLarge": {
-    "$type": "NinjaKiwi.Common.ResourceUtils.SpriteReference, NinjaKiwi.Common",
-    "GUID": null,
-    "guidRef": null
+  {
+   "tower": "MonkeyVillage-041",
+   "upgrade": "Monkey Business"
   },
-  "doesntRotate": true,
-  "upgrades": [
-    {
-      "$type": "Assets.Scripts.Models.Towers.Upgrades.UpgradePathModel, Assembly-CSharp",
-      "tower": "MonkeyVillage-050",
-      "upgrade": "Homeland Defense"
-    },
-    {
-      "$type": "Assets.Scripts.Models.Towers.Upgrades.UpgradePathModel, Assembly-CSharp",
-      "tower": "MonkeyVillage-041",
-      "upgrade": "Monkey Business"
-    },
-    {
-      "$type": "Assets.Scripts.Models.Towers.Upgrades.UpgradePathModel, Assembly-CSharp",
-      "tower": "MonkeyVillage-140",
-      "upgrade": "Bigger Radius"
-    }
-  ],
-  "appliedUpgrades": [
-    "Grow Blocker",
-    "Radar Scanner",
-    "Monkey Intelligence Bureau",
-    "Call to Arms"
-  ],
-  "targetTypes": null,
-  "paragonUpgrade": null,
-  "isSubTower": false,
-  "isBakable": true,
-  "powerName": null,
-  "showPowerTowerBuffs": false,
-  "animationSpeed": 1.0,
-  "towerSelectionMenuThemeId": "Default",
-  "secondarySelectionMenu": {
-    "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-    "GUID": null,
-    "guidRef": null
-  },
-  "ignoreCoopAreas": false,
-  "canAlwaysBeSold": false,
-  "blockSelling": false,
-  "isParagon": false,
-  "ignoreMaxSellPercent": false,
-  "isStunned": false,
-  "geraldoItemName": null,
-  "sellbackModifierAdd": 0.0,
-  "skinName": null,
-  "dontAddMutatorsFromParent": false,
-  "displayScale": 1.0,
-  "showBuffs": true,
-  "destroyTowerOnRedistribution": false,
-  "isPowerTower": false,
-  "isGeraldoItem": false,
-  "IsBeastHandlerPet": false,
-  "SelectParentOnSelected": false,
-  "BeastHandlerLeashMutationId": "BeastHandlerContributionMonkeyVillage",
-  "IsBaseTower": false,
-  "TargetTypes": null,
-  "IsExclusivelyWaterBased": false,
-  "name": "MonkeyVillage-040",
-  "ImplementationType": "Assets.Scripts.Simulation.Towers.Tower, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+  {
+   "tower": "MonkeyVillage-140",
+   "upgrade": "Bigger Radius"
+  }
+ ],
+ "appliedUpgrades": [
+  "Grow Blocker",
+  "Radar Scanner",
+  "Monkey Intelligence Bureau",
+  "Call to Arms"
+ ],
+ "isBakable": true,
+ "animationSpeed": 1.0,
+ "displayScale": 1.0,
+ "showBuffs": true
 }

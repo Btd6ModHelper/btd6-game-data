@@ -1,188 +1,47 @@
 {
-  "$type": "Assets.Scripts.Models.Powers.PowerModel, Assembly-CSharp",
-  "cost": 200,
-  "canBeActivatedBetweenRounds": false,
-  "icon": {
-    "$type": "NinjaKiwi.Common.ResourceUtils.SpriteReference, NinjaKiwi.Common",
-    "GUID": "PowerIcons[CashDropIcon]",
-    "guidRef": "PowerIcons[CashDropIcon]"
-  },
-  "behaviors": [
-    {
-      "$type": "Assets.Scripts.Models.Powers.CashDropModel, Assembly-CSharp",
-      "projectileModel": {
-        "$type": "Assets.Scripts.Models.Towers.Projectiles.ProjectileModel, Assembly-CSharp",
-        "display": {
-          "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-          "GUID": "c737ade5badc75d49b97ac44e123430c",
-          "guidRef": "c737ade5badc75d49b97ac44e123430c"
-        },
-        "id": "Collectable",
-        "maxPierce": 0.0,
-        "pierce": 9999999.0,
-        "scale": 1.0,
-        "ignoreBlockers": true,
-        "usePointCollisionWithBloons": false,
-        "canCollisionBeBlockedByMapLos": false,
-        "filters": [
-          {
-            "$type": "Assets.Scripts.Models.Towers.Filters.FilterAllModel, Assembly-CSharp",
-            "name": "FilterAllModel_",
-            "ImplementationType": "Assets.Scripts.Simulation.Towers.Filters.FilterAll, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-          }
-        ],
-        "behaviors": [
-          {
-            "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.PickupModel, Assembly-CSharp",
-            "collectRadius": 100.0,
-            "collisionPass": 0,
-            "name": "PickupModel_",
-            "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Pickup, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
-            "delay": 1.0
-          },
-          {
-            "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.CreateSoundOnPickupModel, Assembly-CSharp",
-            "sound": {
-              "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
-              "assetId": {
-                "$type": "NinjaKiwi.Common.ResourceUtils.AudioSourceReference, NinjaKiwi.Common",
-                "GUID": "48e9ef01c64d78a4db3e9c36f2bf6bb9",
-                "guidRef": "48e9ef01c64d78a4db3e9c36f2bf6bb9"
-              },
-              "name": "SoundModel_PickupCrate",
-              "ImplementationType": null
-            },
-            "collisionPass": 0,
-            "name": "CreateSoundOnPickupModel_Collectable",
-            "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.CreateSoundOnPickup, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-          },
-          {
-            "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.CashModel, Assembly-CSharp",
-            "minimum": 2500.0,
-            "maximum": 2500.0,
-            "bonusMultiplier": 0.0,
-            "salvage": 1.0,
-            "noTransformCash": true,
-            "distributeSalvage": false,
-            "forceCreateProjectile": false,
-            "isDoubleable": false,
-            "distributeBonusIncome": false,
-            "emittedByCashEarnedMultiplier": 1.0,
-            "collisionPass": 0,
-            "name": "CashModel_",
-            "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Cash, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-          },
-          {
-            "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.AgeModel, Assembly-CSharp",
-            "rounds": 9999999,
-            "useRoundTime": false,
-            "endOfRoundClearBypassModel": null,
-            "collisionPass": 0,
-            "Lifespan": 15.0,
-            "name": "AgeModel_Collectable",
-            "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Age, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
-            "lifespan": 15.0
-          },
-          {
-            "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.CreateTextEffectModel, Assembly-CSharp",
-            "assetId": {
-              "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-              "GUID": "80178409df24b3b479342ed73cffb63d",
-              "guidRef": "80178409df24b3b479342ed73cffb63d"
-            },
-            "lifespan": 1.0,
-            "useTowerPosition": false,
-            "collisionPass": 0,
-            "name": "CreateTextEffectModel_",
-            "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.CreateTextEffect, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-          },
-          {
-            "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.ProjectileFilterModel, Assembly-CSharp",
-            "filters": [
-              {
-                "$type": "Assets.Scripts.Models.Towers.Filters.FilterAllModel, Assembly-CSharp",
-                "name": "FilterAllModel_",
-                "ImplementationType": "Assets.Scripts.Simulation.Towers.Filters.FilterAll, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-              }
-            ],
-            "collisionPass": 0,
-            "name": "ProjectileFilterModel_Collectable",
-            "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.ProjectileFilter, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-          },
-          {
-            "$type": "Assets.Scripts.Models.GenericBehaviors.DisplayModel, Assembly-CSharp",
-            "display": {
-              "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-              "GUID": "c737ade5badc75d49b97ac44e123430c",
-              "guidRef": "c737ade5badc75d49b97ac44e123430c"
-            },
-            "layer": 0,
-            "positionOffset": {
-              "$type": "Assets.Scripts.Simulation.SMath.Vector3, Assembly-CSharp",
-              "x": 0.0,
-              "y": 0.0,
-              "z": 0.0
-            },
-            "scale": 1.0,
-            "ignoreRotation": false,
-            "animationChanges": null,
-            "delayedReveal": 0.0,
-            "category": 16,
-            "isAnimationPaused": false,
-            "name": "DisplayModel_ProjectileDisplay",
-            "ImplementationType": "Assets.Scripts.Simulation.Behaviors.DisplayBehavior, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-          }
-        ],
-        "collisionPasses": [
-          0
-        ],
-        "canCollideWithBloons": false,
-        "radius": 2.0,
-        "vsBlockerRadius": 0.0,
-        "hasDamageModifiers": false,
-        "dontUseCollisionChecker": false,
-        "ignoreNonTargetable": false,
-        "ignorePierceExhaustion": false,
-        "saveId": null,
-        "CappedPierce": 9999999.0,
-        "name": "ProjectileModel_Collectable",
-        "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Projectile, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
-        "checkCollisionInterval": 0.0
-      },
-      "name": "CashDropModel_CashDrop",
-      "ImplementationType": "Assets.Scripts.Simulation.Powers.CashDrop, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-    },
-    {
-      "$type": "Assets.Scripts.Models.Powers.Effects.CreateSoundOnPowerModel, Assembly-CSharp",
-      "sound": {
-        "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
-        "assetId": {
-          "$type": "NinjaKiwi.Common.ResourceUtils.AudioSourceReference, NinjaKiwi.Common",
-          "GUID": "78593272c8973c1439f5242176ae5cef",
-          "guidRef": "78593272c8973c1439f5242176ae5cef"
-        },
-        "name": "SoundModel_PowerCrate",
-        "ImplementationType": null
-      },
-      "name": "CreateSoundOnPowerModel_CashDrop",
-      "ImplementationType": "Assets.Scripts.Simulation.Powers.Effects.CreateSoundOnPower, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-    }
-  ],
-  "mods": [
-    {
-      "$type": "Assets.Scripts.Models.Towers.Mods.ApplyModModel, Assembly-CSharp",
-      "mod": "BudgetCashDrops",
-      "target": "",
-      "name": "CashDrop",
-      "ImplementationType": null
-    }
-  ],
-  "tower": null,
-  "isDisabledByGameMode": false,
-  "isHidden": false,
-  "showBuffsForTower": false,
-  "quantity": 1,
-  "saveImmediately": true,
-  "name": "CashDrop",
-  "ImplementationType": "Assets.Scripts.Simulation.Powers.Power, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+ "cost": 200,
+ "behaviors": [
+  {
+   "projectileModel": {
+    "id": "Collectable",
+    "pierce": 9999999.0,
+    "scale": 1.0,
+    "ignoreBlockers": true,
+    "behaviors": [
+     {
+      "collectRadius": 100.0,
+      "delay": 1.0
+     },
+     {
+      "minimum": 2500.0,
+      "maximum": 2500.0,
+      "salvage": 1.0,
+      "noTransformCash": true,
+      "emittedByCashEarnedMultiplier": 1.0
+     },
+     {
+      "rounds": 9999999,
+      "Lifespan": 15.0,
+      "lifespan": 15.0
+     },
+     {
+      "lifespan": 1.0
+     },
+     {
+      "scale": 1.0,
+      "category": 16
+     }
+    ],
+    "radius": 2.0,
+    "CappedPierce": 9999999.0
+   }
+  }
+ ],
+ "mods": [
+  {
+   "mod": "BudgetCashDrops"
+  }
+ ],
+ "quantity": 1,
+ "saveImmediately": true
 }

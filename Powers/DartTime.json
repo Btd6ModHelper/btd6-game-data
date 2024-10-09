@@ -1,100 +1,33 @@
 {
-  "$type": "Assets.Scripts.Models.Powers.PowerModel, Assembly-CSharp",
-  "cost": 50,
-  "canBeActivatedBetweenRounds": false,
-  "icon": {
-    "$type": "NinjaKiwi.Common.ResourceUtils.SpriteReference, NinjaKiwi.Common",
-    "GUID": "PowerIcons[DartTimeIcon]",
-    "guidRef": "PowerIcons[DartTimeIcon]"
+ "cost": 50,
+ "behaviors": [
+  {
+   "effectModel": {
+    "scale": 1.0,
+    "lifespan": 10.0,
+    "fullscreen": 1,
+    "useCenterPosition": true,
+    "useRoundTime": true
+   }
   },
-  "behaviors": [
-    {
-      "$type": "Assets.Scripts.Models.Powers.Effects.CreateEffectOnPowerModel, Assembly-CSharp",
-      "effectModel": {
-        "$type": "Assets.Scripts.Models.Effects.EffectModel, Assembly-CSharp",
-        "assetId": {
-          "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-          "GUID": "b700e59904d1a4548a12f83c8b7ba381",
-          "guidRef": "b700e59904d1a4548a12f83c8b7ba381"
-        },
-        "scale": 1.0,
-        "lifespan": 10.0,
-        "fullscreen": 1,
-        "useCenterPosition": true,
-        "useTransformPosition": false,
-        "useTransfromRotation": false,
-        "destroyOnTransformDestroy": false,
-        "alwaysUseAge": false,
-        "useRoundTime": true,
-        "name": "EffectModel_",
-        "ImplementationType": null
-      },
-      "name": "CreateEffectOnPowerModel_DartTime",
-      "ImplementationType": "Assets.Scripts.Simulation.Powers.Effects.CreateEffectOnPower, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-    },
-    {
-      "$type": "Assets.Scripts.Models.Powers.DartTimeModel, Assembly-CSharp",
-      "bloonSpeed": 0.1,
-      "towerAttackSpeed": 0.3,
-      "duration": 10.0,
-      "BloonTimeSlowMutator": {
-        "$type": "Assets.Scripts.Models.Powers.DartTimeModel+BloonTimeSlowMutatorClass, Assembly-CSharp",
-        "id": "TimeStopBloons",
-        "isExclusiveInMutationList": false,
-        "priority": 1,
-        "glueLevel": 0,
-        "dontCopy": false,
-        "buffIndicator": null,
-        "saveId": null,
-        "isAreaBuff": false,
-        "isGeraldoBuff": false
-      },
-      "TowerTimeSlowMutator": {
-        "$type": "Assets.Scripts.Models.Powers.DartTimeModel+TowerTimeSlowMutatorClass, Assembly-CSharp",
-        "id": "TimeStopTowers",
-        "isExclusiveInMutationList": false,
-        "priority": 1,
-        "glueLevel": 0,
-        "dontCopy": false,
-        "buffIndicator": null,
-        "saveId": null,
-        "isAreaBuff": false,
-        "isGeraldoBuff": false
-      },
-      "name": "DartTimeModel_DartTime",
-      "ImplementationType": "Assets.Scripts.Simulation.Powers.DartTime, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-    },
-    {
-      "$type": "Assets.Scripts.Models.Powers.Effects.CreateSoundOnPowerModel, Assembly-CSharp",
-      "sound": {
-        "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
-        "assetId": {
-          "$type": "NinjaKiwi.Common.ResourceUtils.AudioSourceReference, NinjaKiwi.Common",
-          "GUID": "c592c40c4b72a0a48a98334b96280a3a",
-          "guidRef": "c592c40c4b72a0a48a98334b96280a3a"
-        },
-        "name": "SoundModel_PowerTimeStop",
-        "ImplementationType": null
-      },
-      "name": "CreateSoundOnPowerModel_DartTime",
-      "ImplementationType": "Assets.Scripts.Simulation.Powers.Effects.CreateSoundOnPower, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-    }
-  ],
-  "mods": [
-    {
-      "$type": "Assets.Scripts.Models.Towers.Mods.ApplyModModel, Assembly-CSharp",
-      "mod": "LongerDartTime",
-      "target": "",
-      "name": "DartTime",
-      "ImplementationType": null
-    }
-  ],
-  "tower": null,
-  "isDisabledByGameMode": false,
-  "isHidden": false,
-  "showBuffsForTower": false,
-  "quantity": 1,
-  "saveImmediately": false,
-  "name": "DartTime",
-  "ImplementationType": "Assets.Scripts.Simulation.Powers.Power, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+  {
+   "bloonSpeed": 0.1,
+   "towerAttackSpeed": 0.3,
+   "duration": 10.0,
+   "BloonTimeSlowMutator": {
+    "id": "TimeStopBloons",
+    "priority": 1
+   },
+   "TowerTimeSlowMutator": {
+    "id": "TimeStopTowers",
+    "priority": 1
+   }
+  }
+ ],
+ "mods": [
+  {
+   "mod": "LongerDartTime"
+  }
+ ],
+ "quantity": 1
 }

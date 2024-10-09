@@ -1,160 +1,47 @@
 {
-  "$type": "Assets.Scripts.Models.Bloons.BloonModel, Assembly-CSharp",
-  "id": "BlackRegrow",
-  "baseId": "Black",
-  "display": {
-    "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-    "GUID": "a6ce548539c5dd04e9bad9191f4ebb8e",
-    "guidRef": "a6ce548539c5dd04e9bad9191f4ebb8e"
+ "id": "BlackRegrow",
+ "tags": [
+  "Black",
+  "Grow"
+ ],
+ "behaviors": [
+  {
+   "scale": 1.0,
+   "category": 2
   },
-  "icon": {
-    "$type": "NinjaKiwi.Common.ResourceUtils.SpriteReference, NinjaKiwi.Common",
-    "GUID": "Bloons[BlackRegrow]",
-    "guidRef": "Bloons[BlackRegrow]"
+  {
+   "cash": 1.0,
+   "multiplier": 1.0
   },
-  "overlayClass": 11,
-  "tags": [
-    "Black",
-    "Grow"
-  ],
-  "behaviors": [
-    {
-      "$type": "Assets.Scripts.Models.GenericBehaviors.DisplayModel, Assembly-CSharp",
-      "display": {
-        "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-        "GUID": "a6ce548539c5dd04e9bad9191f4ebb8e",
-        "guidRef": "a6ce548539c5dd04e9bad9191f4ebb8e"
-      },
-      "layer": 0,
-      "positionOffset": {
-        "$type": "Assets.Scripts.Simulation.SMath.Vector3, Assembly-CSharp",
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0
-      },
-      "scale": 1.0,
-      "ignoreRotation": false,
-      "animationChanges": null,
-      "delayedReveal": 0.0,
-      "category": 2,
-      "isAnimationPaused": false,
-      "name": "DisplayModel_BloonDisplay",
-      "ImplementationType": "Assets.Scripts.Simulation.Behaviors.DisplayBehavior, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-    },
-    {
-      "$type": "Assets.Scripts.Models.Bloons.Behaviors.DistributeCashModel, Assembly-CSharp",
-      "cash": 1.0,
-      "multiplier": 1.0,
-      "additive": 0.0,
-      "additionalCash": 0.0,
-      "giveNoCash": false,
-      "name": "DistributeCashModel_",
-      "ImplementationType": "Assets.Scripts.Simulation.Bloons.Behaviors.DistributeCash, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-    },
-    {
-      "$type": "Assets.Scripts.Models.Bloons.Behaviors.ShowDamageTextModel, Assembly-CSharp",
-      "showText": false,
-      "name": "ShowDamageTextModel_",
-      "ImplementationType": "Assets.Scripts.Simulation.Bloons.Behaviors.ShowDamageText, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-    },
-    {
-      "$type": "Assets.Scripts.Models.Bloons.Behaviors.SpawnChildrenModel, Assembly-CSharp",
-      "children": [
-        "PinkRegrow",
-        "PinkRegrow"
-      ],
-      "name": "SpawnChildrenModel_",
-      "ImplementationType": "Assets.Scripts.Simulation.Bloons.Behaviors.SpawnChildren, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-    },
-    {
-      "$type": "Assets.Scripts.Models.Bloons.Behaviors.PopEffectModel, Assembly-CSharp",
-      "displayAssetId": {
-        "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-        "GUID": "a26c13a357838ee409d09f86a54a4fca",
-        "guidRef": "a26c13a357838ee409d09f86a54a4fca"
-      },
-      "soundEffect1Id": {
-        "$type": "NinjaKiwi.Common.ResourceUtils.AudioSourceReference, NinjaKiwi.Common",
-        "GUID": "532b3e11249630a47822958326768c46",
-        "guidRef": "532b3e11249630a47822958326768c46"
-      },
-      "soundEffect2Id": {
-        "$type": "NinjaKiwi.Common.ResourceUtils.AudioSourceReference, NinjaKiwi.Common",
-        "GUID": "2adb6e8fbd6300a4b916c1878717bce5",
-        "guidRef": "2adb6e8fbd6300a4b916c1878717bce5"
-      },
-      "soundEffect3Id": {
-        "$type": "NinjaKiwi.Common.ResourceUtils.AudioSourceReference, NinjaKiwi.Common",
-        "GUID": "a19343f6ca6aa484baf0c4d106eef313",
-        "guidRef": "a19343f6ca6aa484baf0c4d106eef313"
-      },
-      "soundEffect4Id": {
-        "$type": "NinjaKiwi.Common.ResourceUtils.AudioSourceReference, NinjaKiwi.Common",
-        "GUID": "e2ab94e7b53998c4facb069eaf506c00",
-        "guidRef": "e2ab94e7b53998c4facb069eaf506c00"
-      },
-      "soundEffectGroupID": "PopSounds",
-      "soundEffectGroupLimit": 1,
-      "soundEffectTimeDelay": 2,
-      "soundEffectTimeDelayFF": 5,
-      "name": "PopEffectModel_",
-      "ImplementationType": "Assets.Scripts.Simulation.Bloons.Behaviors.PopEffect, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-    },
-    {
-      "$type": "Assets.Scripts.Models.Bloons.Behaviors.GrowModel, Assembly-CSharp",
-      "rate": 3.0,
-      "growToId": "ZebraRegrow",
-      "overrideChildWithColor": null,
-      "name": "GrowModel_",
-      "ImplementationType": "Assets.Scripts.Simulation.Bloons.Behaviors.Grow, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-    }
-  ],
-  "mods": [
-    {
-      "$type": "Assets.Scripts.Models.Towers.Mods.ApplyModModel, Assembly-CSharp",
-      "mod": "Sharpsplosion",
-      "target": "",
-      "name": "BlackRegrow",
-      "ImplementationType": null
-    },
-    {
-      "$type": "Assets.Scripts.Models.Towers.Mods.ApplyModModel, Assembly-CSharp",
-      "mod": "Heartless",
-      "target": "",
-      "name": "BlackRegrow",
-      "ImplementationType": null
-    }
-  ],
-  "damageDisplayStates": [],
-  "collisionGroup": null,
-  "bloonProperties": 2,
-  "depletionEffects": [],
-  "isMoab": false,
-  "isBoss": false,
-  "isCamo": false,
-  "isGrow": true,
-  "isFortified": false,
-  "hasChildrenWithDifferentTotalHealths": false,
-  "isInvulnerable": false,
-  "distributeDamageToChildren": true,
-  "disallowCosmetics": false,
-  "isSaved": true,
-  "radius": 8.0,
-  "danger": 6.0,
-  "maxHealth": 1,
-  "coopMultiplier": 1.0,
-  "armourMultiplier": 1.0,
-  "leakDamage": 1.0,
-  "layerNumber": 6,
-  "bonusDamagePerHit": 0.0,
-  "currentOverlays": null,
-  "dontShowInSandbox": false,
-  "dontShowInSandboxOnRelease": false,
-  "alwaysRecordsDamage": false,
-  "Speed": 45.0,
-  "IsBase": false,
-  "IsRock": false,
-  "name": "BlackRegrow",
-  "ImplementationType": "Assets.Scripts.Simulation.Bloons.Bloon, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
-  "speed": 45.0
+  {
+   "children": [
+    "PinkRegrow",
+    "PinkRegrow"
+   ]
+  },
+  {
+   "rate": 3.0
+  }
+ ],
+ "mods": [
+  {
+   "mod": "Sharpsplosion"
+  },
+  {
+   "mod": "Heartless"
+  }
+ ],
+ "bloonProperties": 2,
+ "isGrow": true,
+ "distributeDamageToChildren": true,
+ "isSaved": true,
+ "radius": 8.0,
+ "danger": 6.0,
+ "maxHealth": 1,
+ "coopMultiplier": 1.0,
+ "armourMultiplier": 1.0,
+ "leakDamage": 1.0,
+ "layerNumber": 6,
+ "Speed": 45.0,
+ "speed": 45.0
 }

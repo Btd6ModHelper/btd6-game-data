@@ -1,277 +1,64 @@
 {
-  "$type": "Assets.Scripts.Models.Powers.PowerModel, Assembly-CSharp",
-  "cost": 50,
-  "canBeActivatedBetweenRounds": true,
-  "icon": {
-    "$type": "NinjaKiwi.Common.ResourceUtils.SpriteReference, NinjaKiwi.Common",
-    "GUID": "PowerIcons[BananaFarmerIcon]",
-    "guidRef": "PowerIcons[BananaFarmerIcon]"
-  },
+ "cost": 50,
+ "canBeActivatedBetweenRounds": true,
+ "behaviors": [
+  {
+   "effectModel": {
+    "scale": 1.0,
+    "lifespan": 1.0
+   }
+  }
+ ],
+ "mods": [
+  {
+   "mod": "FitFarmers"
+  }
+ ],
+ "tower": {
+  "radius": 5.0,
+  "radiusSquared": 25.0,
+  "range": 60.0,
+  "towerSet": 64,
+  "areaTypes": [
+   2
+  ],
   "behaviors": [
-    {
-      "$type": "Assets.Scripts.Models.Powers.Effects.CreateEffectOnPowerModel, Assembly-CSharp",
-      "effectModel": {
-        "$type": "Assets.Scripts.Models.Effects.EffectModel, Assembly-CSharp",
-        "assetId": {
-          "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-          "GUID": "cc4e51ecd049ee249a5bd51db3612483",
-          "guidRef": "cc4e51ecd049ee249a5bd51db3612483"
-        },
-        "scale": 1.0,
-        "lifespan": 1.0,
-        "fullscreen": 0,
-        "useCenterPosition": false,
-        "useTransformPosition": false,
-        "useTransfromRotation": false,
-        "destroyOnTransformDestroy": false,
-        "alwaysUseAge": false,
-        "useRoundTime": false,
-        "name": "EffectModel_",
-        "ImplementationType": null
-      },
-      "name": "CreateEffectOnPowerModel_BananaFarmer",
-      "ImplementationType": "Assets.Scripts.Simulation.Powers.Effects.CreateEffectOnPower, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+   {
+    "attractRange": 60.0,
+    "collectRange": 10.0,
+    "speed": 2.0,
+    "useTowerRange": true,
+    "countCollectedCash": true,
+    "animateTower": true,
+    "rotate": true
+   },
+   {
+    "effectModel": {
+     "scale": 1.0,
+     "lifespan": 1.0
     }
+   },
+   {
+    "placeAnimation": 2,
+    "upgradeAnimation": 2
+   },
+   {
+    "layer": -1,
+    "scale": 1.0,
+    "category": 4
+   }
   ],
-  "mods": [
-    {
-      "$type": "Assets.Scripts.Models.Towers.Mods.ApplyModModel, Assembly-CSharp",
-      "mod": "FitFarmers",
-      "target": "",
-      "name": "BananaFarmer",
-      "ImplementationType": null
-    }
-  ],
-  "tower": {
-    "$type": "Assets.Scripts.Models.Towers.TowerModel, Assembly-CSharp",
-    "display": {
-      "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-      "GUID": "41f2963fea4f9eb46afaf47d60ade688",
-      "guidRef": "41f2963fea4f9eb46afaf47d60ade688"
-    },
-    "baseId": "BananaFarmer",
-    "cost": 0.0,
-    "radius": 5.0,
-    "radiusSquared": 25.0,
-    "range": 60.0,
-    "ignoreBlockers": false,
-    "isGlobalRange": false,
-    "tier": 0,
-    "tiers": [
-      0,
-      0,
-      0
-    ],
-    "towerSet": 64,
-    "icon": {
-      "$type": "NinjaKiwi.Common.ResourceUtils.SpriteReference, NinjaKiwi.Common",
-      "GUID": "PowerIcons[BananaFarmerIcon]",
-      "guidRef": "PowerIcons[BananaFarmerIcon]"
-    },
-    "portrait": {
-      "$type": "NinjaKiwi.Common.ResourceUtils.SpriteReference, NinjaKiwi.Common",
-      "GUID": "158ed85fea8a62b40be8a1c7170e37e2",
-      "guidRef": "158ed85fea8a62b40be8a1c7170e37e2"
-    },
-    "instaIcon": {
-      "$type": "NinjaKiwi.Common.ResourceUtils.SpriteReference, NinjaKiwi.Common",
-      "GUID": null,
-      "guidRef": null
-    },
-    "areaTypes": [
-      2
-    ],
-    "mods": [],
-    "ignoreTowerForSelection": false,
-    "behaviors": [
-      {
-        "$type": "Assets.Scripts.Models.Towers.Behaviors.CollectCashZoneModel, Assembly-CSharp",
-        "attractRange": 60.0,
-        "collectRange": 10.0,
-        "speed": 2.0,
-        "towerFilter": "",
-        "useTowerRange": true,
-        "countCollectedCash": true,
-        "animateTower": true,
-        "rotate": true,
-        "name": "CollectCashZoneModel_",
-        "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.CollectCashZone, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-      },
-      {
-        "$type": "Assets.Scripts.Models.Towers.Behaviors.CreateEffectOnSellModel, Assembly-CSharp",
-        "effectModel": {
-          "$type": "Assets.Scripts.Models.Effects.EffectModel, Assembly-CSharp",
-          "assetId": {
-            "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-            "GUID": "b1dec8a8d79593843bc2e2410eae944e",
-            "guidRef": "b1dec8a8d79593843bc2e2410eae944e"
-          },
-          "scale": 1.0,
-          "lifespan": 1.0,
-          "fullscreen": 0,
-          "useCenterPosition": false,
-          "useTransformPosition": false,
-          "useTransfromRotation": false,
-          "destroyOnTransformDestroy": false,
-          "alwaysUseAge": false,
-          "useRoundTime": false,
-          "name": "EffectModel_",
-          "ImplementationType": null
-        },
-        "name": "CreateEffectOnSellModel_BananaFarmer",
-        "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.CreateEffectOnSell, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-      },
-      {
-        "$type": "Assets.Scripts.Models.Towers.Behaviors.CreateEffectOnPlaceModel, Assembly-CSharp",
-        "effectModel": null,
-        "name": "CreateEffectOnPlaceModel_BananaFarmer",
-        "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.CreateEffectOnPlace, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-      },
-      {
-        "$type": "Assets.Scripts.Models.Towers.Behaviors.PlayAnimationIndexModel, Assembly-CSharp",
-        "placeAnimation": 2,
-        "upgradeAnimation": 2,
-        "name": "PlayAnimationIndexModel_BananaFarmer",
-        "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.PlayAnimationIndex, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-      },
-      {
-        "$type": "Assets.Scripts.Models.Towers.Behaviors.CreateSoundOnTowerPlaceModel, Assembly-CSharp",
-        "sound1": {
-          "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
-          "assetId": {
-            "$type": "NinjaKiwi.Common.ResourceUtils.AudioSourceReference, NinjaKiwi.Common",
-            "GUID": "0782b04f742eb2542bc8266a38241c5b",
-            "guidRef": "0782b04f742eb2542bc8266a38241c5b"
-          },
-          "name": "SoundModel_PlaceSound1",
-          "ImplementationType": null
-        },
-        "sound2": {
-          "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
-          "assetId": {
-            "$type": "NinjaKiwi.Common.ResourceUtils.AudioSourceReference, NinjaKiwi.Common",
-            "GUID": "80580fcd99708624ab85e37036ca124c",
-            "guidRef": "80580fcd99708624ab85e37036ca124c"
-          },
-          "name": "SoundModel_PlaceSound2",
-          "ImplementationType": null
-        },
-        "waterSound1": null,
-        "waterSound2": null,
-        "heroSound1": null,
-        "heroSound2": null,
-        "name": "CreateSoundOnTowerPlaceModel_BananaFarmer",
-        "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.CreateSoundOnTowerPlace, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-      },
-      {
-        "$type": "Assets.Scripts.Models.Towers.Behaviors.CreateSoundOnSellModel, Assembly-CSharp",
-        "sound": {
-          "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
-          "assetId": {
-            "$type": "NinjaKiwi.Common.ResourceUtils.AudioSourceReference, NinjaKiwi.Common",
-            "GUID": "df4c691ccf8a3c7408ed6f156740c8b7",
-            "guidRef": "df4c691ccf8a3c7408ed6f156740c8b7"
-          },
-          "name": "SoundModel_SellSound",
-          "ImplementationType": null
-        },
-        "name": "CreateSoundOnSellModel_BananaFarmer",
-        "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.CreateSoundOnSell, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-      },
-      {
-        "$type": "Assets.Scripts.Models.Towers.Behaviors.ShowCashIconInsteadModel, Assembly-CSharp",
-        "name": "ShowCashIconInsteadModel_BananaFarmer",
-        "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.ShowCashIconInstead, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-      },
-      {
-        "$type": "Assets.Scripts.Models.GenericBehaviors.DisplayModel, Assembly-CSharp",
-        "display": {
-          "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-          "GUID": "41f2963fea4f9eb46afaf47d60ade688",
-          "guidRef": "41f2963fea4f9eb46afaf47d60ade688"
-        },
-        "layer": -1,
-        "positionOffset": {
-          "$type": "Assets.Scripts.Simulation.SMath.Vector3, Assembly-CSharp",
-          "x": 0.0,
-          "y": 0.0,
-          "z": 0.0
-        },
-        "scale": 1.0,
-        "ignoreRotation": false,
-        "animationChanges": null,
-        "delayedReveal": 0.0,
-        "category": 4,
-        "isAnimationPaused": false,
-        "name": "DisplayModel_TowerDisplay",
-        "ImplementationType": "Assets.Scripts.Simulation.Behaviors.DisplayBehavior, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-      }
-    ],
-    "footprint": {
-      "$type": "Assets.Scripts.Models.Towers.Behaviors.CircleFootprintModel, Assembly-CSharp",
-      "radius": 5.0,
-      "doesntBlockTowerPlacement": false,
-      "ignoresPlacementCheck": false,
-      "ignoresTowerOverlap": false,
-      "name": "CircleFootprintModel_Circle Footprint",
-      "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.CircleFootprint, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-    },
-    "dontDisplayUpgrades": true,
-    "emoteSpriteSmall": {
-      "$type": "NinjaKiwi.Common.ResourceUtils.SpriteReference, NinjaKiwi.Common",
-      "GUID": null,
-      "guidRef": null
-    },
-    "emoteSpriteLarge": {
-      "$type": "NinjaKiwi.Common.ResourceUtils.SpriteReference, NinjaKiwi.Common",
-      "GUID": null,
-      "guidRef": null
-    },
-    "doesntRotate": false,
-    "upgrades": [],
-    "appliedUpgrades": [],
-    "targetTypes": null,
-    "paragonUpgrade": null,
-    "isSubTower": false,
-    "isBakable": false,
-    "powerName": "BananaFarmer",
-    "showPowerTowerBuffs": true,
-    "animationSpeed": 1.0,
-    "towerSelectionMenuThemeId": "BananaFarmer",
-    "secondarySelectionMenu": {
-      "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-      "GUID": null,
-      "guidRef": null
-    },
-    "ignoreCoopAreas": false,
-    "canAlwaysBeSold": false,
-    "blockSelling": false,
-    "isParagon": false,
-    "ignoreMaxSellPercent": false,
-    "isStunned": false,
-    "geraldoItemName": null,
-    "sellbackModifierAdd": 0.0,
-    "skinName": null,
-    "dontAddMutatorsFromParent": false,
-    "displayScale": 1.0,
-    "showBuffs": true,
-    "destroyTowerOnRedistribution": false,
-    "isPowerTower": true,
-    "isGeraldoItem": false,
-    "IsBeastHandlerPet": false,
-    "SelectParentOnSelected": false,
-    "BeastHandlerLeashMutationId": "BeastHandlerContributionBananaFarmer",
-    "IsBaseTower": true,
-    "TargetTypes": null,
-    "IsExclusivelyWaterBased": false,
-    "name": "BananaFarmer",
-    "ImplementationType": "Assets.Scripts.Simulation.Towers.Tower, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+  "footprint": {
+   "radius": 5.0
   },
-  "isDisabledByGameMode": false,
-  "isHidden": false,
-  "showBuffsForTower": true,
-  "quantity": 1,
-  "saveImmediately": false,
-  "name": "BananaFarmer",
-  "ImplementationType": "Assets.Scripts.Simulation.Powers.Power, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+  "dontDisplayUpgrades": true,
+  "showPowerTowerBuffs": true,
+  "animationSpeed": 1.0,
+  "displayScale": 1.0,
+  "showBuffs": true,
+  "isPowerTower": true,
+  "IsBaseTower": true
+ },
+ "showBuffsForTower": true,
+ "quantity": 1
 }

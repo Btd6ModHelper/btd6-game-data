@@ -1,214 +1,64 @@
 {
-  "$type": "Assets.Scripts.Models.Powers.PowerModel, Assembly-CSharp",
-  "cost": 50,
-  "canBeActivatedBetweenRounds": true,
-  "icon": {
-    "$type": "NinjaKiwi.Common.ResourceUtils.SpriteReference, NinjaKiwi.Common",
-    "GUID": "PowerIcons[CamoTrapIcon]",
-    "guidRef": "PowerIcons[CamoTrapIcon]"
+ "cost": 50,
+ "canBeActivatedBetweenRounds": true,
+ "behaviors": [
+  {
+   "projectileModel": {
+    "id": "CamoTrap",
+    "pierce": 500.0,
+    "scale": 1.0,
+    "ignoreBlockers": true,
+    "filters": [
+     {
+      "camoTag": true,
+      "tag": "Camo"
+     }
+    ],
+    "behaviors": [
+     {
+      "rounds": 9999999,
+      "Lifespan": 9999999.0,
+      "lifespan": 9999999.0
+     },
+     {
+      "filters": [
+       {
+        "camoTag": true,
+        "tag": "Camo"
+       }
+      ]
+     },
+     {
+      "cleanseCamo": true,
+      "collisionPass": -1
+     },
+     {
+      "animationState": 1
+     },
+     {
+      "scale": 1.0,
+      "category": 16
+     }
+    ],
+    "collisionPasses": [
+     -1
+    ],
+    "canCollideWithBloons": true,
+    "radius": 14.0,
+    "CappedPierce": 500.0
+   }
   },
-  "behaviors": [
-    {
-      "$type": "Assets.Scripts.Models.Powers.CamoTrapModel, Assembly-CSharp",
-      "projectileModel": {
-        "$type": "Assets.Scripts.Models.Towers.Projectiles.ProjectileModel, Assembly-CSharp",
-        "display": {
-          "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-          "GUID": "8d37b8f67ccd1e7459da816f69c29fb9",
-          "guidRef": "8d37b8f67ccd1e7459da816f69c29fb9"
-        },
-        "id": "CamoTrap",
-        "maxPierce": 0.0,
-        "pierce": 500.0,
-        "scale": 1.0,
-        "ignoreBlockers": true,
-        "usePointCollisionWithBloons": false,
-        "canCollisionBeBlockedByMapLos": false,
-        "filters": [
-          {
-            "$type": "Assets.Scripts.Models.Towers.Filters.FilterInvisibleModel, Assembly-CSharp",
-            "isActive": false,
-            "ignoreBroadPhase": false,
-            "name": "FilterInvisibleModel_",
-            "ImplementationType": "Assets.Scripts.Simulation.Towers.Filters.FilterInvisible, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-          },
-          {
-            "$type": "Assets.Scripts.Models.Towers.Filters.FilterWithTagModel, Assembly-CSharp",
-            "moabTag": false,
-            "camoTag": true,
-            "growTag": false,
-            "fortifiedTag": false,
-            "tag": "Camo",
-            "inclusive": false,
-            "hasMoabTag": false,
-            "name": "FilterWithTagModel_",
-            "ImplementationType": "Assets.Scripts.Simulation.Towers.Filters.FilterWithTag, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-          }
-        ],
-        "behaviors": [
-          {
-            "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.AgeModel, Assembly-CSharp",
-            "rounds": 9999999,
-            "useRoundTime": false,
-            "endOfRoundClearBypassModel": null,
-            "collisionPass": 0,
-            "Lifespan": 9999999.0,
-            "name": "AgeModel_CamoTrap",
-            "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Age, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
-            "lifespan": 9999999.0
-          },
-          {
-            "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.ProjectileFilterModel, Assembly-CSharp",
-            "filters": [
-              {
-                "$type": "Assets.Scripts.Models.Towers.Filters.FilterInvisibleModel, Assembly-CSharp",
-                "isActive": false,
-                "ignoreBroadPhase": false,
-                "name": "FilterInvisibleModel_",
-                "ImplementationType": "Assets.Scripts.Simulation.Towers.Filters.FilterInvisible, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-              },
-              {
-                "$type": "Assets.Scripts.Models.Towers.Filters.FilterWithTagModel, Assembly-CSharp",
-                "moabTag": false,
-                "camoTag": true,
-                "growTag": false,
-                "fortifiedTag": false,
-                "tag": "Camo",
-                "inclusive": false,
-                "hasMoabTag": false,
-                "name": "FilterWithTagModel_",
-                "ImplementationType": "Assets.Scripts.Simulation.Towers.Filters.FilterWithTag, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-              }
-            ],
-            "collisionPass": 0,
-            "name": "ProjectileFilterModel_CamoTrap",
-            "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.ProjectileFilter, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-          },
-          {
-            "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.RemoveBloonModifiersModel, Assembly-CSharp",
-            "cleanseRegen": false,
-            "cleanseCamo": true,
-            "cleanseLead": false,
-            "cleanseFortified": false,
-            "cleanseOnlyIfDamaged": false,
-            "bloonTagExcludeList": [],
-            "bloonTagExplicitList": [],
-            "collisionPass": -1,
-            "name": "RemoveBloonModifiersModel_",
-            "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.RemoveBloonModifiers, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-          },
-          {
-            "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.AnimateOnCollideModel, Assembly-CSharp",
-            "animationState": 1,
-            "collisionPass": 0,
-            "name": "AnimateOnCollideModel_",
-            "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.AnimateOnCollide, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-          },
-          {
-            "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.PowerProjectileModel, Assembly-CSharp",
-            "collisionPass": 0,
-            "name": "PowerProjectileModel_",
-            "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.PowerProjectile, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-          },
-          {
-            "$type": "Assets.Scripts.Models.GenericBehaviors.DisplayModel, Assembly-CSharp",
-            "display": {
-              "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-              "GUID": "8d37b8f67ccd1e7459da816f69c29fb9",
-              "guidRef": "8d37b8f67ccd1e7459da816f69c29fb9"
-            },
-            "layer": 0,
-            "positionOffset": {
-              "$type": "Assets.Scripts.Simulation.SMath.Vector3, Assembly-CSharp",
-              "x": 0.0,
-              "y": 0.0,
-              "z": 0.0
-            },
-            "scale": 1.0,
-            "ignoreRotation": false,
-            "animationChanges": null,
-            "delayedReveal": 0.0,
-            "category": 16,
-            "isAnimationPaused": false,
-            "name": "DisplayModel_ProjectileDisplay",
-            "ImplementationType": "Assets.Scripts.Simulation.Behaviors.DisplayBehavior, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-          }
-        ],
-        "collisionPasses": [
-          -1,
-          0
-        ],
-        "canCollideWithBloons": true,
-        "radius": 14.0,
-        "vsBlockerRadius": 0.0,
-        "hasDamageModifiers": false,
-        "dontUseCollisionChecker": false,
-        "ignoreNonTargetable": false,
-        "ignorePierceExhaustion": false,
-        "saveId": null,
-        "CappedPierce": 500.0,
-        "name": "ProjectileModel_CamoTrap",
-        "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Projectile, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
-        "checkCollisionInterval": 0.0
-      },
-      "name": "CamoTrapModel_CamoTrap",
-      "ImplementationType": "Assets.Scripts.Simulation.Powers.CamoTrap, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-    },
-    {
-      "$type": "Assets.Scripts.Models.Powers.Effects.CreateEffectOnPowerModel, Assembly-CSharp",
-      "effectModel": {
-        "$type": "Assets.Scripts.Models.Effects.EffectModel, Assembly-CSharp",
-        "assetId": {
-          "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-          "GUID": "cc4e51ecd049ee249a5bd51db3612483",
-          "guidRef": "cc4e51ecd049ee249a5bd51db3612483"
-        },
-        "scale": 1.0,
-        "lifespan": 1.0,
-        "fullscreen": 0,
-        "useCenterPosition": false,
-        "useTransformPosition": false,
-        "useTransfromRotation": false,
-        "destroyOnTransformDestroy": false,
-        "alwaysUseAge": false,
-        "useRoundTime": false,
-        "name": "EffectModel_",
-        "ImplementationType": null
-      },
-      "name": "CreateEffectOnPowerModel_CamoTrap",
-      "ImplementationType": "Assets.Scripts.Simulation.Powers.Effects.CreateEffectOnPower, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-    },
-    {
-      "$type": "Assets.Scripts.Models.Powers.Effects.CreateSoundOnPowerModel, Assembly-CSharp",
-      "sound": {
-        "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
-        "assetId": {
-          "$type": "NinjaKiwi.Common.ResourceUtils.AudioSourceReference, NinjaKiwi.Common",
-          "GUID": "b386d12f586c1454daff6c7c9fe5f85a",
-          "guidRef": "b386d12f586c1454daff6c7c9fe5f85a"
-        },
-        "name": "SoundModel_PlaceCamoDetector",
-        "ImplementationType": null
-      },
-      "name": "CreateSoundOnPowerModel_CamoTrap",
-      "ImplementationType": "Assets.Scripts.Simulation.Powers.Effects.CreateSoundOnPower, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-    }
-  ],
-  "mods": [
-    {
-      "$type": "Assets.Scripts.Models.Towers.Mods.ApplyModModel, Assembly-CSharp",
-      "mod": "BiggerCamoTrap",
-      "target": "",
-      "name": "CamoTrap",
-      "ImplementationType": null
-    }
-  ],
-  "tower": null,
-  "isDisabledByGameMode": false,
-  "isHidden": false,
-  "showBuffsForTower": false,
-  "quantity": 1,
-  "saveImmediately": false,
-  "name": "CamoTrap",
-  "ImplementationType": "Assets.Scripts.Simulation.Powers.Power, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+  {
+   "effectModel": {
+    "scale": 1.0,
+    "lifespan": 1.0
+   }
+  }
+ ],
+ "mods": [
+  {
+   "mod": "BiggerCamoTrap"
+  }
+ ],
+ "quantity": 1
 }

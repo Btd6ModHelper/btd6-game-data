@@ -1,963 +1,388 @@
 {
-  "$type": "Assets.Scripts.Models.Towers.TowerModel, Assembly-CSharp",
-  "display": {
-    "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-    "GUID": "b4d032115f2b15e48a5ed43fbe8e24c1",
-    "guidRef": "b4d032115f2b15e48a5ed43fbe8e24c1"
+ "cost": 1000.0,
+ "radius": 8.0,
+ "radiusSquared": 64.0,
+ "range": 34.0,
+ "ignoreBlockers": true,
+ "tier": 3,
+ "tiers": [
+  1,
+  3
+ ],
+ "towerSet": 8,
+ "areaTypes": [
+  2
+ ],
+ "mods": [
+  {
+   "mod": "VeryShreddy"
   },
-  "baseId": "SpikeFactory",
-  "cost": 1000.0,
-  "radius": 8.0,
-  "radiusSquared": 64.0,
-  "range": 34.0,
-  "ignoreBlockers": true,
-  "isGlobalRange": false,
-  "tier": 3,
-  "tiers": [
-    1,
-    3,
-    0
-  ],
-  "towerSet": 8,
-  "icon": {
-    "$type": "NinjaKiwi.Common.ResourceUtils.SpriteReference, NinjaKiwi.Common",
-    "GUID": "MonkeyIcons[SpikeFactoryIcon]",
-    "guidRef": "MonkeyIcons[SpikeFactoryIcon]"
+  {
+   "mod": "OneMoreSpike"
   },
-  "portrait": {
-    "$type": "NinjaKiwi.Common.ResourceUtils.SpriteReference, NinjaKiwi.Common",
-    "GUID": "0224fdbd263dc0d47a368ac724f1a879",
-    "guidRef": "0224fdbd263dc0d47a368ac724f1a879"
+  {
+   "mod": "GlobalAbilityCooldowns"
   },
-  "instaIcon": {
-    "$type": "NinjaKiwi.Common.ResourceUtils.SpriteReference, NinjaKiwi.Common",
-    "GUID": "601db75d1b76a473c9b0ee60baed2556",
-    "guidRef": "601db75d1b76a473c9b0ee60baed2556"
+  {
+   "mod": "VeteranMonkeyTraining"
   },
-  "areaTypes": [
-    2
-  ],
-  "mods": [
+  {
+   "mod": "MonkeyEducation"
+  },
+  {
+   "mod": "BetterSellDeals"
+  }
+ ],
+ "behaviors": [
+  {
+   "effectModel": {
+    "scale": 1.0,
+    "lifespan": 6.0
+   }
+  },
+  {
+   "effectModel": {
+    "scale": 1.0,
+    "lifespan": 1.0
+   }
+  },
+  {
+   "effectModel": {
+    "scale": 1.0,
+    "lifespan": 6.0
+   }
+  },
+  {
+   "weapons": [
     {
-      "$type": "Assets.Scripts.Models.Towers.Mods.ApplyModModel, Assembly-CSharp",
-      "mod": "VeryShreddy",
-      "target": "",
-      "name": "MOAB SHREDR",
-      "ImplementationType": null
-    },
-    {
-      "$type": "Assets.Scripts.Models.Towers.Mods.ApplyModModel, Assembly-CSharp",
-      "mod": "OneMoreSpike",
-      "target": "",
-      "name": "SpikeFactoryUpgrades",
-      "ImplementationType": null
-    },
-    {
-      "$type": "Assets.Scripts.Models.Towers.Mods.ApplyModModel, Assembly-CSharp",
-      "mod": "GlobalAbilityCooldowns",
-      "target": "",
-      "name": "SpikeFactoryUpgrades",
-      "ImplementationType": null
-    },
-    {
-      "$type": "Assets.Scripts.Models.Towers.Mods.ApplyModModel, Assembly-CSharp",
-      "mod": "VeteranMonkeyTraining",
-      "target": "",
-      "name": "SpikeFactoryUpgrades",
-      "ImplementationType": null
-    },
-    {
-      "$type": "Assets.Scripts.Models.Towers.Mods.ApplyModModel, Assembly-CSharp",
-      "mod": "MonkeyEducation",
-      "target": "",
-      "name": "SpikeFactoryUpgrades",
-      "ImplementationType": null
-    },
-    {
-      "$type": "Assets.Scripts.Models.Towers.Mods.ApplyModModel, Assembly-CSharp",
-      "mod": "BetterSellDeals",
-      "target": "",
-      "name": "SpikeFactoryUpgrades",
-      "ImplementationType": null
-    }
-  ],
-  "ignoreTowerForSelection": false,
-  "behaviors": [
-    {
-      "$type": "Assets.Scripts.Models.Towers.Behaviors.CreateEffectOnPlaceModel, Assembly-CSharp",
-      "effectModel": {
-        "$type": "Assets.Scripts.Models.Effects.EffectModel, Assembly-CSharp",
-        "assetId": {
-          "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-          "GUID": "d2bcad0f16bb76e408a107e13b2c0da3",
-          "guidRef": "d2bcad0f16bb76e408a107e13b2c0da3"
-        },
-        "scale": 1.0,
-        "lifespan": 6.0,
-        "fullscreen": 0,
-        "useCenterPosition": false,
-        "useTransformPosition": false,
-        "useTransfromRotation": false,
-        "destroyOnTransformDestroy": false,
-        "alwaysUseAge": false,
-        "useRoundTime": false,
-        "name": "EffectModel_PlacementEffect",
-        "ImplementationType": null
-      },
-      "name": "CreateEffectOnPlaceModel_SpikeFactory-130",
-      "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.CreateEffectOnPlace, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-    },
-    {
-      "$type": "Assets.Scripts.Models.Towers.Behaviors.CreateSoundOnSellModel, Assembly-CSharp",
-      "sound": {
-        "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
-        "assetId": {
-          "$type": "NinjaKiwi.Common.ResourceUtils.AudioSourceReference, NinjaKiwi.Common",
-          "GUID": "df4c691ccf8a3c7408ed6f156740c8b7",
-          "guidRef": "df4c691ccf8a3c7408ed6f156740c8b7"
-        },
-        "name": "SoundModel_SellSound",
-        "ImplementationType": null
-      },
-      "name": "CreateSoundOnSellModel_SpikeFactory-130",
-      "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.CreateSoundOnSell, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-    },
-    {
-      "$type": "Assets.Scripts.Models.Towers.Behaviors.CreateSoundOnUpgradeModel, Assembly-CSharp",
-      "sound": {
-        "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
-        "assetId": {
-          "$type": "NinjaKiwi.Common.ResourceUtils.AudioSourceReference, NinjaKiwi.Common",
-          "GUID": "23a777b9950195f4f8f4bf745ef84031",
-          "guidRef": "23a777b9950195f4f8f4bf745ef84031"
-        },
-        "name": "SoundModel_UpgradeSound",
-        "ImplementationType": null
-      },
-      "sound1": {
-        "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
-        "assetId": {
-          "$type": "NinjaKiwi.Common.ResourceUtils.AudioSourceReference, NinjaKiwi.Common",
-          "GUID": "23a777b9950195f4f8f4bf745ef84031",
-          "guidRef": "23a777b9950195f4f8f4bf745ef84031"
-        },
-        "name": "SoundModel_UpgradeSound",
-        "ImplementationType": null
-      },
-      "sound2": {
-        "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
-        "assetId": {
-          "$type": "NinjaKiwi.Common.ResourceUtils.AudioSourceReference, NinjaKiwi.Common",
-          "GUID": "23a777b9950195f4f8f4bf745ef84031",
-          "guidRef": "23a777b9950195f4f8f4bf745ef84031"
-        },
-        "name": "SoundModel_UpgradeSound",
-        "ImplementationType": null
-      },
-      "sound3": {
-        "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
-        "assetId": {
-          "$type": "NinjaKiwi.Common.ResourceUtils.AudioSourceReference, NinjaKiwi.Common",
-          "GUID": "23a777b9950195f4f8f4bf745ef84031",
-          "guidRef": "23a777b9950195f4f8f4bf745ef84031"
-        },
-        "name": "SoundModel_UpgradeSound",
-        "ImplementationType": null
-      },
-      "sound4": {
-        "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
-        "assetId": {
-          "$type": "NinjaKiwi.Common.ResourceUtils.AudioSourceReference, NinjaKiwi.Common",
-          "GUID": "23a777b9950195f4f8f4bf745ef84031",
-          "guidRef": "23a777b9950195f4f8f4bf745ef84031"
-        },
-        "name": "SoundModel_UpgradeSound",
-        "ImplementationType": null
-      },
-      "sound5": {
-        "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
-        "assetId": {
-          "$type": "NinjaKiwi.Common.ResourceUtils.AudioSourceReference, NinjaKiwi.Common",
-          "GUID": "23a777b9950195f4f8f4bf745ef84031",
-          "guidRef": "23a777b9950195f4f8f4bf745ef84031"
-        },
-        "name": "SoundModel_UpgradeSound",
-        "ImplementationType": null
-      },
-      "sound6": {
-        "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
-        "assetId": {
-          "$type": "NinjaKiwi.Common.ResourceUtils.AudioSourceReference, NinjaKiwi.Common",
-          "GUID": "23a777b9950195f4f8f4bf745ef84031",
-          "guidRef": "23a777b9950195f4f8f4bf745ef84031"
-        },
-        "name": "SoundModel_UpgradeSound",
-        "ImplementationType": null
-      },
-      "sound7": {
-        "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
-        "assetId": {
-          "$type": "NinjaKiwi.Common.ResourceUtils.AudioSourceReference, NinjaKiwi.Common",
-          "GUID": "23a777b9950195f4f8f4bf745ef84031",
-          "guidRef": "23a777b9950195f4f8f4bf745ef84031"
-        },
-        "name": "SoundModel_UpgradeSound",
-        "ImplementationType": null
-      },
-      "sound8": {
-        "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
-        "assetId": {
-          "$type": "NinjaKiwi.Common.ResourceUtils.AudioSourceReference, NinjaKiwi.Common",
-          "GUID": "23a777b9950195f4f8f4bf745ef84031",
-          "guidRef": "23a777b9950195f4f8f4bf745ef84031"
-        },
-        "name": "SoundModel_UpgradeSound",
-        "ImplementationType": null
-      },
-      "name": "CreateSoundOnUpgradeModel_SpikeFactory-130",
-      "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.CreateSoundOnUpgrade, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-    },
-    {
-      "$type": "Assets.Scripts.Models.Towers.Behaviors.CreateEffectOnSellModel, Assembly-CSharp",
-      "effectModel": {
-        "$type": "Assets.Scripts.Models.Effects.EffectModel, Assembly-CSharp",
-        "assetId": {
-          "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-          "GUID": "b1dec8a8d79593843bc2e2410eae944e",
-          "guidRef": "b1dec8a8d79593843bc2e2410eae944e"
-        },
-        "scale": 1.0,
-        "lifespan": 1.0,
-        "fullscreen": 0,
-        "useCenterPosition": false,
-        "useTransformPosition": false,
-        "useTransfromRotation": false,
-        "destroyOnTransformDestroy": false,
-        "alwaysUseAge": false,
-        "useRoundTime": false,
-        "name": "EffectModel_SellEffect",
-        "ImplementationType": null
-      },
-      "name": "CreateEffectOnSellModel_SpikeFactory-130",
-      "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.CreateEffectOnSell, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-    },
-    {
-      "$type": "Assets.Scripts.Models.Towers.Behaviors.CreateSoundOnTowerPlaceModel, Assembly-CSharp",
-      "sound1": {
-        "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
-        "assetId": {
-          "$type": "NinjaKiwi.Common.ResourceUtils.AudioSourceReference, NinjaKiwi.Common",
-          "GUID": "432da2691e8684d4890db8228c70f225",
-          "guidRef": "432da2691e8684d4890db8228c70f225"
-        },
-        "name": "SoundModel_PlaceStructureSound1",
-        "ImplementationType": null
-      },
-      "sound2": {
-        "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
-        "assetId": {
-          "$type": "NinjaKiwi.Common.ResourceUtils.AudioSourceReference, NinjaKiwi.Common",
-          "GUID": "f6963c719015dd040a4cdd3c1aab644e",
-          "guidRef": "f6963c719015dd040a4cdd3c1aab644e"
-        },
-        "name": "SoundModel_PlaceStructureSound2",
-        "ImplementationType": null
-      },
-      "waterSound1": null,
-      "waterSound2": null,
-      "heroSound1": null,
-      "heroSound2": null,
-      "name": "CreateSoundOnTowerPlaceModel_SpikeFactory-130",
-      "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.CreateSoundOnTowerPlace, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-    },
-    {
-      "$type": "Assets.Scripts.Models.Towers.Behaviors.CreateEffectOnUpgradeModel, Assembly-CSharp",
-      "effectModel": {
-        "$type": "Assets.Scripts.Models.Effects.EffectModel, Assembly-CSharp",
-        "assetId": {
-          "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-          "GUID": "0df55a1a5432bf54eb811f8e099c49c3",
-          "guidRef": "0df55a1a5432bf54eb811f8e099c49c3"
-        },
-        "scale": 1.0,
-        "lifespan": 6.0,
-        "fullscreen": 0,
-        "useCenterPosition": false,
-        "useTransformPosition": false,
-        "useTransfromRotation": false,
-        "destroyOnTransformDestroy": false,
-        "alwaysUseAge": false,
-        "useRoundTime": false,
-        "name": "EffectModel_UpgradeEffect",
-        "ImplementationType": null
-      },
-      "createOnAirUnit": false,
-      "name": "CreateEffectOnUpgradeModel_SpikeFactory-130",
-      "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.CreateEffectOnUpgrade, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-    },
-    {
-      "$type": "Assets.Scripts.Models.Towers.Behaviors.Attack.AttackModel, Assembly-CSharp",
-      "weapons": [
-        {
-          "$type": "Assets.Scripts.Models.Towers.Weapons.WeaponModel, Assembly-CSharp",
-          "animation": 1,
-          "emission": {
-            "$type": "Assets.Scripts.Models.Towers.Behaviors.Emissions.SingleEmmisionTowardsTargetModel, Assembly-CSharp",
-            "offset": 0.0,
-            "behaviors": null,
-            "name": "SingleEmmisionTowardsTargetModel_",
-            "ImplementationType": "Assets.Scripts.Simulation.Towers.Emissions.SingleEmmisionTowardsTarget, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-          },
-          "ejectX": 0.0,
-          "ejectY": 0.0,
-          "ejectZ": 17.53,
-          "projectile": {
-            "$type": "Assets.Scripts.Models.Towers.Projectiles.ProjectileModel, Assembly-CSharp",
-            "display": {
-              "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-              "GUID": null,
-              "guidRef": null
-            },
-            "id": "Projectile",
-            "maxPierce": 0.0,
-            "pierce": 10.0,
-            "scale": 1.0,
-            "ignoreBlockers": true,
-            "usePointCollisionWithBloons": false,
-            "canCollisionBeBlockedByMapLos": false,
-            "filters": null,
-            "behaviors": [
-              {
-                "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModel, Assembly-CSharp",
-                "damage": 1.0,
-                "maxDamage": 0.0,
-                "distributeToChildren": true,
-                "overrideDistributeBlocker": false,
-                "createPopEffect": true,
-                "immuneBloonProperties": 17,
-                "immuneBloonPropertiesOriginal": 17,
-                "ignoreImmunityDestroy": false,
-                "collisionPass": 0,
-                "CappedDamage": 1.0,
-                "name": "DamageModel_Projectile_",
-                "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Damage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-              },
-              {
-                "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.ClearHitBloonsModel, Assembly-CSharp",
-                "collisionPass": 0,
-                "name": "ClearHitBloonsModel_",
-                "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.ClearHitBloons, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
-                "interval": 0.001
-              },
-              {
-                "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.AgeModel, Assembly-CSharp",
-                "rounds": 0,
-                "useRoundTime": true,
-                "endOfRoundClearBypassModel": {
-                  "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.EndOfRoundClearBypassModel, Assembly-CSharp",
-                  "gameModes": "Apopalypse",
-                  "gameModesList": [
-                    "Apopalypse"
-                  ],
-                  "collisionPass": 0,
-                  "name": "EndOfRoundClearBypassModel_",
-                  "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.EndOfRoundClearBypass, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-                },
-                "collisionPass": 0,
-                "Lifespan": 50.0,
-                "name": "AgeModel_Projectile",
-                "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Age, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
-                "lifespan": 50.0
-              },
-              {
-                "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModifierForTagModel, Assembly-CSharp",
-                "tag": "Moabs",
-                "tags": [
-                  "Moabs"
-                ],
-                "damageMultiplier": 1.0,
-                "damageAddative": 7.0,
-                "mustIncludeAllTags": false,
-                "applyOverMaxDamage": false,
-                "collisionPass": 0,
-                "name": "DamageModifierForTagModel_Projectile",
-                "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.DamageModifierForTag, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-              },
-              {
-                "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.ScaleProjectileModel, Assembly-CSharp",
-                "samples": [
-                  0.09004579,
-                  0.413799465,
-                  0.8358369,
-                  1.19060707,
-                  1.3559351,
-                  1.3580091,
-                  1.34539771,
-                  1.32124126,
-                  1.287959,
-                  1.2479701,
-                  1.20369387,
-                  1.15754938,
-                  1.111956,
-                  1.0693326,
-                  1.03209877,
-                  1.00267386,
-                  1.01969492,
-                  1.080537,
-                  1.126491,
-                  1.1125747,
-                  1.06109476,
-                  1.01303172,
-                  0.993060648,
-                  0.982328236,
-                  0.978099346,
-                  0.9787793,
-                  0.982773542,
-                  0.9884874,
-                  0.9943262,
-                  0.998695254
-                ],
-                "curve": {
-                  "$type": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Curve, Assembly-CSharp",
-                  "samples": [
-                    0.09004579,
-                    0.413799465,
-                    0.8358369,
-                    1.19060707,
-                    1.3559351,
-                    1.3580091,
-                    1.34539771,
-                    1.32124126,
-                    1.287959,
-                    1.2479701,
-                    1.20369387,
-                    1.15754938,
-                    1.111956,
-                    1.0693326,
-                    1.03209877,
-                    1.00267386,
-                    1.01969492,
-                    1.080537,
-                    1.126491,
-                    1.1125747,
-                    1.06109476,
-                    1.01303172,
-                    0.993060648,
-                    0.982328236,
-                    0.978099346,
-                    0.9787793,
-                    0.982773542,
-                    0.9884874,
-                    0.9943262,
-                    0.998695254
-                  ]
-                },
-                "collisionPass": 0,
-                "name": "ScaleProjectileModel_",
-                "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.ScaleProjectile, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-              },
-              {
-                "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.SetSpriteFromPierceModel, Assembly-CSharp",
-                "sprites": [
-                  {
-                    "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                    "GUID": "ff7ada25698ff484f87767a8c4b01865",
-                    "guidRef": "ff7ada25698ff484f87767a8c4b01865"
-                  },
-                  {
-                    "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                    "GUID": "44f458dc60fb8834eaf6677455998e6f",
-                    "guidRef": "44f458dc60fb8834eaf6677455998e6f"
-                  },
-                  {
-                    "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                    "GUID": "85f9b4d05a53e644ca31e7ed6de494f6",
-                    "guidRef": "85f9b4d05a53e644ca31e7ed6de494f6"
-                  },
-                  {
-                    "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                    "GUID": "ac2e0f6dd632c9049b2ddcfed21454c8",
-                    "guidRef": "ac2e0f6dd632c9049b2ddcfed21454c8"
-                  },
-                  {
-                    "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                    "GUID": "2d9755bf10a45cb4d8dcb1ea56ac829a",
-                    "guidRef": "2d9755bf10a45cb4d8dcb1ea56ac829a"
-                  },
-                  {
-                    "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                    "GUID": "b3049788c3b19724fa85a5ca2e34dff3",
-                    "guidRef": "b3049788c3b19724fa85a5ca2e34dff3"
-                  },
-                  {
-                    "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                    "GUID": "f450fd35ab8825b48b4a9457bf771f9a",
-                    "guidRef": "f450fd35ab8825b48b4a9457bf771f9a"
-                  },
-                  {
-                    "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                    "GUID": "d07b55cb3f1b96a439a796af3f38f44c",
-                    "guidRef": "d07b55cb3f1b96a439a796af3f38f44c"
-                  },
-                  {
-                    "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                    "GUID": "06efb9f746a60574a8060cedc72c2998",
-                    "guidRef": "06efb9f746a60574a8060cedc72c2998"
-                  },
-                  {
-                    "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                    "GUID": "b399227a1df969f42810d4c132382795",
-                    "guidRef": "b399227a1df969f42810d4c132382795"
-                  },
-                  {
-                    "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                    "GUID": "86f8f1775a83a684dab5562a4f2fa1cf",
-                    "guidRef": "86f8f1775a83a684dab5562a4f2fa1cf"
-                  },
-                  {
-                    "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                    "GUID": "67871f62bb9f70a4b8bc1d87f58f57ba",
-                    "guidRef": "67871f62bb9f70a4b8bc1d87f58f57ba"
-                  },
-                  {
-                    "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                    "GUID": "909d3637af681e248a5ec65ff414c13f",
-                    "guidRef": "909d3637af681e248a5ec65ff414c13f"
-                  },
-                  {
-                    "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                    "GUID": "f7af270b4bf613d4b93cab43442fc4ef",
-                    "guidRef": "f7af270b4bf613d4b93cab43442fc4ef"
-                  },
-                  {
-                    "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                    "GUID": "10da519ce46d9054eb3624a041b9fcb0",
-                    "guidRef": "10da519ce46d9054eb3624a041b9fcb0"
-                  },
-                  {
-                    "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                    "GUID": "f7215612ecce85d4eb6fc54e1ba43492",
-                    "guidRef": "f7215612ecce85d4eb6fc54e1ba43492"
-                  },
-                  {
-                    "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                    "GUID": "57b53f7bdfaa86d499745d6f4998ee61",
-                    "guidRef": "57b53f7bdfaa86d499745d6f4998ee61"
-                  },
-                  {
-                    "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                    "GUID": "04798a9599f1fdf4b83c91aca80240e7",
-                    "guidRef": "04798a9599f1fdf4b83c91aca80240e7"
-                  },
-                  {
-                    "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                    "GUID": "a45b9d1f1df836c4da410ff21f8bc1f9",
-                    "guidRef": "a45b9d1f1df836c4da410ff21f8bc1f9"
-                  },
-                  {
-                    "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                    "GUID": "8e2802d4bd3d42e4cb192c6bbcef0173",
-                    "guidRef": "8e2802d4bd3d42e4cb192c6bbcef0173"
-                  }
-                ],
-                "loopMode": "Clamp",
-                "collisionPass": 0,
-                "name": "SetSpriteFromPierceModel_",
-                "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.SetSpriteFromPierce, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-              },
-              {
-                "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.FadeProjectileModel, Assembly-CSharp",
-                "collisionPass": 0,
-                "name": "FadeProjectileModel_",
-                "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.FadeProjectile, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
-                "startFadingAt": 48.0
-              },
-              {
-                "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.ArriveAtTargetModel, Assembly-CSharp",
-                "timeToTake": 0.9,
-                "curveSamples": [
-                  0.0,
-                  0.002431781,
-                  0.00319210626,
-                  0.0031385608,
-                  0.0075218617,
-                  0.0355416,
-                  0.08521671,
-                  0.151749,
-                  0.230340481,
-                  0.316192925,
-                  0.4045083,
-                  0.49048835,
-                  0.5693352,
-                  0.636250556,
-                  0.689893,
-                  0.737805963,
-                  0.7807738,
-                  0.8190399,
-                  0.852847159,
-                  0.882438958,
-                  0.908058345,
-                  0.929948568,
-                  0.9483528,
-                  0.9635141,
-                  0.9756758,
-                  0.985080957,
-                  0.9919728,
-                  0.996594548,
-                  0.999189138,
-                  1.0
-                ],
-                "filterCollisionWhileMoving": true,
-                "expireOnArrival": false,
-                "altSpeed": 0.0,
-                "stopOnTargetReached": true,
-                "curve": {
-                  "$type": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Curve, Assembly-CSharp",
-                  "samples": [
-                    0.0,
-                    0.002431781,
-                    0.00319210626,
-                    0.0031385608,
-                    0.0075218617,
-                    0.0355416,
-                    0.08521671,
-                    0.151749,
-                    0.230340481,
-                    0.316192925,
-                    0.4045083,
-                    0.49048835,
-                    0.5693352,
-                    0.636250556,
-                    0.689893,
-                    0.737805963,
-                    0.7807738,
-                    0.8190399,
-                    0.852847159,
-                    0.882438958,
-                    0.908058345,
-                    0.929948568,
-                    0.9483528,
-                    0.9635141,
-                    0.9756758,
-                    0.985080957,
-                    0.9919728,
-                    0.996594548,
-                    0.999189138,
-                    1.0
-                  ]
-                },
-                "keepUpdatingTargetPos": false,
-                "rotateToTarget": false,
-                "maxTurnAngle": 0.0,
-                "positionAboveMoabTypes": false,
-                "collisionPass": 0,
-                "name": "ArriveAtTargetModel_Projectile",
-                "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.ArriveAtTarget, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-              },
-              {
-                "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.HeightOffsetProjectileModel, Assembly-CSharp",
-                "samples": [
-                  30.1136646,
-                  29.9874573,
-                  29.8904629,
-                  29.81319,
-                  29.7461567,
-                  29.67987,
-                  29.604845,
-                  29.5115948,
-                  29.3906326,
-                  29.2324677,
-                  29.0276127,
-                  28.7665844,
-                  28.43989,
-                  27.9930668,
-                  27.2974014,
-                  26.36658,
-                  25.2238731,
-                  23.892561,
-                  22.395916,
-                  20.7572155,
-                  18.999733,
-                  17.1467476,
-                  15.2215271,
-                  13.2473574,
-                  11.2475033,
-                  9.245251,
-                  7.26386261,
-                  5.32662773,
-                  3.45681,
-                  1.67769432
-                ],
-                "curve": {
-                  "$type": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Curve, Assembly-CSharp",
-                  "samples": [
-                    30.1136646,
-                    29.9874573,
-                    29.8904629,
-                    29.81319,
-                    29.7461567,
-                    29.67987,
-                    29.604845,
-                    29.5115948,
-                    29.3906326,
-                    29.2324677,
-                    29.0276127,
-                    28.7665844,
-                    28.43989,
-                    27.9930668,
-                    27.2974014,
-                    26.36658,
-                    25.2238731,
-                    23.892561,
-                    22.395916,
-                    20.7572155,
-                    18.999733,
-                    17.1467476,
-                    15.2215271,
-                    13.2473574,
-                    11.2475033,
-                    9.245251,
-                    7.26386261,
-                    5.32662773,
-                    3.45681,
-                    1.67769432
-                  ]
-                },
-                "collisionPass": 0,
-                "name": "HeightOffsetProjectileModel_Projectile",
-                "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.HeightOffsetProjectile, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-              },
-              {
-                "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.EndOfRoundClearBypassModel, Assembly-CSharp",
-                "gameModes": "Apopalypse",
-                "gameModesList": [
-                  "Apopalypse"
-                ],
-                "collisionPass": 0,
-                "name": "EndOfRoundClearBypassModel_",
-                "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.EndOfRoundClearBypass, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-              },
-              {
-                "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.ExpireProjectileOnBossSpawnedModel, Assembly-CSharp",
-                "collisionPass": 0,
-                "name": "ExpireProjectileOnBossSpawnedModel_",
-                "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.ExpireProjectileOnBossSpawned, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-              },
-              {
-                "$type": "Assets.Scripts.Models.GenericBehaviors.DisplayModel, Assembly-CSharp",
-                "display": {
-                  "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                  "GUID": null,
-                  "guidRef": null
-                },
-                "layer": 0,
-                "positionOffset": {
-                  "$type": "Assets.Scripts.Simulation.SMath.Vector3, Assembly-CSharp",
-                  "x": 0.0,
-                  "y": 0.0,
-                  "z": 0.0
-                },
-                "scale": 1.0,
-                "ignoreRotation": false,
-                "animationChanges": null,
-                "delayedReveal": 0.0,
-                "category": 16,
-                "isAnimationPaused": false,
-                "name": "DisplayModel_ProjectileDisplay",
-                "ImplementationType": "Assets.Scripts.Simulation.Behaviors.DisplayBehavior, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-              }
-            ],
-            "collisionPasses": [
-              0
-            ],
-            "canCollideWithBloons": true,
-            "radius": 6.0,
-            "vsBlockerRadius": 0.0,
-            "hasDamageModifiers": true,
-            "dontUseCollisionChecker": false,
-            "ignoreNonTargetable": false,
-            "ignorePierceExhaustion": false,
-            "saveId": null,
-            "CappedPierce": 10.0,
-            "name": "ProjectileModel_Projectile",
-            "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Projectile, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
-            "checkCollisionInterval": 0.0833333358
-          },
-          "fireWithoutTarget": false,
-          "fireBetweenRounds": false,
-          "behaviors": [
-            {
-              "$type": "Assets.Scripts.Models.Towers.Weapons.Behaviors.RandomRotationWeaponBehaviorModel, Assembly-CSharp",
-              "name": "RandomRotationWeaponBehaviorModel_",
-              "ImplementationType": "Assets.Scripts.Simulation.Towers.Weapons.Behaviors.RandomRotationWeaponBehavior, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-            }
-          ],
-          "useAttackPosition": false,
-          "startInCooldown": false,
-          "animateOnMainAttack": false,
-          "isStunned": false,
-          "Rate": 1.05,
-          "UseThrowMarker": true,
-          "name": "WeaponModel_Weapon",
-          "ImplementationType": "Assets.Scripts.Simulation.Towers.Weapons.Weapon, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
-          "animationOffset": 0.0,
-          "rate": 1.05,
-          "customStartCooldown": 0.0
-        }
-      ],
-      "behaviors": [
-        {
-          "$type": "Assets.Scripts.Models.Towers.Behaviors.Attack.Behaviors.TargetTrackModel, Assembly-CSharp",
-          "isSelectable": true,
-          "maxOffset": 3.0,
-          "onlyTargetPathsWithBloons": false,
-          "isOnSubTower": false,
-          "name": "TargetTrackModel_",
-          "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.Attack.Behaviors.TargetTrack, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-        },
-        {
-          "$type": "Assets.Scripts.Models.Towers.Behaviors.Attack.Behaviors.AttackFilterModel, Assembly-CSharp",
-          "filters": [
-            {
-              "$type": "Assets.Scripts.Models.Towers.Filters.FilterInvisibleModel, Assembly-CSharp",
-              "isActive": true,
-              "ignoreBroadPhase": false,
-              "name": "FilterInvisibleModel_",
-              "ImplementationType": "Assets.Scripts.Simulation.Towers.Filters.FilterInvisible, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-            }
-          ],
-          "name": "AttackFilterModel_",
-          "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.Attack.Behaviors.AttackFilter, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-        }
-      ],
-      "range": 34.0,
-      "targetProvider": null,
-      "offsetX": 0.0,
-      "offsetY": 0.0,
-      "offsetZ": 0.0,
-      "attackThroughWalls": true,
-      "fireWithoutTarget": false,
-      "framesBeforeRetarget": 0,
-      "addsToSharedGrid": true,
-      "sharedGridRange": 0.0,
-      "name": "AttackModel_Attack_",
-      "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.Attack.Attack, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-    },
-    {
-      "$type": "Assets.Scripts.Models.GenericBehaviors.DisplayModel, Assembly-CSharp",
-      "display": {
-        "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-        "GUID": "b4d032115f2b15e48a5ed43fbe8e24c1",
-        "guidRef": "b4d032115f2b15e48a5ed43fbe8e24c1"
-      },
-      "layer": -1,
-      "positionOffset": {
-        "$type": "Assets.Scripts.Simulation.SMath.Vector3, Assembly-CSharp",
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0
-      },
+     "animation": 1,
+     "ejectZ": 17.53,
+     "projectile": {
+      "id": "Projectile",
+      "pierce": 10.0,
       "scale": 1.0,
-      "ignoreRotation": false,
-      "animationChanges": null,
-      "delayedReveal": 0.0,
-      "category": 4,
-      "isAnimationPaused": false,
-      "name": "DisplayModel_TowerDisplay",
-      "ImplementationType": "Assets.Scripts.Simulation.Behaviors.DisplayBehavior, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+      "ignoreBlockers": true,
+      "behaviors": [
+       {
+        "damage": 1.0,
+        "distributeToChildren": true,
+        "createPopEffect": true,
+        "immuneBloonProperties": 17,
+        "immuneBloonPropertiesOriginal": 17,
+        "CappedDamage": 1.0
+       },
+       {
+        "interval": 0.001
+       },
+       {
+        "useRoundTime": true,
+        "endOfRoundClearBypassModel": {
+         "gameModes": "Apopalypse",
+         "gameModesList": [
+          "Apopalypse"
+         ]
+        },
+        "Lifespan": 50.0,
+        "lifespan": 50.0
+       },
+       {
+        "tag": "Moabs",
+        "tags": [
+         "Moabs"
+        ],
+        "damageMultiplier": 1.0,
+        "damageAddative": 7.0
+       },
+       {
+        "samples": [
+         0.09004579,
+         0.413799465,
+         0.8358369,
+         1.19060707,
+         1.3559351,
+         1.3580091,
+         1.34539771,
+         1.32124126,
+         1.287959,
+         1.2479701,
+         1.20369387,
+         1.15754938,
+         1.111956,
+         1.0693326,
+         1.03209877,
+         1.00267386,
+         1.01969492,
+         1.080537,
+         1.126491,
+         1.1125747,
+         1.06109476,
+         1.01303172,
+         0.993060648,
+         0.982328236,
+         0.978099346,
+         0.9787793,
+         0.982773542,
+         0.9884874,
+         0.9943262,
+         0.998695254
+        ],
+        "curve": {
+         "samples": [
+          0.09004579,
+          0.413799465,
+          0.8358369,
+          1.19060707,
+          1.3559351,
+          1.3580091,
+          1.34539771,
+          1.32124126,
+          1.287959,
+          1.2479701,
+          1.20369387,
+          1.15754938,
+          1.111956,
+          1.0693326,
+          1.03209877,
+          1.00267386,
+          1.01969492,
+          1.080537,
+          1.126491,
+          1.1125747,
+          1.06109476,
+          1.01303172,
+          0.993060648,
+          0.982328236,
+          0.978099346,
+          0.9787793,
+          0.982773542,
+          0.9884874,
+          0.9943262,
+          0.998695254
+         ]
+        }
+       },
+       {
+        "loopMode": "Clamp"
+       },
+       {
+        "startFadingAt": 48.0
+       },
+       {
+        "timeToTake": 0.9,
+        "curveSamples": [
+         0.002431781,
+         0.00319210626,
+         0.0031385608,
+         0.0075218617,
+         0.0355416,
+         0.08521671,
+         0.151749,
+         0.230340481,
+         0.316192925,
+         0.4045083,
+         0.49048835,
+         0.5693352,
+         0.636250556,
+         0.689893,
+         0.737805963,
+         0.7807738,
+         0.8190399,
+         0.852847159,
+         0.882438958,
+         0.908058345,
+         0.929948568,
+         0.9483528,
+         0.9635141,
+         0.9756758,
+         0.985080957,
+         0.9919728,
+         0.996594548,
+         0.999189138,
+         1.0
+        ],
+        "filterCollisionWhileMoving": true,
+        "stopOnTargetReached": true,
+        "curve": {
+         "samples": [
+          0.002431781,
+          0.00319210626,
+          0.0031385608,
+          0.0075218617,
+          0.0355416,
+          0.08521671,
+          0.151749,
+          0.230340481,
+          0.316192925,
+          0.4045083,
+          0.49048835,
+          0.5693352,
+          0.636250556,
+          0.689893,
+          0.737805963,
+          0.7807738,
+          0.8190399,
+          0.852847159,
+          0.882438958,
+          0.908058345,
+          0.929948568,
+          0.9483528,
+          0.9635141,
+          0.9756758,
+          0.985080957,
+          0.9919728,
+          0.996594548,
+          0.999189138,
+          1.0
+         ]
+        }
+       },
+       {
+        "samples": [
+         30.1136646,
+         29.9874573,
+         29.8904629,
+         29.81319,
+         29.7461567,
+         29.67987,
+         29.604845,
+         29.5115948,
+         29.3906326,
+         29.2324677,
+         29.0276127,
+         28.7665844,
+         28.43989,
+         27.9930668,
+         27.2974014,
+         26.36658,
+         25.2238731,
+         23.892561,
+         22.395916,
+         20.7572155,
+         18.999733,
+         17.1467476,
+         15.2215271,
+         13.2473574,
+         11.2475033,
+         9.245251,
+         7.26386261,
+         5.32662773,
+         3.45681,
+         1.67769432
+        ],
+        "curve": {
+         "samples": [
+          30.1136646,
+          29.9874573,
+          29.8904629,
+          29.81319,
+          29.7461567,
+          29.67987,
+          29.604845,
+          29.5115948,
+          29.3906326,
+          29.2324677,
+          29.0276127,
+          28.7665844,
+          28.43989,
+          27.9930668,
+          27.2974014,
+          26.36658,
+          25.2238731,
+          23.892561,
+          22.395916,
+          20.7572155,
+          18.999733,
+          17.1467476,
+          15.2215271,
+          13.2473574,
+          11.2475033,
+          9.245251,
+          7.26386261,
+          5.32662773,
+          3.45681,
+          1.67769432
+         ]
+        }
+       },
+       {
+        "gameModes": "Apopalypse",
+        "gameModesList": [
+         "Apopalypse"
+        ]
+       },
+       {
+        "scale": 1.0,
+        "category": 16
+       }
+      ],
+      "canCollideWithBloons": true,
+      "radius": 6.0,
+      "hasDamageModifiers": true,
+      "CappedPierce": 10.0,
+      "checkCollisionInterval": 0.0833333358
+     },
+     "Rate": 1.05,
+     "UseThrowMarker": true,
+     "rate": 1.05
     }
-  ],
-  "footprint": {
-    "$type": "Assets.Scripts.Models.Towers.Behaviors.CircleFootprintModel, Assembly-CSharp",
-    "radius": 8.0,
-    "doesntBlockTowerPlacement": false,
-    "ignoresPlacementCheck": false,
-    "ignoresTowerOverlap": false,
-    "name": "CircleFootprintModel_Circle Footprint",
-    "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.CircleFootprint, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-  },
-  "dontDisplayUpgrades": false,
-  "emoteSpriteSmall": {
-    "$type": "NinjaKiwi.Common.ResourceUtils.SpriteReference, NinjaKiwi.Common",
-    "GUID": null,
-    "guidRef": null
-  },
-  "emoteSpriteLarge": {
-    "$type": "NinjaKiwi.Common.ResourceUtils.SpriteReference, NinjaKiwi.Common",
-    "GUID": null,
-    "guidRef": null
-  },
-  "doesntRotate": true,
-  "upgrades": [
+   ],
+   "behaviors": [
     {
-      "$type": "Assets.Scripts.Models.Towers.Upgrades.UpgradePathModel, Assembly-CSharp",
-      "tower": "SpikeFactory-140",
-      "upgrade": "Spike Storm"
+     "isSelectable": true,
+     "maxOffset": 3.0
     },
     {
-      "$type": "Assets.Scripts.Models.Towers.Upgrades.UpgradePathModel, Assembly-CSharp",
-      "tower": "SpikeFactory-230",
-      "upgrade": "White Hot Spikes"
+     "filters": [
+      {
+       "isActive": true
+      }
+     ]
     }
-  ],
-  "appliedUpgrades": [
-    "Faster Production",
-    "Even Faster Production",
-    "MOAB SHREDR",
-    "Bigger Stacks"
-  ],
-  "targetTypes": [
-    {
-      "$type": "Assets.Scripts.Models.Towers.TargetType, Assembly-CSharp",
-      "id": "Track",
-      "isActionable": false,
-      "actionOnCreate": false,
-      "intID": -1,
-      "continueToNextPriority": false
-    }
-  ],
-  "paragonUpgrade": null,
-  "isSubTower": false,
-  "isBakable": true,
-  "powerName": null,
-  "showPowerTowerBuffs": false,
-  "animationSpeed": 1.0,
-  "towerSelectionMenuThemeId": "Default",
-  "secondarySelectionMenu": {
-    "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-    "GUID": null,
-    "guidRef": null
+   ],
+   "range": 34.0,
+   "attackThroughWalls": true,
+   "addsToSharedGrid": true
   },
-  "ignoreCoopAreas": false,
-  "canAlwaysBeSold": false,
-  "blockSelling": false,
-  "isParagon": false,
-  "ignoreMaxSellPercent": false,
-  "isStunned": false,
-  "geraldoItemName": null,
-  "sellbackModifierAdd": 0.0,
-  "skinName": null,
-  "dontAddMutatorsFromParent": false,
-  "displayScale": 1.0,
-  "showBuffs": true,
-  "destroyTowerOnRedistribution": false,
-  "isPowerTower": false,
-  "isGeraldoItem": false,
-  "IsBeastHandlerPet": false,
-  "SelectParentOnSelected": false,
-  "BeastHandlerLeashMutationId": "BeastHandlerContributionSpikeFactory",
-  "IsBaseTower": false,
-  "TargetTypes": [
-    {
-      "$type": "Assets.Scripts.Models.Towers.TargetType, Assembly-CSharp",
-      "id": "Track",
-      "isActionable": false,
-      "actionOnCreate": false,
-      "intID": -1,
-      "continueToNextPriority": false
-    }
-  ],
-  "IsExclusivelyWaterBased": false,
-  "name": "SpikeFactory-130",
-  "ImplementationType": "Assets.Scripts.Simulation.Towers.Tower, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+  {
+   "layer": -1,
+   "scale": 1.0,
+   "category": 4
+  }
+ ],
+ "footprint": {
+  "radius": 8.0
+ },
+ "doesntRotate": true,
+ "upgrades": [
+  {
+   "tower": "SpikeFactory-140",
+   "upgrade": "Spike Storm"
+  },
+  {
+   "tower": "SpikeFactory-230",
+   "upgrade": "White Hot Spikes"
+  }
+ ],
+ "appliedUpgrades": [
+  "Faster Production",
+  "Even Faster Production",
+  "MOAB SHREDR",
+  "Bigger Stacks"
+ ],
+ "targetTypes": [
+  {
+   "id": "Track",
+   "intID": -1
+  }
+ ],
+ "isBakable": true,
+ "animationSpeed": 1.0,
+ "displayScale": 1.0,
+ "showBuffs": true,
+ "TargetTypes": [
+  {
+   "id": "Track",
+   "intID": -1
+  }
+ ]
 }

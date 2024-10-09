@@ -1,74 +1,23 @@
 {
-  "$type": "Assets.Scripts.Models.Powers.PowerModel, Assembly-CSharp",
-  "cost": 100,
-  "canBeActivatedBetweenRounds": false,
-  "icon": {
-    "$type": "NinjaKiwi.Common.ResourceUtils.SpriteReference, NinjaKiwi.Common",
-    "GUID": "PowerIcons[SuperMonkeyStormIcon]",
-    "guidRef": "PowerIcons[SuperMonkeyStormIcon]"
+ "cost": 100,
+ "behaviors": [
+  {
+   "amount": 2000.0
   },
-  "behaviors": [
-    {
-      "$type": "Assets.Scripts.Models.Powers.DamageAllModel, Assembly-CSharp",
-      "amount": 2000.0,
-      "name": "DamageAllModel_SuperMonkeyStorm",
-      "ImplementationType": "Assets.Scripts.Simulation.Powers.DamageAll, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-    },
-    {
-      "$type": "Assets.Scripts.Models.Powers.Effects.CreateEffectOnPowerModel, Assembly-CSharp",
-      "effectModel": {
-        "$type": "Assets.Scripts.Models.Effects.EffectModel, Assembly-CSharp",
-        "assetId": {
-          "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-          "GUID": "8b52d3145981c924191f1e811104c88b",
-          "guidRef": "8b52d3145981c924191f1e811104c88b"
-        },
-        "scale": 1.0,
-        "lifespan": 5.0,
-        "fullscreen": 1,
-        "useCenterPosition": true,
-        "useTransformPosition": false,
-        "useTransfromRotation": false,
-        "destroyOnTransformDestroy": false,
-        "alwaysUseAge": false,
-        "useRoundTime": true,
-        "name": "EffectModel_",
-        "ImplementationType": null
-      },
-      "name": "CreateEffectOnPowerModel_SuperMonkeyStorm",
-      "ImplementationType": "Assets.Scripts.Simulation.Powers.Effects.CreateEffectOnPower, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-    },
-    {
-      "$type": "Assets.Scripts.Models.Powers.Effects.CreateSoundOnPowerModel, Assembly-CSharp",
-      "sound": {
-        "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
-        "assetId": {
-          "$type": "NinjaKiwi.Common.ResourceUtils.AudioSourceReference, NinjaKiwi.Common",
-          "GUID": "6977533c6aa773e4eb65f1edb20de388",
-          "guidRef": "6977533c6aa773e4eb65f1edb20de388"
-        },
-        "name": "SoundModel_PlaceMonkeyStorm",
-        "ImplementationType": null
-      },
-      "name": "CreateSoundOnPowerModel_SuperMonkeyStorm",
-      "ImplementationType": "Assets.Scripts.Simulation.Powers.Effects.CreateSoundOnPower, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-    }
-  ],
-  "mods": [
-    {
-      "$type": "Assets.Scripts.Models.Towers.Mods.ApplyModModel, Assembly-CSharp",
-      "mod": "PowerfulMonkeyStorm",
-      "target": "",
-      "name": "SuperMonkeyStorm",
-      "ImplementationType": null
-    }
-  ],
-  "tower": null,
-  "isDisabledByGameMode": false,
-  "isHidden": false,
-  "showBuffsForTower": false,
-  "quantity": 1,
-  "saveImmediately": false,
-  "name": "SuperMonkeyStorm",
-  "ImplementationType": "Assets.Scripts.Simulation.Powers.Power, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+  {
+   "effectModel": {
+    "scale": 1.0,
+    "lifespan": 5.0,
+    "fullscreen": 1,
+    "useCenterPosition": true,
+    "useRoundTime": true
+   }
+  }
+ ],
+ "mods": [
+  {
+   "mod": "PowerfulMonkeyStorm"
+  }
+ ],
+ "quantity": 1
 }

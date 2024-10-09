@@ -1,350 +1,117 @@
 {
-  "$type": "Assets.Scripts.Models.Bloons.BloonModel, Assembly-CSharp",
-  "id": "DreadbloonElite3",
-  "baseId": "Dreadbloon",
-  "display": {
-    "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-    "GUID": "fc64eff0b1c5b45448bb5f6d733ab043",
-    "guidRef": "fc64eff0b1c5b45448bb5f6d733ab043"
+ "id": "DreadbloonElite3",
+ "tags": [
+  "Moabs",
+  "Boss",
+  "Elite",
+  "Rock",
+  "Bad"
+ ],
+ "behaviors": [
+  {
+   "scale": 1.0,
+   "category": 2
   },
-  "icon": {
-    "$type": "NinjaKiwi.Common.ResourceUtils.SpriteReference, NinjaKiwi.Common",
-    "GUID": "233eff1056f224f4793455750a131bf5",
-    "guidRef": "233eff1056f224f4793455750a131bf5"
+  {
+   "multiplier": 1.0
   },
-  "overlayClass": 21,
-  "tags": [
-    "Moabs",
-    "Boss",
-    "Elite",
-    "Rock",
-    "Bad"
-  ],
-  "behaviors": [
+  {
+   "amount": 1.0
+  },
+  {
+   "preventFallthrough": true,
+   "percentageValues": [
+    0.75,
+    0.5,
+    0.25
+   ],
+   "actionIds": [
+    "GenerateArmour",
+    "ApplyImmunity",
+    "PlayReArmourSound",
+    "SpawnEliteRockBloons"
+   ]
+  },
+  {
+   "id": "DreadbloonEliteCeramic3",
+   "tags": [
+    "Ceramic"
+   ],
+   "amount": 325000.0,
+   "speedMultiplier": 0.35
+  },
+  {
+   "id": "DreadbloonEliteImmunity3",
+   "immunities": [
     {
-      "$type": "Assets.Scripts.Models.GenericBehaviors.DisplayModel, Assembly-CSharp",
-      "display": {
-        "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-        "GUID": "fc64eff0b1c5b45448bb5f6d733ab043",
-        "guidRef": "fc64eff0b1c5b45448bb5f6d733ab043"
-      },
-      "layer": 0,
-      "positionOffset": {
-        "$type": "Assets.Scripts.Simulation.SMath.Vector3, Assembly-CSharp",
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0
-      },
-      "scale": 1.0,
-      "ignoreRotation": false,
-      "animationChanges": null,
-      "delayedReveal": 0.0,
-      "category": 2,
-      "isAnimationPaused": false,
-      "name": "DisplayModel_BloonDisplay",
-      "ImplementationType": "Assets.Scripts.Simulation.Behaviors.DisplayBehavior, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+     "id": "Phase1",
+     "towerType": 1
     },
     {
-      "$type": "Assets.Scripts.Models.Bloons.Behaviors.DistributeCashModel, Assembly-CSharp",
-      "cash": 0.0,
-      "multiplier": 1.0,
-      "additive": 0.0,
-      "additionalCash": 0.0,
-      "giveNoCash": false,
-      "name": "DistributeCashModel_",
-      "ImplementationType": "Assets.Scripts.Simulation.Bloons.Behaviors.DistributeCash, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+     "id": "Phase2",
+     "towerType": 2
     },
     {
-      "$type": "Assets.Scripts.Models.Bloons.Behaviors.ShowDamageTextModel, Assembly-CSharp",
-      "showText": false,
-      "name": "ShowDamageTextModel_",
-      "ImplementationType": "Assets.Scripts.Simulation.Bloons.Behaviors.ShowDamageText, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+     "id": "Phase3",
+     "towerType": 4
     },
     {
-      "$type": "Assets.Scripts.Models.Bloons.Behaviors.PopEffectModel, Assembly-CSharp",
-      "displayAssetId": {
-        "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-        "GUID": "a26c13a357838ee409d09f86a54a4fca",
-        "guidRef": "a26c13a357838ee409d09f86a54a4fca"
-      },
-      "soundEffect1Id": {
-        "$type": "NinjaKiwi.Common.ResourceUtils.AudioSourceReference, NinjaKiwi.Common",
-        "GUID": "2dbb3e380eed7fd4487b4c1d64556a8c",
-        "guidRef": "2dbb3e380eed7fd4487b4c1d64556a8c"
-      },
-      "soundEffect2Id": {
-        "$type": "NinjaKiwi.Common.ResourceUtils.AudioSourceReference, NinjaKiwi.Common",
-        "GUID": "2dbb3e380eed7fd4487b4c1d64556a8c",
-        "guidRef": "2dbb3e380eed7fd4487b4c1d64556a8c"
-      },
-      "soundEffect3Id": {
-        "$type": "NinjaKiwi.Common.ResourceUtils.AudioSourceReference, NinjaKiwi.Common",
-        "GUID": "2dbb3e380eed7fd4487b4c1d64556a8c",
-        "guidRef": "2dbb3e380eed7fd4487b4c1d64556a8c"
-      },
-      "soundEffect4Id": {
-        "$type": "NinjaKiwi.Common.ResourceUtils.AudioSourceReference, NinjaKiwi.Common",
-        "GUID": "2dbb3e380eed7fd4487b4c1d64556a8c",
-        "guidRef": "2dbb3e380eed7fd4487b4c1d64556a8c"
-      },
-      "soundEffectGroupID": "MoabDestroyedSounds",
-      "soundEffectGroupLimit": 2,
-      "soundEffectTimeDelay": 90,
-      "soundEffectTimeDelayFF": 180,
-      "name": "PopEffectModel_",
-      "ImplementationType": "Assets.Scripts.Simulation.Bloons.Behaviors.PopEffect, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-    },
-    {
-      "$type": "Assets.Scripts.Models.Bloons.Behaviors.DamageReductionModel, Assembly-CSharp",
-      "amount": 1.0,
-      "name": "DamageReductionModel_",
-      "ImplementationType": "Assets.Scripts.Simulation.Bloons.Behaviors.DamageReduction, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-    },
-    {
-      "$type": "Assets.Scripts.Models.Bloons.Behaviors.HealthPercentTriggerModel, Assembly-CSharp",
-      "repeatFirst": false,
-      "preventFallthrough": true,
-      "percentageValues": [
-        0.75,
-        0.5,
-        0.25
-      ],
-      "actionIds": [
-        "GenerateArmour",
-        "ApplyImmunity",
-        "PlayReArmourSound",
-        "SpawnEliteRockBloons"
-      ],
-      "name": "HealthPercentTriggerModel_",
-      "ImplementationType": "Assets.Scripts.Simulation.Bloons.Behaviors.HealthPercentTrigger, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-    },
-    {
-      "$type": "Assets.Scripts.Models.Bloons.Behaviors.BadImmunityModel, Assembly-CSharp",
-      "name": "BadImmunityModel_",
-      "ImplementationType": "Assets.Scripts.Simulation.Bloons.Behaviors.BadImmunity, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-    },
-    {
-      "$type": "Assets.Scripts.Models.Bloons.Behaviors.Actions.GenerateArmourActionModel, Assembly-CSharp",
-      "id": "DreadbloonEliteCeramic3",
-      "tags": [
-        "Ceramic"
-      ],
-      "amount": 325000.0,
-      "properties": 0,
-      "speedMultiplier": 0.35,
-      "actionId": "GenerateArmour",
-      "name": "GenerateArmourActionModel_",
-      "ImplementationType": "Assets.Scripts.Simulation.Bloons.Behaviors.Actions.GenerateArmourAction, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-    },
-    {
-      "$type": "Assets.Scripts.Models.Bloons.Behaviors.Actions.ApplyTowerSetImmunityModel, Assembly-CSharp",
-      "id": "DreadbloonEliteImmunity3",
-      "immunities": [
-        {
-          "$type": "Assets.Scripts.Models.Bloons.Behaviors.Actions.ApplyTowerSetImmunityModel+TowerTypeImmunity, Assembly-CSharp",
-          "id": "Phase1",
-          "towerType": 1
-        },
-        {
-          "$type": "Assets.Scripts.Models.Bloons.Behaviors.Actions.ApplyTowerSetImmunityModel+TowerTypeImmunity, Assembly-CSharp",
-          "id": "Phase2",
-          "towerType": 2
-        },
-        {
-          "$type": "Assets.Scripts.Models.Bloons.Behaviors.Actions.ApplyTowerSetImmunityModel+TowerTypeImmunity, Assembly-CSharp",
-          "id": "Phase3",
-          "towerType": 4
-        },
-        {
-          "$type": "Assets.Scripts.Models.Bloons.Behaviors.Actions.ApplyTowerSetImmunityModel+TowerTypeImmunity, Assembly-CSharp",
-          "id": "Phase4",
-          "towerType": 8
-        }
-      ],
-      "actionId": "ApplyImmunity",
-      "name": "ApplyTowerSetImmunityModel_",
-      "ImplementationType": "Assets.Scripts.Simulation.Bloons.Behaviors.Actions.ApplyTowerSetImmunity, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-    },
-    {
-      "$type": "Assets.Scripts.Models.Bloons.Behaviors.AnimDamageStateModel, Assembly-CSharp",
-      "numOfAnimStates": 5,
-      "name": "AnimDamageStateModel_",
-      "ImplementationType": "Assets.Scripts.Simulation.Bloons.Behaviors.AnimDamageState, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-    },
-    {
-      "$type": "Assets.Scripts.Models.Bloons.Behaviors.SpawnDeathAnimModel, Assembly-CSharp",
-      "spawnAnimTrigLabel": "Placement",
-      "spawnAnimLength": 3.0,
-      "deathAnimTrigLabel": "Die",
-      "deathAnimLength": 3.0,
-      "name": "SpawnDeathAnimModel_",
-      "ImplementationType": "Assets.Scripts.Simulation.Bloons.Behaviors.SpawnDeathAnim, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-    },
-    {
-      "$type": "Assets.Scripts.Models.Bloons.Behaviors.CreateSoundOnDamageBloonModel, Assembly-CSharp",
-      "sounds": [
-        {
-          "$type": "NinjaKiwi.Common.ResourceUtils.AudioSourceReference, NinjaKiwi.Common",
-          "GUID": "92a5ea85d1498d047ad7e2d32f62d262",
-          "guidRef": "92a5ea85d1498d047ad7e2d32f62d262"
-        },
-        {
-          "$type": "NinjaKiwi.Common.ResourceUtils.AudioSourceReference, NinjaKiwi.Common",
-          "GUID": "b7471555844027c4787727c43da54fbb",
-          "guidRef": "b7471555844027c4787727c43da54fbb"
-        },
-        {
-          "$type": "NinjaKiwi.Common.ResourceUtils.AudioSourceReference, NinjaKiwi.Common",
-          "GUID": "38a6f71521c23344891d8173201a29e1",
-          "guidRef": "38a6f71521c23344891d8173201a29e1"
-        },
-        {
-          "$type": "NinjaKiwi.Common.ResourceUtils.AudioSourceReference, NinjaKiwi.Common",
-          "GUID": "589aae980808a2641b5dbf38e9cf29c2",
-          "guidRef": "589aae980808a2641b5dbf38e9cf29c2"
-        }
-      ],
-      "name": "CreateSoundOnDamageBloonModel_",
-      "ImplementationType": "Assets.Scripts.Simulation.Bloons.Behaviors.CreateSoundOnDamageBloon, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-    },
-    {
-      "$type": "Assets.Scripts.Models.Bloons.Behaviors.CreateSoundOnSpawnBloonModel, Assembly-CSharp",
-      "sound": {
-        "$type": "NinjaKiwi.Common.ResourceUtils.AudioSourceReference, NinjaKiwi.Common",
-        "GUID": "bd6481a27b63fcc42801e2998889e7a2",
-        "guidRef": "bd6481a27b63fcc42801e2998889e7a2"
-      },
-      "name": "CreateSoundOnSpawnBloonModel_",
-      "ImplementationType": "Assets.Scripts.Simulation.Bloons.Behaviors.CreateSoundOnSpawnBloon, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-    },
-    {
-      "$type": "Assets.Scripts.Models.Bloons.Behaviors.CreateSoundOnActionModel, Assembly-CSharp",
-      "sounds": [
-        {
-          "$type": "NinjaKiwi.Common.ResourceUtils.AudioSourceReference, NinjaKiwi.Common",
-          "GUID": "19ae9b05930b0f14e9b4b0bb79d949c5",
-          "guidRef": "19ae9b05930b0f14e9b4b0bb79d949c5"
-        }
-      ],
-      "delay": 0.0,
-      "actionId": "PlayReArmourSound",
-      "name": "CreateSoundOnActionModel_",
-      "ImplementationType": "Assets.Scripts.Simulation.Bloons.Behaviors.CreateSoundOnAction, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-    },
-    {
-      "$type": "Assets.Scripts.Models.Bloons.Behaviors.Actions.SpawnBloonsUntilArmourBreaksActionModel, Assembly-CSharp",
-      "performActionOnSpawn": false,
-      "bloonType": "DreadRockBloonElite3",
-      "timeBetweenSpawns": 2.0,
-      "inheritImmunityFromParent": true,
-      "initialSpawnPackSize": 10,
-      "actionId": "SpawnEliteRockBloons",
-      "name": "SpawnBloonsUntilArmourBreaksActionModel_",
-      "ImplementationType": "Assets.Scripts.Simulation.Bloons.Behaviors.Actions.SpawnBloonsUntilArmourBreaksAction, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-    },
-    {
-      "$type": "Assets.Scripts.Models.Bloons.Behaviors.CreateSoundOnDamageArmourModel, Assembly-CSharp",
-      "sounds": [
-        {
-          "$type": "NinjaKiwi.Common.ResourceUtils.AudioSourceReference, NinjaKiwi.Common",
-          "GUID": "92a5ea85d1498d047ad7e2d32f62d262",
-          "guidRef": "92a5ea85d1498d047ad7e2d32f62d262"
-        },
-        {
-          "$type": "NinjaKiwi.Common.ResourceUtils.AudioSourceReference, NinjaKiwi.Common",
-          "GUID": "b7471555844027c4787727c43da54fbb",
-          "guidRef": "b7471555844027c4787727c43da54fbb"
-        },
-        {
-          "$type": "NinjaKiwi.Common.ResourceUtils.AudioSourceReference, NinjaKiwi.Common",
-          "GUID": "38a6f71521c23344891d8173201a29e1",
-          "guidRef": "38a6f71521c23344891d8173201a29e1"
-        },
-        {
-          "$type": "NinjaKiwi.Common.ResourceUtils.AudioSourceReference, NinjaKiwi.Common",
-          "GUID": "589aae980808a2641b5dbf38e9cf29c2",
-          "guidRef": "589aae980808a2641b5dbf38e9cf29c2"
-        }
-      ],
-      "name": "CreateSoundOnDamageArmourModel_",
-      "ImplementationType": "Assets.Scripts.Simulation.Bloons.Behaviors.CreateSoundOnDamageArmour, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+     "id": "Phase4",
+     "towerType": 8
     }
-  ],
-  "mods": null,
-  "damageDisplayStates": [],
-  "collisionGroup": {
-    "$type": "Assets.Scripts.Models.Physics.CollisionGroupModel, Assembly-CSharp",
-    "collisionGroup": [
-      {
-        "$type": "Assets.Scripts.Models.Physics.CollisionGroupModel+CollisionGroupData, Assembly-CSharp",
-        "offset": {
-          "$type": "Assets.Scripts.Simulation.SMath.Vector2, Assembly-CSharp",
-          "x": 0.0,
-          "y": 20.2
-        },
-        "radius": 26.33
-      },
-      {
-        "$type": "Assets.Scripts.Models.Physics.CollisionGroupModel+CollisionGroupData, Assembly-CSharp",
-        "offset": {
-          "$type": "Assets.Scripts.Simulation.SMath.Vector2, Assembly-CSharp",
-          "x": 0.0,
-          "y": -14.2
-        },
-        "radius": 28.45
-      }
-    ],
-    "name": "CollisionGroupModel_",
-    "ImplementationType": null
+   ]
   },
-  "bloonProperties": 1,
-  "depletionEffects": [
-    {
-      "$type": "Assets.Scripts.Models.Effects.EffectModel, Assembly-CSharp",
-      "assetId": {
-        "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-        "GUID": "3744e12a7b26cc648a4d5fb2ffd534d9",
-        "guidRef": "3744e12a7b26cc648a4d5fb2ffd534d9"
-      },
-      "scale": 1.0,
-      "lifespan": 1.0,
-      "fullscreen": 0,
-      "useCenterPosition": false,
-      "useTransformPosition": false,
-      "useTransfromRotation": false,
-      "destroyOnTransformDestroy": false,
-      "alwaysUseAge": false,
-      "useRoundTime": false,
-      "name": "EffectModel_Dreadbloon",
-      "ImplementationType": null
-    }
-  ],
-  "isMoab": true,
-  "isBoss": true,
-  "isCamo": false,
-  "isGrow": false,
-  "isFortified": false,
-  "hasChildrenWithDifferentTotalHealths": false,
-  "isInvulnerable": false,
-  "distributeDamageToChildren": false,
-  "disallowCosmetics": true,
-  "isSaved": true,
-  "radius": 40.0,
-  "danger": 16.0,
-  "maxHealth": 650000,
-  "coopMultiplier": 1.0,
-  "armourMultiplier": 1.0,
-  "leakDamage": 0.0,
-  "layerNumber": 1,
-  "bonusDamagePerHit": 0.0,
-  "currentOverlays": null,
-  "dontShowInSandbox": false,
-  "dontShowInSandboxOnRelease": false,
-  "alwaysRecordsDamage": false,
-  "Speed": 1.3,
-  "IsBase": true,
-  "IsRock": true,
-  "name": "DreadbloonElite3",
-  "ImplementationType": "Assets.Scripts.Simulation.Bloons.Bloon, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
-  "speed": 1.3
+  {
+   "numOfAnimStates": 5
+  },
+  {
+   "spawnAnimTrigLabel": "Placement",
+   "spawnAnimLength": 3.0,
+   "deathAnimTrigLabel": "Die",
+   "deathAnimLength": 3.0
+  },
+  {
+   "bloonType": "DreadRockBloonElite3",
+   "timeBetweenSpawns": 2.0,
+   "inheritImmunityFromParent": true,
+   "initialSpawnPackSize": 10
+  }
+ ],
+ "collisionGroup": {
+  "collisionGroup": [
+   {
+    "offset": {
+     "y": 20.2
+    },
+    "radius": 26.33
+   },
+   {
+    "offset": {
+     "y": -14.2
+    },
+    "radius": 28.45
+   }
+  ]
+ },
+ "bloonProperties": 1,
+ "depletionEffects": [
+  {
+   "scale": 1.0,
+   "lifespan": 1.0
+  }
+ ],
+ "isMoab": true,
+ "isBoss": true,
+ "disallowCosmetics": true,
+ "isSaved": true,
+ "radius": 40.0,
+ "danger": 16.0,
+ "maxHealth": 650000,
+ "coopMultiplier": 1.0,
+ "armourMultiplier": 1.0,
+ "layerNumber": 1,
+ "Speed": 1.3,
+ "IsBase": true,
+ "IsRock": true,
+ "speed": 1.3
 }
