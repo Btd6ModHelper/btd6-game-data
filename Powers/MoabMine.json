@@ -59,7 +59,7 @@
           },
           {
             "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModel, Assembly-CSharp",
-            "damage": 300.0,
+            "damage": 5000.0,
             "maxDamage": 0.0,
             "distributeToChildren": false,
             "overrideDistributeBlocker": false,
@@ -68,7 +68,7 @@
             "immuneBloonPropertiesOriginal": 0,
             "ignoreImmunityDestroy": false,
             "collisionPass": 0,
-            "CappedDamage": 300.0,
+            "CappedDamage": 5000.0,
             "name": "DamageModel_MoabMine_",
             "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Damage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
           },
@@ -187,11 +187,39 @@
             "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.PowerProjectile, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
           },
           {
-            "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.ClearHitBloonsWhenNoLongerCollidingModel, Assembly-CSharp",
+            "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.ClearHitBloonsModel, Assembly-CSharp",
             "collisionPass": 0,
-            "name": "ClearHitBloonsWhenNoLongerCollidingModel_",
-            "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.ClearHitBloonsWhenNoLongerColliding, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+            "name": "ClearHitBloonsModel_",
+            "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.ClearHitBloons, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
             "interval": 1.0
+          },
+          {
+            "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModifierForTagModel, Assembly-CSharp",
+            "tag": "Boss",
+            "tags": [
+              "Boss"
+            ],
+            "damageMultiplier": 1.0,
+            "damageAddative": -4500.0,
+            "mustIncludeAllTags": false,
+            "applyOverMaxDamage": false,
+            "collisionPass": 0,
+            "name": "DamageModifierForTagModel_MoabMine",
+            "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.DamageModifierForTag, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+          },
+          {
+            "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModifierForTagModel, Assembly-CSharp",
+            "tag": "Elite",
+            "tags": [
+              "Elite"
+            ],
+            "damageMultiplier": 1.0,
+            "damageAddative": 700.0,
+            "mustIncludeAllTags": false,
+            "applyOverMaxDamage": false,
+            "collisionPass": 0,
+            "name": "DamageModifierForTagModel_MoabMine",
+            "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.DamageModifierForTag, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
           },
           {
             "$type": "Assets.Scripts.Models.GenericBehaviors.DisplayModel, Assembly-CSharp",
@@ -223,7 +251,7 @@
         "canCollideWithBloons": true,
         "radius": 14.0,
         "vsBlockerRadius": 0.0,
-        "hasDamageModifiers": false,
+        "hasDamageModifiers": true,
         "dontUseCollisionChecker": false,
         "ignoreNonTargetable": false,
         "ignorePierceExhaustion": false,
@@ -292,6 +320,9 @@
   "showBuffsForTower": false,
   "quantity": 1,
   "saveImmediately": false,
+  "storeNavigateToId": "",
+  "canBePurchasedWithMM": true,
+  "orderPriority": 0,
   "name": "MoabMine",
   "ImplementationType": "Assets.Scripts.Simulation.Powers.Power, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
 }

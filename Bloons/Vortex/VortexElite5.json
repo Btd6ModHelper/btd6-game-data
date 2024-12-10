@@ -164,16 +164,42 @@
         0.125
       ],
       "actionIds": [
+        "MakeInvulnerable",
         "StunTowers",
         "SkullAnim",
         "KnockBack",
         "CreateStunEffect",
         "DestroyProjectiles",
         "ReflectProjectiles",
-        "PlayStunSound"
+        "PlayStunSound",
+        "InvulnerabilityDuration"
       ],
       "name": "HealthPercentTriggerModel_",
       "ImplementationType": "Assets.Scripts.Simulation.Bloons.Behaviors.HealthPercentTrigger, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+      "$type": "Assets.Scripts.Models.Bloons.Behaviors.SetInvulnerableActionModel, Assembly-CSharp",
+      "set": true,
+      "sound": {
+        "$type": "NinjaKiwi.Common.ResourceUtils.AudioClipReference, NinjaKiwi.Common",
+        "AssetGUID": null,
+        "guidRef": null
+      },
+      "actionId": "MakeInvulnerable",
+      "Mutator": {
+        "$type": "Assets.Scripts.Models.Bloons.Behaviors.SetInvulnerableActionModel+InvulnerableMutator, Assembly-CSharp",
+        "id": "Invulnerable",
+        "isExclusiveInMutationList": false,
+        "priority": 1,
+        "glueLevel": 0,
+        "dontCopy": false,
+        "buffIndicator": null,
+        "saveId": null,
+        "isAreaBuff": false,
+        "isGeraldoBuff": false
+      },
+      "name": "SetInvulnerableActionModel_",
+      "ImplementationType": "Assets.Scripts.Simulation.Bloons.Behaviors.SetInvulnerableAction, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
     },
     {
       "$type": "Assets.Scripts.Models.Bloons.Behaviors.StunTowersInRadiusActionModel, Assembly-CSharp",
@@ -362,6 +388,40 @@
       "actionId": "PlayTornadoSound",
       "name": "CreateSoundOnActionModel_",
       "ImplementationType": "Assets.Scripts.Simulation.Bloons.Behaviors.CreateSoundOnAction, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+      "$type": "Assets.Scripts.Models.Bloons.Behaviors.WaitForSecondsActionModel, Assembly-CSharp",
+      "delayTime": 6.5,
+      "actionIds": [
+        "RemoveInvulnerable"
+      ],
+      "actionId": "InvulnerabilityDuration",
+      "name": "WaitForSecondsActionModel_",
+      "ImplementationType": "Assets.Scripts.Simulation.Bloons.Behaviors.WaitForSecondsAction, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+      "$type": "Assets.Scripts.Models.Bloons.Behaviors.SetInvulnerableActionModel, Assembly-CSharp",
+      "set": false,
+      "sound": {
+        "$type": "NinjaKiwi.Common.ResourceUtils.AudioClipReference, NinjaKiwi.Common",
+        "AssetGUID": null,
+        "guidRef": null
+      },
+      "actionId": "RemoveInvulnerable",
+      "Mutator": {
+        "$type": "Assets.Scripts.Models.Bloons.Behaviors.SetInvulnerableActionModel+InvulnerableMutator, Assembly-CSharp",
+        "id": "Invulnerable",
+        "isExclusiveInMutationList": false,
+        "priority": 1,
+        "glueLevel": 0,
+        "dontCopy": false,
+        "buffIndicator": null,
+        "saveId": null,
+        "isAreaBuff": false,
+        "isGeraldoBuff": false
+      },
+      "name": "SetInvulnerableActionModel_",
+      "ImplementationType": "Assets.Scripts.Simulation.Bloons.Behaviors.SetInvulnerableAction, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
     }
   ],
   "mods": null,

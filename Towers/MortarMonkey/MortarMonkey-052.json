@@ -437,24 +437,14 @@
                       "mutationId": "Dot:Mortar",
                       "layers": 9999999,
                       "filter": null,
-                      "filters": [
-                        {
-                          "$type": "Assets.Scripts.Models.Towers.Filters.FilterOutTagModel, Assembly-CSharp",
-                          "tag": "Ddt",
-                          "disableWhenSupportMutatorIDs": [
-                            "MibMutator",
-                            "Striker:Level9BlackBuff"
-                          ],
-                          "name": "FilterOutTagModel_Filters",
-                          "ImplementationType": "Assets.Scripts.Simulation.Towers.Filters.FilterOutTag, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-                        }
-                      ],
+                      "filters": null,
                       "behaviors": [
                         {
                           "$type": "Assets.Scripts.Models.Bloons.Behaviors.DamageOverTimeModel, Assembly-CSharp",
                           "damage": 18.0,
                           "payloadCount": 0,
                           "immuneBloonProperties": 0,
+                          "immuneBloonPropertiesOriginal": 0,
                           "displayPath": {
                             "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
                             "AssetGUID": null,
@@ -739,11 +729,6 @@
               },
               {
                 "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.CreateEffectOnExhaustFractionModel, Assembly-CSharp",
-                "assetId": {
-                  "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                  "AssetGUID": null,
-                  "guidRef": null
-                },
                 "lifespan": -1.0,
                 "fullscreen": 0,
                 "fraction": 0.7,
@@ -1200,6 +1185,7 @@
                             "damage": 36.0,
                             "payloadCount": 0,
                             "immuneBloonProperties": 8,
+                            "immuneBloonPropertiesOriginal": 8,
                             "displayPath": {
                               "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
                               "AssetGUID": null,
@@ -1341,6 +1327,7 @@
           "endOnRoundEnd": false,
           "endOnDefeatScreen": false,
           "isOneShot": false,
+          "isSaved": false,
           "Lifespan": 0.0,
           "name": "ActivateAttackModel_PopAndAweAbility",
           "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.Abilities.Behaviors.ActivateAttack, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
@@ -1406,6 +1393,9 @@
       "sharedCooldown": false,
       "dontShowStacked": false,
       "animateOnMainAttackDisplay": false,
+      "additionalCharges": 0,
+      "hideAbilityIfInCooldown": false,
+      "startOffCooldown": false,
       "restrictAbilityAfterMaxRoundTimer": false,
       "CooldownSpeedScale": 0.0,
       "AnimationOffset": 0.0,

@@ -838,11 +838,6 @@
             },
             {
               "$type": "Assets.Scripts.Models.Towers.Weapons.Behaviors.EjectEffectModel, Assembly-CSharp",
-              "assetId": {
-                "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                "AssetGUID": null,
-                "guidRef": null
-              },
               "effectModel": {
                 "$type": "Assets.Scripts.Models.Effects.EffectModel, Assembly-CSharp",
                 "assetId": {
@@ -1129,6 +1124,20 @@
                               "lifespan": 0.05
                             },
                             {
+                              "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModifierForTagModel, Assembly-CSharp",
+                              "tag": "Ceramic",
+                              "tags": [
+                                "Ceramic"
+                              ],
+                              "damageMultiplier": 1.0,
+                              "damageAddative": 1.0,
+                              "mustIncludeAllTags": false,
+                              "applyOverMaxDamage": false,
+                              "collisionPass": 0,
+                              "name": "DamageModifierForTagModel_Blast",
+                              "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.DamageModifierForTag, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+                            },
+                            {
                               "$type": "Assets.Scripts.Models.GenericBehaviors.DisplayModel, Assembly-CSharp",
                               "display": {
                                 "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
@@ -1158,7 +1167,7 @@
                           "canCollideWithBloons": true,
                           "radius": 8.0,
                           "vsBlockerRadius": 0.0,
-                          "hasDamageModifiers": false,
+                          "hasDamageModifiers": true,
                           "dontUseCollisionChecker": false,
                           "ignoreNonTargetable": false,
                           "ignorePierceExhaustion": false,
@@ -1253,6 +1262,20 @@
                               "lifespan": 0.05
                             },
                             {
+                              "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModifierForTagModel, Assembly-CSharp",
+                              "tag": "Ceramic",
+                              "tags": [
+                                "Ceramic"
+                              ],
+                              "damageMultiplier": 1.0,
+                              "damageAddative": 1.0,
+                              "mustIncludeAllTags": false,
+                              "applyOverMaxDamage": false,
+                              "collisionPass": 0,
+                              "name": "DamageModifierForTagModel_Blast",
+                              "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.DamageModifierForTag, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+                            },
+                            {
                               "$type": "Assets.Scripts.Models.GenericBehaviors.DisplayModel, Assembly-CSharp",
                               "display": {
                                 "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
@@ -1282,7 +1305,7 @@
                           "canCollideWithBloons": true,
                           "radius": 8.0,
                           "vsBlockerRadius": 0.0,
-                          "hasDamageModifiers": false,
+                          "hasDamageModifiers": true,
                           "dontUseCollisionChecker": false,
                           "ignoreNonTargetable": false,
                           "ignorePierceExhaustion": false,
@@ -1433,11 +1456,6 @@
                   "behaviors": [
                     {
                       "$type": "Assets.Scripts.Models.Towers.Weapons.Behaviors.EjectEffectModel, Assembly-CSharp",
-                      "assetId": {
-                        "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                        "AssetGUID": null,
-                        "guidRef": null
-                      },
                       "effectModel": {
                         "$type": "Assets.Scripts.Models.Effects.EffectModel, Assembly-CSharp",
                         "assetId": {
@@ -1516,6 +1534,7 @@
           "endOnRoundEnd": false,
           "endOnDefeatScreen": false,
           "isOneShot": false,
+          "isSaved": false,
           "Lifespan": 7.5,
           "name": "ActivateAttackModel_ActivateAttack",
           "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.Abilities.Behaviors.ActivateAttack, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
@@ -1535,6 +1554,9 @@
       "sharedCooldown": false,
       "dontShowStacked": false,
       "animateOnMainAttackDisplay": false,
+      "additionalCharges": 0,
+      "hideAbilityIfInCooldown": false,
+      "startOffCooldown": false,
       "restrictAbilityAfterMaxRoundTimer": false,
       "CooldownSpeedScale": 0.0,
       "AnimationOffset": 0.0,

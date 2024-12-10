@@ -219,7 +219,7 @@
         "AssetGUID": "ca0d7525455bad4419a64d548f02d40f",
         "guidRef": "ca0d7525455bad4419a64d548f02d40f"
       },
-      "objectsToPlaceFarPath": [
+      "objectsToPlaceFar": [
         {
           "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
           "AssetGUID": "ca0d7525455bad4419a64d548f02d40f",
@@ -261,7 +261,7 @@
         "AssetGUID": "0116eef9af1e0f7499aedffa24fa3e35",
         "guidRef": "0116eef9af1e0f7499aedffa24fa3e35"
       },
-      "objectsToPlaceMiddlePath": [
+      "objectsToPlaceMiddle": [
         {
           "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
           "AssetGUID": "0116eef9af1e0f7499aedffa24fa3e35",
@@ -303,7 +303,7 @@
         "AssetGUID": "59776fd9878ddec43a68a870ca6e4bf7",
         "guidRef": "59776fd9878ddec43a68a870ca6e4bf7"
       },
-      "objectsToPlaceClosePath": [
+      "objectsToPlaceClose": [
         {
           "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
           "AssetGUID": "59776fd9878ddec43a68a870ca6e4bf7",
@@ -338,6 +338,7 @@
           "damage": 2.0,
           "payloadCount": 0,
           "immuneBloonProperties": 17,
+          "immuneBloonPropertiesOriginal": 17,
           "displayPath": {
             "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
             "AssetGUID": null,
@@ -377,6 +378,7 @@
           "damage": 1.0,
           "payloadCount": 0,
           "immuneBloonProperties": 17,
+          "immuneBloonPropertiesOriginal": 17,
           "displayPath": {
             "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
             "AssetGUID": null,
@@ -416,6 +418,7 @@
           "damage": 1.0,
           "payloadCount": 0,
           "immuneBloonProperties": 17,
+          "immuneBloonPropertiesOriginal": 17,
           "displayPath": {
             "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
             "AssetGUID": null,
@@ -1472,12 +1475,16 @@
               "ImplementationType": "Assets.Scripts.Simulation.Towers.Weapons.Behaviors.JungleVineLimitProjectile, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
             },
             {
+              "$type": "Assets.Scripts.Models.Towers.Weapons.Behaviors.LifeBasedAttackSpeedModel, Assembly-CSharp",
+              "ratePerLife": 0.01,
+              "lifeCap": 40,
+              "baseRateIncrease": 0.1,
+              "saveId": "DruidJungleVine",
+              "name": "LifeBasedAttackSpeedModel_",
+              "ImplementationType": "Assets.Scripts.Simulation.Towers.Weapons.Behaviors.LifeBasedAttackSpeed, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+            },
+            {
               "$type": "Assets.Scripts.Models.Towers.Weapons.Behaviors.EjectEffectModel, Assembly-CSharp",
-              "assetId": {
-                "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                "AssetGUID": null,
-                "guidRef": null
-              },
               "effectModel": {
                 "$type": "Assets.Scripts.Models.Effects.EffectModel, Assembly-CSharp",
                 "assetId": {
@@ -1686,6 +1693,9 @@
       "sharedCooldown": false,
       "dontShowStacked": false,
       "animateOnMainAttackDisplay": false,
+      "additionalCharges": 0,
+      "hideAbilityIfInCooldown": false,
+      "startOffCooldown": false,
       "restrictAbilityAfterMaxRoundTimer": true,
       "CooldownSpeedScale": 0.0,
       "AnimationOffset": 0.0,
