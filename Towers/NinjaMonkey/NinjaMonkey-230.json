@@ -505,7 +505,8 @@
                   "buffIndicator": null,
                   "saveId": null,
                   "isAreaBuff": false,
-                  "isGeraldoBuff": false
+                  "isGeraldoBuff": false,
+                  "isArtifactMutator": false
                 },
                 "name": "WindModel_",
                 "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Wind, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
@@ -522,6 +523,20 @@
                 "collisionPass": -1,
                 "name": "RemoveBloonModifiersModel_",
                 "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.RemoveBloonModifiers, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+              },
+              {
+                "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModifierForTagModel, Assembly-CSharp",
+                "tag": "Camo",
+                "tags": [
+                  "Camo"
+                ],
+                "damageMultiplier": 1.0,
+                "damageAddative": 2.0,
+                "mustIncludeAllTags": false,
+                "applyOverMaxDamage": false,
+                "collisionPass": 0,
+                "name": "DamageModifierForTagModel_Projectile",
+                "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.DamageModifierForTag, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
               },
               {
                 "$type": "Assets.Scripts.Models.GenericBehaviors.DisplayModel, Assembly-CSharp",
@@ -554,7 +569,7 @@
             "canCollideWithBloons": true,
             "radius": 3.0,
             "vsBlockerRadius": 0.0,
-            "hasDamageModifiers": false,
+            "hasDamageModifiers": true,
             "dontUseCollisionChecker": false,
             "ignoreNonTargetable": false,
             "ignorePierceExhaustion": false,

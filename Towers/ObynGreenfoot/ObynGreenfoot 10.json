@@ -668,7 +668,8 @@
         "buffIndicator": null,
         "saveId": null,
         "isAreaBuff": false,
-        "isGeraldoBuff": false
+        "isGeraldoBuff": false,
+        "isArtifactMutator": false
       },
       "ProjectileRadiusMutator": {
         "$type": "Assets.Scripts.Models.Towers.Behaviors.ObynGlobalSupportModel+ProjectileRadiusMutatorClass, Assembly-CSharp",
@@ -681,7 +682,8 @@
         "buffIndicator": null,
         "saveId": null,
         "isAreaBuff": false,
-        "isGeraldoBuff": false
+        "isGeraldoBuff": false,
+        "isArtifactMutator": false
       },
       "DamageTypeMutator": {
         "$type": "Assets.Scripts.Models.Towers.Behaviors.ObynGlobalSupportModel+DamageTypeMutatorClass, Assembly-CSharp",
@@ -693,7 +695,8 @@
         "buffIndicator": null,
         "saveId": null,
         "isAreaBuff": false,
-        "isGeraldoBuff": false
+        "isGeraldoBuff": false,
+        "isArtifactMutator": false
       },
       "AbilityCooldownMutator": {
         "$type": "Assets.Scripts.Models.Towers.Behaviors.ObynGlobalSupportModel+AbilityCooldownMutatorClass, Assembly-CSharp",
@@ -705,7 +708,8 @@
         "buffIndicator": null,
         "saveId": null,
         "isAreaBuff": false,
-        "isGeraldoBuff": false
+        "isGeraldoBuff": false,
+        "isArtifactMutator": false
       },
       "TornadoRateMutator": {
         "$type": "Assets.Scripts.Models.Towers.Behaviors.ObynGlobalSupportModel+TornadoRateMutatorClass, Assembly-CSharp",
@@ -717,7 +721,8 @@
         "buffIndicator": null,
         "saveId": null,
         "isAreaBuff": false,
-        "isGeraldoBuff": false
+        "isGeraldoBuff": false,
+        "isArtifactMutator": false
       },
       "name": "ObynGlobalSupportModel_",
       "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.ObynGlobalSupport, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
@@ -1129,12 +1134,12 @@
                   "startInCooldown": false,
                   "animateOnMainAttack": false,
                   "isStunned": false,
-                  "Rate": 1.0,
+                  "Rate": 99999.0,
                   "UseThrowMarker": true,
                   "name": "WeaponModel_Weapon",
                   "ImplementationType": "Assets.Scripts.Simulation.Towers.Weapons.Weapon, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
                   "animationOffset": 0.0,
-                  "rate": 1.0,
+                  "rate": 99999.0,
                   "customStartCooldown": 0.0
                 }
               ],
@@ -1212,7 +1217,7 @@
           "turnOffExisting": false,
           "endOnRoundEnd": false,
           "endOnDefeatScreen": false,
-          "isOneShot": false,
+          "isOneShot": true,
           "isSaved": false,
           "Lifespan": 0.0,
           "name": "ActivateAttackModel_AbilityBrambles",
@@ -2282,12 +2287,12 @@
                   "startInCooldown": false,
                   "animateOnMainAttack": false,
                   "isStunned": false,
-                  "Rate": 0.05,
+                  "Rate": 99999.0,
                   "UseThrowMarker": true,
                   "name": "WeaponModel_Weapon",
                   "ImplementationType": "Assets.Scripts.Simulation.Towers.Weapons.Weapon, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
                   "animationOffset": 0.0,
-                  "rate": 0.05,
+                  "rate": 99999.0,
                   "customStartCooldown": 0.0
                 }
               ],
@@ -2370,7 +2375,7 @@
           "turnOffExisting": false,
           "endOnRoundEnd": false,
           "endOnDefeatScreen": false,
-          "isOneShot": false,
+          "isOneShot": true,
           "isSaved": false,
           "Lifespan": 0.0,
           "name": "ActivateAttackModel_AbilityWallOfTrees",
@@ -2738,7 +2743,8 @@
                         "buffIndicator": null,
                         "saveId": null,
                         "isAreaBuff": false,
-                        "isGeraldoBuff": false
+                        "isGeraldoBuff": false,
+                        "isArtifactMutator": false
                       },
                       "name": "SlowBloonsZoneModel_NonMoabs",
                       "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.SlowBloonsZone, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
@@ -2768,7 +2774,8 @@
                         "buffIndicator": null,
                         "saveId": null,
                         "isAreaBuff": false,
-                        "isGeraldoBuff": false
+                        "isGeraldoBuff": false,
+                        "isArtifactMutator": false
                       },
                       "name": "SlowBloonsZoneModel_Moabs",
                       "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.SlowBloonsZone, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
@@ -3069,6 +3076,33 @@
       "onlyAffectParagon": false,
       "name": "VisibilitySupportModel_NaturesWrath_",
       "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.VisibilitySupport, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+      "$type": "Assets.Scripts.Models.Towers.Behaviors.MonkeyCityIncomeSupportModel, Assembly-CSharp",
+      "isUnique": true,
+      "incomeModifier": 1.2,
+      "filters": [
+        {
+          "$type": "Assets.Scripts.Models.Towers.TowerFilters.FilterInBaseTowerIdModel, Assembly-CSharp",
+          "baseIds": [
+            "Druid"
+          ],
+          "name": "FilterInBaseTowerIdModel_",
+          "ImplementationType": "Assets.Scripts.Simulation.Towers.TowerFilters.FilterInBaseTowerId, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+        }
+      ],
+      "isGlobal": false,
+      "isCustomRadius": false,
+      "customRadius": 0.0,
+      "appliesToOwningTower": false,
+      "showBuffIcon": true,
+      "buffLocsName": "NaturesWrathBuff",
+      "buffIconName": "BuffIconObyn",
+      "maxStackSize": 0,
+      "onlyShowBuffIfMutated": true,
+      "onlyAffectParagon": false,
+      "name": "MonkeyCityIncomeSupportModel_",
+      "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.MonkeyCityIncomeSupport, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
     },
     {
       "$type": "Assets.Scripts.Models.GenericBehaviors.DisplayModel, Assembly-CSharp",

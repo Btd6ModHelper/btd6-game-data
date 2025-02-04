@@ -482,7 +482,8 @@
               "buffIndicator": null,
               "saveId": null,
               "isAreaBuff": false,
-              "isGeraldoBuff": false
+              "isGeraldoBuff": false,
+              "isArtifactMutator": false
             },
             "name": "FreezeModel_Ice",
             "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Freeze, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
@@ -501,6 +502,7 @@
             "matchLayersWithDamage": false,
             "mutationId": "Permafrost:Normal",
             "countGlueAchievement": false,
+            "chance": 0.0,
             "overlayType": "",
             "collisionPass": -1,
             "Lifespan": 9999999.0,
@@ -525,7 +527,8 @@
               "buffIndicator": null,
               "saveId": null,
               "isAreaBuff": false,
-              "isGeraldoBuff": false
+              "isGeraldoBuff": false,
+              "isArtifactMutator": false
             },
             "name": "SlowModel_Permafrost",
             "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Slow, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
@@ -695,10 +698,196 @@
           "$type": "Assets.Scripts.Models.Towers.Weapons.WeaponModel, Assembly-CSharp",
           "animation": 1,
           "emission": {
-            "$type": "Assets.Scripts.Models.Towers.Behaviors.Emissions.SingleEmissionModel, Assembly-CSharp",
+            "$type": "Assets.Scripts.Models.Towers.Behaviors.Emissions.MultiEmissionModel, Assembly-CSharp",
+            "secondaryProjectileModel": {
+              "$type": "Assets.Scripts.Models.Towers.Projectiles.ProjectileModel, Assembly-CSharp",
+              "display": {
+                "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
+                "AssetGUID": null,
+                "guidRef": null
+              },
+              "id": "GlobalProjectile",
+              "maxPierce": -1.0,
+              "pierce": 999.0,
+              "scale": 1.0,
+              "ignoreBlockers": true,
+              "usePointCollisionWithBloons": false,
+              "canCollisionBeBlockedByMapLos": false,
+              "filters": [
+                {
+                  "$type": "Assets.Scripts.Models.Towers.Filters.FilterInvisibleModel, Assembly-CSharp",
+                  "isActive": false,
+                  "ignoreBroadPhase": false,
+                  "name": "FilterInvisibleModel_",
+                  "ImplementationType": "Assets.Scripts.Simulation.Towers.Filters.FilterInvisible, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+                },
+                {
+                  "$type": "Assets.Scripts.Models.Towers.Filters.FilterOveridingMutatedTargetModel, Assembly-CSharp",
+                  "mutationId": null,
+                  "mutationOverideOrder": [
+                    "SuperBrittle",
+                    "Embrittlement"
+                  ],
+                  "highestPriorityMutationId": "SuperBrittle",
+                  "defaultMutationId": "Embittlement",
+                  "name": "FilterOveridingMutatedTargetModel_",
+                  "ImplementationType": "Assets.Scripts.Simulation.Towers.Filters.FilterOveridingMutatedTarget, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+                },
+                {
+                  "$type": "Assets.Scripts.Models.Towers.Filters.FilterBloonIfDamageTypeModel, Assembly-CSharp",
+                  "ifCantHitBloonProperties": 0,
+                  "damageModel": null,
+                  "name": "FilterBloonIfDamageTypeModel_FilterLeadIfDamageType",
+                  "ImplementationType": "Assets.Scripts.Simulation.Towers.Filters.FilterBloonIfDamageType, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+                },
+                {
+                  "$type": "Assets.Scripts.Models.Towers.Filters.FilterFrozenBloonsModel, Assembly-CSharp",
+                  "name": "FilterFrozenBloonsModel_",
+                  "ImplementationType": "Assets.Scripts.Simulation.Towers.Filters.FilterFrozenBloons, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+                }
+              ],
+              "behaviors": [
+                {
+                  "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.AgeModel, Assembly-CSharp",
+                  "rounds": 0,
+                  "useRoundTime": false,
+                  "endOfRoundClearBypassModel": null,
+                  "collisionPass": 0,
+                  "Lifespan": 0.05,
+                  "name": "AgeModel_GlobalProjectile",
+                  "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Age, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                  "lifespan": 0.05
+                },
+                {
+                  "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.ProjectileFilterModel, Assembly-CSharp",
+                  "filters": [
+                    {
+                      "$type": "Assets.Scripts.Models.Towers.Filters.FilterInvisibleModel, Assembly-CSharp",
+                      "isActive": false,
+                      "ignoreBroadPhase": false,
+                      "name": "FilterInvisibleModel_",
+                      "ImplementationType": "Assets.Scripts.Simulation.Towers.Filters.FilterInvisible, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+                    },
+                    {
+                      "$type": "Assets.Scripts.Models.Towers.Filters.FilterOveridingMutatedTargetModel, Assembly-CSharp",
+                      "mutationId": null,
+                      "mutationOverideOrder": [
+                        "SuperBrittle",
+                        "Embrittlement"
+                      ],
+                      "highestPriorityMutationId": "SuperBrittle",
+                      "defaultMutationId": "Embittlement",
+                      "name": "FilterOveridingMutatedTargetModel_",
+                      "ImplementationType": "Assets.Scripts.Simulation.Towers.Filters.FilterOveridingMutatedTarget, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+                    },
+                    {
+                      "$type": "Assets.Scripts.Models.Towers.Filters.FilterBloonIfDamageTypeModel, Assembly-CSharp",
+                      "ifCantHitBloonProperties": 0,
+                      "damageModel": null,
+                      "name": "FilterBloonIfDamageTypeModel_FilterLeadIfDamageType",
+                      "ImplementationType": "Assets.Scripts.Simulation.Towers.Filters.FilterBloonIfDamageType, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+                    },
+                    {
+                      "$type": "Assets.Scripts.Models.Towers.Filters.FilterFrozenBloonsModel, Assembly-CSharp",
+                      "name": "FilterFrozenBloonsModel_",
+                      "ImplementationType": "Assets.Scripts.Simulation.Towers.Filters.FilterFrozenBloons, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+                    }
+                  ],
+                  "collisionPass": 0,
+                  "name": "ProjectileFilterModel_GlobalProjectile",
+                  "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.ProjectileFilter, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+                },
+                {
+                  "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.FreezeModel, Assembly-CSharp",
+                  "speed": 0.0,
+                  "layers": 1,
+                  "mutationId": "Ice:Regular:Freeze",
+                  "percentChanceToFreeze": 0.0,
+                  "enablePercentChanceToFreeze": false,
+                  "damageModel": null,
+                  "canFreezeMoabs": false,
+                  "cascadeMutators": true,
+                  "growBlockModel": {
+                    "$type": "Assets.Scripts.Models.Bloons.Behaviors.GrowBlockModel, Assembly-CSharp",
+                    "name": "GrowBlockModel_FreezeGrowBlock",
+                    "ImplementationType": "Assets.Scripts.Simulation.Bloons.Behaviors.GrowBlock, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+                  },
+                  "applyAfterDamage": false,
+                  "overlayType": "Ice",
+                  "collisionPass": -1,
+                  "Lifespan": 0.75,
+                  "mutator": {
+                    "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.FreezeModel+Mutator, Assembly-CSharp",
+                    "speed": 0.0,
+                    "overlayType": "Ice",
+                    "mutationId": "Ice:Regular:Freeze",
+                    "growBlockModel": {
+                      "$type": "Assets.Scripts.Models.Bloons.Behaviors.GrowBlockModel, Assembly-CSharp",
+                      "name": "GrowBlockModel_FreezeGrowBlock",
+                      "ImplementationType": "Assets.Scripts.Simulation.Bloons.Behaviors.GrowBlock, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+                    },
+                    "damageModel": null,
+                    "canFreezeMoabs": false,
+                    "id": "Ice:Regular:Freeze",
+                    "isExclusiveInMutationList": false,
+                    "priority": 5,
+                    "glueLevel": 0,
+                    "dontCopy": false,
+                    "buffIndicator": null,
+                    "saveId": null,
+                    "isAreaBuff": false,
+                    "isGeraldoBuff": false,
+                    "isArtifactMutator": false
+                  },
+                  "name": "FreezeModel_GlobalIce",
+                  "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Freeze, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                  "lifespan": 0.75
+                },
+                {
+                  "$type": "Assets.Scripts.Models.GenericBehaviors.DisplayModel, Assembly-CSharp",
+                  "display": {
+                    "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
+                    "AssetGUID": null,
+                    "guidRef": null
+                  },
+                  "layer": 0,
+                  "positionOffset": {
+                    "$type": "Assets.Scripts.Simulation.SMath.Vector3, Assembly-CSharp",
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  },
+                  "scale": 1.0,
+                  "ignoreRotation": false,
+                  "animationChanges": null,
+                  "delayedReveal": 0.0,
+                  "category": 16,
+                  "isAnimationPaused": false,
+                  "name": "DisplayModel_ProjectileDisplay",
+                  "ImplementationType": "Assets.Scripts.Simulation.Behaviors.DisplayBehavior, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+                }
+              ],
+              "collisionPasses": [
+                -1,
+                0
+              ],
+              "canCollideWithBloons": true,
+              "radius": 9999999.0,
+              "vsBlockerRadius": 0.0,
+              "hasDamageModifiers": false,
+              "dontUseCollisionChecker": false,
+              "ignoreNonTargetable": false,
+              "ignorePierceExhaustion": false,
+              "saveId": null,
+              "displayModel": null,
+              "CappedPierce": 999.0,
+              "name": "ProjectileModel_GlobalProjectile",
+              "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Projectile, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+              "checkCollisionInterval": 0.0
+            },
             "behaviors": null,
-            "name": "SingleEmissionModel_",
-            "ImplementationType": "Assets.Scripts.Simulation.Towers.Emissions.SingleEmission, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+            "name": "MultiEmissionModel_",
+            "ImplementationType": "Assets.Scripts.Simulation.Towers.Emissions.MultiEmission, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
           },
           "ejectX": 0.0,
           "ejectY": 0.0,
@@ -854,7 +1043,8 @@
                   "buffIndicator": null,
                   "saveId": null,
                   "isAreaBuff": false,
-                  "isGeraldoBuff": false
+                  "isGeraldoBuff": false,
+                  "isArtifactMutator": false
                 },
                 "name": "FreezeModel_Ice",
                 "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Freeze, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
@@ -873,6 +1063,7 @@
                 "matchLayersWithDamage": false,
                 "mutationId": "Permafrost:Normal",
                 "countGlueAchievement": false,
+                "chance": 0.0,
                 "overlayType": "",
                 "collisionPass": -1,
                 "Lifespan": 9999999.0,
@@ -897,7 +1088,8 @@
                   "buffIndicator": null,
                   "saveId": null,
                   "isAreaBuff": false,
-                  "isGeraldoBuff": false
+                  "isGeraldoBuff": false,
+                  "isArtifactMutator": false
                 },
                 "name": "SlowModel_Permafrost",
                 "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Slow, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
@@ -1133,7 +1325,7 @@
     },
     {
       "$type": "Assets.Scripts.Models.Towers.Behaviors.SlowBloonsZoneModel, Assembly-CSharp",
-      "zoneRadius": 45.0,
+      "zoneRadius": 35.0,
       "mutationId": "Ice:Regular:ArcticWind",
       "isUnique": true,
       "filters": [
@@ -1155,7 +1347,7 @@
         },
         {
           "$type": "Assets.Scripts.Models.Towers.Filters.FilterMoabModel, Assembly-CSharp",
-          "flip": true,
+          "flip": false,
           "name": "FilterMoabModel_MoabFilter",
           "ImplementationType": "Assets.Scripts.Simulation.Towers.Filters.FilterMoab, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
         }
@@ -1164,8 +1356,10 @@
       "speedChange": 0.0,
       "bindRadiusToTowerRange": true,
       "radiusOffset": 5.0,
-      "bloonTag": "",
-      "bloonTags": [],
+      "bloonTag": "Moabs",
+      "bloonTags": [
+        "Moabs"
+      ],
       "inclusive": false,
       "mutator": {
         "$type": "Assets.Scripts.Models.Towers.Behaviors.SlowBloonsZoneModel+Mutator, Assembly-CSharp",
@@ -1177,9 +1371,64 @@
         "buffIndicator": null,
         "saveId": null,
         "isAreaBuff": false,
-        "isGeraldoBuff": false
+        "isGeraldoBuff": false,
+        "isArtifactMutator": false
       },
       "name": "SlowBloonsZoneModel_",
+      "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.SlowBloonsZone, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+      "$type": "Assets.Scripts.Models.Towers.Behaviors.SlowBloonsZoneModel, Assembly-CSharp",
+      "zoneRadius": 35.0,
+      "mutationId": "Ice:Regular:Arctic",
+      "isUnique": true,
+      "filters": [
+        {
+          "$type": "Assets.Scripts.Models.Towers.Filters.FilterInvisibleModel, Assembly-CSharp",
+          "isActive": false,
+          "ignoreBroadPhase": false,
+          "name": "FilterInvisibleModel_",
+          "ImplementationType": "Assets.Scripts.Simulation.Towers.Filters.FilterInvisible, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+        },
+        {
+          "$type": "Assets.Scripts.Models.Towers.Filters.FilterOutTagModel, Assembly-CSharp",
+          "tag": "Ice",
+          "disableWhenSupportMutatorIDs": [
+            "false"
+          ],
+          "name": "FilterOutTagModel_ArcticWindZone",
+          "ImplementationType": "Assets.Scripts.Simulation.Towers.Filters.FilterOutTag, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+        },
+        {
+          "$type": "Assets.Scripts.Models.Towers.Filters.FilterMoabModel, Assembly-CSharp",
+          "flip": false,
+          "name": "FilterMoabModel_MoabFilter",
+          "ImplementationType": "Assets.Scripts.Simulation.Towers.Filters.FilterMoab, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+        }
+      ],
+      "speedScale": 0.8,
+      "speedChange": 0.0,
+      "bindRadiusToTowerRange": true,
+      "radiusOffset": 5.0,
+      "bloonTag": "Moabs",
+      "bloonTags": [
+        "Moabs"
+      ],
+      "inclusive": true,
+      "mutator": {
+        "$type": "Assets.Scripts.Models.Towers.Behaviors.SlowBloonsZoneModel+Mutator, Assembly-CSharp",
+        "id": "Ice:Regular:Arctic",
+        "isExclusiveInMutationList": false,
+        "priority": 1,
+        "glueLevel": 0,
+        "dontCopy": true,
+        "buffIndicator": null,
+        "saveId": null,
+        "isAreaBuff": false,
+        "isGeraldoBuff": false,
+        "isArtifactMutator": false
+      },
+      "name": "SlowBloonsZoneModel_SlowMoabs",
       "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.SlowBloonsZone, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
     },
     {
@@ -1327,7 +1576,8 @@
                           "buffIndicator": null,
                           "saveId": null,
                           "isAreaBuff": false,
-                          "isGeraldoBuff": false
+                          "isGeraldoBuff": false,
+                          "isArtifactMutator": false
                         },
                         "name": "FreezeModel_AbsoluteZero",
                         "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Freeze, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
@@ -1346,6 +1596,7 @@
                         "matchLayersWithDamage": false,
                         "mutationId": "Permafrost:Normal",
                         "countGlueAchievement": false,
+                        "chance": 0.0,
                         "overlayType": "",
                         "collisionPass": -1,
                         "Lifespan": 9999999.0,
@@ -1370,7 +1621,8 @@
                           "buffIndicator": null,
                           "saveId": null,
                           "isAreaBuff": false,
-                          "isGeraldoBuff": false
+                          "isGeraldoBuff": false,
+                          "isArtifactMutator": false
                         },
                         "name": "SlowModel_Permafrost",
                         "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Slow, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",

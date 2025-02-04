@@ -530,6 +530,20 @@
                 "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.DamageModifierForBloonState, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
               },
               {
+                "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModifierForTagModel, Assembly-CSharp",
+                "tag": "Camo",
+                "tags": [
+                  "Camo"
+                ],
+                "damageMultiplier": 1.0,
+                "damageAddative": 0.0,
+                "mustIncludeAllTags": false,
+                "applyOverMaxDamage": false,
+                "collisionPass": 0,
+                "name": "DamageModifierForTagModel_Projectile",
+                "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.DamageModifierForTag, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+              },
+              {
                 "$type": "Assets.Scripts.Models.GenericBehaviors.DisplayModel, Assembly-CSharp",
                 "display": {
                   "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
@@ -658,6 +672,7 @@
                           "matchLayersWithDamage": true,
                           "mutationId": "Stun:Weak",
                           "countGlueAchievement": false,
+                          "chance": 0.0,
                           "overlayType": "Stun",
                           "collisionPass": -1,
                           "Lifespan": 1.3,
@@ -682,7 +697,8 @@
                             "buffIndicator": null,
                             "saveId": null,
                             "isAreaBuff": false,
-                            "isGeraldoBuff": false
+                            "isGeraldoBuff": false,
+                            "isArtifactMutator": false
                           },
                           "name": "SlowModel_",
                           "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Slow, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
@@ -701,6 +717,20 @@
                           "collisionPass": 0,
                           "name": "SlowModifierForTagModel_",
                           "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.SlowModifierForTag, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+                        },
+                        {
+                          "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModifierForTagModel, Assembly-CSharp",
+                          "tag": "Camo",
+                          "tags": [
+                            "Camo"
+                          ],
+                          "damageMultiplier": 1.0,
+                          "damageAddative": 0.0,
+                          "mustIncludeAllTags": false,
+                          "applyOverMaxDamage": false,
+                          "collisionPass": 0,
+                          "name": "DamageModifierForTagModel_Explosion",
+                          "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.DamageModifierForTag, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
                         },
                         {
                           "$type": "Assets.Scripts.Models.GenericBehaviors.DisplayModel, Assembly-CSharp",
@@ -733,7 +763,7 @@
                       "canCollideWithBloons": true,
                       "radius": 40.0,
                       "vsBlockerRadius": 0.0,
-                      "hasDamageModifiers": false,
+                      "hasDamageModifiers": true,
                       "dontUseCollisionChecker": false,
                       "ignoreNonTargetable": false,
                       "ignorePierceExhaustion": false,
@@ -1099,6 +1129,20 @@
                 "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.DamageModifierForTag, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
               },
               {
+                "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModifierForTagModel, Assembly-CSharp",
+                "tag": "Camo",
+                "tags": [
+                  "Camo"
+                ],
+                "damageMultiplier": 1.0,
+                "damageAddative": 0.0,
+                "mustIncludeAllTags": false,
+                "applyOverMaxDamage": false,
+                "collisionPass": 0,
+                "name": "DamageModifierForTagModel_Projectile",
+                "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.DamageModifierForTag, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+              },
+              {
                 "$type": "Assets.Scripts.Models.GenericBehaviors.DisplayModel, Assembly-CSharp",
                 "display": {
                   "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
@@ -1329,6 +1373,7 @@
                 "stackCount": 0,
                 "dontCopy": false,
                 "parentDamageModel": null,
+                "chance": 0.0,
                 "overlayType": "NinjaMasterBomb",
                 "collisionPass": 1,
                 "name": "AddBehaviorToBloonModel_",
@@ -1404,6 +1449,7 @@
                 "matchLayersWithDamage": false,
                 "mutationId": "Stun:Sticky",
                 "countGlueAchievement": false,
+                "chance": 0.0,
                 "overlayType": "Stun",
                 "collisionPass": -1,
                 "Lifespan": 1.0,
@@ -1428,7 +1474,8 @@
                   "buffIndicator": null,
                   "saveId": null,
                   "isAreaBuff": false,
-                  "isGeraldoBuff": false
+                  "isGeraldoBuff": false,
+                  "isArtifactMutator": false
                 },
                 "name": "SlowModel_",
                 "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Slow, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
@@ -1559,6 +1606,7 @@
                 "stackCount": 0,
                 "dontCopy": false,
                 "parentDamageModel": null,
+                "chance": 0.0,
                 "overlayType": "",
                 "collisionPass": 1,
                 "name": "AddBehaviorToBloonModel_StickyBombSplash",
@@ -1615,12 +1663,12 @@
           "startInCooldown": false,
           "animateOnMainAttack": false,
           "isStunned": false,
-          "Rate": 3.15,
+          "Rate": 1.575,
           "UseThrowMarker": true,
           "name": "WeaponModel_Weapon",
           "ImplementationType": "Assets.Scripts.Simulation.Towers.Weapons.Weapon, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
           "animationOffset": 0.0,
-          "rate": 3.15,
+          "rate": 1.575,
           "customStartCooldown": 0.0
         }
       ],

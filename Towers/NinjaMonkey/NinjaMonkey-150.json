@@ -512,7 +512,8 @@
                   "buffIndicator": null,
                   "saveId": null,
                   "isAreaBuff": false,
-                  "isGeraldoBuff": false
+                  "isGeraldoBuff": false,
+                  "isArtifactMutator": false
                 },
                 "name": "WindModel_",
                 "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Wind, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
@@ -529,6 +530,20 @@
                 "collisionPass": -1,
                 "name": "RemoveBloonModifiersModel_",
                 "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.RemoveBloonModifiers, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+              },
+              {
+                "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModifierForTagModel, Assembly-CSharp",
+                "tag": "Camo",
+                "tags": [
+                  "Camo"
+                ],
+                "damageMultiplier": 1.0,
+                "damageAddative": 2.0,
+                "mustIncludeAllTags": false,
+                "applyOverMaxDamage": false,
+                "collisionPass": 0,
+                "name": "DamageModifierForTagModel_Projectile",
+                "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.DamageModifierForTag, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
               },
               {
                 "$type": "Assets.Scripts.Models.GenericBehaviors.DisplayModel, Assembly-CSharp",
@@ -561,7 +576,7 @@
             "canCollideWithBloons": true,
             "radius": 3.0,
             "vsBlockerRadius": 0.0,
-            "hasDamageModifiers": false,
+            "hasDamageModifiers": true,
             "dontUseCollisionChecker": false,
             "ignoreNonTargetable": false,
             "ignorePierceExhaustion": false,
@@ -804,6 +819,7 @@
                         "matchLayersWithDamage": false,
                         "mutationId": "Sabotage",
                         "countGlueAchievement": false,
+                        "chance": 0.0,
                         "overlayType": "",
                         "collisionPass": -1,
                         "Lifespan": 30.0,
@@ -828,7 +844,8 @@
                           "buffIndicator": null,
                           "saveId": null,
                           "isAreaBuff": false,
-                          "isGeraldoBuff": false
+                          "isGeraldoBuff": false,
+                          "isArtifactMutator": false
                         },
                         "name": "SlowMinusAbilityDurationModel_",
                         "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.SlowMinusAbilityDuration, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
@@ -914,12 +931,12 @@
                   "startInCooldown": false,
                   "animateOnMainAttack": false,
                   "isStunned": false,
-                  "Rate": 2.0,
+                  "Rate": 99999.0,
                   "UseThrowMarker": false,
                   "name": "WeaponModel_Weapon",
                   "ImplementationType": "Assets.Scripts.Simulation.Towers.Weapons.Weapon, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
                   "animationOffset": 0.0,
-                  "rate": 2.0,
+                  "rate": 99999.0,
                   "customStartCooldown": 0.0
                 }
               ],
@@ -943,7 +960,7 @@
           "turnOffExisting": false,
           "endOnRoundEnd": false,
           "endOnDefeatScreen": false,
-          "isOneShot": false,
+          "isOneShot": true,
           "isSaved": false,
           "Lifespan": 0.0,
           "name": "ActivateAttackModel_Ability",
