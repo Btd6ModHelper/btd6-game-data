@@ -175,6 +175,7 @@
   "showBuffs": true,
   "destroyTowerOnRedistribution": false,
   "displayScale": 1.0,
+  "useAirUnitHeight": false,
   "baseId": "Mermonkey",
   "display": {
     "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
@@ -197,7 +198,8 @@
         "saveId": null,
         "isAreaBuff": false,
         "isGeraldoBuff": false,
-        "isArtifactMutator": false
+        "isArtifactMutator": false,
+        "dontRemoveOnBloonDegrade": false
       },
       "name": "PlacementAreaTypeRangeBuffModel_",
       "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.PlacementBehaviors.PlacementAreaTypeRangeBuff, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
@@ -403,7 +405,7 @@
         },
         "id": "Projectile",
         "maxPierce": 0.0,
-        "pierce": 5.0,
+        "pierce": 6.0,
         "scale": 1.0,
         "ignoreBlockers": true,
         "usePointCollisionWithBloons": false,
@@ -483,7 +485,8 @@
               "saveId": null,
               "isAreaBuff": false,
               "isGeraldoBuff": false,
-              "isArtifactMutator": false
+              "isArtifactMutator": false,
+              "dontRemoveOnBloonDegrade": false
             },
             "name": "TranceBloonModel_",
             "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.TranceBloon, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
@@ -561,6 +564,19 @@
             "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.CollideExtraPierceReduction, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
           },
           {
+            "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.RemoveBloonModifiersModel, Assembly-CSharp",
+            "cleanseRegen": false,
+            "cleanseCamo": true,
+            "cleanseLead": false,
+            "cleanseFortified": false,
+            "cleanseOnlyIfDamaged": false,
+            "bloonTagExcludeList": [],
+            "bloonTagExplicitList": [],
+            "collisionPass": -1,
+            "name": "RemoveBloonModifiersModel_",
+            "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.RemoveBloonModifiers, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+          },
+          {
             "$type": "Assets.Scripts.Models.GenericBehaviors.DisplayModel, Assembly-CSharp",
             "display": {
               "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
@@ -597,7 +613,7 @@
         "ignorePierceExhaustion": true,
         "saveId": null,
         "displayModel": null,
-        "CappedPierce": 5.0,
+        "CappedPierce": 6.0,
         "name": "ProjectileModel_Projectile",
         "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Projectile, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
         "checkCollisionInterval": 0.0
@@ -652,6 +668,11 @@
       },
       "heroSound1": null,
       "heroSound2": null,
+      "reactSound": null,
+      "reactSoundAlt": null,
+      "towerType": "",
+      "towerSkin": "",
+      "reactDelay": 0.0,
       "name": "CreateSoundOnTowerPlaceModel_Mermonkey-013",
       "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.CreateSoundOnTowerPlace, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
     },
@@ -1059,7 +1080,7 @@
             },
             "id": "Projectile",
             "maxPierce": 0.0,
-            "pierce": 5.0,
+            "pierce": 6.0,
             "scale": 1.0,
             "ignoreBlockers": true,
             "usePointCollisionWithBloons": false,
@@ -1139,7 +1160,8 @@
                   "saveId": null,
                   "isAreaBuff": false,
                   "isGeraldoBuff": false,
-                  "isArtifactMutator": false
+                  "isArtifactMutator": false,
+                  "dontRemoveOnBloonDegrade": false
                 },
                 "name": "TranceBloonModel_",
                 "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.TranceBloon, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
@@ -1217,6 +1239,19 @@
                 "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.CollideExtraPierceReduction, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
               },
               {
+                "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.RemoveBloonModifiersModel, Assembly-CSharp",
+                "cleanseRegen": false,
+                "cleanseCamo": true,
+                "cleanseLead": false,
+                "cleanseFortified": false,
+                "cleanseOnlyIfDamaged": false,
+                "bloonTagExcludeList": [],
+                "bloonTagExplicitList": [],
+                "collisionPass": -1,
+                "name": "RemoveBloonModifiersModel_",
+                "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.RemoveBloonModifiers, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+              },
+              {
                 "$type": "Assets.Scripts.Models.GenericBehaviors.DisplayModel, Assembly-CSharp",
                 "display": {
                   "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
@@ -1253,7 +1288,7 @@
             "ignorePierceExhaustion": true,
             "saveId": null,
             "displayModel": null,
-            "CappedPierce": 5.0,
+            "CappedPierce": 6.0,
             "name": "ProjectileModel_Projectile",
             "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Projectile, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
             "checkCollisionInterval": 0.0

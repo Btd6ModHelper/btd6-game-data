@@ -175,6 +175,7 @@
   "showBuffs": true,
   "destroyTowerOnRedistribution": false,
   "displayScale": 1.0,
+  "useAirUnitHeight": false,
   "baseId": "SpikeFactory",
   "display": {
     "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
@@ -343,6 +344,8 @@
     {
       "$type": "Assets.Scripts.Models.Towers.Behaviors.StartOfRoundRateBuffModel, Assembly-CSharp",
       "modifier": 0.25,
+      "isUnique": true,
+      "mutatorId": "StartOfRoundRateBuff",
       "Duration": 3.0,
       "mutator": {
         "$type": "Assets.Scripts.Models.Towers.Behaviors.StartOfRoundRateBuffModel+RateMutator, Assembly-CSharp",
@@ -355,7 +358,8 @@
         "saveId": null,
         "isAreaBuff": false,
         "isGeraldoBuff": false,
-        "isArtifactMutator": false
+        "isArtifactMutator": false,
+        "dontRemoveOnBloonDegrade": false
       },
       "name": "StartOfRoundRateBuffModel_",
       "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.StartOfRoundRateBuff, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
@@ -387,6 +391,11 @@
       "waterSound2": null,
       "heroSound1": null,
       "heroSound2": null,
+      "reactSound": null,
+      "reactSoundAlt": null,
+      "towerType": "",
+      "towerSkin": "",
+      "reactDelay": 0.0,
       "name": "CreateSoundOnTowerPlaceModel_SpikeFactory-104",
       "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.CreateSoundOnTowerPlace, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
     },
@@ -449,7 +458,7 @@
             "behaviors": [
               {
                 "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModel, Assembly-CSharp",
-                "damage": 2.0,
+                "damage": 3.0,
                 "maxDamage": 0.0,
                 "distributeToChildren": true,
                 "overrideDistributeBlocker": false,
@@ -458,7 +467,7 @@
                 "immuneBloonPropertiesOriginal": 17,
                 "ignoreImmunityDestroy": false,
                 "collisionPass": 0,
-                "CappedDamage": 2.0,
+                "CappedDamage": 3.0,
                 "name": "DamageModel_Projectile_",
                 "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Damage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
               },

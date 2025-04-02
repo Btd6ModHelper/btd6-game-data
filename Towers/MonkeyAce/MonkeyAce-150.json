@@ -210,6 +210,7 @@
   "showBuffs": true,
   "destroyTowerOnRedistribution": false,
   "displayScale": 1.0,
+  "useAirUnitHeight": false,
   "baseId": "MonkeyAce",
   "display": {
     "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
@@ -411,6 +412,11 @@
       "waterSound2": null,
       "heroSound1": null,
       "heroSound2": null,
+      "reactSound": null,
+      "reactSoundAlt": null,
+      "towerType": "",
+      "towerSkin": "",
+      "reactDelay": 0.0,
       "name": "CreateSoundOnTowerPlaceModel_MonkeyAce-150",
       "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.CreateSoundOnTowerPlace, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
     },
@@ -785,7 +791,7 @@
                     },
                     {
                       "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModel, Assembly-CSharp",
-                      "damage": 30.0,
+                      "damage": 25.0,
                       "maxDamage": 0.0,
                       "distributeToChildren": true,
                       "overrideDistributeBlocker": false,
@@ -794,7 +800,7 @@
                       "immuneBloonPropertiesOriginal": 0,
                       "ignoreImmunityDestroy": false,
                       "collisionPass": 0,
-                      "CappedDamage": 30.0,
+                      "CappedDamage": 25.0,
                       "name": "DamageModel_Explosion_",
                       "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Damage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
                     },
@@ -850,6 +856,7 @@
                         "name": "SoundModel_Explosion05",
                         "ImplementationType": null
                       },
+                      "limiter": 0,
                       "collisionPass": 0,
                       "name": "CreateSoundOnProjectileExpireModel_Explosion",
                       "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.CreateSoundOnProjectileExpire, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
@@ -1291,7 +1298,8 @@
                                 "saveId": null,
                                 "isAreaBuff": false,
                                 "isGeraldoBuff": false,
-                                "isArtifactMutator": false
+                                "isArtifactMutator": false,
+                                "dontRemoveOnBloonDegrade": false
                               },
                               "name": "SlowModel_",
                               "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Slow, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
@@ -1347,6 +1355,7 @@
                           "ImplementationType": "Assets.Scripts.Simulation.Towers.Emissions.SingleEmission, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
                         },
                         "useRotation": false,
+                        "useTargetPosition": false,
                         "collisionPass": 0,
                         "name": "CreateProjectileOnExpireModel_",
                         "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.CreateProjectileOnExpire, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
@@ -1482,7 +1491,8 @@
             "saveId": null,
             "isAreaBuff": false,
             "isGeraldoBuff": false,
-            "isArtifactMutator": false
+            "isArtifactMutator": false,
+            "dontRemoveOnBloonDegrade": false
           },
           "name": "GroundZeroBombBuffModel_",
           "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.Abilities.Behaviors.GroundZeroBombBuff, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",

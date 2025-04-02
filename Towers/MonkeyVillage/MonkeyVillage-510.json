@@ -183,6 +183,7 @@
   "showBuffs": true,
   "destroyTowerOnRedistribution": false,
   "displayScale": 1.0,
+  "useAirUnitHeight": false,
   "baseId": "MonkeyVillage",
   "display": {
     "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
@@ -216,6 +217,11 @@
       "waterSound2": null,
       "heroSound1": null,
       "heroSound2": null,
+      "reactSound": null,
+      "reactSoundAlt": null,
+      "towerType": "",
+      "towerSkin": "",
+      "reactDelay": 0.0,
       "name": "CreateSoundOnTowerPlaceModel_MonkeyVillage-510",
       "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.CreateSoundOnTowerPlace, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
     },
@@ -639,7 +645,7 @@
             "AssetGUID": "7e8469481a35e1a4eb77b60bb7425f14",
             "guidRef": "7e8469481a35e1a4eb77b60bb7425f14"
           },
-          "layer": 0,
+          "layer": -1,
           "positionOffset": {
             "$type": "Assets.Scripts.Simulation.SMath.Vector3, Assembly-CSharp",
             "x": 0.0,
@@ -756,7 +762,8 @@
         "saveId": null,
         "isAreaBuff": false,
         "isGeraldoBuff": false,
-        "isArtifactMutator": false
+        "isArtifactMutator": false,
+        "dontRemoveOnBloonDegrade": false
       },
       "name": "AddBehaviorToBloonInZoneModel_",
       "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.AddBehaviorToBloonInZone, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
@@ -880,7 +887,7 @@
     {
       "$type": "Assets.Scripts.Models.Towers.Behaviors.AbilityCooldownScaleSupportModel, Assembly-CSharp",
       "isUnique": true,
-      "abilityCooldownSpeedScale": 1.2,
+      "abilityCooldownSpeedScale": 1.25,
       "affectsOnlyWater": false,
       "mutatorPriority": 1,
       "filters": [

@@ -18,8 +18,8 @@
   },
   "icon3D": {
     "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-    "AssetGUID": null,
-    "guidRef": null
+    "AssetGUID": "ae7494e44f265654aae6cfb26362c976",
+    "guidRef": "ae7494e44f265654aae6cfb26362c976"
   },
   "portrait": {
     "$type": "NinjaKiwi.Common.ResourceUtils.SpriteReference, NinjaKiwi.Common",
@@ -230,6 +230,7 @@
   "showBuffs": true,
   "destroyTowerOnRedistribution": false,
   "displayScale": 1.0,
+  "useAirUnitHeight": false,
   "baseId": "Psi",
   "display": {
     "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
@@ -587,6 +588,11 @@
         "name": "SoundModel_PlacePsi02",
         "ImplementationType": null
       },
+      "reactSound": null,
+      "reactSoundAlt": null,
+      "towerType": null,
+      "towerSkin": null,
+      "reactDelay": 0.0,
       "name": "CreateSoundOnTowerPlaceModel_Psi 20",
       "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.CreateSoundOnTowerPlace, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
     },
@@ -1057,14 +1063,35 @@
                     {
                       "$type": "Assets.Scripts.Models.Towers.Filters.FilterWithTagsModel, Assembly-CSharp",
                       "tags": [
-                        "Golden",
                         "Moabs",
+                        "Golden",
                         "Bad",
                         "Boss"
                       ],
                       "inclusive": true,
                       "name": "FilterWithTagsModel_",
                       "ImplementationType": "Assets.Scripts.Simulation.Towers.Filters.FilterWithTags, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+                    },
+                    {
+                      "$type": "Assets.Scripts.Models.Towers.Filters.FilterBloonIfDamageTypeModel, Assembly-CSharp",
+                      "ifCantHitBloonProperties": 0,
+                      "damageModel": {
+                        "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModel, Assembly-CSharp",
+                        "damage": 0.0,
+                        "maxDamage": 0.0,
+                        "distributeToChildren": true,
+                        "overrideDistributeBlocker": false,
+                        "createPopEffect": false,
+                        "immuneBloonProperties": 0,
+                        "immuneBloonPropertiesOriginal": 0,
+                        "ignoreImmunityDestroy": false,
+                        "collisionPass": 0,
+                        "CappedDamage": 0.0,
+                        "name": "DamageModel_BaseProjectileSplash_",
+                        "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Damage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+                      },
+                      "name": "FilterBloonIfDamageTypeModel_",
+                      "ImplementationType": "Assets.Scripts.Simulation.Towers.Filters.FilterBloonIfDamageType, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
                     }
                   ],
                   "behaviors": [
@@ -1074,14 +1101,35 @@
                         {
                           "$type": "Assets.Scripts.Models.Towers.Filters.FilterWithTagsModel, Assembly-CSharp",
                           "tags": [
-                            "Golden",
                             "Moabs",
+                            "Golden",
                             "Bad",
                             "Boss"
                           ],
                           "inclusive": true,
                           "name": "FilterWithTagsModel_",
                           "ImplementationType": "Assets.Scripts.Simulation.Towers.Filters.FilterWithTags, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+                        },
+                        {
+                          "$type": "Assets.Scripts.Models.Towers.Filters.FilterBloonIfDamageTypeModel, Assembly-CSharp",
+                          "ifCantHitBloonProperties": 0,
+                          "damageModel": {
+                            "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModel, Assembly-CSharp",
+                            "damage": 0.0,
+                            "maxDamage": 0.0,
+                            "distributeToChildren": true,
+                            "overrideDistributeBlocker": false,
+                            "createPopEffect": false,
+                            "immuneBloonProperties": 0,
+                            "immuneBloonPropertiesOriginal": 0,
+                            "ignoreImmunityDestroy": false,
+                            "collisionPass": 0,
+                            "CappedDamage": 0.0,
+                            "name": "DamageModel_BaseProjectileSplash_",
+                            "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Damage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+                          },
+                          "name": "FilterBloonIfDamageTypeModel_",
+                          "ImplementationType": "Assets.Scripts.Simulation.Towers.Filters.FilterBloonIfDamageType, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
                         }
                       ],
                       "collisionPass": 0,
@@ -1410,6 +1458,21 @@
                       "maxDuration": 15.0
                     },
                     {
+                      "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModel, Assembly-CSharp",
+                      "damage": 0.0,
+                      "maxDamage": 0.0,
+                      "distributeToChildren": true,
+                      "overrideDistributeBlocker": false,
+                      "createPopEffect": false,
+                      "immuneBloonProperties": 0,
+                      "immuneBloonPropertiesOriginal": 0,
+                      "ignoreImmunityDestroy": false,
+                      "collisionPass": 0,
+                      "CappedDamage": 0.0,
+                      "name": "DamageModel_BaseProjectileSplash_",
+                      "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Damage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+                    },
+                    {
                       "$type": "Assets.Scripts.Models.GenericBehaviors.DisplayModel, Assembly-CSharp",
                       "display": {
                         "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
@@ -1463,6 +1526,21 @@
                 "collisionPass": 0,
                 "name": "CreateProjectileOnContactModel_",
                 "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.CreateProjectileOnContact, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+              },
+              {
+                "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModel, Assembly-CSharp",
+                "damage": 0.0,
+                "maxDamage": 0.0,
+                "distributeToChildren": true,
+                "overrideDistributeBlocker": false,
+                "createPopEffect": false,
+                "immuneBloonProperties": 0,
+                "immuneBloonPropertiesOriginal": 0,
+                "ignoreImmunityDestroy": false,
+                "collisionPass": 0,
+                "CappedDamage": 0.0,
+                "name": "DamageModel_BaseProjectile_",
+                "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Damage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
               },
               {
                 "$type": "Assets.Scripts.Models.GenericBehaviors.DisplayModel, Assembly-CSharp",
@@ -1617,6 +1695,27 @@
               "inclusive": true,
               "name": "FilterWithTagsModel_",
               "ImplementationType": "Assets.Scripts.Simulation.Towers.Filters.FilterWithTags, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+            },
+            {
+              "$type": "Assets.Scripts.Models.Towers.Filters.FilterBloonIfDamageTypeModel, Assembly-CSharp",
+              "ifCantHitBloonProperties": 0,
+              "damageModel": {
+                "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModel, Assembly-CSharp",
+                "damage": 0.0,
+                "maxDamage": 0.0,
+                "distributeToChildren": true,
+                "overrideDistributeBlocker": false,
+                "createPopEffect": false,
+                "immuneBloonProperties": 0,
+                "immuneBloonPropertiesOriginal": 0,
+                "ignoreImmunityDestroy": false,
+                "collisionPass": 0,
+                "CappedDamage": 0.0,
+                "name": "DamageModel_BaseProjectile_",
+                "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Damage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+              },
+              "name": "FilterBloonIfDamageTypeModel_",
+              "ImplementationType": "Assets.Scripts.Simulation.Towers.Filters.FilterBloonIfDamageType, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
             }
           ],
           "name": "AttackFilterModel_",
@@ -1629,7 +1728,7 @@
             "AssetGUID": "f15563c12e665644ca054a9ec92f51b7",
             "guidRef": "f15563c12e665644ca054a9ec92f51b7"
           },
-          "layer": 0,
+          "layer": -1,
           "positionOffset": {
             "$type": "Assets.Scripts.Simulation.SMath.Vector3, Assembly-CSharp",
             "x": 0.0,
@@ -2062,14 +2161,35 @@
                     {
                       "$type": "Assets.Scripts.Models.Towers.Filters.FilterWithTagsModel, Assembly-CSharp",
                       "tags": [
-                        "Golden",
                         "Moabs",
+                        "Golden",
                         "Bad",
                         "Boss"
                       ],
                       "inclusive": true,
                       "name": "FilterWithTagsModel_",
                       "ImplementationType": "Assets.Scripts.Simulation.Towers.Filters.FilterWithTags, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+                    },
+                    {
+                      "$type": "Assets.Scripts.Models.Towers.Filters.FilterBloonIfDamageTypeModel, Assembly-CSharp",
+                      "ifCantHitBloonProperties": 0,
+                      "damageModel": {
+                        "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModel, Assembly-CSharp",
+                        "damage": 0.0,
+                        "maxDamage": 0.0,
+                        "distributeToChildren": true,
+                        "overrideDistributeBlocker": false,
+                        "createPopEffect": false,
+                        "immuneBloonProperties": 0,
+                        "immuneBloonPropertiesOriginal": 0,
+                        "ignoreImmunityDestroy": false,
+                        "collisionPass": 0,
+                        "CappedDamage": 0.0,
+                        "name": "DamageModel_BaseProjectileSplash_",
+                        "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Damage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+                      },
+                      "name": "FilterBloonIfDamageTypeModel_",
+                      "ImplementationType": "Assets.Scripts.Simulation.Towers.Filters.FilterBloonIfDamageType, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
                     }
                   ],
                   "behaviors": [
@@ -2079,14 +2199,35 @@
                         {
                           "$type": "Assets.Scripts.Models.Towers.Filters.FilterWithTagsModel, Assembly-CSharp",
                           "tags": [
-                            "Golden",
                             "Moabs",
+                            "Golden",
                             "Bad",
                             "Boss"
                           ],
                           "inclusive": true,
                           "name": "FilterWithTagsModel_",
                           "ImplementationType": "Assets.Scripts.Simulation.Towers.Filters.FilterWithTags, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+                        },
+                        {
+                          "$type": "Assets.Scripts.Models.Towers.Filters.FilterBloonIfDamageTypeModel, Assembly-CSharp",
+                          "ifCantHitBloonProperties": 0,
+                          "damageModel": {
+                            "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModel, Assembly-CSharp",
+                            "damage": 0.0,
+                            "maxDamage": 0.0,
+                            "distributeToChildren": true,
+                            "overrideDistributeBlocker": false,
+                            "createPopEffect": false,
+                            "immuneBloonProperties": 0,
+                            "immuneBloonPropertiesOriginal": 0,
+                            "ignoreImmunityDestroy": false,
+                            "collisionPass": 0,
+                            "CappedDamage": 0.0,
+                            "name": "DamageModel_BaseProjectileSplash_",
+                            "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Damage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+                          },
+                          "name": "FilterBloonIfDamageTypeModel_",
+                          "ImplementationType": "Assets.Scripts.Simulation.Towers.Filters.FilterBloonIfDamageType, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
                         }
                       ],
                       "collisionPass": 0,
@@ -2415,6 +2556,21 @@
                       "maxDuration": 15.0
                     },
                     {
+                      "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModel, Assembly-CSharp",
+                      "damage": 0.0,
+                      "maxDamage": 0.0,
+                      "distributeToChildren": true,
+                      "overrideDistributeBlocker": false,
+                      "createPopEffect": false,
+                      "immuneBloonProperties": 0,
+                      "immuneBloonPropertiesOriginal": 0,
+                      "ignoreImmunityDestroy": false,
+                      "collisionPass": 0,
+                      "CappedDamage": 0.0,
+                      "name": "DamageModel_BaseProjectileSplash_",
+                      "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Damage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+                    },
+                    {
                       "$type": "Assets.Scripts.Models.GenericBehaviors.DisplayModel, Assembly-CSharp",
                       "display": {
                         "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
@@ -2468,6 +2624,21 @@
                 "collisionPass": 0,
                 "name": "CreateProjectileOnContactModel_",
                 "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.CreateProjectileOnContact, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+              },
+              {
+                "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModel, Assembly-CSharp",
+                "damage": 0.0,
+                "maxDamage": 0.0,
+                "distributeToChildren": true,
+                "overrideDistributeBlocker": false,
+                "createPopEffect": false,
+                "immuneBloonProperties": 0,
+                "immuneBloonPropertiesOriginal": 0,
+                "ignoreImmunityDestroy": false,
+                "collisionPass": 0,
+                "CappedDamage": 0.0,
+                "name": "DamageModel_BaseProjectile_",
+                "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Damage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
               },
               {
                 "$type": "Assets.Scripts.Models.GenericBehaviors.DisplayModel, Assembly-CSharp",
@@ -2594,6 +2765,27 @@
               "inclusive": true,
               "name": "FilterWithTagsModel_",
               "ImplementationType": "Assets.Scripts.Simulation.Towers.Filters.FilterWithTags, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+            },
+            {
+              "$type": "Assets.Scripts.Models.Towers.Filters.FilterBloonIfDamageTypeModel, Assembly-CSharp",
+              "ifCantHitBloonProperties": 0,
+              "damageModel": {
+                "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModel, Assembly-CSharp",
+                "damage": 0.0,
+                "maxDamage": 0.0,
+                "distributeToChildren": true,
+                "overrideDistributeBlocker": false,
+                "createPopEffect": false,
+                "immuneBloonProperties": 0,
+                "immuneBloonPropertiesOriginal": 0,
+                "ignoreImmunityDestroy": false,
+                "collisionPass": 0,
+                "CappedDamage": 0.0,
+                "name": "DamageModel_BaseProjectile_",
+                "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Damage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+              },
+              "name": "FilterBloonIfDamageTypeModel_",
+              "ImplementationType": "Assets.Scripts.Simulation.Towers.Filters.FilterBloonIfDamageType, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
             }
           ],
           "name": "AttackFilterModel_",
@@ -3031,14 +3223,35 @@
                     {
                       "$type": "Assets.Scripts.Models.Towers.Filters.FilterWithTagsModel, Assembly-CSharp",
                       "tags": [
-                        "Golden",
                         "Moabs",
+                        "Golden",
                         "Bad",
                         "Boss"
                       ],
                       "inclusive": true,
                       "name": "FilterWithTagsModel_",
                       "ImplementationType": "Assets.Scripts.Simulation.Towers.Filters.FilterWithTags, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+                    },
+                    {
+                      "$type": "Assets.Scripts.Models.Towers.Filters.FilterBloonIfDamageTypeModel, Assembly-CSharp",
+                      "ifCantHitBloonProperties": 0,
+                      "damageModel": {
+                        "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModel, Assembly-CSharp",
+                        "damage": 0.0,
+                        "maxDamage": 0.0,
+                        "distributeToChildren": true,
+                        "overrideDistributeBlocker": false,
+                        "createPopEffect": false,
+                        "immuneBloonProperties": 0,
+                        "immuneBloonPropertiesOriginal": 0,
+                        "ignoreImmunityDestroy": false,
+                        "collisionPass": 0,
+                        "CappedDamage": 0.0,
+                        "name": "DamageModel_BaseProjectileSplash_",
+                        "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Damage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+                      },
+                      "name": "FilterBloonIfDamageTypeModel_",
+                      "ImplementationType": "Assets.Scripts.Simulation.Towers.Filters.FilterBloonIfDamageType, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
                     }
                   ],
                   "behaviors": [
@@ -3048,14 +3261,35 @@
                         {
                           "$type": "Assets.Scripts.Models.Towers.Filters.FilterWithTagsModel, Assembly-CSharp",
                           "tags": [
-                            "Golden",
                             "Moabs",
+                            "Golden",
                             "Bad",
                             "Boss"
                           ],
                           "inclusive": true,
                           "name": "FilterWithTagsModel_",
                           "ImplementationType": "Assets.Scripts.Simulation.Towers.Filters.FilterWithTags, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+                        },
+                        {
+                          "$type": "Assets.Scripts.Models.Towers.Filters.FilterBloonIfDamageTypeModel, Assembly-CSharp",
+                          "ifCantHitBloonProperties": 0,
+                          "damageModel": {
+                            "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModel, Assembly-CSharp",
+                            "damage": 0.0,
+                            "maxDamage": 0.0,
+                            "distributeToChildren": true,
+                            "overrideDistributeBlocker": false,
+                            "createPopEffect": false,
+                            "immuneBloonProperties": 0,
+                            "immuneBloonPropertiesOriginal": 0,
+                            "ignoreImmunityDestroy": false,
+                            "collisionPass": 0,
+                            "CappedDamage": 0.0,
+                            "name": "DamageModel_BaseProjectileSplash_",
+                            "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Damage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+                          },
+                          "name": "FilterBloonIfDamageTypeModel_",
+                          "ImplementationType": "Assets.Scripts.Simulation.Towers.Filters.FilterBloonIfDamageType, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
                         }
                       ],
                       "collisionPass": 0,
@@ -3384,6 +3618,21 @@
                       "maxDuration": 15.0
                     },
                     {
+                      "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModel, Assembly-CSharp",
+                      "damage": 0.0,
+                      "maxDamage": 0.0,
+                      "distributeToChildren": true,
+                      "overrideDistributeBlocker": false,
+                      "createPopEffect": false,
+                      "immuneBloonProperties": 0,
+                      "immuneBloonPropertiesOriginal": 0,
+                      "ignoreImmunityDestroy": false,
+                      "collisionPass": 0,
+                      "CappedDamage": 0.0,
+                      "name": "DamageModel_BaseProjectileSplash_",
+                      "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Damage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+                    },
+                    {
                       "$type": "Assets.Scripts.Models.GenericBehaviors.DisplayModel, Assembly-CSharp",
                       "display": {
                         "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
@@ -3437,6 +3686,21 @@
                 "collisionPass": 0,
                 "name": "CreateProjectileOnContactModel_",
                 "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.CreateProjectileOnContact, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+              },
+              {
+                "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModel, Assembly-CSharp",
+                "damage": 0.0,
+                "maxDamage": 0.0,
+                "distributeToChildren": true,
+                "overrideDistributeBlocker": false,
+                "createPopEffect": false,
+                "immuneBloonProperties": 0,
+                "immuneBloonPropertiesOriginal": 0,
+                "ignoreImmunityDestroy": false,
+                "collisionPass": 0,
+                "CappedDamage": 0.0,
+                "name": "DamageModel_BaseProjectile_",
+                "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Damage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
               },
               {
                 "$type": "Assets.Scripts.Models.GenericBehaviors.DisplayModel, Assembly-CSharp",
@@ -3563,6 +3827,27 @@
               "inclusive": true,
               "name": "FilterWithTagsModel_",
               "ImplementationType": "Assets.Scripts.Simulation.Towers.Filters.FilterWithTags, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+            },
+            {
+              "$type": "Assets.Scripts.Models.Towers.Filters.FilterBloonIfDamageTypeModel, Assembly-CSharp",
+              "ifCantHitBloonProperties": 0,
+              "damageModel": {
+                "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModel, Assembly-CSharp",
+                "damage": 0.0,
+                "maxDamage": 0.0,
+                "distributeToChildren": true,
+                "overrideDistributeBlocker": false,
+                "createPopEffect": false,
+                "immuneBloonProperties": 0,
+                "immuneBloonPropertiesOriginal": 0,
+                "ignoreImmunityDestroy": false,
+                "collisionPass": 0,
+                "CappedDamage": 0.0,
+                "name": "DamageModel_BaseProjectile_",
+                "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Damage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+              },
+              "name": "FilterBloonIfDamageTypeModel_",
+              "ImplementationType": "Assets.Scripts.Simulation.Towers.Filters.FilterBloonIfDamageType, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
             }
           ],
           "name": "AttackFilterModel_",
@@ -3706,7 +3991,8 @@
                           "saveId": null,
                           "isAreaBuff": false,
                           "isGeraldoBuff": false,
-                          "isArtifactMutator": false
+                          "isArtifactMutator": false,
+                          "dontRemoveOnBloonDegrade": false
                         },
                         "name": "SlowModel_",
                         "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Slow, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",

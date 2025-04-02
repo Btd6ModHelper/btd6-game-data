@@ -1,6 +1,6 @@
 {
   "$type": "Assets.Scripts.Models.Towers.TowerModel, Assembly-CSharp",
-  "cost": 1025.0,
+  "cost": 1325.0,
   "range": 58.0,
   "ignoreBlockers": true,
   "isGlobalRange": false,
@@ -244,6 +244,7 @@
   "showBuffs": true,
   "destroyTowerOnRedistribution": false,
   "displayScale": 1.0,
+  "useAirUnitHeight": false,
   "baseId": "Corvus",
   "display": {
     "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
@@ -601,6 +602,11 @@
         "name": "SoundModel_PlaceCorvus02",
         "ImplementationType": null
       },
+      "reactSound": null,
+      "reactSoundAlt": null,
+      "towerType": "",
+      "towerSkin": "",
+      "reactDelay": 0.0,
       "name": "CreateSoundOnTowerPlaceModel_Corvus 19",
       "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.CreateSoundOnTowerPlace, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
     },
@@ -1709,6 +1715,7 @@
         "showBuffs": true,
         "destroyTowerOnRedistribution": false,
         "displayScale": 1.0,
+        "useAirUnitHeight": false,
         "baseId": "Spirit-Tower",
         "display": {
           "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
@@ -1815,7 +1822,7 @@
                   },
                   "id": "MainProjectile",
                   "maxPierce": 0.0,
-                  "pierce": 8.0,
+                  "pierce": 6.0,
                   "scale": 1.0,
                   "ignoreBlockers": true,
                   "usePointCollisionWithBloons": false,
@@ -1963,7 +1970,7 @@
                   "ignorePierceExhaustion": true,
                   "saveId": null,
                   "displayModel": null,
-                  "CappedPierce": 8.0,
+                  "CappedPierce": 6.0,
                   "name": "ProjectileModel_MainProjectile",
                   "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Projectile, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
                   "checkCollisionInterval": 0.0
@@ -1992,7 +1999,7 @@
                       },
                       "id": "MainProjectile",
                       "maxPierce": 0.0,
-                      "pierce": 8.0,
+                      "pierce": 6.0,
                       "scale": 1.0,
                       "ignoreBlockers": true,
                       "usePointCollisionWithBloons": false,
@@ -2140,7 +2147,7 @@
                       "ignorePierceExhaustion": true,
                       "saveId": null,
                       "displayModel": null,
-                      "CappedPierce": 8.0,
+                      "CappedPierce": 6.0,
                       "name": "ProjectileModel_MainProjectile",
                       "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Projectile, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
                       "checkCollisionInterval": 0.0
@@ -3661,7 +3668,8 @@
               "saveId": null,
               "isAreaBuff": false,
               "isGeraldoBuff": false,
-              "isArtifactMutator": false
+              "isArtifactMutator": false,
+              "dontRemoveOnBloonDegrade": false
             },
             "name": "FreezeModel_Ice",
             "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Freeze, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
@@ -3770,7 +3778,8 @@
               "saveId": null,
               "isAreaBuff": false,
               "isGeraldoBuff": false,
-              "isArtifactMutator": false
+              "isArtifactMutator": false,
+              "dontRemoveOnBloonDegrade": false
             },
             "name": "SlowModel_Permafrost",
             "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Slow, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
@@ -3857,7 +3866,7 @@
         "name": "SingleEmissionModel_CorvusEmission_Frostbound",
         "ImplementationType": "Assets.Scripts.Simulation.Towers.Emissions.SingleEmission, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
       },
-      "duration": 10.0,
+      "duration": 8.0,
       "cooldown": 50.0,
       "initialManaCost": 190,
       "placingPrefabReference": {
@@ -4518,7 +4527,7 @@
               "AssetGUID": "5714397a3c93aeb4c8dca56bd91c333c",
               "guidRef": "5714397a3c93aeb4c8dca56bd91c333c"
             },
-            "layer": 0,
+            "layer": -1,
             "positionOffset": {
               "$type": "Assets.Scripts.Simulation.SMath.Vector3, Assembly-CSharp",
               "x": 0.0,
@@ -4931,7 +4940,7 @@
               "AssetGUID": "8ac92500d8b691449bc8d4613808e69d",
               "guidRef": "8ac92500d8b691449bc8d4613808e69d"
             },
-            "layer": 0,
+            "layer": -1,
             "positionOffset": {
               "$type": "Assets.Scripts.Simulation.SMath.Vector3, Assembly-CSharp",
               "x": 0.0,
@@ -5442,6 +5451,7 @@
             "fullscreen": 0,
             "randomRotation": false,
             "effectModel": null,
+            "useTargetPosition": false,
             "collisionPass": 0,
             "name": "CreateEffectOnExpireModel_",
             "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.CreateEffectOnExpire, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
@@ -5798,6 +5808,7 @@
         "showBuffs": true,
         "destroyTowerOnRedistribution": false,
         "displayScale": 1.0,
+        "useAirUnitHeight": false,
         "baseId": "Spirit-Tower",
         "display": {
           "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
@@ -5904,7 +5915,7 @@
                   },
                   "id": "MainProjectile",
                   "maxPierce": 0.0,
-                  "pierce": 8.0,
+                  "pierce": 6.0,
                   "scale": 1.0,
                   "ignoreBlockers": true,
                   "usePointCollisionWithBloons": false,
@@ -6052,7 +6063,7 @@
                   "ignorePierceExhaustion": true,
                   "saveId": null,
                   "displayModel": null,
-                  "CappedPierce": 8.0,
+                  "CappedPierce": 6.0,
                   "name": "ProjectileModel_MainProjectile",
                   "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Projectile, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
                   "checkCollisionInterval": 0.0
@@ -6081,7 +6092,7 @@
                       },
                       "id": "MainProjectile",
                       "maxPierce": 0.0,
-                      "pierce": 8.0,
+                      "pierce": 6.0,
                       "scale": 1.0,
                       "ignoreBlockers": true,
                       "usePointCollisionWithBloons": false,
@@ -6229,7 +6240,7 @@
                       "ignorePierceExhaustion": true,
                       "saveId": null,
                       "displayModel": null,
-                      "CappedPierce": 8.0,
+                      "CappedPierce": 6.0,
                       "name": "ProjectileModel_MainProjectile",
                       "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Projectile, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
                       "checkCollisionInterval": 0.0
@@ -8647,7 +8658,7 @@
             "AssetGUID": "8ac92500d8b691449bc8d4613808e69d",
             "guidRef": "8ac92500d8b691449bc8d4613808e69d"
           },
-          "layer": 0,
+          "layer": -1,
           "positionOffset": {
             "$type": "Assets.Scripts.Simulation.SMath.Vector3, Assembly-CSharp",
             "x": 0.0,
@@ -9310,7 +9321,7 @@
             "AssetGUID": "5714397a3c93aeb4c8dca56bd91c333c",
             "guidRef": "5714397a3c93aeb4c8dca56bd91c333c"
           },
-          "layer": 0,
+          "layer": -1,
           "positionOffset": {
             "$type": "Assets.Scripts.Simulation.SMath.Vector3, Assembly-CSharp",
             "x": 0.0,

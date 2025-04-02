@@ -154,6 +154,7 @@
     "showBuffs": true,
     "destroyTowerOnRedistribution": false,
     "displayScale": 1.0,
+    "useAirUnitHeight": false,
     "baseId": "BattleCat",
     "display": {
       "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
@@ -242,6 +243,29 @@
         "waterSound2": null,
         "heroSound1": null,
         "heroSound2": null,
+        "reactSound": {
+          "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
+          "assetId": {
+            "$type": "NinjaKiwi.Common.ResourceUtils.AudioClipReference, NinjaKiwi.Common",
+            "AssetGUID": "ba76f1b40f5271f45860d7a28721e236",
+            "guidRef": "ba76f1b40f5271f45860d7a28721e236"
+          },
+          "name": "SoundModel_PlaceBattleCatSheRa",
+          "ImplementationType": null
+        },
+        "reactSoundAlt": {
+          "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
+          "assetId": {
+            "$type": "NinjaKiwi.Common.ResourceUtils.AudioClipReference, NinjaKiwi.Common",
+            "AssetGUID": "35e770acc1109b84c934609ebdcb96a7",
+            "guidRef": "35e770acc1109b84c934609ebdcb96a7"
+          },
+          "name": "SoundModel_PlaceBattleCatDarkSheRa",
+          "ImplementationType": null
+        },
+        "towerType": "Adora",
+        "towerSkin": "AdoraSheRa",
+        "reactDelay": 1.0,
         "name": "CreateSoundOnTowerPlaceModel_BattleCat",
         "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.CreateSoundOnTowerPlace, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
       },
@@ -863,7 +887,8 @@
                                   "saveId": null,
                                   "isAreaBuff": false,
                                   "isGeraldoBuff": false,
-                                  "isArtifactMutator": false
+                                  "isArtifactMutator": false,
+                                  "dontRemoveOnBloonDegrade": false
                                 },
                                 "name": "KnockbackModel_",
                                 "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Knockback, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
@@ -922,7 +947,7 @@
                                 "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.RemoveDamageTypeModifierModel, Assembly-CSharp",
                                 "layers": 9999999,
                                 "mutationId": "EmbrilttlementDamageBoostSharp",
-                                "removeAll": true,
+                                "removeAll": false,
                                 "bloonPropertiesToRemove": 0,
                                 "collisionPass": 0,
                                 "mutator": {
@@ -936,7 +961,8 @@
                                   "saveId": null,
                                   "isAreaBuff": false,
                                   "isGeraldoBuff": false,
-                                  "isArtifactMutator": false
+                                  "isArtifactMutator": false,
+                                  "dontRemoveOnBloonDegrade": false
                                 },
                                 "name": "RemoveDamageTypeModifierModel_EmbrilttlementDamageBoostSharp",
                                 "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.RemoveDamageTypeModifier, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
@@ -981,7 +1007,8 @@
                                   "saveId": null,
                                   "isAreaBuff": false,
                                   "isGeraldoBuff": false,
-                                  "isArtifactMutator": false
+                                  "isArtifactMutator": false,
+                                  "dontRemoveOnBloonDegrade": false
                                 },
                                 "name": "SlowModel_",
                                 "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Slow, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
@@ -1456,6 +1483,7 @@
   "storeNavigateToId": "btd6_battlecatboosterpack",
   "canBePurchasedWithMM": false,
   "orderPriority": 1,
+  "alwaysPlaceAtScreenCentre": false,
   "name": "BattleCat",
   "ImplementationType": "Assets.Scripts.Simulation.Powers.Power, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
 }

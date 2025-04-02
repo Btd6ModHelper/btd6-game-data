@@ -182,6 +182,7 @@
   "showBuffs": true,
   "destroyTowerOnRedistribution": false,
   "displayScale": 1.0,
+  "useAirUnitHeight": false,
   "baseId": "Mermonkey",
   "display": {
     "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
@@ -204,7 +205,8 @@
         "saveId": null,
         "isAreaBuff": false,
         "isGeraldoBuff": false,
-        "isArtifactMutator": false
+        "isArtifactMutator": false,
+        "dontRemoveOnBloonDegrade": false
       },
       "name": "PlacementAreaTypeRangeBuffModel_",
       "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.PlacementBehaviors.PlacementAreaTypeRangeBuff, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
@@ -443,6 +445,11 @@
       },
       "heroSound1": null,
       "heroSound2": null,
+      "reactSound": null,
+      "reactSoundAlt": null,
+      "towerType": "",
+      "towerSkin": "",
+      "reactDelay": 0.0,
       "name": "CreateSoundOnTowerPlaceModel_Mermonkey-040",
       "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.CreateSoundOnTowerPlace, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
     },
@@ -482,6 +489,13 @@
                 "ignoreBroadPhase": false,
                 "name": "FilterInvisibleModel_",
                 "ImplementationType": "Assets.Scripts.Simulation.Towers.Filters.FilterInvisible, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+              },
+              {
+                "$type": "Assets.Scripts.Models.Towers.Filters.FilterBloonIfDamageTypeModel, Assembly-CSharp",
+                "ifCantHitBloonProperties": 4,
+                "damageModel": null,
+                "name": "FilterBloonIfDamageTypeModel_WhiteFilter",
+                "ImplementationType": "Assets.Scripts.Simulation.Towers.Filters.FilterBloonIfDamageType, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
               }
             ],
             "behaviors": [
@@ -519,6 +533,13 @@
                     "ignoreBroadPhase": false,
                     "name": "FilterInvisibleModel_",
                     "ImplementationType": "Assets.Scripts.Simulation.Towers.Filters.FilterInvisible, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+                  },
+                  {
+                    "$type": "Assets.Scripts.Models.Towers.Filters.FilterBloonIfDamageTypeModel, Assembly-CSharp",
+                    "ifCantHitBloonProperties": 4,
+                    "damageModel": null,
+                    "name": "FilterBloonIfDamageTypeModel_WhiteFilter",
+                    "ImplementationType": "Assets.Scripts.Simulation.Towers.Filters.FilterBloonIfDamageType, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
                   }
                 ],
                 "collisionPass": 0,
@@ -579,6 +600,13 @@
                       "ignoreBroadPhase": false,
                       "name": "FilterInvisibleModel_",
                       "ImplementationType": "Assets.Scripts.Simulation.Towers.Filters.FilterInvisible, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+                    },
+                    {
+                      "$type": "Assets.Scripts.Models.Towers.Filters.FilterBloonIfDamageTypeModel, Assembly-CSharp",
+                      "ifCantHitBloonProperties": 4,
+                      "damageModel": null,
+                      "name": "FilterBloonIfDamageTypeModel_WhiteFilter",
+                      "ImplementationType": "Assets.Scripts.Simulation.Towers.Filters.FilterBloonIfDamageType, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
                     }
                   ],
                   "behaviors": [
@@ -616,6 +644,13 @@
                           "ignoreBroadPhase": false,
                           "name": "FilterInvisibleModel_",
                           "ImplementationType": "Assets.Scripts.Simulation.Towers.Filters.FilterInvisible, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+                        },
+                        {
+                          "$type": "Assets.Scripts.Models.Towers.Filters.FilterBloonIfDamageTypeModel, Assembly-CSharp",
+                          "ifCantHitBloonProperties": 4,
+                          "damageModel": null,
+                          "name": "FilterBloonIfDamageTypeModel_WhiteFilter",
+                          "ImplementationType": "Assets.Scripts.Simulation.Towers.Filters.FilterBloonIfDamageType, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
                         }
                       ],
                       "collisionPass": 0,
@@ -723,7 +758,7 @@
                       "applyAfterDamage": true,
                       "overlayType": "Ice",
                       "collisionPass": 1,
-                      "Lifespan": 0.3,
+                      "Lifespan": 0.8,
                       "mutator": {
                         "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.FreezeModel+Mutator, Assembly-CSharp",
                         "speed": 0.0,
@@ -759,11 +794,12 @@
                         "saveId": null,
                         "isAreaBuff": false,
                         "isGeraldoBuff": false,
-                        "isArtifactMutator": false
+                        "isArtifactMutator": false,
+                        "dontRemoveOnBloonDegrade": false
                       },
                       "name": "FreezeModel_",
                       "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Freeze, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
-                      "lifespan": 0.3
+                      "lifespan": 0.8
                     },
                     {
                       "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.AddHeatToBloonModel, Assembly-CSharp",
@@ -863,7 +899,7 @@
                 "applyAfterDamage": true,
                 "overlayType": "Ice",
                 "collisionPass": 1,
-                "Lifespan": 0.5,
+                "Lifespan": 0.8,
                 "mutator": {
                   "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.FreezeModel+Mutator, Assembly-CSharp",
                   "speed": 0.0,
@@ -899,11 +935,12 @@
                   "saveId": null,
                   "isAreaBuff": false,
                   "isGeraldoBuff": false,
-                  "isArtifactMutator": false
+                  "isArtifactMutator": false,
+                  "dontRemoveOnBloonDegrade": false
                 },
                 "name": "FreezeModel_",
                 "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Freeze, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
-                "lifespan": 0.5
+                "lifespan": 0.8
               },
               {
                 "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModifierForBloonStateModel, Assembly-CSharp",
@@ -1265,7 +1302,8 @@
                           "saveId": null,
                           "isAreaBuff": false,
                           "isGeraldoBuff": false,
-                          "isArtifactMutator": false
+                          "isArtifactMutator": false,
+                          "dontRemoveOnBloonDegrade": false
                         },
                         "name": "FreezeModel_Ice",
                         "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Freeze, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",

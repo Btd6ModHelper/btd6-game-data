@@ -170,6 +170,7 @@
   "showBuffs": true,
   "destroyTowerOnRedistribution": false,
   "displayScale": 1.0,
+  "useAirUnitHeight": false,
   "baseId": "Mermonkey",
   "display": {
     "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
@@ -192,7 +193,8 @@
         "saveId": null,
         "isAreaBuff": false,
         "isGeraldoBuff": false,
-        "isArtifactMutator": false
+        "isArtifactMutator": false,
+        "dontRemoveOnBloonDegrade": false
       },
       "name": "PlacementAreaTypeRangeBuffModel_",
       "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.PlacementBehaviors.PlacementAreaTypeRangeBuff, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
@@ -512,6 +514,7 @@
         "showBuffs": true,
         "destroyTowerOnRedistribution": false,
         "displayScale": 1.0,
+        "useAirUnitHeight": false,
         "baseId": "TranceTotem",
         "display": {
           "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
@@ -555,6 +558,11 @@
             "waterSound2": null,
             "heroSound1": null,
             "heroSound2": null,
+            "reactSound": null,
+            "reactSoundAlt": null,
+            "towerType": "",
+            "towerSkin": "",
+            "reactDelay": 0.0,
             "name": "CreateSoundOnTowerPlaceModel_TranceTotem",
             "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.CreateSoundOnTowerPlace, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
           },
@@ -583,7 +591,7 @@
               },
               "id": "Projectile",
               "maxPierce": 0.0,
-              "pierce": 5.0,
+              "pierce": 6.0,
               "scale": 1.0,
               "ignoreBlockers": true,
               "usePointCollisionWithBloons": false,
@@ -605,7 +613,8 @@
                   "$type": "Assets.Scripts.Models.Towers.Filters.FilterWithTagsModel, Assembly-CSharp",
                   "tags": [
                     "Bad",
-                    "Zomg"
+                    "Zomg",
+                    "Bfb"
                   ],
                   "inclusive": true,
                   "name": "FilterWithTagsModel_",
@@ -673,7 +682,8 @@
                       "$type": "Assets.Scripts.Models.Towers.Filters.FilterWithTagsModel, Assembly-CSharp",
                       "tags": [
                         "Bad",
-                        "Zomg"
+                        "Zomg",
+                        "Bfb"
                       ],
                       "inclusive": true,
                       "name": "FilterWithTagsModel_",
@@ -732,7 +742,8 @@
                     "saveId": null,
                     "isAreaBuff": false,
                     "isGeraldoBuff": false,
-                    "isArtifactMutator": false
+                    "isArtifactMutator": false,
+                    "dontRemoveOnBloonDegrade": false
                   },
                   "name": "TranceBloonModel_",
                   "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.TranceBloon, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
@@ -814,7 +825,7 @@
               "ignorePierceExhaustion": true,
               "saveId": null,
               "displayModel": null,
-              "CappedPierce": 5.0,
+              "CappedPierce": 6.0,
               "name": "ProjectileModel_Projectile",
               "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Projectile, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
               "checkCollisionInterval": 0.0
@@ -891,7 +902,7 @@
                   },
                   "id": "Projectile",
                   "maxPierce": 0.0,
-                  "pierce": 5.0,
+                  "pierce": 6.0,
                   "scale": 1.0,
                   "ignoreBlockers": true,
                   "usePointCollisionWithBloons": false,
@@ -913,7 +924,8 @@
                       "$type": "Assets.Scripts.Models.Towers.Filters.FilterWithTagsModel, Assembly-CSharp",
                       "tags": [
                         "Bad",
-                        "Zomg"
+                        "Zomg",
+                        "Bfb"
                       ],
                       "inclusive": true,
                       "name": "FilterWithTagsModel_",
@@ -981,7 +993,8 @@
                           "$type": "Assets.Scripts.Models.Towers.Filters.FilterWithTagsModel, Assembly-CSharp",
                           "tags": [
                             "Bad",
-                            "Zomg"
+                            "Zomg",
+                            "Bfb"
                           ],
                           "inclusive": true,
                           "name": "FilterWithTagsModel_",
@@ -1040,7 +1053,8 @@
                         "saveId": null,
                         "isAreaBuff": false,
                         "isGeraldoBuff": false,
-                        "isArtifactMutator": false
+                        "isArtifactMutator": false,
+                        "dontRemoveOnBloonDegrade": false
                       },
                       "name": "TranceBloonModel_",
                       "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.TranceBloon, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
@@ -1122,7 +1136,7 @@
                   "ignorePierceExhaustion": true,
                   "saveId": null,
                   "displayModel": null,
-                  "CappedPierce": 5.0,
+                  "CappedPierce": 6.0,
                   "name": "ProjectileModel_Projectile",
                   "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Projectile, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
                   "checkCollisionInterval": 0.0
@@ -1282,7 +1296,8 @@
                     "$type": "Assets.Scripts.Models.Towers.Filters.FilterWithTagsModel, Assembly-CSharp",
                     "tags": [
                       "Bad",
-                      "Zomg"
+                      "Zomg",
+                      "Bfb"
                     ],
                     "inclusive": true,
                     "name": "FilterWithTagsModel_",
@@ -1419,6 +1434,11 @@
       },
       "heroSound1": null,
       "heroSound2": null,
+      "reactSound": null,
+      "reactSoundAlt": null,
+      "towerType": "",
+      "towerSkin": "",
+      "reactDelay": 0.0,
       "name": "CreateSoundOnTowerPlaceModel_Mermonkey-024",
       "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.CreateSoundOnTowerPlace, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
     },
@@ -1626,7 +1646,8 @@
                         "saveId": null,
                         "isAreaBuff": false,
                         "isGeraldoBuff": false,
-                        "isArtifactMutator": false
+                        "isArtifactMutator": false,
+                        "dontRemoveOnBloonDegrade": false
                       },
                       "name": "FreezeModel_",
                       "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Freeze, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",

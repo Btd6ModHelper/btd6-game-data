@@ -154,6 +154,7 @@
   "showBuffs": true,
   "destroyTowerOnRedistribution": false,
   "displayScale": 1.0,
+  "useAirUnitHeight": false,
   "baseId": "SentryCold",
   "display": {
     "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
@@ -295,6 +296,11 @@
       "waterSound2": null,
       "heroSound1": null,
       "heroSound2": null,
+      "reactSound": null,
+      "reactSoundAlt": null,
+      "towerType": "",
+      "towerSkin": "",
+      "reactDelay": 0.0,
       "name": "CreateSoundOnTowerPlaceModel_SentryCold",
       "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.CreateSoundOnTowerPlace, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
     },
@@ -358,7 +364,7 @@
                   },
                   "id": "Explosion",
                   "maxPierce": 0.0,
-                  "pierce": 25.0,
+                  "pierce": 36.0,
                   "scale": 1.0,
                   "ignoreBlockers": true,
                   "usePointCollisionWithBloons": false,
@@ -561,7 +567,8 @@
                         "saveId": null,
                         "isAreaBuff": false,
                         "isGeraldoBuff": false,
-                        "isArtifactMutator": false
+                        "isArtifactMutator": false,
+                        "dontRemoveOnBloonDegrade": false
                       },
                       "name": "FreezeModel_",
                       "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Freeze, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
@@ -606,7 +613,8 @@
                         "saveId": null,
                         "isAreaBuff": false,
                         "isGeraldoBuff": false,
-                        "isArtifactMutator": false
+                        "isArtifactMutator": false,
+                        "dontRemoveOnBloonDegrade": false
                       },
                       "name": "SlowModel_Ice",
                       "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Slow, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
@@ -665,7 +673,7 @@
                   "ignorePierceExhaustion": false,
                   "saveId": null,
                   "displayModel": null,
-                  "CappedPierce": 25.0,
+                  "CappedPierce": 36.0,
                   "name": "ProjectileModel_Explosion",
                   "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Projectile, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
                   "checkCollisionInterval": 0.0
@@ -855,7 +863,7 @@
             "AssetGUID": "9e4bd88882a62fc4596ed8a89a085c69",
             "guidRef": "9e4bd88882a62fc4596ed8a89a085c69"
           },
-          "layer": 0,
+          "layer": -1,
           "positionOffset": {
             "$type": "Assets.Scripts.Simulation.SMath.Vector3, Assembly-CSharp",
             "x": 0.0,

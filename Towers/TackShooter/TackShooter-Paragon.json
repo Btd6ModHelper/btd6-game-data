@@ -189,6 +189,7 @@
   "showBuffs": true,
   "destroyTowerOnRedistribution": false,
   "displayScale": 1.0,
+  "useAirUnitHeight": false,
   "baseId": "TackShooter",
   "display": {
     "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
@@ -380,6 +381,11 @@
       "waterSound2": null,
       "heroSound1": null,
       "heroSound2": null,
+      "reactSound": null,
+      "reactSoundAlt": null,
+      "towerType": "",
+      "towerSkin": "",
+      "reactDelay": 0.0,
       "name": "CreateSoundOnTowerPlaceModel_TackShooter-Paragon",
       "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.CreateSoundOnTowerPlace, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
     },
@@ -1417,7 +1423,7 @@
       "fireWithoutTarget": true,
       "framesBeforeRetarget": 0,
       "addsToSharedGrid": true,
-      "sharedGridRange": 0.0,
+      "sharedGridRange": 42.32,
       "name": "AttackModel_Attack_",
       "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.Attack.Attack, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
     },
@@ -1859,6 +1865,7 @@
                         },
                         "repeat": false,
                         "isBuffedByRate": false,
+                        "useTargetPosition": false,
                         "collisionPass": 0,
                         "name": "CreateEffectProjectileAfterTimeModel_",
                         "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.CreateEffectProjectileAfterTime, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
@@ -2143,6 +2150,7 @@
                           "ImplementationType": "Assets.Scripts.Simulation.Towers.Emissions.SingleEmission, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
                         },
                         "useRotation": false,
+                        "useTargetPosition": false,
                         "collisionPass": 0,
                         "name": "CreateProjectileOnExpireModel_",
                         "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.CreateProjectileOnExpire, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
@@ -2176,6 +2184,7 @@
                           "name": "EffectModel_Expire",
                           "ImplementationType": null
                         },
+                        "useTargetPosition": false,
                         "collisionPass": 0,
                         "name": "CreateEffectOnExpireModel_",
                         "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.CreateEffectOnExpire, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
@@ -2232,6 +2241,7 @@
                           "name": "SoundModel_MegaExplosion05",
                           "ImplementationType": null
                         },
+                        "limiter": 0,
                         "collisionPass": 0,
                         "name": "CreateSoundOnProjectileExpireModel_Projectile",
                         "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.CreateSoundOnProjectileExpire, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"

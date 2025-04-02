@@ -18,8 +18,8 @@
   },
   "icon3D": {
     "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-    "AssetGUID": null,
-    "guidRef": null
+    "AssetGUID": "b8f62b7c4171694499c8af6ee2e2d414",
+    "guidRef": "b8f62b7c4171694499c8af6ee2e2d414"
   },
   "portrait": {
     "$type": "NinjaKiwi.Common.ResourceUtils.SpriteReference, NinjaKiwi.Common",
@@ -244,6 +244,7 @@
   "showBuffs": true,
   "destroyTowerOnRedistribution": false,
   "displayScale": 1.0,
+  "useAirUnitHeight": false,
   "baseId": "StrikerJones",
   "display": {
     "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
@@ -295,6 +296,11 @@
         "name": "SoundModel_PlaceJones02",
         "ImplementationType": null
       },
+      "reactSound": null,
+      "reactSoundAlt": null,
+      "towerType": "",
+      "towerSkin": "",
+      "reactDelay": 0.0,
       "name": "CreateSoundOnTowerPlaceModel_StrikerJones 19",
       "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.CreateSoundOnTowerPlace, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
     },
@@ -763,7 +769,7 @@
                   "behaviors": [
                     {
                       "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModel, Assembly-CSharp",
-                      "damage": 4.0,
+                      "damage": 8.0,
                       "maxDamage": 0.0,
                       "distributeToChildren": true,
                       "overrideDistributeBlocker": false,
@@ -772,7 +778,7 @@
                       "immuneBloonPropertiesOriginal": 2,
                       "ignoreImmunityDestroy": false,
                       "collisionPass": 0,
-                      "CappedDamage": 4.0,
+                      "CappedDamage": 8.0,
                       "name": "DamageModel_BaseExplosion_",
                       "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Damage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
                     },
@@ -857,6 +863,19 @@
                       "collisionPass": 0,
                       "name": "CreateSoundOnProjectileCollisionModel_BaseExplosion",
                       "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.CreateSoundOnProjectileCollision, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+                    },
+                    {
+                      "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.PushBackModel, Assembly-CSharp",
+                      "pushAmount": 5.0,
+                      "tag": "",
+                      "multiplierMOAB": 0.0,
+                      "multiplierBFB": 0.0,
+                      "multiplierDDT": 0.0,
+                      "multiplierZOMG": 0.0,
+                      "onlyIfDamaged": true,
+                      "collisionPass": 0,
+                      "name": "PushBackModel_",
+                      "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.PushBack, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
                     },
                     {
                       "$type": "Assets.Scripts.Models.GenericBehaviors.DisplayModel, Assembly-CSharp",
@@ -1273,7 +1292,7 @@
                               "chance": 0.0,
                               "overlayType": "Stun",
                               "collisionPass": -1,
-                              "Lifespan": 7.5,
+                              "Lifespan": 6.0,
                               "Multiplier": 0.0,
                               "Mutator": {
                                 "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.SlowModel+SlowMutator, Assembly-CSharp",
@@ -1296,11 +1315,12 @@
                                 "saveId": null,
                                 "isAreaBuff": false,
                                 "isGeraldoBuff": false,
-                                "isArtifactMutator": false
+                                "isArtifactMutator": false,
+                                "dontRemoveOnBloonDegrade": false
                               },
                               "name": "SlowModel_",
                               "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Slow, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
-                              "lifespan": 7.5,
+                              "lifespan": 6.0,
                               "multiplier": 0.0
                             },
                             {
@@ -1407,7 +1427,7 @@
                               "slowMultiplier": 1.0,
                               "resetToUnmodified": false,
                               "preventMutation": false,
-                              "lifespanOverride": 4.5,
+                              "lifespanOverride": 3.6,
                               "makeNotTag": false,
                               "collisionPass": 0,
                               "name": "SlowModifierForTagModel_SlowModifierTag",
@@ -1997,7 +2017,8 @@
         "saveId": null,
         "isAreaBuff": false,
         "isGeraldoBuff": false,
-        "isArtifactMutator": false
+        "isArtifactMutator": false,
+        "dontRemoveOnBloonDegrade": false
       },
       "name": "AddBehaviorToBloonInZoneModel_",
       "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.AddBehaviorToBloonInZone, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"

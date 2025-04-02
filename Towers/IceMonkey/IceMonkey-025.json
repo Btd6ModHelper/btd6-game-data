@@ -169,6 +169,7 @@
   "showBuffs": true,
   "destroyTowerOnRedistribution": false,
   "displayScale": 1.0,
+  "useAirUnitHeight": false,
   "baseId": "IceMonkey",
   "display": {
     "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
@@ -360,6 +361,11 @@
       "waterSound2": null,
       "heroSound1": null,
       "heroSound2": null,
+      "reactSound": null,
+      "reactSoundAlt": null,
+      "towerType": "",
+      "towerSkin": "",
+      "reactDelay": 0.0,
       "name": "CreateSoundOnTowerPlaceModel_IceMonkey-025",
       "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.CreateSoundOnTowerPlace, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
     },
@@ -571,7 +577,8 @@
                         "saveId": null,
                         "isAreaBuff": false,
                         "isGeraldoBuff": false,
-                        "isArtifactMutator": false
+                        "isArtifactMutator": false,
+                        "dontRemoveOnBloonDegrade": false
                       },
                       "name": "FreezeModel_Ice",
                       "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Freeze, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
@@ -635,7 +642,7 @@
                               },
                               {
                                 "$type": "Assets.Scripts.Models.Towers.Filters.FilterBloonIfDamageTypeModel, Assembly-CSharp",
-                                "ifCantHitBloonProperties": 1,
+                                "ifCantHitBloonProperties": 5,
                                 "damageModel": null,
                                 "name": "FilterBloonIfDamageTypeModel_",
                                 "ImplementationType": "Assets.Scripts.Simulation.Towers.Filters.FilterBloonIfDamageType, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
@@ -644,16 +651,16 @@
                             "behaviors": [
                               {
                                 "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModel, Assembly-CSharp",
-                                "damage": 2.0,
-                                "maxDamage": 2.0,
+                                "damage": 6.0,
+                                "maxDamage": 3.0,
                                 "distributeToChildren": true,
                                 "overrideDistributeBlocker": false,
                                 "createPopEffect": true,
-                                "immuneBloonProperties": 17,
-                                "immuneBloonPropertiesOriginal": 17,
+                                "immuneBloonProperties": 1,
+                                "immuneBloonPropertiesOriginal": 1,
                                 "ignoreImmunityDestroy": false,
                                 "collisionPass": 0,
-                                "CappedDamage": 2.0,
+                                "CappedDamage": 3.0,
                                 "name": "DamageModel_Icicle_",
                                 "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Damage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
                               },
@@ -690,7 +697,7 @@
                                   },
                                   {
                                     "$type": "Assets.Scripts.Models.Towers.Filters.FilterBloonIfDamageTypeModel, Assembly-CSharp",
-                                    "ifCantHitBloonProperties": 1,
+                                    "ifCantHitBloonProperties": 5,
                                     "damageModel": null,
                                     "name": "FilterBloonIfDamageTypeModel_",
                                     "ImplementationType": "Assets.Scripts.Simulation.Towers.Filters.FilterBloonIfDamageType, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"

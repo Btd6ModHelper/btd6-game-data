@@ -189,6 +189,7 @@
   "showBuffs": true,
   "destroyTowerOnRedistribution": false,
   "displayScale": 1.0,
+  "useAirUnitHeight": false,
   "baseId": "Alchemist",
   "display": {
     "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
@@ -390,6 +391,11 @@
       "waterSound2": null,
       "heroSound1": null,
       "heroSound2": null,
+      "reactSound": null,
+      "reactSoundAlt": null,
+      "towerType": "",
+      "towerSkin": "",
+      "reactDelay": 0.0,
       "name": "CreateSoundOnTowerPlaceModel_Alchemist-104",
       "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.CreateSoundOnTowerPlace, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
     },
@@ -617,7 +623,8 @@
                         "saveId": null,
                         "isAreaBuff": false,
                         "isGeraldoBuff": false,
-                        "isArtifactMutator": false
+                        "isArtifactMutator": false,
+                        "dontRemoveOnBloonDegrade": false
                       },
                       "name": "IncreaseBloonWorthModel_",
                       "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.IncreaseBloonWorth, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
@@ -1257,11 +1264,12 @@
                         "saveId": null,
                         "isAreaBuff": false,
                         "isGeraldoBuff": false,
-                        "isArtifactMutator": false
+                        "isArtifactMutator": false,
+                        "dontRemoveOnBloonDegrade": false
                       },
                       "name": "IncreaseBloonWorthModel_RubberToGold",
                       "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.IncreaseBloonWorth, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
-                      "duration": 7.0
+                      "duration": 14.0
                     },
                     {
                       "$type": "Assets.Scripts.Models.GenericBehaviors.DisplayModel, Assembly-CSharp",
@@ -1292,7 +1300,7 @@
                     0
                   ],
                   "canCollideWithBloons": true,
-                  "radius": 14.0,
+                  "radius": 31.5,
                   "vsBlockerRadius": 1.0,
                   "hasDamageModifiers": false,
                   "dontUseCollisionChecker": false,
@@ -1622,12 +1630,12 @@
           "startInCooldown": false,
           "animateOnMainAttack": false,
           "isStunned": false,
-          "Rate": 5.0,
+          "Rate": 2.0,
           "UseThrowMarker": true,
           "name": "WeaponModel_Weapon",
           "ImplementationType": "Assets.Scripts.Simulation.Towers.Weapons.Weapon, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
           "animationOffset": 0.0,
-          "rate": 5.0,
+          "rate": 2.0,
           "customStartCooldown": 0.0
         }
       ],

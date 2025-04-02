@@ -7,33 +7,10 @@
         "$type": "Assets.Scripts.Models.Artifacts.Behaviors.AddTowerBehaviorsArtifactModel, Assembly-CSharp",
         "behaviorModels": [
           {
-            "$type": "Assets.Scripts.Models.Towers.Behaviors.SlowBloonsZoneModel, Assembly-CSharp",
-            "zoneRadius": 0.0,
-            "mutationId": "EssenceOfPhayze",
-            "isUnique": true,
-            "filters": null,
-            "speedScale": 0.7,
-            "speedChange": 0.0,
-            "bindRadiusToTowerRange": true,
-            "radiusOffset": 0.0,
-            "bloonTag": "",
-            "bloonTags": [],
-            "inclusive": false,
-            "mutator": {
-              "$type": "Assets.Scripts.Models.Towers.Behaviors.SlowBloonsZoneModel+Mutator, Assembly-CSharp",
-              "id": "EssenceOfPhayze",
-              "isExclusiveInMutationList": false,
-              "priority": 1,
-              "glueLevel": 0,
-              "dontCopy": true,
-              "buffIndicator": null,
-              "saveId": null,
-              "isAreaBuff": false,
-              "isGeraldoBuff": false,
-              "isArtifactMutator": false
-            },
+            "$type": "Assets.Scripts.Models.Towers.Behaviors.OverrideCamoDetectionModel, Assembly-CSharp",
+            "detectCamo": true,
             "name": "",
-            "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.SlowBloonsZone, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+            "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.OverrideCamoDetection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
           }
         ],
         "addOnlyIfScriptsExists": [],
@@ -42,13 +19,12 @@
         "replaceScriptIds": [],
         "towerTypes": [],
         "inverseTowerTypes": false,
-        "towerSets": [
-          16
-        ],
+        "towerSets": [],
         "inverseSets": false,
         "tiers": [],
         "tiersMustBeEqual": false,
         "inverseTiers": false,
+        "ignoreSubTowers": false,
         "name": "",
         "ImplementationType": "Assets.Scripts.Simulation.Artifacts.Behaviors.AddBehaviorsArtifact, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
       },
@@ -74,22 +50,35 @@
         "replaceScriptIds": [],
         "towerTypes": [],
         "inverseTowerTypes": false,
-        "towerSets": [],
+        "towerSets": [
+          15
+        ],
         "inverseSets": false,
-        "tiers": [],
+        "tiers": [
+          5,
+          5,
+          5
+        ],
         "tiersMustBeEqual": false,
         "inverseTiers": false,
+        "ignoreSubTowers": false,
         "name": "",
         "ImplementationType": "Assets.Scripts.Simulation.Artifacts.Behaviors.AddBehaviorsArtifact, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
       },
       {
-        "$type": "Assets.Scripts.Models.Artifacts.Behaviors.AddTowerBehaviorsArtifactModel, Assembly-CSharp",
+        "$type": "Assets.Scripts.Models.Artifacts.Behaviors.AddProjectileBehaviorsArtifactModel, Assembly-CSharp",
         "behaviorModels": [
           {
-            "$type": "Assets.Scripts.Models.Towers.Behaviors.OverrideCamoDetectionModel, Assembly-CSharp",
-            "detectCamo": true,
+            "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModifierForTagModel, Assembly-CSharp",
+            "tag": "Camo",
+            "tags": [],
+            "damageMultiplier": 3.0,
+            "damageAddative": 0.0,
+            "mustIncludeAllTags": false,
+            "applyOverMaxDamage": false,
+            "collisionPass": 1,
             "name": "",
-            "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.OverrideCamoDetection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+            "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.DamageModifierForTag, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
           }
         ],
         "addOnlyIfScriptsExists": [],
@@ -98,17 +87,29 @@
         "replaceScriptIds": [],
         "towerTypes": [],
         "inverseTowerTypes": false,
-        "towerSets": [],
+        "towerSets": [
+          16
+        ],
         "inverseSets": false,
-        "tiers": [],
+        "tiers": [
+          20
+        ],
         "tiersMustBeEqual": false,
         "inverseTiers": false,
+        "ignoreSubTowers": false,
         "name": "",
         "ImplementationType": "Assets.Scripts.Simulation.Artifacts.Behaviors.AddBehaviorsArtifact, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
       }
     ],
     "tier": 2,
     "baseId": "EssenceOfPhayze",
+    "descriptionParams": [],
+    "monkeyKnowledgeModModels": {
+      "$type": "Assets.Scripts.Models.ModModel, Assembly-CSharp",
+      "mutatorMods": [],
+      "name": "",
+      "ImplementationType": null
+    },
     "isBossArtifact": true,
     "icon": {
       "$type": "NinjaKiwi.Common.ResourceUtils.SpriteReference, NinjaKiwi.Common",
@@ -116,11 +117,10 @@
       "guidRef": "c7d698906a988054faa010387e53f92a"
     },
     "rarityFrameType": "AllMonkeyTowerSets",
-    "NameLocKey": "EssenceOfPhayze1",
-    "DescriptionLocKey": "EssenceOfPhayze1Description",
+    "isQuestArtifact": false,
     "IsBoost": false,
     "ArtifactName": "EssenceOfPhayze1",
-    "ArtifactPower": 9,
+    "ArtifactPower": 18,
     "name": "EssenceOfPhayze1",
     "ImplementationType": "Assets.Scripts.Simulation.Artifacts.ItemArtifact, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
     "instaTowerToGive": {

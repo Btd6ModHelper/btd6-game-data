@@ -189,6 +189,7 @@
   "showBuffs": true,
   "destroyTowerOnRedistribution": false,
   "displayScale": 1.0,
+  "useAirUnitHeight": false,
   "baseId": "MonkeyBuccaneer",
   "display": {
     "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
@@ -421,6 +422,11 @@
       "waterSound2": null,
       "heroSound1": null,
       "heroSound2": null,
+      "reactSound": null,
+      "reactSoundAlt": null,
+      "towerType": "",
+      "towerSkin": "",
+      "reactDelay": 0.0,
       "name": "CreateSoundOnTowerPlaceModel_MonkeyBuccaneer-Paragon",
       "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.CreateSoundOnTowerPlace, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
     },
@@ -1232,7 +1238,7 @@
             "AssetGUID": "398e01c7b3493974cbc18c0a0a745099",
             "guidRef": "398e01c7b3493974cbc18c0a0a745099"
           },
-          "layer": 0,
+          "layer": -1,
           "positionOffset": {
             "$type": "Assets.Scripts.Simulation.SMath.Vector3, Assembly-CSharp",
             "x": 0.0,
@@ -1887,7 +1893,7 @@
             "AssetGUID": "398e01c7b3493974cbc18c0a0a745099",
             "guidRef": "398e01c7b3493974cbc18c0a0a745099"
           },
-          "layer": 0,
+          "layer": -1,
           "positionOffset": {
             "$type": "Assets.Scripts.Simulation.SMath.Vector3, Assembly-CSharp",
             "x": 0.0,
@@ -2542,7 +2548,7 @@
             "AssetGUID": "398e01c7b3493974cbc18c0a0a745099",
             "guidRef": "398e01c7b3493974cbc18c0a0a745099"
           },
-          "layer": 0,
+          "layer": -1,
           "positionOffset": {
             "$type": "Assets.Scripts.Simulation.SMath.Vector3, Assembly-CSharp",
             "x": 0.0,
@@ -3197,7 +3203,7 @@
             "AssetGUID": "398e01c7b3493974cbc18c0a0a745099",
             "guidRef": "398e01c7b3493974cbc18c0a0a745099"
           },
-          "layer": 0,
+          "layer": -1,
           "positionOffset": {
             "$type": "Assets.Scripts.Simulation.SMath.Vector3, Assembly-CSharp",
             "x": 0.0,
@@ -3852,7 +3858,7 @@
             "AssetGUID": "398e01c7b3493974cbc18c0a0a745099",
             "guidRef": "398e01c7b3493974cbc18c0a0a745099"
           },
-          "layer": 0,
+          "layer": -1,
           "positionOffset": {
             "$type": "Assets.Scripts.Simulation.SMath.Vector3, Assembly-CSharp",
             "x": 0.0,
@@ -4507,7 +4513,7 @@
             "AssetGUID": "398e01c7b3493974cbc18c0a0a745099",
             "guidRef": "398e01c7b3493974cbc18c0a0a745099"
           },
-          "layer": 0,
+          "layer": -1,
           "positionOffset": {
             "$type": "Assets.Scripts.Simulation.SMath.Vector3, Assembly-CSharp",
             "x": 0.0,
@@ -4764,6 +4770,7 @@
                   "showBuffs": true,
                   "destroyTowerOnRedistribution": false,
                   "displayScale": 1.0,
+                  "useAirUnitHeight": false,
                   "baseId": "BuccaneerParagonPlane",
                   "display": {
                     "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
@@ -5923,7 +5930,8 @@
                   "saveId": null,
                   "isAreaBuff": false,
                   "isGeraldoBuff": false,
-                  "isArtifactMutator": false
+                  "isArtifactMutator": false,
+                  "dontRemoveOnBloonDegrade": false
                 },
                 "name": "MoabTakedownModel_",
                 "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.MoabTakedown, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
@@ -5970,6 +5978,7 @@
                 "fullscreen": 0,
                 "randomRotation": false,
                 "effectModel": null,
+                "useTargetPosition": false,
                 "collisionPass": 0,
                 "name": "CreateEffectOnExpireModel_",
                 "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.CreateEffectOnExpire, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
@@ -6051,6 +6060,7 @@
                   "name": "SoundModel_Explosion05",
                   "ImplementationType": null
                 },
+                "limiter": 0,
                 "collisionPass": 0,
                 "name": "CreateSoundOnProjectileExpireModel_Projectile",
                 "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.CreateSoundOnProjectileExpire, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
@@ -6301,7 +6311,8 @@
                   "saveId": null,
                   "isAreaBuff": false,
                   "isGeraldoBuff": false,
-                  "isArtifactMutator": false
+                  "isArtifactMutator": false,
+                  "dontRemoveOnBloonDegrade": false
                 },
                 "name": "MoabTakedownModel_",
                 "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.MoabTakedown, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
@@ -6348,6 +6359,7 @@
                 "fullscreen": 0,
                 "randomRotation": false,
                 "effectModel": null,
+                "useTargetPosition": false,
                 "collisionPass": 0,
                 "name": "CreateEffectOnExpireModel_",
                 "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.CreateEffectOnExpire, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
@@ -6429,6 +6441,7 @@
                   "name": "SoundModel_Explosion05",
                   "ImplementationType": null
                 },
+                "limiter": 0,
                 "collisionPass": 0,
                 "name": "CreateSoundOnProjectileExpireModel_Projectile",
                 "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.CreateSoundOnProjectileExpire, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
@@ -6679,7 +6692,8 @@
                   "saveId": null,
                   "isAreaBuff": false,
                   "isGeraldoBuff": false,
-                  "isArtifactMutator": false
+                  "isArtifactMutator": false,
+                  "dontRemoveOnBloonDegrade": false
                 },
                 "name": "MoabTakedownModel_",
                 "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.MoabTakedown, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
@@ -6726,6 +6740,7 @@
                 "fullscreen": 0,
                 "randomRotation": false,
                 "effectModel": null,
+                "useTargetPosition": false,
                 "collisionPass": 0,
                 "name": "CreateEffectOnExpireModel_",
                 "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.CreateEffectOnExpire, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
@@ -6807,6 +6822,7 @@
                   "name": "SoundModel_Explosion05",
                   "ImplementationType": null
                 },
+                "limiter": 0,
                 "collisionPass": 0,
                 "name": "CreateSoundOnProjectileExpireModel_Projectile",
                 "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.CreateSoundOnProjectileExpire, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
@@ -7057,7 +7073,8 @@
                   "saveId": null,
                   "isAreaBuff": false,
                   "isGeraldoBuff": false,
-                  "isArtifactMutator": false
+                  "isArtifactMutator": false,
+                  "dontRemoveOnBloonDegrade": false
                 },
                 "name": "MoabTakedownModel_",
                 "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.MoabTakedown, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
@@ -7104,6 +7121,7 @@
                 "fullscreen": 0,
                 "randomRotation": false,
                 "effectModel": null,
+                "useTargetPosition": false,
                 "collisionPass": 0,
                 "name": "CreateEffectOnExpireModel_",
                 "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.CreateEffectOnExpire, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
@@ -7185,6 +7203,7 @@
                   "name": "SoundModel_Explosion05",
                   "ImplementationType": null
                 },
+                "limiter": 0,
                 "collisionPass": 0,
                 "name": "CreateSoundOnProjectileExpireModel_Projectile",
                 "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.CreateSoundOnProjectileExpire, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
@@ -7435,7 +7454,8 @@
                   "saveId": null,
                   "isAreaBuff": false,
                   "isGeraldoBuff": false,
-                  "isArtifactMutator": false
+                  "isArtifactMutator": false,
+                  "dontRemoveOnBloonDegrade": false
                 },
                 "name": "MoabTakedownModel_",
                 "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.MoabTakedown, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
@@ -7482,6 +7502,7 @@
                 "fullscreen": 0,
                 "randomRotation": false,
                 "effectModel": null,
+                "useTargetPosition": false,
                 "collisionPass": 0,
                 "name": "CreateEffectOnExpireModel_",
                 "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.CreateEffectOnExpire, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
@@ -7563,6 +7584,7 @@
                   "name": "SoundModel_Explosion05",
                   "ImplementationType": null
                 },
+                "limiter": 0,
                 "collisionPass": 0,
                 "name": "CreateSoundOnProjectileExpireModel_Projectile",
                 "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.CreateSoundOnProjectileExpire, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
@@ -7813,7 +7835,8 @@
                   "saveId": null,
                   "isAreaBuff": false,
                   "isGeraldoBuff": false,
-                  "isArtifactMutator": false
+                  "isArtifactMutator": false,
+                  "dontRemoveOnBloonDegrade": false
                 },
                 "name": "MoabTakedownModel_",
                 "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.MoabTakedown, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
@@ -7860,6 +7883,7 @@
                 "fullscreen": 0,
                 "randomRotation": false,
                 "effectModel": null,
+                "useTargetPosition": false,
                 "collisionPass": 0,
                 "name": "CreateEffectOnExpireModel_",
                 "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.CreateEffectOnExpire, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
@@ -7941,6 +7965,7 @@
                   "name": "SoundModel_Explosion05",
                   "ImplementationType": null
                 },
+                "limiter": 0,
                 "collisionPass": 0,
                 "name": "CreateSoundOnProjectileExpireModel_Projectile",
                 "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.CreateSoundOnProjectileExpire, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
@@ -8191,7 +8216,8 @@
                   "saveId": null,
                   "isAreaBuff": false,
                   "isGeraldoBuff": false,
-                  "isArtifactMutator": false
+                  "isArtifactMutator": false,
+                  "dontRemoveOnBloonDegrade": false
                 },
                 "name": "MoabTakedownModel_",
                 "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.MoabTakedown, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
@@ -8238,6 +8264,7 @@
                 "fullscreen": 0,
                 "randomRotation": false,
                 "effectModel": null,
+                "useTargetPosition": false,
                 "collisionPass": 0,
                 "name": "CreateEffectOnExpireModel_",
                 "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.CreateEffectOnExpire, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
@@ -8319,6 +8346,7 @@
                   "name": "SoundModel_Explosion05",
                   "ImplementationType": null
                 },
+                "limiter": 0,
                 "collisionPass": 0,
                 "name": "CreateSoundOnProjectileExpireModel_Projectile",
                 "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.CreateSoundOnProjectileExpire, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
@@ -8569,7 +8597,8 @@
                   "saveId": null,
                   "isAreaBuff": false,
                   "isGeraldoBuff": false,
-                  "isArtifactMutator": false
+                  "isArtifactMutator": false,
+                  "dontRemoveOnBloonDegrade": false
                 },
                 "name": "MoabTakedownModel_",
                 "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.MoabTakedown, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
@@ -8616,6 +8645,7 @@
                 "fullscreen": 0,
                 "randomRotation": false,
                 "effectModel": null,
+                "useTargetPosition": false,
                 "collisionPass": 0,
                 "name": "CreateEffectOnExpireModel_",
                 "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.CreateEffectOnExpire, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
@@ -8697,6 +8727,7 @@
                   "name": "SoundModel_Explosion05",
                   "ImplementationType": null
                 },
+                "limiter": 0,
                 "collisionPass": 0,
                 "name": "CreateSoundOnProjectileExpireModel_Projectile",
                 "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.CreateSoundOnProjectileExpire, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
@@ -8947,7 +8978,8 @@
                   "saveId": null,
                   "isAreaBuff": false,
                   "isGeraldoBuff": false,
-                  "isArtifactMutator": false
+                  "isArtifactMutator": false,
+                  "dontRemoveOnBloonDegrade": false
                 },
                 "name": "MoabTakedownModel_",
                 "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.MoabTakedown, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
@@ -8994,6 +9026,7 @@
                 "fullscreen": 0,
                 "randomRotation": false,
                 "effectModel": null,
+                "useTargetPosition": false,
                 "collisionPass": 0,
                 "name": "CreateEffectOnExpireModel_",
                 "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.CreateEffectOnExpire, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
@@ -9075,6 +9108,7 @@
                   "name": "SoundModel_Explosion05",
                   "ImplementationType": null
                 },
+                "limiter": 0,
                 "collisionPass": 0,
                 "name": "CreateSoundOnProjectileExpireModel_Projectile",
                 "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.CreateSoundOnProjectileExpire, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
@@ -9325,7 +9359,8 @@
                   "saveId": null,
                   "isAreaBuff": false,
                   "isGeraldoBuff": false,
-                  "isArtifactMutator": false
+                  "isArtifactMutator": false,
+                  "dontRemoveOnBloonDegrade": false
                 },
                 "name": "MoabTakedownModel_",
                 "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.MoabTakedown, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
@@ -9372,6 +9407,7 @@
                 "fullscreen": 0,
                 "randomRotation": false,
                 "effectModel": null,
+                "useTargetPosition": false,
                 "collisionPass": 0,
                 "name": "CreateEffectOnExpireModel_",
                 "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.CreateEffectOnExpire, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
@@ -9453,6 +9489,7 @@
                   "name": "SoundModel_Explosion05",
                   "ImplementationType": null
                 },
+                "limiter": 0,
                 "collisionPass": 0,
                 "name": "CreateSoundOnProjectileExpireModel_Projectile",
                 "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.CreateSoundOnProjectileExpire, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
@@ -9776,7 +9813,8 @@
                           "saveId": null,
                           "isAreaBuff": false,
                           "isGeraldoBuff": false,
-                          "isArtifactMutator": false
+                          "isArtifactMutator": false,
+                          "dontRemoveOnBloonDegrade": false
                         },
                         "name": "MoabTakedownModel_",
                         "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.MoabTakedown, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
@@ -9823,6 +9861,7 @@
                         "fullscreen": 0,
                         "randomRotation": false,
                         "effectModel": null,
+                        "useTargetPosition": false,
                         "collisionPass": 0,
                         "name": "CreateEffectOnExpireModel_",
                         "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.CreateEffectOnExpire, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
@@ -9904,6 +9943,7 @@
                           "name": "SoundModel_Explosion05",
                           "ImplementationType": null
                         },
+                        "limiter": 0,
                         "collisionPass": 0,
                         "name": "CreateSoundOnProjectileExpireModel_Projectile",
                         "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.CreateSoundOnProjectileExpire, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"

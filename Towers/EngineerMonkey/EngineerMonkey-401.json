@@ -175,6 +175,7 @@
   "showBuffs": true,
   "destroyTowerOnRedistribution": false,
   "displayScale": 1.0,
+  "useAirUnitHeight": false,
   "baseId": "EngineerMonkey",
   "display": {
     "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
@@ -366,6 +367,11 @@
       "waterSound2": null,
       "heroSound1": null,
       "heroSound2": null,
+      "reactSound": null,
+      "reactSoundAlt": null,
+      "towerType": "",
+      "towerSkin": "",
+      "reactDelay": 0.0,
       "name": "CreateSoundOnTowerPlaceModel_EngineerMonkey-401",
       "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.CreateSoundOnTowerPlace, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
     },
@@ -793,6 +799,7 @@
                   "showBuffs": true,
                   "destroyTowerOnRedistribution": false,
                   "displayScale": 1.0,
+                  "useAirUnitHeight": false,
                   "baseId": "SentryCrushing",
                   "display": {
                     "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
@@ -934,6 +941,11 @@
                       "waterSound2": null,
                       "heroSound1": null,
                       "heroSound2": null,
+                      "reactSound": null,
+                      "reactSoundAlt": null,
+                      "towerType": "",
+                      "towerSkin": "",
+                      "reactDelay": 0.0,
                       "name": "CreateSoundOnTowerPlaceModel_SentryCrushing",
                       "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.CreateSoundOnTowerPlace, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
                     },
@@ -961,7 +973,7 @@
                             },
                             "id": "Projectile",
                             "maxPierce": 0.0,
-                            "pierce": 28.0,
+                            "pierce": 33.0,
                             "scale": 1.0,
                             "ignoreBlockers": false,
                             "usePointCollisionWithBloons": false,
@@ -1074,7 +1086,7 @@
                             "ignorePierceExhaustion": false,
                             "saveId": null,
                             "displayModel": null,
-                            "CappedPierce": 28.0,
+                            "CappedPierce": 33.0,
                             "name": "ProjectileModel_Projectile",
                             "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Projectile, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
                             "checkCollisionInterval": 0.0
@@ -1086,12 +1098,12 @@
                           "startInCooldown": false,
                           "animateOnMainAttack": false,
                           "isStunned": false,
-                          "Rate": 1.1,
+                          "Rate": 1.2,
                           "UseThrowMarker": true,
                           "name": "WeaponModel_Weapon",
                           "ImplementationType": "Assets.Scripts.Simulation.Towers.Weapons.Weapon, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
                           "animationOffset": 0.0,
-                          "rate": 1.1,
+                          "rate": 1.2,
                           "customStartCooldown": 0.0
                         }
                       ],
@@ -1156,7 +1168,7 @@
                             "AssetGUID": "95f0e98e9602cab4fb4f1dcc6d01653a",
                             "guidRef": "95f0e98e9602cab4fb4f1dcc6d01653a"
                           },
-                          "layer": 0,
+                          "layer": -1,
                           "positionOffset": {
                             "$type": "Assets.Scripts.Simulation.SMath.Vector3, Assembly-CSharp",
                             "x": 0.0,
@@ -1414,6 +1426,7 @@
                   "showBuffs": true,
                   "destroyTowerOnRedistribution": false,
                   "displayScale": 1.0,
+                  "useAirUnitHeight": false,
                   "baseId": "SentryBoom",
                   "display": {
                     "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
@@ -1555,6 +1568,11 @@
                       "waterSound2": null,
                       "heroSound1": null,
                       "heroSound2": null,
+                      "reactSound": null,
+                      "reactSoundAlt": null,
+                      "towerType": "",
+                      "towerSkin": "",
+                      "reactDelay": 0.0,
                       "name": "CreateSoundOnTowerPlaceModel_SentryBoom",
                       "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.CreateSoundOnTowerPlace, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
                     },
@@ -1618,7 +1636,7 @@
                                   },
                                   "id": "Explosion",
                                   "maxPierce": 0.0,
-                                  "pierce": 38.0,
+                                  "pierce": 45.0,
                                   "scale": 1.0,
                                   "ignoreBlockers": true,
                                   "usePointCollisionWithBloons": false,
@@ -1710,7 +1728,7 @@
                                   "ignorePierceExhaustion": false,
                                   "saveId": null,
                                   "displayModel": null,
-                                  "CappedPierce": 38.0,
+                                  "CappedPierce": 45.0,
                                   "name": "ProjectileModel_Explosion",
                                   "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Projectile, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
                                   "checkCollisionInterval": 0.0
@@ -1872,12 +1890,12 @@
                           "startInCooldown": false,
                           "animateOnMainAttack": false,
                           "isStunned": false,
-                          "Rate": 0.9,
+                          "Rate": 1.0,
                           "UseThrowMarker": true,
                           "name": "WeaponModel_Weapon",
                           "ImplementationType": "Assets.Scripts.Simulation.Towers.Weapons.Weapon, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
                           "animationOffset": 0.0,
-                          "rate": 0.9,
+                          "rate": 1.0,
                           "customStartCooldown": 0.0
                         }
                       ],
@@ -1942,7 +1960,7 @@
                             "AssetGUID": "02712b0bdfcd72b4f8bebf853ab75d70",
                             "guidRef": "02712b0bdfcd72b4f8bebf853ab75d70"
                           },
-                          "layer": 0,
+                          "layer": -1,
                           "positionOffset": {
                             "$type": "Assets.Scripts.Simulation.SMath.Vector3, Assembly-CSharp",
                             "x": 0.0,
@@ -2200,6 +2218,7 @@
                   "showBuffs": true,
                   "destroyTowerOnRedistribution": false,
                   "displayScale": 1.0,
+                  "useAirUnitHeight": false,
                   "baseId": "SentryCold",
                   "display": {
                     "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
@@ -2341,6 +2360,11 @@
                       "waterSound2": null,
                       "heroSound1": null,
                       "heroSound2": null,
+                      "reactSound": null,
+                      "reactSoundAlt": null,
+                      "towerType": "",
+                      "towerSkin": "",
+                      "reactDelay": 0.0,
                       "name": "CreateSoundOnTowerPlaceModel_SentryCold",
                       "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.CreateSoundOnTowerPlace, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
                     },
@@ -2404,7 +2428,7 @@
                                   },
                                   "id": "Explosion",
                                   "maxPierce": 0.0,
-                                  "pierce": 25.0,
+                                  "pierce": 36.0,
                                   "scale": 1.0,
                                   "ignoreBlockers": true,
                                   "usePointCollisionWithBloons": false,
@@ -2607,7 +2631,8 @@
                                         "saveId": null,
                                         "isAreaBuff": false,
                                         "isGeraldoBuff": false,
-                                        "isArtifactMutator": false
+                                        "isArtifactMutator": false,
+                                        "dontRemoveOnBloonDegrade": false
                                       },
                                       "name": "FreezeModel_",
                                       "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Freeze, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
@@ -2652,7 +2677,8 @@
                                         "saveId": null,
                                         "isAreaBuff": false,
                                         "isGeraldoBuff": false,
-                                        "isArtifactMutator": false
+                                        "isArtifactMutator": false,
+                                        "dontRemoveOnBloonDegrade": false
                                       },
                                       "name": "SlowModel_Ice",
                                       "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Slow, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
@@ -2711,7 +2737,7 @@
                                   "ignorePierceExhaustion": false,
                                   "saveId": null,
                                   "displayModel": null,
-                                  "CappedPierce": 25.0,
+                                  "CappedPierce": 36.0,
                                   "name": "ProjectileModel_Explosion",
                                   "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Projectile, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
                                   "checkCollisionInterval": 0.0
@@ -2901,7 +2927,7 @@
                             "AssetGUID": "9e4bd88882a62fc4596ed8a89a085c69",
                             "guidRef": "9e4bd88882a62fc4596ed8a89a085c69"
                           },
-                          "layer": 0,
+                          "layer": -1,
                           "positionOffset": {
                             "$type": "Assets.Scripts.Simulation.SMath.Vector3, Assembly-CSharp",
                             "x": 0.0,
@@ -3159,6 +3185,7 @@
                   "showBuffs": true,
                   "destroyTowerOnRedistribution": false,
                   "displayScale": 1.0,
+                  "useAirUnitHeight": false,
                   "baseId": "SentryEnergy",
                   "display": {
                     "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
@@ -3300,6 +3327,11 @@
                       "waterSound2": null,
                       "heroSound1": null,
                       "heroSound2": null,
+                      "reactSound": null,
+                      "reactSoundAlt": null,
+                      "towerType": "",
+                      "towerSkin": "",
+                      "reactDelay": 0.0,
                       "name": "CreateSoundOnTowerPlaceModel_SentryEnergy",
                       "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.CreateSoundOnTowerPlace, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
                     },
@@ -3327,7 +3359,7 @@
                             },
                             "id": "Projectile",
                             "maxPierce": 0.0,
-                            "pierce": 10.0,
+                            "pierce": 12.0,
                             "scale": 1.0,
                             "ignoreBlockers": true,
                             "usePointCollisionWithBloons": false,
@@ -3432,7 +3464,7 @@
                             "ignorePierceExhaustion": false,
                             "saveId": null,
                             "displayModel": null,
-                            "CappedPierce": 10.0,
+                            "CappedPierce": 12.0,
                             "name": "ProjectileModel_Projectile",
                             "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Projectile, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
                             "checkCollisionInterval": 0.0
@@ -3444,12 +3476,12 @@
                           "startInCooldown": false,
                           "animateOnMainAttack": false,
                           "isStunned": false,
-                          "Rate": 0.475,
+                          "Rate": 0.57,
                           "UseThrowMarker": true,
                           "name": "WeaponModel_Weapon",
                           "ImplementationType": "Assets.Scripts.Simulation.Towers.Weapons.Weapon, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
                           "animationOffset": 0.0,
-                          "rate": 0.475,
+                          "rate": 0.57,
                           "customStartCooldown": 0.0
                         }
                       ],
@@ -3514,7 +3546,7 @@
                             "AssetGUID": "5bb9342d838c0d848ab4ccb4f078114f",
                             "guidRef": "5bb9342d838c0d848ab4ccb4f078114f"
                           },
-                          "layer": 0,
+                          "layer": -1,
                           "positionOffset": {
                             "$type": "Assets.Scripts.Simulation.SMath.Vector3, Assembly-CSharp",
                             "x": 0.0,
@@ -3933,12 +3965,12 @@
           "startInCooldown": false,
           "animateOnMainAttack": false,
           "isStunned": false,
-          "Rate": 6.0,
+          "Rate": 5.0,
           "UseThrowMarker": true,
           "name": "WeaponModel_Weapon",
           "ImplementationType": "Assets.Scripts.Simulation.Towers.Weapons.Weapon, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
           "animationOffset": 0.0,
-          "rate": 6.0,
+          "rate": 5.0,
           "customStartCooldown": 0.0
         }
       ],

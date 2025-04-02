@@ -190,6 +190,7 @@
   "showBuffs": true,
   "destroyTowerOnRedistribution": false,
   "displayScale": 1.0,
+  "useAirUnitHeight": false,
   "baseId": "Druid",
   "display": {
     "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
@@ -381,6 +382,11 @@
       "waterSound2": null,
       "heroSound1": null,
       "heroSound2": null,
+      "reactSound": null,
+      "reactSoundAlt": null,
+      "towerType": "",
+      "towerSkin": "",
+      "reactDelay": 0.0,
       "name": "CreateSoundOnTowerPlaceModel_Druid-520",
       "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.CreateSoundOnTowerPlace, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
     },
@@ -475,11 +481,11 @@
                 "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.TravelStraitModel, Assembly-CSharp",
                 "collisionPass": 0,
                 "Speed": 340.0,
-                "Lifespan": 0.4,
+                "Lifespan": 0.3,
                 "name": "TravelStraitModel_BaseProjectile",
                 "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.TravelStrait, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
                 "speed": 340.0,
-                "lifespan": 0.4
+                "lifespan": 0.3
               },
               {
                 "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.ProjectileFilterModel, Assembly-CSharp",
@@ -622,11 +628,11 @@
                 "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.TravelStraitModel, Assembly-CSharp",
                 "collisionPass": 0,
                 "Speed": 24.0,
-                "Lifespan": 5.0,
+                "Lifespan": 3.75,
                 "name": "TravelStraitModel_SpawningProjectile",
                 "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.TravelStrait, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
                 "speed": 24.0,
-                "lifespan": 5.0
+                "lifespan": 3.75
               },
               {
                 "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.ProjectileFilterModel, Assembly-CSharp",
@@ -956,7 +962,8 @@
                   "saveId": null,
                   "isAreaBuff": false,
                   "isGeraldoBuff": false,
-                  "isArtifactMutator": false
+                  "isArtifactMutator": false,
+                  "dontRemoveOnBloonDegrade": false
                 },
                 "name": "FreezeModel_",
                 "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Freeze, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
@@ -1153,11 +1160,11 @@
                 "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.TravelStraitModel, Assembly-CSharp",
                 "collisionPass": 0,
                 "Speed": 35.0,
-                "Lifespan": 5.714286,
+                "Lifespan": 4.285714,
                 "name": "TravelStraitModel_Projectile",
                 "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.TravelStrait, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
                 "speed": 35.0,
-                "lifespan": 5.714286
+                "lifespan": 4.285714
               },
               {
                 "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.ProjectileFilterModel, Assembly-CSharp",
@@ -1210,7 +1217,8 @@
                   "saveId": null,
                   "isAreaBuff": false,
                   "isGeraldoBuff": false,
-                  "isArtifactMutator": false
+                  "isArtifactMutator": false,
+                  "dontRemoveOnBloonDegrade": false
                 },
                 "name": "WindModel_",
                 "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Wind, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
@@ -1328,11 +1336,11 @@
                       "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.TravelStraitModel, Assembly-CSharp",
                       "collisionPass": 0,
                       "Speed": 24.0,
-                      "Lifespan": 5.0,
+                      "Lifespan": 3.75,
                       "name": "TravelStraitModel_SpawningProjectile",
                       "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.TravelStrait, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
                       "speed": 24.0,
-                      "lifespan": 5.0
+                      "lifespan": 3.75
                     },
                     {
                       "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.ProjectileFilterModel, Assembly-CSharp",
@@ -1662,7 +1670,8 @@
                         "saveId": null,
                         "isAreaBuff": false,
                         "isGeraldoBuff": false,
-                        "isArtifactMutator": false
+                        "isArtifactMutator": false,
+                        "dontRemoveOnBloonDegrade": false
                       },
                       "name": "FreezeModel_",
                       "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Freeze, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
@@ -2266,11 +2275,11 @@
                 "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.TravelStraitModel, Assembly-CSharp",
                 "collisionPass": 0,
                 "Speed": 72.0,
-                "Lifespan": 1.38888884,
+                "Lifespan": 1.04166663,
                 "name": "TravelStraitModel_Projectile",
                 "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.TravelStrait, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
                 "speed": 72.0,
-                "lifespan": 1.38888884
+                "lifespan": 1.04166663
               },
               {
                 "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.ProjectileFilterModel, Assembly-CSharp",
@@ -2344,7 +2353,8 @@
                   "saveId": null,
                   "isAreaBuff": false,
                   "isGeraldoBuff": false,
-                  "isArtifactMutator": false
+                  "isArtifactMutator": false,
+                  "dontRemoveOnBloonDegrade": false
                 },
                 "name": "WindModel_",
                 "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Wind, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"

@@ -217,6 +217,7 @@
   "showBuffs": true,
   "destroyTowerOnRedistribution": false,
   "displayScale": 1.0,
+  "useAirUnitHeight": false,
   "baseId": "MonkeyAce",
   "display": {
     "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
@@ -418,6 +419,11 @@
       "waterSound2": null,
       "heroSound1": null,
       "heroSound2": null,
+      "reactSound": null,
+      "reactSoundAlt": null,
+      "towerType": "",
+      "towerSkin": "",
+      "reactDelay": 0.0,
       "name": "CreateSoundOnTowerPlaceModel_MonkeyAce-013",
       "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.CreateSoundOnTowerPlace, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
     },
@@ -550,10 +556,10 @@
                 "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.AdoraTrackTargetModel, Assembly-CSharp",
                 "rotation": 9.0,
                 "minimumSpeed": 20.0,
-                "maximumSpeed": 180.0,
-                "acceleration": 20.0,
-                "accelerateInAngle": 5.0,
-                "startDeceleratingIfAngleGreaterThan": 20.0,
+                "maximumSpeed": 350.0,
+                "acceleration": 50.0,
+                "accelerateInAngle": 1.0,
+                "startDeceleratingIfAngleGreaterThan": 30.0,
                 "collisionPass": 0,
                 "Lifespan": 1.0,
                 "name": "AdoraTrackTargetModel_",
@@ -891,6 +897,7 @@
                         "name": "SoundModel_Explosion05",
                         "ImplementationType": null
                       },
+                      "limiter": 0,
                       "collisionPass": 0,
                       "name": "CreateSoundOnProjectileExpireModel_Explosion",
                       "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.CreateSoundOnProjectileExpire, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"

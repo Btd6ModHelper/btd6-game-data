@@ -182,6 +182,7 @@
   "showBuffs": true,
   "destroyTowerOnRedistribution": false,
   "displayScale": 1.0,
+  "useAirUnitHeight": false,
   "baseId": "GlueGunner",
   "display": {
     "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
@@ -373,6 +374,11 @@
       "waterSound2": null,
       "heroSound1": null,
       "heroSound2": null,
+      "reactSound": null,
+      "reactSoundAlt": null,
+      "towerType": "",
+      "towerSkin": "",
+      "reactDelay": 0.0,
       "name": "CreateSoundOnTowerPlaceModel_GlueGunner-230",
       "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.CreateSoundOnTowerPlace, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
     },
@@ -495,7 +501,8 @@
                   "saveId": null,
                   "isAreaBuff": false,
                   "isGeraldoBuff": false,
-                  "isArtifactMutator": false
+                  "isArtifactMutator": false,
+                  "dontRemoveOnBloonDegrade": false
                 },
                 "name": "SlowModel_",
                 "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Slow, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
@@ -573,7 +580,8 @@
                         "saveId": null,
                         "isAreaBuff": false,
                         "isGeraldoBuff": false,
-                        "isArtifactMutator": false
+                        "isArtifactMutator": false,
+                        "dontRemoveOnBloonDegrade": false
                       },
                       "name": "SlowModel_",
                       "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Slow, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
@@ -753,7 +761,7 @@
               },
               {
                 "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.AddBehaviorToBloonModel, Assembly-CSharp",
-                "mutationId": "CorrosiveDot",
+                "mutationId": "Glue:CorrosiveDot",
                 "layers": 9999999,
                 "filter": null,
                 "filters": null,
@@ -778,7 +786,7 @@
                     "damageModifierModels": null,
                     "isFireBased": false,
                     "Interval": 2.0,
-                    "name": "DamageOverTimeModel_GlueDotCorrosiveDot",
+                    "name": "DamageOverTimeModel_GlueDotGlue:CorrosiveDot",
                     "ImplementationType": "Assets.Scripts.Simulation.Bloons.Behaviors.DamageOverTime, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
                     "interval": 2.0,
                     "initialDelay": 0.0
@@ -788,7 +796,7 @@
                 "lastAppliesFirst": false,
                 "collideThisFrame": false,
                 "cascadeMutators": false,
-                "glueLevel": 2,
+                "glueLevel": 0,
                 "applyOnlyIfDamaged": false,
                 "stackCount": 0,
                 "dontCopy": false,

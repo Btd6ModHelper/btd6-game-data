@@ -196,6 +196,7 @@
   "showBuffs": true,
   "destroyTowerOnRedistribution": false,
   "displayScale": 1.0,
+  "useAirUnitHeight": false,
   "baseId": "SuperMonkey",
   "display": {
     "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
@@ -392,6 +393,11 @@
       "waterSound2": null,
       "heroSound1": null,
       "heroSound2": null,
+      "reactSound": null,
+      "reactSoundAlt": null,
+      "towerType": "",
+      "towerSkin": "",
+      "reactDelay": 0.0,
       "name": "CreateSoundOnTowerPlaceModel_SuperMonkey-140",
       "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.CreateSoundOnTowerPlace, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
     },
@@ -451,7 +457,7 @@
             },
             "id": "Projectile",
             "maxPierce": 0.0,
-            "pierce": 9.0,
+            "pierce": 8.0,
             "scale": 1.0,
             "ignoreBlockers": false,
             "usePointCollisionWithBloons": false,
@@ -570,7 +576,7 @@
             "ignorePierceExhaustion": false,
             "saveId": null,
             "displayModel": null,
-            "CappedPierce": 9.0,
+            "CappedPierce": 8.0,
             "name": "ProjectileModel_Projectile",
             "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Projectile, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
             "checkCollisionInterval": 0.0
@@ -703,7 +709,7 @@
             "AssetGUID": "f7643f84261780e4eb32206948a687dc",
             "guidRef": "f7643f84261780e4eb32206948a687dc"
           },
-          "layer": 0,
+          "layer": -1,
           "positionOffset": {
             "$type": "Assets.Scripts.Simulation.SMath.Vector3, Assembly-CSharp",
             "x": 0.0,
@@ -770,7 +776,7 @@
             },
             "id": "Projectile",
             "maxPierce": 0.0,
-            "pierce": 9.0,
+            "pierce": 8.0,
             "scale": 1.0,
             "ignoreBlockers": false,
             "usePointCollisionWithBloons": false,
@@ -889,7 +895,7 @@
             "ignorePierceExhaustion": false,
             "saveId": null,
             "displayModel": null,
-            "CappedPierce": 9.0,
+            "CappedPierce": 8.0,
             "name": "ProjectileModel_Projectile",
             "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Projectile, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
             "checkCollisionInterval": 0.0
@@ -988,7 +994,7 @@
             "AssetGUID": "bde655ff72c7d47468b00e534f7cd7d9",
             "guidRef": "bde655ff72c7d47468b00e534f7cd7d9"
           },
-          "layer": 0,
+          "layer": -1,
           "positionOffset": {
             "$type": "Assets.Scripts.Simulation.SMath.Vector3, Assembly-CSharp",
             "x": 0.0,
@@ -1135,7 +1141,8 @@
                           "saveId": null,
                           "isAreaBuff": false,
                           "isGeraldoBuff": false,
-                          "isArtifactMutator": false
+                          "isArtifactMutator": false,
+                          "dontRemoveOnBloonDegrade": false
                         },
                         "name": "DistributeToChildrenBloonModifierModel_",
                         "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.DistributeToChildrenBloonModifier, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"

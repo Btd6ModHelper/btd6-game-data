@@ -18,8 +18,8 @@
   },
   "icon3D": {
     "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-    "AssetGUID": null,
-    "guidRef": null
+    "AssetGUID": "532fe203610de92418b9dfaedc91271b",
+    "guidRef": "532fe203610de92418b9dfaedc91271b"
   },
   "portrait": {
     "$type": "NinjaKiwi.Common.ResourceUtils.SpriteReference, NinjaKiwi.Common",
@@ -242,6 +242,7 @@
   "showBuffs": true,
   "destroyTowerOnRedistribution": false,
   "displayScale": 1.0,
+  "useAirUnitHeight": false,
   "baseId": "AdmiralBrickell",
   "display": {
     "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
@@ -544,6 +545,11 @@
         "name": "SoundModel_PlaceBrickell02",
         "ImplementationType": null
       },
+      "reactSound": null,
+      "reactSoundAlt": null,
+      "towerType": "",
+      "towerSkin": "",
+      "reactDelay": 0.0,
       "name": "CreateSoundOnTowerPlaceModel_AdmiralBrickell 17",
       "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.CreateSoundOnTowerPlace, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
     },
@@ -664,20 +670,20 @@
         "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
         "assetId": {
           "$type": "NinjaKiwi.Common.ResourceUtils.AudioClipReference, NinjaKiwi.Common",
-          "AssetGUID": "87b93f5e87364c24eafa8a3215e08816",
-          "guidRef": "87b93f5e87364c24eafa8a3215e08816"
+          "AssetGUID": "f09b32e6fdfaca146af56ea74683316f",
+          "guidRef": "f09b32e6fdfaca146af56ea74683316f"
         },
-        "name": "SoundModel_BfbWarningBrickell",
+        "name": "SoundModel_DdtWarningBrickell",
         "ImplementationType": null
       },
       "zomgSound": {
         "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
         "assetId": {
           "$type": "NinjaKiwi.Common.ResourceUtils.AudioClipReference, NinjaKiwi.Common",
-          "AssetGUID": "01ef852f491ae1141981fc821429c52f",
-          "guidRef": "01ef852f491ae1141981fc821429c52f"
+          "AssetGUID": "9a84bf1cc4ccee443aba5e47fd27537c",
+          "guidRef": "9a84bf1cc4ccee443aba5e47fd27537c"
         },
-        "name": "SoundModel_BadWarningBrickell",
+        "name": "SoundModel_ZomgWarningBrickell",
         "ImplementationType": null
       },
       "badSound": {
@@ -975,7 +981,7 @@
             "AssetGUID": "2956deea78ad4654cb9cd2446a62bab0",
             "guidRef": "2956deea78ad4654cb9cd2446a62bab0"
           },
-          "layer": 0,
+          "layer": -1,
           "positionOffset": {
             "$type": "Assets.Scripts.Simulation.SMath.Vector3, Assembly-CSharp",
             "x": 0.0,
@@ -1573,6 +1579,7 @@
                   "ImplementationType": "Assets.Scripts.Simulation.Towers.Emissions.SingleEmission, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
                 },
                 "useRotation": true,
+                "useTargetPosition": false,
                 "collisionPass": 0,
                 "name": "CreateProjectileOnExpireModel_",
                 "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.CreateProjectileOnExpire, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
@@ -2029,7 +2036,7 @@
               "guidRef": "e256a2def86325649be16d371246fdb4"
             },
             "scale": 1.0,
-            "lifespan": 9.0,
+            "lifespan": 8.0,
             "fullscreen": 0,
             "useCenterPosition": false,
             "useTransformPosition": true,
@@ -2096,7 +2103,7 @@
           "buffIconName": "BuffIconNavalTactics",
           "name": "ActivateRateSupportZoneModel_",
           "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.Abilities.Behaviors.ActivateRateSupportZone, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
-          "lifespan": 12.0
+          "lifespan": 10.0
         },
         {
           "$type": "Assets.Scripts.Models.Towers.Behaviors.Abilities.Behaviors.ActivatePierceSupportZoneModel, Assembly-CSharp",
@@ -2106,8 +2113,8 @@
           "mutatorId": "NavalTacticsPierce",
           "isUnique": true,
           "canEffectThisTower": true,
-          "lifespan": 12.0,
-          "lifespanFrames": 720.0,
+          "lifespan": 10.0,
+          "lifespanFrames": 600.0,
           "displayModel": null,
           "filters": [
             {
@@ -2155,7 +2162,7 @@
           "buffIconName": "BuffIconNavalTactics",
           "name": "ActivateTowerDamageSupportZoneModel_",
           "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.Abilities.Behaviors.ActivateTowerDamageSupportZone, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
-          "lifespan": 12.0
+          "lifespan": 10.0
         },
         {
           "$type": "Assets.Scripts.Models.Towers.Behaviors.Abilities.Behaviors.ActivateVisibilitySupportZoneModel, Assembly-CSharp",
@@ -2182,7 +2189,7 @@
           "buffIconName": "BuffIconNavalTactics",
           "name": "ActivateVisibilitySupportZoneModel_",
           "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.Abilities.Behaviors.ActivateVisibilitySupportZone, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
-          "lifespan": 12.0
+          "lifespan": 10.0
         }
       ],
       "activateOnPreLeak": false,
@@ -2480,7 +2487,8 @@
                               "saveId": null,
                               "isAreaBuff": false,
                               "isGeraldoBuff": false,
-                              "isArtifactMutator": false
+                              "isArtifactMutator": false,
+                              "dontRemoveOnBloonDegrade": false
                             },
                             "name": "SlowModel_",
                             "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Slow, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
@@ -2768,6 +2776,7 @@
                   "name": "EffectModel_",
                   "ImplementationType": null
                 },
+                "useTargetPosition": false,
                 "collisionPass": 0,
                 "name": "CreateEffectOnExpireModel_",
                 "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.CreateEffectOnExpire, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
@@ -2961,6 +2970,7 @@
             "showBuffs": true,
             "destroyTowerOnRedistribution": false,
             "displayScale": 1.0,
+            "useAirUnitHeight": false,
             "baseId": "",
             "display": {
               "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
@@ -3186,7 +3196,8 @@
             "saveId": null,
             "isAreaBuff": false,
             "isGeraldoBuff": false,
-            "isArtifactMutator": false
+            "isArtifactMutator": false,
+            "dontRemoveOnBloonDegrade": false
           },
           "name": "BrickellFreezeMinesAbilityBuffModel_",
           "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.Abilities.Behaviors.BrickellFreezeMinesAbilityBuff, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",

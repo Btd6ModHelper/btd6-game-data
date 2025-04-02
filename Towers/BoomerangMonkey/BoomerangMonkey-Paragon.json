@@ -182,6 +182,7 @@
   "showBuffs": true,
   "destroyTowerOnRedistribution": false,
   "displayScale": 1.0,
+  "useAirUnitHeight": false,
   "baseId": "BoomerangMonkey",
   "display": {
     "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
@@ -373,6 +374,11 @@
       "waterSound2": null,
       "heroSound1": null,
       "heroSound2": null,
+      "reactSound": null,
+      "reactSoundAlt": null,
+      "towerType": "",
+      "towerSkin": "",
+      "reactDelay": 0.0,
       "name": "CreateSoundOnTowerPlaceModel_BoomerangMonkey-Paragon",
       "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.CreateSoundOnTowerPlace, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
     },
@@ -746,7 +752,7 @@
             },
             "id": "Projectile",
             "maxPierce": 0.0,
-            "pierce": 80.0,
+            "pierce": 60.0,
             "scale": 1.0,
             "ignoreBlockers": true,
             "usePointCollisionWithBloons": false,
@@ -1024,7 +1030,7 @@
             "ignorePierceExhaustion": false,
             "saveId": null,
             "displayModel": null,
-            "CappedPierce": 80.0,
+            "CappedPierce": 60.0,
             "name": "ProjectileModel_Projectile",
             "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Projectile, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
             "checkCollisionInterval": 0.0
@@ -1164,7 +1170,7 @@
             },
             "id": "Projectile",
             "maxPierce": 0.0,
-            "pierce": 80.0,
+            "pierce": 200.0,
             "scale": 1.0,
             "ignoreBlockers": true,
             "usePointCollisionWithBloons": false,
@@ -1298,7 +1304,7 @@
             "ignorePierceExhaustion": false,
             "saveId": null,
             "displayModel": null,
-            "CappedPierce": 80.0,
+            "CappedPierce": 200.0,
             "name": "ProjectileModel_Projectile",
             "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Projectile, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
             "checkCollisionInterval": 0.0
@@ -1652,7 +1658,8 @@
                   "saveId": null,
                   "isAreaBuff": false,
                   "isGeraldoBuff": false,
-                  "isArtifactMutator": false
+                  "isArtifactMutator": false,
+                  "dontRemoveOnBloonDegrade": false
                 },
                 "name": "SlowForBloonModel_",
                 "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.SlowForBloon, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
@@ -1824,6 +1831,7 @@
                         "name": "SoundModel_Explosion05",
                         "ImplementationType": null
                       },
+                      "limiter": 0,
                       "collisionPass": 0,
                       "name": "CreateSoundOnProjectileExpireModel_Explosion",
                       "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.CreateSoundOnProjectileExpire, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"

@@ -163,6 +163,7 @@
   "showBuffs": true,
   "destroyTowerOnRedistribution": false,
   "displayScale": 1.0,
+  "useAirUnitHeight": false,
   "baseId": "Mermonkey",
   "display": {
     "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
@@ -185,7 +186,8 @@
         "saveId": null,
         "isAreaBuff": false,
         "isGeraldoBuff": false,
-        "isArtifactMutator": false
+        "isArtifactMutator": false,
+        "dontRemoveOnBloonDegrade": false
       },
       "name": "PlacementAreaTypeRangeBuffModel_",
       "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.PlacementBehaviors.PlacementAreaTypeRangeBuff, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
@@ -436,6 +438,11 @@
       },
       "heroSound1": null,
       "heroSound2": null,
+      "reactSound": null,
+      "reactSoundAlt": null,
+      "towerType": "",
+      "towerSkin": "",
+      "reactDelay": 0.0,
       "name": "CreateSoundOnTowerPlaceModel_Mermonkey-520",
       "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.CreateSoundOnTowerPlace, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
     },
@@ -531,7 +538,7 @@
                       "$type": "Assets.Scripts.Models.Towers.Filters.FilterOutTagModel, Assembly-CSharp",
                       "tag": "Lead",
                       "disableWhenSupportMutatorIDs": [
-                        "true"
+                        "MibMutator"
                       ],
                       "name": "FilterOutTagModel_TridentAOE",
                       "ImplementationType": "Assets.Scripts.Simulation.Towers.Filters.FilterOutTag, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
@@ -578,7 +585,7 @@
                           "$type": "Assets.Scripts.Models.Towers.Filters.FilterOutTagModel, Assembly-CSharp",
                           "tag": "Lead",
                           "disableWhenSupportMutatorIDs": [
-                            "true"
+                            "MibMutator"
                           ],
                           "name": "FilterOutTagModel_TridentAOE",
                           "ImplementationType": "Assets.Scripts.Simulation.Towers.Filters.FilterOutTag, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
@@ -656,7 +663,8 @@
                         "saveId": null,
                         "isAreaBuff": false,
                         "isGeraldoBuff": false,
-                        "isArtifactMutator": false
+                        "isArtifactMutator": false,
+                        "dontRemoveOnBloonDegrade": false
                       },
                       "name": "FreezeModel_",
                       "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Freeze, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
@@ -701,7 +709,8 @@
                         "saveId": null,
                         "isAreaBuff": false,
                         "isGeraldoBuff": false,
-                        "isArtifactMutator": false
+                        "isArtifactMutator": false,
+                        "dontRemoveOnBloonDegrade": false
                       },
                       "name": "SlowModel_",
                       "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Slow, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
@@ -1294,7 +1303,7 @@
             "AssetGUID": "873e60d68f3932b4b87fc588b7421568",
             "guidRef": "873e60d68f3932b4b87fc588b7421568"
           },
-          "layer": 0,
+          "layer": -1,
           "positionOffset": {
             "$type": "Assets.Scripts.Simulation.SMath.Vector3, Assembly-CSharp",
             "x": 0.0,
@@ -1682,7 +1691,7 @@
             "AssetGUID": "5b0f243865e5c8641910432c5e11da45",
             "guidRef": "5b0f243865e5c8641910432c5e11da45"
           },
-          "layer": 0,
+          "layer": -1,
           "positionOffset": {
             "$type": "Assets.Scripts.Simulation.SMath.Vector3, Assembly-CSharp",
             "x": 0.0,
@@ -2070,7 +2079,7 @@
             "AssetGUID": "62cac65fff370cf4fabae3ae9e680adf",
             "guidRef": "62cac65fff370cf4fabae3ae9e680adf"
           },
-          "layer": 0,
+          "layer": -1,
           "positionOffset": {
             "$type": "Assets.Scripts.Simulation.SMath.Vector3, Assembly-CSharp",
             "x": 0.0,
@@ -2458,7 +2467,7 @@
             "AssetGUID": "20869499c6aa3ae4495db1a46286bf80",
             "guidRef": "20869499c6aa3ae4495db1a46286bf80"
           },
-          "layer": 0,
+          "layer": -1,
           "positionOffset": {
             "$type": "Assets.Scripts.Simulation.SMath.Vector3, Assembly-CSharp",
             "x": 0.0,
@@ -2846,7 +2855,7 @@
             "AssetGUID": "d5fa689a2c7e8ba4b97eb14b804f7bb0",
             "guidRef": "d5fa689a2c7e8ba4b97eb14b804f7bb0"
           },
-          "layer": 0,
+          "layer": -1,
           "positionOffset": {
             "$type": "Assets.Scripts.Simulation.SMath.Vector3, Assembly-CSharp",
             "x": 0.0,
@@ -3234,7 +3243,7 @@
             "AssetGUID": "8896ab4c3776db946a39812ef9118348",
             "guidRef": "8896ab4c3776db946a39812ef9118348"
           },
-          "layer": 0,
+          "layer": -1,
           "positionOffset": {
             "$type": "Assets.Scripts.Simulation.SMath.Vector3, Assembly-CSharp",
             "x": 0.0,
@@ -3622,7 +3631,7 @@
             "AssetGUID": "28843e9fca6fe1b47b546cf34094fa80",
             "guidRef": "28843e9fca6fe1b47b546cf34094fa80"
           },
-          "layer": 0,
+          "layer": -1,
           "positionOffset": {
             "$type": "Assets.Scripts.Simulation.SMath.Vector3, Assembly-CSharp",
             "x": 0.0,
@@ -4010,7 +4019,7 @@
             "AssetGUID": "b04e330a66e4c5441b35f9cb4e1fb06d",
             "guidRef": "b04e330a66e4c5441b35f9cb4e1fb06d"
           },
-          "layer": 0,
+          "layer": -1,
           "positionOffset": {
             "$type": "Assets.Scripts.Simulation.SMath.Vector3, Assembly-CSharp",
             "x": 0.0,

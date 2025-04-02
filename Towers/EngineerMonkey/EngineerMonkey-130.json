@@ -181,6 +181,7 @@
   "showBuffs": true,
   "destroyTowerOnRedistribution": false,
   "displayScale": 1.0,
+  "useAirUnitHeight": false,
   "baseId": "EngineerMonkey",
   "display": {
     "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
@@ -372,6 +373,11 @@
       "waterSound2": null,
       "heroSound1": null,
       "heroSound2": null,
+      "reactSound": null,
+      "reactSoundAlt": null,
+      "towerType": "",
+      "towerSkin": "",
+      "reactDelay": 0.0,
       "name": "CreateSoundOnTowerPlaceModel_EngineerMonkey-130",
       "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.CreateSoundOnTowerPlace, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
     },
@@ -827,6 +833,7 @@
                   "showBuffs": true,
                   "destroyTowerOnRedistribution": false,
                   "displayScale": 1.0,
+                  "useAirUnitHeight": false,
                   "baseId": "Sentry",
                   "display": {
                     "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
@@ -968,6 +975,11 @@
                       "waterSound2": null,
                       "heroSound1": null,
                       "heroSound2": null,
+                      "reactSound": null,
+                      "reactSoundAlt": null,
+                      "towerType": "",
+                      "towerSkin": "",
+                      "reactDelay": 0.0,
                       "name": "CreateSoundOnTowerPlaceModel_Sentry",
                       "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.CreateSoundOnTowerPlace, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
                     },
@@ -1210,7 +1222,7 @@
                             "AssetGUID": "eccb1724c4f6bae4492f34509cdcda66",
                             "guidRef": "eccb1724c4f6bae4492f34509cdcda66"
                           },
-                          "layer": 0,
+                          "layer": -1,
                           "positionOffset": {
                             "$type": "Assets.Scripts.Simulation.SMath.Vector3, Assembly-CSharp",
                             "x": 0.0,
@@ -2176,6 +2188,8 @@
     {
       "$type": "Assets.Scripts.Models.Towers.Behaviors.StartOfRoundRateBuffModel, Assembly-CSharp",
       "modifier": 0.25,
+      "isUnique": true,
+      "mutatorId": "StartOfRoundRateBuff",
       "Duration": 1.0,
       "mutator": {
         "$type": "Assets.Scripts.Models.Towers.Behaviors.StartOfRoundRateBuffModel+RateMutator, Assembly-CSharp",
@@ -2188,7 +2202,8 @@
         "saveId": null,
         "isAreaBuff": false,
         "isGeraldoBuff": false,
-        "isArtifactMutator": false
+        "isArtifactMutator": false,
+        "dontRemoveOnBloonDegrade": false
       },
       "name": "StartOfRoundRateBuffModel_",
       "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.StartOfRoundRateBuff, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",

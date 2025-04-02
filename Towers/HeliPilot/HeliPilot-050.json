@@ -1,6 +1,6 @@
 {
   "$type": "Assets.Scripts.Models.Towers.TowerModel, Assembly-CSharp",
-  "cost": 1600.0,
+  "cost": 1500.0,
   "range": 22.0,
   "ignoreBlockers": false,
   "isGlobalRange": false,
@@ -189,6 +189,7 @@
   "showBuffs": true,
   "destroyTowerOnRedistribution": false,
   "displayScale": 1.0,
+  "useAirUnitHeight": false,
   "baseId": "HeliPilot",
   "display": {
     "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
@@ -417,6 +418,11 @@
       "waterSound2": null,
       "heroSound1": null,
       "heroSound2": null,
+      "reactSound": null,
+      "reactSoundAlt": null,
+      "towerType": "",
+      "towerSkin": "",
+      "reactDelay": 0.0,
       "name": "CreateSoundOnTowerPlaceModel_HeliPilot-050",
       "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.CreateSoundOnTowerPlace, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
     },
@@ -834,7 +840,7 @@
               },
               {
                 "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.WindModel, Assembly-CSharp",
-                "distanceMin": 32.0,
+                "distanceMin": 64.0,
                 "distanceMax": 150.0,
                 "chance": 1.0,
                 "affectMoab": false,
@@ -859,7 +865,8 @@
                   "saveId": null,
                   "isAreaBuff": false,
                   "isGeraldoBuff": false,
-                  "isArtifactMutator": false
+                  "isArtifactMutator": false,
+                  "dontRemoveOnBloonDegrade": false
                 },
                 "name": "WindModel_",
                 "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Wind, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
@@ -1004,17 +1011,17 @@
       "behaviors": [
         {
           "$type": "Assets.Scripts.Models.Towers.Behaviors.HeliMovementModel, Assembly-CSharp",
-          "maxSpeed": 87.5,
+          "maxSpeed": 100.0,
           "rotationSpeed": 0.08,
           "strafeDistance": 60.0,
           "strafeDistanceSquared": 3600.0,
           "otherHeliRepulsionRange": 30.0,
           "otherHeliRepulsionRangeSquared": 900.0,
-          "movementForceStart": 583.3333,
-          "movementForceEnd": 291.6667,
-          "movementForceEndSquared": 85069.45,
-          "brakeForce": 388.8889,
-          "otherHeliRepulsonForce": 583.3333,
+          "movementForceStart": 666.6667,
+          "movementForceEnd": 333.3333,
+          "movementForceEndSquared": 111111.094,
+          "brakeForce": 444.4445,
+          "otherHeliRepulsonForce": 666.6667,
           "slowdownRadiusMax": 15.0,
           "slowdownRadiusMaxSquared": 225.0,
           "slowdownRadiusMin": 0.01,
@@ -1104,7 +1111,8 @@
             "saveId": null,
             "isAreaBuff": false,
             "isGeraldoBuff": false,
-            "isArtifactMutator": false
+            "isArtifactMutator": false,
+            "dontRemoveOnBloonDegrade": false
           },
           "name": "RedeployModel_",
           "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.Abilities.Behaviors.Redeploy, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
@@ -1350,6 +1358,7 @@
                           "ImplementationType": "Assets.Scripts.Simulation.Towers.Emissions.SingleEmission, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
                         },
                         "useRotation": true,
+                        "useTargetPosition": false,
                         "collisionPass": 0,
                         "name": "CreateProjectileOnExpireModel_",
                         "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.CreateProjectileOnExpire, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
@@ -1365,6 +1374,7 @@
                         "fullscreen": 0,
                         "randomRotation": false,
                         "effectModel": null,
+                        "useTargetPosition": false,
                         "collisionPass": 0,
                         "name": "CreateEffectOnExpireModel_",
                         "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.CreateEffectOnExpire, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
@@ -1715,6 +1725,7 @@
                           "ImplementationType": "Assets.Scripts.Simulation.Towers.Emissions.SingleEmission, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
                         },
                         "useRotation": true,
+                        "useTargetPosition": false,
                         "collisionPass": 0,
                         "name": "CreateProjectileOnExpireModel_",
                         "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.CreateProjectileOnExpire, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
@@ -1730,6 +1741,7 @@
                         "fullscreen": 0,
                         "randomRotation": false,
                         "effectModel": null,
+                        "useTargetPosition": false,
                         "collisionPass": 0,
                         "name": "CreateEffectOnExpireModel_",
                         "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.CreateEffectOnExpire, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
@@ -2112,6 +2124,7 @@
             "showBuffs": true,
             "destroyTowerOnRedistribution": false,
             "displayScale": 1.0,
+            "useAirUnitHeight": false,
             "baseId": "Marine",
             "display": {
               "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
@@ -2722,6 +2735,7 @@
                           "showBuffs": true,
                           "destroyTowerOnRedistribution": false,
                           "displayScale": 1.0,
+                          "useAirUnitHeight": false,
                           "baseId": "Marine",
                           "display": {
                             "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",

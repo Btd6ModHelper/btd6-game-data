@@ -182,6 +182,7 @@
   "showBuffs": true,
   "destroyTowerOnRedistribution": false,
   "displayScale": 1.0,
+  "useAirUnitHeight": false,
   "baseId": "Mermonkey",
   "display": {
     "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
@@ -204,7 +205,8 @@
         "saveId": null,
         "isAreaBuff": false,
         "isGeraldoBuff": false,
-        "isArtifactMutator": false
+        "isArtifactMutator": false,
+        "dontRemoveOnBloonDegrade": false
       },
       "name": "PlacementAreaTypeRangeBuffModel_",
       "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.PlacementBehaviors.PlacementAreaTypeRangeBuff, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
@@ -443,6 +445,11 @@
       },
       "heroSound1": null,
       "heroSound2": null,
+      "reactSound": null,
+      "reactSoundAlt": null,
+      "towerType": "",
+      "towerSkin": "",
+      "reactDelay": 0.0,
       "name": "CreateSoundOnTowerPlaceModel_Mermonkey-400",
       "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.CreateSoundOnTowerPlace, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
     },
@@ -538,7 +545,7 @@
                       "$type": "Assets.Scripts.Models.Towers.Filters.FilterOutTagModel, Assembly-CSharp",
                       "tag": "Lead",
                       "disableWhenSupportMutatorIDs": [
-                        "true"
+                        "MibMutator"
                       ],
                       "name": "FilterOutTagModel_TridentAOE",
                       "ImplementationType": "Assets.Scripts.Simulation.Towers.Filters.FilterOutTag, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
@@ -585,7 +592,7 @@
                           "$type": "Assets.Scripts.Models.Towers.Filters.FilterOutTagModel, Assembly-CSharp",
                           "tag": "Lead",
                           "disableWhenSupportMutatorIDs": [
-                            "true"
+                            "MibMutator"
                           ],
                           "name": "FilterOutTagModel_TridentAOE",
                           "ImplementationType": "Assets.Scripts.Simulation.Towers.Filters.FilterOutTag, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
@@ -634,7 +641,8 @@
                         "saveId": null,
                         "isAreaBuff": false,
                         "isGeraldoBuff": false,
-                        "isArtifactMutator": false
+                        "isArtifactMutator": false,
+                        "dontRemoveOnBloonDegrade": false
                       },
                       "name": "SlowModel_",
                       "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Slow, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
@@ -1227,7 +1235,7 @@
             "AssetGUID": "a89289f879b3f3b4790258aa4797213b",
             "guidRef": "a89289f879b3f3b4790258aa4797213b"
           },
-          "layer": 0,
+          "layer": -1,
           "positionOffset": {
             "$type": "Assets.Scripts.Simulation.SMath.Vector3, Assembly-CSharp",
             "x": 0.0,
@@ -1615,7 +1623,7 @@
             "AssetGUID": "352ec032ab226164ab748830b92c06e8",
             "guidRef": "352ec032ab226164ab748830b92c06e8"
           },
-          "layer": 0,
+          "layer": -1,
           "positionOffset": {
             "$type": "Assets.Scripts.Simulation.SMath.Vector3, Assembly-CSharp",
             "x": 0.0,
@@ -2003,7 +2011,7 @@
             "AssetGUID": "f383e24cafc72dc4d88e9b9efa1173b0",
             "guidRef": "f383e24cafc72dc4d88e9b9efa1173b0"
           },
-          "layer": 0,
+          "layer": -1,
           "positionOffset": {
             "$type": "Assets.Scripts.Simulation.SMath.Vector3, Assembly-CSharp",
             "x": 0.0,
@@ -2391,7 +2399,7 @@
             "AssetGUID": "7056b722c5b53274391c0fe3a2d49ee8",
             "guidRef": "7056b722c5b53274391c0fe3a2d49ee8"
           },
-          "layer": 0,
+          "layer": -1,
           "positionOffset": {
             "$type": "Assets.Scripts.Simulation.SMath.Vector3, Assembly-CSharp",
             "x": 0.0,
@@ -2779,7 +2787,7 @@
             "AssetGUID": "2c65a4644bb50454588f359251e7f363",
             "guidRef": "2c65a4644bb50454588f359251e7f363"
           },
-          "layer": 0,
+          "layer": -1,
           "positionOffset": {
             "$type": "Assets.Scripts.Simulation.SMath.Vector3, Assembly-CSharp",
             "x": 0.0,
@@ -3167,7 +3175,7 @@
             "AssetGUID": "ac442c560ce63214eadc61d97028d444",
             "guidRef": "ac442c560ce63214eadc61d97028d444"
           },
-          "layer": 0,
+          "layer": -1,
           "positionOffset": {
             "$type": "Assets.Scripts.Simulation.SMath.Vector3, Assembly-CSharp",
             "x": 0.0,
@@ -3555,7 +3563,7 @@
             "AssetGUID": "aac064a439edcfe4ab4aa03b98341b81",
             "guidRef": "aac064a439edcfe4ab4aa03b98341b81"
           },
-          "layer": 0,
+          "layer": -1,
           "positionOffset": {
             "$type": "Assets.Scripts.Simulation.SMath.Vector3, Assembly-CSharp",
             "x": 0.0,
@@ -3943,7 +3951,7 @@
             "AssetGUID": "3c861d3529171f9408f74846bd62bd4b",
             "guidRef": "3c861d3529171f9408f74846bd62bd4b"
           },
-          "layer": 0,
+          "layer": -1,
           "positionOffset": {
             "$type": "Assets.Scripts.Simulation.SMath.Vector3, Assembly-CSharp",
             "x": 0.0,

@@ -237,6 +237,7 @@
   "showBuffs": true,
   "destroyTowerOnRedistribution": false,
   "displayScale": 1.0,
+  "useAirUnitHeight": false,
   "baseId": "Gwendolin",
   "display": {
     "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
@@ -277,15 +278,96 @@
     },
     {
       "$type": "Assets.Scripts.Models.Towers.Behaviors.CreateSoundOnUpgradeModel, Assembly-CSharp",
-      "sound": null,
-      "sound1": null,
-      "sound2": null,
-      "sound3": null,
-      "sound4": null,
-      "sound5": null,
-      "sound6": null,
-      "sound7": null,
-      "sound8": null,
+      "sound": {
+        "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
+        "assetId": {
+          "$type": "NinjaKiwi.Common.ResourceUtils.AudioClipReference, NinjaKiwi.Common",
+          "AssetGUID": "f91dc7ea1b37815459e81e99254863ab",
+          "guidRef": "f91dc7ea1b37815459e81e99254863ab"
+        },
+        "name": "SoundModel_TowerUpgrade",
+        "ImplementationType": null
+      },
+      "sound1": {
+        "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
+        "assetId": {
+          "$type": "NinjaKiwi.Common.ResourceUtils.AudioClipReference, NinjaKiwi.Common",
+          "AssetGUID": "e23554c10cd51ac4190fc95f2c77c509",
+          "guidRef": "e23554c10cd51ac4190fc95f2c77c509"
+        },
+        "name": "SoundModel_UpgradeGwenMaxLevel",
+        "ImplementationType": null
+      },
+      "sound2": {
+        "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
+        "assetId": {
+          "$type": "NinjaKiwi.Common.ResourceUtils.AudioClipReference, NinjaKiwi.Common",
+          "AssetGUID": "e23554c10cd51ac4190fc95f2c77c509",
+          "guidRef": "e23554c10cd51ac4190fc95f2c77c509"
+        },
+        "name": "SoundModel_UpgradeGwenMaxLevel",
+        "ImplementationType": null
+      },
+      "sound3": {
+        "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
+        "assetId": {
+          "$type": "NinjaKiwi.Common.ResourceUtils.AudioClipReference, NinjaKiwi.Common",
+          "AssetGUID": "e23554c10cd51ac4190fc95f2c77c509",
+          "guidRef": "e23554c10cd51ac4190fc95f2c77c509"
+        },
+        "name": "SoundModel_UpgradeGwenMaxLevel",
+        "ImplementationType": null
+      },
+      "sound4": {
+        "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
+        "assetId": {
+          "$type": "NinjaKiwi.Common.ResourceUtils.AudioClipReference, NinjaKiwi.Common",
+          "AssetGUID": "e23554c10cd51ac4190fc95f2c77c509",
+          "guidRef": "e23554c10cd51ac4190fc95f2c77c509"
+        },
+        "name": "SoundModel_UpgradeGwenMaxLevel",
+        "ImplementationType": null
+      },
+      "sound5": {
+        "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
+        "assetId": {
+          "$type": "NinjaKiwi.Common.ResourceUtils.AudioClipReference, NinjaKiwi.Common",
+          "AssetGUID": "e23554c10cd51ac4190fc95f2c77c509",
+          "guidRef": "e23554c10cd51ac4190fc95f2c77c509"
+        },
+        "name": "SoundModel_UpgradeGwenMaxLevel",
+        "ImplementationType": null
+      },
+      "sound6": {
+        "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
+        "assetId": {
+          "$type": "NinjaKiwi.Common.ResourceUtils.AudioClipReference, NinjaKiwi.Common",
+          "AssetGUID": "e23554c10cd51ac4190fc95f2c77c509",
+          "guidRef": "e23554c10cd51ac4190fc95f2c77c509"
+        },
+        "name": "SoundModel_UpgradeGwenMaxLevel",
+        "ImplementationType": null
+      },
+      "sound7": {
+        "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
+        "assetId": {
+          "$type": "NinjaKiwi.Common.ResourceUtils.AudioClipReference, NinjaKiwi.Common",
+          "AssetGUID": "e23554c10cd51ac4190fc95f2c77c509",
+          "guidRef": "e23554c10cd51ac4190fc95f2c77c509"
+        },
+        "name": "SoundModel_UpgradeGwenMaxLevel",
+        "ImplementationType": null
+      },
+      "sound8": {
+        "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
+        "assetId": {
+          "$type": "NinjaKiwi.Common.ResourceUtils.AudioClipReference, NinjaKiwi.Common",
+          "AssetGUID": "e23554c10cd51ac4190fc95f2c77c509",
+          "guidRef": "e23554c10cd51ac4190fc95f2c77c509"
+        },
+        "name": "SoundModel_UpgradeGwenMaxLevel",
+        "ImplementationType": null
+      },
       "name": "CreateSoundOnUpgradeModel_Gwendolin 20",
       "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.CreateSoundOnUpgrade, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
     },
@@ -544,6 +626,11 @@
         "name": "SoundModel_PlaceGwen02",
         "ImplementationType": null
       },
+      "reactSound": null,
+      "reactSoundAlt": null,
+      "towerType": "",
+      "towerSkin": "",
+      "reactDelay": 0.0,
       "name": "CreateSoundOnTowerPlaceModel_Gwendolin 20",
       "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.CreateSoundOnTowerPlace, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
     },
@@ -914,7 +1001,8 @@
                       "saveId": null,
                       "isAreaBuff": false,
                       "isGeraldoBuff": false,
-                      "isArtifactMutator": false
+                      "isArtifactMutator": false,
+                      "dontRemoveOnBloonDegrade": false
                     },
                     "name": "PierceUpTowersModel_",
                     "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.PierceUpTowers, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
@@ -962,7 +1050,8 @@
                       "saveId": null,
                       "isAreaBuff": false,
                       "isGeraldoBuff": false,
-                      "isArtifactMutator": false
+                      "isArtifactMutator": false,
+                      "dontRemoveOnBloonDegrade": false
                     },
                     "name": "DamageUpTowersModel_",
                     "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.DamageUpTowers, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
@@ -1028,7 +1117,8 @@
                       "saveId": null,
                       "isAreaBuff": false,
                       "isGeraldoBuff": false,
-                      "isArtifactMutator": false
+                      "isArtifactMutator": false,
+                      "dontRemoveOnBloonDegrade": false
                     },
                     "name": "HeatItUpDamageBuffModel_",
                     "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.HeatItUpDamageBuff, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
@@ -1073,7 +1163,8 @@
                       "saveId": null,
                       "isAreaBuff": false,
                       "isGeraldoBuff": false,
-                      "isArtifactMutator": false
+                      "isArtifactMutator": false,
+                      "dontRemoveOnBloonDegrade": false
                     },
                     "name": "DamageUpTagTowersModel_",
                     "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.DamageUpTagTowers, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
@@ -2235,7 +2326,8 @@
                           "saveId": null,
                           "isAreaBuff": false,
                           "isGeraldoBuff": false,
-                          "isArtifactMutator": false
+                          "isArtifactMutator": false,
+                          "dontRemoveOnBloonDegrade": false
                         },
                         "name": "PierceUpTowersModel_",
                         "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.PierceUpTowers, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
@@ -2294,7 +2386,8 @@
                           "saveId": null,
                           "isAreaBuff": false,
                           "isGeraldoBuff": false,
-                          "isArtifactMutator": false
+                          "isArtifactMutator": false,
+                          "dontRemoveOnBloonDegrade": false
                         },
                         "name": "HeatItUpDamageBuffModel_",
                         "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.HeatItUpDamageBuff, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
@@ -2319,7 +2412,8 @@
                           "saveId": null,
                           "isAreaBuff": false,
                           "isGeraldoBuff": false,
-                          "isArtifactMutator": false
+                          "isArtifactMutator": false,
+                          "dontRemoveOnBloonDegrade": false
                         },
                         "name": "DamageUpTowersModel_",
                         "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.DamageUpTowers, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
@@ -2364,7 +2458,8 @@
                           "saveId": null,
                           "isAreaBuff": false,
                           "isGeraldoBuff": false,
-                          "isArtifactMutator": false
+                          "isArtifactMutator": false,
+                          "dontRemoveOnBloonDegrade": false
                         },
                         "name": "DamageUpTagTowersModel_",
                         "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.DamageUpTagTowers, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",

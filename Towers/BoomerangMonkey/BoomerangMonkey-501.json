@@ -196,6 +196,7 @@
   "showBuffs": true,
   "destroyTowerOnRedistribution": false,
   "displayScale": 1.0,
+  "useAirUnitHeight": false,
   "baseId": "BoomerangMonkey",
   "display": {
     "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
@@ -387,6 +388,11 @@
       "waterSound2": null,
       "heroSound1": null,
       "heroSound2": null,
+      "reactSound": null,
+      "reactSoundAlt": null,
+      "towerType": "",
+      "towerSkin": "",
+      "reactDelay": 0.0,
       "name": "CreateSoundOnTowerPlaceModel_BoomerangMonkey-501",
       "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.CreateSoundOnTowerPlace, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
     },
@@ -552,7 +558,7 @@
             },
             "id": "Projectile",
             "maxPierce": 0.0,
-            "pierce": 80.0,
+            "pierce": 60.0,
             "scale": 1.0,
             "ignoreBlockers": true,
             "usePointCollisionWithBloons": false,
@@ -569,7 +575,7 @@
             "behaviors": [
               {
                 "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModel, Assembly-CSharp",
-                "damage": 8.0,
+                "damage": 6.0,
                 "maxDamage": 0.0,
                 "distributeToChildren": true,
                 "overrideDistributeBlocker": false,
@@ -578,7 +584,7 @@
                 "immuneBloonPropertiesOriginal": 17,
                 "ignoreImmunityDestroy": false,
                 "collisionPass": 0,
-                "CappedDamage": 8.0,
+                "CappedDamage": 6.0,
                 "name": "DamageModel_Projectile_",
                 "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Damage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
               },
@@ -710,7 +716,7 @@
                       "dontCopy": false,
                       "parentDamageModel": {
                         "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModel, Assembly-CSharp",
-                        "damage": 8.0,
+                        "damage": 6.0,
                         "maxDamage": 0.0,
                         "distributeToChildren": true,
                         "overrideDistributeBlocker": false,
@@ -719,7 +725,7 @@
                         "immuneBloonPropertiesOriginal": 17,
                         "ignoreImmunityDestroy": false,
                         "collisionPass": 0,
-                        "CappedDamage": 8.0,
+                        "CappedDamage": 6.0,
                         "name": "DamageModel_Projectile_",
                         "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Damage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
                       },
@@ -801,7 +807,7 @@
                   "Ceramic"
                 ],
                 "damageMultiplier": 1.0,
-                "damageAddative": 8.0,
+                "damageAddative": 10.0,
                 "mustIncludeAllTags": false,
                 "applyOverMaxDamage": false,
                 "collisionPass": 0,
@@ -851,7 +857,7 @@
             "ignorePierceExhaustion": false,
             "saveId": null,
             "displayModel": null,
-            "CappedPierce": 80.0,
+            "CappedPierce": 60.0,
             "name": "ProjectileModel_Projectile",
             "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Projectile, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
             "checkCollisionInterval": 0.0
@@ -998,7 +1004,7 @@
             },
             "id": "Projectile",
             "maxPierce": 0.0,
-            "pierce": 80.0,
+            "pierce": 200.0,
             "scale": 1.0,
             "ignoreBlockers": true,
             "usePointCollisionWithBloons": false,
@@ -1015,16 +1021,16 @@
             "behaviors": [
               {
                 "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModel, Assembly-CSharp",
-                "damage": 2.0,
+                "damage": 4.0,
                 "maxDamage": 0.0,
-                "distributeToChildren": true,
+                "distributeToChildren": false,
                 "overrideDistributeBlocker": false,
                 "createPopEffect": true,
                 "immuneBloonProperties": 17,
                 "immuneBloonPropertiesOriginal": 17,
                 "ignoreImmunityDestroy": false,
                 "collisionPass": 0,
-                "CappedDamage": 2.0,
+                "CappedDamage": 4.0,
                 "name": "DamageModel_Projectile_",
                 "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Damage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
               },
@@ -1061,21 +1067,7 @@
                   "Ceramic"
                 ],
                 "damageMultiplier": 1.0,
-                "damageAddative": 8.0,
-                "mustIncludeAllTags": false,
-                "applyOverMaxDamage": false,
-                "collisionPass": 0,
-                "name": "DamageModifierForTagModel_Projectile",
-                "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.DamageModifierForTag, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-              },
-              {
-                "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModifierForTagModel, Assembly-CSharp",
-                "tag": "Moabs",
-                "tags": [
-                  "Moabs"
-                ],
-                "damageMultiplier": 1.0,
-                "damageAddative": 5.0,
+                "damageAddative": 4.0,
                 "mustIncludeAllTags": false,
                 "applyOverMaxDamage": false,
                 "collisionPass": 0,
@@ -1124,7 +1116,7 @@
             "ignorePierceExhaustion": false,
             "saveId": null,
             "displayModel": null,
-            "CappedPierce": 80.0,
+            "CappedPierce": 200.0,
             "name": "ProjectileModel_Projectile",
             "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Projectile, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
             "checkCollisionInterval": 0.0
@@ -1142,12 +1134,12 @@
           "startInCooldown": false,
           "animateOnMainAttack": false,
           "isStunned": false,
-          "Rate": 0.08,
+          "Rate": 0.05,
           "UseThrowMarker": false,
           "name": "WeaponModel_OrbitDamage",
           "ImplementationType": "Assets.Scripts.Simulation.Towers.Weapons.Weapon, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
           "animationOffset": 0.0,
-          "rate": 0.08,
+          "rate": 0.05,
           "customStartCooldown": 0.0
         }
       ],
