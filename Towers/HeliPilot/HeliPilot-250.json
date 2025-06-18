@@ -477,6 +477,7 @@
             "projectileCount": 2,
             "rotateProjectileWithTower": false,
             "randomRotationCone": 0.0,
+            "spreadProjectilesAcrossMarkers": true,
             "behaviors": null,
             "name": "EmissionWithOffsetsModel_",
             "ImplementationType": "Assets.Scripts.Simulation.Towers.Emissions.EmissionWithOffsets, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
@@ -518,6 +519,7 @@
                 "immuneBloonProperties": 17,
                 "immuneBloonPropertiesOriginal": 17,
                 "ignoreImmunityDestroy": false,
+                "ignoreDamageMultipliers": false,
                 "collisionPass": 0,
                 "CappedDamage": 2.0,
                 "name": "DamageModel_Projectile_",
@@ -662,6 +664,7 @@
             "projectileCount": 2,
             "rotateProjectileWithTower": false,
             "randomRotationCone": 0.0,
+            "spreadProjectilesAcrossMarkers": true,
             "behaviors": null,
             "name": "EmissionWithOffsetsModel_",
             "ImplementationType": "Assets.Scripts.Simulation.Towers.Emissions.EmissionWithOffsets, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
@@ -703,6 +706,7 @@
                 "immuneBloonProperties": 17,
                 "immuneBloonPropertiesOriginal": 17,
                 "ignoreImmunityDestroy": false,
+                "ignoreDamageMultipliers": false,
                 "collisionPass": 0,
                 "CappedDamage": 2.0,
                 "name": "DamageModel_Projectile_",
@@ -830,6 +834,7 @@
                   "projectileCount": 2,
                   "rotateProjectileWithTower": false,
                   "randomRotationCone": 0.0,
+                  "spreadProjectilesAcrossMarkers": true,
                   "behaviors": null,
                   "name": "EmissionWithOffsetsModel_",
                   "ImplementationType": "Assets.Scripts.Simulation.Towers.Emissions.EmissionWithOffsets, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
@@ -871,6 +876,7 @@
                       "immuneBloonProperties": 17,
                       "immuneBloonPropertiesOriginal": 17,
                       "ignoreImmunityDestroy": false,
+                      "ignoreDamageMultipliers": false,
                       "collisionPass": 0,
                       "CappedDamage": 2.0,
                       "name": "DamageModel_Projectile_",
@@ -1092,6 +1098,7 @@
       "framesBeforeRetarget": 0,
       "addsToSharedGrid": true,
       "sharedGridRange": 22.0,
+      "drawRangeCircle": false,
       "name": "AttackModel_Attack_",
       "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.Attack.Attack, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
     },
@@ -1118,7 +1125,7 @@
               "guidRef": null
             },
             "id": "ProjectileDowndraft",
-            "maxPierce": 4.0,
+            "maxPierce": 0.0,
             "pierce": 4.0,
             "scale": 1.0,
             "ignoreBlockers": true,
@@ -1138,6 +1145,7 @@
                 "mutationIds": [
                   "Wind"
                 ],
+                "inverse": false,
                 "name": "FilterMutatedTargetModel_",
                 "ImplementationType": "Assets.Scripts.Simulation.Towers.Filters.FilterMutatedTarget, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
               },
@@ -1186,6 +1194,7 @@
                     "mutationIds": [
                       "Wind"
                     ],
+                    "inverse": false,
                     "name": "FilterMutatedTargetModel_",
                     "ImplementationType": "Assets.Scripts.Simulation.Towers.Filters.FilterMutatedTarget, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
                   },
@@ -1273,7 +1282,7 @@
               },
               {
                 "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.CollideExtraPierceReductionModel, Assembly-CSharp",
-                "bloonTag": "",
+                "bloonTag": "Ceramic",
                 "extraAmount": 1,
                 "destroyProjectileIfPierceNotEnough": false,
                 "collisionPass": -1,
@@ -1375,6 +1384,7 @@
       "framesBeforeRetarget": 0,
       "addsToSharedGrid": false,
       "sharedGridRange": 0.0,
+      "drawRangeCircle": false,
       "name": "AttackModel_Downdraft_Downdraft",
       "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.Attack.Attack, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
     },
@@ -1497,7 +1507,7 @@
       "maxActivationsPerRound": -1,
       "animation": 0,
       "enabled": true,
-      "canActivateBetweenRounds": false,
+      "canActivateBetweenRounds": true,
       "resetCooldownOnTierUpgrade": false,
       "activateOnLivesLost": false,
       "sharedCooldown": false,
@@ -1506,6 +1516,7 @@
       "additionalCharges": 0,
       "hideAbilityIfInCooldown": false,
       "startOffCooldown": false,
+      "alwaysSetAnimationState": false,
       "restrictAbilityAfterMaxRoundTimer": false,
       "CooldownSpeedScale": 0.0,
       "AnimationOffset": 0.0,
@@ -1901,6 +1912,7 @@
               "framesBeforeRetarget": 0,
               "addsToSharedGrid": false,
               "sharedGridRange": 0.0,
+              "drawRangeCircle": false,
               "name": "AttackModel_AttackCash_",
               "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.Attack.Attack, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
             },
@@ -2268,6 +2280,7 @@
               "framesBeforeRetarget": 0,
               "addsToSharedGrid": false,
               "sharedGridRange": 0.0,
+              "drawRangeCircle": false,
               "name": "AttackModel_AttackLives_",
               "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.Attack.Attack, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
             }
@@ -2301,6 +2314,7 @@
       "additionalCharges": 0,
       "hideAbilityIfInCooldown": false,
       "startOffCooldown": false,
+      "alwaysSetAnimationState": false,
       "restrictAbilityAfterMaxRoundTimer": true,
       "CooldownSpeedScale": 0.0,
       "AnimationOffset": 0.0,
@@ -2636,6 +2650,7 @@
                           "immuneBloonProperties": 0,
                           "immuneBloonPropertiesOriginal": 0,
                           "ignoreImmunityDestroy": false,
+                          "ignoreDamageMultipliers": false,
                           "collisionPass": 0,
                           "CappedDamage": 6.0,
                           "name": "DamageModel_Projectile_",
@@ -2788,6 +2803,7 @@
                 "framesBeforeRetarget": 0,
                 "addsToSharedGrid": true,
                 "sharedGridRange": 0.0,
+                "drawRangeCircle": false,
                 "name": "AttackModel_Attack_",
                 "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.Attack.Attack, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
               },
@@ -3218,6 +3234,7 @@
                                         "immuneBloonProperties": 0,
                                         "immuneBloonPropertiesOriginal": 0,
                                         "ignoreImmunityDestroy": false,
+                                        "ignoreDamageMultipliers": false,
                                         "collisionPass": 0,
                                         "CappedDamage": 6.0,
                                         "name": "DamageModel_Projectile_",
@@ -3370,6 +3387,7 @@
                               "framesBeforeRetarget": 0,
                               "addsToSharedGrid": true,
                               "sharedGridRange": 0.0,
+                              "drawRangeCircle": false,
                               "name": "AttackModel_Attack_",
                               "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.Attack.Attack, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
                             },
@@ -3565,6 +3583,7 @@
               "framesBeforeRetarget": 0,
               "addsToSharedGrid": false,
               "sharedGridRange": 0.0,
+              "drawRangeCircle": false,
               "name": "AttackModel_Spawner_",
               "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.Attack.Attack, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
             }
@@ -3615,6 +3634,7 @@
       "additionalCharges": 0,
       "hideAbilityIfInCooldown": false,
       "startOffCooldown": false,
+      "alwaysSetAnimationState": false,
       "restrictAbilityAfterMaxRoundTimer": false,
       "CooldownSpeedScale": 0.0,
       "AnimationOffset": 0.0,

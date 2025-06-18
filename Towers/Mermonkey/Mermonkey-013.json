@@ -1,6 +1,6 @@
 {
   "$type": "Assets.Scripts.Models.Towers.TowerModel, Assembly-CSharp",
-  "cost": 475.0,
+  "cost": 375.0,
   "range": 28.0,
   "ignoreBlockers": false,
   "isGlobalRange": false,
@@ -419,11 +419,6 @@
             "ImplementationType": "Assets.Scripts.Simulation.Towers.Filters.FilterInvisible, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
           },
           {
-            "$type": "Assets.Scripts.Models.Towers.Filters.FilterOfftrackModel, Assembly-CSharp",
-            "name": "FilterOfftrackModel_Projectile",
-            "ImplementationType": "Assets.Scripts.Simulation.Towers.Filters.FilterOfftrack, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-          },
-          {
             "$type": "Assets.Scripts.Models.Towers.Filters.FilterOutTagModel, Assembly-CSharp",
             "tag": "Moabs",
             "disableWhenSupportMutatorIDs": [],
@@ -461,12 +456,13 @@
               "immuneBloonProperties": 8,
               "immuneBloonPropertiesOriginal": 8,
               "ignoreImmunityDestroy": true,
+              "ignoreDamageMultipliers": false,
               "collisionPass": 0,
               "CappedDamage": 0.0,
               "name": "DamageModel_FakeDamage_",
               "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Damage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
             },
-            "maxDotDamage": 200,
+            "maxDotDamage": 50,
             "collisionPass": 0,
             "Mutator": {
               "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.OrbitBloonProjectileMutator, Assembly-CSharp",
@@ -530,11 +526,6 @@
                 "ignoreBroadPhase": false,
                 "name": "FilterInvisibleModel_",
                 "ImplementationType": "Assets.Scripts.Simulation.Towers.Filters.FilterInvisible, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-              },
-              {
-                "$type": "Assets.Scripts.Models.Towers.Filters.FilterOfftrackModel, Assembly-CSharp",
-                "name": "FilterOfftrackModel_Projectile",
-                "ImplementationType": "Assets.Scripts.Simulation.Towers.Filters.FilterOfftrack, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
               },
               {
                 "$type": "Assets.Scripts.Models.Towers.Filters.FilterOutTagModel, Assembly-CSharp",
@@ -789,6 +780,7 @@
                       "immuneBloonProperties": 1,
                       "immuneBloonPropertiesOriginal": 1,
                       "ignoreImmunityDestroy": false,
+                      "ignoreDamageMultipliers": false,
                       "collisionPass": 0,
                       "CappedDamage": 2.0,
                       "name": "DamageModel_TridentAOE_",
@@ -1020,6 +1012,7 @@
       "framesBeforeRetarget": 0,
       "addsToSharedGrid": true,
       "sharedGridRange": 0.0,
+      "drawRangeCircle": false,
       "name": "AttackModel_Attack_",
       "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.Attack.Attack, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
     },
@@ -1094,11 +1087,6 @@
                 "ImplementationType": "Assets.Scripts.Simulation.Towers.Filters.FilterInvisible, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
               },
               {
-                "$type": "Assets.Scripts.Models.Towers.Filters.FilterOfftrackModel, Assembly-CSharp",
-                "name": "FilterOfftrackModel_Projectile",
-                "ImplementationType": "Assets.Scripts.Simulation.Towers.Filters.FilterOfftrack, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-              },
-              {
                 "$type": "Assets.Scripts.Models.Towers.Filters.FilterOutTagModel, Assembly-CSharp",
                 "tag": "Moabs",
                 "disableWhenSupportMutatorIDs": [],
@@ -1136,12 +1124,13 @@
                   "immuneBloonProperties": 8,
                   "immuneBloonPropertiesOriginal": 8,
                   "ignoreImmunityDestroy": true,
+                  "ignoreDamageMultipliers": false,
                   "collisionPass": 0,
                   "CappedDamage": 0.0,
                   "name": "DamageModel_FakeDamage_",
                   "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Damage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
                 },
-                "maxDotDamage": 200,
+                "maxDotDamage": 50,
                 "collisionPass": 0,
                 "Mutator": {
                   "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.OrbitBloonProjectileMutator, Assembly-CSharp",
@@ -1205,11 +1194,6 @@
                     "ignoreBroadPhase": false,
                     "name": "FilterInvisibleModel_",
                     "ImplementationType": "Assets.Scripts.Simulation.Towers.Filters.FilterInvisible, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-                  },
-                  {
-                    "$type": "Assets.Scripts.Models.Towers.Filters.FilterOfftrackModel, Assembly-CSharp",
-                    "name": "FilterOfftrackModel_Projectile",
-                    "ImplementationType": "Assets.Scripts.Simulation.Towers.Filters.FilterOfftrack, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
                   },
                   {
                     "$type": "Assets.Scripts.Models.Towers.Filters.FilterOutTagModel, Assembly-CSharp",
@@ -1436,15 +1420,6 @@
               "hasMoabTag": true,
               "name": "FilterWithTagModel_",
               "ImplementationType": "Assets.Scripts.Simulation.Towers.Filters.FilterWithTag, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-            },
-            {
-              "$type": "Assets.Scripts.Models.Towers.Filters.FilterMutatedTargetModel, Assembly-CSharp",
-              "mutationId": "Trance",
-              "mutationIds": [
-                "Trance"
-              ],
-              "name": "FilterMutatedTargetModel_",
-              "ImplementationType": "Assets.Scripts.Simulation.Towers.Filters.FilterMutatedTarget, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
             }
           ],
           "name": "AttackFilterModel_",
@@ -1461,6 +1436,7 @@
       "framesBeforeRetarget": 0,
       "addsToSharedGrid": false,
       "sharedGridRange": 0.0,
+      "drawRangeCircle": false,
       "name": "AttackModel_AttackTrance_",
       "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.Attack.Attack, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
     },

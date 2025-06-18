@@ -129,7 +129,7 @@
     },
     {
       "$type": "Assets.Scripts.Models.Towers.TargetType, Assembly-CSharp",
-      "id": "FarTrack",
+      "id": "SmartTrack",
       "isActionable": false,
       "actionOnCreate": false,
       "intID": -1,
@@ -137,7 +137,15 @@
     },
     {
       "$type": "Assets.Scripts.Models.Towers.TargetType, Assembly-CSharp",
-      "id": "SmartTrack",
+      "id": "TargetSelectedPoint",
+      "isActionable": true,
+      "actionOnCreate": true,
+      "intID": -1,
+      "continueToNextPriority": false
+    },
+    {
+      "$type": "Assets.Scripts.Models.Towers.TargetType, Assembly-CSharp",
+      "id": "AutoTrack",
       "isActionable": false,
       "actionOnCreate": false,
       "intID": -1,
@@ -156,7 +164,7 @@
   "powerName": null,
   "showPowerTowerBuffs": false,
   "animationSpeed": 1.0,
-  "towerSelectionMenuThemeId": "Default",
+  "towerSelectionMenuThemeId": "ActionButton",
   "secondarySelectionMenu": {
     "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
     "AssetGUID": null,
@@ -466,6 +474,7 @@
                 "immuneBloonProperties": 17,
                 "immuneBloonPropertiesOriginal": 17,
                 "ignoreImmunityDestroy": false,
+                "ignoreDamageMultipliers": false,
                 "collisionPass": 0,
                 "CappedDamage": 10.0,
                 "name": "DamageModel_Projectile_",
@@ -846,16 +855,6 @@
           "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.Attack.Behaviors.CloseTargetTrack, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
         },
         {
-          "$type": "Assets.Scripts.Models.Towers.Behaviors.Attack.Behaviors.FarTargetTrackModel, Assembly-CSharp",
-          "radius": 5.0,
-          "isSelectable": true,
-          "maxOffset": 3.0,
-          "donutRadius": 7.0,
-          "isOnSubTower": false,
-          "name": "FarTargetTrackModel_",
-          "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.Attack.Behaviors.FarTargetTrack, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-        },
-        {
           "$type": "Assets.Scripts.Models.Towers.Behaviors.Attack.Behaviors.SmartTargetTrackModel, Assembly-CSharp",
           "radius": 5.0,
           "isSelectable": true,
@@ -877,6 +876,39 @@
           ],
           "name": "AttackFilterModel_",
           "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.Attack.Behaviors.AttackFilter, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+        },
+        {
+          "$type": "Assets.Scripts.Models.Towers.Behaviors.Attack.Behaviors.TargetSelectedPointModel, Assembly-CSharp",
+          "isSelectable": true,
+          "display": {
+            "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
+            "AssetGUID": "f786dd2ad0e3e8649a8ff0ac9f8cc6fb",
+            "guidRef": "f786dd2ad0e3e8649a8ff0ac9f8cc6fb"
+          },
+          "scale": 1.0,
+          "customName": "",
+          "lockToInsideTowerRange": true,
+          "startWithClosestTrackPoint": true,
+          "displayInvalid": {
+            "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
+            "AssetGUID": "d053160180f53da43be4f9972ee1497a",
+            "guidRef": "d053160180f53da43be4f9972ee1497a"
+          },
+          "alwaysShowTarget": false,
+          "projectileToExpireOnTargetChangeModel": null,
+          "useTerrainHeight": false,
+          "isOnSubTower": false,
+          "name": "TargetSelectedPointModel_",
+          "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.Attack.Behaviors.TargetSelectedPoint, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+        },
+        {
+          "$type": "Assets.Scripts.Models.Towers.Behaviors.Attack.Behaviors.AutoTargetTrackModel, Assembly-CSharp",
+          "radius": 5.0,
+          "isSelectable": true,
+          "maxOffset": 3.0,
+          "isOnSubTower": false,
+          "name": "AutoTargetTrackModel_",
+          "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.Attack.Behaviors.AutoTargetTrack, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
         }
       ],
       "range": 42.0,
@@ -889,6 +921,7 @@
       "framesBeforeRetarget": 0,
       "addsToSharedGrid": true,
       "sharedGridRange": 0.0,
+      "drawRangeCircle": false,
       "name": "AttackModel_Attack_",
       "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.Attack.Attack, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
     },
@@ -944,7 +977,7 @@
     },
     {
       "$type": "Assets.Scripts.Models.Towers.TargetType, Assembly-CSharp",
-      "id": "FarTrack",
+      "id": "SmartTrack",
       "isActionable": false,
       "actionOnCreate": false,
       "intID": -1,
@@ -952,7 +985,15 @@
     },
     {
       "$type": "Assets.Scripts.Models.Towers.TargetType, Assembly-CSharp",
-      "id": "SmartTrack",
+      "id": "TargetSelectedPoint",
+      "isActionable": true,
+      "actionOnCreate": true,
+      "intID": -1,
+      "continueToNextPriority": false
+    },
+    {
+      "$type": "Assets.Scripts.Models.Towers.TargetType, Assembly-CSharp",
+      "id": "AutoTrack",
       "isActionable": false,
       "actionOnCreate": false,
       "intID": -1,

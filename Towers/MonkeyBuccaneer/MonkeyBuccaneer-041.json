@@ -497,6 +497,7 @@
                 "immuneBloonProperties": 8,
                 "immuneBloonPropertiesOriginal": 8,
                 "ignoreImmunityDestroy": false,
+                "ignoreDamageMultipliers": false,
                 "collisionPass": 0,
                 "CappedDamage": 5.0,
                 "name": "DamageModel_Projectile_",
@@ -570,6 +571,7 @@
                 "dontCopy": false,
                 "parentDamageModel": null,
                 "chance": 0.0,
+                "dontRemoveOnBloonDegrade": false,
                 "overlayType": "Fire",
                 "collisionPass": -1,
                 "name": "AddBehaviorToBloonModel_",
@@ -713,6 +715,7 @@
                 "immuneBloonProperties": 8,
                 "immuneBloonPropertiesOriginal": 8,
                 "ignoreImmunityDestroy": false,
+                "ignoreDamageMultipliers": false,
                 "collisionPass": 0,
                 "CappedDamage": 5.0,
                 "name": "DamageModel_Projectile_",
@@ -786,6 +789,7 @@
                 "dontCopy": false,
                 "parentDamageModel": null,
                 "chance": 0.0,
+                "dontRemoveOnBloonDegrade": false,
                 "overlayType": "Fire",
                 "collisionPass": -1,
                 "name": "AddBehaviorToBloonModel_",
@@ -989,6 +993,7 @@
                       "immuneBloonProperties": 2,
                       "immuneBloonPropertiesOriginal": 2,
                       "ignoreImmunityDestroy": false,
+                      "ignoreDamageMultipliers": false,
                       "collisionPass": 0,
                       "CappedDamage": 3.0,
                       "name": "DamageModel_Explosion_",
@@ -1124,6 +1129,7 @@
                       "immuneBloonProperties": 17,
                       "immuneBloonPropertiesOriginal": 17,
                       "ignoreImmunityDestroy": false,
+                      "ignoreDamageMultipliers": false,
                       "collisionPass": 0,
                       "CappedDamage": 1.0,
                       "name": "DamageModel_Frag_",
@@ -1468,6 +1474,7 @@
                       "immuneBloonProperties": 2,
                       "immuneBloonPropertiesOriginal": 2,
                       "ignoreImmunityDestroy": false,
+                      "ignoreDamageMultipliers": false,
                       "collisionPass": 0,
                       "CappedDamage": 3.0,
                       "name": "DamageModel_Explosion_",
@@ -1603,6 +1610,7 @@
                       "immuneBloonProperties": 17,
                       "immuneBloonPropertiesOriginal": 17,
                       "ignoreImmunityDestroy": false,
+                      "ignoreDamageMultipliers": false,
                       "collisionPass": 0,
                       "CappedDamage": 1.0,
                       "name": "DamageModel_Frag_",
@@ -1912,6 +1920,7 @@
       "framesBeforeRetarget": 0,
       "addsToSharedGrid": true,
       "sharedGridRange": 0.0,
+      "drawRangeCircle": false,
       "name": "AttackModel_Attack_",
       "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.Attack.Attack, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
     },
@@ -1967,6 +1976,7 @@
                     "filters": [
                       {
                         "$type": "Assets.Scripts.Models.Towers.Filters.FilterAllExceptTargetModel, Assembly-CSharp",
+                        "cantbePaused": true,
                         "name": "FilterAllExceptTargetModel_",
                         "ImplementationType": "Assets.Scripts.Simulation.Towers.Filters.FilterAllExceptTarget, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
                       }
@@ -1977,6 +1987,7 @@
                         "filters": [
                           {
                             "$type": "Assets.Scripts.Models.Towers.Filters.FilterAllExceptTargetModel, Assembly-CSharp",
+                            "cantbePaused": true,
                             "name": "FilterAllExceptTargetModel_",
                             "ImplementationType": "Assets.Scripts.Simulation.Towers.Filters.FilterAllExceptTarget, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
                           }
@@ -2259,18 +2270,15 @@
                       "ImplementationType": "Assets.Scripts.Simulation.Towers.Filters.FilterInvisible, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
                     },
                     {
-                      "$type": "Assets.Scripts.Models.Towers.Filters.FilterOutTagModel, Assembly-CSharp",
-                      "tag": "Zomg",
-                      "disableWhenSupportMutatorIDs": [],
-                      "name": "FilterOutTagModel_Grapple",
-                      "ImplementationType": "Assets.Scripts.Simulation.Towers.Filters.FilterOutTag, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-                    },
-                    {
-                      "$type": "Assets.Scripts.Models.Towers.Filters.FilterOutTagModel, Assembly-CSharp",
-                      "tag": "Bad",
-                      "disableWhenSupportMutatorIDs": [],
-                      "name": "FilterOutTagModel_Grapple",
-                      "ImplementationType": "Assets.Scripts.Simulation.Towers.Filters.FilterOutTag, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+                      "$type": "Assets.Scripts.Models.Towers.Filters.FilterWithTagsModel, Assembly-CSharp",
+                      "tags": [
+                        "Zomg",
+                        "Bad",
+                        "Rock"
+                      ],
+                      "inclusive": true,
+                      "name": "FilterWithTagsModel_",
+                      "ImplementationType": "Assets.Scripts.Simulation.Towers.Filters.FilterWithTags, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
                     }
                   ],
                   "name": "AttackFilterModel_",
@@ -2320,6 +2328,7 @@
               "framesBeforeRetarget": 0,
               "addsToSharedGrid": false,
               "sharedGridRange": 0.0,
+              "drawRangeCircle": false,
               "name": "AttackModel_Grapple_",
               "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.Attack.Attack, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
             }
@@ -2370,6 +2379,7 @@
       "additionalCharges": 0,
       "hideAbilityIfInCooldown": false,
       "startOffCooldown": false,
+      "alwaysSetAnimationState": false,
       "restrictAbilityAfterMaxRoundTimer": false,
       "CooldownSpeedScale": 0.0,
       "AnimationOffset": 0.0,

@@ -767,6 +767,7 @@
                         "immuneBloonProperties": 8,
                         "immuneBloonPropertiesOriginal": 8,
                         "ignoreImmunityDestroy": false,
+                        "ignoreDamageMultipliers": false,
                         "collisionPass": 0,
                         "CappedDamage": 10.0,
                         "name": "DamageModel_Lightning_",
@@ -901,7 +902,7 @@
                   },
                   "pierceInterval": 1.0,
                   "count": 9999999,
-                  "minimumTimeDifferenceInFrames": 9,
+                  "minimumTimeDifferenceInFrames": 18,
                   "destroyProjectile": true,
                   "assetId": {
                     "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
@@ -1148,6 +1149,7 @@
         "framesBeforeRetarget": 0,
         "addsToSharedGrid": false,
         "sharedGridRange": 0.0,
+        "drawRangeCircle": false,
         "name": "AttackModel_SpearAttack_Spear",
         "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.Attack.Attack, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
       },
@@ -1857,6 +1859,7 @@
                       "immuneBloonProperties": 9,
                       "immuneBloonPropertiesOriginal": 9,
                       "ignoreImmunityDestroy": true,
+                      "ignoreDamageMultipliers": false,
                       "collisionPass": 0,
                       "CappedDamage": 20.0,
                       "name": "DamageModel_MainProjectile_",
@@ -2034,6 +2037,7 @@
                           "immuneBloonProperties": 9,
                           "immuneBloonPropertiesOriginal": 9,
                           "ignoreImmunityDestroy": true,
+                          "ignoreDamageMultipliers": false,
                           "collisionPass": 0,
                           "CappedDamage": 20.0,
                           "name": "DamageModel_MainProjectile_",
@@ -2194,6 +2198,7 @@
             "framesBeforeRetarget": 0,
             "addsToSharedGrid": false,
             "sharedGridRange": 0.0,
+            "drawRangeCircle": false,
             "name": "AttackModel_Attack_SpiritAttack",
             "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.Attack.Attack, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
           },
@@ -2252,6 +2257,7 @@
                       "immuneBloonProperties": 9,
                       "immuneBloonPropertiesOriginal": 9,
                       "ignoreImmunityDestroy": false,
+                      "ignoreDamageMultipliers": false,
                       "collisionPass": 0,
                       "CappedDamage": 2.0,
                       "name": "DamageModel_Projectile_",
@@ -2372,6 +2378,7 @@
             "framesBeforeRetarget": 0,
             "addsToSharedGrid": false,
             "sharedGridRange": 0.0,
+            "drawRangeCircle": false,
             "name": "AttackModel_StormAttack_Storm",
             "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.Attack.Attack, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
           },
@@ -2475,6 +2482,7 @@
                             "immuneBloonProperties": 8,
                             "immuneBloonPropertiesOriginal": 8,
                             "ignoreImmunityDestroy": false,
+                            "ignoreDamageMultipliers": false,
                             "collisionPass": 0,
                             "CappedDamage": 10.0,
                             "name": "DamageModel_Lightning_",
@@ -2609,7 +2617,7 @@
                       },
                       "pierceInterval": 1.0,
                       "count": 9999999,
-                      "minimumTimeDifferenceInFrames": 9,
+                      "minimumTimeDifferenceInFrames": 18,
                       "destroyProjectile": true,
                       "assetId": {
                         "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
@@ -2856,6 +2864,7 @@
             "framesBeforeRetarget": 0,
             "addsToSharedGrid": false,
             "sharedGridRange": 0.0,
+            "drawRangeCircle": false,
             "name": "AttackModel_SpearAttack_Spear",
             "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.Attack.Attack, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
           },
@@ -2908,6 +2917,7 @@
                       "immuneBloonProperties": 8,
                       "immuneBloonPropertiesOriginal": 8,
                       "ignoreImmunityDestroy": false,
+                      "ignoreDamageMultipliers": false,
                       "collisionPass": 0,
                       "CappedDamage": 2.0,
                       "name": "DamageModel_Projectile_",
@@ -3033,6 +3043,7 @@
             "framesBeforeRetarget": 0,
             "addsToSharedGrid": false,
             "sharedGridRange": 0.0,
+            "drawRangeCircle": false,
             "name": "AttackModel_EmberAttack_Ember",
             "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.Attack.Attack, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
           },
@@ -3423,6 +3434,7 @@
             "immuneBloonProperties": 0,
             "immuneBloonPropertiesOriginal": 0,
             "ignoreImmunityDestroy": true,
+            "ignoreDamageMultipliers": false,
             "collisionPass": 0,
             "CappedDamage": 40.0,
             "name": "DamageModel_Trample_",
@@ -3818,6 +3830,15 @@
             "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.FreezeModifierForTags, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
           },
           {
+            "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.CollideExtraPierceReductionModel, Assembly-CSharp",
+            "bloonTag": "Moabs",
+            "extraAmount": 4,
+            "destroyProjectileIfPierceNotEnough": false,
+            "collisionPass": -1,
+            "name": "CollideExtraPierceReductionModel_Moabs",
+            "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.CollideExtraPierceReduction, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+          },
+          {
             "$type": "Assets.Scripts.Models.GenericBehaviors.DisplayModel, Assembly-CSharp",
             "display": {
               "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
@@ -3865,9 +3886,9 @@
         "name": "SingleEmissionModel_CorvusEmission_Frostbound",
         "ImplementationType": "Assets.Scripts.Simulation.Towers.Emissions.SingleEmission, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
       },
-      "duration": 8.0,
-      "cooldown": 50.0,
-      "initialManaCost": 190,
+      "duration": 10.0,
+      "cooldown": 60.0,
+      "initialManaCost": 220,
       "placingPrefabReference": {
         "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
         "AssetGUID": "b9358fceb479eb94b87760a191750849",
@@ -4149,6 +4170,7 @@
                   "immuneBloonProperties": 8,
                   "immuneBloonPropertiesOriginal": 8,
                   "ignoreImmunityDestroy": false,
+                  "ignoreDamageMultipliers": false,
                   "collisionPass": 0,
                   "CappedDamage": 2.0,
                   "name": "DamageModel_Projectile_",
@@ -4274,6 +4296,7 @@
         "framesBeforeRetarget": 0,
         "addsToSharedGrid": false,
         "sharedGridRange": 0.0,
+        "drawRangeCircle": false,
         "name": "AttackModel_EmberAttack_Ember",
         "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.Attack.Attack, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
       },
@@ -4428,6 +4451,7 @@
                   "immuneBloonProperties": 9,
                   "immuneBloonPropertiesOriginal": 9,
                   "ignoreImmunityDestroy": false,
+                  "ignoreDamageMultipliers": false,
                   "collisionPass": 0,
                   "CappedDamage": 5.0,
                   "name": "DamageModel_Pulse_",
@@ -4553,6 +4577,7 @@
         "framesBeforeRetarget": 0,
         "addsToSharedGrid": false,
         "sharedGridRange": 0.0,
+        "drawRangeCircle": false,
         "name": "AttackModel_MalevolenceAttack_Malevolence",
         "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.Attack.Attack, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
       },
@@ -4705,6 +4730,7 @@
                         "immuneBloonProperties": 8,
                         "immuneBloonPropertiesOriginal": 8,
                         "ignoreImmunityDestroy": false,
+                        "ignoreDamageMultipliers": false,
                         "collisionPass": 0,
                         "CappedDamage": 150.0,
                         "name": "DamageModel_AoE_",
@@ -4972,6 +4998,7 @@
         "framesBeforeRetarget": 0,
         "addsToSharedGrid": true,
         "sharedGridRange": 0.0,
+        "drawRangeCircle": false,
         "name": "AttackModel_AncestralMight_AncestralMight",
         "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.Attack.Attack, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
       },
@@ -5112,6 +5139,7 @@
                   "immuneBloonProperties": 9,
                   "immuneBloonPropertiesOriginal": 9,
                   "ignoreImmunityDestroy": false,
+                  "ignoreDamageMultipliers": false,
                   "collisionPass": 0,
                   "CappedDamage": 2.0,
                   "name": "DamageModel_Projectile_",
@@ -5232,10 +5260,11 @@
         "framesBeforeRetarget": 0,
         "addsToSharedGrid": false,
         "sharedGridRange": 0.0,
+        "drawRangeCircle": false,
         "name": "AttackModel_StormAttack_Storm",
         "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.Attack.Attack, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
       },
-      "ongoingManaCost": 15,
+      "ongoingManaCost": 12,
       "manaDrainInterval": 1.0,
       "initialManaCost": 120,
       "placingPrefabReference": {
@@ -5415,7 +5444,7 @@
         "behaviors": [
           {
             "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModel, Assembly-CSharp",
-            "damage": 1150.0,
+            "damage": 700.0,
             "maxDamage": 0.0,
             "distributeToChildren": true,
             "overrideDistributeBlocker": true,
@@ -5423,8 +5452,9 @@
             "immuneBloonProperties": 8,
             "immuneBloonPropertiesOriginal": 8,
             "ignoreImmunityDestroy": false,
+            "ignoreDamageMultipliers": false,
             "collisionPass": 0,
-            "CappedDamage": 1150.0,
+            "CappedDamage": 700.0,
             "name": "DamageModel_Explosion_",
             "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Damage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
           },
@@ -5950,6 +5980,7 @@
                       "immuneBloonProperties": 9,
                       "immuneBloonPropertiesOriginal": 9,
                       "ignoreImmunityDestroy": true,
+                      "ignoreDamageMultipliers": false,
                       "collisionPass": 0,
                       "CappedDamage": 20.0,
                       "name": "DamageModel_MainProjectile_",
@@ -6127,6 +6158,7 @@
                           "immuneBloonProperties": 9,
                           "immuneBloonPropertiesOriginal": 9,
                           "ignoreImmunityDestroy": true,
+                          "ignoreDamageMultipliers": false,
                           "collisionPass": 0,
                           "CappedDamage": 20.0,
                           "name": "DamageModel_MainProjectile_",
@@ -6287,6 +6319,7 @@
             "framesBeforeRetarget": 0,
             "addsToSharedGrid": false,
             "sharedGridRange": 0.0,
+            "drawRangeCircle": false,
             "name": "AttackModel_Attack_SpiritAttack",
             "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.Attack.Attack, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
           },
@@ -6345,6 +6378,7 @@
                       "immuneBloonProperties": 9,
                       "immuneBloonPropertiesOriginal": 9,
                       "ignoreImmunityDestroy": false,
+                      "ignoreDamageMultipliers": false,
                       "collisionPass": 0,
                       "CappedDamage": 2.0,
                       "name": "DamageModel_Projectile_",
@@ -6465,6 +6499,7 @@
             "framesBeforeRetarget": 0,
             "addsToSharedGrid": false,
             "sharedGridRange": 0.0,
+            "drawRangeCircle": false,
             "name": "AttackModel_StormAttack_Storm",
             "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.Attack.Attack, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
           },
@@ -6568,6 +6603,7 @@
                             "immuneBloonProperties": 8,
                             "immuneBloonPropertiesOriginal": 8,
                             "ignoreImmunityDestroy": false,
+                            "ignoreDamageMultipliers": false,
                             "collisionPass": 0,
                             "CappedDamage": 10.0,
                             "name": "DamageModel_Lightning_",
@@ -6702,7 +6738,7 @@
                       },
                       "pierceInterval": 1.0,
                       "count": 9999999,
-                      "minimumTimeDifferenceInFrames": 9,
+                      "minimumTimeDifferenceInFrames": 18,
                       "destroyProjectile": true,
                       "assetId": {
                         "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
@@ -6949,6 +6985,7 @@
             "framesBeforeRetarget": 0,
             "addsToSharedGrid": false,
             "sharedGridRange": 0.0,
+            "drawRangeCircle": false,
             "name": "AttackModel_SpearAttack_Spear",
             "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.Attack.Attack, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
           },
@@ -7001,6 +7038,7 @@
                       "immuneBloonProperties": 8,
                       "immuneBloonPropertiesOriginal": 8,
                       "ignoreImmunityDestroy": false,
+                      "ignoreDamageMultipliers": false,
                       "collisionPass": 0,
                       "CappedDamage": 2.0,
                       "name": "DamageModel_Projectile_",
@@ -7126,6 +7164,7 @@
             "framesBeforeRetarget": 0,
             "addsToSharedGrid": false,
             "sharedGridRange": 0.0,
+            "drawRangeCircle": false,
             "name": "AttackModel_EmberAttack_Ember",
             "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.Attack.Attack, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
           },
@@ -7183,9 +7222,9 @@
     },
     {
       "$type": "Assets.Scripts.Models.CorvusSpells.PassiveBonuses.BalanceModel, Assembly-CSharp",
-      "maxGenerationManaPoolThreshold": 0.25,
-      "maxGenerationRate": 2.0,
-      "minGenerationManaPoolThreshold": 0.65,
+      "maxGenerationManaPoolThreshold": 0.1,
+      "maxGenerationRate": 3.0,
+      "minGenerationManaPoolThreshold": 0.35,
       "minGenerationRate": 1.0,
       "name": "BalanceModel_Balance",
       "ImplementationType": "Assets.Scripts.Simulation.Corvus.Spells.PassiveBonuses.Balance, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
@@ -7385,6 +7424,7 @@
             "immuneBloonProperties": 9,
             "immuneBloonPropertiesOriginal": 9,
             "ignoreImmunityDestroy": false,
+            "ignoreDamageMultipliers": false,
             "collisionPass": 0,
             "CappedDamage": 5.0,
             "name": "DamageModel_Pulse_",
@@ -7501,7 +7541,7 @@
     },
     {
       "$type": "Assets.Scripts.Models.CorvusSpells.PassiveBonuses.SpiritualWillModel, Assembly-CSharp",
-      "manaPerSecond": 1,
+      "manaPerSecond": 2,
       "name": "SpiritualWillModel_SpiritualWill",
       "ImplementationType": "Assets.Scripts.Simulation.Corvus.Spells.PassiveBonuses.SpiritualWill, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
     },
@@ -7562,6 +7602,7 @@
       "framesBeforeRetarget": 0,
       "addsToSharedGrid": true,
       "sharedGridRange": 0.0,
+      "drawRangeCircle": false,
       "name": "AttackModel_Attack_",
       "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.Attack.Attack, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
     },
@@ -7654,7 +7695,7 @@
                     "behaviors": [
                       {
                         "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModel, Assembly-CSharp",
-                        "damage": 35.0,
+                        "damage": 30.0,
                         "maxDamage": 0.0,
                         "distributeToChildren": true,
                         "overrideDistributeBlocker": false,
@@ -7662,8 +7703,9 @@
                         "immuneBloonProperties": 0,
                         "immuneBloonPropertiesOriginal": 0,
                         "ignoreImmunityDestroy": false,
+                        "ignoreDamageMultipliers": false,
                         "collisionPass": 0,
-                        "CappedDamage": 35.0,
+                        "CappedDamage": 30.0,
                         "name": "DamageModel_BaseProjectile_",
                         "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Damage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
                       },
@@ -7707,7 +7749,7 @@
                           "Ceramic"
                         ],
                         "damageMultiplier": 1.0,
-                        "damageAddative": 35.0,
+                        "damageAddative": 10.0,
                         "mustIncludeAllTags": false,
                         "applyOverMaxDamage": false,
                         "collisionPass": 0,
@@ -7923,6 +7965,7 @@
               "framesBeforeRetarget": 0,
               "addsToSharedGrid": false,
               "sharedGridRange": 0.0,
+              "drawRangeCircle": false,
               "name": "AttackModel_SoulHarvestAttack_",
               "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.Attack.Attack, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
             }
@@ -7956,6 +7999,7 @@
       "additionalCharges": 0,
       "hideAbilityIfInCooldown": false,
       "startOffCooldown": false,
+      "alwaysSetAnimationState": false,
       "restrictAbilityAfterMaxRoundTimer": true,
       "CooldownSpeedScale": 0.0,
       "AnimationOffset": 0.0,
@@ -8016,7 +8060,7 @@
                   {
                     "$type": "Assets.Scripts.Models.Bloons.Behaviors.HauntModel, Assembly-CSharp",
                     "bonusEnergyDamage": 2.0,
-                    "manaPerRbe": 3,
+                    "manaPerRbe": 2,
                     "projectileOnDestroyModel": {
                       "$type": "Assets.Scripts.Models.Towers.Projectiles.ProjectileModel, Assembly-CSharp",
                       "display": {
@@ -8051,6 +8095,7 @@
                           "immuneBloonProperties": 9,
                           "immuneBloonPropertiesOriginal": 9,
                           "ignoreImmunityDestroy": false,
+                          "ignoreDamageMultipliers": false,
                           "collisionPass": 0,
                           "CappedDamage": 30.0,
                           "name": "DamageModel_Explosion_",
@@ -8162,6 +8207,7 @@
                 "dontCopy": false,
                 "parentDamageModel": null,
                 "chance": 0.0,
+                "dontRemoveOnBloonDegrade": false,
                 "overlayType": "SpiritWalkerHaunt",
                 "collisionPass": 1,
                 "name": "AddBehaviorToBloonModel_",
@@ -8330,6 +8376,7 @@
       "framesBeforeRetarget": 0,
       "addsToSharedGrid": false,
       "sharedGridRange": 0.0,
+      "drawRangeCircle": false,
       "name": "AttackModel_Haunt_",
       "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.Attack.Attack, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
     },
@@ -8423,6 +8470,7 @@
                       "immuneBloonProperties": 8,
                       "immuneBloonPropertiesOriginal": 8,
                       "ignoreImmunityDestroy": false,
+                      "ignoreDamageMultipliers": false,
                       "collisionPass": 0,
                       "CappedDamage": 150.0,
                       "name": "DamageModel_AoE_",
@@ -8690,6 +8738,7 @@
       "framesBeforeRetarget": 0,
       "addsToSharedGrid": true,
       "sharedGridRange": 0.0,
+      "drawRangeCircle": false,
       "name": "AttackModel_AncestralMight_AncestralMight",
       "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.Attack.Attack, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
     },
@@ -8780,6 +8829,7 @@
       "additionalCharges": 0,
       "hideAbilityIfInCooldown": false,
       "startOffCooldown": false,
+      "alwaysSetAnimationState": false,
       "restrictAbilityAfterMaxRoundTimer": false,
       "CooldownSpeedScale": 0.0,
       "AnimationOffset": 0.0,
@@ -8891,10 +8941,10 @@
                         "useRoundTime": true,
                         "endOfRoundClearBypassModel": null,
                         "collisionPass": 0,
-                        "Lifespan": 12.0,
+                        "Lifespan": 10.0,
                         "name": "AgeModel_Projectile",
                         "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Age, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
-                        "lifespan": 12.0
+                        "lifespan": 10.0
                       },
                       {
                         "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.CreateEffectOnExhaustedModel, Assembly-CSharp",
@@ -8921,6 +8971,7 @@
                         "immuneBloonProperties": 8,
                         "immuneBloonPropertiesOriginal": 8,
                         "ignoreImmunityDestroy": false,
+                        "ignoreDamageMultipliers": false,
                         "collisionPass": 0,
                         "CappedDamage": 1.0,
                         "name": "DamageModel_Projectile_",
@@ -9068,6 +9119,7 @@
               "framesBeforeRetarget": 0,
               "addsToSharedGrid": false,
               "sharedGridRange": 0.0,
+              "drawRangeCircle": false,
               "name": "AttackModel_DarkRitualAttack_",
               "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.Attack.Attack, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
             }
@@ -9136,6 +9188,7 @@
       "additionalCharges": 0,
       "hideAbilityIfInCooldown": false,
       "startOffCooldown": false,
+      "alwaysSetAnimationState": false,
       "restrictAbilityAfterMaxRoundTimer": false,
       "CooldownSpeedScale": 0.0,
       "AnimationOffset": 0.0,
@@ -9222,6 +9275,7 @@
                 "immuneBloonProperties": 9,
                 "immuneBloonPropertiesOriginal": 9,
                 "ignoreImmunityDestroy": false,
+                "ignoreDamageMultipliers": false,
                 "collisionPass": 0,
                 "CappedDamage": 5.0,
                 "name": "DamageModel_Pulse_",
@@ -9347,6 +9401,7 @@
       "framesBeforeRetarget": 0,
       "addsToSharedGrid": false,
       "sharedGridRange": 0.0,
+      "drawRangeCircle": false,
       "name": "AttackModel_MalevolenceAttack_Malevolence",
       "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.Attack.Attack, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
     },

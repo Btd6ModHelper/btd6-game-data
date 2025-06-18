@@ -589,6 +589,7 @@
                 "immuneBloonProperties": 17,
                 "immuneBloonPropertiesOriginal": 17,
                 "ignoreImmunityDestroy": false,
+                "ignoreDamageMultipliers": false,
                 "collisionPass": 0,
                 "CappedDamage": 6.0,
                 "name": "DamageModel_Projectile_",
@@ -730,12 +731,14 @@
                         "immuneBloonProperties": 17,
                         "immuneBloonPropertiesOriginal": 17,
                         "ignoreImmunityDestroy": false,
+                        "ignoreDamageMultipliers": false,
                         "collisionPass": 0,
                         "CappedDamage": 6.0,
                         "name": "DamageModel_Projectile_",
                         "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Damage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
                       },
                       "chance": 0.0,
+                      "dontRemoveOnBloonDegrade": false,
                       "overlayType": "BoomerangMoabRicochet",
                       "collisionPass": -1,
                       "name": "AddBehaviorToBloonModel_",
@@ -826,6 +829,17 @@
                 "name": "ClearHitBloonsModel_hit_same_target",
                 "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.ClearHitBloons, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
                 "interval": 0.6
+              },
+              {
+                "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.AgeModel, Assembly-CSharp",
+                "rounds": 0,
+                "useRoundTime": true,
+                "endOfRoundClearBypassModel": null,
+                "collisionPass": 0,
+                "Lifespan": 5.0,
+                "name": "AgeModel_Projectile",
+                "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Age, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                "lifespan": 5.0
               },
               {
                 "$type": "Assets.Scripts.Models.GenericBehaviors.DisplayModel, Assembly-CSharp",
@@ -976,6 +990,7 @@
       "framesBeforeRetarget": 0,
       "addsToSharedGrid": true,
       "sharedGridRange": 0.0,
+      "drawRangeCircle": false,
       "name": "AttackModel_Attack_",
       "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.Attack.Attack, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
     },
@@ -1028,6 +1043,7 @@
                 "immuneBloonProperties": 17,
                 "immuneBloonPropertiesOriginal": 17,
                 "ignoreImmunityDestroy": false,
+                "ignoreDamageMultipliers": false,
                 "collisionPass": 0,
                 "CappedDamage": 4.0,
                 "name": "DamageModel_Projectile_",
@@ -1168,6 +1184,7 @@
       "framesBeforeRetarget": 0,
       "addsToSharedGrid": false,
       "sharedGridRange": 0.0,
+      "drawRangeCircle": false,
       "name": "AttackModel_OrbitAttack_",
       "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.Attack.Attack, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
     },

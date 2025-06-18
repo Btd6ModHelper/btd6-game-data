@@ -774,6 +774,7 @@
                       "immuneBloonProperties": 2,
                       "immuneBloonPropertiesOriginal": 2,
                       "ignoreImmunityDestroy": false,
+                      "ignoreDamageMultipliers": false,
                       "collisionPass": 0,
                       "CappedDamage": 6.0,
                       "name": "DamageModel_BaseExplosion_",
@@ -1177,6 +1178,7 @@
       "framesBeforeRetarget": 0,
       "addsToSharedGrid": true,
       "sharedGridRange": 0.0,
+      "drawRangeCircle": false,
       "name": "AttackModel_BaseAttack_",
       "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.Attack.Attack, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
     },
@@ -1232,6 +1234,7 @@
                       },
                       {
                         "$type": "Assets.Scripts.Models.Towers.Filters.FilterAllExceptTargetModel, Assembly-CSharp",
+                        "cantbePaused": false,
                         "name": "FilterAllExceptTargetModel_",
                         "ImplementationType": "Assets.Scripts.Simulation.Towers.Filters.FilterAllExceptTarget, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
                       }
@@ -1330,6 +1333,7 @@
                               "immuneBloonProperties": 0,
                               "immuneBloonPropertiesOriginal": 0,
                               "ignoreImmunityDestroy": false,
+                              "ignoreDamageMultipliers": false,
                               "collisionPass": 0,
                               "CappedDamage": 12.0,
                               "name": "DamageModel_Explosion_",
@@ -1497,6 +1501,7 @@
                           },
                           {
                             "$type": "Assets.Scripts.Models.Towers.Filters.FilterAllExceptTargetModel, Assembly-CSharp",
+                            "cantbePaused": false,
                             "name": "FilterAllExceptTargetModel_",
                             "ImplementationType": "Assets.Scripts.Simulation.Towers.Filters.FilterAllExceptTarget, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
                           }
@@ -1690,6 +1695,7 @@
               "framesBeforeRetarget": 0,
               "addsToSharedGrid": false,
               "sharedGridRange": 0.0,
+              "drawRangeCircle": false,
               "name": "AttackModel_Attack_",
               "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.Attack.Attack, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
             }
@@ -1787,6 +1793,7 @@
       "additionalCharges": 0,
       "hideAbilityIfInCooldown": false,
       "startOffCooldown": false,
+      "alwaysSetAnimationState": false,
       "restrictAbilityAfterMaxRoundTimer": false,
       "CooldownSpeedScale": 0.0,
       "AnimationOffset": -1.0,
@@ -1914,6 +1921,7 @@
       "additionalCharges": 0,
       "hideAbilityIfInCooldown": false,
       "startOffCooldown": false,
+      "alwaysSetAnimationState": false,
       "restrictAbilityAfterMaxRoundTimer": false,
       "CooldownSpeedScale": 0.0,
       "AnimationOffset": 0.0,
@@ -1991,6 +1999,8 @@
         }
       ],
       "filters": null,
+      "bindRadiusToTowerRange": false,
+      "radiusOffset": 0.0,
       "overlayType": "",
       "mutator": {
         "$type": "Assets.Scripts.Models.Towers.Behaviors.AddBehaviorToBloonInZoneModel+AddBehaviorToBloonMutator, Assembly-CSharp",
@@ -2019,6 +2029,61 @@
       },
       "name": "AddBehaviorToBloonInZoneModel_",
       "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.AddBehaviorToBloonInZone, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+      "$type": "Assets.Scripts.Models.Towers.Behaviors.AddBehaviorToTowerSupportModel, Assembly-CSharp",
+      "behaviors": [
+        {
+          "$type": "Assets.Scripts.Models.Towers.Behaviors.SupportRemoveFilterOutTagModel, Assembly-CSharp",
+          "mutatorId": "",
+          "removeScriptWithSupportMutatorId": "HitBlack",
+          "filters": null,
+          "isGlobal": true,
+          "isCustomRadius": true,
+          "customRadius": 9999999.0,
+          "appliesToOwningTower": false,
+          "showBuffIcon": false,
+          "buffLocsName": "",
+          "buffIconName": "",
+          "maxStackSize": 0,
+          "onlyShowBuffIfMutated": true,
+          "onlyAffectParagon": false,
+          "name": "SupportRemoveFilterOutTagModel_Support_",
+          "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.SupportRemoveFilterOutTag, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+        }
+      ],
+      "mutationId": "",
+      "filters": null,
+      "isGlobal": false,
+      "isCustomRadius": false,
+      "customRadius": 0.0,
+      "appliesToOwningTower": false,
+      "showBuffIcon": false,
+      "buffLocsName": "",
+      "buffIconName": "",
+      "maxStackSize": 0,
+      "onlyShowBuffIfMutated": false,
+      "onlyAffectParagon": false,
+      "name": "AddBehaviorToTowerSupportModel_Support_",
+      "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.AddBehaviorToTowerSupport, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+      "$type": "Assets.Scripts.Models.Towers.Behaviors.SupportRemoveFilterOutTagModel, Assembly-CSharp",
+      "mutatorId": "",
+      "removeScriptWithSupportMutatorId": "HitBlack",
+      "filters": null,
+      "isGlobal": true,
+      "isCustomRadius": true,
+      "customRadius": 9999999.0,
+      "appliesToOwningTower": false,
+      "showBuffIcon": false,
+      "buffLocsName": "",
+      "buffIconName": "",
+      "maxStackSize": 0,
+      "onlyShowBuffIfMutated": true,
+      "onlyAffectParagon": false,
+      "name": "SupportRemoveFilterOutTagModel_Support_",
+      "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.SupportRemoveFilterOutTag, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
     },
     {
       "$type": "Assets.Scripts.Models.Towers.Behaviors.RateSupportBombExpertModel, Assembly-CSharp",
@@ -2156,6 +2221,7 @@
       "additionalCharges": 0,
       "hideAbilityIfInCooldown": false,
       "startOffCooldown": false,
+      "alwaysSetAnimationState": false,
       "restrictAbilityAfterMaxRoundTimer": false,
       "CooldownSpeedScale": 0.0,
       "AnimationOffset": -1.0,

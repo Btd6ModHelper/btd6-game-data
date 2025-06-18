@@ -117,6 +117,38 @@
       "actionOnCreate": false,
       "intID": -1,
       "continueToNextPriority": false
+    },
+    {
+      "$type": "Assets.Scripts.Models.Towers.TargetType, Assembly-CSharp",
+      "id": "TargetSelectedPoint",
+      "isActionable": true,
+      "actionOnCreate": true,
+      "intID": -1,
+      "continueToNextPriority": false
+    },
+    {
+      "$type": "Assets.Scripts.Models.Towers.TargetType, Assembly-CSharp",
+      "id": "AutoTrack",
+      "isActionable": false,
+      "actionOnCreate": false,
+      "intID": -1,
+      "continueToNextPriority": false
+    },
+    {
+      "$type": "Assets.Scripts.Models.Towers.TargetType, Assembly-CSharp",
+      "id": "CloseTrack",
+      "isActionable": false,
+      "actionOnCreate": false,
+      "intID": -1,
+      "continueToNextPriority": false
+    },
+    {
+      "$type": "Assets.Scripts.Models.Towers.TargetType, Assembly-CSharp",
+      "id": "SmartTrack",
+      "isActionable": false,
+      "actionOnCreate": false,
+      "intID": -1,
+      "continueToNextPriority": false
     }
   ],
   "paragonUpgrade": null,
@@ -125,7 +157,7 @@
   "powerName": null,
   "showPowerTowerBuffs": false,
   "animationSpeed": 1.0,
-  "towerSelectionMenuThemeId": "Default",
+  "towerSelectionMenuThemeId": "ActionButton",
   "secondarySelectionMenu": {
     "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
     "AssetGUID": null,
@@ -738,6 +770,7 @@
                 "immuneBloonProperties": 0,
                 "immuneBloonPropertiesOriginal": 0,
                 "ignoreImmunityDestroy": false,
+                "ignoreDamageMultipliers": false,
                 "collisionPass": 0,
                 "CappedDamage": 70.0,
                 "name": "DamageModel_Projectile_",
@@ -798,6 +831,7 @@
                       "immuneBloonProperties": 0,
                       "immuneBloonPropertiesOriginal": 0,
                       "ignoreImmunityDestroy": false,
+                      "ignoreDamageMultipliers": false,
                       "collisionPass": 0,
                       "CappedDamage": 20.0,
                       "name": "DamageModel_MiniSpike_",
@@ -1149,6 +1183,12 @@
                       "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.ExpireProjectileOnBossSpawned, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
                     },
                     {
+                      "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.DestroyProjectileIfTowerDestroyedModel, Assembly-CSharp",
+                      "collisionPass": 0,
+                      "name": "DestroyProjectileIfTowerDestroyedModel_MiniSpike",
+                      "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.DestroyProjectileIfTowerDestroyed, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+                    },
+                    {
                       "$type": "Assets.Scripts.Models.GenericBehaviors.DisplayModel, Assembly-CSharp",
                       "display": {
                         "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
@@ -1406,6 +1446,7 @@
                       "immuneBloonProperties": 0,
                       "immuneBloonPropertiesOriginal": 0,
                       "ignoreImmunityDestroy": false,
+                      "ignoreDamageMultipliers": false,
                       "collisionPass": 0,
                       "CappedDamage": 80.0,
                       "name": "DamageModel_SmallExplosion_",
@@ -1765,6 +1806,7 @@
                       "immuneBloonProperties": 0,
                       "immuneBloonPropertiesOriginal": 0,
                       "ignoreImmunityDestroy": false,
+                      "ignoreDamageMultipliers": false,
                       "collisionPass": 0,
                       "CappedDamage": 80.0,
                       "name": "DamageModel_SmallExplosion_",
@@ -1932,6 +1974,19 @@
                 "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.ExpireProjectileOnBossSpawned, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
               },
               {
+                "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.DestroyProjectileIfTowerDestroyedModel, Assembly-CSharp",
+                "collisionPass": 0,
+                "name": "DestroyProjectileIfTowerDestroyedModel_Projectile",
+                "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.DestroyProjectileIfTowerDestroyed, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+              },
+              {
+                "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.FadeProjectileModel, Assembly-CSharp",
+                "collisionPass": 0,
+                "name": "FadeProjectileModel_",
+                "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.FadeProjectile, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                "startFadingAt": 48.0
+              },
+              {
                 "$type": "Assets.Scripts.Models.GenericBehaviors.DisplayModel, Assembly-CSharp",
                 "display": {
                   "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
@@ -2017,6 +2072,57 @@
           ],
           "name": "AttackFilterModel_",
           "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.Attack.Behaviors.AttackFilter, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+        },
+        {
+          "$type": "Assets.Scripts.Models.Towers.Behaviors.Attack.Behaviors.TargetSelectedPointModel, Assembly-CSharp",
+          "isSelectable": true,
+          "display": {
+            "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
+            "AssetGUID": "f786dd2ad0e3e8649a8ff0ac9f8cc6fb",
+            "guidRef": "f786dd2ad0e3e8649a8ff0ac9f8cc6fb"
+          },
+          "scale": 1.0,
+          "customName": "",
+          "lockToInsideTowerRange": true,
+          "startWithClosestTrackPoint": true,
+          "displayInvalid": {
+            "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
+            "AssetGUID": "d053160180f53da43be4f9972ee1497a",
+            "guidRef": "d053160180f53da43be4f9972ee1497a"
+          },
+          "alwaysShowTarget": false,
+          "projectileToExpireOnTargetChangeModel": null,
+          "useTerrainHeight": false,
+          "isOnSubTower": false,
+          "name": "TargetSelectedPointModel_",
+          "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.Attack.Behaviors.TargetSelectedPoint, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+        },
+        {
+          "$type": "Assets.Scripts.Models.Towers.Behaviors.Attack.Behaviors.AutoTargetTrackModel, Assembly-CSharp",
+          "radius": 5.0,
+          "isSelectable": true,
+          "maxOffset": 3.0,
+          "isOnSubTower": false,
+          "name": "AutoTargetTrackModel_",
+          "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.Attack.Behaviors.AutoTargetTrack, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+        },
+        {
+          "$type": "Assets.Scripts.Models.Towers.Behaviors.Attack.Behaviors.CloseTargetTrackModel, Assembly-CSharp",
+          "radius": 5.0,
+          "isSelectable": true,
+          "maxOffset": 3.0,
+          "isOnSubTower": false,
+          "name": "CloseTargetTrackModel_",
+          "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.Attack.Behaviors.CloseTargetTrack, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+        },
+        {
+          "$type": "Assets.Scripts.Models.Towers.Behaviors.Attack.Behaviors.SmartTargetTrackModel, Assembly-CSharp",
+          "radius": 5.0,
+          "isSelectable": true,
+          "maxOffset": 3.0,
+          "isOnSubTower": false,
+          "name": "SmartTargetTrackModel_",
+          "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.Attack.Behaviors.SmartTargetTrack, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
         }
       ],
       "range": 42.0,
@@ -2029,12 +2135,13 @@
       "framesBeforeRetarget": 0,
       "addsToSharedGrid": true,
       "sharedGridRange": 0.0,
+      "drawRangeCircle": false,
       "name": "AttackModel_Attack_",
       "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.Attack.Attack, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
     },
     {
       "$type": "Assets.Scripts.Models.Towers.Behaviors.Abilities.AbilityModel, Assembly-CSharp",
-      "displayName": "Turbo Charge",
+      "displayName": "Controlled Burst",
       "description": "Makes this Monkey attack incredibly fast for 10 seconds.",
       "icon": {
         "$type": "NinjaKiwi.Common.ResourceUtils.SpriteReference, NinjaKiwi.Common",
@@ -2068,7 +2175,7 @@
           "destroyOnEnd": true,
           "useAttackTransform": false,
           "canSave": false,
-          "name": "CreateEffectOnAbilityModel_TurboCharge_",
+          "name": "CreateEffectOnAbilityModel_Controlled Burst_",
           "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.Abilities.Behaviors.CreateEffectOnAbility, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
         },
         {
@@ -2085,7 +2192,7 @@
           },
           "heroSound": null,
           "heroSound2": null,
-          "name": "CreateSoundOnAbilityModel_TurboCharge",
+          "name": "CreateSoundOnAbilityModel_Controlled Burst",
           "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.Abilities.Behaviors.CreateSoundOnAbility, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
         },
         {
@@ -2117,12 +2224,13 @@
       "additionalCharges": 0,
       "hideAbilityIfInCooldown": false,
       "startOffCooldown": false,
+      "alwaysSetAnimationState": false,
       "restrictAbilityAfterMaxRoundTimer": false,
       "CooldownSpeedScale": 0.0,
       "AnimationOffset": -1.0,
       "IsPassive": false,
       "Cooldown": 10.0,
-      "name": "AbilityModel_TurboCharge",
+      "name": "AbilityModel_Controlled Burst",
       "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.Abilities.Ability, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
       "cooldownSpeedScale": 0.0,
       "animationOffset": -1.0,
@@ -2226,6 +2334,7 @@
                       "immuneBloonProperties": 0,
                       "immuneBloonPropertiesOriginal": 0,
                       "ignoreImmunityDestroy": false,
+                      "ignoreDamageMultipliers": false,
                       "collisionPass": 0,
                       "CappedDamage": 0.0,
                       "name": "DamageModel_SpikeageddonSpikePile_",
@@ -2510,6 +2619,7 @@
                             "immuneBloonProperties": 0,
                             "immuneBloonPropertiesOriginal": 0,
                             "ignoreImmunityDestroy": false,
+                            "ignoreDamageMultipliers": false,
                             "collisionPass": 0,
                             "CappedDamage": 10000.0,
                             "name": "DamageModel_SmallExplosion_",
@@ -2728,6 +2838,7 @@
                             "immuneBloonProperties": 0,
                             "immuneBloonPropertiesOriginal": 0,
                             "ignoreImmunityDestroy": false,
+                            "ignoreDamageMultipliers": false,
                             "collisionPass": 0,
                             "CappedDamage": 100.0,
                             "name": "DamageModel_MiniSpike_",
@@ -3147,6 +3258,7 @@
                             "immuneBloonProperties": 0,
                             "immuneBloonPropertiesOriginal": 0,
                             "ignoreImmunityDestroy": false,
+                            "ignoreDamageMultipliers": false,
                             "collisionPass": 0,
                             "CappedDamage": 10000.0,
                             "name": "DamageModel_SmallExplosion_",
@@ -3454,6 +3566,12 @@
                 "projectileCreationDelay": 0.3
               },
               {
+                "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.DestroyProjectileIfTowerDestroyedModel, Assembly-CSharp",
+                "collisionPass": 0,
+                "name": "DestroyProjectileIfTowerDestroyedModel_SpikeageddonPathProjectile",
+                "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.DestroyProjectileIfTowerDestroyed, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+              },
+              {
                 "$type": "Assets.Scripts.Models.GenericBehaviors.DisplayModel, Assembly-CSharp",
                 "display": {
                   "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
@@ -3522,6 +3640,7 @@
       "additionalCharges": 0,
       "hideAbilityIfInCooldown": false,
       "startOffCooldown": false,
+      "alwaysSetAnimationState": false,
       "restrictAbilityAfterMaxRoundTimer": false,
       "CooldownSpeedScale": 0.0,
       "AnimationOffset": -1.0,
@@ -3570,6 +3689,38 @@
     {
       "$type": "Assets.Scripts.Models.Towers.TargetType, Assembly-CSharp",
       "id": "Track",
+      "isActionable": false,
+      "actionOnCreate": false,
+      "intID": -1,
+      "continueToNextPriority": false
+    },
+    {
+      "$type": "Assets.Scripts.Models.Towers.TargetType, Assembly-CSharp",
+      "id": "TargetSelectedPoint",
+      "isActionable": true,
+      "actionOnCreate": true,
+      "intID": -1,
+      "continueToNextPriority": false
+    },
+    {
+      "$type": "Assets.Scripts.Models.Towers.TargetType, Assembly-CSharp",
+      "id": "AutoTrack",
+      "isActionable": false,
+      "actionOnCreate": false,
+      "intID": -1,
+      "continueToNextPriority": false
+    },
+    {
+      "$type": "Assets.Scripts.Models.Towers.TargetType, Assembly-CSharp",
+      "id": "CloseTrack",
+      "isActionable": false,
+      "actionOnCreate": false,
+      "intID": -1,
+      "continueToNextPriority": false
+    },
+    {
+      "$type": "Assets.Scripts.Models.Towers.TargetType, Assembly-CSharp",
+      "id": "SmartTrack",
       "isActionable": false,
       "actionOnCreate": false,
       "intID": -1,
