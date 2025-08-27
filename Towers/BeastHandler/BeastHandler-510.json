@@ -383,7 +383,7 @@
             "enableContribution": true,
             "cooldownScaleRange": 0.38,
             "pierceRange": 40,
-            "damageRange": 1400,
+            "damageRange": 1200,
             "destroyTimeScaleRangePiranha": 0.0,
             "thrashKnockbackLifetimeRange": 0.3,
             "stunBonusDivideMicroraptor": 0.0,
@@ -972,7 +972,7 @@
                               "behaviors": [
                                 {
                                   "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModel, Assembly-CSharp",
-                                  "damage": 700.0,
+                                  "damage": 600.0,
                                   "maxDamage": 0.0,
                                   "distributeToChildren": true,
                                   "overrideDistributeBlocker": false,
@@ -982,7 +982,7 @@
                                   "ignoreImmunityDestroy": false,
                                   "ignoreDamageMultipliers": false,
                                   "collisionPass": 0,
-                                  "CappedDamage": 700.0,
+                                  "CappedDamage": 600.0,
                                   "name": "DamageModel_ThrashingProjectileExplosion_",
                                   "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Damage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
                                 },
@@ -1032,7 +1032,8 @@
                                     "isAreaBuff": false,
                                     "isGeraldoBuff": false,
                                     "isArtifactMutator": false,
-                                    "dontRemoveOnBloonDegrade": false
+                                    "dontRemoveOnBloonDegrade": false,
+                                    "cantBeAbsorbed": false
                                   },
                                   "name": "KnockbackModel_",
                                   "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Knockback, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
@@ -1143,7 +1144,7 @@
                                     "behaviors": [
                                       {
                                         "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModel, Assembly-CSharp",
-                                        "damage": 700.0,
+                                        "damage": 600.0,
                                         "maxDamage": 0.0,
                                         "distributeToChildren": true,
                                         "overrideDistributeBlocker": false,
@@ -1153,7 +1154,7 @@
                                         "ignoreImmunityDestroy": false,
                                         "ignoreDamageMultipliers": false,
                                         "collisionPass": 0,
-                                        "CappedDamage": 700.0,
+                                        "CappedDamage": 600.0,
                                         "name": "DamageModel_ThrashingProjectileExplosion_",
                                         "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Damage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
                                       },
@@ -1203,7 +1204,8 @@
                                           "isAreaBuff": false,
                                           "isGeraldoBuff": false,
                                           "isArtifactMutator": false,
-                                          "dontRemoveOnBloonDegrade": false
+                                          "dontRemoveOnBloonDegrade": false,
+                                          "cantBeAbsorbed": false
                                         },
                                         "name": "KnockbackModel_",
                                         "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Knockback, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
@@ -1257,7 +1259,7 @@
                                     "name": "SingleEmissionModel_",
                                     "ImplementationType": "Assets.Scripts.Simulation.Towers.Emissions.SingleEmission, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
                                   },
-                                  "intervalFrames": 18,
+                                  "intervalFrames": 36,
                                   "onlyIfHasTarget": false,
                                   "range": 0.0,
                                   "targetType": {
@@ -1302,7 +1304,7 @@
                                   "collisionPass": 0,
                                   "name": "CreateEffectProjectileAfterTimeModel_",
                                   "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.CreateEffectProjectileAfterTime, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
-                                  "time": 0.3
+                                  "time": 0.6
                                 },
                                 {
                                   "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.LatchToBloonModel, Assembly-CSharp",
@@ -1335,7 +1337,8 @@
                                     "isAreaBuff": false,
                                     "isGeraldoBuff": false,
                                     "isArtifactMutator": false,
-                                    "dontRemoveOnBloonDegrade": false
+                                    "dontRemoveOnBloonDegrade": false,
+                                    "cantBeAbsorbed": false
                                   },
                                   "name": "LatchToBloonModel_",
                                   "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.LatchToBloon, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
@@ -1522,7 +1525,8 @@
                               "isAreaBuff": false,
                               "isGeraldoBuff": false,
                               "isArtifactMutator": false,
-                              "dontRemoveOnBloonDegrade": false
+                              "dontRemoveOnBloonDegrade": false,
+                              "cantBeAbsorbed": false
                             },
                             "name": "KnockbackModel_",
                             "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Knockback, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
@@ -1782,12 +1786,14 @@
         ],
         "radius": 0.0,
         "isPowerTower": false,
+        "isPowerProTower": false,
         "isGeraldoItem": false,
         "IsBeastHandlerPet": true,
         "SelectParentOnSelected": false,
         "DisplayScale": 1.0,
         "IsSubEntity": true,
         "BeastHandlerLeashMutationId": "BeastHandlerContributionPiranha",
+        "powerProTowerModel": null,
         "IsBaseTower": true,
         "TargetTypes": [
           {
@@ -2641,12 +2647,14 @@
         ],
         "radius": 0.0,
         "isPowerTower": false,
+        "isPowerProTower": false,
         "isGeraldoItem": false,
         "IsBeastHandlerPet": true,
         "SelectParentOnSelected": false,
         "DisplayScale": 1.0,
         "IsSubEntity": true,
         "BeastHandlerLeashMutationId": "BeastHandlerContributionMicroraptor",
+        "powerProTowerModel": null,
         "IsBaseTower": true,
         "TargetTypes": [
           {
@@ -2799,7 +2807,7 @@
         "enableContribution": true,
         "cooldownScaleRange": 0.38,
         "pierceRange": 40,
-        "damageRange": 1400,
+        "damageRange": 1200,
         "destroyTimeScaleRangePiranha": 0.0,
         "thrashKnockbackLifetimeRange": 0.3,
         "stunBonusDivideMicroraptor": 0.0,
@@ -3423,12 +3431,14 @@
   ],
   "radius": 7.0,
   "isPowerTower": false,
+  "isPowerProTower": false,
   "isGeraldoItem": false,
   "IsBeastHandlerPet": false,
   "SelectParentOnSelected": false,
   "DisplayScale": 1.0,
   "IsSubEntity": false,
   "BeastHandlerLeashMutationId": "BeastHandlerContributionBeastHandler",
+  "powerProTowerModel": null,
   "IsBaseTower": false,
   "TargetTypes": [
     {

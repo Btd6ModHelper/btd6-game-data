@@ -967,7 +967,8 @@
                   "isAreaBuff": false,
                   "isGeraldoBuff": false,
                   "isArtifactMutator": false,
-                  "dontRemoveOnBloonDegrade": false
+                  "dontRemoveOnBloonDegrade": false,
+                  "cantBeAbsorbed": false
                 },
                 "name": "FreezeModel_",
                 "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Freeze, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
@@ -1139,13 +1140,20 @@
               },
               {
                 "$type": "Assets.Scripts.Models.Towers.Filters.FilterOutTagModel, Assembly-CSharp",
-                "tag": "Bad",
+                "tag": "Boss",
                 "disableWhenSupportMutatorIDs": [],
                 "name": "FilterOutTagModel_Projectile",
                 "ImplementationType": "Assets.Scripts.Simulation.Towers.Filters.FilterOutTag, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
               }
             ],
             "behaviors": [
+              {
+                "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.MapBorderReboundModel, Assembly-CSharp",
+                "changeRotation": false,
+                "collisionPass": 0,
+                "name": "MapBorderReboundModel_Projectile",
+                "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.MapBorderRebound, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+              },
               {
                 "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModel, Assembly-CSharp",
                 "damage": 120.0,
@@ -1166,11 +1174,11 @@
                 "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.TravelStraitModel, Assembly-CSharp",
                 "collisionPass": 0,
                 "Speed": 35.0,
-                "Lifespan": 4.285714,
+                "Lifespan": 12.8571424,
                 "name": "TravelStraitModel_Projectile",
                 "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.TravelStrait, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
                 "speed": 35.0,
-                "lifespan": 4.285714
+                "lifespan": 12.8571424
               },
               {
                 "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.ProjectileFilterModel, Assembly-CSharp",
@@ -1184,7 +1192,7 @@
                   },
                   {
                     "$type": "Assets.Scripts.Models.Towers.Filters.FilterOutTagModel, Assembly-CSharp",
-                    "tag": "Bad",
+                    "tag": "Boss",
                     "disableWhenSupportMutatorIDs": [],
                     "name": "FilterOutTagModel_Projectile",
                     "ImplementationType": "Assets.Scripts.Simulation.Towers.Filters.FilterOutTag, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
@@ -1224,7 +1232,8 @@
                   "isAreaBuff": false,
                   "isGeraldoBuff": false,
                   "isArtifactMutator": false,
-                  "dontRemoveOnBloonDegrade": false
+                  "dontRemoveOnBloonDegrade": false,
+                  "cantBeAbsorbed": false
                 },
                 "name": "WindModel_",
                 "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Wind, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
@@ -1680,7 +1689,8 @@
                         "isAreaBuff": false,
                         "isGeraldoBuff": false,
                         "isArtifactMutator": false,
-                        "dontRemoveOnBloonDegrade": false
+                        "dontRemoveOnBloonDegrade": false,
+                        "cantBeAbsorbed": false
                       },
                       "name": "FreezeModel_",
                       "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Freeze, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
@@ -1900,7 +1910,7 @@
               },
               {
                 "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModel, Assembly-CSharp",
-                "damage": 10.0,
+                "damage": 30.0,
                 "maxDamage": 0.0,
                 "distributeToChildren": true,
                 "overrideDistributeBlocker": false,
@@ -1910,7 +1920,7 @@
                 "ignoreImmunityDestroy": false,
                 "ignoreDamageMultipliers": false,
                 "collisionPass": 0,
-                "CappedDamage": 10.0,
+                "CappedDamage": 30.0,
                 "name": "DamageModel_LightningProj_",
                 "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Damage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
               },
@@ -2369,7 +2379,8 @@
                   "isAreaBuff": false,
                   "isGeraldoBuff": false,
                   "isArtifactMutator": false,
-                  "dontRemoveOnBloonDegrade": false
+                  "dontRemoveOnBloonDegrade": false,
+                  "cantBeAbsorbed": false
                 },
                 "name": "WindModel_",
                 "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Wind, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
@@ -2627,12 +2638,14 @@
   ],
   "radius": 7.0,
   "isPowerTower": false,
+  "isPowerProTower": false,
   "isGeraldoItem": false,
   "IsBeastHandlerPet": false,
   "SelectParentOnSelected": false,
   "DisplayScale": 1.0,
   "IsSubEntity": false,
   "BeastHandlerLeashMutationId": "BeastHandlerContributionDruid",
+  "powerProTowerModel": null,
   "IsBaseTower": false,
   "TargetTypes": [
     {

@@ -1,0 +1,974 @@
+{
+  "$type": "Assets.Scripts.Models.Towers.TowerModel, Assembly-CSharp",
+  "cost": 0.0,
+  "range": 75.0,
+  "ignoreBlockers": false,
+  "isGlobalRange": false,
+  "tier": 3,
+  "tiers": [
+    0,
+    3,
+    0
+  ],
+  "towerSet": 64,
+  "icon": {
+    "$type": "NinjaKiwi.Common.ResourceUtils.SpriteReference, NinjaKiwi.Common",
+    "AssetGUID": "PowerIcons[BananaFarmerProIcon]",
+    "guidRef": "PowerIcons[BananaFarmerProIcon]"
+  },
+  "icon3D": {
+    "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
+    "AssetGUID": null,
+    "guidRef": null
+  },
+  "portrait": {
+    "$type": "NinjaKiwi.Common.ResourceUtils.SpriteReference, NinjaKiwi.Common",
+    "AssetGUID": "c273a895eb668d445835d402e2a1693d",
+    "guidRef": "c273a895eb668d445835d402e2a1693d"
+  },
+  "instaIcon": {
+    "$type": "NinjaKiwi.Common.ResourceUtils.SpriteReference, NinjaKiwi.Common",
+    "AssetGUID": null,
+    "guidRef": null
+  },
+  "areaTypes": [
+    2
+  ],
+  "mods": [],
+  "ignoreTowerForSelection": false,
+  "footprint": {
+    "$type": "Assets.Scripts.Models.Towers.Behaviors.CircleFootprintModel, Assembly-CSharp",
+    "radius": 5.0,
+    "doesntBlockTowerPlacement": false,
+    "ignoresPlacementCheck": false,
+    "ignoresTowerOverlap": false,
+    "name": "CircleFootprintModel_Circle Footprint",
+    "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.CircleFootprint, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+  },
+  "dontDisplayUpgrades": false,
+  "emoteSpriteSmall": {
+    "$type": "NinjaKiwi.Common.ResourceUtils.SpriteReference, NinjaKiwi.Common",
+    "AssetGUID": null,
+    "guidRef": null
+  },
+  "emoteSpriteLarge": {
+    "$type": "NinjaKiwi.Common.ResourceUtils.SpriteReference, NinjaKiwi.Common",
+    "AssetGUID": null,
+    "guidRef": null
+  },
+  "doesntRotate": false,
+  "upgrades": [],
+  "appliedUpgrades": [
+    "Camo Bananas",
+    "Regrow Bananas",
+    "Banana Intelligence Bureau"
+  ],
+  "targetTypes": null,
+  "paragonUpgrade": null,
+  "isSubTower": false,
+  "isBakable": true,
+  "powerName": "BananaFarmerPro",
+  "showPowerTowerBuffs": true,
+  "animationSpeed": 1.0,
+  "towerSelectionMenuThemeId": "BananaFarmer",
+  "secondarySelectionMenu": {
+    "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
+    "AssetGUID": null,
+    "guidRef": null
+  },
+  "ignoreCoopAreas": false,
+  "canAlwaysBeSold": false,
+  "blockSelling": false,
+  "isParagon": false,
+  "ignoreMaxSellPercent": false,
+  "isStunned": false,
+  "geraldoItemName": null,
+  "sellbackModifierAdd": 0.0,
+  "skinName": null,
+  "dontAddMutatorsFromParent": false,
+  "showBuffs": true,
+  "destroyTowerOnRedistribution": false,
+  "displayScale": 1.0,
+  "useAirUnitHeight": false,
+  "baseId": "BananaFarmerPro",
+  "display": {
+    "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
+    "AssetGUID": "e821a0d7efe80c241b9f86d3d4f84108",
+    "guidRef": "e821a0d7efe80c241b9f86d3d4f84108"
+  },
+  "behaviors": [
+    {
+      "$type": "Assets.Scripts.Models.Towers.Behaviors.PowerProTowerModel, Assembly-CSharp",
+      "powerId": "BananaFarmerPro",
+      "name": "PowerProTowerModel_BananaFarmerPro-030",
+      "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.PowerProTower, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+      "$type": "Assets.Scripts.Models.Towers.Behaviors.CollectCashZoneModel, Assembly-CSharp",
+      "attractRange": 75.0,
+      "collectRange": 10.0,
+      "lerpMultiplier": 0.3,
+      "towerFilter": "",
+      "useTowerRange": true,
+      "countCollectedCash": true,
+      "animateTower": true,
+      "rotate": true,
+      "onlyAttractsCamo": false,
+      "minEmitWaitTime": 0.0,
+      "minEmitWaitTimeFrames": 0,
+      "name": "CollectCashZoneModel_",
+      "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.CollectCashZone, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+      "$type": "Assets.Scripts.Models.Towers.Behaviors.CreateEffectOnSellModel, Assembly-CSharp",
+      "effectModel": {
+        "$type": "Assets.Scripts.Models.Effects.EffectModel, Assembly-CSharp",
+        "assetId": {
+          "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
+          "AssetGUID": "b1dec8a8d79593843bc2e2410eae944e",
+          "guidRef": "b1dec8a8d79593843bc2e2410eae944e"
+        },
+        "scale": 1.0,
+        "lifespan": 1.0,
+        "fullscreen": 0,
+        "useCenterPosition": false,
+        "useTransformPosition": false,
+        "useTransfromRotation": false,
+        "destroyOnTransformDestroy": false,
+        "alwaysUseAge": false,
+        "useRoundTime": false,
+        "name": "EffectModel_Sell",
+        "ImplementationType": null
+      },
+      "name": "CreateEffectOnSellModel_BananaFarmerPro-030",
+      "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.CreateEffectOnSell, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+      "$type": "Assets.Scripts.Models.Towers.Behaviors.CreateEffectOnPlaceModel, Assembly-CSharp",
+      "effectModel": null,
+      "name": "CreateEffectOnPlaceModel_BananaFarmerPro-030",
+      "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.CreateEffectOnPlace, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+      "$type": "Assets.Scripts.Models.Towers.Behaviors.PlayAnimationIndexModel, Assembly-CSharp",
+      "placeAnimation": 3,
+      "upgradeAnimation": 4,
+      "name": "PlayAnimationIndexModel_BananaFarmerPro-030",
+      "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.PlayAnimationIndex, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+      "$type": "Assets.Scripts.Models.Towers.Behaviors.CreateSoundOnTowerPlaceModel, Assembly-CSharp",
+      "sound1": {
+        "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
+        "assetId": {
+          "$type": "NinjaKiwi.Common.ResourceUtils.AudioClipReference, NinjaKiwi.Common",
+          "AssetGUID": "b680997e404133143997d51105f59451",
+          "guidRef": "b680997e404133143997d51105f59451"
+        },
+        "name": "SoundModel_PlaceTowerMonkey01",
+        "ImplementationType": null
+      },
+      "sound2": {
+        "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
+        "assetId": {
+          "$type": "NinjaKiwi.Common.ResourceUtils.AudioClipReference, NinjaKiwi.Common",
+          "AssetGUID": "133e6e045f566e44ba09748ed2457a1f",
+          "guidRef": "133e6e045f566e44ba09748ed2457a1f"
+        },
+        "name": "SoundModel_PlaceTowerMonkey02",
+        "ImplementationType": null
+      },
+      "waterSound1": null,
+      "waterSound2": null,
+      "heroSound1": null,
+      "heroSound2": null,
+      "reactSound": null,
+      "reactSoundAlt": null,
+      "towerType": "",
+      "towerSkin": "",
+      "reactDelay": 0.0,
+      "name": "CreateSoundOnTowerPlaceModel_BananaFarmerPro-030",
+      "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.CreateSoundOnTowerPlace, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+      "$type": "Assets.Scripts.Models.Towers.Behaviors.CreateSoundOnSellModel, Assembly-CSharp",
+      "sound": {
+        "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
+        "assetId": {
+          "$type": "NinjaKiwi.Common.ResourceUtils.AudioClipReference, NinjaKiwi.Common",
+          "AssetGUID": "a8c789893d4275749af12c1efda9dd3e",
+          "guidRef": "a8c789893d4275749af12c1efda9dd3e"
+        },
+        "name": "SoundModel_UISell",
+        "ImplementationType": null
+      },
+      "name": "CreateSoundOnSellModel_BananaFarmerPro-030",
+      "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.CreateSoundOnSell, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+      "$type": "Assets.Scripts.Models.Towers.Behaviors.ShowCashIconInsteadModel, Assembly-CSharp",
+      "name": "ShowCashIconInsteadModel_BananaFarmerPro-030",
+      "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.ShowCashIconInstead, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+      "$type": "Assets.Scripts.Models.Towers.Behaviors.BananaFarmerCamoBananasModel, Assembly-CSharp",
+      "camoBananaWeaponModel": {
+        "$type": "Assets.Scripts.Models.Towers.Weapons.WeaponModel, Assembly-CSharp",
+        "animation": 1,
+        "emission": {
+          "$type": "Assets.Scripts.Models.Towers.Behaviors.Emissions.SingleEmmisionTowardsTargetModel, Assembly-CSharp",
+          "offset": 0.0,
+          "behaviors": null,
+          "name": "SingleEmmisionTowardsTargetModel_",
+          "ImplementationType": "Assets.Scripts.Simulation.Towers.Emissions.SingleEmmisionTowardsTarget, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+        },
+        "ejectX": 0.0,
+        "ejectY": 0.0,
+        "ejectZ": 0.0,
+        "projectile": {
+          "$type": "Assets.Scripts.Models.Towers.Projectiles.ProjectileModel, Assembly-CSharp",
+          "display": {
+            "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
+            "AssetGUID": "e3636dee3fdd3ff4a8bd693929261b15",
+            "guidRef": "e3636dee3fdd3ff4a8bd693929261b15"
+          },
+          "id": "CamoBanana",
+          "maxPierce": 0.0,
+          "pierce": 9999999.0,
+          "scale": 1.0,
+          "ignoreBlockers": true,
+          "usePointCollisionWithBloons": false,
+          "canCollisionBeBlockedByMapLos": false,
+          "filters": null,
+          "behaviors": [
+            {
+              "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.PickupModel, Assembly-CSharp",
+              "collectRadius": 15.0,
+              "isCamoPickup": true,
+              "collisionPass": 0,
+              "name": "PickupModel_",
+              "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Pickup, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+              "delay": 0.8
+            },
+            {
+              "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.CashModel, Assembly-CSharp",
+              "minimum": 80.0,
+              "maximum": 80.0,
+              "bonusMultiplier": 0.0,
+              "salvage": 1.0,
+              "noTransformCash": false,
+              "distributeSalvage": false,
+              "forceCreateProjectile": false,
+              "isDoubleable": true,
+              "distributeBonusIncome": false,
+              "emittedByCashEarnedMultiplier": 1.0,
+              "collisionPass": 0,
+              "name": "CashModel_",
+              "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Cash, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+            },
+            {
+              "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.AgeModel, Assembly-CSharp",
+              "rounds": 9999999,
+              "useRoundTime": false,
+              "endOfRoundClearBypassModel": null,
+              "collisionPass": 0,
+              "Lifespan": 5.0,
+              "name": "AgeModel_CamoBanana",
+              "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Age, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+              "lifespan": 5.0
+            },
+            {
+              "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.CreateTextEffectModel, Assembly-CSharp",
+              "assetId": {
+                "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
+                "AssetGUID": "80178409df24b3b479342ed73cffb63d",
+                "guidRef": "80178409df24b3b479342ed73cffb63d"
+              },
+              "lifespan": 1.0,
+              "useTowerPosition": false,
+              "collisionPass": 0,
+              "name": "CreateTextEffectModel_",
+              "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.CreateTextEffect, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+            },
+            {
+              "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.ScaleProjectileModel, Assembly-CSharp",
+              "samples": [
+                0.09004579,
+                0.5747616,
+                1.17631137,
+                1.58670771,
+                1.66823983,
+                1.676031,
+                1.64815259,
+                1.59278393,
+                1.51810479,
+                1.43229461,
+                1.34353292,
+                1.25999928,
+                1.18987322,
+                1.14133441,
+                1.12256217,
+                1.13091314,
+                1.15407276,
+                1.18595576,
+                1.22047758,
+                1.2515533,
+                1.27309811,
+                1.27924466,
+                1.27103746,
+                1.25197625,
+                1.22426772,
+                1.19011867,
+                1.15173578,
+                1.11132586,
+                1.07109535,
+                1.03325117
+              ],
+              "curve": {
+                "$type": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Curve, Assembly-CSharp",
+                "samples": [
+                  0.09004579,
+                  0.5747616,
+                  1.17631137,
+                  1.58670771,
+                  1.66823983,
+                  1.676031,
+                  1.64815259,
+                  1.59278393,
+                  1.51810479,
+                  1.43229461,
+                  1.34353292,
+                  1.25999928,
+                  1.18987322,
+                  1.14133441,
+                  1.12256217,
+                  1.13091314,
+                  1.15407276,
+                  1.18595576,
+                  1.22047758,
+                  1.2515533,
+                  1.27309811,
+                  1.27924466,
+                  1.27103746,
+                  1.25197625,
+                  1.22426772,
+                  1.19011867,
+                  1.15173578,
+                  1.11132586,
+                  1.07109535,
+                  1.03325117
+                ]
+              },
+              "collisionPass": 0,
+              "name": "ScaleProjectileModel_",
+              "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.ScaleProjectile, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+            },
+            {
+              "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.CreateEffectOnExpireModel, Assembly-CSharp",
+              "assetId": {
+                "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
+                "AssetGUID": "b86d8b72eadd7cd4f952a5cd621b75c9",
+                "guidRef": "b86d8b72eadd7cd4f952a5cd621b75c9"
+              },
+              "lifespan": 15.0,
+              "fullscreen": 0,
+              "randomRotation": false,
+              "effectModel": null,
+              "useTargetPosition": false,
+              "collisionPass": 0,
+              "name": "CreateEffectOnExpireModel_",
+              "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.CreateEffectOnExpire, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+            },
+            {
+              "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.ArriveAtTargetModel, Assembly-CSharp",
+              "timeToTake": 0.0,
+              "curveSamples": [
+                0.0,
+                0.0722487,
+                0.149654016,
+                0.230101332,
+                0.311476022,
+                0.391663432,
+                0.468549043,
+                0.540018141,
+                0.603956163,
+                0.6582484,
+                0.701534867,
+                0.739703536,
+                0.7745815,
+                0.8063089,
+                0.835026264,
+                0.8608738,
+                0.883991957,
+                0.9045209,
+                0.9226011,
+                0.9383729,
+                0.9519766,
+                0.9635525,
+                0.9732409,
+                0.9811823,
+                0.9875169,
+                0.992385,
+                0.9959271,
+                0.9982834,
+                0.9995942,
+                1.0
+              ],
+              "filterCollisionWhileMoving": false,
+              "expireOnArrival": false,
+              "altSpeed": 100.0,
+              "stopOnTargetReached": true,
+              "curve": {
+                "$type": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Curve, Assembly-CSharp",
+                "samples": [
+                  0.0,
+                  0.0722487,
+                  0.149654016,
+                  0.230101332,
+                  0.311476022,
+                  0.391663432,
+                  0.468549043,
+                  0.540018141,
+                  0.603956163,
+                  0.6582484,
+                  0.701534867,
+                  0.739703536,
+                  0.7745815,
+                  0.8063089,
+                  0.835026264,
+                  0.8608738,
+                  0.883991957,
+                  0.9045209,
+                  0.9226011,
+                  0.9383729,
+                  0.9519766,
+                  0.9635525,
+                  0.9732409,
+                  0.9811823,
+                  0.9875169,
+                  0.992385,
+                  0.9959271,
+                  0.9982834,
+                  0.9995942,
+                  1.0
+                ]
+              },
+              "keepUpdatingTargetPos": false,
+              "rotateToTarget": false,
+              "maxTurnAngle": 0.0,
+              "positionAboveMoabTypes": false,
+              "collisionPass": 0,
+              "name": "ArriveAtTargetModel_CamoBanana",
+              "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.ArriveAtTarget, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+            },
+            {
+              "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.HeightOffsetProjectileModel, Assembly-CSharp",
+              "samples": [
+                0.0,
+                4.19827366,
+                8.12504,
+                11.7893648,
+                15.2003164,
+                18.3669624,
+                21.2983665,
+                24.0036,
+                26.49173,
+                28.7718163,
+                30.8529358,
+                32.7441521,
+                34.45453,
+                35.9931374,
+                37.3690453,
+                38.5913162,
+                39.66902,
+                40.6112175,
+                41.4269829,
+                42.12538,
+                42.7154846,
+                43.20635,
+                43.6070557,
+                43.9266548,
+                44.1742249,
+                44.3588371,
+                44.4895477,
+                44.5754242,
+                44.62554,
+                44.64897
+              ],
+              "curve": {
+                "$type": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Curve, Assembly-CSharp",
+                "samples": [
+                  0.0,
+                  4.19827366,
+                  8.12504,
+                  11.7893648,
+                  15.2003164,
+                  18.3669624,
+                  21.2983665,
+                  24.0036,
+                  26.49173,
+                  28.7718163,
+                  30.8529358,
+                  32.7441521,
+                  34.45453,
+                  35.9931374,
+                  37.3690453,
+                  38.5913162,
+                  39.66902,
+                  40.6112175,
+                  41.4269829,
+                  42.12538,
+                  42.7154846,
+                  43.20635,
+                  43.6070557,
+                  43.9266548,
+                  44.1742249,
+                  44.3588371,
+                  44.4895477,
+                  44.5754242,
+                  44.62554,
+                  44.64897
+                ]
+              },
+              "collisionPass": 0,
+              "name": "HeightOffsetProjectileModel_CamoBanana",
+              "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.HeightOffsetProjectile, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+            },
+            {
+              "$type": "Assets.Scripts.Models.GenericBehaviors.DisplayModel, Assembly-CSharp",
+              "display": {
+                "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
+                "AssetGUID": "e3636dee3fdd3ff4a8bd693929261b15",
+                "guidRef": "e3636dee3fdd3ff4a8bd693929261b15"
+              },
+              "layer": 0,
+              "positionOffset": {
+                "$type": "Assets.Scripts.Simulation.SMath.Vector3, Assembly-CSharp",
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "scale": 1.0,
+              "ignoreRotation": false,
+              "animationChanges": null,
+              "delayedReveal": 0.0,
+              "category": 16,
+              "isAnimationPaused": false,
+              "name": "DisplayModel_ProjectileDisplay",
+              "ImplementationType": "Assets.Scripts.Simulation.Behaviors.DisplayBehavior, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+            }
+          ],
+          "collisionPasses": [
+            0
+          ],
+          "canCollideWithBloons": true,
+          "radius": 5.0,
+          "vsBlockerRadius": 0.0,
+          "hasDamageModifiers": false,
+          "dontUseCollisionChecker": false,
+          "ignoreNonTargetable": false,
+          "ignorePierceExhaustion": false,
+          "saveId": null,
+          "displayModel": null,
+          "CappedPierce": 9999999.0,
+          "name": "ProjectileModel_CamoBanana",
+          "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Projectile, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+          "checkCollisionInterval": 0.0
+        },
+        "fireWithoutTarget": false,
+        "fireBetweenRounds": false,
+        "behaviors": [
+          {
+            "$type": "Assets.Scripts.Models.Towers.Weapons.Behaviors.EmissionsPerRoundFilterModel, Assembly-CSharp",
+            "count": 1,
+            "name": "EmissionsPerRoundFilterModel_",
+            "ImplementationType": "Assets.Scripts.Simulation.Towers.Weapons.Behaviors.EmissionsPerRoundFilter, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+          },
+          {
+            "$type": "Assets.Scripts.Models.Towers.Weapons.Behaviors.WeaponRateMinModel, Assembly-CSharp",
+            "min": 0.05,
+            "name": "WeaponRateMinModel_",
+            "ImplementationType": "Assets.Scripts.Simulation.Towers.Weapons.Behaviors.WeaponRateMin, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+          }
+        ],
+        "useAttackPosition": false,
+        "startInCooldown": false,
+        "animateOnMainAttack": false,
+        "isStunned": false,
+        "Rate": 0.05,
+        "UseThrowMarker": false,
+        "name": "WeaponModel_CamoBananaWeapon",
+        "ImplementationType": "Assets.Scripts.Simulation.Towers.Weapons.Weapon, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "animationOffset": 0.0,
+        "rate": 0.05,
+        "customStartCooldown": 0.0
+      },
+      "camoBananaFarmCount": 9999999,
+      "Mutator": {
+        "$type": "Assets.Scripts.Models.Towers.Behaviors.BananaFarmerCamoBananasModel+CamoBananaMutator, Assembly-CSharp",
+        "id": "CamoBananaMutator",
+        "isExclusiveInMutationList": false,
+        "priority": 1,
+        "glueLevel": 0,
+        "dontCopy": false,
+        "buffIndicator": null,
+        "saveId": null,
+        "isAreaBuff": false,
+        "isGeraldoBuff": false,
+        "isArtifactMutator": false,
+        "dontRemoveOnBloonDegrade": false,
+        "cantBeAbsorbed": false
+      },
+      "name": "BananaFarmerCamoBananasModel_BananaFarmerPro-030",
+      "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.BananaFarmerCamoBananas, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+      "$type": "Assets.Scripts.Models.Towers.Behaviors.CollectCashZoneModel, Assembly-CSharp",
+      "attractRange": 9999999.0,
+      "collectRange": 10.0,
+      "lerpMultiplier": 0.03,
+      "towerFilter": "",
+      "useTowerRange": false,
+      "countCollectedCash": true,
+      "animateTower": true,
+      "rotate": true,
+      "onlyAttractsCamo": true,
+      "minEmitWaitTime": 0.6,
+      "minEmitWaitTimeFrames": 36,
+      "name": "CollectCashZoneModel_Camo",
+      "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.CollectCashZone, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+      "$type": "Assets.Scripts.Models.Towers.Behaviors.BananaFarmerRegrowBananasModel, Assembly-CSharp",
+      "regrowBananaSkinModel": {
+        "$type": "Assets.Scripts.Models.Towers.Projectiles.ProjectileModel, Assembly-CSharp",
+        "display": {
+          "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
+          "AssetGUID": "9c1bfc7447e79b14e93ff03c102d98de",
+          "guidRef": "9c1bfc7447e79b14e93ff03c102d98de"
+        },
+        "id": "RegrowBananaSkin",
+        "maxPierce": 0.0,
+        "pierce": 9999999.0,
+        "scale": 1.0,
+        "ignoreBlockers": true,
+        "usePointCollisionWithBloons": false,
+        "canCollisionBeBlockedByMapLos": false,
+        "filters": null,
+        "behaviors": [
+          {
+            "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.AgeModel, Assembly-CSharp",
+            "rounds": 9999999,
+            "useRoundTime": true,
+            "endOfRoundClearBypassModel": null,
+            "collisionPass": 0,
+            "Lifespan": 5.0,
+            "name": "AgeModel_RegrowBananaSkin",
+            "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Age, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+            "lifespan": 5.0
+          },
+          {
+            "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.CreateEffectOnExpireModel, Assembly-CSharp",
+            "assetId": {
+              "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
+              "AssetGUID": "d312f786a98c33d46b7fc80f6c4ba0f7",
+              "guidRef": "d312f786a98c33d46b7fc80f6c4ba0f7"
+            },
+            "lifespan": 3.0,
+            "fullscreen": 0,
+            "randomRotation": false,
+            "effectModel": null,
+            "useTargetPosition": false,
+            "collisionPass": 0,
+            "name": "CreateEffectOnExpireModel_",
+            "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.CreateEffectOnExpire, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+          },
+          {
+            "$type": "Assets.Scripts.Models.GenericBehaviors.DisplayModel, Assembly-CSharp",
+            "display": {
+              "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
+              "AssetGUID": "9c1bfc7447e79b14e93ff03c102d98de",
+              "guidRef": "9c1bfc7447e79b14e93ff03c102d98de"
+            },
+            "layer": 0,
+            "positionOffset": {
+              "$type": "Assets.Scripts.Simulation.SMath.Vector3, Assembly-CSharp",
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "scale": 1.0,
+            "ignoreRotation": false,
+            "animationChanges": null,
+            "delayedReveal": 0.0,
+            "category": 16,
+            "isAnimationPaused": false,
+            "name": "DisplayModel_ProjectileDisplay",
+            "ImplementationType": "Assets.Scripts.Simulation.Behaviors.DisplayBehavior, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+          }
+        ],
+        "collisionPasses": [
+          0
+        ],
+        "canCollideWithBloons": true,
+        "radius": 5.0,
+        "vsBlockerRadius": 0.0,
+        "hasDamageModifiers": false,
+        "dontUseCollisionChecker": false,
+        "ignoreNonTargetable": false,
+        "ignorePierceExhaustion": false,
+        "saveId": null,
+        "displayModel": null,
+        "CappedPierce": 9999999.0,
+        "name": "ProjectileModel_RegrowBananaSkin",
+        "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Projectile, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "checkCollisionInterval": 0.0
+      },
+      "regrowPerBanana": 4,
+      "selectionObjectPath": {
+        "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
+        "AssetGUID": "e61ae1bd9fef72e46b702933811ec7f0",
+        "guidRef": "e61ae1bd9fef72e46b702933811ec7f0"
+      },
+      "isSelectableGameObject": {
+        "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
+        "AssetGUID": "e61ae1bd9fef72e46b702933811ec7f0",
+        "guidRef": "e61ae1bd9fef72e46b702933811ec7f0"
+      },
+      "activateSound": null,
+      "confirmSound": {
+        "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
+        "assetId": {
+          "$type": "NinjaKiwi.Common.ResourceUtils.AudioClipReference, NinjaKiwi.Common",
+          "AssetGUID": "582212efb073de44fab398e936b83954",
+          "guidRef": "582212efb073de44fab398e936b83954"
+        },
+        "name": "SoundModel_UIGlint",
+        "ImplementationType": null
+      },
+      "lineDisplayPath": {
+        "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
+        "AssetGUID": "c2baf63ce00ca8f4688bbc4ce9408aa8",
+        "guidRef": "c2baf63ce00ca8f4688bbc4ce9408aa8"
+      },
+      "lineDotOffset": 6.0,
+      "lineDotSpacing": 9.0,
+      "isBananaIntelligenceBureau": true,
+      "buffLocsName": "BuffIconRegrowBananas",
+      "buffIconName": "BuffIconRegrowBananas",
+      "maxStackSize": 0,
+      "isGlobalRange": false,
+      "MutatorWeak": {
+        "$type": "Assets.Scripts.Models.Towers.Behaviors.BananaFarmerRegrowBananasModel+RegrowBananasMutator, Assembly-CSharp",
+        "id": "RegrowBananasMutator",
+        "isExclusiveInMutationList": false,
+        "priority": 1,
+        "glueLevel": 0,
+        "dontCopy": false,
+        "buffIndicator": null,
+        "saveId": null,
+        "isAreaBuff": false,
+        "isGeraldoBuff": false,
+        "isArtifactMutator": false,
+        "dontRemoveOnBloonDegrade": false,
+        "cantBeAbsorbed": true
+      },
+      "MutatorStrong": {
+        "$type": "Assets.Scripts.Models.Towers.Behaviors.BananaFarmerRegrowBananasModel+RegrowBananasMutator, Assembly-CSharp",
+        "id": "RegrowBananasMutator",
+        "isExclusiveInMutationList": false,
+        "priority": 2,
+        "glueLevel": 0,
+        "dontCopy": false,
+        "buffIndicator": null,
+        "saveId": null,
+        "isAreaBuff": false,
+        "isGeraldoBuff": false,
+        "isArtifactMutator": false,
+        "dontRemoveOnBloonDegrade": false,
+        "cantBeAbsorbed": true
+      },
+      "GetCurrentTargetMutator": {
+        "$type": "Assets.Scripts.Models.Towers.Behaviors.BananaFarmerRegrowBananasModel+RegrowBananasMutator, Assembly-CSharp",
+        "id": "RegrowBananasMutator",
+        "isExclusiveInMutationList": false,
+        "priority": 2,
+        "glueLevel": 0,
+        "dontCopy": false,
+        "buffIndicator": null,
+        "saveId": null,
+        "isAreaBuff": false,
+        "isGeraldoBuff": false,
+        "isArtifactMutator": false,
+        "dontRemoveOnBloonDegrade": false,
+        "cantBeAbsorbed": true
+      },
+      "name": "BananaFarmerRegrowBananasModel_",
+      "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.BananaFarmerRegrowBananas, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+      "$type": "Assets.Scripts.Models.Towers.Behaviors.CreateEffectOnUpgradeModel, Assembly-CSharp",
+      "effectModel": {
+        "$type": "Assets.Scripts.Models.Effects.EffectModel, Assembly-CSharp",
+        "assetId": {
+          "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
+          "AssetGUID": "0df55a1a5432bf54eb811f8e099c49c3",
+          "guidRef": "0df55a1a5432bf54eb811f8e099c49c3"
+        },
+        "scale": 1.0,
+        "lifespan": 6.0,
+        "fullscreen": 0,
+        "useCenterPosition": false,
+        "useTransformPosition": false,
+        "useTransfromRotation": false,
+        "destroyOnTransformDestroy": false,
+        "alwaysUseAge": false,
+        "useRoundTime": false,
+        "name": "EffectModel_Upgrade",
+        "ImplementationType": null
+      },
+      "createOnAirUnit": false,
+      "name": "CreateEffectOnUpgradeModel_BananaFarmerPro-030",
+      "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.CreateEffectOnUpgrade, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+      "$type": "Assets.Scripts.Models.Towers.Behaviors.CreateSoundOnUpgradeModel, Assembly-CSharp",
+      "sound": {
+        "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
+        "assetId": {
+          "$type": "NinjaKiwi.Common.ResourceUtils.AudioClipReference, NinjaKiwi.Common",
+          "AssetGUID": "f91dc7ea1b37815459e81e99254863ab",
+          "guidRef": "f91dc7ea1b37815459e81e99254863ab"
+        },
+        "name": "SoundModel_TowerUpgrade",
+        "ImplementationType": null
+      },
+      "sound1": {
+        "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
+        "assetId": {
+          "$type": "NinjaKiwi.Common.ResourceUtils.AudioClipReference, NinjaKiwi.Common",
+          "AssetGUID": "f91dc7ea1b37815459e81e99254863ab",
+          "guidRef": "f91dc7ea1b37815459e81e99254863ab"
+        },
+        "name": "SoundModel_TowerUpgrade",
+        "ImplementationType": null
+      },
+      "sound2": {
+        "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
+        "assetId": {
+          "$type": "NinjaKiwi.Common.ResourceUtils.AudioClipReference, NinjaKiwi.Common",
+          "AssetGUID": "f91dc7ea1b37815459e81e99254863ab",
+          "guidRef": "f91dc7ea1b37815459e81e99254863ab"
+        },
+        "name": "SoundModel_TowerUpgrade",
+        "ImplementationType": null
+      },
+      "sound3": {
+        "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
+        "assetId": {
+          "$type": "NinjaKiwi.Common.ResourceUtils.AudioClipReference, NinjaKiwi.Common",
+          "AssetGUID": "f91dc7ea1b37815459e81e99254863ab",
+          "guidRef": "f91dc7ea1b37815459e81e99254863ab"
+        },
+        "name": "SoundModel_TowerUpgrade",
+        "ImplementationType": null
+      },
+      "sound4": {
+        "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
+        "assetId": {
+          "$type": "NinjaKiwi.Common.ResourceUtils.AudioClipReference, NinjaKiwi.Common",
+          "AssetGUID": "f91dc7ea1b37815459e81e99254863ab",
+          "guidRef": "f91dc7ea1b37815459e81e99254863ab"
+        },
+        "name": "SoundModel_TowerUpgrade",
+        "ImplementationType": null
+      },
+      "sound5": {
+        "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
+        "assetId": {
+          "$type": "NinjaKiwi.Common.ResourceUtils.AudioClipReference, NinjaKiwi.Common",
+          "AssetGUID": "f91dc7ea1b37815459e81e99254863ab",
+          "guidRef": "f91dc7ea1b37815459e81e99254863ab"
+        },
+        "name": "SoundModel_TowerUpgrade",
+        "ImplementationType": null
+      },
+      "sound6": {
+        "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
+        "assetId": {
+          "$type": "NinjaKiwi.Common.ResourceUtils.AudioClipReference, NinjaKiwi.Common",
+          "AssetGUID": "f91dc7ea1b37815459e81e99254863ab",
+          "guidRef": "f91dc7ea1b37815459e81e99254863ab"
+        },
+        "name": "SoundModel_TowerUpgrade",
+        "ImplementationType": null
+      },
+      "sound7": {
+        "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
+        "assetId": {
+          "$type": "NinjaKiwi.Common.ResourceUtils.AudioClipReference, NinjaKiwi.Common",
+          "AssetGUID": "f91dc7ea1b37815459e81e99254863ab",
+          "guidRef": "f91dc7ea1b37815459e81e99254863ab"
+        },
+        "name": "SoundModel_TowerUpgrade",
+        "ImplementationType": null
+      },
+      "sound8": {
+        "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
+        "assetId": {
+          "$type": "NinjaKiwi.Common.ResourceUtils.AudioClipReference, NinjaKiwi.Common",
+          "AssetGUID": "f91dc7ea1b37815459e81e99254863ab",
+          "guidRef": "f91dc7ea1b37815459e81e99254863ab"
+        },
+        "name": "SoundModel_TowerUpgrade",
+        "ImplementationType": null
+      },
+      "name": "CreateSoundOnUpgradeModel_BananaFarmerPro-030",
+      "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.CreateSoundOnUpgrade, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+      "$type": "Assets.Scripts.Models.GenericBehaviors.DisplayModel, Assembly-CSharp",
+      "display": {
+        "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
+        "AssetGUID": "e821a0d7efe80c241b9f86d3d4f84108",
+        "guidRef": "e821a0d7efe80c241b9f86d3d4f84108"
+      },
+      "layer": -1,
+      "positionOffset": {
+        "$type": "Assets.Scripts.Simulation.SMath.Vector3, Assembly-CSharp",
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "scale": 1.0,
+      "ignoreRotation": false,
+      "animationChanges": null,
+      "delayedReveal": 0.0,
+      "category": 4,
+      "isAnimationPaused": false,
+      "name": "DisplayModel_TowerDisplay",
+      "ImplementationType": "Assets.Scripts.Simulation.Behaviors.DisplayBehavior, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    }
+  ],
+  "radius": 5.0,
+  "isPowerTower": true,
+  "isPowerProTower": true,
+  "isGeraldoItem": false,
+  "IsBeastHandlerPet": false,
+  "SelectParentOnSelected": false,
+  "DisplayScale": 1.0,
+  "IsSubEntity": false,
+  "BeastHandlerLeashMutationId": "BeastHandlerContributionBananaFarmerPro",
+  "powerProTowerModel": {
+    "$type": "Assets.Scripts.Models.Towers.Behaviors.PowerProTowerModel, Assembly-CSharp",
+    "powerId": "BananaFarmerPro",
+    "name": "PowerProTowerModel_BananaFarmerPro-030",
+    "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.PowerProTower, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+  },
+  "IsBaseTower": false,
+  "TargetTypes": null,
+  "IsExclusivelyWaterBased": false,
+  "RadiusSquared": 0.0,
+  "name": "BananaFarmerPro-030",
+  "ImplementationType": "Assets.Scripts.Simulation.Towers.Tower, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+}

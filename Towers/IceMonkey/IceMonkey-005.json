@@ -417,6 +417,7 @@
         "AssetGUID": "dcc79ccbe3defd44bad04079cc150d6c",
         "guidRef": "dcc79ccbe3defd44bad04079cc150d6c"
       },
+      "displayPriority": 0,
       "name": "FreezeNearbyWaterModel_",
       "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.FreezeNearbyWater, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
     },
@@ -606,7 +607,8 @@
                         "isAreaBuff": false,
                         "isGeraldoBuff": false,
                         "isArtifactMutator": false,
-                        "dontRemoveOnBloonDegrade": false
+                        "dontRemoveOnBloonDegrade": false,
+                        "cantBeAbsorbed": false
                       },
                       "name": "FreezeModel_Ice",
                       "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Freeze, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
@@ -641,8 +643,8 @@
                             "$type": "Assets.Scripts.Models.Towers.Projectiles.ProjectileModel, Assembly-CSharp",
                             "display": {
                               "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                              "AssetGUID": "8c453b41b6b83704298b5007e8686941",
-                              "guidRef": "8c453b41b6b83704298b5007e8686941"
+                              "AssetGUID": null,
+                              "guidRef": null
                             },
                             "id": "Icicle",
                             "maxPierce": 3.0,
@@ -757,8 +759,8 @@
                                 "$type": "Assets.Scripts.Models.GenericBehaviors.DisplayModel, Assembly-CSharp",
                                 "display": {
                                   "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                                  "AssetGUID": "8c453b41b6b83704298b5007e8686941",
-                                  "guidRef": "8c453b41b6b83704298b5007e8686941"
+                                  "AssetGUID": null,
+                                  "guidRef": null
                                 },
                                 "layer": 0,
                                 "positionOffset": {
@@ -815,7 +817,7 @@
                       "parentDamageModel": null,
                       "chance": 0.0,
                       "dontRemoveOnBloonDegrade": false,
-                      "overlayType": "",
+                      "overlayType": "Icicles",
                       "collisionPass": -1,
                       "name": "AddBehaviorToBloonModel_Icicles",
                       "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.AddBehaviorToBloon, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
@@ -1215,12 +1217,14 @@
   ],
   "radius": 6.0,
   "isPowerTower": false,
+  "isPowerProTower": false,
   "isGeraldoItem": false,
   "IsBeastHandlerPet": false,
   "SelectParentOnSelected": false,
   "DisplayScale": 1.0,
   "IsSubEntity": false,
   "BeastHandlerLeashMutationId": "BeastHandlerContributionIceMonkey",
+  "powerProTowerModel": null,
   "IsBaseTower": false,
   "TargetTypes": [
     {

@@ -865,7 +865,7 @@
                         "Camo"
                       ],
                       "damageMultiplier": 1.0,
-                      "damageAddative": 1.0,
+                      "damageAddative": 15.0,
                       "mustIncludeAllTags": false,
                       "applyOverMaxDamage": false,
                       "collisionPass": 0,
@@ -1245,6 +1245,20 @@
                               "lifespan": 0.05
                             },
                             {
+                              "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModifierForTagModel, Assembly-CSharp",
+                              "tag": "Camo",
+                              "tags": [
+                                "Camo"
+                              ],
+                              "damageMultiplier": 1.0,
+                              "damageAddative": 700.0,
+                              "mustIncludeAllTags": false,
+                              "applyOverMaxDamage": false,
+                              "collisionPass": 0,
+                              "name": "DamageModifierForTagModel_Explosion",
+                              "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.DamageModifierForTag, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+                            },
+                            {
                               "$type": "Assets.Scripts.Models.GenericBehaviors.DisplayModel, Assembly-CSharp",
                               "display": {
                                 "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
@@ -1274,7 +1288,7 @@
                           "canCollideWithBloons": true,
                           "radius": 9999999.0,
                           "vsBlockerRadius": 0.0,
-                          "hasDamageModifiers": false,
+                          "hasDamageModifiers": true,
                           "dontUseCollisionChecker": false,
                           "ignoreNonTargetable": false,
                           "ignorePierceExhaustion": false,
@@ -1430,7 +1444,8 @@
             "isAreaBuff": false,
             "isGeraldoBuff": false,
             "isArtifactMutator": false,
-            "dontRemoveOnBloonDegrade": false
+            "dontRemoveOnBloonDegrade": false,
+            "cantBeAbsorbed": false
           },
           "name": "GroundZeroBombBuffModel_",
           "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.Abilities.Behaviors.GroundZeroBombBuff, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
@@ -1512,6 +1527,7 @@
       "hideAbilityIfInCooldown": false,
       "startOffCooldown": false,
       "alwaysSetAnimationState": false,
+      "rechargeMonkeyMoneyCost": 0,
       "restrictAbilityAfterMaxRoundTimer": false,
       "CooldownSpeedScale": 0.0,
       "AnimationOffset": 0.0,
@@ -1549,12 +1565,14 @@
   ],
   "radius": 12.0,
   "isPowerTower": false,
+  "isPowerProTower": false,
   "isGeraldoItem": false,
   "IsBeastHandlerPet": false,
   "SelectParentOnSelected": false,
   "DisplayScale": 1.0,
   "IsSubEntity": false,
   "BeastHandlerLeashMutationId": "BeastHandlerContributionMonkeyAce",
+  "powerProTowerModel": null,
   "IsBaseTower": false,
   "TargetTypes": [
     {

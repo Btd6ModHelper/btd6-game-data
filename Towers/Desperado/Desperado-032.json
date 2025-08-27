@@ -414,6 +414,7 @@
       },
       "oneHealthHighestBloon": "",
       "bloonLeakValueModifier": 2.0,
+      "abilityCooldownScale": 0.0,
       "Mutator": {
         "$type": "Assets.Scripts.Models.Towers.Behaviors.VigilanteTowerBehaviorModel+VigilanteMutator, Assembly-CSharp",
         "id": "VigilanteMutator",
@@ -438,7 +439,8 @@
         "isAreaBuff": false,
         "isGeraldoBuff": false,
         "isArtifactMutator": false,
-        "dontRemoveOnBloonDegrade": false
+        "dontRemoveOnBloonDegrade": false,
+        "cantBeAbsorbed": false
       },
       "name": "VigilanteTowerBehaviorModel_",
       "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.VigilanteTowerBehavior, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
@@ -469,7 +471,7 @@
             "maxPierce": 0.0,
             "pierce": 1.0,
             "scale": 1.0,
-            "ignoreBlockers": false,
+            "ignoreBlockers": true,
             "usePointCollisionWithBloons": false,
             "canCollisionBeBlockedByMapLos": false,
             "filters": [
@@ -619,10 +621,10 @@
             },
             {
               "$type": "Assets.Scripts.Models.Towers.Weapons.Behaviors.VagrantWeaponBehaviorModel, Assembly-CSharp",
-              "noTowersRateBonus": 0.3,
-              "towerRangeBonusReduction": 0.1,
-              "bloonInRangeAttackSpeedBuff": 0.01,
-              "maxBloonAttackSpeedBuff": 0.25,
+              "noTowersRateBonus": 0.45,
+              "towerRangeBonusReduction": 0.15,
+              "bloonInRangeAttackSpeedBuff": 0.02,
+              "maxBloonAttackSpeedBuff": 0.5,
               "buffDisplay": {
                 "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
                 "AssetGUID": null,
@@ -677,6 +679,7 @@
           "$type": "Assets.Scripts.Models.Towers.Behaviors.Attack.Behaviors.TargetDesperadoFirstModel, Assembly-CSharp",
           "isSelectable": true,
           "canTargetMarked": false,
+          "canPrioritiseCamo": true,
           "isOnSubTower": false,
           "name": "TargetDesperadoFirstModel_",
           "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.Attack.Behaviors.TargetDesperadoFirst, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
@@ -685,6 +688,7 @@
           "$type": "Assets.Scripts.Models.Towers.Behaviors.Attack.Behaviors.TargetDesperadoLastModel, Assembly-CSharp",
           "isSelectable": true,
           "canTargetMarked": false,
+          "canPrioritiseCamo": true,
           "isOnSubTower": false,
           "name": "TargetDesperadoLastModel_",
           "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.Attack.Behaviors.TargetDesperadoLast, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
@@ -693,6 +697,7 @@
           "$type": "Assets.Scripts.Models.Towers.Behaviors.Attack.Behaviors.TargetDesperadoCloseModel, Assembly-CSharp",
           "isSelectable": true,
           "canTargetMarked": false,
+          "canPrioritiseCamo": true,
           "isOnSubTower": false,
           "name": "TargetDesperadoCloseModel_",
           "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.Attack.Behaviors.TargetDesperadoClose, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
@@ -701,6 +706,7 @@
           "$type": "Assets.Scripts.Models.Towers.Behaviors.Attack.Behaviors.TargetDesperadoStrongModel, Assembly-CSharp",
           "isSelectable": true,
           "canTargetMarked": false,
+          "canPrioritiseCamo": true,
           "isOnSubTower": false,
           "name": "TargetDesperadoStrongModel_",
           "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.Attack.Behaviors.TargetDesperadoStrong, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
@@ -732,7 +738,7 @@
             "displayPath": null,
             "displayLength": 0.0,
             "displayLifetime": 0.4,
-            "ignoreBlockers": false,
+            "ignoreBlockers": true,
             "effectAtEndModel": {
               "$type": "Assets.Scripts.Models.Effects.EffectModel, Assembly-CSharp",
               "assetId": {
@@ -801,9 +807,9 @@
             },
             "id": "Projectile",
             "maxPierce": 0.0,
-            "pierce": 3.0,
+            "pierce": 4.0,
             "scale": 1.0,
-            "ignoreBlockers": false,
+            "ignoreBlockers": true,
             "usePointCollisionWithBloons": false,
             "canCollisionBeBlockedByMapLos": false,
             "filters": [
@@ -908,7 +914,7 @@
             "ignorePierceExhaustion": false,
             "saveId": null,
             "displayModel": null,
-            "CappedPierce": 3.0,
+            "CappedPierce": 4.0,
             "name": "ProjectileModel_Projectile",
             "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Projectile, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
             "checkCollisionInterval": 0.0
@@ -962,10 +968,10 @@
             },
             {
               "$type": "Assets.Scripts.Models.Towers.Weapons.Behaviors.VagrantWeaponBehaviorModel, Assembly-CSharp",
-              "noTowersRateBonus": 0.3,
-              "towerRangeBonusReduction": 0.1,
-              "bloonInRangeAttackSpeedBuff": 0.01,
-              "maxBloonAttackSpeedBuff": 0.25,
+              "noTowersRateBonus": 0.45,
+              "towerRangeBonusReduction": 0.15,
+              "bloonInRangeAttackSpeedBuff": 0.02,
+              "maxBloonAttackSpeedBuff": 0.5,
               "buffDisplay": {
                 "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
                 "AssetGUID": null,
@@ -1026,6 +1032,7 @@
           "$type": "Assets.Scripts.Models.Towers.Behaviors.Attack.Behaviors.TargetDesperadoFirstModel, Assembly-CSharp",
           "isSelectable": false,
           "canTargetMarked": false,
+          "canPrioritiseCamo": true,
           "isOnSubTower": false,
           "name": "TargetDesperadoFirstModel_",
           "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.Attack.Behaviors.TargetDesperadoFirst, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
@@ -1034,6 +1041,7 @@
           "$type": "Assets.Scripts.Models.Towers.Behaviors.Attack.Behaviors.TargetDesperadoLastModel, Assembly-CSharp",
           "isSelectable": false,
           "canTargetMarked": false,
+          "canPrioritiseCamo": true,
           "isOnSubTower": false,
           "name": "TargetDesperadoLastModel_",
           "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.Attack.Behaviors.TargetDesperadoLast, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
@@ -1042,6 +1050,7 @@
           "$type": "Assets.Scripts.Models.Towers.Behaviors.Attack.Behaviors.TargetDesperadoCloseModel, Assembly-CSharp",
           "isSelectable": false,
           "canTargetMarked": false,
+          "canPrioritiseCamo": true,
           "isOnSubTower": false,
           "name": "TargetDesperadoCloseModel_",
           "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.Attack.Behaviors.TargetDesperadoClose, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
@@ -1050,6 +1059,7 @@
           "$type": "Assets.Scripts.Models.Towers.Behaviors.Attack.Behaviors.TargetDesperadoStrongModel, Assembly-CSharp",
           "isSelectable": false,
           "canTargetMarked": false,
+          "canPrioritiseCamo": true,
           "isOnSubTower": false,
           "name": "TargetDesperadoStrongModel_",
           "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.Attack.Behaviors.TargetDesperadoStrong, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
@@ -1082,8 +1092,8 @@
         {
           "$type": "Assets.Scripts.Models.Towers.Behaviors.Abilities.Behaviors.TakeAimModel, Assembly-CSharp",
           "lifespanFrames": 900,
-          "rangeModifier": 1.15,
-          "spreadModifier": 1.5,
+          "rangeModifier": 1.25,
+          "spreadModifier": 0.5,
           "selectionObjectPath": {
             "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
             "AssetGUID": "9f797fbaa3f707744997d75eb00eb335",
@@ -1141,7 +1151,8 @@
             "isAreaBuff": false,
             "isGeraldoBuff": false,
             "isArtifactMutator": false,
-            "dontRemoveOnBloonDegrade": false
+            "dontRemoveOnBloonDegrade": false,
+            "cantBeAbsorbed": false
           },
           "name": "TakeAimModel_",
           "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.Abilities.Behaviors.TakeAim, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
@@ -1169,7 +1180,7 @@
       "addedViaUpgrade": "Deadeye",
       "livesCost": 0,
       "maxActivationsPerRound": -1,
-      "animation": 4,
+      "animation": 3,
       "enabled": true,
       "canActivateBetweenRounds": true,
       "resetCooldownOnTierUpgrade": false,
@@ -1181,6 +1192,7 @@
       "hideAbilityIfInCooldown": false,
       "startOffCooldown": false,
       "alwaysSetAnimationState": false,
+      "rechargeMonkeyMoneyCost": 0,
       "restrictAbilityAfterMaxRoundTimer": false,
       "CooldownSpeedScale": 0.0,
       "AnimationOffset": 0.0,
@@ -1218,12 +1230,14 @@
   ],
   "radius": 7.0,
   "isPowerTower": false,
+  "isPowerProTower": false,
   "isGeraldoItem": false,
   "IsBeastHandlerPet": false,
   "SelectParentOnSelected": false,
   "DisplayScale": 1.0,
   "IsSubEntity": false,
   "BeastHandlerLeashMutationId": "BeastHandlerContributionDesperado",
+  "powerProTowerModel": null,
   "IsBaseTower": false,
   "TargetTypes": [
     {

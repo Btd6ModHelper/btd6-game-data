@@ -1137,6 +1137,7 @@
         {
           "$type": "Assets.Scripts.Models.Towers.Behaviors.Abilities.Behaviors.ChangeDamageTypeModel, Assembly-CSharp",
           "lifespanFrames": 570,
+          "cantBeAbsorbed": false,
           "immuneBloonProperties": 0,
           "name": "ChangeDamageTypeModel_",
           "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.Abilities.Behaviors.ChangeDamageType, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
@@ -1146,6 +1147,8 @@
           "lifespanFrames": 570,
           "mutatorId": "ArmorPiercingShellsMoab",
           "damageIncrease": 0,
+          "cantBeAbsorbed": false,
+          "mutatorPriority": 0,
           "projectileBehaviorModel": {
             "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModifierForTagModel, Assembly-CSharp",
             "tag": "Moabs",
@@ -1267,11 +1270,17 @@
             "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Projectile, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
             "checkCollisionInterval": 0.0
           },
+          "buffDisplayPath": {
+            "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
+            "AssetGUID": null,
+            "guidRef": null
+          },
+          "initialEffect": null,
           "Mutator": {
             "$type": "Assets.Scripts.Models.Towers.Behaviors.Abilities.Behaviors.MutateProjectileOnAbilityModel+ProjectileMutator, Assembly-CSharp",
             "id": "ArmorPiercingShellsMoab",
             "isExclusiveInMutationList": false,
-            "priority": 1,
+            "priority": 0,
             "glueLevel": 0,
             "dontCopy": false,
             "buffIndicator": null,
@@ -1279,7 +1288,8 @@
             "isAreaBuff": false,
             "isGeraldoBuff": false,
             "isArtifactMutator": false,
-            "dontRemoveOnBloonDegrade": false
+            "dontRemoveOnBloonDegrade": false,
+            "cantBeAbsorbed": false
           },
           "name": "MutateProjectileOnAbilityModel_ArmorPiercingShellsMoab",
           "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.Abilities.Behaviors.MutateProjectileOnAbility, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
@@ -1289,6 +1299,8 @@
           "lifespanFrames": 570,
           "mutatorId": "ArmorPiercingShellsCeramic",
           "damageIncrease": 0,
+          "cantBeAbsorbed": false,
+          "mutatorPriority": 0,
           "projectileBehaviorModel": {
             "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModifierForTagModel, Assembly-CSharp",
             "tag": "Ceramic",
@@ -1410,11 +1422,17 @@
             "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Projectile, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
             "checkCollisionInterval": 0.0
           },
+          "buffDisplayPath": {
+            "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
+            "AssetGUID": null,
+            "guidRef": null
+          },
+          "initialEffect": null,
           "Mutator": {
             "$type": "Assets.Scripts.Models.Towers.Behaviors.Abilities.Behaviors.MutateProjectileOnAbilityModel+ProjectileMutator, Assembly-CSharp",
             "id": "ArmorPiercingShellsCeramic",
             "isExclusiveInMutationList": false,
-            "priority": 1,
+            "priority": 0,
             "glueLevel": 0,
             "dontCopy": false,
             "buffIndicator": null,
@@ -1422,7 +1440,8 @@
             "isAreaBuff": false,
             "isGeraldoBuff": false,
             "isArtifactMutator": false,
-            "dontRemoveOnBloonDegrade": false
+            "dontRemoveOnBloonDegrade": false,
+            "cantBeAbsorbed": false
           },
           "name": "MutateProjectileOnAbilityModel_ArmorPiercingShellsCeramic",
           "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.Abilities.Behaviors.MutateProjectileOnAbility, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
@@ -1758,7 +1777,8 @@
             "isAreaBuff": false,
             "isGeraldoBuff": false,
             "isArtifactMutator": false,
-            "dontRemoveOnBloonDegrade": false
+            "dontRemoveOnBloonDegrade": false,
+            "cantBeAbsorbed": false
           },
           "name": "ChangeProjectileDisplayModel_",
           "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.Abilities.Behaviors.ChangeProjectileDisplay, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
@@ -1825,6 +1845,7 @@
       "hideAbilityIfInCooldown": false,
       "startOffCooldown": false,
       "alwaysSetAnimationState": false,
+      "rechargeMonkeyMoneyCost": 0,
       "restrictAbilityAfterMaxRoundTimer": false,
       "CooldownSpeedScale": 0.0,
       "AnimationOffset": 0.0,
@@ -1862,12 +1883,14 @@
   ],
   "radius": 8.0,
   "isPowerTower": false,
+  "isPowerProTower": false,
   "isGeraldoItem": false,
   "IsBeastHandlerPet": false,
   "SelectParentOnSelected": false,
   "DisplayScale": 1.0,
   "IsSubEntity": false,
   "BeastHandlerLeashMutationId": "BeastHandlerContributionCaptainChurchill",
+  "powerProTowerModel": null,
   "IsBaseTower": false,
   "TargetTypes": [
     {

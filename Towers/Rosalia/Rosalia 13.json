@@ -666,9 +666,9 @@
       "discountMultiplier": 0.1,
       "stackLimit": 1,
       "stackName": "RosaliaAircraftEffenciency",
-      "groupName": "RosaliaAircraftEffenciency",
       "affectSelf": false,
       "tierCap": 0,
+      "tierMin": 0,
       "towerBaseIds": "MonkeyAce,HeliPilot",
       "towerBaseIdList": [
         "MonkeyAce",
@@ -677,6 +677,7 @@
       "isBuffFromArea": false,
       "upgradeId": "",
       "dontAffectOthersInCoop": false,
+      "isGlobal": false,
       "buffLocsName": "BuffIconRosaliaAircraftEffenciency",
       "buffIconName": "BuffIconRosaliaAircraftEffenciency",
       "maxStackSize": 1,
@@ -2663,7 +2664,8 @@
                             "isAreaBuff": false,
                             "isGeraldoBuff": false,
                             "isArtifactMutator": false,
-                            "dontRemoveOnBloonDegrade": false
+                            "dontRemoveOnBloonDegrade": false,
+                            "cantBeAbsorbed": false
                           },
                           "name": "KnockbackModel_",
                           "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Knockback, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
@@ -2763,7 +2765,7 @@
                     "pushAmount": 10.0,
                     "tag": "",
                     "multiplierMOAB": 0.5,
-                    "multiplierBFB": 0.5,
+                    "multiplierBFB": 0.25,
                     "multiplierDDT": 1.0,
                     "multiplierZOMG": 0.0,
                     "onlyIfDamaged": false,
@@ -3167,6 +3169,7 @@
                               "mutationId": "Stun:Weak",
                               "countGlueAchievement": false,
                               "chance": 0.0,
+                              "dontRemoveOnBloonDegrade": false,
                               "overlayType": "Stun",
                               "collisionPass": -1,
                               "Lifespan": 1.0,
@@ -3193,7 +3196,8 @@
                                 "isAreaBuff": false,
                                 "isGeraldoBuff": false,
                                 "isArtifactMutator": false,
-                                "dontRemoveOnBloonDegrade": false
+                                "dontRemoveOnBloonDegrade": false,
+                                "cantBeAbsorbed": false
                               },
                               "name": "SlowModel_",
                               "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Slow, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
@@ -3552,6 +3556,7 @@
       "hideAbilityIfInCooldown": false,
       "startOffCooldown": false,
       "alwaysSetAnimationState": false,
+      "rechargeMonkeyMoneyCost": 0,
       "restrictAbilityAfterMaxRoundTimer": false,
       "CooldownSpeedScale": 0.0,
       "AnimationOffset": 0.0,
@@ -3676,7 +3681,8 @@
             "isAreaBuff": false,
             "isGeraldoBuff": false,
             "isArtifactMutator": false,
-            "dontRemoveOnBloonDegrade": false
+            "dontRemoveOnBloonDegrade": false,
+            "cantBeAbsorbed": false
           },
           "name": "FlightBoostAbilityModel_",
           "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.Abilities.Behaviors.FlightBoostAbility, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
@@ -3699,6 +3705,7 @@
       "hideAbilityIfInCooldown": false,
       "startOffCooldown": false,
       "alwaysSetAnimationState": false,
+      "rechargeMonkeyMoneyCost": 0,
       "restrictAbilityAfterMaxRoundTimer": false,
       "CooldownSpeedScale": 0.0,
       "AnimationOffset": 0.0,
@@ -3963,7 +3970,8 @@
                           "isAreaBuff": false,
                           "isGeraldoBuff": false,
                           "isArtifactMutator": false,
-                          "dontRemoveOnBloonDegrade": false
+                          "dontRemoveOnBloonDegrade": false,
+                          "cantBeAbsorbed": false
                         },
                         "name": "KineticChargeProjectileModel_KineticChargeProjectile",
                         "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.KineticChargeProjectile, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
@@ -4027,14 +4035,14 @@
                       },
                       {
                         "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.AgeModel, Assembly-CSharp",
-                        "rounds": 0,
-                        "useRoundTime": false,
+                        "rounds": 1,
+                        "useRoundTime": true,
                         "endOfRoundClearBypassModel": null,
                         "collisionPass": 0,
-                        "Lifespan": 0.0,
+                        "Lifespan": 60.0,
                         "name": "AgeModel_KineticChargeProjectile",
                         "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Age, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
-                        "lifespan": 0.0
+                        "lifespan": 60.0
                       },
                       {
                         "$type": "Assets.Scripts.Models.GenericBehaviors.DisplayModel, Assembly-CSharp",
@@ -4168,6 +4176,7 @@
       "hideAbilityIfInCooldown": false,
       "startOffCooldown": false,
       "alwaysSetAnimationState": false,
+      "rechargeMonkeyMoneyCost": 0,
       "restrictAbilityAfterMaxRoundTimer": false,
       "CooldownSpeedScale": 0.0,
       "AnimationOffset": 0.0,
@@ -4397,12 +4406,14 @@
   ],
   "radius": 6.0,
   "isPowerTower": false,
+  "isPowerProTower": false,
   "isGeraldoItem": false,
   "IsBeastHandlerPet": false,
   "SelectParentOnSelected": false,
   "DisplayScale": 1.0,
   "IsSubEntity": false,
   "BeastHandlerLeashMutationId": "BeastHandlerContributionRosalia",
+  "powerProTowerModel": null,
   "IsBaseTower": false,
   "TargetTypes": [
     {

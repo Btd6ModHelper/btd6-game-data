@@ -198,7 +198,7 @@
         },
         "id": "Projectile",
         "maxPierce": 0.0,
-        "pierce": 6.0,
+        "pierce": 10.0,
         "scale": 1.0,
         "ignoreBlockers": true,
         "usePointCollisionWithBloons": false,
@@ -210,11 +210,6 @@
             "ignoreBroadPhase": false,
             "name": "FilterInvisibleModel_",
             "ImplementationType": "Assets.Scripts.Simulation.Towers.Filters.FilterInvisible, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-          },
-          {
-            "$type": "Assets.Scripts.Models.Towers.Filters.FilterOfftrackModel, Assembly-CSharp",
-            "name": "FilterOfftrackModel_Projectile",
-            "ImplementationType": "Assets.Scripts.Simulation.Towers.Filters.FilterOfftrack, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
           }
         ],
         "behaviors": [
@@ -268,11 +263,6 @@
                 "ignoreBroadPhase": false,
                 "name": "FilterInvisibleModel_",
                 "ImplementationType": "Assets.Scripts.Simulation.Towers.Filters.FilterInvisible, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-              },
-              {
-                "$type": "Assets.Scripts.Models.Towers.Filters.FilterOfftrackModel, Assembly-CSharp",
-                "name": "FilterOfftrackModel_Projectile",
-                "ImplementationType": "Assets.Scripts.Simulation.Towers.Filters.FilterOfftrack, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
               }
             ],
             "collisionPass": 0,
@@ -329,7 +319,8 @@
               "isAreaBuff": false,
               "isGeraldoBuff": false,
               "isArtifactMutator": false,
-              "dontRemoveOnBloonDegrade": false
+              "dontRemoveOnBloonDegrade": false,
+              "cantBeAbsorbed": false
             },
             "name": "TranceBloonModel_",
             "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.TranceBloon, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
@@ -429,7 +420,7 @@
         "ignorePierceExhaustion": true,
         "saveId": null,
         "displayModel": null,
-        "CappedPierce": 6.0,
+        "CappedPierce": 10.0,
         "name": "ProjectileModel_Projectile",
         "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Projectile, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
         "checkCollisionInterval": 0.0
@@ -506,7 +497,7 @@
             },
             "id": "Projectile",
             "maxPierce": 0.0,
-            "pierce": 6.0,
+            "pierce": 10.0,
             "scale": 1.0,
             "ignoreBlockers": true,
             "usePointCollisionWithBloons": false,
@@ -518,11 +509,6 @@
                 "ignoreBroadPhase": false,
                 "name": "FilterInvisibleModel_",
                 "ImplementationType": "Assets.Scripts.Simulation.Towers.Filters.FilterInvisible, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-              },
-              {
-                "$type": "Assets.Scripts.Models.Towers.Filters.FilterOfftrackModel, Assembly-CSharp",
-                "name": "FilterOfftrackModel_Projectile",
-                "ImplementationType": "Assets.Scripts.Simulation.Towers.Filters.FilterOfftrack, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
               }
             ],
             "behaviors": [
@@ -576,11 +562,6 @@
                     "ignoreBroadPhase": false,
                     "name": "FilterInvisibleModel_",
                     "ImplementationType": "Assets.Scripts.Simulation.Towers.Filters.FilterInvisible, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-                  },
-                  {
-                    "$type": "Assets.Scripts.Models.Towers.Filters.FilterOfftrackModel, Assembly-CSharp",
-                    "name": "FilterOfftrackModel_Projectile",
-                    "ImplementationType": "Assets.Scripts.Simulation.Towers.Filters.FilterOfftrack, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
                   }
                 ],
                 "collisionPass": 0,
@@ -637,7 +618,8 @@
                   "isAreaBuff": false,
                   "isGeraldoBuff": false,
                   "isArtifactMutator": false,
-                  "dontRemoveOnBloonDegrade": false
+                  "dontRemoveOnBloonDegrade": false,
+                  "cantBeAbsorbed": false
                 },
                 "name": "TranceBloonModel_",
                 "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.TranceBloon, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
@@ -737,7 +719,7 @@
             "ignorePierceExhaustion": true,
             "saveId": null,
             "displayModel": null,
-            "CappedPierce": 6.0,
+            "CappedPierce": 10.0,
             "name": "ProjectileModel_Projectile",
             "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Projectile, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
             "checkCollisionInterval": 0.0
@@ -1031,12 +1013,14 @@
   ],
   "radius": 8.0,
   "isPowerTower": false,
+  "isPowerProTower": false,
   "isGeraldoItem": false,
   "IsBeastHandlerPet": false,
   "SelectParentOnSelected": true,
   "DisplayScale": 1.0,
   "IsSubEntity": true,
   "BeastHandlerLeashMutationId": "BeastHandlerContributionTranceTotem",
+  "powerProTowerModel": null,
   "IsBaseTower": true,
   "TargetTypes": null,
   "IsExclusivelyWaterBased": false,

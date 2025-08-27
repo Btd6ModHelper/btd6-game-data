@@ -438,7 +438,8 @@
         "isAreaBuff": false,
         "isGeraldoBuff": false,
         "isArtifactMutator": false,
-        "dontRemoveOnBloonDegrade": false
+        "dontRemoveOnBloonDegrade": false,
+        "cantBeAbsorbed": false
       },
       "name": "BountyHunterZoneModel_Desperado-040_",
       "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.BountyHunterZone, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
@@ -469,7 +470,7 @@
             "maxPierce": 0.0,
             "pierce": 1.0,
             "scale": 1.0,
-            "ignoreBlockers": false,
+            "ignoreBlockers": true,
             "usePointCollisionWithBloons": false,
             "canCollisionBeBlockedByMapLos": false,
             "filters": [
@@ -483,7 +484,7 @@
             "behaviors": [
               {
                 "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModel, Assembly-CSharp",
-                "damage": 12.0,
+                "damage": 16.0,
                 "maxDamage": 0.0,
                 "distributeToChildren": true,
                 "overrideDistributeBlocker": false,
@@ -493,7 +494,7 @@
                 "ignoreImmunityDestroy": false,
                 "ignoreDamageMultipliers": false,
                 "collisionPass": 0,
-                "CappedDamage": 12.0,
+                "CappedDamage": 16.0,
                 "name": "DamageModel_Projectile_",
                 "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Damage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
               },
@@ -527,7 +528,7 @@
                   "Ceramic"
                 ],
                 "damageMultiplier": 1.0,
-                "damageAddative": 12.0,
+                "damageAddative": 16.0,
                 "mustIncludeAllTags": false,
                 "applyOverMaxDamage": false,
                 "collisionPass": 0,
@@ -675,6 +676,7 @@
           "$type": "Assets.Scripts.Models.Towers.Behaviors.Attack.Behaviors.TargetDesperadoFirstModel, Assembly-CSharp",
           "isSelectable": true,
           "canTargetMarked": true,
+          "canPrioritiseCamo": true,
           "isOnSubTower": false,
           "name": "TargetDesperadoFirstModel_",
           "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.Attack.Behaviors.TargetDesperadoFirst, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
@@ -683,6 +685,7 @@
           "$type": "Assets.Scripts.Models.Towers.Behaviors.Attack.Behaviors.TargetDesperadoLastModel, Assembly-CSharp",
           "isSelectable": true,
           "canTargetMarked": true,
+          "canPrioritiseCamo": true,
           "isOnSubTower": false,
           "name": "TargetDesperadoLastModel_",
           "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.Attack.Behaviors.TargetDesperadoLast, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
@@ -691,6 +694,7 @@
           "$type": "Assets.Scripts.Models.Towers.Behaviors.Attack.Behaviors.TargetDesperadoCloseModel, Assembly-CSharp",
           "isSelectable": true,
           "canTargetMarked": true,
+          "canPrioritiseCamo": true,
           "isOnSubTower": false,
           "name": "TargetDesperadoCloseModel_",
           "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.Attack.Behaviors.TargetDesperadoClose, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
@@ -699,6 +703,7 @@
           "$type": "Assets.Scripts.Models.Towers.Behaviors.Attack.Behaviors.TargetDesperadoStrongModel, Assembly-CSharp",
           "isSelectable": true,
           "canTargetMarked": true,
+          "canPrioritiseCamo": true,
           "isOnSubTower": false,
           "name": "TargetDesperadoStrongModel_",
           "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.Attack.Behaviors.TargetDesperadoStrong, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
@@ -730,7 +735,7 @@
             "displayPath": null,
             "displayLength": 0.0,
             "displayLifetime": 0.4,
-            "ignoreBlockers": false,
+            "ignoreBlockers": true,
             "effectAtEndModel": {
               "$type": "Assets.Scripts.Models.Effects.EffectModel, Assembly-CSharp",
               "assetId": {
@@ -799,9 +804,9 @@
             },
             "id": "Projectile",
             "maxPierce": 0.0,
-            "pierce": 3.0,
+            "pierce": 4.0,
             "scale": 1.0,
-            "ignoreBlockers": false,
+            "ignoreBlockers": true,
             "usePointCollisionWithBloons": false,
             "canCollisionBeBlockedByMapLos": false,
             "filters": [
@@ -906,7 +911,7 @@
             "ignorePierceExhaustion": false,
             "saveId": null,
             "displayModel": null,
-            "CappedPierce": 3.0,
+            "CappedPierce": 4.0,
             "name": "ProjectileModel_Projectile",
             "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Projectile, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
             "checkCollisionInterval": 0.0
@@ -1008,6 +1013,7 @@
           "$type": "Assets.Scripts.Models.Towers.Behaviors.Attack.Behaviors.TargetDesperadoFirstModel, Assembly-CSharp",
           "isSelectable": false,
           "canTargetMarked": true,
+          "canPrioritiseCamo": true,
           "isOnSubTower": false,
           "name": "TargetDesperadoFirstModel_",
           "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.Attack.Behaviors.TargetDesperadoFirst, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
@@ -1016,6 +1022,7 @@
           "$type": "Assets.Scripts.Models.Towers.Behaviors.Attack.Behaviors.TargetDesperadoLastModel, Assembly-CSharp",
           "isSelectable": false,
           "canTargetMarked": true,
+          "canPrioritiseCamo": true,
           "isOnSubTower": false,
           "name": "TargetDesperadoLastModel_",
           "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.Attack.Behaviors.TargetDesperadoLast, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
@@ -1024,6 +1031,7 @@
           "$type": "Assets.Scripts.Models.Towers.Behaviors.Attack.Behaviors.TargetDesperadoCloseModel, Assembly-CSharp",
           "isSelectable": false,
           "canTargetMarked": true,
+          "canPrioritiseCamo": true,
           "isOnSubTower": false,
           "name": "TargetDesperadoCloseModel_",
           "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.Attack.Behaviors.TargetDesperadoClose, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
@@ -1032,6 +1040,7 @@
           "$type": "Assets.Scripts.Models.Towers.Behaviors.Attack.Behaviors.TargetDesperadoStrongModel, Assembly-CSharp",
           "isSelectable": false,
           "canTargetMarked": true,
+          "canPrioritiseCamo": true,
           "isOnSubTower": false,
           "name": "TargetDesperadoStrongModel_",
           "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.Attack.Behaviors.TargetDesperadoStrong, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
@@ -1123,7 +1132,8 @@
             "isAreaBuff": false,
             "isGeraldoBuff": false,
             "isArtifactMutator": false,
-            "dontRemoveOnBloonDegrade": false
+            "dontRemoveOnBloonDegrade": false,
+            "cantBeAbsorbed": false
           },
           "name": "TakeAimModel_",
           "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.Abilities.Behaviors.TakeAim, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
@@ -1163,6 +1173,7 @@
       "hideAbilityIfInCooldown": false,
       "startOffCooldown": false,
       "alwaysSetAnimationState": false,
+      "rechargeMonkeyMoneyCost": 0,
       "restrictAbilityAfterMaxRoundTimer": false,
       "CooldownSpeedScale": 0.0,
       "AnimationOffset": 0.0,
@@ -1200,7 +1211,7 @@
             "maxPierce": 1.0,
             "pierce": 1.0,
             "scale": 1.0,
-            "ignoreBlockers": false,
+            "ignoreBlockers": true,
             "usePointCollisionWithBloons": false,
             "canCollisionBeBlockedByMapLos": false,
             "filters": [
@@ -1372,6 +1383,7 @@
           "$type": "Assets.Scripts.Models.Towers.Behaviors.Attack.Behaviors.TargetDesperadoFirstModel, Assembly-CSharp",
           "isSelectable": false,
           "canTargetMarked": true,
+          "canPrioritiseCamo": true,
           "isOnSubTower": false,
           "name": "TargetDesperadoFirstModel_",
           "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.Attack.Behaviors.TargetDesperadoFirst, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
@@ -1380,6 +1392,7 @@
           "$type": "Assets.Scripts.Models.Towers.Behaviors.Attack.Behaviors.TargetDesperadoLastModel, Assembly-CSharp",
           "isSelectable": false,
           "canTargetMarked": true,
+          "canPrioritiseCamo": true,
           "isOnSubTower": false,
           "name": "TargetDesperadoLastModel_",
           "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.Attack.Behaviors.TargetDesperadoLast, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
@@ -1388,6 +1401,7 @@
           "$type": "Assets.Scripts.Models.Towers.Behaviors.Attack.Behaviors.TargetDesperadoCloseModel, Assembly-CSharp",
           "isSelectable": false,
           "canTargetMarked": true,
+          "canPrioritiseCamo": true,
           "isOnSubTower": false,
           "name": "TargetDesperadoCloseModel_",
           "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.Attack.Behaviors.TargetDesperadoClose, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
@@ -1396,6 +1410,7 @@
           "$type": "Assets.Scripts.Models.Towers.Behaviors.Attack.Behaviors.TargetDesperadoStrongModel, Assembly-CSharp",
           "isSelectable": false,
           "canTargetMarked": true,
+          "canPrioritiseCamo": true,
           "isOnSubTower": false,
           "name": "TargetDesperadoStrongModel_",
           "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.Attack.Behaviors.TargetDesperadoStrong, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
@@ -1409,7 +1424,7 @@
       "attackThroughWalls": false,
       "fireWithoutTarget": false,
       "framesBeforeRetarget": 0,
-      "addsToSharedGrid": true,
+      "addsToSharedGrid": false,
       "sharedGridRange": 0.0,
       "drawRangeCircle": false,
       "name": "AttackModel_AttackMark_",
@@ -1453,7 +1468,7 @@
                   "maxPierce": 1.0,
                   "pierce": 1.0,
                   "scale": 1.0,
-                  "ignoreBlockers": false,
+                  "ignoreBlockers": true,
                   "usePointCollisionWithBloons": false,
                   "canCollisionBeBlockedByMapLos": false,
                   "filters": [
@@ -1629,6 +1644,7 @@
                 "$type": "Assets.Scripts.Models.Towers.Behaviors.Attack.Behaviors.TargetDesperadoFirstModel, Assembly-CSharp",
                 "isSelectable": false,
                 "canTargetMarked": true,
+                "canPrioritiseCamo": true,
                 "isOnSubTower": false,
                 "name": "TargetDesperadoFirstModel_",
                 "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.Attack.Behaviors.TargetDesperadoFirst, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
@@ -1637,6 +1653,7 @@
                 "$type": "Assets.Scripts.Models.Towers.Behaviors.Attack.Behaviors.TargetDesperadoLastModel, Assembly-CSharp",
                 "isSelectable": false,
                 "canTargetMarked": true,
+                "canPrioritiseCamo": true,
                 "isOnSubTower": false,
                 "name": "TargetDesperadoLastModel_",
                 "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.Attack.Behaviors.TargetDesperadoLast, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
@@ -1645,6 +1662,7 @@
                 "$type": "Assets.Scripts.Models.Towers.Behaviors.Attack.Behaviors.TargetDesperadoCloseModel, Assembly-CSharp",
                 "isSelectable": false,
                 "canTargetMarked": true,
+                "canPrioritiseCamo": true,
                 "isOnSubTower": false,
                 "name": "TargetDesperadoCloseModel_",
                 "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.Attack.Behaviors.TargetDesperadoClose, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
@@ -1653,6 +1671,7 @@
                 "$type": "Assets.Scripts.Models.Towers.Behaviors.Attack.Behaviors.TargetDesperadoStrongModel, Assembly-CSharp",
                 "isSelectable": false,
                 "canTargetMarked": true,
+                "canPrioritiseCamo": true,
                 "isOnSubTower": false,
                 "name": "TargetDesperadoStrongModel_",
                 "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.Attack.Behaviors.TargetDesperadoStrong, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
@@ -1666,7 +1685,7 @@
             "attackThroughWalls": false,
             "fireWithoutTarget": false,
             "framesBeforeRetarget": 0,
-            "addsToSharedGrid": true,
+            "addsToSharedGrid": false,
             "sharedGridRange": 0.0,
             "drawRangeCircle": false,
             "name": "AttackModel_MarkingAttack_",
@@ -1698,7 +1717,7 @@
                   "maxPierce": 1.0,
                   "pierce": 1.0,
                   "scale": 1.0,
-                  "ignoreBlockers": false,
+                  "ignoreBlockers": true,
                   "usePointCollisionWithBloons": false,
                   "canCollisionBeBlockedByMapLos": false,
                   "filters": [
@@ -1958,6 +1977,7 @@
                 "$type": "Assets.Scripts.Models.Towers.Behaviors.Attack.Behaviors.TargetDesperadoFirstModel, Assembly-CSharp",
                 "isSelectable": false,
                 "canTargetMarked": true,
+                "canPrioritiseCamo": true,
                 "isOnSubTower": false,
                 "name": "TargetDesperadoFirstModel_",
                 "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.Attack.Behaviors.TargetDesperadoFirst, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
@@ -1966,6 +1986,7 @@
                 "$type": "Assets.Scripts.Models.Towers.Behaviors.Attack.Behaviors.TargetDesperadoLastModel, Assembly-CSharp",
                 "isSelectable": false,
                 "canTargetMarked": true,
+                "canPrioritiseCamo": true,
                 "isOnSubTower": false,
                 "name": "TargetDesperadoLastModel_",
                 "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.Attack.Behaviors.TargetDesperadoLast, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
@@ -1974,6 +1995,7 @@
                 "$type": "Assets.Scripts.Models.Towers.Behaviors.Attack.Behaviors.TargetDesperadoCloseModel, Assembly-CSharp",
                 "isSelectable": false,
                 "canTargetMarked": true,
+                "canPrioritiseCamo": true,
                 "isOnSubTower": false,
                 "name": "TargetDesperadoCloseModel_",
                 "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.Attack.Behaviors.TargetDesperadoClose, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
@@ -1982,6 +2004,7 @@
                 "$type": "Assets.Scripts.Models.Towers.Behaviors.Attack.Behaviors.TargetDesperadoStrongModel, Assembly-CSharp",
                 "isSelectable": false,
                 "canTargetMarked": true,
+                "canPrioritiseCamo": true,
                 "isOnSubTower": false,
                 "name": "TargetDesperadoStrongModel_",
                 "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.Attack.Behaviors.TargetDesperadoStrong, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
@@ -1995,7 +2018,7 @@
             "attackThroughWalls": false,
             "fireWithoutTarget": false,
             "framesBeforeRetarget": 0,
-            "addsToSharedGrid": true,
+            "addsToSharedGrid": false,
             "sharedGridRange": 0.0,
             "drawRangeCircle": false,
             "name": "AttackModel_ExecutionAttack_",
@@ -2046,6 +2069,7 @@
       "hideAbilityIfInCooldown": false,
       "startOffCooldown": false,
       "alwaysSetAnimationState": true,
+      "rechargeMonkeyMoneyCost": 0,
       "restrictAbilityAfterMaxRoundTimer": false,
       "CooldownSpeedScale": 0.0,
       "AnimationOffset": 0.0,
@@ -2083,12 +2107,14 @@
   ],
   "radius": 7.0,
   "isPowerTower": false,
+  "isPowerProTower": false,
   "isGeraldoItem": false,
   "IsBeastHandlerPet": false,
   "SelectParentOnSelected": false,
   "DisplayScale": 1.0,
   "IsSubEntity": false,
   "BeastHandlerLeashMutationId": "BeastHandlerContributionDesperado",
+  "powerProTowerModel": null,
   "IsBaseTower": false,
   "TargetTypes": [
     {

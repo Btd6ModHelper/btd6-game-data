@@ -457,7 +457,7 @@
             "maxPierce": 0.0,
             "pierce": 1.0,
             "scale": 1.0,
-            "ignoreBlockers": false,
+            "ignoreBlockers": true,
             "usePointCollisionWithBloons": false,
             "canCollisionBeBlockedByMapLos": false,
             "filters": [
@@ -568,8 +568,8 @@
           "behaviors": [
             {
               "$type": "Assets.Scripts.Models.Towers.Weapons.Behaviors.BurstWeaponBehaviorModel, Assembly-CSharp",
-              "interval": 0.1,
-              "intervalFrames": 6,
+              "interval": 0.05,
+              "intervalFrames": 3,
               "count": 12,
               "alwaysEmptyClip": false,
               "name": "BurstWeaponBehaviorModel_",
@@ -584,8 +584,8 @@
             },
             {
               "$type": "Assets.Scripts.Models.Towers.Weapons.Behaviors.StandoffModel, Assembly-CSharp",
-              "maxRateIncrease": 0.6,
-              "rateDecreasePerBloon": 0.15,
+              "maxRateIncrease": 1.2,
+              "rateDecreasePerBloon": 0.3,
               "name": "StandoffModel_",
               "ImplementationType": "Assets.Scripts.Simulation.Towers.Weapons.Behaviors.Standoff, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
             },
@@ -627,7 +627,7 @@
                 "behaviors": [
                   {
                     "$type": "Assets.Scripts.Models.Bloons.Behaviors.DamageOverTimeModel, Assembly-CSharp",
-                    "damage": 50.0,
+                    "damage": 75.0,
                     "payloadCount": 0,
                     "immuneBloonProperties": 8,
                     "immuneBloonPropertiesOriginal": 8,
@@ -679,7 +679,7 @@
                 },
                 "id": "BlazingSunAreaProjectile",
                 "maxPierce": 0.0,
-                "pierce": 5.0,
+                "pierce": 8.0,
                 "scale": 1.0,
                 "ignoreBlockers": true,
                 "usePointCollisionWithBloons": false,
@@ -729,7 +729,7 @@
                     "behaviors": [
                       {
                         "$type": "Assets.Scripts.Models.Bloons.Behaviors.DamageOverTimeModel, Assembly-CSharp",
-                        "damage": 50.0,
+                        "damage": 75.0,
                         "payloadCount": 0,
                         "immuneBloonProperties": 8,
                         "immuneBloonPropertiesOriginal": 8,
@@ -799,7 +799,7 @@
                   0
                 ],
                 "canCollideWithBloons": true,
-                "radius": 6.0,
+                "radius": 12.0,
                 "vsBlockerRadius": 0.0,
                 "hasDamageModifiers": false,
                 "dontUseCollisionChecker": false,
@@ -807,7 +807,7 @@
                 "ignorePierceExhaustion": false,
                 "saveId": null,
                 "displayModel": null,
-                "CappedPierce": 5.0,
+                "CappedPierce": 8.0,
                 "name": "ProjectileModel_BlazingSunAreaProjectile",
                 "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Projectile, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
                 "checkCollisionInterval": 0.0
@@ -903,6 +903,7 @@
           "$type": "Assets.Scripts.Models.Towers.Behaviors.Attack.Behaviors.TargetDesperadoFirstModel, Assembly-CSharp",
           "isSelectable": true,
           "canTargetMarked": false,
+          "canPrioritiseCamo": false,
           "isOnSubTower": false,
           "name": "TargetDesperadoFirstModel_",
           "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.Attack.Behaviors.TargetDesperadoFirst, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
@@ -911,6 +912,7 @@
           "$type": "Assets.Scripts.Models.Towers.Behaviors.Attack.Behaviors.TargetDesperadoLastModel, Assembly-CSharp",
           "isSelectable": true,
           "canTargetMarked": false,
+          "canPrioritiseCamo": false,
           "isOnSubTower": false,
           "name": "TargetDesperadoLastModel_",
           "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.Attack.Behaviors.TargetDesperadoLast, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
@@ -919,6 +921,7 @@
           "$type": "Assets.Scripts.Models.Towers.Behaviors.Attack.Behaviors.TargetDesperadoCloseModel, Assembly-CSharp",
           "isSelectable": true,
           "canTargetMarked": false,
+          "canPrioritiseCamo": false,
           "isOnSubTower": false,
           "name": "TargetDesperadoCloseModel_",
           "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.Attack.Behaviors.TargetDesperadoClose, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
@@ -927,6 +930,7 @@
           "$type": "Assets.Scripts.Models.Towers.Behaviors.Attack.Behaviors.TargetDesperadoStrongModel, Assembly-CSharp",
           "isSelectable": true,
           "canTargetMarked": false,
+          "canPrioritiseCamo": false,
           "isOnSubTower": false,
           "name": "TargetDesperadoStrongModel_",
           "ImplementationType": "Assets.Scripts.Simulation.Towers.Behaviors.Attack.Behaviors.TargetDesperadoStrong, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
@@ -972,12 +976,14 @@
   ],
   "radius": 7.0,
   "isPowerTower": false,
+  "isPowerProTower": false,
   "isGeraldoItem": false,
   "IsBeastHandlerPet": false,
   "SelectParentOnSelected": false,
   "DisplayScale": 1.0,
   "IsSubEntity": false,
   "BeastHandlerLeashMutationId": "BeastHandlerContributionDesperado",
+  "powerProTowerModel": null,
   "IsBaseTower": false,
   "TargetTypes": [
     {
