@@ -1,20 +1,21 @@
 {
-  "$type": "Assets.Scripts.Models.Powers.PowerModel, Assembly-CSharp",
+  "$type": "Il2CppAssets.Scripts.Models.Powers.PowerModel, Assembly-CSharp",
+  "cost": 50,
   "canBeActivatedBetweenRounds": true,
   "icon": {
-    "$type": "NinjaKiwi.Common.ResourceUtils.SpriteReference, NinjaKiwi.Common",
-    "AssetGUID": "PowerIcons[GlueTrapIcon]",
-    "guidRef": "PowerIcons[GlueTrapIcon]"
+    "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.SpriteReference, Il2CppNinjaKiwi.Common",
+    "guidRef": "PowerIcons[GlueTrapIcon]",
+    "AssetGUID": "PowerIcons[GlueTrapIcon]"
   },
   "behaviors": [
     {
-      "$type": "Assets.Scripts.Models.Powers.GlueTrapModel, Assembly-CSharp",
+      "$type": "Il2CppAssets.Scripts.Models.Powers.GlueTrapModel, Assembly-CSharp",
       "projectileModel": {
-        "$type": "Assets.Scripts.Models.Towers.Projectiles.ProjectileModel, Assembly-CSharp",
+        "$type": "Il2CppAssets.Scripts.Models.Towers.Projectiles.ProjectileModel, Assembly-CSharp",
         "display": {
-          "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-          "AssetGUID": "378f5d6aa5dbccb46954f2d6ced84b83",
-          "guidRef": "378f5d6aa5dbccb46954f2d6ced84b83"
+          "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.PrefabReference, Il2CppNinjaKiwi.Common",
+          "guidRef": "378f5d6aa5dbccb46954f2d6ced84b83",
+          "AssetGUID": "378f5d6aa5dbccb46954f2d6ced84b83"
         },
         "id": "GlueTrap",
         "maxPierce": 0.0,
@@ -25,37 +26,35 @@
         "canCollisionBeBlockedByMapLos": false,
         "filters": [
           {
-            "$type": "Assets.Scripts.Models.Towers.Filters.FilterOutTagModel, Assembly-CSharp",
+            "$type": "Il2CppAssets.Scripts.Models.Towers.Filters.FilterOutTagModel, Assembly-CSharp",
             "tag": "Moabs",
             "disableWhenSupportMutatorIDs": [],
-            "name": "FilterOutTagModel_GlueTrap",
-            "ImplementationType": "Assets.Scripts.Simulation.Towers.Filters.FilterOutTag, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+            "name": "FilterOutTagModel_GlueTrap"
           },
           {
-            "$type": "Assets.Scripts.Models.Towers.Filters.FilterMutatedTargetModel, Assembly-CSharp",
+            "$type": "Il2CppAssets.Scripts.Models.Towers.Filters.FilterMutatedTargetModel, Assembly-CSharp",
             "mutationId": "GlueTrap",
             "mutationIds": [
               "GlueTrap"
             ],
             "inverse": false,
-            "name": "FilterMutatedTargetModel_",
-            "ImplementationType": "Assets.Scripts.Simulation.Towers.Filters.FilterMutatedTarget, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+            "name": "FilterMutatedTargetModel_"
           }
         ],
         "behaviors": [
           {
-            "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.AgeModel, Assembly-CSharp",
+            "$type": "Il2CppAssets.Scripts.Models.Towers.Projectiles.Behaviors.AgeModel, Assembly-CSharp",
             "rounds": 9999999,
             "useRoundTime": false,
+            "lifespan": 9999999.0,
+            "lifespanFrames": 0,
             "endOfRoundClearBypassModel": null,
-            "collisionPass": 0,
             "Lifespan": 9999999.0,
-            "name": "AgeModel_GlueTrap",
-            "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Age, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
-            "lifespan": 9999999.0
+            "collisionPass": 0,
+            "name": "AgeModel_GlueTrap"
           },
           {
-            "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.SlowModel, Assembly-CSharp",
+            "$type": "Il2CppAssets.Scripts.Models.Towers.Projectiles.Behaviors.SlowModel, Assembly-CSharp",
             "effectModel": null,
             "layers": 9999999,
             "overlayLayer": 0,
@@ -67,144 +66,113 @@
             "matchLayersWithDamage": false,
             "mutationId": "GlueTrap",
             "countGlueAchievement": true,
+            "lifespan": 30.0,
+            "lifespanFrames": 0,
+            "multiplier": 0.5,
             "chance": 0.0,
             "dontRemoveOnBloonDegrade": false,
-            "overlayType": "GlueBasic",
-            "collisionPass": -1,
             "Lifespan": 30.0,
             "Multiplier": 0.5,
-            "Mutator": {
-              "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.SlowModel+SlowMutator, Assembly-CSharp",
-              "mutationId": "GlueTrap",
-              "overlayType": "GlueBasic",
-              "slowModifierForTagModels": {
-                "$type": "Assets.Scripts.Models.Model+ChildSearchEnumerable`1[[Assets.Scripts.Models.Towers.Projectiles.Behaviors.SlowModifierForTagModel, Assembly-CSharp]], Assembly-CSharp",
-                "IsValid": false
-              },
-              "dontRefreshDuration": false,
-              "didMutatorAffectBloon": false,
-              "multiplier": 0.5,
-              "filters": [],
-              "id": "GlueTrap",
-              "isExclusiveInMutationList": false,
-              "priority": 1,
-              "glueLevel": 0,
-              "dontCopy": false,
-              "buffIndicator": null,
-              "saveId": null,
-              "isAreaBuff": false,
-              "isGeraldoBuff": false,
-              "isArtifactMutator": false,
-              "dontRemoveOnBloonDegrade": false,
-              "cantBeAbsorbed": false
-            },
-            "name": "SlowModel_",
-            "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Slow, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
-            "lifespan": 30.0,
-            "multiplier": 0.5
+            "overlayType": "GlueBasic",
+            "collisionPass": -1,
+            "name": "SlowModel_"
           },
           {
-            "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.ClearHitBloonsModel, Assembly-CSharp",
+            "$type": "Il2CppAssets.Scripts.Models.Towers.Projectiles.Behaviors.ClearHitBloonsModel, Assembly-CSharp",
+            "interval": 0.05,
+            "intervalFrames": 0,
             "collisionPass": 0,
-            "name": "ClearHitBloonsModel_",
-            "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.ClearHitBloons, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
-            "interval": 0.05
+            "name": "ClearHitBloonsModel_"
           },
           {
-            "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.ProjectileFilterModel, Assembly-CSharp",
+            "$type": "Il2CppAssets.Scripts.Models.Towers.Projectiles.Behaviors.ProjectileFilterModel, Assembly-CSharp",
             "filters": [
               {
-                "$type": "Assets.Scripts.Models.Towers.Filters.FilterOutTagModel, Assembly-CSharp",
+                "$type": "Il2CppAssets.Scripts.Models.Towers.Filters.FilterOutTagModel, Assembly-CSharp",
                 "tag": "Moabs",
                 "disableWhenSupportMutatorIDs": [],
-                "name": "FilterOutTagModel_GlueTrap",
-                "ImplementationType": "Assets.Scripts.Simulation.Towers.Filters.FilterOutTag, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+                "name": "FilterOutTagModel_GlueTrap"
               },
               {
-                "$type": "Assets.Scripts.Models.Towers.Filters.FilterMutatedTargetModel, Assembly-CSharp",
+                "$type": "Il2CppAssets.Scripts.Models.Towers.Filters.FilterMutatedTargetModel, Assembly-CSharp",
                 "mutationId": "GlueTrap",
                 "mutationIds": [
                   "GlueTrap"
                 ],
                 "inverse": false,
-                "name": "FilterMutatedTargetModel_",
-                "ImplementationType": "Assets.Scripts.Simulation.Towers.Filters.FilterMutatedTarget, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+                "name": "FilterMutatedTargetModel_"
               }
             ],
             "collisionPass": 0,
-            "name": "ProjectileFilterModel_GlueTrap",
-            "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.ProjectileFilter, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+            "name": "ProjectileFilterModel_GlueTrap"
           },
           {
-            "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.CollideExtraPierceReductionModel, Assembly-CSharp",
+            "$type": "Il2CppAssets.Scripts.Models.Towers.Projectiles.Behaviors.CollideExtraPierceReductionModel, Assembly-CSharp",
             "bloonTag": "Moab",
             "extraAmount": 9,
             "destroyProjectileIfPierceNotEnough": false,
             "collisionPass": -1,
-            "name": "CollideExtraPierceReductionModel_",
-            "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.CollideExtraPierceReduction, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+            "name": "CollideExtraPierceReductionModel_"
           },
           {
-            "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.CollideExtraPierceReductionModel, Assembly-CSharp",
+            "$type": "Il2CppAssets.Scripts.Models.Towers.Projectiles.Behaviors.CollideExtraPierceReductionModel, Assembly-CSharp",
             "bloonTag": "Bfb",
             "extraAmount": 19,
             "destroyProjectileIfPierceNotEnough": false,
             "collisionPass": -1,
-            "name": "CollideExtraPierceReductionModel_",
-            "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.CollideExtraPierceReduction, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+            "name": "CollideExtraPierceReductionModel_"
           },
           {
-            "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.CollideExtraPierceReductionModel, Assembly-CSharp",
+            "$type": "Il2CppAssets.Scripts.Models.Towers.Projectiles.Behaviors.CollideExtraPierceReductionModel, Assembly-CSharp",
             "bloonTag": "Ddt",
             "extraAmount": 19,
             "destroyProjectileIfPierceNotEnough": false,
             "collisionPass": -1,
-            "name": "CollideExtraPierceReductionModel_",
-            "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.CollideExtraPierceReduction, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+            "name": "CollideExtraPierceReductionModel_"
           },
           {
-            "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.CollideExtraPierceReductionModel, Assembly-CSharp",
+            "$type": "Il2CppAssets.Scripts.Models.Towers.Projectiles.Behaviors.CollideExtraPierceReductionModel, Assembly-CSharp",
             "bloonTag": "Zomg",
             "extraAmount": 49,
             "destroyProjectileIfPierceNotEnough": false,
             "collisionPass": -1,
-            "name": "CollideExtraPierceReductionModel_",
-            "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.CollideExtraPierceReduction, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+            "name": "CollideExtraPierceReductionModel_"
           },
           {
-            "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.CollideExtraPierceReductionModel, Assembly-CSharp",
+            "$type": "Il2CppAssets.Scripts.Models.Towers.Projectiles.Behaviors.CollideExtraPierceReductionModel, Assembly-CSharp",
             "bloonTag": "Bad",
             "extraAmount": 99,
             "destroyProjectileIfPierceNotEnough": false,
             "collisionPass": -1,
-            "name": "CollideExtraPierceReductionModel_",
-            "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.CollideExtraPierceReduction, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+            "name": "CollideExtraPierceReductionModel_"
           },
           {
-            "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.PowerProjectileModel, Assembly-CSharp",
+            "$type": "Il2CppAssets.Scripts.Models.Towers.Projectiles.Behaviors.PowerProjectileModel, Assembly-CSharp",
             "collisionPass": 0,
-            "name": "PowerProjectileModel_",
-            "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.PowerProjectile, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+            "name": "PowerProjectileModel_"
           },
           {
-            "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.PowerProjectileModel, Assembly-CSharp",
+            "$type": "Il2CppAssets.Scripts.Models.Towers.Projectiles.Behaviors.PowerProjectileModel, Assembly-CSharp",
             "collisionPass": 0,
-            "name": "PowerProjectileModel_",
-            "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.PowerProjectile, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+            "name": "PowerProjectileModel_"
           },
           {
-            "$type": "Assets.Scripts.Models.GenericBehaviors.DisplayModel, Assembly-CSharp",
+            "$type": "Il2CppAssets.Scripts.Models.GenericBehaviors.DisplayModel, Assembly-CSharp",
             "display": {
-              "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-              "AssetGUID": "378f5d6aa5dbccb46954f2d6ced84b83",
-              "guidRef": "378f5d6aa5dbccb46954f2d6ced84b83"
+              "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.PrefabReference, Il2CppNinjaKiwi.Common",
+              "guidRef": "378f5d6aa5dbccb46954f2d6ced84b83",
+              "AssetGUID": "378f5d6aa5dbccb46954f2d6ced84b83"
             },
             "layer": 0,
             "positionOffset": {
-              "$type": "Assets.Scripts.Simulation.SMath.Vector3, Assembly-CSharp",
+              "$type": "Il2CppAssets.Scripts.Simulation.SMath.Vector3, Assembly-CSharp",
               "x": 0.0,
               "y": 0.0,
-              "z": 0.0
+              "z": 0.0,
+              "MagnitudeSquared": 0.0,
+              "Magnitude": 0.0,
+              "Rotation": 0.0,
+              "SimToDispRotation": 180.0
             },
             "scale": 1.0,
             "ignoreRotation": false,
@@ -212,8 +180,7 @@
             "delayedReveal": 0.0,
             "category": 16,
             "isAnimationPaused": false,
-            "name": "DisplayModel_ProjectileDisplay",
-            "ImplementationType": "Assets.Scripts.Simulation.Behaviors.DisplayBehavior, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+            "name": "DisplayModel_ProjectileDisplay"
           }
         ],
         "collisionPasses": [
@@ -225,26 +192,25 @@
         "vsBlockerRadius": 0.0,
         "hasDamageModifiers": false,
         "dontUseCollisionChecker": false,
+        "checkCollisionInterval": 0.0,
+        "checkCollisionIntervalFrames": 0,
         "ignoreNonTargetable": false,
         "ignorePierceExhaustion": false,
         "saveId": null,
         "displayModel": null,
         "CappedPierce": 300.0,
-        "name": "ProjectileModel_GlueTrap",
-        "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Projectile, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
-        "checkCollisionInterval": 0.0
+        "name": "ProjectileModel_GlueTrap"
       },
-      "name": "GlueTrapModel_GlueTrap",
-      "ImplementationType": "Assets.Scripts.Simulation.Powers.GlueTrap, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+      "name": "GlueTrapModel_GlueTrap"
     },
     {
-      "$type": "Assets.Scripts.Models.Powers.Effects.CreateEffectOnPowerModel, Assembly-CSharp",
+      "$type": "Il2CppAssets.Scripts.Models.Powers.Effects.CreateEffectOnPowerModel, Assembly-CSharp",
       "effectModel": {
-        "$type": "Assets.Scripts.Models.Effects.EffectModel, Assembly-CSharp",
+        "$type": "Il2CppAssets.Scripts.Models.Effects.EffectModel, Assembly-CSharp",
         "assetId": {
-          "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-          "AssetGUID": "cc4e51ecd049ee249a5bd51db3612483",
-          "guidRef": "cc4e51ecd049ee249a5bd51db3612483"
+          "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.PrefabReference, Il2CppNinjaKiwi.Common",
+          "guidRef": "cc4e51ecd049ee249a5bd51db3612483",
+          "AssetGUID": "cc4e51ecd049ee249a5bd51db3612483"
         },
         "scale": 1.0,
         "lifespan": 1.0,
@@ -255,35 +221,30 @@
         "destroyOnTransformDestroy": false,
         "alwaysUseAge": false,
         "useRoundTime": false,
-        "name": "EffectModel_",
-        "ImplementationType": null
+        "name": "EffectModel_"
       },
-      "name": "CreateEffectOnPowerModel_GlueTrap",
-      "ImplementationType": "Assets.Scripts.Simulation.Powers.Effects.CreateEffectOnPower, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+      "name": "CreateEffectOnPowerModel_GlueTrap"
     },
     {
-      "$type": "Assets.Scripts.Models.Powers.Effects.CreateSoundOnPowerModel, Assembly-CSharp",
+      "$type": "Il2CppAssets.Scripts.Models.Powers.Effects.CreateSoundOnPowerModel, Assembly-CSharp",
       "sound": {
-        "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
+        "$type": "Il2CppAssets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
         "assetId": {
-          "$type": "NinjaKiwi.Common.ResourceUtils.AudioClipReference, NinjaKiwi.Common",
-          "AssetGUID": "0475901d6cd8f0748840c5fa19e6e9fc",
-          "guidRef": "0475901d6cd8f0748840c5fa19e6e9fc"
+          "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.AudioClipReference, Il2CppNinjaKiwi.Common",
+          "guidRef": "0475901d6cd8f0748840c5fa19e6e9fc",
+          "AssetGUID": "0475901d6cd8f0748840c5fa19e6e9fc"
         },
-        "name": "SoundModel_PlaceGlueTrap",
-        "ImplementationType": null
+        "name": "SoundModel_PlaceGlueTrap"
       },
-      "name": "CreateSoundOnPowerModel_GlueTrap",
-      "ImplementationType": "Assets.Scripts.Simulation.Powers.Effects.CreateSoundOnPower, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+      "name": "CreateSoundOnPowerModel_GlueTrap"
     }
   ],
   "mods": [
     {
-      "$type": "Assets.Scripts.Models.Towers.Mods.ApplyModModel, Assembly-CSharp",
+      "$type": "Il2CppAssets.Scripts.Models.Towers.Mods.ApplyModModel, Assembly-CSharp",
       "mod": "SupersizeGlueTrap",
       "target": "",
-      "name": "GlueTrap",
-      "ImplementationType": null
+      "name": "GlueTrap"
     }
   ],
   "tower": null,
@@ -297,9 +258,9 @@
   "orderPriority": 0,
   "alwaysPlaceAtScreenCentre": false,
   "animatedIcon": {
-    "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-    "AssetGUID": "a0ef87f4111ee2a4b9479fd256fb1971",
-    "guidRef": "a0ef87f4111ee2a4b9479fd256fb1971"
+    "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.PrefabReference, Il2CppNinjaKiwi.Common",
+    "guidRef": "a0ef87f4111ee2a4b9479fd256fb1971",
+    "AssetGUID": "a0ef87f4111ee2a4b9479fd256fb1971"
   },
   "showAsNew": false,
   "Cost": 50,
@@ -307,6 +268,5 @@
   "IsPowerPro": false,
   "CanBeRewarded": true,
   "PowerId": "GlueTrap",
-  "name": "GlueTrap",
-  "ImplementationType": "Assets.Scripts.Simulation.Powers.Power, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+  "name": "GlueTrap"
 }

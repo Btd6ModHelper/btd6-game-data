@@ -1,20 +1,21 @@
 {
-  "$type": "Assets.Scripts.Models.Powers.PowerModel, Assembly-CSharp",
+  "$type": "Il2CppAssets.Scripts.Models.Powers.PowerModel, Assembly-CSharp",
+  "cost": 50,
   "canBeActivatedBetweenRounds": true,
   "icon": {
-    "$type": "NinjaKiwi.Common.ResourceUtils.SpriteReference, NinjaKiwi.Common",
-    "AssetGUID": "PowerIcons[MoabMineIcon]",
-    "guidRef": "PowerIcons[MoabMineIcon]"
+    "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.SpriteReference, Il2CppNinjaKiwi.Common",
+    "guidRef": "PowerIcons[MoabMineIcon]",
+    "AssetGUID": "PowerIcons[MoabMineIcon]"
   },
   "behaviors": [
     {
-      "$type": "Assets.Scripts.Models.Powers.MoabMineModel, Assembly-CSharp",
+      "$type": "Il2CppAssets.Scripts.Models.Powers.MoabMineModel, Assembly-CSharp",
       "projectileModel": {
-        "$type": "Assets.Scripts.Models.Towers.Projectiles.ProjectileModel, Assembly-CSharp",
+        "$type": "Il2CppAssets.Scripts.Models.Towers.Projectiles.ProjectileModel, Assembly-CSharp",
         "display": {
-          "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-          "AssetGUID": "092c7228eb278d04e81fac7f87631e5f",
-          "guidRef": "092c7228eb278d04e81fac7f87631e5f"
+          "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.PrefabReference, Il2CppNinjaKiwi.Common",
+          "guidRef": "092c7228eb278d04e81fac7f87631e5f",
+          "AssetGUID": "092c7228eb278d04e81fac7f87631e5f"
         },
         "id": "MoabMine",
         "maxPierce": 10.0,
@@ -25,14 +26,13 @@
         "canCollisionBeBlockedByMapLos": false,
         "filters": [
           {
-            "$type": "Assets.Scripts.Models.Towers.Filters.FilterInvisibleModel, Assembly-CSharp",
+            "$type": "Il2CppAssets.Scripts.Models.Towers.Filters.FilterInvisibleModel, Assembly-CSharp",
             "isActive": false,
             "ignoreBroadPhase": false,
-            "name": "FilterInvisibleModel_",
-            "ImplementationType": "Assets.Scripts.Simulation.Towers.Filters.FilterInvisible, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+            "name": "FilterInvisibleModel_"
           },
           {
-            "$type": "Assets.Scripts.Models.Towers.Filters.FilterWithTagModel, Assembly-CSharp",
+            "$type": "Il2CppAssets.Scripts.Models.Towers.Filters.FilterWithTagModel, Assembly-CSharp",
             "moabTag": true,
             "camoTag": false,
             "growTag": false,
@@ -40,24 +40,23 @@
             "tag": "Moabs",
             "inclusive": false,
             "hasMoabTag": true,
-            "name": "FilterWithTagModel_",
-            "ImplementationType": "Assets.Scripts.Simulation.Towers.Filters.FilterWithTag, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+            "name": "FilterWithTagModel_"
           }
         ],
         "behaviors": [
           {
-            "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.AgeModel, Assembly-CSharp",
+            "$type": "Il2CppAssets.Scripts.Models.Towers.Projectiles.Behaviors.AgeModel, Assembly-CSharp",
             "rounds": 9999999,
             "useRoundTime": false,
+            "lifespan": 9999999.0,
+            "lifespanFrames": 0,
             "endOfRoundClearBypassModel": null,
-            "collisionPass": 0,
             "Lifespan": 9999999.0,
-            "name": "AgeModel_MoabMine",
-            "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Age, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
-            "lifespan": 9999999.0
+            "collisionPass": 0,
+            "name": "AgeModel_MoabMine"
           },
           {
-            "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModel, Assembly-CSharp",
+            "$type": "Il2CppAssets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModel, Assembly-CSharp",
             "damage": 5000.0,
             "maxDamage": 0.0,
             "distributeToChildren": false,
@@ -67,23 +66,21 @@
             "immuneBloonPropertiesOriginal": 0,
             "ignoreImmunityDestroy": false,
             "ignoreDamageMultipliers": false,
-            "collisionPass": 0,
             "CappedDamage": 5000.0,
-            "name": "DamageModel_MoabMine_",
-            "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.Damage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+            "collisionPass": 0,
+            "name": "DamageModel_MoabMine_"
           },
           {
-            "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.ProjectileFilterModel, Assembly-CSharp",
+            "$type": "Il2CppAssets.Scripts.Models.Towers.Projectiles.Behaviors.ProjectileFilterModel, Assembly-CSharp",
             "filters": [
               {
-                "$type": "Assets.Scripts.Models.Towers.Filters.FilterInvisibleModel, Assembly-CSharp",
+                "$type": "Il2CppAssets.Scripts.Models.Towers.Filters.FilterInvisibleModel, Assembly-CSharp",
                 "isActive": false,
                 "ignoreBroadPhase": false,
-                "name": "FilterInvisibleModel_",
-                "ImplementationType": "Assets.Scripts.Simulation.Towers.Filters.FilterInvisible, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+                "name": "FilterInvisibleModel_"
               },
               {
-                "$type": "Assets.Scripts.Models.Towers.Filters.FilterWithTagModel, Assembly-CSharp",
+                "$type": "Il2CppAssets.Scripts.Models.Towers.Filters.FilterWithTagModel, Assembly-CSharp",
                 "moabTag": true,
                 "camoTag": false,
                 "growTag": false,
@@ -91,78 +88,70 @@
                 "tag": "Moabs",
                 "inclusive": false,
                 "hasMoabTag": true,
-                "name": "FilterWithTagModel_",
-                "ImplementationType": "Assets.Scripts.Simulation.Towers.Filters.FilterWithTag, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+                "name": "FilterWithTagModel_"
               }
             ],
             "collisionPass": 0,
-            "name": "ProjectileFilterModel_MoabMine",
-            "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.ProjectileFilter, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+            "name": "ProjectileFilterModel_MoabMine"
           },
           {
-            "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.CreateSoundOnProjectileCollisionModel, Assembly-CSharp",
+            "$type": "Il2CppAssets.Scripts.Models.Towers.Projectiles.Behaviors.CreateSoundOnProjectileCollisionModel, Assembly-CSharp",
             "sound1": {
-              "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
+              "$type": "Il2CppAssets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
               "assetId": {
-                "$type": "NinjaKiwi.Common.ResourceUtils.AudioClipReference, NinjaKiwi.Common",
-                "AssetGUID": "ec9a5a7531a750e4c82bf8429e0812e4",
-                "guidRef": "ec9a5a7531a750e4c82bf8429e0812e4"
+                "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.AudioClipReference, Il2CppNinjaKiwi.Common",
+                "guidRef": "ec9a5a7531a750e4c82bf8429e0812e4",
+                "AssetGUID": "ec9a5a7531a750e4c82bf8429e0812e4"
               },
-              "name": "SoundModel_Explosion01",
-              "ImplementationType": null
+              "name": "SoundModel_Explosion01"
             },
             "sound2": {
-              "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
+              "$type": "Il2CppAssets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
               "assetId": {
-                "$type": "NinjaKiwi.Common.ResourceUtils.AudioClipReference, NinjaKiwi.Common",
-                "AssetGUID": "57fac571daa668140b0674eb515f9586",
-                "guidRef": "57fac571daa668140b0674eb515f9586"
+                "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.AudioClipReference, Il2CppNinjaKiwi.Common",
+                "guidRef": "57fac571daa668140b0674eb515f9586",
+                "AssetGUID": "57fac571daa668140b0674eb515f9586"
               },
-              "name": "SoundModel_Explosion02",
-              "ImplementationType": null
+              "name": "SoundModel_Explosion02"
             },
             "sound3": {
-              "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
+              "$type": "Il2CppAssets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
               "assetId": {
-                "$type": "NinjaKiwi.Common.ResourceUtils.AudioClipReference, NinjaKiwi.Common",
-                "AssetGUID": "5b1ee796433122141a0db034af251f15",
-                "guidRef": "5b1ee796433122141a0db034af251f15"
+                "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.AudioClipReference, Il2CppNinjaKiwi.Common",
+                "guidRef": "5b1ee796433122141a0db034af251f15",
+                "AssetGUID": "5b1ee796433122141a0db034af251f15"
               },
-              "name": "SoundModel_Explosion03",
-              "ImplementationType": null
+              "name": "SoundModel_Explosion03"
             },
             "sound4": {
-              "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
+              "$type": "Il2CppAssets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
               "assetId": {
-                "$type": "NinjaKiwi.Common.ResourceUtils.AudioClipReference, NinjaKiwi.Common",
-                "AssetGUID": "f5f616027b9887c4db5b1341a614b352",
-                "guidRef": "f5f616027b9887c4db5b1341a614b352"
+                "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.AudioClipReference, Il2CppNinjaKiwi.Common",
+                "guidRef": "f5f616027b9887c4db5b1341a614b352",
+                "AssetGUID": "f5f616027b9887c4db5b1341a614b352"
               },
-              "name": "SoundModel_Explosion04",
-              "ImplementationType": null
+              "name": "SoundModel_Explosion04"
             },
             "sound5": {
-              "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
+              "$type": "Il2CppAssets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
               "assetId": {
-                "$type": "NinjaKiwi.Common.ResourceUtils.AudioClipReference, NinjaKiwi.Common",
-                "AssetGUID": "9a36e64ca09a7ef42bd4af49c1cf4ef6",
-                "guidRef": "9a36e64ca09a7ef42bd4af49c1cf4ef6"
+                "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.AudioClipReference, Il2CppNinjaKiwi.Common",
+                "guidRef": "9a36e64ca09a7ef42bd4af49c1cf4ef6",
+                "AssetGUID": "9a36e64ca09a7ef42bd4af49c1cf4ef6"
               },
-              "name": "SoundModel_Explosion05",
-              "ImplementationType": null
+              "name": "SoundModel_Explosion05"
             },
             "collisionPass": 0,
-            "name": "CreateSoundOnProjectileCollisionModel_MoabMine",
-            "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.CreateSoundOnProjectileCollision, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+            "name": "CreateSoundOnProjectileCollisionModel_MoabMine"
           },
           {
-            "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.CreateEffectOnContactModel, Assembly-CSharp",
+            "$type": "Il2CppAssets.Scripts.Models.Towers.Projectiles.Behaviors.CreateEffectOnContactModel, Assembly-CSharp",
             "effectModel": {
-              "$type": "Assets.Scripts.Models.Effects.EffectModel, Assembly-CSharp",
+              "$type": "Il2CppAssets.Scripts.Models.Effects.EffectModel, Assembly-CSharp",
               "assetId": {
-                "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-                "AssetGUID": "9e1d07331a0c6634bbe805787ac37e9b",
-                "guidRef": "9e1d07331a0c6634bbe805787ac37e9b"
+                "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.PrefabReference, Il2CppNinjaKiwi.Common",
+                "guidRef": "9e1d07331a0c6634bbe805787ac37e9b",
+                "AssetGUID": "9e1d07331a0c6634bbe805787ac37e9b"
               },
               "scale": 1.0,
               "lifespan": 2.0,
@@ -173,28 +162,25 @@
               "destroyOnTransformDestroy": false,
               "alwaysUseAge": false,
               "useRoundTime": false,
-              "name": "EffectModel_",
-              "ImplementationType": null
+              "name": "EffectModel_"
             },
             "collisionPass": 0,
-            "name": "CreateEffectOnContactModel_",
-            "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.CreateEffectOnContact, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+            "name": "CreateEffectOnContactModel_"
           },
           {
-            "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.PowerProjectileModel, Assembly-CSharp",
+            "$type": "Il2CppAssets.Scripts.Models.Towers.Projectiles.Behaviors.PowerProjectileModel, Assembly-CSharp",
             "collisionPass": 0,
-            "name": "PowerProjectileModel_",
-            "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.PowerProjectile, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+            "name": "PowerProjectileModel_"
           },
           {
-            "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.ClearHitBloonsModel, Assembly-CSharp",
+            "$type": "Il2CppAssets.Scripts.Models.Towers.Projectiles.Behaviors.ClearHitBloonsModel, Assembly-CSharp",
+            "interval": 1.0,
+            "intervalFrames": 0,
             "collisionPass": 0,
-            "name": "ClearHitBloonsModel_",
-            "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.ClearHitBloons, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
-            "interval": 1.0
+            "name": "ClearHitBloonsModel_"
           },
           {
-            "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModifierForTagModel, Assembly-CSharp",
+            "$type": "Il2CppAssets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModifierForTagModel, Assembly-CSharp",
             "tag": "Boss",
             "tags": [
               "Boss"
@@ -204,11 +190,10 @@
             "mustIncludeAllTags": false,
             "applyOverMaxDamage": false,
             "collisionPass": 0,
-            "name": "DamageModifierForTagModel_MoabMine",
-            "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.DamageModifierForTag, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+            "name": "DamageModifierForTagModel_MoabMine"
           },
           {
-            "$type": "Assets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModifierForTagModel, Assembly-CSharp",
+            "$type": "Il2CppAssets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModifierForTagModel, Assembly-CSharp",
             "tag": "Elite",
             "tags": [
               "Elite"
@@ -218,22 +203,25 @@
             "mustIncludeAllTags": false,
             "applyOverMaxDamage": false,
             "collisionPass": 0,
-            "name": "DamageModifierForTagModel_MoabMine",
-            "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Behaviors.DamageModifierForTag, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+            "name": "DamageModifierForTagModel_MoabMine"
           },
           {
-            "$type": "Assets.Scripts.Models.GenericBehaviors.DisplayModel, Assembly-CSharp",
+            "$type": "Il2CppAssets.Scripts.Models.GenericBehaviors.DisplayModel, Assembly-CSharp",
             "display": {
-              "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-              "AssetGUID": "092c7228eb278d04e81fac7f87631e5f",
-              "guidRef": "092c7228eb278d04e81fac7f87631e5f"
+              "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.PrefabReference, Il2CppNinjaKiwi.Common",
+              "guidRef": "092c7228eb278d04e81fac7f87631e5f",
+              "AssetGUID": "092c7228eb278d04e81fac7f87631e5f"
             },
             "layer": 0,
             "positionOffset": {
-              "$type": "Assets.Scripts.Simulation.SMath.Vector3, Assembly-CSharp",
+              "$type": "Il2CppAssets.Scripts.Simulation.SMath.Vector3, Assembly-CSharp",
               "x": 0.0,
               "y": 0.0,
-              "z": 0.0
+              "z": 0.0,
+              "MagnitudeSquared": 0.0,
+              "Magnitude": 0.0,
+              "Rotation": 0.0,
+              "SimToDispRotation": 180.0
             },
             "scale": 1.0,
             "ignoreRotation": false,
@@ -241,8 +229,7 @@
             "delayedReveal": 0.0,
             "category": 16,
             "isAnimationPaused": false,
-            "name": "DisplayModel_ProjectileDisplay",
-            "ImplementationType": "Assets.Scripts.Simulation.Behaviors.DisplayBehavior, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+            "name": "DisplayModel_ProjectileDisplay"
           }
         ],
         "collisionPasses": [
@@ -253,26 +240,25 @@
         "vsBlockerRadius": 0.0,
         "hasDamageModifiers": true,
         "dontUseCollisionChecker": false,
+        "checkCollisionInterval": 0.0,
+        "checkCollisionIntervalFrames": 0,
         "ignoreNonTargetable": false,
         "ignorePierceExhaustion": false,
         "saveId": null,
         "displayModel": null,
         "CappedPierce": 10.0,
-        "name": "ProjectileModel_MoabMine",
-        "ImplementationType": "Assets.Scripts.Simulation.Towers.Projectiles.Projectile, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
-        "checkCollisionInterval": 0.0
+        "name": "ProjectileModel_MoabMine"
       },
-      "name": "MoabMineModel_MoabMine",
-      "ImplementationType": "Assets.Scripts.Simulation.Powers.MoabMine, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+      "name": "MoabMineModel_MoabMine"
     },
     {
-      "$type": "Assets.Scripts.Models.Powers.Effects.CreateEffectOnPowerModel, Assembly-CSharp",
+      "$type": "Il2CppAssets.Scripts.Models.Powers.Effects.CreateEffectOnPowerModel, Assembly-CSharp",
       "effectModel": {
-        "$type": "Assets.Scripts.Models.Effects.EffectModel, Assembly-CSharp",
+        "$type": "Il2CppAssets.Scripts.Models.Effects.EffectModel, Assembly-CSharp",
         "assetId": {
-          "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-          "AssetGUID": "cc4e51ecd049ee249a5bd51db3612483",
-          "guidRef": "cc4e51ecd049ee249a5bd51db3612483"
+          "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.PrefabReference, Il2CppNinjaKiwi.Common",
+          "guidRef": "cc4e51ecd049ee249a5bd51db3612483",
+          "AssetGUID": "cc4e51ecd049ee249a5bd51db3612483"
         },
         "scale": 1.0,
         "lifespan": 1.0,
@@ -283,35 +269,30 @@
         "destroyOnTransformDestroy": false,
         "alwaysUseAge": false,
         "useRoundTime": false,
-        "name": "EffectModel_",
-        "ImplementationType": null
+        "name": "EffectModel_"
       },
-      "name": "CreateEffectOnPowerModel_MoabMine",
-      "ImplementationType": "Assets.Scripts.Simulation.Powers.Effects.CreateEffectOnPower, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+      "name": "CreateEffectOnPowerModel_MoabMine"
     },
     {
-      "$type": "Assets.Scripts.Models.Powers.Effects.CreateSoundOnPowerModel, Assembly-CSharp",
+      "$type": "Il2CppAssets.Scripts.Models.Powers.Effects.CreateSoundOnPowerModel, Assembly-CSharp",
       "sound": {
-        "$type": "Assets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
+        "$type": "Il2CppAssets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
         "assetId": {
-          "$type": "NinjaKiwi.Common.ResourceUtils.AudioClipReference, NinjaKiwi.Common",
-          "AssetGUID": "6d7c6b060c67fbb4eba2f9f942494391",
-          "guidRef": "6d7c6b060c67fbb4eba2f9f942494391"
+          "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.AudioClipReference, Il2CppNinjaKiwi.Common",
+          "guidRef": "6d7c6b060c67fbb4eba2f9f942494391",
+          "AssetGUID": "6d7c6b060c67fbb4eba2f9f942494391"
         },
-        "name": "SoundModel_PlaceMOABMine",
-        "ImplementationType": null
+        "name": "SoundModel_PlaceMOABMine"
       },
-      "name": "CreateSoundOnPowerModel_MoabMine",
-      "ImplementationType": "Assets.Scripts.Simulation.Powers.Effects.CreateSoundOnPower, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+      "name": "CreateSoundOnPowerModel_MoabMine"
     }
   ],
   "mods": [
     {
-      "$type": "Assets.Scripts.Models.Towers.Mods.ApplyModModel, Assembly-CSharp",
+      "$type": "Il2CppAssets.Scripts.Models.Towers.Mods.ApplyModModel, Assembly-CSharp",
       "mod": "MaulingMoabMines",
       "target": "",
-      "name": "MoabMine",
-      "ImplementationType": null
+      "name": "MoabMine"
     }
   ],
   "tower": null,
@@ -325,9 +306,9 @@
   "orderPriority": 0,
   "alwaysPlaceAtScreenCentre": false,
   "animatedIcon": {
-    "$type": "NinjaKiwi.Common.ResourceUtils.PrefabReference, NinjaKiwi.Common",
-    "AssetGUID": "1439bc91c3478c049ae27c636ca12453",
-    "guidRef": "1439bc91c3478c049ae27c636ca12453"
+    "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.PrefabReference, Il2CppNinjaKiwi.Common",
+    "guidRef": "1439bc91c3478c049ae27c636ca12453",
+    "AssetGUID": "1439bc91c3478c049ae27c636ca12453"
   },
   "showAsNew": false,
   "Cost": 50,
@@ -335,6 +316,5 @@
   "IsPowerPro": false,
   "CanBeRewarded": true,
   "PowerId": "MoabMine",
-  "name": "MoabMine",
-  "ImplementationType": "Assets.Scripts.Simulation.Powers.Power, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+  "name": "MoabMine"
 }
