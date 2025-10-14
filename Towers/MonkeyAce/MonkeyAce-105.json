@@ -104,7 +104,7 @@
     "doesntBlockTowerPlacement": false,
     "ignoresPlacementCheck": false,
     "ignoresTowerOverlap": false,
-    "name": "RectangleFootprintModel_"
+    "name": ""
   },
   "dontDisplayUpgrades": false,
   "emoteSpriteSmall": {
@@ -406,7 +406,7 @@
       "doesntBlockTowerPlacement": false,
       "ignoresPlacementCheck": false,
       "ignoresTowerOverlap": false,
-      "name": "RectangleFootprintModel_"
+      "name": ""
     },
     {
       "$type": "Il2CppAssets.Scripts.Models.Towers.Behaviors.CreateSoundOnTowerPlaceModel, Assembly-CSharp",
@@ -432,10 +432,18 @@
       "waterSound2": null,
       "heroSound1": null,
       "heroSound2": null,
-      "reactSound": null,
-      "reactSoundAlt": null,
-      "towerType": "",
-      "towerSkin": "",
+      "reactSound1": null,
+      "reactSoundAlt1": null,
+      "reactSound2": null,
+      "reactSoundAlt2": null,
+      "reactSound3": null,
+      "reactSoundAlt3": null,
+      "towerType1": "",
+      "towerSkin1": "",
+      "towerType2": "",
+      "towerSkin2": "",
+      "towerType3": "",
+      "towerSkin3": "",
       "reactDelay": 0.0,
       "name": "CreateSoundOnTowerPlaceModel_MonkeyAce-105"
     },
@@ -478,12 +486,12 @@
                 "$type": "Il2CppAssets.Scripts.Models.Towers.Behaviors.Emissions.Behaviors.EmissionRotationOffBloonDirectionModel, Assembly-CSharp",
                 "useAirUnitPosition": false,
                 "dontSetAfterEmit": false,
-                "name": "EmissionRotationOffBloonDirectionModel_"
+                "name": ""
               }
             ],
-            "name": "SingleEmissionModel_"
+            "name": ""
           },
-          "ejectX": -0.0,
+          "ejectX": 0.0,
           "ejectY": -16.7,
           "ejectZ": 2.19,
           "projectile": {
@@ -495,7 +503,7 @@
             },
             "id": "SpectreDartProjectile",
             "maxPierce": 0.0,
-            "pierce": 15.0,
+            "pierce": 4.0,
             "scale": 1.0,
             "ignoreBlockers": false,
             "usePointCollisionWithBloons": false,
@@ -505,13 +513,13 @@
                 "$type": "Il2CppAssets.Scripts.Models.Towers.Filters.FilterInvisibleModel, Assembly-CSharp",
                 "isActive": true,
                 "ignoreBroadPhase": false,
-                "name": "FilterInvisibleModel_"
+                "name": ""
               }
             ],
             "behaviors": [
               {
                 "$type": "Il2CppAssets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModel, Assembly-CSharp",
-                "damage": 4.0,
+                "damage": 8.0,
                 "maxDamage": 0.0,
                 "distributeToChildren": true,
                 "overrideDistributeBlocker": false,
@@ -520,7 +528,7 @@
                 "immuneBloonPropertiesOriginal": 0,
                 "ignoreImmunityDestroy": false,
                 "ignoreDamageMultipliers": false,
-                "CappedDamage": 4.0,
+                "CappedDamage": 8.0,
                 "collisionPass": 0,
                 "name": "DamageModel_SpectreDartProjectile_"
               },
@@ -542,7 +550,7 @@
                     "$type": "Il2CppAssets.Scripts.Models.Towers.Filters.FilterInvisibleModel, Assembly-CSharp",
                     "isActive": true,
                     "ignoreBroadPhase": false,
-                    "name": "FilterInvisibleModel_"
+                    "name": ""
                   }
                 ],
                 "collisionPass": 0,
@@ -557,24 +565,12 @@
                 "ignoreSeekAngle": false,
                 "overrideRotation": false,
                 "useLifetimeAsDistance": true,
+                "expireOnContactTarget": false,
                 "turnRate": 9999999.0,
                 "turnRatePerFrame": 0.0,
                 "TurnRate": 9999999.0,
                 "collisionPass": 0,
-                "name": "TrackTargetModel_"
-              },
-              {
-                "$type": "Il2CppAssets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModifierForTagModel, Assembly-CSharp",
-                "tag": "Ceramic",
-                "tags": [
-                  "Ceramic"
-                ],
-                "damageMultiplier": 1.0,
-                "damageAddative": 2.0,
-                "mustIncludeAllTags": false,
-                "applyOverMaxDamage": false,
-                "collisionPass": 0,
-                "name": "DamageModifierForTagModel_SpectreDartProjectile"
+                "name": ""
               },
               {
                 "$type": "Il2CppAssets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModifierForTagModel, Assembly-CSharp",
@@ -586,6 +582,7 @@
                 "damageAddative": 0.0,
                 "mustIncludeAllTags": false,
                 "applyOverMaxDamage": false,
+                "ignoreTag": false,
                 "collisionPass": 0,
                 "name": "DamageModifierForTagModel_SpectreDartProjectile"
               },
@@ -596,9 +593,10 @@
                   "Moabs"
                 ],
                 "damageMultiplier": 1.0,
-                "damageAddative": 10.0,
+                "damageAddative": 14.0,
                 "mustIncludeAllTags": false,
                 "applyOverMaxDamage": false,
+                "ignoreTag": false,
                 "collisionPass": 0,
                 "name": "DamageModifierForTagModel_SpectreDartProjectile"
               },
@@ -643,7 +641,8 @@
             "ignorePierceExhaustion": false,
             "saveId": null,
             "displayModel": null,
-            "CappedPierce": 15.0,
+            "cantCreateSubProjectiles": false,
+            "CappedPierce": 4.0,
             "name": "ProjectileModel_SpectreDartProjectile"
           },
           "fireWithoutTarget": false,
@@ -651,7 +650,7 @@
           "behaviors": [
             {
               "$type": "Il2CppAssets.Scripts.Models.Towers.Weapons.Behaviors.FireFromAirUnitModel, Assembly-CSharp",
-              "name": "FireFromAirUnitModel_"
+              "name": ""
             },
             {
               "$type": "Il2CppAssets.Scripts.Models.Towers.Weapons.Behaviors.AlternateProjectileModel, Assembly-CSharp",
@@ -674,7 +673,7 @@
                     "$type": "Il2CppAssets.Scripts.Models.Towers.Filters.FilterInvisibleModel, Assembly-CSharp",
                     "isActive": true,
                     "ignoreBroadPhase": false,
-                    "name": "FilterInvisibleModel_"
+                    "name": ""
                   }
                 ],
                 "behaviors": [
@@ -696,7 +695,7 @@
                         "$type": "Il2CppAssets.Scripts.Models.Towers.Filters.FilterInvisibleModel, Assembly-CSharp",
                         "isActive": true,
                         "ignoreBroadPhase": false,
-                        "name": "FilterInvisibleModel_"
+                        "name": ""
                       }
                     ],
                     "collisionPass": 0,
@@ -723,7 +722,7 @@
                           "$type": "Il2CppAssets.Scripts.Models.Towers.Filters.FilterInvisibleModel, Assembly-CSharp",
                           "isActive": true,
                           "ignoreBroadPhase": false,
-                          "name": "FilterInvisibleModel_"
+                          "name": ""
                         }
                       ],
                       "behaviors": [
@@ -760,7 +759,7 @@
                               "$type": "Il2CppAssets.Scripts.Models.Towers.Filters.FilterInvisibleModel, Assembly-CSharp",
                               "isActive": true,
                               "ignoreBroadPhase": false,
-                              "name": "FilterInvisibleModel_"
+                              "name": ""
                             }
                           ],
                           "collisionPass": 0,
@@ -826,6 +825,7 @@
                           "damageAddative": 4.0,
                           "mustIncludeAllTags": false,
                           "applyOverMaxDamage": false,
+                          "ignoreTag": false,
                           "collisionPass": 0,
                           "name": "DamageModifierForTagModel_BombExplosion"
                         },
@@ -839,6 +839,7 @@
                           "damageAddative": 0.0,
                           "mustIncludeAllTags": false,
                           "applyOverMaxDamage": false,
+                          "ignoreTag": false,
                           "collisionPass": 0,
                           "name": "DamageModifierForTagModel_BombExplosion"
                         },
@@ -883,19 +884,20 @@
                       "ignorePierceExhaustion": false,
                       "saveId": null,
                       "displayModel": null,
+                      "cantCreateSubProjectiles": false,
                       "CappedPierce": 30.0,
                       "name": "ProjectileModel_BombExplosion"
                     },
                     "emission": {
                       "$type": "Il2CppAssets.Scripts.Models.Towers.Behaviors.Emissions.SingleEmissionModel, Assembly-CSharp",
                       "behaviors": null,
-                      "name": "SingleEmissionModel_"
+                      "name": ""
                     },
                     "passOnCollidedWith": false,
                     "dontCreateAtBloon": false,
                     "passOnDirectionToContact": false,
                     "collisionPass": 0,
-                    "name": "CreateProjectileOnContactModel_"
+                    "name": ""
                   },
                   {
                     "$type": "Il2CppAssets.Scripts.Models.Towers.Projectiles.Behaviors.CreateEffectOnContactModel, Assembly-CSharp",
@@ -929,11 +931,12 @@
                     "ignoreSeekAngle": true,
                     "overrideRotation": false,
                     "useLifetimeAsDistance": false,
+                    "expireOnContactTarget": false,
                     "turnRate": 45.0,
                     "turnRatePerFrame": 0.0,
                     "TurnRate": 45.0,
                     "collisionPass": 0,
-                    "name": "TrackTargetModel_"
+                    "name": ""
                   },
                   {
                     "$type": "Il2CppAssets.Scripts.Models.GenericBehaviors.DisplayModel, Assembly-CSharp",
@@ -976,6 +979,7 @@
                 "ignorePierceExhaustion": false,
                 "saveId": null,
                 "displayModel": null,
+                "cantCreateSubProjectiles": false,
                 "CappedPierce": 1.0,
                 "name": "ProjectileModel_BombProjectile"
               },
@@ -986,14 +990,14 @@
                     "$type": "Il2CppAssets.Scripts.Models.Towers.Behaviors.Emissions.Behaviors.EmissionRotationOffBloonDirectionModel, Assembly-CSharp",
                     "useAirUnitPosition": false,
                     "dontSetAfterEmit": false,
-                    "name": "EmissionRotationOffBloonDirectionModel_"
+                    "name": ""
                   }
                 ],
-                "name": "SingleEmissionModel_"
+                "name": ""
               },
               "interval": 2,
               "alternateAnimation": -1,
-              "name": "AlternateProjectileModel_"
+              "name": ""
             }
           ],
           "rate": 0.03,
@@ -1014,7 +1018,7 @@
           "$type": "Il2CppAssets.Scripts.Models.Towers.Behaviors.Attack.Behaviors.TargetFirstAirUnitModel, Assembly-CSharp",
           "isSelectable": false,
           "isOnSubTower": false,
-          "name": "TargetFirstAirUnitModel_"
+          "name": ""
         },
         {
           "$type": "Il2CppAssets.Scripts.Models.Towers.Behaviors.Attack.Behaviors.AttackFilterModel, Assembly-CSharp",
@@ -1023,10 +1027,10 @@
               "$type": "Il2CppAssets.Scripts.Models.Towers.Filters.FilterInvisibleModel, Assembly-CSharp",
               "isActive": true,
               "ignoreBroadPhase": false,
-              "name": "FilterInvisibleModel_"
+              "name": ""
             }
           ],
-          "name": "AttackFilterModel_"
+          "name": ""
         }
       ],
       "range": 600.0,
@@ -1034,11 +1038,11 @@
         "$type": "Il2CppAssets.Scripts.Models.Towers.Behaviors.Attack.Behaviors.TargetFirstAirUnitModel, Assembly-CSharp",
         "isSelectable": false,
         "isOnSubTower": false,
-        "name": "TargetFirstAirUnitModel_"
+        "name": ""
       },
       "offsetX": 0.0,
-      "offsetY": -0.0,
-      "offsetZ": -0.0,
+      "offsetY": 0.0,
+      "offsetZ": 0.0,
       "attackThroughWalls": true,
       "fireWithoutTarget": false,
       "framesBeforeRetarget": 0,
@@ -1063,10 +1067,10 @@
                 "$type": "Il2CppAssets.Scripts.Models.Towers.Behaviors.Emissions.Behaviors.EmissionRotationOffBloonDirectionModel, Assembly-CSharp",
                 "useAirUnitPosition": false,
                 "dontSetAfterEmit": false,
-                "name": "EmissionRotationOffBloonDirectionModel_"
+                "name": ""
               }
             ],
-            "name": "SingleEmissionModel_"
+            "name": ""
           },
           "ejectX": 15.0,
           "ejectY": 5.5,
@@ -1080,7 +1084,7 @@
             },
             "id": "SpectreDartProjectile",
             "maxPierce": 0.0,
-            "pierce": 15.0,
+            "pierce": 4.0,
             "scale": 1.0,
             "ignoreBlockers": false,
             "usePointCollisionWithBloons": false,
@@ -1090,13 +1094,13 @@
                 "$type": "Il2CppAssets.Scripts.Models.Towers.Filters.FilterInvisibleModel, Assembly-CSharp",
                 "isActive": true,
                 "ignoreBroadPhase": false,
-                "name": "FilterInvisibleModel_"
+                "name": ""
               }
             ],
             "behaviors": [
               {
                 "$type": "Il2CppAssets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModel, Assembly-CSharp",
-                "damage": 4.0,
+                "damage": 8.0,
                 "maxDamage": 0.0,
                 "distributeToChildren": true,
                 "overrideDistributeBlocker": false,
@@ -1105,7 +1109,7 @@
                 "immuneBloonPropertiesOriginal": 0,
                 "ignoreImmunityDestroy": false,
                 "ignoreDamageMultipliers": false,
-                "CappedDamage": 4.0,
+                "CappedDamage": 8.0,
                 "collisionPass": 0,
                 "name": "DamageModel_SpectreDartProjectile_"
               },
@@ -1127,7 +1131,7 @@
                     "$type": "Il2CppAssets.Scripts.Models.Towers.Filters.FilterInvisibleModel, Assembly-CSharp",
                     "isActive": true,
                     "ignoreBroadPhase": false,
-                    "name": "FilterInvisibleModel_"
+                    "name": ""
                   }
                 ],
                 "collisionPass": 0,
@@ -1142,24 +1146,12 @@
                 "ignoreSeekAngle": false,
                 "overrideRotation": false,
                 "useLifetimeAsDistance": true,
+                "expireOnContactTarget": false,
                 "turnRate": 9999999.0,
                 "turnRatePerFrame": 0.0,
                 "TurnRate": 9999999.0,
                 "collisionPass": 0,
-                "name": "TrackTargetModel_"
-              },
-              {
-                "$type": "Il2CppAssets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModifierForTagModel, Assembly-CSharp",
-                "tag": "Ceramic",
-                "tags": [
-                  "Ceramic"
-                ],
-                "damageMultiplier": 1.0,
-                "damageAddative": 2.0,
-                "mustIncludeAllTags": false,
-                "applyOverMaxDamage": false,
-                "collisionPass": 0,
-                "name": "DamageModifierForTagModel_SpectreDartProjectile"
+                "name": ""
               },
               {
                 "$type": "Il2CppAssets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModifierForTagModel, Assembly-CSharp",
@@ -1171,6 +1163,7 @@
                 "damageAddative": 0.0,
                 "mustIncludeAllTags": false,
                 "applyOverMaxDamage": false,
+                "ignoreTag": false,
                 "collisionPass": 0,
                 "name": "DamageModifierForTagModel_SpectreDartProjectile"
               },
@@ -1181,9 +1174,10 @@
                   "Moabs"
                 ],
                 "damageMultiplier": 1.0,
-                "damageAddative": 10.0,
+                "damageAddative": 14.0,
                 "mustIncludeAllTags": false,
                 "applyOverMaxDamage": false,
+                "ignoreTag": false,
                 "collisionPass": 0,
                 "name": "DamageModifierForTagModel_SpectreDartProjectile"
               },
@@ -1228,7 +1222,8 @@
             "ignorePierceExhaustion": false,
             "saveId": null,
             "displayModel": null,
-            "CappedPierce": 15.0,
+            "cantCreateSubProjectiles": false,
+            "CappedPierce": 4.0,
             "name": "ProjectileModel_SpectreDartProjectile"
           },
           "fireWithoutTarget": false,
@@ -1236,7 +1231,7 @@
           "behaviors": [
             {
               "$type": "Il2CppAssets.Scripts.Models.Towers.Weapons.Behaviors.FireFromAirUnitModel, Assembly-CSharp",
-              "name": "FireFromAirUnitModel_"
+              "name": ""
             },
             {
               "$type": "Il2CppAssets.Scripts.Models.Towers.Weapons.Behaviors.AlternateProjectileModel, Assembly-CSharp",
@@ -1259,7 +1254,7 @@
                     "$type": "Il2CppAssets.Scripts.Models.Towers.Filters.FilterInvisibleModel, Assembly-CSharp",
                     "isActive": true,
                     "ignoreBroadPhase": false,
-                    "name": "FilterInvisibleModel_"
+                    "name": ""
                   }
                 ],
                 "behaviors": [
@@ -1281,7 +1276,7 @@
                         "$type": "Il2CppAssets.Scripts.Models.Towers.Filters.FilterInvisibleModel, Assembly-CSharp",
                         "isActive": true,
                         "ignoreBroadPhase": false,
-                        "name": "FilterInvisibleModel_"
+                        "name": ""
                       }
                     ],
                     "collisionPass": 0,
@@ -1308,7 +1303,7 @@
                           "$type": "Il2CppAssets.Scripts.Models.Towers.Filters.FilterInvisibleModel, Assembly-CSharp",
                           "isActive": true,
                           "ignoreBroadPhase": false,
-                          "name": "FilterInvisibleModel_"
+                          "name": ""
                         }
                       ],
                       "behaviors": [
@@ -1345,7 +1340,7 @@
                               "$type": "Il2CppAssets.Scripts.Models.Towers.Filters.FilterInvisibleModel, Assembly-CSharp",
                               "isActive": true,
                               "ignoreBroadPhase": false,
-                              "name": "FilterInvisibleModel_"
+                              "name": ""
                             }
                           ],
                           "collisionPass": 0,
@@ -1411,6 +1406,7 @@
                           "damageAddative": 4.0,
                           "mustIncludeAllTags": false,
                           "applyOverMaxDamage": false,
+                          "ignoreTag": false,
                           "collisionPass": 0,
                           "name": "DamageModifierForTagModel_BombExplosion"
                         },
@@ -1424,6 +1420,7 @@
                           "damageAddative": 0.0,
                           "mustIncludeAllTags": false,
                           "applyOverMaxDamage": false,
+                          "ignoreTag": false,
                           "collisionPass": 0,
                           "name": "DamageModifierForTagModel_BombExplosion"
                         },
@@ -1468,19 +1465,20 @@
                       "ignorePierceExhaustion": false,
                       "saveId": null,
                       "displayModel": null,
+                      "cantCreateSubProjectiles": false,
                       "CappedPierce": 30.0,
                       "name": "ProjectileModel_BombExplosion"
                     },
                     "emission": {
                       "$type": "Il2CppAssets.Scripts.Models.Towers.Behaviors.Emissions.SingleEmissionModel, Assembly-CSharp",
                       "behaviors": null,
-                      "name": "SingleEmissionModel_"
+                      "name": ""
                     },
                     "passOnCollidedWith": false,
                     "dontCreateAtBloon": false,
                     "passOnDirectionToContact": false,
                     "collisionPass": 0,
-                    "name": "CreateProjectileOnContactModel_"
+                    "name": ""
                   },
                   {
                     "$type": "Il2CppAssets.Scripts.Models.Towers.Projectiles.Behaviors.TrackTargetModel, Assembly-CSharp",
@@ -1491,11 +1489,12 @@
                     "ignoreSeekAngle": true,
                     "overrideRotation": false,
                     "useLifetimeAsDistance": false,
+                    "expireOnContactTarget": false,
                     "turnRate": 45.0,
                     "turnRatePerFrame": 0.0,
                     "TurnRate": 45.0,
                     "collisionPass": 0,
-                    "name": "TrackTargetModel_"
+                    "name": ""
                   },
                   {
                     "$type": "Il2CppAssets.Scripts.Models.GenericBehaviors.DisplayModel, Assembly-CSharp",
@@ -1538,6 +1537,7 @@
                 "ignorePierceExhaustion": false,
                 "saveId": null,
                 "displayModel": null,
+                "cantCreateSubProjectiles": false,
                 "CappedPierce": 1.0,
                 "name": "ProjectileModel_BombProjectile"
               },
@@ -1548,14 +1548,14 @@
                     "$type": "Il2CppAssets.Scripts.Models.Towers.Behaviors.Emissions.Behaviors.EmissionRotationOffBloonDirectionModel, Assembly-CSharp",
                     "useAirUnitPosition": false,
                     "dontSetAfterEmit": false,
-                    "name": "EmissionRotationOffBloonDirectionModel_"
+                    "name": ""
                   }
                 ],
-                "name": "SingleEmissionModel_"
+                "name": ""
               },
               "interval": 2,
               "alternateAnimation": -1,
-              "name": "AlternateProjectileModel_"
+              "name": ""
             }
           ],
           "rate": 0.03,
@@ -1576,7 +1576,7 @@
           "$type": "Il2CppAssets.Scripts.Models.Towers.Behaviors.Attack.Behaviors.TargetCloseAirUnitModel, Assembly-CSharp",
           "isSelectable": false,
           "isOnSubTower": false,
-          "name": "TargetCloseAirUnitModel_"
+          "name": ""
         },
         {
           "$type": "Il2CppAssets.Scripts.Models.Towers.Behaviors.Attack.Behaviors.AttackFilterModel, Assembly-CSharp",
@@ -1585,10 +1585,10 @@
               "$type": "Il2CppAssets.Scripts.Models.Towers.Filters.FilterInvisibleModel, Assembly-CSharp",
               "isActive": true,
               "ignoreBroadPhase": false,
-              "name": "FilterInvisibleModel_"
+              "name": ""
             }
           ],
-          "name": "AttackFilterModel_"
+          "name": ""
         }
       ],
       "range": 600.0,
@@ -1596,10 +1596,10 @@
         "$type": "Il2CppAssets.Scripts.Models.Towers.Behaviors.Attack.Behaviors.TargetCloseAirUnitModel, Assembly-CSharp",
         "isSelectable": false,
         "isOnSubTower": false,
-        "name": "TargetCloseAirUnitModel_"
+        "name": ""
       },
       "offsetX": 0.0,
-      "offsetY": -0.0,
+      "offsetY": 0.0,
       "offsetZ": 0.0,
       "attackThroughWalls": true,
       "fireWithoutTarget": false,
@@ -1625,10 +1625,10 @@
                 "$type": "Il2CppAssets.Scripts.Models.Towers.Behaviors.Emissions.Behaviors.EmissionRotationOffBloonDirectionModel, Assembly-CSharp",
                 "useAirUnitPosition": false,
                 "dontSetAfterEmit": false,
-                "name": "EmissionRotationOffBloonDirectionModel_"
+                "name": ""
               }
             ],
-            "name": "SingleEmissionModel_"
+            "name": ""
           },
           "ejectX": -15.0,
           "ejectY": 5.5,
@@ -1642,7 +1642,7 @@
             },
             "id": "SpectreDartProjectile",
             "maxPierce": 0.0,
-            "pierce": 15.0,
+            "pierce": 4.0,
             "scale": 1.0,
             "ignoreBlockers": false,
             "usePointCollisionWithBloons": false,
@@ -1652,13 +1652,13 @@
                 "$type": "Il2CppAssets.Scripts.Models.Towers.Filters.FilterInvisibleModel, Assembly-CSharp",
                 "isActive": true,
                 "ignoreBroadPhase": false,
-                "name": "FilterInvisibleModel_"
+                "name": ""
               }
             ],
             "behaviors": [
               {
                 "$type": "Il2CppAssets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModel, Assembly-CSharp",
-                "damage": 4.0,
+                "damage": 8.0,
                 "maxDamage": 0.0,
                 "distributeToChildren": true,
                 "overrideDistributeBlocker": false,
@@ -1667,7 +1667,7 @@
                 "immuneBloonPropertiesOriginal": 0,
                 "ignoreImmunityDestroy": false,
                 "ignoreDamageMultipliers": false,
-                "CappedDamage": 4.0,
+                "CappedDamage": 8.0,
                 "collisionPass": 0,
                 "name": "DamageModel_SpectreDartProjectile_"
               },
@@ -1689,7 +1689,7 @@
                     "$type": "Il2CppAssets.Scripts.Models.Towers.Filters.FilterInvisibleModel, Assembly-CSharp",
                     "isActive": true,
                     "ignoreBroadPhase": false,
-                    "name": "FilterInvisibleModel_"
+                    "name": ""
                   }
                 ],
                 "collisionPass": 0,
@@ -1704,24 +1704,12 @@
                 "ignoreSeekAngle": false,
                 "overrideRotation": false,
                 "useLifetimeAsDistance": true,
+                "expireOnContactTarget": false,
                 "turnRate": 9999999.0,
                 "turnRatePerFrame": 0.0,
                 "TurnRate": 9999999.0,
                 "collisionPass": 0,
-                "name": "TrackTargetModel_"
-              },
-              {
-                "$type": "Il2CppAssets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModifierForTagModel, Assembly-CSharp",
-                "tag": "Ceramic",
-                "tags": [
-                  "Ceramic"
-                ],
-                "damageMultiplier": 1.0,
-                "damageAddative": 2.0,
-                "mustIncludeAllTags": false,
-                "applyOverMaxDamage": false,
-                "collisionPass": 0,
-                "name": "DamageModifierForTagModel_SpectreDartProjectile"
+                "name": ""
               },
               {
                 "$type": "Il2CppAssets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModifierForTagModel, Assembly-CSharp",
@@ -1733,6 +1721,7 @@
                 "damageAddative": 0.0,
                 "mustIncludeAllTags": false,
                 "applyOverMaxDamage": false,
+                "ignoreTag": false,
                 "collisionPass": 0,
                 "name": "DamageModifierForTagModel_SpectreDartProjectile"
               },
@@ -1743,9 +1732,10 @@
                   "Moabs"
                 ],
                 "damageMultiplier": 1.0,
-                "damageAddative": 10.0,
+                "damageAddative": 14.0,
                 "mustIncludeAllTags": false,
                 "applyOverMaxDamage": false,
+                "ignoreTag": false,
                 "collisionPass": 0,
                 "name": "DamageModifierForTagModel_SpectreDartProjectile"
               },
@@ -1790,7 +1780,8 @@
             "ignorePierceExhaustion": false,
             "saveId": null,
             "displayModel": null,
-            "CappedPierce": 15.0,
+            "cantCreateSubProjectiles": false,
+            "CappedPierce": 4.0,
             "name": "ProjectileModel_SpectreDartProjectile"
           },
           "fireWithoutTarget": false,
@@ -1798,7 +1789,7 @@
           "behaviors": [
             {
               "$type": "Il2CppAssets.Scripts.Models.Towers.Weapons.Behaviors.FireFromAirUnitModel, Assembly-CSharp",
-              "name": "FireFromAirUnitModel_"
+              "name": ""
             },
             {
               "$type": "Il2CppAssets.Scripts.Models.Towers.Weapons.Behaviors.AlternateProjectileModel, Assembly-CSharp",
@@ -1821,7 +1812,7 @@
                     "$type": "Il2CppAssets.Scripts.Models.Towers.Filters.FilterInvisibleModel, Assembly-CSharp",
                     "isActive": true,
                     "ignoreBroadPhase": false,
-                    "name": "FilterInvisibleModel_"
+                    "name": ""
                   }
                 ],
                 "behaviors": [
@@ -1843,7 +1834,7 @@
                         "$type": "Il2CppAssets.Scripts.Models.Towers.Filters.FilterInvisibleModel, Assembly-CSharp",
                         "isActive": true,
                         "ignoreBroadPhase": false,
-                        "name": "FilterInvisibleModel_"
+                        "name": ""
                       }
                     ],
                     "collisionPass": 0,
@@ -1870,7 +1861,7 @@
                           "$type": "Il2CppAssets.Scripts.Models.Towers.Filters.FilterInvisibleModel, Assembly-CSharp",
                           "isActive": true,
                           "ignoreBroadPhase": false,
-                          "name": "FilterInvisibleModel_"
+                          "name": ""
                         }
                       ],
                       "behaviors": [
@@ -1907,7 +1898,7 @@
                               "$type": "Il2CppAssets.Scripts.Models.Towers.Filters.FilterInvisibleModel, Assembly-CSharp",
                               "isActive": true,
                               "ignoreBroadPhase": false,
-                              "name": "FilterInvisibleModel_"
+                              "name": ""
                             }
                           ],
                           "collisionPass": 0,
@@ -1973,6 +1964,7 @@
                           "damageAddative": 4.0,
                           "mustIncludeAllTags": false,
                           "applyOverMaxDamage": false,
+                          "ignoreTag": false,
                           "collisionPass": 0,
                           "name": "DamageModifierForTagModel_BombExplosion"
                         },
@@ -1986,6 +1978,7 @@
                           "damageAddative": 0.0,
                           "mustIncludeAllTags": false,
                           "applyOverMaxDamage": false,
+                          "ignoreTag": false,
                           "collisionPass": 0,
                           "name": "DamageModifierForTagModel_BombExplosion"
                         },
@@ -2030,19 +2023,20 @@
                       "ignorePierceExhaustion": false,
                       "saveId": null,
                       "displayModel": null,
+                      "cantCreateSubProjectiles": false,
                       "CappedPierce": 30.0,
                       "name": "ProjectileModel_BombExplosion"
                     },
                     "emission": {
                       "$type": "Il2CppAssets.Scripts.Models.Towers.Behaviors.Emissions.SingleEmissionModel, Assembly-CSharp",
                       "behaviors": null,
-                      "name": "SingleEmissionModel_"
+                      "name": ""
                     },
                     "passOnCollidedWith": false,
                     "dontCreateAtBloon": false,
                     "passOnDirectionToContact": false,
                     "collisionPass": 0,
-                    "name": "CreateProjectileOnContactModel_"
+                    "name": ""
                   },
                   {
                     "$type": "Il2CppAssets.Scripts.Models.Towers.Projectiles.Behaviors.TrackTargetModel, Assembly-CSharp",
@@ -2053,11 +2047,12 @@
                     "ignoreSeekAngle": true,
                     "overrideRotation": false,
                     "useLifetimeAsDistance": false,
+                    "expireOnContactTarget": false,
                     "turnRate": 45.0,
                     "turnRatePerFrame": 0.0,
                     "TurnRate": 45.0,
                     "collisionPass": 0,
-                    "name": "TrackTargetModel_"
+                    "name": ""
                   },
                   {
                     "$type": "Il2CppAssets.Scripts.Models.GenericBehaviors.DisplayModel, Assembly-CSharp",
@@ -2100,6 +2095,7 @@
                 "ignorePierceExhaustion": false,
                 "saveId": null,
                 "displayModel": null,
+                "cantCreateSubProjectiles": false,
                 "CappedPierce": 1.0,
                 "name": "ProjectileModel_BombProjectile"
               },
@@ -2110,14 +2106,14 @@
                     "$type": "Il2CppAssets.Scripts.Models.Towers.Behaviors.Emissions.Behaviors.EmissionRotationOffBloonDirectionModel, Assembly-CSharp",
                     "useAirUnitPosition": false,
                     "dontSetAfterEmit": false,
-                    "name": "EmissionRotationOffBloonDirectionModel_"
+                    "name": ""
                   }
                 ],
-                "name": "SingleEmissionModel_"
+                "name": ""
               },
               "interval": 2,
               "alternateAnimation": -1,
-              "name": "AlternateProjectileModel_"
+              "name": ""
             }
           ],
           "rate": 0.03,
@@ -2138,7 +2134,7 @@
           "$type": "Il2CppAssets.Scripts.Models.Towers.Behaviors.Attack.Behaviors.TargetLastAirUnitModel, Assembly-CSharp",
           "isSelectable": false,
           "isOnSubTower": false,
-          "name": "TargetLastAirUnitModel_"
+          "name": ""
         },
         {
           "$type": "Il2CppAssets.Scripts.Models.Towers.Behaviors.Attack.Behaviors.AttackFilterModel, Assembly-CSharp",
@@ -2147,10 +2143,10 @@
               "$type": "Il2CppAssets.Scripts.Models.Towers.Filters.FilterInvisibleModel, Assembly-CSharp",
               "isActive": true,
               "ignoreBroadPhase": false,
-              "name": "FilterInvisibleModel_"
+              "name": ""
             }
           ],
-          "name": "AttackFilterModel_"
+          "name": ""
         }
       ],
       "range": 600.0,
@@ -2158,10 +2154,10 @@
         "$type": "Il2CppAssets.Scripts.Models.Towers.Behaviors.Attack.Behaviors.TargetLastAirUnitModel, Assembly-CSharp",
         "isSelectable": false,
         "isOnSubTower": false,
-        "name": "TargetLastAirUnitModel_"
+        "name": ""
       },
       "offsetX": 0.0,
-      "offsetY": -0.0,
+      "offsetY": 0.0,
       "offsetZ": 0.0,
       "attackThroughWalls": true,
       "fireWithoutTarget": false,
@@ -2191,9 +2187,9 @@
             "Count": 8,
             "count": 8,
             "behaviors": null,
-            "name": "ArcEmissionModel_"
+            "name": ""
           },
-          "ejectX": -0.0,
+          "ejectX": 0.0,
           "ejectY": -16.7,
           "ejectZ": 2.19,
           "projectile": {
@@ -2215,7 +2211,7 @@
                 "$type": "Il2CppAssets.Scripts.Models.Towers.Filters.FilterInvisibleModel, Assembly-CSharp",
                 "isActive": true,
                 "ignoreBroadPhase": false,
-                "name": "FilterInvisibleModel_"
+                "name": ""
               }
             ],
             "behaviors": [
@@ -2226,8 +2222,8 @@
                 "distributeToChildren": true,
                 "overrideDistributeBlocker": false,
                 "createPopEffect": true,
-                "immuneBloonProperties": 17,
-                "immuneBloonPropertiesOriginal": 17,
+                "immuneBloonProperties": 0,
+                "immuneBloonPropertiesOriginal": 0,
                 "ignoreImmunityDestroy": false,
                 "ignoreDamageMultipliers": false,
                 "CappedDamage": 6.0,
@@ -2252,7 +2248,7 @@
                     "$type": "Il2CppAssets.Scripts.Models.Towers.Filters.FilterInvisibleModel, Assembly-CSharp",
                     "isActive": true,
                     "ignoreBroadPhase": false,
-                    "name": "FilterInvisibleModel_"
+                    "name": ""
                   }
                 ],
                 "collisionPass": 0,
@@ -2268,6 +2264,7 @@
                 "damageAddative": 0.0,
                 "mustIncludeAllTags": false,
                 "applyOverMaxDamage": false,
+                "ignoreTag": false,
                 "collisionPass": 0,
                 "name": "DamageModifierForTagModel_MainProjectile"
               },
@@ -2286,7 +2283,7 @@
                 "lifespanFrames": 0,
                 "Lifespan": 1.0,
                 "collisionPass": 0,
-                "name": "AdoraTrackTargetModel_"
+                "name": ""
               },
               {
                 "$type": "Il2CppAssets.Scripts.Models.GenericBehaviors.DisplayModel, Assembly-CSharp",
@@ -2329,6 +2326,7 @@
             "ignorePierceExhaustion": false,
             "saveId": null,
             "displayModel": null,
+            "cantCreateSubProjectiles": false,
             "CappedPierce": 8.0,
             "name": "ProjectileModel_MainProjectile"
           },
@@ -2337,7 +2335,7 @@
           "behaviors": [
             {
               "$type": "Il2CppAssets.Scripts.Models.Towers.Weapons.Behaviors.FireFromAirUnitModel, Assembly-CSharp",
-              "name": "FireFromAirUnitModel_"
+              "name": ""
             }
           ],
           "rate": 1.26,
@@ -2366,7 +2364,7 @@
           },
           "displayCount": 30,
           "isOnSubTower": false,
-          "name": "CirclePatternModel_"
+          "name": ""
         },
         {
           "$type": "Il2CppAssets.Scripts.Models.Towers.Behaviors.Attack.Behaviors.FigureEightPatternModel, Assembly-CSharp",
@@ -2417,7 +2415,7 @@
             "AssetGUID": "3008bec461557b24a9556e9e8c4673a5"
           },
           "isOnSubTower": false,
-          "name": "CenterElipsePatternModel_"
+          "name": ""
         },
         {
           "$type": "Il2CppAssets.Scripts.Models.Towers.Behaviors.Attack.Behaviors.AttackFilterModel, Assembly-CSharp",
@@ -2426,16 +2424,16 @@
               "$type": "Il2CppAssets.Scripts.Models.Towers.Filters.FilterInvisibleModel, Assembly-CSharp",
               "isActive": true,
               "ignoreBroadPhase": false,
-              "name": "FilterInvisibleModel_"
+              "name": ""
             }
           ],
-          "name": "AttackFilterModel_"
+          "name": ""
         }
       ],
       "range": 22.0,
       "targetProvider": null,
       "offsetX": 0.0,
-      "offsetY": -0.0,
+      "offsetY": 0.0,
       "offsetZ": 0.0,
       "attackThroughWalls": true,
       "fireWithoutTarget": true,
@@ -2464,7 +2462,7 @@
           "takeOffPitch": 45.0,
           "takeOffPitchExponent": 1.0,
           "fixedPathSupplierId": "",
-          "name": "PathMovementModel_"
+          "name": ""
         }
       ],
       "display": {

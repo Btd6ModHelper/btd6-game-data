@@ -212,7 +212,7 @@
         "AssetGUID": "dcc79ccbe3defd44bad04079cc150d6c"
       },
       "displayPriority": 0,
-      "name": "FreezeNearbyWaterModel_"
+      "name": ""
     },
     {
       "$type": "Il2CppAssets.Scripts.Models.Towers.Behaviors.CreateSoundOnUpgradeModel, Assembly-CSharp",
@@ -355,7 +355,7 @@
             "$type": "Il2CppAssets.Scripts.Models.Towers.Filters.FilterInvisibleModel, Assembly-CSharp",
             "isActive": false,
             "ignoreBroadPhase": false,
-            "name": "FilterInvisibleModel_"
+            "name": ""
           },
           {
             "$type": "Il2CppAssets.Scripts.Models.Towers.Filters.FilterOveridingMutatedTargetModel, Assembly-CSharp",
@@ -366,11 +366,11 @@
             ],
             "highestPriorityMutationId": "SuperBrittle",
             "defaultMutationId": "Embrilttlement",
-            "name": "FilterOveridingMutatedTargetModel_"
+            "name": ""
           },
           {
             "$type": "Il2CppAssets.Scripts.Models.Towers.Filters.FilterFrozenBloonsModel, Assembly-CSharp",
-            "name": "FilterFrozenBloonsModel_"
+            "name": ""
           }
         ],
         "behaviors": [
@@ -392,7 +392,7 @@
                 "$type": "Il2CppAssets.Scripts.Models.Towers.Filters.FilterInvisibleModel, Assembly-CSharp",
                 "isActive": false,
                 "ignoreBroadPhase": false,
-                "name": "FilterInvisibleModel_"
+                "name": ""
               },
               {
                 "$type": "Il2CppAssets.Scripts.Models.Towers.Filters.FilterOveridingMutatedTargetModel, Assembly-CSharp",
@@ -403,11 +403,11 @@
                 ],
                 "highestPriorityMutationId": "SuperBrittle",
                 "defaultMutationId": "Embrilttlement",
-                "name": "FilterOveridingMutatedTargetModel_"
+                "name": ""
               },
               {
                 "$type": "Il2CppAssets.Scripts.Models.Towers.Filters.FilterFrozenBloonsModel, Assembly-CSharp",
-                "name": "FilterFrozenBloonsModel_"
+                "name": ""
               }
             ],
             "collisionPass": 0,
@@ -554,6 +554,7 @@
         "ignorePierceExhaustion": false,
         "saveId": null,
         "displayModel": null,
+        "cantCreateSubProjectiles": false,
         "CappedPierce": 300.0,
         "name": "ProjectileModel_BaseProjectile"
       },
@@ -598,10 +599,18 @@
       "waterSound2": null,
       "heroSound1": null,
       "heroSound2": null,
-      "reactSound": null,
-      "reactSoundAlt": null,
-      "towerType": "",
-      "towerSkin": "",
+      "reactSound1": null,
+      "reactSoundAlt1": null,
+      "reactSound2": null,
+      "reactSoundAlt2": null,
+      "reactSound3": null,
+      "reactSoundAlt3": null,
+      "towerType1": "",
+      "towerSkin1": "",
+      "towerType2": "",
+      "towerSkin2": "",
+      "towerType3": "",
+      "towerSkin3": "",
       "reactDelay": 0.0,
       "name": "CreateSoundOnTowerPlaceModel_IceMonkey-250"
     },
@@ -657,7 +666,7 @@
                   "$type": "Il2CppAssets.Scripts.Models.Towers.Filters.FilterInvisibleModel, Assembly-CSharp",
                   "isActive": false,
                   "ignoreBroadPhase": false,
-                  "name": "FilterInvisibleModel_"
+                  "name": ""
                 },
                 {
                   "$type": "Il2CppAssets.Scripts.Models.Towers.Filters.FilterOveridingMutatedTargetModel, Assembly-CSharp",
@@ -668,7 +677,7 @@
                   ],
                   "highestPriorityMutationId": "SuperBrittle",
                   "defaultMutationId": "Embittlement",
-                  "name": "FilterOveridingMutatedTargetModel_"
+                  "name": ""
                 },
                 {
                   "$type": "Il2CppAssets.Scripts.Models.Towers.Filters.FilterBloonIfDamageTypeModel, Assembly-CSharp",
@@ -678,7 +687,7 @@
                 },
                 {
                   "$type": "Il2CppAssets.Scripts.Models.Towers.Filters.FilterFrozenBloonsModel, Assembly-CSharp",
-                  "name": "FilterFrozenBloonsModel_"
+                  "name": ""
                 }
               ],
               "behaviors": [
@@ -700,7 +709,7 @@
                       "$type": "Il2CppAssets.Scripts.Models.Towers.Filters.FilterInvisibleModel, Assembly-CSharp",
                       "isActive": false,
                       "ignoreBroadPhase": false,
-                      "name": "FilterInvisibleModel_"
+                      "name": ""
                     },
                     {
                       "$type": "Il2CppAssets.Scripts.Models.Towers.Filters.FilterOveridingMutatedTargetModel, Assembly-CSharp",
@@ -711,7 +720,7 @@
                       ],
                       "highestPriorityMutationId": "SuperBrittle",
                       "defaultMutationId": "Embittlement",
-                      "name": "FilterOveridingMutatedTargetModel_"
+                      "name": ""
                     },
                     {
                       "$type": "Il2CppAssets.Scripts.Models.Towers.Filters.FilterBloonIfDamageTypeModel, Assembly-CSharp",
@@ -721,7 +730,7 @@
                     },
                     {
                       "$type": "Il2CppAssets.Scripts.Models.Towers.Filters.FilterFrozenBloonsModel, Assembly-CSharp",
-                      "name": "FilterFrozenBloonsModel_"
+                      "name": ""
                     }
                   ],
                   "collisionPass": 0,
@@ -734,20 +743,63 @@
                   "mutationId": "Ice:Regular:Freeze",
                   "percentChanceToFreeze": 0.0,
                   "enablePercentChanceToFreeze": false,
-                  "damageModel": null,
+                  "damageModel": {
+                    "$type": "Il2CppAssets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModel, Assembly-CSharp",
+                    "damage": 1.0,
+                    "maxDamage": -1.0,
+                    "distributeToChildren": true,
+                    "overrideDistributeBlocker": false,
+                    "createPopEffect": true,
+                    "immuneBloonProperties": 4,
+                    "immuneBloonPropertiesOriginal": 4,
+                    "ignoreImmunityDestroy": false,
+                    "ignoreDamageMultipliers": false,
+                    "CappedDamage": 1.0,
+                    "collisionPass": 0,
+                    "name": "DamageModel_GlobalProjectile_Snapfreeze"
+                  },
                   "canFreezeMoabs": false,
                   "cascadeMutators": true,
                   "growBlockModel": {
                     "$type": "Il2CppAssets.Scripts.Models.Bloons.Behaviors.GrowBlockModel, Assembly-CSharp",
                     "name": "GrowBlockModel_FreezeGrowBlock"
                   },
-                  "applyAfterDamage": false,
+                  "applyAfterDamage": true,
                   "lifespan": 0.6,
                   "lifespanFrames": 0,
                   "Lifespan": 0.6,
                   "overlayType": "Ice",
-                  "collisionPass": -1,
+                  "collisionPass": 1,
                   "name": "FreezeModel_GlobalIce"
+                },
+                {
+                  "$type": "Il2CppAssets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModel, Assembly-CSharp",
+                  "damage": 1.0,
+                  "maxDamage": -1.0,
+                  "distributeToChildren": true,
+                  "overrideDistributeBlocker": false,
+                  "createPopEffect": true,
+                  "immuneBloonProperties": 4,
+                  "immuneBloonPropertiesOriginal": 4,
+                  "ignoreImmunityDestroy": false,
+                  "ignoreDamageMultipliers": false,
+                  "CappedDamage": 1.0,
+                  "collisionPass": 0,
+                  "name": "DamageModel_GlobalProjectile_Snapfreeze"
+                },
+                {
+                  "$type": "Il2CppAssets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModifierForTagModel, Assembly-CSharp",
+                  "tag": "Ceramic",
+                  "tags": [
+                    "Ceramic"
+                  ],
+                  "damageMultiplier": 1.0,
+                  "damageAddative": 3.0,
+                  "mustIncludeAllTags": false,
+                  "applyOverMaxDamage": false,
+                  "ignoreTag": false,
+                  "collisionPass": 0,
+                  "name": "DamageModifierForTagModel_GlobalProjectile"
                 },
                 {
                   "$type": "Il2CppAssets.Scripts.Models.GenericBehaviors.DisplayModel, Assembly-CSharp",
@@ -777,13 +829,13 @@
                 }
               ],
               "collisionPasses": [
-                -1,
-                0
+                0,
+                1
               ],
               "canCollideWithBloons": true,
               "radius": 9999999.0,
               "vsBlockerRadius": 0.0,
-              "hasDamageModifiers": false,
+              "hasDamageModifiers": true,
               "dontUseCollisionChecker": false,
               "checkCollisionInterval": 0.0,
               "checkCollisionIntervalFrames": 0,
@@ -791,13 +843,14 @@
               "ignorePierceExhaustion": false,
               "saveId": null,
               "displayModel": null,
+              "cantCreateSubProjectiles": false,
               "CappedPierce": 999.0,
               "name": "ProjectileModel_GlobalProjectile"
             },
             "behaviors": null,
-            "name": "MultiEmissionModel_"
+            "name": ""
           },
-          "ejectX": -0.0,
+          "ejectX": 0.0,
           "ejectY": 0.0,
           "ejectZ": 7.0,
           "projectile": {
@@ -819,7 +872,7 @@
                 "$type": "Il2CppAssets.Scripts.Models.Towers.Filters.FilterInvisibleModel, Assembly-CSharp",
                 "isActive": false,
                 "ignoreBroadPhase": false,
-                "name": "FilterInvisibleModel_"
+                "name": ""
               },
               {
                 "$type": "Il2CppAssets.Scripts.Models.Towers.Filters.FilterOveridingMutatedTargetModel, Assembly-CSharp",
@@ -830,11 +883,11 @@
                 ],
                 "highestPriorityMutationId": "SuperBrittle",
                 "defaultMutationId": "Embrilttlement",
-                "name": "FilterOveridingMutatedTargetModel_"
+                "name": ""
               },
               {
                 "$type": "Il2CppAssets.Scripts.Models.Towers.Filters.FilterFrozenBloonsModel, Assembly-CSharp",
-                "name": "FilterFrozenBloonsModel_"
+                "name": ""
               }
             ],
             "behaviors": [
@@ -856,7 +909,7 @@
                     "$type": "Il2CppAssets.Scripts.Models.Towers.Filters.FilterInvisibleModel, Assembly-CSharp",
                     "isActive": false,
                     "ignoreBroadPhase": false,
-                    "name": "FilterInvisibleModel_"
+                    "name": ""
                   },
                   {
                     "$type": "Il2CppAssets.Scripts.Models.Towers.Filters.FilterOveridingMutatedTargetModel, Assembly-CSharp",
@@ -867,11 +920,11 @@
                     ],
                     "highestPriorityMutationId": "SuperBrittle",
                     "defaultMutationId": "Embrilttlement",
-                    "name": "FilterOveridingMutatedTargetModel_"
+                    "name": ""
                   },
                   {
                     "$type": "Il2CppAssets.Scripts.Models.Towers.Filters.FilterFrozenBloonsModel, Assembly-CSharp",
-                    "name": "FilterFrozenBloonsModel_"
+                    "name": ""
                   }
                 ],
                 "collisionPass": 0,
@@ -1018,6 +1071,7 @@
             "ignorePierceExhaustion": false,
             "saveId": null,
             "displayModel": null,
+            "cantCreateSubProjectiles": false,
             "CappedPierce": 300.0,
             "name": "ProjectileModel_BaseProjectile"
           },
@@ -1042,7 +1096,7 @@
                 "destroyOnTransformDestroy": false,
                 "alwaysUseAge": false,
                 "useRoundTime": false,
-                "name": "EffectModel_"
+                "name": ""
               },
               "lifespan": 0.0,
               "fullscreen": 0,
@@ -1050,7 +1104,7 @@
               "useEjectPoint": false,
               "useEmittedFrom": false,
               "useMainAttackRotation": false,
-              "name": "EjectEffectModel_"
+              "name": ""
             },
             {
               "$type": "Il2CppAssets.Scripts.Models.Towers.Weapons.Behaviors.CreateSoundOnProjectileCreatedModel, Assembly-CSharp",
@@ -1124,25 +1178,25 @@
               "$type": "Il2CppAssets.Scripts.Models.Towers.Filters.FilterInvisibleModel, Assembly-CSharp",
               "isActive": false,
               "ignoreBroadPhase": false,
-              "name": "FilterInvisibleModel_"
+              "name": ""
             },
             {
               "$type": "Il2CppAssets.Scripts.Models.Towers.Filters.FilterFrozenBloonsModel, Assembly-CSharp",
-              "name": "FilterFrozenBloonsModel_"
+              "name": ""
             }
           ],
-          "name": "AttackFilterModel_"
+          "name": ""
         },
         {
           "$type": "Il2CppAssets.Scripts.Models.Towers.Behaviors.Attack.Behaviors.TargetCloseModel, Assembly-CSharp",
           "isSelectable": true,
           "isOnSubTower": false,
-          "name": "TargetCloseModel_"
+          "name": ""
         }
       ],
       "range": 40.0,
       "targetProvider": null,
-      "offsetX": -0.0,
+      "offsetX": 0.0,
       "offsetY": 0.0,
       "offsetZ": 0.0,
       "attackThroughWalls": false,
@@ -1158,27 +1212,7 @@
       "zoneRadius": 35.0,
       "mutationId": "Ice:Regular:ArcticWind",
       "isUnique": true,
-      "filters": [
-        {
-          "$type": "Il2CppAssets.Scripts.Models.Towers.Filters.FilterInvisibleModel, Assembly-CSharp",
-          "isActive": false,
-          "ignoreBroadPhase": false,
-          "name": "FilterInvisibleModel_"
-        },
-        {
-          "$type": "Il2CppAssets.Scripts.Models.Towers.Filters.FilterOutTagModel, Assembly-CSharp",
-          "tag": "Ice",
-          "disableWhenSupportMutatorIDs": [
-            "false"
-          ],
-          "name": "FilterOutTagModel_ArcticWindZone"
-        },
-        {
-          "$type": "Il2CppAssets.Scripts.Models.Towers.Filters.FilterMoabModel, Assembly-CSharp",
-          "flip": false,
-          "name": "FilterMoabModel_MoabFilter"
-        }
-      ],
+      "filters": null,
       "speedScale": 0.4,
       "speedChange": 0.0,
       "bindRadiusToTowerRange": true,
@@ -1188,34 +1222,14 @@
         "Moabs"
       ],
       "inclusive": false,
-      "name": "SlowBloonsZoneModel_"
+      "name": ""
     },
     {
       "$type": "Il2CppAssets.Scripts.Models.Towers.Behaviors.SlowBloonsZoneModel, Assembly-CSharp",
       "zoneRadius": 35.0,
       "mutationId": "Ice:Regular:Arctic",
       "isUnique": true,
-      "filters": [
-        {
-          "$type": "Il2CppAssets.Scripts.Models.Towers.Filters.FilterInvisibleModel, Assembly-CSharp",
-          "isActive": false,
-          "ignoreBroadPhase": false,
-          "name": "FilterInvisibleModel_"
-        },
-        {
-          "$type": "Il2CppAssets.Scripts.Models.Towers.Filters.FilterOutTagModel, Assembly-CSharp",
-          "tag": "Ice",
-          "disableWhenSupportMutatorIDs": [
-            "false"
-          ],
-          "name": "FilterOutTagModel_ArcticWindZone"
-        },
-        {
-          "$type": "Il2CppAssets.Scripts.Models.Towers.Filters.FilterMoabModel, Assembly-CSharp",
-          "flip": false,
-          "name": "FilterMoabModel_MoabFilter"
-        }
-      ],
+      "filters": null,
       "speedScale": 0.7,
       "speedChange": 0.0,
       "bindRadiusToTowerRange": true,
@@ -1251,7 +1265,7 @@
                   "emission": {
                     "$type": "Il2CppAssets.Scripts.Models.Towers.Behaviors.Emissions.SingleEmissionModel, Assembly-CSharp",
                     "behaviors": null,
-                    "name": "SingleEmissionModel_"
+                    "name": ""
                   },
                   "ejectX": 0.0,
                   "ejectY": 0.0,
@@ -1275,7 +1289,7 @@
                         "$type": "Il2CppAssets.Scripts.Models.Towers.Filters.FilterInvisibleModel, Assembly-CSharp",
                         "isActive": false,
                         "ignoreBroadPhase": false,
-                        "name": "FilterInvisibleModel_"
+                        "name": ""
                       }
                     ],
                     "behaviors": [
@@ -1297,7 +1311,7 @@
                             "$type": "Il2CppAssets.Scripts.Models.Towers.Filters.FilterInvisibleModel, Assembly-CSharp",
                             "isActive": false,
                             "ignoreBroadPhase": false,
-                            "name": "FilterInvisibleModel_"
+                            "name": ""
                           }
                         ],
                         "collisionPass": 0,
@@ -1409,6 +1423,20 @@
                         "name": "AddHeatToBloonModel_SnowstormProjectile"
                       },
                       {
+                        "$type": "Il2CppAssets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModifierForBloonStateModel, Assembly-CSharp",
+                        "bloonState": "Ice",
+                        "bloonStates": [
+                          "Ice"
+                        ],
+                        "damageMultiplier": 1.0,
+                        "damageAdditive": 4.0,
+                        "mustIncludeAllStates": false,
+                        "applyOverMaxDamage": false,
+                        "mustBeModified": true,
+                        "collisionPass": 0,
+                        "name": ""
+                      },
+                      {
                         "$type": "Il2CppAssets.Scripts.Models.GenericBehaviors.DisplayModel, Assembly-CSharp",
                         "display": {
                           "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.PrefabReference, Il2CppNinjaKiwi.Common",
@@ -1442,7 +1470,7 @@
                     "canCollideWithBloons": true,
                     "radius": 9999999.0,
                     "vsBlockerRadius": 0.0,
-                    "hasDamageModifiers": false,
+                    "hasDamageModifiers": true,
                     "dontUseCollisionChecker": false,
                     "checkCollisionInterval": 0.0,
                     "checkCollisionIntervalFrames": 0,
@@ -1450,6 +1478,7 @@
                     "ignorePierceExhaustion": false,
                     "saveId": null,
                     "displayModel": null,
+                    "cantCreateSubProjectiles": false,
                     "CappedPierce": 9999999.0,
                     "name": "ProjectileModel_SnowstormProjectile"
                   },
@@ -1474,7 +1503,7 @@
                         "destroyOnTransformDestroy": false,
                         "alwaysUseAge": false,
                         "useRoundTime": false,
-                        "name": "EffectModel_"
+                        "name": ""
                       },
                       "lifespan": 1.0,
                       "fullscreen": 0,
@@ -1482,7 +1511,7 @@
                       "useEjectPoint": false,
                       "useEmittedFrom": false,
                       "useMainAttackRotation": false,
-                      "name": "EjectEffectModel_"
+                      "name": ""
                     }
                   ],
                   "rate": 99999.0,
@@ -1506,15 +1535,15 @@
                       "$type": "Il2CppAssets.Scripts.Models.Towers.Filters.FilterInvisibleModel, Assembly-CSharp",
                       "isActive": false,
                       "ignoreBroadPhase": false,
-                      "name": "FilterInvisibleModel_"
+                      "name": ""
                     }
                   ],
-                  "name": "AttackFilterModel_"
+                  "name": ""
                 }
               ],
               "range": 9999999.0,
               "targetProvider": null,
-              "offsetX": -0.0,
+              "offsetX": 0.0,
               "offsetY": 0.0,
               "offsetZ": 0.0,
               "attackThroughWalls": true,
@@ -1556,7 +1585,7 @@
             "destroyOnTransformDestroy": false,
             "alwaysUseAge": false,
             "useRoundTime": false,
-            "name": "EffectModel_"
+            "name": ""
           },
           "randomRotation": false,
           "centerEffect": false,
@@ -1651,7 +1680,7 @@
               "baseIds": [
                 "IceMonkey"
               ],
-              "name": "FilterInBaseTowerIdModel_"
+              "name": ""
             }
           ],
           "useTowerRange": false,
@@ -1659,7 +1688,7 @@
           "isGlobal": false,
           "buffLocsName": "AbsoluteZeroBuff",
           "buffIconName": "BuffIconIcex5x",
-          "name": "ActivateRateSupportZoneModel_"
+          "name": ""
         }
       ],
       "activateOnPreLeak": false,
@@ -1667,6 +1696,7 @@
       "addedViaUpgrade": null,
       "livesCost": 0,
       "maxActivationsPerRound": -1,
+      "maxActivationsPerGame": 0,
       "animation": -1,
       "enabled": true,
       "canActivateBetweenRounds": false,
@@ -1742,7 +1772,7 @@
       "delayedReveal": 0.0,
       "category": 32,
       "isAnimationPaused": false,
-      "name": "DisplayModel_"
+      "name": ""
     }
   ],
   "radius": 6.0,
