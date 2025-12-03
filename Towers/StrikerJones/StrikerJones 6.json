@@ -11,6 +11,7 @@
     0
   ],
   "towerSet": 16,
+  "towerTheme": "",
   "icon": {
     "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.SpriteReference, Il2CppNinjaKiwi.Common",
     "guidRef": "MonkeyIcons[StrikerJonesIcon]",
@@ -211,16 +212,17 @@
   "geraldoItemName": null,
   "sellbackModifierAdd": 0.0,
   "skinName": null,
-  "isBeastHandlerPet": false,
-  "selectParentOnSelected": false,
+  "isBeastHandlerPet": null,
+  "selectParentOnSelected": null,
   "dontAddMutatorsFromParent": false,
   "showBuffs": true,
   "destroyTowerOnRedistribution": false,
   "displayScale": 1.0,
-  "beastHandlerLeashMutationId": "BeastHandlerContributionStrikerJones",
+  "beastHandlerLeashMutationId": null,
   "loadedFromSave": false,
   "useAirUnitHeight": false,
   "_powerProTowerModel": null,
+  "frontierId": -1,
   "towerSize": 0,
   "isPowerTower": false,
   "isPowerProTower": false,
@@ -1067,7 +1069,14 @@
                 },
                 "name": "SoundModel_FireBall05"
               },
+              "altSound1": null,
+              "altSound2": null,
+              "altSound3": null,
+              "altSound4": null,
+              "altSound5": null,
               "type": "",
+              "altType": "",
+              "projectileId": "",
               "name": "CreateSoundOnProjectileCreatedModel_Weapon"
             }
           ],
@@ -1143,6 +1152,7 @@
       "addsToSharedGrid": true,
       "sharedGridRange": 0.0,
       "drawRangeCircle": false,
+      "disableOnCreate": false,
       "name": "AttackModel_BaseAttack_"
     },
     {
@@ -1224,7 +1234,7 @@
                           },
                           "id": "Explosion",
                           "maxPierce": 0.0,
-                          "pierce": 48.0,
+                          "pierce": 36.0,
                           "scale": 1.0,
                           "ignoreBlockers": true,
                           "usePointCollisionWithBloons": false,
@@ -1352,6 +1362,54 @@
                               "name": "CreateSoundOnProjectileCollisionModel_Explosion"
                             },
                             {
+                              "$type": "Il2CppAssets.Scripts.Models.Towers.Projectiles.Behaviors.SlowModifierForTagModel, Assembly-CSharp",
+                              "tag": "Moab",
+                              "slowId": "Stun:Strong",
+                              "slowMultiplier": 1.0,
+                              "resetToUnmodified": false,
+                              "preventMutation": false,
+                              "lifespanOverride": 0.6,
+                              "makeNotTag": false,
+                              "collisionPass": 0,
+                              "name": "SlowModifierForTagModel_SlowModifierMoab"
+                            },
+                            {
+                              "$type": "Il2CppAssets.Scripts.Models.Towers.Projectiles.Behaviors.SlowModifierForTagModel, Assembly-CSharp",
+                              "tag": "Ddt",
+                              "slowId": "Stun:Strong",
+                              "slowMultiplier": 1.0,
+                              "resetToUnmodified": false,
+                              "preventMutation": false,
+                              "lifespanOverride": 0.6,
+                              "makeNotTag": false,
+                              "collisionPass": 0,
+                              "name": "SlowModifierForTagModel_SlowModifierDdt"
+                            },
+                            {
+                              "$type": "Il2CppAssets.Scripts.Models.Towers.Projectiles.Behaviors.SlowModifierForTagModel, Assembly-CSharp",
+                              "tag": "Bfb",
+                              "slowId": "Stun:Strong",
+                              "slowMultiplier": 1.0,
+                              "resetToUnmodified": false,
+                              "preventMutation": false,
+                              "lifespanOverride": 0.45,
+                              "makeNotTag": false,
+                              "collisionPass": 0,
+                              "name": "SlowModifierForTagModel_SlowModifierBfb"
+                            },
+                            {
+                              "$type": "Il2CppAssets.Scripts.Models.Towers.Projectiles.Behaviors.SlowModifierForTagModel, Assembly-CSharp",
+                              "tag": "Zomg",
+                              "slowId": "Stun:Strong",
+                              "slowMultiplier": 1.0,
+                              "resetToUnmodified": false,
+                              "preventMutation": false,
+                              "lifespanOverride": 0.3,
+                              "makeNotTag": false,
+                              "collisionPass": 0,
+                              "name": "SlowModifierForTagModel_SlowModifierZomg"
+                            },
+                            {
                               "$type": "Il2CppAssets.Scripts.Models.GenericBehaviors.DisplayModel, Assembly-CSharp",
                               "display": {
                                 "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.PrefabReference, Il2CppNinjaKiwi.Common",
@@ -1394,7 +1452,7 @@
                           "saveId": null,
                           "displayModel": null,
                           "cantCreateSubProjectiles": false,
-                          "CappedPierce": 48.0,
+                          "CappedPierce": 36.0,
                           "name": "ProjectileModel_Explosion"
                         },
                         "emission": {
@@ -1607,6 +1665,7 @@
               "addsToSharedGrid": false,
               "sharedGridRange": 0.0,
               "drawRangeCircle": false,
+              "disableOnCreate": false,
               "name": "AttackModel_Attack_"
             }
           ],
@@ -1701,6 +1760,7 @@
       "alwaysSetAnimationState": false,
       "rechargeMonkeyMoneyCost": 0,
       "restrictAbilityAfterMaxRoundTimer": false,
+      "isHidden": false,
       "cooldownSpeedScale": 0.0,
       "animationOffset": -1.0,
       "animationOffsetFrames": 0,

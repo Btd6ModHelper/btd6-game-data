@@ -1,6 +1,6 @@
 {
   "$type": "Il2CppAssets.Scripts.Models.Towers.TowerModel, Assembly-CSharp",
-  "cost": 375.0,
+  "cost": 275.0,
   "range": 28.0,
   "ignoreBlockers": false,
   "isGlobalRange": false,
@@ -11,6 +11,7 @@
     3
   ],
   "towerSet": 4,
+  "towerTheme": "",
   "icon": {
     "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.SpriteReference, Il2CppNinjaKiwi.Common",
     "guidRef": "MonkeyIcons[MermonkeyIcon]",
@@ -163,16 +164,17 @@
   "geraldoItemName": null,
   "sellbackModifierAdd": 0.0,
   "skinName": null,
-  "isBeastHandlerPet": false,
-  "selectParentOnSelected": false,
+  "isBeastHandlerPet": null,
+  "selectParentOnSelected": null,
   "dontAddMutatorsFromParent": false,
   "showBuffs": true,
   "destroyTowerOnRedistribution": false,
   "displayScale": 1.0,
-  "beastHandlerLeashMutationId": "BeastHandlerContributionMermonkey",
+  "beastHandlerLeashMutationId": null,
   "loadedFromSave": false,
   "useAirUnitHeight": false,
   "_powerProTowerModel": null,
+  "frontierId": -1,
   "towerSize": 0,
   "isPowerTower": false,
   "isPowerProTower": false,
@@ -413,7 +415,7 @@
         },
         "id": "Projectile",
         "maxPierce": 0.0,
-        "pierce": 4.0,
+        "pierce": 5.0,
         "scale": 1.0,
         "ignoreBlockers": true,
         "usePointCollisionWithBloons": false,
@@ -459,8 +461,8 @@
               "distributeToChildren": false,
               "overrideDistributeBlocker": false,
               "createPopEffect": false,
-              "immuneBloonProperties": 8,
-              "immuneBloonPropertiesOriginal": 8,
+              "immuneBloonProperties": 72,
+              "immuneBloonPropertiesOriginal": 72,
               "ignoreImmunityDestroy": true,
               "ignoreDamageMultipliers": false,
               "CappedDamage": 0.0,
@@ -587,7 +589,7 @@
         "saveId": null,
         "displayModel": null,
         "cantCreateSubProjectiles": false,
-        "CappedPierce": 4.0,
+        "CappedPierce": 5.0,
         "name": "ProjectileModel_Projectile"
       },
       "baseTowerRange": 28.0,
@@ -918,7 +920,7 @@
           "fireWithoutTarget": false,
           "fireBetweenRounds": false,
           "behaviors": null,
-          "rate": 1.02,
+          "rate": 0.96,
           "rateFrames": 0,
           "useAttackPosition": false,
           "startInCooldown": false,
@@ -926,7 +928,7 @@
           "customStartCooldownFrames": 0,
           "animateOnMainAttack": false,
           "isStunned": false,
-          "Rate": 1.02,
+          "Rate": 0.96,
           "UseThrowMarker": true,
           "name": "WeaponModel_Weapon"
         }
@@ -990,11 +992,12 @@
       "addsToSharedGrid": true,
       "sharedGridRange": 0.0,
       "drawRangeCircle": false,
+      "disableOnCreate": false,
       "name": "AttackModel_Attack_"
     },
     {
       "$type": "Il2CppAssets.Scripts.Models.Towers.Behaviors.SupportStackingRangeModel, Assembly-CSharp",
-      "rangeMultiplier": 0.06,
+      "rangeMultiplier": 0.1,
       "maxStacks": 10,
       "mutatorId": "BuffMermonkeyRange",
       "filters": [
@@ -1047,7 +1050,7 @@
             },
             "id": "Projectile",
             "maxPierce": 0.0,
-            "pierce": 4.0,
+            "pierce": 5.0,
             "scale": 1.0,
             "ignoreBlockers": true,
             "usePointCollisionWithBloons": false,
@@ -1093,8 +1096,8 @@
                   "distributeToChildren": false,
                   "overrideDistributeBlocker": false,
                   "createPopEffect": false,
-                  "immuneBloonProperties": 8,
-                  "immuneBloonPropertiesOriginal": 8,
+                  "immuneBloonProperties": 72,
+                  "immuneBloonPropertiesOriginal": 72,
                   "ignoreImmunityDestroy": true,
                   "ignoreDamageMultipliers": false,
                   "CappedDamage": 0.0,
@@ -1221,7 +1224,7 @@
             "saveId": null,
             "displayModel": null,
             "cantCreateSubProjectiles": false,
-            "CappedPierce": 4.0,
+            "CappedPierce": 5.0,
             "name": "ProjectileModel_Projectile"
           },
           "fireWithoutTarget": false,
@@ -1234,8 +1237,8 @@
             },
             {
               "$type": "Il2CppAssets.Scripts.Models.Towers.Weapons.Behaviors.PauseOtherAttacksModel, Assembly-CSharp",
-              "duration": 1.02,
-              "durationFrames": 61,
+              "duration": 0.96,
+              "durationFrames": 57,
               "name": ""
             },
             {
@@ -1289,7 +1292,14 @@
                 },
                 "name": "SoundModel_AttackTrance05"
               },
+              "altSound1": null,
+              "altSound2": null,
+              "altSound3": null,
+              "altSound4": null,
+              "altSound5": null,
               "type": "Trance",
+              "altType": "",
+              "projectileId": "",
               "name": "CreateSoundOnProjectileCreatedModel_Weapon"
             },
             {
@@ -1370,6 +1380,7 @@
       "addsToSharedGrid": false,
       "sharedGridRange": 0.0,
       "drawRangeCircle": false,
+      "disableOnCreate": false,
       "name": "AttackModel_AttackTrance_"
     },
     {

@@ -1,6 +1,6 @@
 {
   "$type": "Il2CppAssets.Scripts.Models.Towers.TowerModel, Assembly-CSharp",
-  "cost": 375.0,
+  "cost": 275.0,
   "range": 35.0,
   "ignoreBlockers": false,
   "isGlobalRange": false,
@@ -11,6 +11,7 @@
     0
   ],
   "towerSet": 4,
+  "towerTheme": "",
   "icon": {
     "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.SpriteReference, Il2CppNinjaKiwi.Common",
     "guidRef": "MonkeyIcons[MermonkeyIcon]",
@@ -159,16 +160,17 @@
   "geraldoItemName": null,
   "sellbackModifierAdd": 0.0,
   "skinName": null,
-  "isBeastHandlerPet": false,
-  "selectParentOnSelected": false,
+  "isBeastHandlerPet": null,
+  "selectParentOnSelected": null,
   "dontAddMutatorsFromParent": false,
   "showBuffs": true,
   "destroyTowerOnRedistribution": false,
   "displayScale": 1.0,
-  "beastHandlerLeashMutationId": "BeastHandlerContributionMermonkey",
+  "beastHandlerLeashMutationId": null,
   "loadedFromSave": false,
   "useAirUnitHeight": false,
   "_powerProTowerModel": null,
+  "frontierId": -1,
   "towerSize": 0,
   "isPowerTower": false,
   "isPowerProTower": false,
@@ -515,12 +517,12 @@
               },
               {
                 "$type": "Il2CppAssets.Scripts.Models.Towers.Projectiles.Behaviors.TravelStraitModel, Assembly-CSharp",
-                "speed": 150.0,
+                "speed": 165.0,
                 "speedFrames": 0.0,
-                "lifespan": 1.3333334,
+                "lifespan": 1.2121212,
                 "lifespanFrames": 0,
-                "Speed": 150.0,
-                "Lifespan": 1.3333334,
+                "Speed": 165.0,
+                "Lifespan": 1.2121212,
                 "collisionPass": 0,
                 "name": "TravelStraitModel_Projectile"
               },
@@ -742,6 +744,7 @@
                         "name": "GrowBlockModel_FreezeGrowBlock"
                       },
                       "applyAfterDamage": true,
+                      "preventHealthPercentTriggers": false,
                       "lifespan": 0.8,
                       "lifespanFrames": 0,
                       "Lifespan": 0.8,
@@ -847,6 +850,7 @@
                   "name": "GrowBlockModel_FreezeGrowBlock"
                 },
                 "applyAfterDamage": true,
+                "preventHealthPercentTriggers": false,
                 "lifespan": 0.8,
                 "lifespanFrames": 0,
                 "Lifespan": 0.8,
@@ -937,7 +941,7 @@
           "fireWithoutTarget": false,
           "fireBetweenRounds": false,
           "behaviors": null,
-          "rate": 0.8040001,
+          "rate": 0.66,
           "rateFrames": 0,
           "useAttackPosition": false,
           "startInCooldown": false,
@@ -945,7 +949,7 @@
           "customStartCooldownFrames": 0,
           "animateOnMainAttack": false,
           "isStunned": false,
-          "Rate": 0.8040001,
+          "Rate": 0.66,
           "UseThrowMarker": true,
           "name": "WeaponModel_Weapon"
         }
@@ -1009,6 +1013,7 @@
       "addsToSharedGrid": true,
       "sharedGridRange": 0.0,
       "drawRangeCircle": false,
+      "disableOnCreate": false,
       "name": "AttackModel_Attack_"
     },
     {
@@ -1102,11 +1107,11 @@
                       },
                       {
                         "$type": "Il2CppAssets.Scripts.Models.Towers.Projectiles.Behaviors.TravelStraitModel, Assembly-CSharp",
-                        "speed": 300.0,
+                        "speed": 330.0,
                         "speedFrames": 0.0,
                         "lifespan": 10.0,
                         "lifespanFrames": 0,
-                        "Speed": 300.0,
+                        "Speed": 330.0,
                         "Lifespan": 10.0,
                         "collisionPass": 0,
                         "name": "TravelStraitModel_Projectile"
@@ -1166,6 +1171,7 @@
                           "name": "GrowBlockModel_FreezeGrowBlock"
                         },
                         "applyAfterDamage": false,
+                        "preventHealthPercentTriggers": false,
                         "lifespan": 3.0,
                         "lifespanFrames": 0,
                         "Lifespan": 3.0,
@@ -1189,13 +1195,6 @@
                         "heatAmount": -10.0,
                         "collisionPass": 0,
                         "name": "AddHeatToBloonModel_Projectile"
-                      },
-                      {
-                        "$type": "Il2CppAssets.Scripts.Models.Towers.Projectiles.Behaviors.MapBorderReboundModel, Assembly-CSharp",
-                        "changeRotation": true,
-                        "clearCollidedWith": true,
-                        "collisionPass": 0,
-                        "name": "MapBorderReboundModel_Projectile"
                       },
                       {
                         "$type": "Il2CppAssets.Scripts.Models.GenericBehaviors.DisplayModel, Assembly-CSharp",
@@ -1362,6 +1361,7 @@
               "addsToSharedGrid": false,
               "sharedGridRange": 0.0,
               "drawRangeCircle": false,
+              "disableOnCreate": false,
               "name": "AttackModel_Attack_"
             }
           ],
@@ -1413,6 +1413,7 @@
       "alwaysSetAnimationState": false,
       "rechargeMonkeyMoneyCost": 0,
       "restrictAbilityAfterMaxRoundTimer": false,
+      "isHidden": false,
       "cooldownSpeedScale": 0.0,
       "animationOffset": 0.1,
       "animationOffsetFrames": 0,

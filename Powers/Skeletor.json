@@ -45,6 +45,7 @@
       0
     ],
     "towerSet": 64,
+    "towerTheme": "",
     "icon": {
       "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.SpriteReference, Il2CppNinjaKiwi.Common",
       "guidRef": null,
@@ -114,16 +115,17 @@
     "geraldoItemName": null,
     "sellbackModifierAdd": 0.0,
     "skinName": null,
-    "isBeastHandlerPet": false,
-    "selectParentOnSelected": false,
+    "isBeastHandlerPet": null,
+    "selectParentOnSelected": null,
     "dontAddMutatorsFromParent": false,
     "showBuffs": true,
     "destroyTowerOnRedistribution": false,
     "displayScale": 1.0,
-    "beastHandlerLeashMutationId": "BeastHandlerContributionSkeletorTower",
+    "beastHandlerLeashMutationId": null,
     "loadedFromSave": false,
     "useAirUnitHeight": true,
     "_powerProTowerModel": null,
+    "frontierId": -1,
     "towerSize": 0,
     "isPowerTower": true,
     "isPowerProTower": false,
@@ -132,12 +134,12 @@
     "SelectParentOnSelected": false,
     "DisplayScale": 1.0,
     "IsSubEntity": false,
-    "BeastHandlerLeashMutationId": "BeastHandlerContributionSkeletorTower",
+    "BeastHandlerLeashMutationId": "BeastHandlerContributionSkeletor",
     "powerProTowerModel": null,
     "IsBaseTower": true,
     "TargetTypes": null,
     "IsExclusivelyWaterBased": false,
-    "baseId": "SkeletorTower",
+    "baseId": "Skeletor",
     "display": {
       "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.PrefabReference, Il2CppNinjaKiwi.Common",
       "guidRef": "dbb0e062db41f5444a99d46c26f638d1",
@@ -164,13 +166,13 @@
           "useRoundTime": false,
           "name": ""
         },
-        "name": "CreateEffectOnPlaceModel_SkeletorTower"
+        "name": "CreateEffectOnPlaceModel_Skeletor"
       },
       {
         "$type": "Il2CppAssets.Scripts.Models.Towers.Behaviors.PlayAnimationIndexModel, Assembly-CSharp",
         "placeAnimation": 2,
         "upgradeAnimation": 2,
-        "name": "PlayAnimationIndexModel_SkeletorTower"
+        "name": "PlayAnimationIndexModel_Skeletor"
       },
       {
         "$type": "Il2CppAssets.Scripts.Models.Towers.Behaviors.CreateSoundOnTowerPlaceModel, Assembly-CSharp",
@@ -217,7 +219,7 @@
         "towerType3": "",
         "towerSkin3": "",
         "reactDelay": 1.0,
-        "name": "CreateSoundOnTowerPlaceModel_SkeletorTower"
+        "name": "CreateSoundOnTowerPlaceModel_Skeletor"
       },
       {
         "$type": "Il2CppAssets.Scripts.Models.Towers.Behaviors.CreateSoundOnSellModel, Assembly-CSharp",
@@ -230,7 +232,7 @@
           },
           "name": "SoundModel_UIGetGold"
         },
-        "name": "CreateSoundOnSellModel_SkeletorTower"
+        "name": "CreateSoundOnSellModel_Skeletor"
       },
       {
         "$type": "Il2CppAssets.Scripts.Models.Towers.Behaviors.TowerExpireModel, Assembly-CSharp",
@@ -266,7 +268,7 @@
           "useRoundTime": false,
           "name": "EffectModel_ExpireEffect"
         },
-        "name": "CreateEffectOnExpireModel_SkeletorTower"
+        "name": "CreateEffectOnExpireModel_Skeletor"
       },
       {
         "$type": "Il2CppAssets.Scripts.Models.Towers.Behaviors.CreateSoundOnTowerExpireModel, Assembly-CSharp",
@@ -279,7 +281,7 @@
           },
           "name": "SoundModel_MagicDismiss"
         },
-        "name": "CreateSoundOnTowerExpireModel_SkeletorTower"
+        "name": "CreateSoundOnTowerExpireModel_Skeletor"
       },
       {
         "$type": "Il2CppAssets.Scripts.Models.Towers.Behaviors.CircleFootprintModel, Assembly-CSharp",
@@ -629,6 +631,7 @@
                   "addsToSharedGrid": false,
                   "sharedGridRange": 0.0,
                   "drawRangeCircle": false,
+                  "disableOnCreate": false,
                   "name": "AttackAirUnitModel_GroundZero_"
                 }
               ],
@@ -739,6 +742,7 @@
           "alwaysSetAnimationState": false,
           "rechargeMonkeyMoneyCost": 0,
           "restrictAbilityAfterMaxRoundTimer": false,
+          "isHidden": false,
           "cooldownSpeedScale": 0.0,
           "animationOffset": 0.0,
           "animationOffsetFrames": 0,
@@ -1131,7 +1135,14 @@
                   },
                   "name": "SoundModel_Explosion05"
                 },
+                "altSound1": null,
+                "altSound2": null,
+                "altSound3": null,
+                "altSound4": null,
+                "altSound5": null,
                 "type": "",
+                "altType": "",
+                "projectileId": "",
                 "name": "CreateSoundOnProjectileCreatedModel_Weapon"
               }
             ],
@@ -1158,6 +1169,23 @@
             "canTargetMoab": false,
             "isOnSubTower": false,
             "name": ""
+          },
+          {
+            "$type": "Il2CppAssets.Scripts.Models.Towers.Behaviors.Attack.Behaviors.AttackFilterModel, Assembly-CSharp",
+            "filters": [
+              {
+                "$type": "Il2CppAssets.Scripts.Models.Towers.Filters.FilterOutOffscreenModel, Assembly-CSharp",
+                "includeBloonRadius": true,
+                "name": ""
+              },
+              {
+                "$type": "Il2CppAssets.Scripts.Models.Towers.Filters.FilterOutTagModel, Assembly-CSharp",
+                "tag": "Moabs",
+                "disableWhenSupportMutatorIDs": [],
+                "name": "FilterOutTagModel_JungleVine"
+              }
+            ],
+            "name": ""
           }
         ],
         "range": 9999999.0,
@@ -1180,6 +1208,7 @@
         "addsToSharedGrid": false,
         "sharedGridRange": 0.0,
         "drawRangeCircle": false,
+        "disableOnCreate": false,
         "name": "AttackModel_JungleVine_"
       },
       {
@@ -1520,6 +1549,7 @@
                 "addsToSharedGrid": false,
                 "sharedGridRange": 0.0,
                 "drawRangeCircle": false,
+                "disableOnCreate": false,
                 "name": "AttackAirUnitModel_GroundZero_"
               }
             ],
@@ -1630,6 +1660,7 @@
         "alwaysSetAnimationState": false,
         "rechargeMonkeyMoneyCost": 0,
         "restrictAbilityAfterMaxRoundTimer": false,
+        "isHidden": false,
         "cooldownSpeedScale": 0.0,
         "animationOffset": 0.0,
         "animationOffsetFrames": 0,
@@ -1671,7 +1702,7 @@
     "radius": 0.0,
     "cachedThrowMarkerHeight": 0.0,
     "RadiusSquared": 0.0,
-    "name": "SkeletorTower"
+    "name": "Skeletor"
   },
   "isDisabledByGameMode": false,
   "isHidden": false,
@@ -1680,7 +1711,7 @@
   "quantity": 1,
   "saveImmediately": true,
   "storeNavigateToId": "btd6_skeletorboosterpack",
-  "orderPriority": 1,
+  "orderPriority": 1001,
   "alwaysPlaceAtScreenCentre": true,
   "animatedIcon": {
     "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.PrefabReference, Il2CppNinjaKiwi.Common",
@@ -1688,6 +1719,7 @@
     "AssetGUID": "6749aed9b26f6ef43b2f3843fc50e0fa"
   },
   "showAsNew": false,
+  "availableInMode": "",
   "Cost": 0,
   "CanBePurchasedWithMM": false,
   "IsPowerPro": false,

@@ -11,6 +11,7 @@
     0
   ],
   "towerSet": 8,
+  "towerTheme": "",
   "icon": {
     "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.SpriteReference, Il2CppNinjaKiwi.Common",
     "guidRef": "MonkeyIcons[SpikeFactoryIcon]",
@@ -115,7 +116,7 @@
       "$type": "Il2CppAssets.Scripts.Models.Towers.TargetType, Assembly-CSharp",
       "id": "TargetSelectedPoint",
       "isActionable": true,
-      "actionOnCreate": true,
+      "actionOnCreate": false,
       "intID": -1,
       "continueToNextPriority": false
     },
@@ -165,16 +166,17 @@
   "geraldoItemName": null,
   "sellbackModifierAdd": 0.0,
   "skinName": null,
-  "isBeastHandlerPet": false,
-  "selectParentOnSelected": false,
+  "isBeastHandlerPet": null,
+  "selectParentOnSelected": null,
   "dontAddMutatorsFromParent": false,
   "showBuffs": true,
   "destroyTowerOnRedistribution": false,
   "displayScale": 1.0,
-  "beastHandlerLeashMutationId": "BeastHandlerContributionSpikeFactory",
+  "beastHandlerLeashMutationId": null,
   "loadedFromSave": false,
   "useAirUnitHeight": false,
   "_powerProTowerModel": null,
+  "frontierId": -1,
   "towerSize": 0,
   "isPowerTower": false,
   "isPowerProTower": false,
@@ -687,7 +689,7 @@
                 "Boss"
               ],
               "damageMultiplier": 1.0,
-              "damageAddative": 1500.0,
+              "damageAddative": 800.0,
               "mustIncludeAllTags": false,
               "applyOverMaxDamage": true,
               "ignoreTag": false,
@@ -701,7 +703,7 @@
                 "Moabs"
               ],
               "damageMultiplier": 1.0,
-              "damageAddative": 100.0,
+              "damageAddative": 300.0,
               "mustIncludeAllTags": false,
               "applyOverMaxDamage": true,
               "ignoreTag": false,
@@ -801,7 +803,7 @@
             "behaviors": [
               {
                 "$type": "Il2CppAssets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModel, Assembly-CSharp",
-                "damage": 140.0,
+                "damage": 100.0,
                 "maxDamage": 0.0,
                 "distributeToChildren": true,
                 "overrideDistributeBlocker": false,
@@ -810,7 +812,7 @@
                 "immuneBloonPropertiesOriginal": 0,
                 "ignoreImmunityDestroy": false,
                 "ignoreDamageMultipliers": false,
-                "CappedDamage": 140.0,
+                "CappedDamage": 100.0,
                 "collisionPass": 0,
                 "name": "DamageModel_Projectile_"
               },
@@ -909,7 +911,7 @@
                         "Moabs"
                       ],
                       "damageMultiplier": 1.0,
-                      "damageAddative": 160.0,
+                      "damageAddative": 100.0,
                       "mustIncludeAllTags": false,
                       "applyOverMaxDamage": false,
                       "ignoreTag": false,
@@ -1279,15 +1281,6 @@
                 "name": ""
               },
               {
-                "$type": "Il2CppAssets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModifierForBloonTypeModel, Assembly-CSharp",
-                "bloonId": "MOAB",
-                "damageMultiplier": 1.0,
-                "damageAdditive": 480.0,
-                "includeChildren": true,
-                "collisionPass": 0,
-                "name": "DamageModifierForBloonTypeModel_Projectile"
-              },
-              {
                 "$type": "Il2CppAssets.Scripts.Models.Towers.Projectiles.Behaviors.ScaleProjectileModel, Assembly-CSharp",
                 "samples": [
                   0.09004579,
@@ -1465,7 +1458,7 @@
                   "behaviors": [
                     {
                       "$type": "Il2CppAssets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModel, Assembly-CSharp",
-                      "damage": 240.0,
+                      "damage": 120.0,
                       "maxDamage": 0.0,
                       "distributeToChildren": true,
                       "overrideDistributeBlocker": false,
@@ -1474,7 +1467,7 @@
                       "immuneBloonPropertiesOriginal": 0,
                       "ignoreImmunityDestroy": false,
                       "ignoreDamageMultipliers": false,
-                      "CappedDamage": 240.0,
+                      "CappedDamage": 120.0,
                       "collisionPass": 0,
                       "name": "DamageModel_SmallExplosion_"
                     },
@@ -1518,46 +1511,46 @@
                         "$type": "Il2CppAssets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
                         "assetId": {
                           "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.AudioClipReference, Il2CppNinjaKiwi.Common",
-                          "guidRef": "01ef1a87c8c979e4888dc74b44de78f8",
-                          "AssetGUID": "01ef1a87c8c979e4888dc74b44de78f8"
+                          "guidRef": "ec9a5a7531a750e4c82bf8429e0812e4",
+                          "AssetGUID": "ec9a5a7531a750e4c82bf8429e0812e4"
                         },
-                        "name": "SoundModel_MegaExplosion01"
+                        "name": "SoundModel_Explosion01"
                       },
                       "sound2": {
                         "$type": "Il2CppAssets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
                         "assetId": {
                           "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.AudioClipReference, Il2CppNinjaKiwi.Common",
-                          "guidRef": "02c9726be64adc041b39264a10fed16f",
-                          "AssetGUID": "02c9726be64adc041b39264a10fed16f"
+                          "guidRef": "57fac571daa668140b0674eb515f9586",
+                          "AssetGUID": "57fac571daa668140b0674eb515f9586"
                         },
-                        "name": "SoundModel_MegaExplosion02"
+                        "name": "SoundModel_Explosion02"
                       },
                       "sound3": {
                         "$type": "Il2CppAssets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
                         "assetId": {
                           "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.AudioClipReference, Il2CppNinjaKiwi.Common",
-                          "guidRef": "702448df6c204b94b872908cbdb9bcd1",
-                          "AssetGUID": "702448df6c204b94b872908cbdb9bcd1"
+                          "guidRef": "5b1ee796433122141a0db034af251f15",
+                          "AssetGUID": "5b1ee796433122141a0db034af251f15"
                         },
-                        "name": "SoundModel_MegaExplosion03"
+                        "name": "SoundModel_Explosion03"
                       },
                       "sound4": {
                         "$type": "Il2CppAssets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
                         "assetId": {
                           "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.AudioClipReference, Il2CppNinjaKiwi.Common",
-                          "guidRef": "b71b1dff07fd5b141b21706d8f05acd4",
-                          "AssetGUID": "b71b1dff07fd5b141b21706d8f05acd4"
+                          "guidRef": "f5f616027b9887c4db5b1341a614b352",
+                          "AssetGUID": "f5f616027b9887c4db5b1341a614b352"
                         },
-                        "name": "SoundModel_MegaExplosion04"
+                        "name": "SoundModel_Explosion04"
                       },
                       "sound5": {
                         "$type": "Il2CppAssets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
                         "assetId": {
                           "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.AudioClipReference, Il2CppNinjaKiwi.Common",
-                          "guidRef": "3d59eb0ff1a38604cbbf09c043a3abf3",
-                          "AssetGUID": "3d59eb0ff1a38604cbbf09c043a3abf3"
+                          "guidRef": "9a36e64ca09a7ef42bd4af49c1cf4ef6",
+                          "AssetGUID": "9a36e64ca09a7ef42bd4af49c1cf4ef6"
                         },
-                        "name": "SoundModel_MegaExplosion05"
+                        "name": "SoundModel_Explosion05"
                       },
                       "limiter": 60,
                       "collisionPass": 0,
@@ -1815,7 +1808,7 @@
                   "behaviors": [
                     {
                       "$type": "Il2CppAssets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModel, Assembly-CSharp",
-                      "damage": 240.0,
+                      "damage": 120.0,
                       "maxDamage": 0.0,
                       "distributeToChildren": true,
                       "overrideDistributeBlocker": false,
@@ -1824,7 +1817,7 @@
                       "immuneBloonPropertiesOriginal": 0,
                       "ignoreImmunityDestroy": false,
                       "ignoreDamageMultipliers": false,
-                      "CappedDamage": 240.0,
+                      "CappedDamage": 120.0,
                       "collisionPass": 0,
                       "name": "DamageModel_SmallExplosion_"
                     },
@@ -1868,46 +1861,46 @@
                         "$type": "Il2CppAssets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
                         "assetId": {
                           "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.AudioClipReference, Il2CppNinjaKiwi.Common",
-                          "guidRef": "01ef1a87c8c979e4888dc74b44de78f8",
-                          "AssetGUID": "01ef1a87c8c979e4888dc74b44de78f8"
+                          "guidRef": "ec9a5a7531a750e4c82bf8429e0812e4",
+                          "AssetGUID": "ec9a5a7531a750e4c82bf8429e0812e4"
                         },
-                        "name": "SoundModel_MegaExplosion01"
+                        "name": "SoundModel_Explosion01"
                       },
                       "sound2": {
                         "$type": "Il2CppAssets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
                         "assetId": {
                           "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.AudioClipReference, Il2CppNinjaKiwi.Common",
-                          "guidRef": "02c9726be64adc041b39264a10fed16f",
-                          "AssetGUID": "02c9726be64adc041b39264a10fed16f"
+                          "guidRef": "57fac571daa668140b0674eb515f9586",
+                          "AssetGUID": "57fac571daa668140b0674eb515f9586"
                         },
-                        "name": "SoundModel_MegaExplosion02"
+                        "name": "SoundModel_Explosion02"
                       },
                       "sound3": {
                         "$type": "Il2CppAssets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
                         "assetId": {
                           "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.AudioClipReference, Il2CppNinjaKiwi.Common",
-                          "guidRef": "702448df6c204b94b872908cbdb9bcd1",
-                          "AssetGUID": "702448df6c204b94b872908cbdb9bcd1"
+                          "guidRef": "5b1ee796433122141a0db034af251f15",
+                          "AssetGUID": "5b1ee796433122141a0db034af251f15"
                         },
-                        "name": "SoundModel_MegaExplosion03"
+                        "name": "SoundModel_Explosion03"
                       },
                       "sound4": {
                         "$type": "Il2CppAssets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
                         "assetId": {
                           "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.AudioClipReference, Il2CppNinjaKiwi.Common",
-                          "guidRef": "b71b1dff07fd5b141b21706d8f05acd4",
-                          "AssetGUID": "b71b1dff07fd5b141b21706d8f05acd4"
+                          "guidRef": "f5f616027b9887c4db5b1341a614b352",
+                          "AssetGUID": "f5f616027b9887c4db5b1341a614b352"
                         },
-                        "name": "SoundModel_MegaExplosion04"
+                        "name": "SoundModel_Explosion04"
                       },
                       "sound5": {
                         "$type": "Il2CppAssets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
                         "assetId": {
                           "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.AudioClipReference, Il2CppNinjaKiwi.Common",
-                          "guidRef": "3d59eb0ff1a38604cbbf09c043a3abf3",
-                          "AssetGUID": "3d59eb0ff1a38604cbbf09c043a3abf3"
+                          "guidRef": "9a36e64ca09a7ef42bd4af49c1cf4ef6",
+                          "AssetGUID": "9a36e64ca09a7ef42bd4af49c1cf4ef6"
                         },
-                        "name": "SoundModel_MegaExplosion05"
+                        "name": "SoundModel_Explosion05"
                       },
                       "limiter": 60,
                       "collisionPass": 0,
@@ -1996,6 +1989,20 @@
                 "name": ""
               },
               {
+                "$type": "Il2CppAssets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModifierForTagModel, Assembly-CSharp",
+                "tag": "Moabs",
+                "tags": [
+                  "Moabs"
+                ],
+                "damageMultiplier": 1.0,
+                "damageAddative": 480.0,
+                "mustIncludeAllTags": true,
+                "applyOverMaxDamage": false,
+                "ignoreTag": false,
+                "collisionPass": 0,
+                "name": "DamageModifierForTagModel_Projectile"
+              },
+              {
                 "$type": "Il2CppAssets.Scripts.Models.GenericBehaviors.DisplayModel, Assembly-CSharp",
                 "display": {
                   "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.PrefabReference, Il2CppNinjaKiwi.Common",
@@ -2048,7 +2055,7 @@
               "name": ""
             }
           ],
-          "rate": 10.0,
+          "rate": 11.0,
           "rateFrames": 0,
           "useAttackPosition": false,
           "startInCooldown": false,
@@ -2056,7 +2063,7 @@
           "customStartCooldownFrames": 0,
           "animateOnMainAttack": false,
           "isStunned": false,
-          "Rate": 10.0,
+          "Rate": 11.0,
           "UseThrowMarker": true,
           "name": "WeaponModel_Weapon"
         }
@@ -2141,6 +2148,7 @@
       "addsToSharedGrid": true,
       "sharedGridRange": 0.0,
       "drawRangeCircle": false,
+      "disableOnCreate": false,
       "name": "AttackModel_Attack_"
     },
     {
@@ -2228,6 +2236,7 @@
       "alwaysSetAnimationState": false,
       "rechargeMonkeyMoneyCost": 0,
       "restrictAbilityAfterMaxRoundTimer": false,
+      "isHidden": false,
       "cooldownSpeedScale": 0.0,
       "animationOffset": -1.0,
       "animationOffsetFrames": 0,
@@ -2651,48 +2660,48 @@
                               "$type": "Il2CppAssets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
                               "assetId": {
                                 "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.AudioClipReference, Il2CppNinjaKiwi.Common",
-                                "guidRef": "01ef1a87c8c979e4888dc74b44de78f8",
-                                "AssetGUID": "01ef1a87c8c979e4888dc74b44de78f8"
+                                "guidRef": "ec9a5a7531a750e4c82bf8429e0812e4",
+                                "AssetGUID": "ec9a5a7531a750e4c82bf8429e0812e4"
                               },
-                              "name": "SoundModel_MegaExplosion01"
+                              "name": "SoundModel_Explosion01"
                             },
                             "sound2": {
                               "$type": "Il2CppAssets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
                               "assetId": {
                                 "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.AudioClipReference, Il2CppNinjaKiwi.Common",
-                                "guidRef": "02c9726be64adc041b39264a10fed16f",
-                                "AssetGUID": "02c9726be64adc041b39264a10fed16f"
+                                "guidRef": "57fac571daa668140b0674eb515f9586",
+                                "AssetGUID": "57fac571daa668140b0674eb515f9586"
                               },
-                              "name": "SoundModel_MegaExplosion02"
+                              "name": "SoundModel_Explosion02"
                             },
                             "sound3": {
                               "$type": "Il2CppAssets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
                               "assetId": {
                                 "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.AudioClipReference, Il2CppNinjaKiwi.Common",
-                                "guidRef": "702448df6c204b94b872908cbdb9bcd1",
-                                "AssetGUID": "702448df6c204b94b872908cbdb9bcd1"
+                                "guidRef": "5b1ee796433122141a0db034af251f15",
+                                "AssetGUID": "5b1ee796433122141a0db034af251f15"
                               },
-                              "name": "SoundModel_MegaExplosion03"
+                              "name": "SoundModel_Explosion03"
                             },
                             "sound4": {
                               "$type": "Il2CppAssets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
                               "assetId": {
                                 "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.AudioClipReference, Il2CppNinjaKiwi.Common",
-                                "guidRef": "b71b1dff07fd5b141b21706d8f05acd4",
-                                "AssetGUID": "b71b1dff07fd5b141b21706d8f05acd4"
+                                "guidRef": "f5f616027b9887c4db5b1341a614b352",
+                                "AssetGUID": "f5f616027b9887c4db5b1341a614b352"
                               },
-                              "name": "SoundModel_MegaExplosion04"
+                              "name": "SoundModel_Explosion04"
                             },
                             "sound5": {
                               "$type": "Il2CppAssets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
                               "assetId": {
                                 "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.AudioClipReference, Il2CppNinjaKiwi.Common",
-                                "guidRef": "3d59eb0ff1a38604cbbf09c043a3abf3",
-                                "AssetGUID": "3d59eb0ff1a38604cbbf09c043a3abf3"
+                                "guidRef": "9a36e64ca09a7ef42bd4af49c1cf4ef6",
+                                "AssetGUID": "9a36e64ca09a7ef42bd4af49c1cf4ef6"
                               },
-                              "name": "SoundModel_MegaExplosion05"
+                              "name": "SoundModel_Explosion05"
                             },
-                            "limiter": 0,
+                            "limiter": 90,
                             "collisionPass": 0,
                             "name": "CreateSoundOnProjectileExpireModel_SmallExplosion"
                           },
@@ -3277,48 +3286,48 @@
                               "$type": "Il2CppAssets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
                               "assetId": {
                                 "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.AudioClipReference, Il2CppNinjaKiwi.Common",
-                                "guidRef": "01ef1a87c8c979e4888dc74b44de78f8",
-                                "AssetGUID": "01ef1a87c8c979e4888dc74b44de78f8"
+                                "guidRef": "ec9a5a7531a750e4c82bf8429e0812e4",
+                                "AssetGUID": "ec9a5a7531a750e4c82bf8429e0812e4"
                               },
-                              "name": "SoundModel_MegaExplosion01"
+                              "name": "SoundModel_Explosion01"
                             },
                             "sound2": {
                               "$type": "Il2CppAssets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
                               "assetId": {
                                 "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.AudioClipReference, Il2CppNinjaKiwi.Common",
-                                "guidRef": "02c9726be64adc041b39264a10fed16f",
-                                "AssetGUID": "02c9726be64adc041b39264a10fed16f"
+                                "guidRef": "57fac571daa668140b0674eb515f9586",
+                                "AssetGUID": "57fac571daa668140b0674eb515f9586"
                               },
-                              "name": "SoundModel_MegaExplosion02"
+                              "name": "SoundModel_Explosion02"
                             },
                             "sound3": {
                               "$type": "Il2CppAssets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
                               "assetId": {
                                 "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.AudioClipReference, Il2CppNinjaKiwi.Common",
-                                "guidRef": "702448df6c204b94b872908cbdb9bcd1",
-                                "AssetGUID": "702448df6c204b94b872908cbdb9bcd1"
+                                "guidRef": "5b1ee796433122141a0db034af251f15",
+                                "AssetGUID": "5b1ee796433122141a0db034af251f15"
                               },
-                              "name": "SoundModel_MegaExplosion03"
+                              "name": "SoundModel_Explosion03"
                             },
                             "sound4": {
                               "$type": "Il2CppAssets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
                               "assetId": {
                                 "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.AudioClipReference, Il2CppNinjaKiwi.Common",
-                                "guidRef": "b71b1dff07fd5b141b21706d8f05acd4",
-                                "AssetGUID": "b71b1dff07fd5b141b21706d8f05acd4"
+                                "guidRef": "f5f616027b9887c4db5b1341a614b352",
+                                "AssetGUID": "f5f616027b9887c4db5b1341a614b352"
                               },
-                              "name": "SoundModel_MegaExplosion04"
+                              "name": "SoundModel_Explosion04"
                             },
                             "sound5": {
                               "$type": "Il2CppAssets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
                               "assetId": {
                                 "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.AudioClipReference, Il2CppNinjaKiwi.Common",
-                                "guidRef": "3d59eb0ff1a38604cbbf09c043a3abf3",
-                                "AssetGUID": "3d59eb0ff1a38604cbbf09c043a3abf3"
+                                "guidRef": "9a36e64ca09a7ef42bd4af49c1cf4ef6",
+                                "AssetGUID": "9a36e64ca09a7ef42bd4af49c1cf4ef6"
                               },
-                              "name": "SoundModel_MegaExplosion05"
+                              "name": "SoundModel_Explosion05"
                             },
-                            "limiter": 0,
+                            "limiter": 90,
                             "collisionPass": 0,
                             "name": "CreateSoundOnProjectileExpireModel_SmallExplosion"
                           },
@@ -3541,11 +3550,6 @@
                 "name": ""
               },
               {
-                "$type": "Il2CppAssets.Scripts.Models.Towers.Projectiles.Behaviors.DestroyProjectileIfTowerDestroyedModel, Assembly-CSharp",
-                "collisionPass": 0,
-                "name": "DestroyProjectileIfTowerDestroyedModel_SpikeageddonPathProjectile"
-              },
-              {
                 "$type": "Il2CppAssets.Scripts.Models.GenericBehaviors.DisplayModel, Assembly-CSharp",
                 "display": {
                   "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.PrefabReference, Il2CppNinjaKiwi.Common",
@@ -3620,6 +3624,7 @@
       "alwaysSetAnimationState": false,
       "rechargeMonkeyMoneyCost": 0,
       "restrictAbilityAfterMaxRoundTimer": false,
+      "isHidden": false,
       "cooldownSpeedScale": 0.0,
       "animationOffset": -1.0,
       "animationOffsetFrames": 0,

@@ -11,6 +11,7 @@
     1
   ],
   "towerSet": 4,
+  "towerTheme": "",
   "icon": {
     "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.SpriteReference, Il2CppNinjaKiwi.Common",
     "guidRef": "MonkeyIcons[DruidIcon]",
@@ -181,16 +182,17 @@
   "geraldoItemName": null,
   "sellbackModifierAdd": 0.0,
   "skinName": null,
-  "isBeastHandlerPet": false,
-  "selectParentOnSelected": false,
+  "isBeastHandlerPet": null,
+  "selectParentOnSelected": null,
   "dontAddMutatorsFromParent": false,
   "showBuffs": true,
   "destroyTowerOnRedistribution": false,
   "displayScale": 1.0,
-  "beastHandlerLeashMutationId": "BeastHandlerContributionDruid",
+  "beastHandlerLeashMutationId": null,
   "loadedFromSave": false,
   "useAirUnitHeight": false,
   "_powerProTowerModel": null,
+  "frontierId": -1,
   "towerSize": 0,
   "isPowerTower": false,
   "isPowerProTower": false,
@@ -416,12 +418,12 @@
       "reactSoundAlt2": null,
       "reactSound3": null,
       "reactSoundAlt3": null,
-      "towerType1": null,
-      "towerSkin1": null,
-      "towerType2": null,
-      "towerSkin2": null,
-      "towerType3": null,
-      "towerSkin3": null,
+      "towerType1": "",
+      "towerSkin1": "",
+      "towerType2": "",
+      "towerSkin2": "",
+      "towerType3": "",
+      "towerSkin3": "",
       "reactDelay": 0.0,
       "name": "CreateSoundOnTowerPlaceModel_Druid-041"
     },
@@ -681,6 +683,7 @@
       "addsToSharedGrid": true,
       "sharedGridRange": 0.0,
       "drawRangeCircle": false,
+      "disableOnCreate": false,
       "name": "AttackModel_Attack_"
     },
     {
@@ -1255,12 +1258,6 @@
               "name": ""
             },
             {
-              "$type": "Il2CppAssets.Scripts.Models.Towers.Filters.FilterOutTagModel, Assembly-CSharp",
-              "tag": "Moabs",
-              "disableWhenSupportMutatorIDs": [],
-              "name": "FilterOutTagModel_JungleVine"
-            },
-            {
               "$type": "Il2CppAssets.Scripts.Models.Towers.Filters.FilterOutOffscreenModel, Assembly-CSharp",
               "includeBloonRadius": true,
               "name": ""
@@ -1283,6 +1280,19 @@
                 "collisionPass": 0,
                 "name": "DamageModel_Collidable_"
               },
+              "name": ""
+            },
+            {
+              "$type": "Il2CppAssets.Scripts.Models.Towers.Filters.FilterBadImmunityModel, Assembly-CSharp",
+              "name": ""
+            },
+            {
+              "$type": "Il2CppAssets.Scripts.Models.Towers.Filters.FilterWithTagsModel, Assembly-CSharp",
+              "tags": [
+                "Moabs",
+                "Frontier"
+              ],
+              "inclusive": true,
               "name": ""
             }
           ],
@@ -1324,6 +1334,7 @@
       "addsToSharedGrid": false,
       "sharedGridRange": 0.0,
       "drawRangeCircle": false,
+      "disableOnCreate": false,
       "name": "AttackModel_JungleVine_"
     },
     {
@@ -1380,7 +1391,7 @@
       "addedViaUpgrade": null,
       "livesCost": 0,
       "maxActivationsPerRound": 3,
-      "maxActivationsPerGame": -1,
+      "maxActivationsPerGame": 0,
       "animation": 0,
       "enabled": true,
       "canActivateBetweenRounds": false,
@@ -1395,6 +1406,7 @@
       "alwaysSetAnimationState": false,
       "rechargeMonkeyMoneyCost": 0,
       "restrictAbilityAfterMaxRoundTimer": true,
+      "isHidden": false,
       "cooldownSpeedScale": 0.0,
       "animationOffset": 0.0,
       "animationOffsetFrames": 0,
