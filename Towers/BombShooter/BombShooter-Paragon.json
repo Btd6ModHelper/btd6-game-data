@@ -150,6 +150,7 @@
     "AssetGUID": null
   },
   "ignoreCoopAreas": false,
+  "ignoreAreaChanges": false,
   "canAlwaysBeSold": false,
   "blockSelling": false,
   "isParagon": true,
@@ -867,7 +868,7 @@
                   "behaviors": [
                     {
                       "$type": "Il2CppAssets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModel, Assembly-CSharp",
-                      "damage": 210.0,
+                      "damage": 250.0,
                       "maxDamage": 0.0,
                       "distributeToChildren": true,
                       "overrideDistributeBlocker": false,
@@ -876,7 +877,7 @@
                       "immuneBloonPropertiesOriginal": 0,
                       "ignoreImmunityDestroy": false,
                       "ignoreDamageMultipliers": false,
-                      "CappedDamage": 210.0,
+                      "CappedDamage": 250.0,
                       "collisionPass": 0,
                       "name": "DamageModel_Explosion_"
                     },
@@ -911,7 +912,21 @@
                         "Moabs"
                       ],
                       "damageMultiplier": 1.0,
-                      "damageAddative": 2100.0,
+                      "damageAddative": 2500.0,
+                      "mustIncludeAllTags": false,
+                      "applyOverMaxDamage": false,
+                      "ignoreTag": false,
+                      "collisionPass": 0,
+                      "name": "DamageModifierForTagModel_Explosion"
+                    },
+                    {
+                      "$type": "Il2CppAssets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModifierForTagModel, Assembly-CSharp",
+                      "tag": "Boss",
+                      "tags": [
+                        "Boss"
+                      ],
+                      "damageMultiplier": 1.0,
+                      "damageAddative": 2500.0,
                       "mustIncludeAllTags": false,
                       "applyOverMaxDamage": false,
                       "ignoreTag": false,
@@ -1118,7 +1133,7 @@
                               "Moabs"
                             ],
                             "damageMultiplier": 1.0,
-                            "damageAddative": 300.0,
+                            "damageAddative": 1000.0,
                             "mustIncludeAllTags": false,
                             "applyOverMaxDamage": false,
                             "ignoreTag": false,
@@ -1132,7 +1147,7 @@
                               "Boss"
                             ],
                             "damageMultiplier": 1.0,
-                            "damageAddative": 900.0,
+                            "damageAddative": 1000.0,
                             "mustIncludeAllTags": false,
                             "applyOverMaxDamage": false,
                             "ignoreTag": false,
@@ -1327,7 +1342,7 @@
                                     "Moabs"
                                   ],
                                   "damageMultiplier": 1.0,
-                                  "damageAddative": 150.0,
+                                  "damageAddative": 500.0,
                                   "mustIncludeAllTags": false,
                                   "applyOverMaxDamage": false,
                                   "ignoreTag": false,
@@ -1341,7 +1356,7 @@
                                     "Boss"
                                   ],
                                   "damageMultiplier": 1.0,
-                                  "damageAddative": 450.0,
+                                  "damageAddative": 500.0,
                                   "mustIncludeAllTags": false,
                                   "applyOverMaxDamage": false,
                                   "ignoreTag": false,
@@ -2136,6 +2151,7 @@
       "startOffCooldown": false,
       "alwaysSetAnimationState": false,
       "rechargeMonkeyMoneyCost": 0,
+      "activateOnRoundEnd": false,
       "restrictAbilityAfterMaxRoundTimer": false,
       "isHidden": false,
       "cooldownSpeedScale": 0.0,
@@ -2838,7 +2854,7 @@
         },
         {
           "$type": "Il2CppAssets.Scripts.Models.Towers.Behaviors.Abilities.Behaviors.AbilityReduceCooldownOnLivesLostModel, Assembly-CSharp",
-          "reductionSeconds": 5.0,
+          "reductionSeconds": 10.0,
           "delaySeconds": 1.0,
           "startDelayed": false,
           "name": "AbilityReduceCooldownOnLivesLostModel_AbilityISABM"
@@ -2863,6 +2879,7 @@
       "startOffCooldown": false,
       "alwaysSetAnimationState": false,
       "rechargeMonkeyMoneyCost": 0,
+      "activateOnRoundEnd": false,
       "restrictAbilityAfterMaxRoundTimer": false,
       "isHidden": false,
       "cooldownSpeedScale": 0.0,

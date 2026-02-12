@@ -249,7 +249,6 @@
   "xpBossPerStage": 100,
   "xpMultiplierIncreasePerStage": 0.1,
   "xpMultiplierScalingStageCap": 5,
-  "finalLevelTemplates": [],
   "rogueTileAssetData": [
     {
       "$type": "Il2CppAssets.Scripts.Data.Legends.RogueTileAssetData, Assembly-CSharp",
@@ -2162,7 +2161,6 @@
                     "name": ""
                   },
                   "applyAfterDamage": true,
-                  "preventHealthPercentTriggers": false,
                   "lifespan": 0.5,
                   "lifespanFrames": 0,
                   "Lifespan": 0.5,
@@ -2939,6 +2937,88 @@
     },
     {
       "$type": "Il2CppAssets.Scripts.Data.Legends.RogueHeroStarterKit, Assembly-CSharp",
+      "heroID": "FirecrackerGwendolin",
+      "artifactData": {
+        "$type": "Il2CppAssets.Scripts.Data.Artifacts.MapArtifactData, Assembly-CSharp",
+        "mapArtifactModel": {
+          "$type": "Il2CppAssets.Scripts.Models.Artifacts.MapArtifactModel, Assembly-CSharp",
+          "artifactBehaviors": [
+            {
+              "$type": "Il2CppAssets.Scripts.Models.Artifacts.Behaviors.AddRogueBoostBehaviorModel, Assembly-CSharp",
+              "tower": {
+                "$type": "Il2CppAssets.Scripts.Data.Legends.RogueInstaMonkey, Assembly-CSharp",
+                "baseId": "SuperMonkeyBeacon",
+                "tiers": [],
+                "currentCooldown": 0,
+                "lootType": 0,
+                "uniqueId": 0,
+                "isFree": false
+              },
+              "amountToAdd": 2,
+              "name": ""
+            }
+          ],
+          "tier": 2,
+          "baseId": "BlitzingApeBarrageEmitter",
+          "nameLocKey": "BlitzingApeBarrageEmitterX",
+          "descriptionLocKey": "BlitzingApeBarrageEmitterXDescription",
+          "descriptionParams": [
+            "2"
+          ],
+          "monkeyKnowledgeModModels": {
+            "$type": "Il2CppAssets.Scripts.Models.ModModel, Assembly-CSharp",
+            "mutatorMods": [],
+            "name": ""
+          },
+          "isBossArtifact": false,
+          "isSheriffArtifact": false,
+          "icon": {
+            "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.SpriteReference, Il2CppNinjaKiwi.Common",
+            "guidRef": "30c185047bebe4631986ed8a388f33c2",
+            "AssetGUID": "30c185047bebe4631986ed8a388f33c2"
+          },
+          "rarityFrameType": "AllMonkeyTowerSets",
+          "merchantCostMultiplier": 0,
+          "isQuestArtifact": false,
+          "IsBoost": false,
+          "ArtifactName": "BlitzingApeBarrageEmitter3",
+          "ArtifactPower": 9,
+          "name": "BlitzingApeBarrageEmitter3"
+        },
+        "name": "BlitzingApeBarrageEmitter3",
+        "hideFlags": 0
+      },
+      "startingInstas": [
+        {
+          "$type": "Il2CppAssets.Scripts.Data.Legends.RogueInstaMonkey, Assembly-CSharp",
+          "baseId": "WizardMonkey",
+          "tiers": [
+            2,
+            0,
+            0
+          ],
+          "currentCooldown": 0,
+          "lootType": 1,
+          "uniqueId": 0,
+          "isFree": false
+        },
+        {
+          "$type": "Il2CppAssets.Scripts.Data.Legends.RogueInstaMonkey, Assembly-CSharp",
+          "baseId": "SpikeFactory",
+          "tiers": [
+            2,
+            0,
+            0
+          ],
+          "currentCooldown": 0,
+          "lootType": 1,
+          "uniqueId": 0,
+          "isFree": false
+        }
+      ]
+    },
+    {
+      "$type": "Il2CppAssets.Scripts.Data.Legends.RogueHeroStarterKit, Assembly-CSharp",
       "heroID": "StrikerJones",
       "artifactData": {
         "$type": "Il2CppAssets.Scripts.Data.Artifacts.ItemArtifactData, Assembly-CSharp",
@@ -3205,32 +3285,7 @@
                 "ignoreNonTargetable": false,
                 "ignorePierceExhaustion": false,
                 "saveId": "",
-                "displayModel": {
-                  "$type": "Il2CppAssets.Scripts.Models.GenericBehaviors.DisplayModel, Assembly-CSharp",
-                  "display": {
-                    "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.PrefabReference, Il2CppNinjaKiwi.Common",
-                    "guidRef": "",
-                    "AssetGUID": ""
-                  },
-                  "layer": 0,
-                  "positionOffset": {
-                    "$type": "Il2CppAssets.Scripts.Simulation.SMath.Vector3, Assembly-CSharp",
-                    "x": 0.0,
-                    "y": 0.0,
-                    "z": 0.0,
-                    "MagnitudeSquared": 0.0,
-                    "Magnitude": 0.0,
-                    "Rotation": 0.0,
-                    "SimToDispRotation": 180.0
-                  },
-                  "scale": 0.0,
-                  "ignoreRotation": false,
-                  "animationChanges": [],
-                  "delayedReveal": 0.0,
-                  "category": 0,
-                  "isAnimationPaused": false,
-                  "name": ""
-                },
+                "displayModel": null,
                 "cantCreateSubProjectiles": false,
                 "CappedPierce": 2.0,
                 "name": ""
@@ -3337,6 +3392,7 @@
               "behaviorModels": [
                 {
                   "$type": "Il2CppAssets.Scripts.Models.Towers.Behaviors.TowerCreateProjectileOnProjectileExhaustModel, Assembly-CSharp",
+                  "id": "",
                   "projectileModel": {
                     "$type": "Il2CppAssets.Scripts.Models.Towers.Projectiles.ProjectileModel, Assembly-CSharp",
                     "display": {
@@ -3440,32 +3496,7 @@
                     "ignoreNonTargetable": false,
                     "ignorePierceExhaustion": false,
                     "saveId": "",
-                    "displayModel": {
-                      "$type": "Il2CppAssets.Scripts.Models.GenericBehaviors.DisplayModel, Assembly-CSharp",
-                      "display": {
-                        "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.PrefabReference, Il2CppNinjaKiwi.Common",
-                        "guidRef": "",
-                        "AssetGUID": ""
-                      },
-                      "layer": 0,
-                      "positionOffset": {
-                        "$type": "Il2CppAssets.Scripts.Simulation.SMath.Vector3, Assembly-CSharp",
-                        "x": 0.0,
-                        "y": 0.0,
-                        "z": 0.0,
-                        "MagnitudeSquared": 0.0,
-                        "Magnitude": 0.0,
-                        "Rotation": 0.0,
-                        "SimToDispRotation": 180.0
-                      },
-                      "scale": 0.0,
-                      "ignoreRotation": false,
-                      "animationChanges": [],
-                      "delayedReveal": 0.0,
-                      "category": 32,
-                      "isAnimationPaused": false,
-                      "name": ""
-                    },
+                    "displayModel": null,
                     "cantCreateSubProjectiles": false,
                     "CappedPierce": 2.0,
                     "name": ""
@@ -3480,7 +3511,7 @@
                     "useAirUnitRotation": false,
                     "Count": 5,
                     "count": 5,
-                    "behaviors": null,
+                    "behaviors": [],
                     "name": ""
                   },
                   "effectModel": {
@@ -5150,6 +5181,7 @@
               "behaviorModels": [
                 {
                   "$type": "Il2CppAssets.Scripts.Models.Towers.Behaviors.TowerCreateProjectileOnProjectileExhaustModel, Assembly-CSharp",
+                  "id": "",
                   "projectileModel": {
                     "$type": "Il2CppAssets.Scripts.Models.Towers.Projectiles.ProjectileModel, Assembly-CSharp",
                     "display": {
@@ -5319,32 +5351,7 @@
                     "ignoreNonTargetable": false,
                     "ignorePierceExhaustion": false,
                     "saveId": "",
-                    "displayModel": {
-                      "$type": "Il2CppAssets.Scripts.Models.GenericBehaviors.DisplayModel, Assembly-CSharp",
-                      "display": {
-                        "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.PrefabReference, Il2CppNinjaKiwi.Common",
-                        "guidRef": "",
-                        "AssetGUID": ""
-                      },
-                      "layer": 0,
-                      "positionOffset": {
-                        "$type": "Il2CppAssets.Scripts.Simulation.SMath.Vector3, Assembly-CSharp",
-                        "x": 0.0,
-                        "y": 0.0,
-                        "z": 0.0,
-                        "MagnitudeSquared": 0.0,
-                        "Magnitude": 0.0,
-                        "Rotation": 0.0,
-                        "SimToDispRotation": 180.0
-                      },
-                      "scale": 0.0,
-                      "ignoreRotation": false,
-                      "animationChanges": [],
-                      "delayedReveal": 0.0,
-                      "category": 32,
-                      "isAnimationPaused": false,
-                      "name": ""
-                    },
+                    "displayModel": null,
                     "cantCreateSubProjectiles": false,
                     "CappedPierce": 500.0,
                     "name": ""
@@ -5353,7 +5360,7 @@
                     "$type": "Il2CppAssets.Scripts.Models.Towers.Behaviors.Emissions.EmissionAtClosestPathSegmentModel, Assembly-CSharp",
                     "count": 1,
                     "spacing": 1.0,
-                    "behaviors": null,
+                    "behaviors": [],
                     "name": ""
                   },
                   "effectModel": {
@@ -5409,6 +5416,7 @@
               "behaviorModels": [
                 {
                   "$type": "Il2CppAssets.Scripts.Models.Towers.Behaviors.TowerCreateProjectileOnProjectileExhaustModel, Assembly-CSharp",
+                  "id": "",
                   "projectileModel": {
                     "$type": "Il2CppAssets.Scripts.Models.Towers.Projectiles.ProjectileModel, Assembly-CSharp",
                     "display": {
@@ -5578,32 +5586,7 @@
                     "ignoreNonTargetable": false,
                     "ignorePierceExhaustion": false,
                     "saveId": "",
-                    "displayModel": {
-                      "$type": "Il2CppAssets.Scripts.Models.GenericBehaviors.DisplayModel, Assembly-CSharp",
-                      "display": {
-                        "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.PrefabReference, Il2CppNinjaKiwi.Common",
-                        "guidRef": "",
-                        "AssetGUID": ""
-                      },
-                      "layer": 0,
-                      "positionOffset": {
-                        "$type": "Il2CppAssets.Scripts.Simulation.SMath.Vector3, Assembly-CSharp",
-                        "x": 0.0,
-                        "y": 0.0,
-                        "z": 0.0,
-                        "MagnitudeSquared": 0.0,
-                        "Magnitude": 0.0,
-                        "Rotation": 0.0,
-                        "SimToDispRotation": 180.0
-                      },
-                      "scale": 0.0,
-                      "ignoreRotation": false,
-                      "animationChanges": [],
-                      "delayedReveal": 0.0,
-                      "category": 32,
-                      "isAnimationPaused": false,
-                      "name": ""
-                    },
+                    "displayModel": null,
                     "cantCreateSubProjectiles": false,
                     "CappedPierce": 500.0,
                     "name": ""
@@ -5612,7 +5595,7 @@
                     "$type": "Il2CppAssets.Scripts.Models.Towers.Behaviors.Emissions.EmissionAtClosestPathSegmentModel, Assembly-CSharp",
                     "count": 1,
                     "spacing": 1.0,
-                    "behaviors": null,
+                    "behaviors": [],
                     "name": ""
                   },
                   "effectModel": {
@@ -6444,6 +6427,7 @@
               "behaviorModels": [
                 {
                   "$type": "Il2CppAssets.Scripts.Models.Towers.Behaviors.TowerCreateProjectileOnProjectileExhaustModel, Assembly-CSharp",
+                  "id": "",
                   "projectileModel": {
                     "$type": "Il2CppAssets.Scripts.Models.Towers.Projectiles.ProjectileModel, Assembly-CSharp",
                     "display": {
@@ -6557,32 +6541,7 @@
                     "ignoreNonTargetable": true,
                     "ignorePierceExhaustion": false,
                     "saveId": "",
-                    "displayModel": {
-                      "$type": "Il2CppAssets.Scripts.Models.GenericBehaviors.DisplayModel, Assembly-CSharp",
-                      "display": {
-                        "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.PrefabReference, Il2CppNinjaKiwi.Common",
-                        "guidRef": "",
-                        "AssetGUID": ""
-                      },
-                      "layer": 0,
-                      "positionOffset": {
-                        "$type": "Il2CppAssets.Scripts.Simulation.SMath.Vector3, Assembly-CSharp",
-                        "x": 0.0,
-                        "y": 0.0,
-                        "z": 0.0,
-                        "MagnitudeSquared": 0.0,
-                        "Magnitude": 0.0,
-                        "Rotation": 0.0,
-                        "SimToDispRotation": 180.0
-                      },
-                      "scale": 0.0,
-                      "ignoreRotation": false,
-                      "animationChanges": [],
-                      "delayedReveal": 0.0,
-                      "category": 32,
-                      "isAnimationPaused": false,
-                      "name": ""
-                    },
+                    "displayModel": null,
                     "cantCreateSubProjectiles": true,
                     "CappedPierce": 2.0,
                     "name": ""
@@ -6597,7 +6556,7 @@
                     "useAirUnitRotation": false,
                     "Count": 3,
                     "count": 3,
-                    "behaviors": null,
+                    "behaviors": [],
                     "name": ""
                   },
                   "effectModel": {
@@ -6887,6 +6846,7 @@
               "behaviorModels": [
                 {
                   "$type": "Il2CppAssets.Scripts.Models.Towers.Behaviors.TowerCreateProjectileOnProjectileExhaustModel, Assembly-CSharp",
+                  "id": "",
                   "projectileModel": {
                     "$type": "Il2CppAssets.Scripts.Models.Towers.Projectiles.ProjectileModel, Assembly-CSharp",
                     "display": {
@@ -6971,39 +6931,14 @@
                     "ignoreNonTargetable": false,
                     "ignorePierceExhaustion": false,
                     "saveId": "",
-                    "displayModel": {
-                      "$type": "Il2CppAssets.Scripts.Models.GenericBehaviors.DisplayModel, Assembly-CSharp",
-                      "display": {
-                        "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.PrefabReference, Il2CppNinjaKiwi.Common",
-                        "guidRef": "",
-                        "AssetGUID": ""
-                      },
-                      "layer": 0,
-                      "positionOffset": {
-                        "$type": "Il2CppAssets.Scripts.Simulation.SMath.Vector3, Assembly-CSharp",
-                        "x": 0.0,
-                        "y": 0.0,
-                        "z": 0.0,
-                        "MagnitudeSquared": 0.0,
-                        "Magnitude": 0.0,
-                        "Rotation": 0.0,
-                        "SimToDispRotation": 180.0
-                      },
-                      "scale": 0.0,
-                      "ignoreRotation": false,
-                      "animationChanges": [],
-                      "delayedReveal": 0.0,
-                      "category": 32,
-                      "isAnimationPaused": false,
-                      "name": ""
-                    },
+                    "displayModel": null,
                     "cantCreateSubProjectiles": false,
                     "CappedPierce": 4.0,
                     "name": ""
                   },
                   "emissionModel": {
                     "$type": "Il2CppAssets.Scripts.Models.Towers.Behaviors.Emissions.SingleEmissionModel, Assembly-CSharp",
-                    "behaviors": null,
+                    "behaviors": [],
                     "name": ""
                   },
                   "effectModel": {
@@ -7995,7 +7930,6 @@
                     "name": ""
                   },
                   "applyAfterDamage": true,
-                  "preventHealthPercentTriggers": false,
                   "lifespan": 1.0,
                   "lifespanFrames": 0,
                   "Lifespan": 1.0,
@@ -8196,6 +8130,7 @@
               "behaviorModels": [
                 {
                   "$type": "Il2CppAssets.Scripts.Models.Towers.Behaviors.TowerCreateProjectileOnProjectileExhaustModel, Assembly-CSharp",
+                  "id": "",
                   "projectileModel": {
                     "$type": "Il2CppAssets.Scripts.Models.Towers.Projectiles.ProjectileModel, Assembly-CSharp",
                     "display": {
@@ -8318,32 +8253,7 @@
                     "ignoreNonTargetable": false,
                     "ignorePierceExhaustion": false,
                     "saveId": "",
-                    "displayModel": {
-                      "$type": "Il2CppAssets.Scripts.Models.GenericBehaviors.DisplayModel, Assembly-CSharp",
-                      "display": {
-                        "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.PrefabReference, Il2CppNinjaKiwi.Common",
-                        "guidRef": "",
-                        "AssetGUID": ""
-                      },
-                      "layer": 0,
-                      "positionOffset": {
-                        "$type": "Il2CppAssets.Scripts.Simulation.SMath.Vector3, Assembly-CSharp",
-                        "x": 0.0,
-                        "y": 0.0,
-                        "z": 0.0,
-                        "MagnitudeSquared": 0.0,
-                        "Magnitude": 0.0,
-                        "Rotation": 0.0,
-                        "SimToDispRotation": 180.0
-                      },
-                      "scale": 0.0,
-                      "ignoreRotation": false,
-                      "animationChanges": [],
-                      "delayedReveal": 0.0,
-                      "category": 32,
-                      "isAnimationPaused": false,
-                      "name": ""
-                    },
+                    "displayModel": null,
                     "cantCreateSubProjectiles": false,
                     "CappedPierce": 1000.0,
                     "name": ""
@@ -8352,7 +8262,7 @@
                     "$type": "Il2CppAssets.Scripts.Models.Towers.Behaviors.Emissions.EmissionAtClosestPathSegmentModel, Assembly-CSharp",
                     "count": 1,
                     "spacing": 1.0,
-                    "behaviors": null,
+                    "behaviors": [],
                     "name": ""
                   },
                   "effectModel": {
@@ -8408,6 +8318,7 @@
               "behaviorModels": [
                 {
                   "$type": "Il2CppAssets.Scripts.Models.Towers.Behaviors.TowerCreateProjectileOnProjectileExhaustModel, Assembly-CSharp",
+                  "id": "",
                   "projectileModel": {
                     "$type": "Il2CppAssets.Scripts.Models.Towers.Projectiles.ProjectileModel, Assembly-CSharp",
                     "display": {
@@ -8530,32 +8441,7 @@
                     "ignoreNonTargetable": false,
                     "ignorePierceExhaustion": false,
                     "saveId": "",
-                    "displayModel": {
-                      "$type": "Il2CppAssets.Scripts.Models.GenericBehaviors.DisplayModel, Assembly-CSharp",
-                      "display": {
-                        "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.PrefabReference, Il2CppNinjaKiwi.Common",
-                        "guidRef": "",
-                        "AssetGUID": ""
-                      },
-                      "layer": 0,
-                      "positionOffset": {
-                        "$type": "Il2CppAssets.Scripts.Simulation.SMath.Vector3, Assembly-CSharp",
-                        "x": 0.0,
-                        "y": 0.0,
-                        "z": 0.0,
-                        "MagnitudeSquared": 0.0,
-                        "Magnitude": 0.0,
-                        "Rotation": 0.0,
-                        "SimToDispRotation": 180.0
-                      },
-                      "scale": 0.0,
-                      "ignoreRotation": false,
-                      "animationChanges": [],
-                      "delayedReveal": 0.0,
-                      "category": 32,
-                      "isAnimationPaused": false,
-                      "name": ""
-                    },
+                    "displayModel": null,
                     "cantCreateSubProjectiles": false,
                     "CappedPierce": 1000.0,
                     "name": ""
@@ -8564,7 +8450,7 @@
                     "$type": "Il2CppAssets.Scripts.Models.Towers.Behaviors.Emissions.EmissionAtClosestPathSegmentModel, Assembly-CSharp",
                     "count": 1,
                     "spacing": 1.0,
-                    "behaviors": null,
+                    "behaviors": [],
                     "name": ""
                   },
                   "effectModel": {
@@ -9998,7 +9884,6 @@
                     "name": ""
                   },
                   "applyAfterDamage": true,
-                  "preventHealthPercentTriggers": false,
                   "lifespan": 1.0,
                   "lifespanFrames": 0,
                   "Lifespan": 1.0,

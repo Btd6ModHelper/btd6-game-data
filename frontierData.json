@@ -536,7 +536,7 @@
           }
         },
         "canMove": true,
-        "npcName": "Boomerang002",
+        "npcName": "QuestBoomerang002",
         "npcType": 11,
         "detectionRadius": 1,
         "detectionDelay": 0.0,
@@ -561,7 +561,12 @@
         "wanderDelayMax": 5.0,
         "wanderDistance": 7,
         "ignoreTerrain": false,
-        "passiveDialogueLocs": [],
+        "passiveDialogueLocs": [
+          "BoomerNPCDialogue1",
+          "BoomerNPCDialogue2",
+          "BoomerNPCDialogue3",
+          "BoomerNPCDialogue4"
+        ],
         "usePetNpcData": false
       },
       {
@@ -651,7 +656,7 @@
           }
         },
         "canMove": true,
-        "npcName": "Ninja210",
+        "npcName": "QuestNinja210",
         "npcType": 13,
         "detectionRadius": 1,
         "detectionDelay": 0.0,
@@ -676,7 +681,12 @@
         "wanderDelayMax": 5.0,
         "wanderDistance": 7,
         "ignoreTerrain": false,
-        "passiveDialogueLocs": [],
+        "passiveDialogueLocs": [
+          "NinjaNPCDialogue1",
+          "NinjaNPCDialogue2",
+          "NinjaNPCDialogue3",
+          "NinjaNPCDialogue4"
+        ],
         "usePetNpcData": false
       },
       {
@@ -731,7 +741,18 @@
         "wanderDelayMax": 5.0,
         "wanderDistance": 7,
         "ignoreTerrain": false,
-        "passiveDialogueLocs": [],
+        "passiveDialogueLocs": [
+          "FrontierNPCDialogue1",
+          "FrontierNPCDialogue2",
+          "FrontierNPCDialogue3",
+          "FrontierNPCDialogue4",
+          "FrontierNPCDialogue5",
+          "FrontierNPCDialogue6",
+          "FrontierNPCDialogue7",
+          "FrontierNPCDialogue8",
+          "FrontierNPCDialogue9",
+          "FrontierNPCDialogue10"
+        ],
         "usePetNpcData": false
       }
     ],
@@ -741,12 +762,18 @@
         "id": "Rainbow",
         "respawnTime": 0,
         "ambush": false,
+        "nightTimeOnly": false,
         "staminaPenaltyPercent": 15.0,
         "currencyStealAmount": 200,
         "specificLootPool": [],
-        "duelSpeed": 3.0,
+        "duelSpeed": 1.0,
         "reverseStartDirection": false,
-        "targetPointsRange": [],
+        "targetPointsRange": [
+          {
+            "x": 20.0,
+            "y": 21.0
+          }
+        ],
         "npcName": "Rainbow",
         "npcType": 0,
         "detectionRadius": 5,
@@ -780,6 +807,7 @@
         "id": "Ceramic",
         "respawnTime": 0,
         "ambush": false,
+        "nightTimeOnly": false,
         "staminaPenaltyPercent": 15.0,
         "currencyStealAmount": 200,
         "specificLootPool": [],
@@ -814,7 +842,7 @@
         "interactionDelay": 0.0,
         "wanderDelay": 2.0,
         "wanderDelayMax": 5.0,
-        "wanderDistance": 3,
+        "wanderDistance": 4,
         "ignoreTerrain": false,
         "passiveDialogueLocs": [],
         "usePetNpcData": false
@@ -822,10 +850,11 @@
       {
         "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierBloonData, Assembly-CSharp",
         "id": "Moab",
-        "respawnTime": 1,
+        "respawnTime": 40,
         "ambush": false,
-        "staminaPenaltyPercent": 40.0,
-        "currencyStealAmount": 800,
+        "nightTimeOnly": false,
+        "staminaPenaltyPercent": 20.0,
+        "currencyStealAmount": 400,
         "specificLootPool": [
           {
             "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierWeightedLoot, Assembly-CSharp",
@@ -834,19 +863,22 @@
             "loot": [
               {
                 "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierCurrencyLoot, Assembly-CSharp",
-                "amount": 400
+                "amount": 450,
+                "ShowQuantity": true
               },
               {
                 "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierPowerLoot, Assembly-CSharp",
                 "powerId": "StaminaPotion",
                 "locsExtras": [],
-                "amount": 1
+                "amount": 1,
+                "ShowQuantity": true
               },
               {
                 "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierPowerLoot, Assembly-CSharp",
                 "powerId": "HealthPotion",
                 "locsExtras": [],
-                "amount": 1
+                "amount": 1,
+                "ShowQuantity": true
               }
             ]
           },
@@ -857,17 +889,19 @@
             "loot": [
               {
                 "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierCurrencyLoot, Assembly-CSharp",
-                "amount": 800
+                "amount": 800,
+                "ShowQuantity": true
               },
               {
                 "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierKeyLoot, Assembly-CSharp",
                 "keyName": "chestKey",
-                "amount": 1
+                "amount": 1,
+                "ShowQuantity": true
               }
             ]
           }
         ],
-        "duelSpeed": 4.0,
+        "duelSpeed": 3.2,
         "reverseStartDirection": false,
         "targetPointsRange": [
           {
@@ -896,7 +930,19 @@
           },
           {
             "x": 15.0,
-            "y": 85.0
+            "y": 60.0
+          },
+          {
+            "x": 80.0,
+            "y": 95.0
+          },
+          {
+            "x": 50.0,
+            "y": 55.0
+          },
+          {
+            "x": 20.0,
+            "y": 25.0
           }
         ],
         "npcName": "MOAB",
@@ -905,9 +951,9 @@
         "detectionDelay": 0.8,
         "chase": true,
         "flee": false,
-        "speed": 25.0,
+        "speed": 35.0,
         "wanderingSpeed": 20.0,
-        "chasingSpeed": 25.0,
+        "chasingSpeed": 35.0,
         "asset": {
           "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.PrefabReference, Il2CppNinjaKiwi.Common",
           "guidRef": "5ba127c96952a5e4a9452894ff3d9b39",
@@ -922,7 +968,7 @@
         "interactionDelay": 0.0,
         "wanderDelay": 0.5,
         "wanderDelayMax": 3.0,
-        "wanderDistance": 9,
+        "wanderDistance": 7,
         "ignoreTerrain": false,
         "passiveDialogueLocs": [],
         "usePetNpcData": false
@@ -930,10 +976,11 @@
       {
         "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierBloonData, Assembly-CSharp",
         "id": "Red",
-        "respawnTime": 10,
+        "respawnTime": 2,
         "ambush": false,
-        "staminaPenaltyPercent": 15.0,
-        "currencyStealAmount": 50,
+        "nightTimeOnly": false,
+        "staminaPenaltyPercent": 5.0,
+        "currencyStealAmount": 25,
         "specificLootPool": [
           {
             "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierWeightedLoot, Assembly-CSharp",
@@ -942,23 +989,26 @@
             "loot": [
               {
                 "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierCurrencyLoot, Assembly-CSharp",
-                "amount": 50
+                "amount": 75,
+                "ShowQuantity": true
               },
               {
                 "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierKeyLoot, Assembly-CSharp",
                 "keyName": "chestKey",
-                "amount": 1
+                "amount": 1,
+                "ShowQuantity": true
               }
             ]
           },
           {
             "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierWeightedLoot, Assembly-CSharp",
-            "weighting": 90.0,
+            "weighting": 80.0,
             "id": "",
             "loot": [
               {
                 "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierCurrencyLoot, Assembly-CSharp",
-                "amount": 25
+                "amount": 50,
+                "ShowQuantity": true
               }
             ]
           },
@@ -969,22 +1019,52 @@
             "loot": [
               {
                 "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierCurrencyLoot, Assembly-CSharp",
-                "amount": 50
+                "amount": 75,
+                "ShowQuantity": true
               },
               {
                 "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierPowerLoot, Assembly-CSharp",
                 "powerId": "HealthPotion",
                 "locsExtras": [],
-                "amount": 1
+                "amount": 1,
+                "ShowQuantity": true
+              }
+            ]
+          },
+          {
+            "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierWeightedLoot, Assembly-CSharp",
+            "weighting": 5.0,
+            "id": "",
+            "loot": [
+              {
+                "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierPowerLoot, Assembly-CSharp",
+                "powerId": "HealthPotion",
+                "locsExtras": [],
+                "amount": 1,
+                "ShowQuantity": true
+              }
+            ]
+          },
+          {
+            "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierWeightedLoot, Assembly-CSharp",
+            "weighting": 5.0,
+            "id": "",
+            "loot": [
+              {
+                "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierPowerLoot, Assembly-CSharp",
+                "powerId": "StaminaPotion",
+                "locsExtras": [],
+                "amount": 1,
+                "ShowQuantity": true
               }
             ]
           }
         ],
-        "duelSpeed": 2.5,
+        "duelSpeed": 2.8,
         "reverseStartDirection": false,
         "targetPointsRange": [
           {
-            "x": 40.0,
+            "x": 30.0,
             "y": 70.0
           }
         ],
@@ -994,9 +1074,9 @@
         "detectionDelay": 0.0,
         "chase": false,
         "flee": true,
-        "speed": 50.0,
+        "speed": 45.0,
         "wanderingSpeed": 20.0,
-        "chasingSpeed": 50.0,
+        "chasingSpeed": 45.0,
         "asset": {
           "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.PrefabReference, Il2CppNinjaKiwi.Common",
           "guidRef": "94498f2c623a4c54d98cffa478f5295f",
@@ -1011,7 +1091,209 @@
         "interactionDelay": 0.076,
         "wanderDelay": 2.0,
         "wanderDelayMax": 5.0,
-        "wanderDistance": 3,
+        "wanderDistance": 4,
+        "ignoreTerrain": false,
+        "passiveDialogueLocs": [],
+        "usePetNpcData": false
+      },
+      {
+        "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierBloonData, Assembly-CSharp",
+        "id": "Blue",
+        "respawnTime": 10,
+        "ambush": false,
+        "nightTimeOnly": false,
+        "staminaPenaltyPercent": 5.0,
+        "currencyStealAmount": 50,
+        "specificLootPool": [
+          {
+            "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierWeightedLoot, Assembly-CSharp",
+            "weighting": 5.0,
+            "id": "",
+            "loot": [
+              {
+                "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierCurrencyLoot, Assembly-CSharp",
+                "amount": 250,
+                "ShowQuantity": true
+              },
+              {
+                "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierKeyLoot, Assembly-CSharp",
+                "keyName": "chestKey",
+                "amount": 1,
+                "ShowQuantity": true
+              }
+            ]
+          },
+          {
+            "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierWeightedLoot, Assembly-CSharp",
+            "weighting": 90.0,
+            "id": "",
+            "loot": [
+              {
+                "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierCurrencyLoot, Assembly-CSharp",
+                "amount": 100,
+                "ShowQuantity": true
+              }
+            ]
+          },
+          {
+            "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierWeightedLoot, Assembly-CSharp",
+            "weighting": 5.0,
+            "id": "",
+            "loot": [
+              {
+                "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierCurrencyLoot, Assembly-CSharp",
+                "amount": 150,
+                "ShowQuantity": true
+              },
+              {
+                "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierPowerLoot, Assembly-CSharp",
+                "powerId": "StaminaPotion",
+                "locsExtras": [],
+                "amount": 1,
+                "ShowQuantity": true
+              }
+            ]
+          }
+        ],
+        "duelSpeed": 3.2,
+        "reverseStartDirection": false,
+        "targetPointsRange": [
+          {
+            "x": 30.0,
+            "y": 70.0
+          },
+          {
+            "x": 5.0,
+            "y": 95.0
+          }
+        ],
+        "npcName": "Blue",
+        "npcType": 0,
+        "detectionRadius": 5,
+        "detectionDelay": 0.0,
+        "chase": false,
+        "flee": true,
+        "speed": 50.0,
+        "wanderingSpeed": 20.0,
+        "chasingSpeed": 50.0,
+        "asset": {
+          "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.PrefabReference, Il2CppNinjaKiwi.Common",
+          "guidRef": "b797e86eee552054198267d5a8dd6755",
+          "AssetGUID": "b797e86eee552054198267d5a8dd6755"
+        },
+        "icon": {
+          "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.SpriteReference, Il2CppNinjaKiwi.Common",
+          "guidRef": "",
+          "AssetGUID": ""
+        },
+        "pathfindingDelay": 0.016,
+        "interactionDelay": 0.076,
+        "wanderDelay": 2.0,
+        "wanderDelayMax": 5.0,
+        "wanderDistance": 5,
+        "ignoreTerrain": false,
+        "passiveDialogueLocs": [],
+        "usePetNpcData": false
+      },
+      {
+        "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierBloonData, Assembly-CSharp",
+        "id": "Green",
+        "respawnTime": 15,
+        "ambush": false,
+        "nightTimeOnly": false,
+        "staminaPenaltyPercent": 10.0,
+        "currencyStealAmount": 75,
+        "specificLootPool": [
+          {
+            "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierWeightedLoot, Assembly-CSharp",
+            "weighting": 5.0,
+            "id": "",
+            "loot": [
+              {
+                "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierCurrencyLoot, Assembly-CSharp",
+                "amount": 250,
+                "ShowQuantity": true
+              },
+              {
+                "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierKeyLoot, Assembly-CSharp",
+                "keyName": "chestKey",
+                "amount": 1,
+                "ShowQuantity": true
+              }
+            ]
+          },
+          {
+            "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierWeightedLoot, Assembly-CSharp",
+            "weighting": 90.0,
+            "id": "",
+            "loot": [
+              {
+                "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierCurrencyLoot, Assembly-CSharp",
+                "amount": 150,
+                "ShowQuantity": true
+              }
+            ]
+          },
+          {
+            "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierWeightedLoot, Assembly-CSharp",
+            "weighting": 5.0,
+            "id": "",
+            "loot": [
+              {
+                "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierCurrencyLoot, Assembly-CSharp",
+                "amount": 250,
+                "ShowQuantity": true
+              },
+              {
+                "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierPowerLoot, Assembly-CSharp",
+                "powerId": "HealthPotion",
+                "locsExtras": [],
+                "amount": 1,
+                "ShowQuantity": true
+              }
+            ]
+          }
+        ],
+        "duelSpeed": 3.4,
+        "reverseStartDirection": false,
+        "targetPointsRange": [
+          {
+            "x": 30.0,
+            "y": 70.0
+          },
+          {
+            "x": 5.0,
+            "y": 95.0
+          },
+          {
+            "x": 5.0,
+            "y": 95.0
+          }
+        ],
+        "npcName": "Green",
+        "npcType": 0,
+        "detectionRadius": 6,
+        "detectionDelay": 0.0,
+        "chase": false,
+        "flee": true,
+        "speed": 57.0,
+        "wanderingSpeed": 20.0,
+        "chasingSpeed": 57.0,
+        "asset": {
+          "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.PrefabReference, Il2CppNinjaKiwi.Common",
+          "guidRef": "282556aa04dc637479d86670790e18fe",
+          "AssetGUID": "282556aa04dc637479d86670790e18fe"
+        },
+        "icon": {
+          "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.SpriteReference, Il2CppNinjaKiwi.Common",
+          "guidRef": "",
+          "AssetGUID": ""
+        },
+        "pathfindingDelay": 0.016,
+        "interactionDelay": 0.076,
+        "wanderDelay": 2.0,
+        "wanderDelayMax": 5.0,
+        "wanderDistance": 5,
         "ignoreTerrain": false,
         "passiveDialogueLocs": [],
         "usePetNpcData": false
@@ -1021,6 +1303,7 @@
         "id": "Chicken A",
         "respawnTime": 0,
         "ambush": false,
+        "nightTimeOnly": false,
         "staminaPenaltyPercent": 15.0,
         "currencyStealAmount": 200,
         "specificLootPool": [],
@@ -1060,6 +1343,7 @@
         "id": "Chicken B",
         "respawnTime": 0,
         "ambush": false,
+        "nightTimeOnly": false,
         "staminaPenaltyPercent": 15.0,
         "currencyStealAmount": 200,
         "specificLootPool": [],
@@ -1097,9 +1381,10 @@
       {
         "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierBloonData, Assembly-CSharp",
         "id": "Pink",
-        "respawnTime": 10,
+        "respawnTime": 30,
         "ambush": false,
-        "staminaPenaltyPercent": 25.0,
+        "nightTimeOnly": false,
+        "staminaPenaltyPercent": 15.0,
         "currencyStealAmount": 200,
         "specificLootPool": [
           {
@@ -1109,7 +1394,8 @@
             "loot": [
               {
                 "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierCurrencyLoot, Assembly-CSharp",
-                "amount": 125
+                "amount": 375,
+                "ShowQuantity": true
               }
             ]
           },
@@ -1120,21 +1406,23 @@
             "loot": [
               {
                 "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierCurrencyLoot, Assembly-CSharp",
-                "amount": 200
+                "amount": 500,
+                "ShowQuantity": true
               },
               {
                 "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierKeyLoot, Assembly-CSharp",
                 "keyName": "chestKey",
-                "amount": 1
+                "amount": 1,
+                "ShowQuantity": true
               }
             ]
           }
         ],
-        "duelSpeed": 6.0,
+        "duelSpeed": 5.6,
         "reverseStartDirection": false,
         "targetPointsRange": [
           {
-            "x": 70.0,
+            "x": 60.0,
             "y": 90.0
           },
           {
@@ -1175,6 +1463,7 @@
         "id": "Fox",
         "respawnTime": 0,
         "ambush": false,
+        "nightTimeOnly": false,
         "staminaPenaltyPercent": 15.0,
         "currencyStealAmount": 200,
         "specificLootPool": [],
@@ -1214,6 +1503,7 @@
         "id": "Bison",
         "respawnTime": 0,
         "ambush": false,
+        "nightTimeOnly": false,
         "staminaPenaltyPercent": 15.0,
         "currencyStealAmount": 200,
         "specificLootPool": [],
@@ -1253,6 +1543,7 @@
         "id": "Bison Baby",
         "respawnTime": 0,
         "ambush": false,
+        "nightTimeOnly": false,
         "staminaPenaltyPercent": 15.0,
         "currencyStealAmount": 200,
         "specificLootPool": [],
@@ -1292,6 +1583,7 @@
         "id": "Horse",
         "respawnTime": 0,
         "ambush": false,
+        "nightTimeOnly": false,
         "staminaPenaltyPercent": 15.0,
         "currencyStealAmount": 200,
         "specificLootPool": [],
@@ -1331,6 +1623,7 @@
         "id": "Buffalo",
         "respawnTime": 0,
         "ambush": false,
+        "nightTimeOnly": false,
         "staminaPenaltyPercent": 15.0,
         "currencyStealAmount": 200,
         "specificLootPool": [],
@@ -1368,40 +1661,44 @@
       {
         "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierBloonData, Assembly-CSharp",
         "id": "Zombie",
-        "respawnTime": 10,
+        "respawnTime": 30,
         "ambush": true,
+        "nightTimeOnly": false,
         "staminaPenaltyPercent": 10.0,
-        "currencyStealAmount": 300,
+        "currencyStealAmount": 200,
         "specificLootPool": [
           {
             "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierWeightedLoot, Assembly-CSharp",
-            "weighting": 90.0,
+            "weighting": 70.0,
             "id": "",
             "loot": [
               {
                 "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierCurrencyLoot, Assembly-CSharp",
-                "amount": 250
+                "amount": 300,
+                "ShowQuantity": true
               }
             ]
           },
           {
             "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierWeightedLoot, Assembly-CSharp",
-            "weighting": 10.0,
+            "weighting": 30.0,
             "id": "",
             "loot": [
               {
                 "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierCurrencyLoot, Assembly-CSharp",
-                "amount": 500
+                "amount": 500,
+                "ShowQuantity": true
               },
               {
                 "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierKeyLoot, Assembly-CSharp",
                 "keyName": "chestKey",
-                "amount": 1
+                "amount": 1,
+                "ShowQuantity": true
               }
             ]
           }
         ],
-        "duelSpeed": 3.9,
+        "duelSpeed": 3.3,
         "reverseStartDirection": false,
         "targetPointsRange": [
           {
@@ -1413,12 +1710,12 @@
             "y": 70.0
           },
           {
-            "x": 70.0,
+            "x": 80.0,
             "y": 95.0
           },
           {
-            "x": 10.0,
-            "y": 95.0
+            "x": 50.0,
+            "y": 80.0
           },
           {
             "x": 10.0,
@@ -1458,6 +1755,7 @@
         "id": "Tutorial Dyno Bloon",
         "respawnTime": 0,
         "ambush": false,
+        "nightTimeOnly": false,
         "staminaPenaltyPercent": 15.0,
         "currencyStealAmount": 200,
         "specificLootPool": [],
@@ -1502,6 +1800,7 @@
         "id": "Red Fortified",
         "respawnTime": 10,
         "ambush": false,
+        "nightTimeOnly": false,
         "staminaPenaltyPercent": 10.0,
         "currencyStealAmount": 50,
         "specificLootPool": [
@@ -1514,17 +1813,20 @@
                 "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierPowerLoot, Assembly-CSharp",
                 "powerId": "HealthPotion",
                 "locsExtras": [],
-                "amount": 1
+                "amount": 1,
+                "ShowQuantity": true
               },
               {
                 "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierPowerLoot, Assembly-CSharp",
                 "powerId": "StaminaPotion",
                 "locsExtras": [],
-                "amount": 1
+                "amount": 1,
+                "ShowQuantity": true
               },
               {
                 "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierCurrencyLoot, Assembly-CSharp",
-                "amount": 75
+                "amount": 100,
+                "ShowQuantity": true
               }
             ]
           },
@@ -1535,7 +1837,8 @@
             "loot": [
               {
                 "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierCurrencyLoot, Assembly-CSharp",
-                "amount": 75
+                "amount": 100,
+                "ShowQuantity": true
               }
             ]
           },
@@ -1546,17 +1849,19 @@
             "loot": [
               {
                 "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierCurrencyLoot, Assembly-CSharp",
-                "amount": 75
+                "amount": 150,
+                "ShowQuantity": true
               },
               {
                 "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierKeyLoot, Assembly-CSharp",
                 "keyName": "chestKey",
-                "amount": 1
+                "amount": 1,
+                "ShowQuantity": true
               }
             ]
           }
         ],
-        "duelSpeed": 2.8,
+        "duelSpeed": 2.6,
         "reverseStartDirection": false,
         "targetPointsRange": [
           {
@@ -1601,6 +1906,7 @@
         "id": "WildGlassBloon",
         "respawnTime": 5,
         "ambush": false,
+        "nightTimeOnly": false,
         "staminaPenaltyPercent": 15.0,
         "currencyStealAmount": 50,
         "specificLootPool": [
@@ -1611,7 +1917,8 @@
             "loot": [
               {
                 "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierCurrencyLoot, Assembly-CSharp",
-                "amount": 400
+                "amount": 400,
+                "ShowQuantity": true
               }
             ]
           }
@@ -1652,6 +1959,1277 @@
         "wanderDelay": 2.0,
         "wanderDelayMax": 7.0,
         "wanderDistance": 8,
+        "ignoreTerrain": false,
+        "passiveDialogueLocs": [],
+        "usePetNpcData": false
+      },
+      {
+        "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierBloonData, Assembly-CSharp",
+        "id": "NightimeRed",
+        "respawnTime": 2,
+        "ambush": false,
+        "nightTimeOnly": true,
+        "staminaPenaltyPercent": 5.0,
+        "currencyStealAmount": 25,
+        "specificLootPool": [
+          {
+            "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierWeightedLoot, Assembly-CSharp",
+            "weighting": 5.0,
+            "id": "",
+            "loot": [
+              {
+                "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierCurrencyLoot, Assembly-CSharp",
+                "amount": 75,
+                "ShowQuantity": true
+              },
+              {
+                "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierKeyLoot, Assembly-CSharp",
+                "keyName": "chestKey",
+                "amount": 1,
+                "ShowQuantity": true
+              }
+            ]
+          },
+          {
+            "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierWeightedLoot, Assembly-CSharp",
+            "weighting": 70.0,
+            "id": "",
+            "loot": [
+              {
+                "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierCurrencyLoot, Assembly-CSharp",
+                "amount": 50,
+                "ShowQuantity": true
+              }
+            ]
+          },
+          {
+            "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierWeightedLoot, Assembly-CSharp",
+            "weighting": 5.0,
+            "id": "",
+            "loot": [
+              {
+                "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierCurrencyLoot, Assembly-CSharp",
+                "amount": 75,
+                "ShowQuantity": true
+              },
+              {
+                "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierPowerLoot, Assembly-CSharp",
+                "powerId": "HealthPotion",
+                "locsExtras": [],
+                "amount": 1,
+                "ShowQuantity": true
+              }
+            ]
+          },
+          {
+            "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierWeightedLoot, Assembly-CSharp",
+            "weighting": 10.0,
+            "id": "",
+            "loot": [
+              {
+                "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierPowerLoot, Assembly-CSharp",
+                "powerId": "HealthPotion",
+                "locsExtras": [],
+                "amount": 1,
+                "ShowQuantity": true
+              }
+            ]
+          },
+          {
+            "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierWeightedLoot, Assembly-CSharp",
+            "weighting": 10.0,
+            "id": "",
+            "loot": [
+              {
+                "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierPowerLoot, Assembly-CSharp",
+                "powerId": "StaminaPotion",
+                "locsExtras": [],
+                "amount": 1,
+                "ShowQuantity": true
+              }
+            ]
+          }
+        ],
+        "duelSpeed": 2.5,
+        "reverseStartDirection": false,
+        "targetPointsRange": [
+          {
+            "x": 40.0,
+            "y": 70.0
+          }
+        ],
+        "npcName": "NightimeRed",
+        "npcType": 0,
+        "detectionRadius": 5,
+        "detectionDelay": 0.0,
+        "chase": false,
+        "flee": true,
+        "speed": 50.0,
+        "wanderingSpeed": 20.0,
+        "chasingSpeed": 50.0,
+        "asset": {
+          "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.PrefabReference, Il2CppNinjaKiwi.Common",
+          "guidRef": "94498f2c623a4c54d98cffa478f5295f",
+          "AssetGUID": "94498f2c623a4c54d98cffa478f5295f"
+        },
+        "icon": {
+          "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.SpriteReference, Il2CppNinjaKiwi.Common",
+          "guidRef": "",
+          "AssetGUID": ""
+        },
+        "pathfindingDelay": 0.016,
+        "interactionDelay": 0.076,
+        "wanderDelay": 2.0,
+        "wanderDelayMax": 5.0,
+        "wanderDistance": 4,
+        "ignoreTerrain": false,
+        "passiveDialogueLocs": [],
+        "usePetNpcData": false
+      },
+      {
+        "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierBloonData, Assembly-CSharp",
+        "id": "NightimeMOAB",
+        "respawnTime": 40,
+        "ambush": false,
+        "nightTimeOnly": true,
+        "staminaPenaltyPercent": 20.0,
+        "currencyStealAmount": 400,
+        "specificLootPool": [
+          {
+            "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierWeightedLoot, Assembly-CSharp",
+            "weighting": 85.0,
+            "id": "",
+            "loot": [
+              {
+                "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierCurrencyLoot, Assembly-CSharp",
+                "amount": 400,
+                "ShowQuantity": true
+              },
+              {
+                "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierPowerLoot, Assembly-CSharp",
+                "powerId": "StaminaPotion",
+                "locsExtras": [],
+                "amount": 1,
+                "ShowQuantity": true
+              },
+              {
+                "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierPowerLoot, Assembly-CSharp",
+                "powerId": "HealthPotion",
+                "locsExtras": [],
+                "amount": 1,
+                "ShowQuantity": true
+              }
+            ]
+          },
+          {
+            "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierWeightedLoot, Assembly-CSharp",
+            "weighting": 15.0,
+            "id": "",
+            "loot": [
+              {
+                "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierCurrencyLoot, Assembly-CSharp",
+                "amount": 800,
+                "ShowQuantity": true
+              },
+              {
+                "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierKeyLoot, Assembly-CSharp",
+                "keyName": "chestKey",
+                "amount": 1,
+                "ShowQuantity": true
+              }
+            ]
+          }
+        ],
+        "duelSpeed": 3.2,
+        "reverseStartDirection": false,
+        "targetPointsRange": [
+          {
+            "x": 60.0,
+            "y": 80.0
+          },
+          {
+            "x": 15.0,
+            "y": 85.0
+          },
+          {
+            "x": 15.0,
+            "y": 85.0
+          },
+          {
+            "x": 15.0,
+            "y": 85.0
+          },
+          {
+            "x": 15.0,
+            "y": 85.0
+          },
+          {
+            "x": 15.0,
+            "y": 85.0
+          },
+          {
+            "x": 15.0,
+            "y": 60.0
+          },
+          {
+            "x": 80.0,
+            "y": 95.0
+          },
+          {
+            "x": 50.0,
+            "y": 55.0
+          },
+          {
+            "x": 20.0,
+            "y": 25.0
+          }
+        ],
+        "npcName": "NightimeMOAB",
+        "npcType": 0,
+        "detectionRadius": 8,
+        "detectionDelay": 0.8,
+        "chase": true,
+        "flee": false,
+        "speed": 35.0,
+        "wanderingSpeed": 20.0,
+        "chasingSpeed": 35.0,
+        "asset": {
+          "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.PrefabReference, Il2CppNinjaKiwi.Common",
+          "guidRef": "5ba127c96952a5e4a9452894ff3d9b39",
+          "AssetGUID": "5ba127c96952a5e4a9452894ff3d9b39"
+        },
+        "icon": {
+          "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.SpriteReference, Il2CppNinjaKiwi.Common",
+          "guidRef": "",
+          "AssetGUID": ""
+        },
+        "pathfindingDelay": 0.0,
+        "interactionDelay": 0.0,
+        "wanderDelay": 0.5,
+        "wanderDelayMax": 3.0,
+        "wanderDistance": 7,
+        "ignoreTerrain": false,
+        "passiveDialogueLocs": [],
+        "usePetNpcData": false
+      },
+      {
+        "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierBloonData, Assembly-CSharp",
+        "id": "NightimePink",
+        "respawnTime": 30,
+        "ambush": false,
+        "nightTimeOnly": true,
+        "staminaPenaltyPercent": 15.0,
+        "currencyStealAmount": 200,
+        "specificLootPool": [
+          {
+            "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierWeightedLoot, Assembly-CSharp",
+            "weighting": 90.0,
+            "id": "",
+            "loot": [
+              {
+                "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierCurrencyLoot, Assembly-CSharp",
+                "amount": 375,
+                "ShowQuantity": true
+              }
+            ]
+          },
+          {
+            "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierWeightedLoot, Assembly-CSharp",
+            "weighting": 10.0,
+            "id": "",
+            "loot": [
+              {
+                "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierCurrencyLoot, Assembly-CSharp",
+                "amount": 500,
+                "ShowQuantity": true
+              },
+              {
+                "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierKeyLoot, Assembly-CSharp",
+                "keyName": "chestKey",
+                "amount": 1,
+                "ShowQuantity": true
+              }
+            ]
+          }
+        ],
+        "duelSpeed": 6.0,
+        "reverseStartDirection": false,
+        "targetPointsRange": [
+          {
+            "x": 60.0,
+            "y": 90.0
+          },
+          {
+            "x": 5.0,
+            "y": 50.0
+          }
+        ],
+        "npcName": "NightimePink",
+        "npcType": 0,
+        "detectionRadius": 5,
+        "detectionDelay": 0.5,
+        "chase": true,
+        "flee": false,
+        "speed": 60.0,
+        "wanderingSpeed": 20.0,
+        "chasingSpeed": 60.0,
+        "asset": {
+          "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.PrefabReference, Il2CppNinjaKiwi.Common",
+          "guidRef": "8149deb2fd603be42bcbcb28a01614bd",
+          "AssetGUID": "8149deb2fd603be42bcbcb28a01614bd"
+        },
+        "icon": {
+          "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.SpriteReference, Il2CppNinjaKiwi.Common",
+          "guidRef": "",
+          "AssetGUID": ""
+        },
+        "pathfindingDelay": 0.016,
+        "interactionDelay": 0.13,
+        "wanderDelay": 2.0,
+        "wanderDelayMax": 5.0,
+        "wanderDistance": 3,
+        "ignoreTerrain": false,
+        "passiveDialogueLocs": [],
+        "usePetNpcData": false
+      },
+      {
+        "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierBloonData, Assembly-CSharp",
+        "id": "NightimeZombie",
+        "respawnTime": 30,
+        "ambush": true,
+        "nightTimeOnly": true,
+        "staminaPenaltyPercent": 10.0,
+        "currencyStealAmount": 200,
+        "specificLootPool": [
+          {
+            "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierWeightedLoot, Assembly-CSharp",
+            "weighting": 70.0,
+            "id": "",
+            "loot": [
+              {
+                "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierCurrencyLoot, Assembly-CSharp",
+                "amount": 300,
+                "ShowQuantity": true
+              }
+            ]
+          },
+          {
+            "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierWeightedLoot, Assembly-CSharp",
+            "weighting": 30.0,
+            "id": "",
+            "loot": [
+              {
+                "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierCurrencyLoot, Assembly-CSharp",
+                "amount": 500,
+                "ShowQuantity": true
+              },
+              {
+                "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierKeyLoot, Assembly-CSharp",
+                "keyName": "chestKey",
+                "amount": 1,
+                "ShowQuantity": true
+              }
+            ]
+          }
+        ],
+        "duelSpeed": 3.3,
+        "reverseStartDirection": false,
+        "targetPointsRange": [
+          {
+            "x": 30.0,
+            "y": 45.0
+          },
+          {
+            "x": 50.0,
+            "y": 70.0
+          },
+          {
+            "x": 80.0,
+            "y": 95.0
+          },
+          {
+            "x": 50.0,
+            "y": 80.0
+          },
+          {
+            "x": 10.0,
+            "y": 95.0
+          }
+        ],
+        "npcName": "NightimeZombie",
+        "npcType": 0,
+        "detectionRadius": 5,
+        "detectionDelay": 1.5,
+        "chase": true,
+        "flee": false,
+        "speed": 60.0,
+        "wanderingSpeed": 4.0,
+        "chasingSpeed": 60.0,
+        "asset": {
+          "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.PrefabReference, Il2CppNinjaKiwi.Common",
+          "guidRef": "a03e45e85244b184192bb7922a08eb18",
+          "AssetGUID": "a03e45e85244b184192bb7922a08eb18"
+        },
+        "icon": {
+          "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.SpriteReference, Il2CppNinjaKiwi.Common",
+          "guidRef": "",
+          "AssetGUID": ""
+        },
+        "pathfindingDelay": 0.016,
+        "interactionDelay": 0.076,
+        "wanderDelay": 1.0,
+        "wanderDelayMax": 2.0,
+        "wanderDistance": 3,
+        "ignoreTerrain": false,
+        "passiveDialogueLocs": [],
+        "usePetNpcData": false
+      },
+      {
+        "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierBloonData, Assembly-CSharp",
+        "id": "NightimeRedFortified",
+        "respawnTime": 10,
+        "ambush": false,
+        "nightTimeOnly": true,
+        "staminaPenaltyPercent": 10.0,
+        "currencyStealAmount": 50,
+        "specificLootPool": [
+          {
+            "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierWeightedLoot, Assembly-CSharp",
+            "weighting": 5.0,
+            "id": "",
+            "loot": [
+              {
+                "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierCurrencyLoot, Assembly-CSharp",
+                "amount": 100,
+                "ShowQuantity": true
+              },
+              {
+                "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierPowerLoot, Assembly-CSharp",
+                "powerId": "HealthPotion",
+                "locsExtras": [],
+                "amount": 1,
+                "ShowQuantity": true
+              },
+              {
+                "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierPowerLoot, Assembly-CSharp",
+                "powerId": "StaminaPotion",
+                "locsExtras": [],
+                "amount": 1,
+                "ShowQuantity": true
+              }
+            ]
+          },
+          {
+            "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierWeightedLoot, Assembly-CSharp",
+            "weighting": 90.0,
+            "id": "",
+            "loot": [
+              {
+                "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierCurrencyLoot, Assembly-CSharp",
+                "amount": 100,
+                "ShowQuantity": true
+              }
+            ]
+          },
+          {
+            "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierWeightedLoot, Assembly-CSharp",
+            "weighting": 5.0,
+            "id": "",
+            "loot": [
+              {
+                "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierCurrencyLoot, Assembly-CSharp",
+                "amount": 150,
+                "ShowQuantity": true
+              },
+              {
+                "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierKeyLoot, Assembly-CSharp",
+                "keyName": "chestKey",
+                "amount": 1,
+                "ShowQuantity": true
+              }
+            ]
+          }
+        ],
+        "duelSpeed": 2.6,
+        "reverseStartDirection": false,
+        "targetPointsRange": [
+          {
+            "x": 30.0,
+            "y": 50.0
+          },
+          {
+            "x": 5.0,
+            "y": 95.0
+          }
+        ],
+        "npcName": "NightimeRedFortified",
+        "npcType": 0,
+        "detectionRadius": 5,
+        "detectionDelay": 0.5,
+        "chase": true,
+        "flee": false,
+        "speed": 40.0,
+        "wanderingSpeed": 20.0,
+        "chasingSpeed": 40.0,
+        "asset": {
+          "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.PrefabReference, Il2CppNinjaKiwi.Common",
+          "guidRef": "191540120d50c134dbd0411b7c2511ba",
+          "AssetGUID": "191540120d50c134dbd0411b7c2511ba"
+        },
+        "icon": {
+          "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.SpriteReference, Il2CppNinjaKiwi.Common",
+          "guidRef": "",
+          "AssetGUID": ""
+        },
+        "pathfindingDelay": 0.016,
+        "interactionDelay": 0.13,
+        "wanderDelay": 2.0,
+        "wanderDelayMax": 7.0,
+        "wanderDistance": 2,
+        "ignoreTerrain": false,
+        "passiveDialogueLocs": [],
+        "usePetNpcData": false
+      },
+      {
+        "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierBloonData, Assembly-CSharp",
+        "id": "NightimeZOMG",
+        "respawnTime": 300,
+        "ambush": false,
+        "nightTimeOnly": true,
+        "staminaPenaltyPercent": 60.0,
+        "currencyStealAmount": 5000,
+        "specificLootPool": [
+          {
+            "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierWeightedLoot, Assembly-CSharp",
+            "weighting": 95.0,
+            "id": "",
+            "loot": [
+              {
+                "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierCurrencyLoot, Assembly-CSharp",
+                "amount": 6500,
+                "ShowQuantity": true
+              },
+              {
+                "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierKeyLoot, Assembly-CSharp",
+                "keyName": "chestKey",
+                "amount": 1,
+                "ShowQuantity": true
+              },
+              {
+                "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierPowerLoot, Assembly-CSharp",
+                "powerId": "StaminaPotion",
+                "locsExtras": [],
+                "amount": 2,
+                "ShowQuantity": true
+              },
+              {
+                "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierPowerLoot, Assembly-CSharp",
+                "powerId": "HealthPotion",
+                "locsExtras": [],
+                "amount": 2,
+                "ShowQuantity": true
+              }
+            ]
+          },
+          {
+            "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierWeightedLoot, Assembly-CSharp",
+            "weighting": 5.0,
+            "id": "",
+            "loot": [
+              {
+                "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierCurrencyLoot, Assembly-CSharp",
+                "amount": 15000,
+                "ShowQuantity": true
+              },
+              {
+                "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierKeyLoot, Assembly-CSharp",
+                "keyName": "chestKey",
+                "amount": 2,
+                "ShowQuantity": true
+              }
+            ]
+          }
+        ],
+        "duelSpeed": 3.8,
+        "reverseStartDirection": false,
+        "targetPointsRange": [
+          {
+            "x": 40.0,
+            "y": 50.0
+          },
+          {
+            "x": 70.0,
+            "y": 95.0
+          },
+          {
+            "x": 30.0,
+            "y": 40.0
+          },
+          {
+            "x": 10.0,
+            "y": 90.0
+          },
+          {
+            "x": 10.0,
+            "y": 90.0
+          },
+          {
+            "x": 10.0,
+            "y": 90.0
+          },
+          {
+            "x": 60.0,
+            "y": 90.0
+          },
+          {
+            "x": 5.0,
+            "y": 10.0
+          },
+          {
+            "x": 30.0,
+            "y": 31.0
+          },
+          {
+            "x": 50.0,
+            "y": 51.0
+          },
+          {
+            "x": 70.0,
+            "y": 71.0
+          },
+          {
+            "x": 90.0,
+            "y": 91.0
+          },
+          {
+            "x": 70.0,
+            "y": 71.0
+          },
+          {
+            "x": 50.0,
+            "y": 51.0
+          },
+          {
+            "x": 10.0,
+            "y": 90.0
+          },
+          {
+            "x": 10.0,
+            "y": 90.0
+          },
+          {
+            "x": 10.0,
+            "y": 90.0
+          }
+        ],
+        "npcName": "NightimeZOMG",
+        "npcType": 0,
+        "detectionRadius": 10,
+        "detectionDelay": 0.5,
+        "chase": true,
+        "flee": false,
+        "speed": 15.0,
+        "wanderingSpeed": 5.0,
+        "chasingSpeed": 15.0,
+        "asset": {
+          "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.PrefabReference, Il2CppNinjaKiwi.Common",
+          "guidRef": "d1748ca76141e1249b4834fe7bafef88",
+          "AssetGUID": "d1748ca76141e1249b4834fe7bafef88"
+        },
+        "icon": {
+          "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.SpriteReference, Il2CppNinjaKiwi.Common",
+          "guidRef": "",
+          "AssetGUID": ""
+        },
+        "pathfindingDelay": 0.016,
+        "interactionDelay": 0.13,
+        "wanderDelay": 2.0,
+        "wanderDelayMax": 7.0,
+        "wanderDistance": 5,
+        "ignoreTerrain": false,
+        "passiveDialogueLocs": [],
+        "usePetNpcData": false
+      },
+      {
+        "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierBloonData, Assembly-CSharp",
+        "id": "BAD",
+        "respawnTime": 300,
+        "ambush": false,
+        "nightTimeOnly": false,
+        "staminaPenaltyPercent": 60.0,
+        "currencyStealAmount": 5000,
+        "specificLootPool": [
+          {
+            "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierWeightedLoot, Assembly-CSharp",
+            "weighting": 95.0,
+            "id": "",
+            "loot": [
+              {
+                "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierCurrencyLoot, Assembly-CSharp",
+                "amount": 6500,
+                "ShowQuantity": true
+              },
+              {
+                "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierKeyLoot, Assembly-CSharp",
+                "keyName": "chestKey",
+                "amount": 1,
+                "ShowQuantity": true
+              },
+              {
+                "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierPowerLoot, Assembly-CSharp",
+                "powerId": "StaminaPotion",
+                "locsExtras": [],
+                "amount": 2,
+                "ShowQuantity": true
+              },
+              {
+                "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierPowerLoot, Assembly-CSharp",
+                "powerId": "HealthPotion",
+                "locsExtras": [],
+                "amount": 2,
+                "ShowQuantity": true
+              }
+            ]
+          },
+          {
+            "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierWeightedLoot, Assembly-CSharp",
+            "weighting": 5.0,
+            "id": "",
+            "loot": [
+              {
+                "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierCurrencyLoot, Assembly-CSharp",
+                "amount": 15000,
+                "ShowQuantity": true
+              },
+              {
+                "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierKeyLoot, Assembly-CSharp",
+                "keyName": "chestKey",
+                "amount": 1,
+                "ShowQuantity": true
+              }
+            ]
+          }
+        ],
+        "duelSpeed": 3.8,
+        "reverseStartDirection": false,
+        "targetPointsRange": [
+          {
+            "x": 40.0,
+            "y": 50.0
+          },
+          {
+            "x": 70.0,
+            "y": 95.0
+          },
+          {
+            "x": 30.0,
+            "y": 40.0
+          },
+          {
+            "x": 10.0,
+            "y": 90.0
+          },
+          {
+            "x": 10.0,
+            "y": 90.0
+          },
+          {
+            "x": 10.0,
+            "y": 90.0
+          },
+          {
+            "x": 60.0,
+            "y": 90.0
+          },
+          {
+            "x": 5.0,
+            "y": 10.0
+          },
+          {
+            "x": 30.0,
+            "y": 31.0
+          },
+          {
+            "x": 50.0,
+            "y": 51.0
+          },
+          {
+            "x": 70.0,
+            "y": 71.0
+          },
+          {
+            "x": 90.0,
+            "y": 91.0
+          },
+          {
+            "x": 70.0,
+            "y": 71.0
+          },
+          {
+            "x": 50.0,
+            "y": 51.0
+          },
+          {
+            "x": 10.0,
+            "y": 90.0
+          },
+          {
+            "x": 10.0,
+            "y": 90.0
+          },
+          {
+            "x": 10.0,
+            "y": 90.0
+          }
+        ],
+        "npcName": "ZOMG",
+        "npcType": 0,
+        "detectionRadius": 10,
+        "detectionDelay": 0.5,
+        "chase": true,
+        "flee": false,
+        "speed": 15.0,
+        "wanderingSpeed": 5.0,
+        "chasingSpeed": 15.0,
+        "asset": {
+          "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.PrefabReference, Il2CppNinjaKiwi.Common",
+          "guidRef": "d1748ca76141e1249b4834fe7bafef88",
+          "AssetGUID": "d1748ca76141e1249b4834fe7bafef88"
+        },
+        "icon": {
+          "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.SpriteReference, Il2CppNinjaKiwi.Common",
+          "guidRef": "",
+          "AssetGUID": ""
+        },
+        "pathfindingDelay": 0.016,
+        "interactionDelay": 0.13,
+        "wanderDelay": 2.0,
+        "wanderDelayMax": 7.0,
+        "wanderDistance": 5,
+        "ignoreTerrain": false,
+        "passiveDialogueLocs": [],
+        "usePetNpcData": false
+      },
+      {
+        "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierBloonData, Assembly-CSharp",
+        "id": "BFB",
+        "respawnTime": 120,
+        "ambush": false,
+        "nightTimeOnly": false,
+        "staminaPenaltyPercent": 40.0,
+        "currencyStealAmount": 2000,
+        "specificLootPool": [
+          {
+            "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierWeightedLoot, Assembly-CSharp",
+            "weighting": 90.0,
+            "id": "",
+            "loot": [
+              {
+                "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierCurrencyLoot, Assembly-CSharp",
+                "amount": 2500,
+                "ShowQuantity": true
+              },
+              {
+                "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierKeyLoot, Assembly-CSharp",
+                "keyName": "chestKey",
+                "amount": 1,
+                "ShowQuantity": true
+              }
+            ]
+          },
+          {
+            "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierWeightedLoot, Assembly-CSharp",
+            "weighting": 10.0,
+            "id": "",
+            "loot": [
+              {
+                "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierCurrencyLoot, Assembly-CSharp",
+                "amount": 5000,
+                "ShowQuantity": true
+              },
+              {
+                "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierKeyLoot, Assembly-CSharp",
+                "keyName": "chestKey",
+                "amount": 1,
+                "ShowQuantity": true
+              }
+            ]
+          }
+        ],
+        "duelSpeed": 4.0,
+        "reverseStartDirection": false,
+        "targetPointsRange": [
+          {
+            "x": 70.0,
+            "y": 95.0
+          },
+          {
+            "x": 50.0,
+            "y": 51.0
+          },
+          {
+            "x": 30.0,
+            "y": 31.0
+          },
+          {
+            "x": 10.0,
+            "y": 11.0
+          },
+          {
+            "x": 10.0,
+            "y": 90.0
+          },
+          {
+            "x": 10.0,
+            "y": 90.0
+          },
+          {
+            "x": 10.0,
+            "y": 90.0
+          },
+          {
+            "x": 5.0,
+            "y": 10.0
+          },
+          {
+            "x": 30.0,
+            "y": 31.0
+          },
+          {
+            "x": 60.0,
+            "y": 90.0
+          }
+        ],
+        "npcName": "BFB",
+        "npcType": 0,
+        "detectionRadius": 10,
+        "detectionDelay": 0.5,
+        "chase": true,
+        "flee": false,
+        "speed": 25.0,
+        "wanderingSpeed": 15.0,
+        "chasingSpeed": 25.0,
+        "asset": {
+          "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.PrefabReference, Il2CppNinjaKiwi.Common",
+          "guidRef": "f397b3f77ed60324e98c0cf0509e724e",
+          "AssetGUID": "f397b3f77ed60324e98c0cf0509e724e"
+        },
+        "icon": {
+          "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.SpriteReference, Il2CppNinjaKiwi.Common",
+          "guidRef": "",
+          "AssetGUID": ""
+        },
+        "pathfindingDelay": 0.016,
+        "interactionDelay": 0.13,
+        "wanderDelay": 2.0,
+        "wanderDelayMax": 7.0,
+        "wanderDistance": 5,
+        "ignoreTerrain": false,
+        "passiveDialogueLocs": [],
+        "usePetNpcData": false
+      },
+      {
+        "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierBloonData, Assembly-CSharp",
+        "id": "NightimeBFB",
+        "respawnTime": 120,
+        "ambush": false,
+        "nightTimeOnly": true,
+        "staminaPenaltyPercent": 40.0,
+        "currencyStealAmount": 2000,
+        "specificLootPool": [
+          {
+            "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierWeightedLoot, Assembly-CSharp",
+            "weighting": 90.0,
+            "id": "",
+            "loot": [
+              {
+                "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierCurrencyLoot, Assembly-CSharp",
+                "amount": 2500,
+                "ShowQuantity": true
+              },
+              {
+                "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierKeyLoot, Assembly-CSharp",
+                "keyName": "chestKey",
+                "amount": 1,
+                "ShowQuantity": true
+              }
+            ]
+          },
+          {
+            "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierWeightedLoot, Assembly-CSharp",
+            "weighting": 10.0,
+            "id": "",
+            "loot": [
+              {
+                "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierCurrencyLoot, Assembly-CSharp",
+                "amount": 5000,
+                "ShowQuantity": true
+              },
+              {
+                "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierKeyLoot, Assembly-CSharp",
+                "keyName": "chestKey",
+                "amount": 1,
+                "ShowQuantity": true
+              }
+            ]
+          }
+        ],
+        "duelSpeed": 4.0,
+        "reverseStartDirection": false,
+        "targetPointsRange": [
+          {
+            "x": 70.0,
+            "y": 95.0
+          },
+          {
+            "x": 50.0,
+            "y": 51.0
+          },
+          {
+            "x": 30.0,
+            "y": 31.0
+          },
+          {
+            "x": 10.0,
+            "y": 11.0
+          },
+          {
+            "x": 10.0,
+            "y": 90.0
+          },
+          {
+            "x": 10.0,
+            "y": 90.0
+          },
+          {
+            "x": 10.0,
+            "y": 90.0
+          },
+          {
+            "x": 5.0,
+            "y": 10.0
+          },
+          {
+            "x": 30.0,
+            "y": 31.0
+          },
+          {
+            "x": 60.0,
+            "y": 90.0
+          }
+        ],
+        "npcName": "NightimeBFB",
+        "npcType": 0,
+        "detectionRadius": 10,
+        "detectionDelay": 0.5,
+        "chase": true,
+        "flee": false,
+        "speed": 25.0,
+        "wanderingSpeed": 10.0,
+        "chasingSpeed": 25.0,
+        "asset": {
+          "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.PrefabReference, Il2CppNinjaKiwi.Common",
+          "guidRef": "f397b3f77ed60324e98c0cf0509e724e",
+          "AssetGUID": "f397b3f77ed60324e98c0cf0509e724e"
+        },
+        "icon": {
+          "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.SpriteReference, Il2CppNinjaKiwi.Common",
+          "guidRef": "",
+          "AssetGUID": ""
+        },
+        "pathfindingDelay": 0.016,
+        "interactionDelay": 0.13,
+        "wanderDelay": 2.0,
+        "wanderDelayMax": 7.0,
+        "wanderDistance": 5,
+        "ignoreTerrain": false,
+        "passiveDialogueLocs": [],
+        "usePetNpcData": false
+      },
+      {
+        "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierBloonData, Assembly-CSharp",
+        "id": "BADREAL",
+        "respawnTime": 1440,
+        "ambush": false,
+        "nightTimeOnly": false,
+        "staminaPenaltyPercent": 95.0,
+        "currencyStealAmount": 15000,
+        "specificLootPool": [
+          {
+            "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierWeightedLoot, Assembly-CSharp",
+            "weighting": 95.0,
+            "id": "",
+            "loot": [
+              {
+                "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierCurrencyLoot, Assembly-CSharp",
+                "amount": 20000,
+                "ShowQuantity": true
+              },
+              {
+                "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierKeyLoot, Assembly-CSharp",
+                "keyName": "chestKey",
+                "amount": 2,
+                "ShowQuantity": true
+              },
+              {
+                "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierPowerLoot, Assembly-CSharp",
+                "powerId": "StaminaPotion",
+                "locsExtras": [],
+                "amount": 2,
+                "ShowQuantity": true
+              },
+              {
+                "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierPowerLoot, Assembly-CSharp",
+                "powerId": "HealthPotion",
+                "locsExtras": [],
+                "amount": 2,
+                "ShowQuantity": true
+              }
+            ]
+          },
+          {
+            "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierWeightedLoot, Assembly-CSharp",
+            "weighting": 5.0,
+            "id": "",
+            "loot": [
+              {
+                "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierCurrencyLoot, Assembly-CSharp",
+                "amount": 35000,
+                "ShowQuantity": true
+              },
+              {
+                "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierKeyLoot, Assembly-CSharp",
+                "keyName": "chestKey",
+                "amount": 3,
+                "ShowQuantity": true
+              }
+            ]
+          }
+        ],
+        "duelSpeed": 5.0,
+        "reverseStartDirection": false,
+        "targetPointsRange": [
+          {
+            "x": 94.0,
+            "y": 95.0
+          },
+          {
+            "x": 5.0,
+            "y": 6.0
+          },
+          {
+            "x": 90.0,
+            "y": 91.0
+          },
+          {
+            "x": 9.0,
+            "y": 10.0
+          },
+          {
+            "x": 84.0,
+            "y": 85.0
+          },
+          {
+            "x": 14.0,
+            "y": 15.0
+          },
+          {
+            "x": 80.0,
+            "y": 81.0
+          },
+          {
+            "x": 20.0,
+            "y": 21.0
+          },
+          {
+            "x": 75.0,
+            "y": 76.0
+          },
+          {
+            "x": 25.0,
+            "y": 26.0
+          },
+          {
+            "x": 70.0,
+            "y": 71.0
+          },
+          {
+            "x": 30.0,
+            "y": 31.0
+          },
+          {
+            "x": 50.0,
+            "y": 51.0
+          },
+          {
+            "x": 72.0,
+            "y": 73.0
+          },
+          {
+            "x": 50.0,
+            "y": 51.0
+          },
+          {
+            "x": 15.0,
+            "y": 16.0
+          },
+          {
+            "x": 50.0,
+            "y": 95.0
+          },
+          {
+            "x": 5.0,
+            "y": 45.0
+          },
+          {
+            "x": 5.0,
+            "y": 45.0
+          },
+          {
+            "x": 5.0,
+            "y": 45.0
+          },
+          {
+            "x": 5.0,
+            "y": 45.0
+          },
+          {
+            "x": 60.0,
+            "y": 95.0
+          },
+          {
+            "x": 60.0,
+            "y": 95.0
+          },
+          {
+            "x": 60.0,
+            "y": 95.0
+          }
+        ],
+        "npcName": "BAD",
+        "npcType": 0,
+        "detectionRadius": 6,
+        "detectionDelay": 0.5,
+        "chase": true,
+        "flee": false,
+        "speed": 25.0,
+        "wanderingSpeed": 10.0,
+        "chasingSpeed": 25.0,
+        "asset": {
+          "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.PrefabReference, Il2CppNinjaKiwi.Common",
+          "guidRef": "b738972487296a747aa42fd15e9eaa01",
+          "AssetGUID": "b738972487296a747aa42fd15e9eaa01"
+        },
+        "icon": {
+          "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.SpriteReference, Il2CppNinjaKiwi.Common",
+          "guidRef": "",
+          "AssetGUID": ""
+        },
+        "pathfindingDelay": 0.016,
+        "interactionDelay": 0.13,
+        "wanderDelay": 2.0,
+        "wanderDelayMax": 7.0,
+        "wanderDistance": 5,
         "ignoreTerrain": false,
         "passiveDialogueLocs": [],
         "usePetNpcData": false
@@ -1895,7 +3473,13 @@
         "wanderDelayMax": 5.0,
         "wanderDistance": 0,
         "ignoreTerrain": false,
-        "passiveDialogueLocs": [],
+        "passiveDialogueLocs": [
+          "FrontierNPCDialogue1",
+          "FrontierNPCDialogue2",
+          "FrontierNPCDialogue3",
+          "FrontierNPCDialogue4",
+          "FrontierNPCDialogue5"
+        ],
         "usePetNpcData": false
       },
       {
@@ -1903,7 +3487,7 @@
         "npcName": "NPCLargeWander",
         "npcType": 0,
         "detectionRadius": 1,
-        "detectionDelay": 0.0,
+        "detectionDelay": 10.0,
         "chase": false,
         "flee": false,
         "speed": 38.0,
@@ -1925,7 +3509,18 @@
         "wanderDelayMax": 7.0,
         "wanderDistance": 9,
         "ignoreTerrain": false,
-        "passiveDialogueLocs": [],
+        "passiveDialogueLocs": [
+          "FrontierNPCDialogue1",
+          "FrontierNPCDialogue2",
+          "FrontierNPCDialogue3",
+          "FrontierNPCDialogue4",
+          "FrontierNPCDialogue5",
+          "FrontierNPCDialogue6",
+          "FrontierNPCDialogue7",
+          "FrontierNPCDialogue8",
+          "FrontierNPCDialogue9",
+          "FrontierNPCDialogue10"
+        ],
         "usePetNpcData": false
       },
       {
@@ -1933,7 +3528,7 @@
         "npcName": "NPCShortWander",
         "npcType": 0,
         "detectionRadius": 1,
-        "detectionDelay": 0.0,
+        "detectionDelay": 5.0,
         "chase": false,
         "flee": false,
         "speed": 38.0,
@@ -1950,12 +3545,23 @@
           "AssetGUID": ""
         },
         "pathfindingDelay": 0.016,
-        "interactionDelay": 20.0,
+        "interactionDelay": 10.0,
         "wanderDelay": 2.0,
         "wanderDelayMax": 7.0,
         "wanderDistance": 4,
         "ignoreTerrain": false,
-        "passiveDialogueLocs": [],
+        "passiveDialogueLocs": [
+          "FrontierNPCDialogue1",
+          "FrontierNPCDialogue2",
+          "FrontierNPCDialogue3",
+          "FrontierNPCDialogue4",
+          "FrontierNPCDialogue5",
+          "FrontierNPCDialogue6",
+          "FrontierNPCDialogue7",
+          "FrontierNPCDialogue8",
+          "FrontierNPCDialogue9",
+          "FrontierNPCDialogue10"
+        ],
         "usePetNpcData": false
       },
       {
@@ -2068,7 +3674,39 @@
       }
     ],
     "passiveDialogueRange": 3,
-    "passiveDialogueCooldown": 5,
+    "passiveDialogueLifespan": 4.0,
+    "passiveDialogueCooldown": 20,
+    "passiveDialogueLastSeen": {
+      "$type": "Il2CppSystem.DateTime, Il2Cppmscorlib",
+      "_dateData": 0,
+      "InternalTicks": 0,
+      "InternalKind": 0,
+      "Day": 1,
+      "DayOfWeek": 1,
+      "Hour": 0,
+      "Kind": 0,
+      "Millisecond": 0,
+      "Minute": 0,
+      "Month": 1,
+      "Second": 0,
+      "Ticks": 0,
+      "TimeOfDay": {
+        "$type": "Il2CppSystem.TimeSpan, Il2Cppmscorlib",
+        "_ticks": 0,
+        "Ticks": 0,
+        "Days": 0,
+        "Hours": 0,
+        "Milliseconds": 0,
+        "Minutes": 0,
+        "Seconds": 0,
+        "TotalDays": 0.0,
+        "TotalHours": 0.0,
+        "TotalMilliseconds": 0.0,
+        "TotalMinutes": 0.0,
+        "TotalSeconds": 0.0
+      },
+      "Year": 1
+    },
     "petMinSpeed": 70,
     "petMaxSpeed": 100,
     "petPathfindingDelay": 0.05,
@@ -2648,39 +4286,14 @@
                         "ignoreNonTargetable": false,
                         "ignorePierceExhaustion": true,
                         "saveId": "",
-                        "displayModel": {
-                          "$type": "Il2CppAssets.Scripts.Models.GenericBehaviors.DisplayModel, Assembly-CSharp",
-                          "display": {
-                            "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.PrefabReference, Il2CppNinjaKiwi.Common",
-                            "guidRef": "",
-                            "AssetGUID": ""
-                          },
-                          "layer": 0,
-                          "positionOffset": {
-                            "$type": "Il2CppAssets.Scripts.Simulation.SMath.Vector3, Assembly-CSharp",
-                            "x": 0.0,
-                            "y": 0.0,
-                            "z": 0.0,
-                            "MagnitudeSquared": 0.0,
-                            "Magnitude": 0.0,
-                            "Rotation": 0.0,
-                            "SimToDispRotation": 180.0
-                          },
-                          "scale": 0.0,
-                          "ignoreRotation": false,
-                          "animationChanges": [],
-                          "delayedReveal": 0.0,
-                          "category": 0,
-                          "isAnimationPaused": false,
-                          "name": ""
-                        },
+                        "displayModel": null,
                         "cantCreateSubProjectiles": false,
                         "CappedPierce": 50.0,
                         "name": ""
                       },
                       "emissionModel": {
                         "$type": "Il2CppAssets.Scripts.Models.Towers.Behaviors.Emissions.SingleEmissionAtTowerModel, Assembly-CSharp",
-                        "behaviors": null,
+                        "behaviors": [],
                         "name": ""
                       },
                       "conditions": [
@@ -3005,6 +4618,7 @@
                     {
                       "$type": "Il2CppAssets.Scripts.Models.Towers.Projectiles.Behaviors.AddBonusDamagePerHitToBloonModel, Assembly-CSharp",
                       "mutationId": "MassiveStache",
+                      "priority": 0,
                       "lifespan": 0.5,
                       "lifespanFrames": 0,
                       "perHitDamageAddition": 0.0,
@@ -3013,6 +4627,7 @@
                       "lastAppliesFirst": false,
                       "cascadeMutators": false,
                       "overlayType": "AlchemistGold",
+                      "filter": null,
                       "collisionPass": 0,
                       "name": ""
                     }
@@ -3270,6 +4885,7 @@
                   "behaviorModels": [
                     {
                       "$type": "Il2CppAssets.Scripts.Models.Towers.Behaviors.TowerCreateProjectileOnProjectileExhaustModel, Assembly-CSharp",
+                      "id": "",
                       "projectileModel": {
                         "$type": "Il2CppAssets.Scripts.Models.Towers.Projectiles.ProjectileModel, Assembly-CSharp",
                         "display": {
@@ -3442,39 +5058,14 @@
                         "ignoreNonTargetable": true,
                         "ignorePierceExhaustion": true,
                         "saveId": "",
-                        "displayModel": {
-                          "$type": "Il2CppAssets.Scripts.Models.GenericBehaviors.DisplayModel, Assembly-CSharp",
-                          "display": {
-                            "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.PrefabReference, Il2CppNinjaKiwi.Common",
-                            "guidRef": "",
-                            "AssetGUID": ""
-                          },
-                          "layer": 0,
-                          "positionOffset": {
-                            "$type": "Il2CppAssets.Scripts.Simulation.SMath.Vector3, Assembly-CSharp",
-                            "x": 0.0,
-                            "y": 0.0,
-                            "z": 0.0,
-                            "MagnitudeSquared": 0.0,
-                            "Magnitude": 0.0,
-                            "Rotation": 0.0,
-                            "SimToDispRotation": 180.0
-                          },
-                          "scale": 0.0,
-                          "ignoreRotation": false,
-                          "animationChanges": [],
-                          "delayedReveal": 0.0,
-                          "category": 0,
-                          "isAnimationPaused": false,
-                          "name": ""
-                        },
+                        "displayModel": null,
                         "cantCreateSubProjectiles": true,
                         "CappedPierce": 60.0,
                         "name": ""
                       },
                       "emissionModel": {
                         "$type": "Il2CppAssets.Scripts.Models.Towers.Behaviors.Emissions.SingleEmissionAtTowerModel, Assembly-CSharp",
-                        "behaviors": null,
+                        "behaviors": [],
                         "name": ""
                       },
                       "effectModel": {
@@ -4204,6 +5795,7 @@
                   "behaviorModels": [
                     {
                       "$type": "Il2CppAssets.Scripts.Models.Towers.Behaviors.TowerCreateProjectileOnProjectileExhaustModel, Assembly-CSharp",
+                      "id": "Wader_CreateProjectile",
                       "projectileModel": {
                         "$type": "Il2CppAssets.Scripts.Models.Towers.Projectiles.ProjectileModel, Assembly-CSharp",
                         "display": {
@@ -4325,32 +5917,7 @@
                         "ignoreNonTargetable": false,
                         "ignorePierceExhaustion": false,
                         "saveId": "",
-                        "displayModel": {
-                          "$type": "Il2CppAssets.Scripts.Models.GenericBehaviors.DisplayModel, Assembly-CSharp",
-                          "display": {
-                            "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.PrefabReference, Il2CppNinjaKiwi.Common",
-                            "guidRef": "",
-                            "AssetGUID": ""
-                          },
-                          "layer": 0,
-                          "positionOffset": {
-                            "$type": "Il2CppAssets.Scripts.Simulation.SMath.Vector3, Assembly-CSharp",
-                            "x": 0.0,
-                            "y": 0.0,
-                            "z": 0.0,
-                            "MagnitudeSquared": 0.0,
-                            "Magnitude": 0.0,
-                            "Rotation": 0.0,
-                            "SimToDispRotation": 180.0
-                          },
-                          "scale": 0.0,
-                          "ignoreRotation": false,
-                          "animationChanges": [],
-                          "delayedReveal": 0.0,
-                          "category": 0,
-                          "isAnimationPaused": false,
-                          "name": ""
-                        },
+                        "displayModel": null,
                         "cantCreateSubProjectiles": false,
                         "CappedPierce": 5.0,
                         "name": ""
@@ -4365,7 +5932,7 @@
                         "useAirUnitRotation": false,
                         "Count": 3,
                         "count": 3,
-                        "behaviors": null,
+                        "behaviors": [],
                         "name": ""
                       },
                       "effectModel": {
@@ -4581,32 +6148,7 @@
                     "ignoreNonTargetable": false,
                     "ignorePierceExhaustion": false,
                     "saveId": "",
-                    "displayModel": {
-                      "$type": "Il2CppAssets.Scripts.Models.GenericBehaviors.DisplayModel, Assembly-CSharp",
-                      "display": {
-                        "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.PrefabReference, Il2CppNinjaKiwi.Common",
-                        "guidRef": "",
-                        "AssetGUID": ""
-                      },
-                      "layer": 0,
-                      "positionOffset": {
-                        "$type": "Il2CppAssets.Scripts.Simulation.SMath.Vector3, Assembly-CSharp",
-                        "x": 0.0,
-                        "y": 0.0,
-                        "z": 0.0,
-                        "MagnitudeSquared": 0.0,
-                        "Magnitude": 0.0,
-                        "Rotation": 0.0,
-                        "SimToDispRotation": 180.0
-                      },
-                      "scale": 0.0,
-                      "ignoreRotation": false,
-                      "animationChanges": [],
-                      "delayedReveal": 0.0,
-                      "category": 0,
-                      "isAnimationPaused": false,
-                      "name": ""
-                    },
+                    "displayModel": null,
                     "cantCreateSubProjectiles": false,
                     "CappedPierce": 3.0,
                     "name": ""
@@ -7909,6 +9451,7 @@
               "tokenValue": 5,
               "sizeMin": 0.7,
               "sizeMax": 2.0,
+              "staminaReward": 1.0,
               "fishMovementPatterns": [
                 {
                   "$type": "UnityEngine.AnimationCurve, UnityEngine.CoreModule",
@@ -8075,6 +9618,10 @@
                 "AssetGUID": "c9332ade35255e74ebc18d6b44556839"
               },
               "blackFrame": 200,
+              "fishMaxStamina": 10.0,
+              "fishStaminaStartingPercent": 0.5,
+              "fishStaminaIncreaseRate": 1.5,
+              "fishStaminaDecreaseRate": 2.5,
               "shinyPercentage": 5.0,
               "shinyTokenValueMultiplier": 20.0,
               "shinyIcon": {
@@ -8085,9 +9632,10 @@
               "name": "boot",
               "hideFlags": 0
             },
-            "weight": 1.2800845,
-            "value": 6,
-            "isShiny": false
+            "weight": 0.0,
+            "value": 0,
+            "isShiny": false,
+            "ShowQuantity": true
           }
         ]
       },
@@ -8110,6 +9658,7 @@
               "tokenValue": 2,
               "sizeMin": 9.0,
               "sizeMax": 20.0,
+              "staminaReward": 1.0,
               "fishMovementPatterns": [
                 {
                   "$type": "UnityEngine.AnimationCurve, UnityEngine.CoreModule",
@@ -8196,6 +9745,10 @@
                 "AssetGUID": "c9332ade35255e74ebc18d6b44556839"
               },
               "blackFrame": 200,
+              "fishMaxStamina": 10.0,
+              "fishStaminaStartingPercent": 0.5,
+              "fishStaminaIncreaseRate": 1.5,
+              "fishStaminaDecreaseRate": 2.5,
               "shinyPercentage": 5.0,
               "shinyTokenValueMultiplier": 20.0,
               "shinyIcon": {
@@ -8206,9 +9759,10 @@
               "name": "tire",
               "hideFlags": 0
             },
-            "weight": 19.385406,
-            "value": 38,
-            "isShiny": false
+            "weight": 0.0,
+            "value": 0,
+            "isShiny": false,
+            "ShowQuantity": true
           }
         ]
       },
@@ -8231,6 +9785,7 @@
               "tokenValue": 200,
               "sizeMin": 0.02,
               "sizeMax": 0.15,
+              "staminaReward": 1.0,
               "fishMovementPatterns": [
                 {
                   "$type": "UnityEngine.AnimationCurve, UnityEngine.CoreModule",
@@ -8337,6 +9892,10 @@
                 "AssetGUID": "c9332ade35255e74ebc18d6b44556839"
               },
               "blackFrame": 200,
+              "fishMaxStamina": 10.0,
+              "fishStaminaStartingPercent": 0.5,
+              "fishStaminaIncreaseRate": 1.5,
+              "fishStaminaDecreaseRate": 2.5,
               "shinyPercentage": 5.0,
               "shinyTokenValueMultiplier": 20.0,
               "shinyIcon": {
@@ -8349,7 +9908,8 @@
             },
             "weight": 0.0,
             "value": 0,
-            "isShiny": false
+            "isShiny": false,
+            "ShowQuantity": true
           }
         ]
       },
@@ -8372,6 +9932,7 @@
               "tokenValue": 63,
               "sizeMin": 0.05,
               "sizeMax": 0.2,
+              "staminaReward": 1.0,
               "fishMovementPatterns": [
                 {
                   "$type": "UnityEngine.AnimationCurve, UnityEngine.CoreModule",
@@ -8468,6 +10029,10 @@
                 "AssetGUID": "c9332ade35255e74ebc18d6b44556839"
               },
               "blackFrame": 200,
+              "fishMaxStamina": 10.0,
+              "fishStaminaStartingPercent": 0.5,
+              "fishStaminaIncreaseRate": 1.5,
+              "fishStaminaDecreaseRate": 2.5,
               "shinyPercentage": 5.0,
               "shinyTokenValueMultiplier": 20.0,
               "shinyIcon": {
@@ -8478,9 +10043,10 @@
               "name": "bananaPeel",
               "hideFlags": 0
             },
-            "weight": 0.16142693,
-            "value": 10,
-            "isShiny": false
+            "weight": 0.0,
+            "value": 0,
+            "isShiny": false,
+            "ShowQuantity": true
           }
         ]
       },
@@ -8503,6 +10069,7 @@
               "tokenValue": 15,
               "sizeMin": 0.9,
               "sizeMax": 2.3,
+              "staminaReward": 1.0,
               "fishMovementPatterns": [
                 {
                   "$type": "UnityEngine.AnimationCurve, UnityEngine.CoreModule",
@@ -8599,6 +10166,10 @@
                 "AssetGUID": "c9332ade35255e74ebc18d6b44556839"
               },
               "blackFrame": 200,
+              "fishMaxStamina": 10.0,
+              "fishStaminaStartingPercent": 0.5,
+              "fishStaminaIncreaseRate": 1.5,
+              "fishStaminaDecreaseRate": 2.5,
               "shinyPercentage": 5.0,
               "shinyTokenValueMultiplier": 20.0,
               "shinyIcon": {
@@ -8609,9 +10180,10 @@
               "name": "decommissionedPineapple",
               "hideFlags": 0
             },
-            "weight": 1.7289869,
-            "value": 25,
-            "isShiny": false
+            "weight": 0.0,
+            "value": 0,
+            "isShiny": false,
+            "ShowQuantity": true
           }
         ]
       },
@@ -8634,6 +10206,7 @@
               "tokenValue": 250,
               "sizeMin": 0.05,
               "sizeMax": 0.1,
+              "staminaReward": 1.0,
               "fishMovementPatterns": [
                 {
                   "$type": "UnityEngine.AnimationCurve, UnityEngine.CoreModule",
@@ -8790,6 +10363,10 @@
                 "AssetGUID": "c9332ade35255e74ebc18d6b44556839"
               },
               "blackFrame": 200,
+              "fishMaxStamina": 10.0,
+              "fishStaminaStartingPercent": 0.5,
+              "fishStaminaIncreaseRate": 1.5,
+              "fishStaminaDecreaseRate": 2.5,
               "shinyPercentage": 5.0,
               "shinyTokenValueMultiplier": 20.0,
               "shinyIcon": {
@@ -8800,9 +10377,10 @@
               "name": "rustyDart",
               "hideFlags": 0
             },
-            "weight": 0.069904596,
-            "value": 17,
-            "isShiny": false
+            "weight": 0.0,
+            "value": 0,
+            "isShiny": false,
+            "ShowQuantity": true
           }
         ]
       },
@@ -8825,6 +10403,7 @@
               "tokenValue": 35,
               "sizeMin": 0.9,
               "sizeMax": 2.3,
+              "staminaReward": 1.0,
               "fishMovementPatterns": [
                 {
                   "$type": "UnityEngine.AnimationCurve, UnityEngine.CoreModule",
@@ -8991,6 +10570,10 @@
                 "AssetGUID": "c9332ade35255e74ebc18d6b44556839"
               },
               "blackFrame": 200,
+              "fishMaxStamina": 10.0,
+              "fishStaminaStartingPercent": 0.5,
+              "fishStaminaIncreaseRate": 1.5,
+              "fishStaminaDecreaseRate": 2.5,
               "shinyPercentage": 5.0,
               "shinyTokenValueMultiplier": 20.0,
               "shinyIcon": {
@@ -9003,7 +10586,8 @@
             },
             "weight": 0.0,
             "value": 0,
-            "isShiny": false
+            "isShiny": false,
+            "ShowQuantity": true
           }
         ]
       },
@@ -9026,6 +10610,7 @@
               "tokenValue": 2,
               "sizeMin": 0.02,
               "sizeMax": 10.0,
+              "staminaReward": 1.0,
               "fishMovementPatterns": [
                 {
                   "$type": "UnityEngine.AnimationCurve, UnityEngine.CoreModule",
@@ -9142,6 +10727,10 @@
                 "AssetGUID": "c9332ade35255e74ebc18d6b44556839"
               },
               "blackFrame": 200,
+              "fishMaxStamina": 10.0,
+              "fishStaminaStartingPercent": 0.5,
+              "fishStaminaIncreaseRate": 1.5,
+              "fishStaminaDecreaseRate": 2.5,
               "shinyPercentage": 5.0,
               "shinyTokenValueMultiplier": 20.0,
               "shinyIcon": {
@@ -9152,9 +10741,10 @@
               "name": "junk",
               "hideFlags": 0
             },
-            "weight": 0.6090489,
-            "value": 1,
-            "isShiny": false
+            "weight": 0.0,
+            "value": 0,
+            "isShiny": false,
+            "ShowQuantity": true
           }
         ]
       },
@@ -9177,6 +10767,7 @@
               "tokenValue": 5,
               "sizeMin": 1.5,
               "sizeMax": 5.0,
+              "staminaReward": 3.0,
               "fishMovementPatterns": [
                 {
                   "$type": "UnityEngine.AnimationCurve, UnityEngine.CoreModule",
@@ -9253,6 +10844,10 @@
                 "AssetGUID": "e1dff647f6619c74d9da1dcc7434e779"
               },
               "blackFrame": 100,
+              "fishMaxStamina": 10.0,
+              "fishStaminaStartingPercent": 0.5,
+              "fishStaminaIncreaseRate": 1.5,
+              "fishStaminaDecreaseRate": 2.5,
               "shinyPercentage": 3.0,
               "shinyTokenValueMultiplier": 3.0,
               "shinyIcon": {
@@ -9265,7 +10860,8 @@
             },
             "weight": 0.0,
             "value": 0,
-            "isShiny": false
+            "isShiny": false,
+            "ShowQuantity": true
           }
         ]
       },
@@ -9288,6 +10884,7 @@
               "tokenValue": 5,
               "sizeMin": 1.6,
               "sizeMax": 6.0,
+              "staminaReward": 3.0,
               "fishMovementPatterns": [
                 {
                   "$type": "UnityEngine.AnimationCurve, UnityEngine.CoreModule",
@@ -9434,6 +11031,10 @@
                 "AssetGUID": "e1dff647f6619c74d9da1dcc7434e779"
               },
               "blackFrame": 100,
+              "fishMaxStamina": 10.0,
+              "fishStaminaStartingPercent": 0.5,
+              "fishStaminaIncreaseRate": 1.5,
+              "fishStaminaDecreaseRate": 2.5,
               "shinyPercentage": 3.0,
               "shinyTokenValueMultiplier": 3.0,
               "shinyIcon": {
@@ -9444,9 +11045,10 @@
               "name": "blueBloonFish",
               "hideFlags": 0
             },
-            "weight": 2.4747605,
-            "value": 14,
-            "isShiny": false
+            "weight": 0.0,
+            "value": 0,
+            "isShiny": false,
+            "ShowQuantity": true
           }
         ]
       },
@@ -9469,6 +11071,7 @@
               "tokenValue": 5,
               "sizeMin": 2.7,
               "sizeMax": 8.0,
+              "staminaReward": 3.0,
               "fishMovementPatterns": [
                 {
                   "$type": "UnityEngine.AnimationCurve, UnityEngine.CoreModule",
@@ -9575,6 +11178,10 @@
                 "AssetGUID": "e1dff647f6619c74d9da1dcc7434e779"
               },
               "blackFrame": 100,
+              "fishMaxStamina": 10.0,
+              "fishStaminaStartingPercent": 0.5,
+              "fishStaminaIncreaseRate": 1.5,
+              "fishStaminaDecreaseRate": 2.5,
               "shinyPercentage": 3.0,
               "shinyTokenValueMultiplier": 3.0,
               "shinyIcon": {
@@ -9587,7 +11194,8 @@
             },
             "weight": 0.0,
             "value": 0,
-            "isShiny": false
+            "isShiny": false,
+            "ShowQuantity": true
           }
         ]
       },
@@ -9610,6 +11218,7 @@
               "tokenValue": 4,
               "sizeMin": 3.0,
               "sizeMax": 20.0,
+              "staminaReward": 3.0,
               "fishMovementPatterns": [
                 {
                   "$type": "UnityEngine.AnimationCurve, UnityEngine.CoreModule",
@@ -9756,6 +11365,10 @@
                 "AssetGUID": "e1dff647f6619c74d9da1dcc7434e779"
               },
               "blackFrame": 100,
+              "fishMaxStamina": 10.0,
+              "fishStaminaStartingPercent": 0.5,
+              "fishStaminaIncreaseRate": 1.5,
+              "fishStaminaDecreaseRate": 2.5,
               "shinyPercentage": 3.0,
               "shinyTokenValueMultiplier": 3.0,
               "shinyIcon": {
@@ -9766,9 +11379,10 @@
               "name": "monkeFish",
               "hideFlags": 0
             },
-            "weight": 13.987844,
-            "value": 55,
-            "isShiny": false
+            "weight": 0.0,
+            "value": 0,
+            "isShiny": false,
+            "ShowQuantity": true
           }
         ]
       },
@@ -9791,6 +11405,7 @@
               "tokenValue": 3,
               "sizeMin": 6.0,
               "sizeMax": 16.0,
+              "staminaReward": 3.0,
               "fishMovementPatterns": [
                 {
                   "$type": "UnityEngine.AnimationCurve, UnityEngine.CoreModule",
@@ -9947,6 +11562,10 @@
                 "AssetGUID": "e1dff647f6619c74d9da1dcc7434e779"
               },
               "blackFrame": 100,
+              "fishMaxStamina": 10.0,
+              "fishStaminaStartingPercent": 0.5,
+              "fishStaminaIncreaseRate": 1.5,
+              "fishStaminaDecreaseRate": 2.5,
               "shinyPercentage": 3.0,
               "shinyTokenValueMultiplier": 3.0,
               "shinyIcon": {
@@ -9957,9 +11576,10 @@
               "name": "rainbowFish",
               "hideFlags": 0
             },
-            "weight": 6.5759745,
-            "value": 19,
-            "isShiny": false
+            "weight": 0.0,
+            "value": 0,
+            "isShiny": false,
+            "ShowQuantity": true
           }
         ]
       },
@@ -9982,6 +11602,7 @@
               "tokenValue": 10,
               "sizeMin": 2.8,
               "sizeMax": 8.0,
+              "staminaReward": 5.0,
               "fishMovementPatterns": [
                 {
                   "$type": "UnityEngine.AnimationCurve, UnityEngine.CoreModule",
@@ -10138,7 +11759,11 @@
                 "AssetGUID": "89828850c0cf3f548b323d3111bd2795"
               },
               "blackFrame": 50,
-              "shinyPercentage": 2.0,
+              "fishMaxStamina": 10.0,
+              "fishStaminaStartingPercent": 0.5,
+              "fishStaminaIncreaseRate": 1.5,
+              "fishStaminaDecreaseRate": 2.5,
+              "shinyPercentage": 5.0,
               "shinyTokenValueMultiplier": 4.0,
               "shinyIcon": {
                 "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.SpriteReference, Il2CppNinjaKiwi.Common",
@@ -10150,7 +11775,8 @@
             },
             "weight": 0.0,
             "value": 0,
-            "isShiny": false
+            "isShiny": false,
+            "ShowQuantity": true
           }
         ]
       },
@@ -10173,6 +11799,7 @@
               "tokenValue": 23,
               "sizeMin": 0.9,
               "sizeMax": 4.5,
+              "staminaReward": 5.0,
               "fishMovementPatterns": [
                 {
                   "$type": "UnityEngine.AnimationCurve, UnityEngine.CoreModule",
@@ -10329,6 +11956,10 @@
                 "AssetGUID": "89828850c0cf3f548b323d3111bd2795"
               },
               "blackFrame": 50,
+              "fishMaxStamina": 10.0,
+              "fishStaminaStartingPercent": 0.5,
+              "fishStaminaIncreaseRate": 1.5,
+              "fishStaminaDecreaseRate": 2.5,
               "shinyPercentage": 2.0,
               "shinyTokenValueMultiplier": 4.0,
               "shinyIcon": {
@@ -10341,7 +11972,8 @@
             },
             "weight": 0.0,
             "value": 0,
-            "isShiny": false
+            "isShiny": false,
+            "ShowQuantity": true
           }
         ]
       },
@@ -10364,6 +11996,7 @@
               "tokenValue": 18,
               "sizeMin": 2.5,
               "sizeMax": 5.0,
+              "staminaReward": 5.0,
               "fishMovementPatterns": [
                 {
                   "$type": "UnityEngine.AnimationCurve, UnityEngine.CoreModule",
@@ -10470,6 +12103,10 @@
                 "AssetGUID": "89828850c0cf3f548b323d3111bd2795"
               },
               "blackFrame": 50,
+              "fishMaxStamina": 10.0,
+              "fishStaminaStartingPercent": 0.5,
+              "fishStaminaIncreaseRate": 1.5,
+              "fishStaminaDecreaseRate": 2.5,
               "shinyPercentage": 2.0,
               "shinyTokenValueMultiplier": 4.0,
               "shinyIcon": {
@@ -10480,9 +12117,10 @@
               "name": "zebraFish",
               "hideFlags": 0
             },
-            "weight": 3.2371411,
-            "value": 97,
-            "isShiny": false
+            "weight": 0.0,
+            "value": 0,
+            "isShiny": false,
+            "ShowQuantity": true
           }
         ]
       },
@@ -10505,6 +12143,7 @@
               "tokenValue": 8,
               "sizeMin": 5.0,
               "sizeMax": 13.5,
+              "staminaReward": 5.0,
               "fishMovementPatterns": [
                 {
                   "$type": "UnityEngine.AnimationCurve, UnityEngine.CoreModule",
@@ -10611,6 +12250,10 @@
                 "AssetGUID": "89828850c0cf3f548b323d3111bd2795"
               },
               "blackFrame": 50,
+              "fishMaxStamina": 10.0,
+              "fishStaminaStartingPercent": 0.5,
+              "fishStaminaIncreaseRate": 1.5,
+              "fishStaminaDecreaseRate": 2.5,
               "shinyPercentage": 2.0,
               "shinyTokenValueMultiplier": 4.0,
               "shinyIcon": {
@@ -10623,7 +12266,8 @@
             },
             "weight": 0.0,
             "value": 0,
-            "isShiny": false
+            "isShiny": false,
+            "ShowQuantity": true
           }
         ]
       },
@@ -10646,6 +12290,7 @@
               "tokenValue": 7,
               "sizeMin": 20.0,
               "sizeMax": 80.0,
+              "staminaReward": 5.0,
               "fishMovementPatterns": [
                 {
                   "$type": "UnityEngine.AnimationCurve, UnityEngine.CoreModule",
@@ -10712,6 +12357,10 @@
                 "AssetGUID": "89828850c0cf3f548b323d3111bd2795"
               },
               "blackFrame": 50,
+              "fishMaxStamina": 10.0,
+              "fishStaminaStartingPercent": 0.5,
+              "fishStaminaIncreaseRate": 1.5,
+              "fishStaminaDecreaseRate": 2.5,
               "shinyPercentage": 2.0,
               "shinyTokenValueMultiplier": 4.0,
               "shinyIcon": {
@@ -10724,7 +12373,8 @@
             },
             "weight": 0.0,
             "value": 0,
-            "isShiny": false
+            "isShiny": false,
+            "ShowQuantity": true
           }
         ]
       },
@@ -10747,6 +12397,7 @@
               "tokenValue": 7,
               "sizeMin": 10.0,
               "sizeMax": 25.0,
+              "staminaReward": 5.0,
               "fishMovementPatterns": [
                 {
                   "$type": "UnityEngine.AnimationCurve, UnityEngine.CoreModule",
@@ -10843,6 +12494,10 @@
                 "AssetGUID": "89828850c0cf3f548b323d3111bd2795"
               },
               "blackFrame": 50,
+              "fishMaxStamina": 10.0,
+              "fishStaminaStartingPercent": 0.5,
+              "fishStaminaIncreaseRate": 1.5,
+              "fishStaminaDecreaseRate": 2.5,
               "shinyPercentage": 2.0,
               "shinyTokenValueMultiplier": 4.0,
               "shinyIcon": {
@@ -10853,9 +12508,10 @@
               "name": "ceramicEel",
               "hideFlags": 0
             },
-            "weight": 15.859185,
-            "value": 111,
-            "isShiny": false
+            "weight": 0.0,
+            "value": 0,
+            "isShiny": false,
+            "ShowQuantity": true
           }
         ]
       },
@@ -10878,6 +12534,7 @@
               "tokenValue": 4,
               "sizeMin": 15.0,
               "sizeMax": 40.0,
+              "staminaReward": 5.0,
               "fishMovementPatterns": [
                 {
                   "$type": "UnityEngine.AnimationCurve, UnityEngine.CoreModule",
@@ -11024,6 +12681,10 @@
                 "AssetGUID": "89828850c0cf3f548b323d3111bd2795"
               },
               "blackFrame": 50,
+              "fishMaxStamina": 10.0,
+              "fishStaminaStartingPercent": 0.5,
+              "fishStaminaIncreaseRate": 1.5,
+              "fishStaminaDecreaseRate": 2.5,
               "shinyPercentage": 2.0,
               "shinyTokenValueMultiplier": 4.0,
               "shinyIcon": {
@@ -11034,9 +12695,10 @@
               "name": "camoRegrowAngler",
               "hideFlags": 0
             },
-            "weight": 21.352491,
-            "value": 256,
-            "isShiny": false
+            "weight": 0.0,
+            "value": 0,
+            "isShiny": false,
+            "ShowQuantity": true
           }
         ]
       },
@@ -11059,6 +12721,7 @@
               "tokenValue": 30,
               "sizeMin": 5.0,
               "sizeMax": 20.0,
+              "staminaReward": 10.0,
               "fishMovementPatterns": [
                 {
                   "$type": "UnityEngine.AnimationCurve, UnityEngine.CoreModule",
@@ -11175,6 +12838,10 @@
                 "AssetGUID": "e39c4aa4748759c4da8a918eb3198b0b"
               },
               "blackFrame": 25,
+              "fishMaxStamina": 10.0,
+              "fishStaminaStartingPercent": 0.5,
+              "fishStaminaIncreaseRate": 1.5,
+              "fishStaminaDecreaseRate": 2.5,
               "shinyPercentage": 1.0,
               "shinyTokenValueMultiplier": 5.0,
               "shinyIcon": {
@@ -11185,9 +12852,10 @@
               "name": "leadPufferFish",
               "hideFlags": 0
             },
-            "weight": 6.5261693,
-            "value": 424,
-            "isShiny": false
+            "weight": 0.0,
+            "value": 0,
+            "isShiny": false,
+            "ShowQuantity": true
           }
         ]
       },
@@ -11210,6 +12878,7 @@
               "tokenValue": 2,
               "sizeMin": 150.0,
               "sizeMax": 300.0,
+              "staminaReward": 10.0,
               "fishMovementPatterns": [
                 {
                   "$type": "UnityEngine.AnimationCurve, UnityEngine.CoreModule",
@@ -11316,6 +12985,10 @@
                 "AssetGUID": "e39c4aa4748759c4da8a918eb3198b0b"
               },
               "blackFrame": 25,
+              "fishMaxStamina": 10.0,
+              "fishStaminaStartingPercent": 0.5,
+              "fishStaminaIncreaseRate": 1.5,
+              "fishStaminaDecreaseRate": 2.5,
               "shinyPercentage": 1.0,
               "shinyTokenValueMultiplier": 5.0,
               "shinyIcon": {
@@ -11326,9 +12999,10 @@
               "name": "bloonfinTuna",
               "hideFlags": 0
             },
-            "weight": 245.67627,
-            "value": 4176,
-            "isShiny": false
+            "weight": 0.0,
+            "value": 0,
+            "isShiny": false,
+            "ShowQuantity": true
           }
         ]
       },
@@ -11351,6 +13025,7 @@
               "tokenValue": 2,
               "sizeMin": 100.0,
               "sizeMax": 400.0,
+              "staminaReward": 10.0,
               "fishMovementPatterns": [
                 {
                   "$type": "UnityEngine.AnimationCurve, UnityEngine.CoreModule",
@@ -11427,6 +13102,10 @@
                 "AssetGUID": "e39c4aa4748759c4da8a918eb3198b0b"
               },
               "blackFrame": 25,
+              "fishMaxStamina": 10.0,
+              "fishStaminaStartingPercent": 0.5,
+              "fishStaminaIncreaseRate": 1.5,
+              "fishStaminaDecreaseRate": 2.5,
               "shinyPercentage": 1.0,
               "shinyTokenValueMultiplier": 5.0,
               "shinyIcon": {
@@ -11437,9 +13116,10 @@
               "name": "sunFish",
               "hideFlags": 0
             },
-            "weight": 264.90152,
-            "value": 1324,
-            "isShiny": false
+            "weight": 0.0,
+            "value": 0,
+            "isShiny": false,
+            "ShowQuantity": true
           }
         ]
       },
@@ -11462,6 +13142,7 @@
               "tokenValue": 1,
               "sizeMin": 100.0,
               "sizeMax": 1000.0,
+              "staminaReward": 10.0,
               "fishMovementPatterns": [
                 {
                   "$type": "UnityEngine.AnimationCurve, UnityEngine.CoreModule",
@@ -11658,6 +13339,10 @@
                 "AssetGUID": "e39c4aa4748759c4da8a918eb3198b0b"
               },
               "blackFrame": 25,
+              "fishMaxStamina": 10.0,
+              "fishStaminaStartingPercent": 0.5,
+              "fishStaminaIncreaseRate": 1.5,
+              "fishStaminaDecreaseRate": 2.5,
               "shinyPercentage": 0.1,
               "shinyTokenValueMultiplier": 5.0,
               "shinyIcon": {
@@ -11668,9 +13353,10 @@
               "name": "bloonChipper",
               "hideFlags": 0
             },
-            "weight": 1187.7533,
-            "value": 2375,
-            "isShiny": false
+            "weight": 0.0,
+            "value": 0,
+            "isShiny": false,
+            "ShowQuantity": true
           }
         ]
       },
@@ -11693,6 +13379,7 @@
               "tokenValue": 1,
               "sizeMin": 200.0,
               "sizeMax": 5000.0,
+              "staminaReward": 10.0,
               "fishMovementPatterns": [
                 {
                   "$type": "UnityEngine.AnimationCurve, UnityEngine.CoreModule",
@@ -11889,6 +13576,10 @@
                 "AssetGUID": "e39c4aa4748759c4da8a918eb3198b0b"
               },
               "blackFrame": 25,
+              "fishMaxStamina": 10.0,
+              "fishStaminaStartingPercent": 0.5,
+              "fishStaminaIncreaseRate": 1.5,
+              "fishStaminaDecreaseRate": 2.5,
               "shinyPercentage": 0.5,
               "shinyTokenValueMultiplier": 5.0,
               "shinyIcon": {
@@ -11899,9 +13590,10 @@
               "name": "trueSunCod",
               "hideFlags": 0
             },
-            "weight": 4247.4214,
-            "value": 8494,
-            "isShiny": false
+            "weight": 0.0,
+            "value": 0,
+            "isShiny": false,
+            "ShowQuantity": true
           }
         ]
       },
@@ -11924,6 +13616,7 @@
               "tokenValue": 4000,
               "sizeMin": 0.5,
               "sizeMax": 4.0,
+              "staminaReward": 10.0,
               "fishMovementPatterns": [
                 {
                   "$type": "UnityEngine.AnimationCurve, UnityEngine.CoreModule",
@@ -12380,6 +14073,10 @@
                 "AssetGUID": "e39c4aa4748759c4da8a918eb3198b0b"
               },
               "blackFrame": 25,
+              "fishMaxStamina": 10.0,
+              "fishStaminaStartingPercent": 0.5,
+              "fishStaminaIncreaseRate": 1.5,
+              "fishStaminaDecreaseRate": 2.5,
               "shinyPercentage": 0.01,
               "shinyTokenValueMultiplier": 2.0,
               "shinyIcon": {
@@ -12392,82 +14089,8 @@
             },
             "weight": 0.0,
             "value": 0,
-            "isShiny": false
-          }
-        ]
-      }
-    ],
-    "fishPoolChances": [
-      {
-        "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierFishTierChances, Assembly-CSharp",
-        "rodRequired": 1,
-        "poolChances": [
-          {
-            "$type": "Il2CppAssets.Scripts.Data.Legends.FishingTierPair, Assembly-CSharp",
-            "fishTier": 0,
-            "chance": 35.0
-          },
-          {
-            "$type": "Il2CppAssets.Scripts.Data.Legends.FishingTierPair, Assembly-CSharp",
-            "fishTier": 1,
-            "chance": 60.0
-          },
-          {
-            "$type": "Il2CppAssets.Scripts.Data.Legends.FishingTierPair, Assembly-CSharp",
-            "fishTier": 2,
-            "chance": 5.0
-          }
-        ]
-      },
-      {
-        "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierFishTierChances, Assembly-CSharp",
-        "rodRequired": 2,
-        "poolChances": [
-          {
-            "$type": "Il2CppAssets.Scripts.Data.Legends.FishingTierPair, Assembly-CSharp",
-            "fishTier": 0,
-            "chance": 10.0
-          },
-          {
-            "$type": "Il2CppAssets.Scripts.Data.Legends.FishingTierPair, Assembly-CSharp",
-            "fishTier": 1,
-            "chance": 35.0
-          },
-          {
-            "$type": "Il2CppAssets.Scripts.Data.Legends.FishingTierPair, Assembly-CSharp",
-            "fishTier": 2,
-            "chance": 55.0
-          },
-          {
-            "$type": "Il2CppAssets.Scripts.Data.Legends.FishingTierPair, Assembly-CSharp",
-            "fishTier": 3,
-            "chance": 5.0
-          }
-        ]
-      },
-      {
-        "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierFishTierChances, Assembly-CSharp",
-        "rodRequired": 3,
-        "poolChances": [
-          {
-            "$type": "Il2CppAssets.Scripts.Data.Legends.FishingTierPair, Assembly-CSharp",
-            "fishTier": 0,
-            "chance": 1.0
-          },
-          {
-            "$type": "Il2CppAssets.Scripts.Data.Legends.FishingTierPair, Assembly-CSharp",
-            "fishTier": 1,
-            "chance": 14.0
-          },
-          {
-            "$type": "Il2CppAssets.Scripts.Data.Legends.FishingTierPair, Assembly-CSharp",
-            "fishTier": 2,
-            "chance": 70.0
-          },
-          {
-            "$type": "Il2CppAssets.Scripts.Data.Legends.FishingTierPair, Assembly-CSharp",
-            "fishTier": 3,
-            "chance": 15.0
+            "isShiny": false,
+            "ShowQuantity": true
           }
         ]
       }
@@ -12482,7 +14105,8 @@
             "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierPowerLoot, Assembly-CSharp",
             "powerId": "StaminaPotion",
             "locsExtras": [],
-            "amount": 1
+            "amount": 1,
+            "ShowQuantity": true
           }
         ]
       },
@@ -12493,7 +14117,8 @@
         "loot": [
           {
             "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierCurrencyLoot, Assembly-CSharp",
-            "amount": 500
+            "amount": 500,
+            "ShowQuantity": true
           }
         ]
       },
@@ -12506,7 +14131,8 @@
             "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierPowerLoot, Assembly-CSharp",
             "powerId": "HealthPotion",
             "locsExtras": [],
-            "amount": 1
+            "amount": 1,
+            "ShowQuantity": true
           }
         ]
       }
@@ -12556,7 +14182,8 @@
             "name": "ExtraStool",
             "hideFlags": 0
           },
-          "maxCopies": 2
+          "maxCopies": 2,
+          "ShowQuantity": true
         },
         "itemTypeIcon": {
           "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.SpriteReference, Il2CppNinjaKiwi.Common",
@@ -12610,7 +14237,8 @@
             "name": "FavoredTrades",
             "hideFlags": 0
           },
-          "maxCopies": 1
+          "maxCopies": 1,
+          "ShowQuantity": true
         },
         "itemTypeIcon": {
           "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.SpriteReference, Il2CppNinjaKiwi.Common",
@@ -12666,7 +14294,8 @@
             "name": "HomesteadWestWing",
             "hideFlags": 0
           },
-          "maxCopies": 2
+          "maxCopies": 2,
+          "ShowQuantity": true
         },
         "itemTypeIcon": {
           "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.SpriteReference, Il2CppNinjaKiwi.Common",
@@ -12722,7 +14351,8 @@
             "name": "HomesteadEastWing",
             "hideFlags": 0
           },
-          "maxCopies": 2
+          "maxCopies": 2,
+          "ShowQuantity": true
         },
         "itemTypeIcon": {
           "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.SpriteReference, Il2CppNinjaKiwi.Common",
@@ -12745,7 +14375,8 @@
             "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.SpriteReference, Il2CppNinjaKiwi.Common",
             "guidRef": "da5c78312c231fd45b1cfabe10450648",
             "AssetGUID": "da5c78312c231fd45b1cfabe10450648"
-          }
+          },
+          "ShowQuantity": true
         },
         "itemTypeIcon": {
           "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.SpriteReference, Il2CppNinjaKiwi.Common",
@@ -12761,7 +14392,8 @@
         "loot": {
           "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierKeyLoot, Assembly-CSharp",
           "keyName": "chestKey",
-          "amount": 1
+          "amount": 1,
+          "ShowQuantity": true
         },
         "itemTypeIcon": {
           "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.SpriteReference, Il2CppNinjaKiwi.Common",
@@ -12815,7 +14447,8 @@
             "name": "UnseenTrail",
             "hideFlags": 0
           },
-          "maxCopies": 1
+          "maxCopies": 1,
+          "ShowQuantity": true
         },
         "itemTypeIcon": {
           "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.SpriteReference, Il2CppNinjaKiwi.Common",
@@ -12869,7 +14502,8 @@
             "name": "GhostTrail",
             "hideFlags": 0
           },
-          "maxCopies": 1
+          "maxCopies": 1,
+          "ShowQuantity": true
         },
         "itemTypeIcon": {
           "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.SpriteReference, Il2CppNinjaKiwi.Common",
@@ -12927,7 +14561,8 @@
             "name": "GreatFishingRod",
             "hideFlags": 0
           },
-          "maxCopies": 1
+          "maxCopies": 1,
+          "ShowQuantity": true
         },
         "itemTypeIcon": {
           "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.SpriteReference, Il2CppNinjaKiwi.Common",
@@ -12981,7 +14616,8 @@
             "name": "LegendaryFishingRod",
             "hideFlags": 0
           },
-          "maxCopies": 1
+          "maxCopies": 1,
+          "ShowQuantity": true
         },
         "itemTypeIcon": {
           "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.SpriteReference, Il2CppNinjaKiwi.Common",
@@ -13050,7 +14686,8 @@
             "name": "HealyMajig",
             "hideFlags": 0
           },
-          "maxCopies": 1
+          "maxCopies": 1,
+          "ShowQuantity": true
         },
         "itemTypeIcon": {
           "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.SpriteReference, Il2CppNinjaKiwi.Common",
@@ -13113,7 +14750,8 @@
             "name": "BetterHealyMajig",
             "hideFlags": 0
           },
-          "maxCopies": 1
+          "maxCopies": 1,
+          "ShowQuantity": true
         },
         "itemTypeIcon": {
           "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.SpriteReference, Il2CppNinjaKiwi.Common",
@@ -13171,7 +14809,8 @@
             "name": "LotsOfLives",
             "hideFlags": 0
           },
-          "maxCopies": 1
+          "maxCopies": 1,
+          "ShowQuantity": true
         },
         "itemTypeIcon": {
           "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.SpriteReference, Il2CppNinjaKiwi.Common",
@@ -13225,7 +14864,8 @@
             "name": "MaxLives",
             "hideFlags": 0
           },
-          "maxCopies": 1
+          "maxCopies": 1,
+          "ShowQuantity": true
         },
         "itemTypeIcon": {
           "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.SpriteReference, Il2CppNinjaKiwi.Common",
@@ -13335,7 +14975,8 @@
             "name": "FasterHeroCooldowns",
             "hideFlags": 0
           },
-          "maxCopies": 1
+          "maxCopies": 1,
+          "ShowQuantity": true
         },
         "itemTypeIcon": {
           "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.SpriteReference, Il2CppNinjaKiwi.Common",
@@ -13441,7 +15082,8 @@
             "name": "EvenFasterHeroCooldowns",
             "hideFlags": 0
           },
-          "maxCopies": 1
+          "maxCopies": 1,
+          "ShowQuantity": true
         },
         "itemTypeIcon": {
           "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.SpriteReference, Il2CppNinjaKiwi.Common",
@@ -13551,7 +15193,8 @@
             "name": "SheriffDamage1",
             "hideFlags": 0
           },
-          "maxCopies": 1
+          "maxCopies": 1,
+          "ShowQuantity": true
         },
         "itemTypeIcon": {
           "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.SpriteReference, Il2CppNinjaKiwi.Common",
@@ -13657,7 +15300,8 @@
             "name": "SheriffDamage2",
             "hideFlags": 0
           },
-          "maxCopies": 1
+          "maxCopies": 1,
+          "ShowQuantity": true
         },
         "itemTypeIcon": {
           "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.SpriteReference, Il2CppNinjaKiwi.Common",
@@ -13765,7 +15409,8 @@
             "name": "SheriffDamage3",
             "hideFlags": 0
           },
-          "maxCopies": 1
+          "maxCopies": 1,
+          "ShowQuantity": true
         },
         "itemTypeIcon": {
           "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.SpriteReference, Il2CppNinjaKiwi.Common",
@@ -13873,7 +15518,8 @@
             "name": "SheriffRange1",
             "hideFlags": 0
           },
-          "maxCopies": 1
+          "maxCopies": 1,
+          "ShowQuantity": true
         },
         "itemTypeIcon": {
           "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.SpriteReference, Il2CppNinjaKiwi.Common",
@@ -13979,7 +15625,8 @@
             "name": "SheriffRange2",
             "hideFlags": 0
           },
-          "maxCopies": 1
+          "maxCopies": 1,
+          "ShowQuantity": true
         },
         "itemTypeIcon": {
           "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.SpriteReference, Il2CppNinjaKiwi.Common",
@@ -14087,7 +15734,8 @@
             "name": "SheriffRange3",
             "hideFlags": 0
           },
-          "maxCopies": 1
+          "maxCopies": 1,
+          "ShowQuantity": true
         },
         "itemTypeIcon": {
           "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.SpriteReference, Il2CppNinjaKiwi.Common",
@@ -14143,7 +15791,8 @@
             "name": "SheriffMorale1",
             "hideFlags": 0
           },
-          "maxCopies": 1
+          "maxCopies": 1,
+          "ShowQuantity": true
         },
         "itemTypeIcon": {
           "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.SpriteReference, Il2CppNinjaKiwi.Common",
@@ -14197,7 +15846,8 @@
             "name": "SheriffMorale2",
             "hideFlags": 0
           },
-          "maxCopies": 1
+          "maxCopies": 1,
+          "ShowQuantity": true
         },
         "itemTypeIcon": {
           "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.SpriteReference, Il2CppNinjaKiwi.Common",
@@ -14253,7 +15903,8 @@
             "name": "SheriffMorale3",
             "hideFlags": 0
           },
-          "maxCopies": 1
+          "maxCopies": 1,
+          "ShowQuantity": true
         },
         "itemTypeIcon": {
           "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.SpriteReference, Il2CppNinjaKiwi.Common",
@@ -14272,7 +15923,8 @@
           "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierPowerLoot, Assembly-CSharp",
           "powerId": "HealthPotion",
           "locsExtras": [],
-          "amount": 1
+          "amount": 1,
+          "ShowQuantity": true
         },
         "itemTypeIcon": {
           "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.SpriteReference, Il2CppNinjaKiwi.Common",
@@ -14289,7 +15941,8 @@
           "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierPowerLoot, Assembly-CSharp",
           "powerId": "StaminaPotion",
           "locsExtras": [],
-          "amount": 1
+          "amount": 1,
+          "ShowQuantity": true
         },
         "itemTypeIcon": {
           "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.SpriteReference, Il2CppNinjaKiwi.Common",
@@ -14310,7 +15963,8 @@
           "locsExtras": [
             "15"
           ],
-          "amount": 1
+          "amount": 1,
+          "ShowQuantity": true
         },
         "itemTypeIcon": {
           "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.SpriteReference, Il2CppNinjaKiwi.Common",
@@ -14327,7 +15981,8 @@
           "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierPowerLoot, Assembly-CSharp",
           "powerId": "DartTime",
           "locsExtras": [],
-          "amount": 1
+          "amount": 1,
+          "ShowQuantity": true
         },
         "itemTypeIcon": {
           "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.SpriteReference, Il2CppNinjaKiwi.Common",
@@ -14344,7 +15999,8 @@
           "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierPowerLoot, Assembly-CSharp",
           "powerId": "Pontoon",
           "locsExtras": [],
-          "amount": 1
+          "amount": 1,
+          "ShowQuantity": true
         },
         "itemTypeIcon": {
           "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.SpriteReference, Il2CppNinjaKiwi.Common",
@@ -14361,7 +16017,8 @@
           "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierPowerLoot, Assembly-CSharp",
           "powerId": "PortableLake",
           "locsExtras": [],
-          "amount": 1
+          "amount": 1,
+          "ShowQuantity": true
         },
         "itemTypeIcon": {
           "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.SpriteReference, Il2CppNinjaKiwi.Common",
@@ -14378,7 +16035,8 @@
           "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierPowerLoot, Assembly-CSharp",
           "powerId": "RoadSpikes",
           "locsExtras": [],
-          "amount": 5
+          "amount": 5,
+          "ShowQuantity": true
         },
         "itemTypeIcon": {
           "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.SpriteReference, Il2CppNinjaKiwi.Common",
@@ -14397,7 +16055,8 @@
           "locsExtras": [
             "300"
           ],
-          "amount": 2
+          "amount": 2,
+          "ShowQuantity": true
         },
         "itemTypeIcon": {
           "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.SpriteReference, Il2CppNinjaKiwi.Common",
@@ -14416,7 +16075,8 @@
           "locsExtras": [
             "500"
           ],
-          "amount": 2
+          "amount": 2,
+          "ShowQuantity": true
         },
         "itemTypeIcon": {
           "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.SpriteReference, Il2CppNinjaKiwi.Common",
@@ -14433,7 +16093,8 @@
           "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierPowerLoot, Assembly-CSharp",
           "powerId": "TechBot",
           "locsExtras": [],
-          "amount": 1
+          "amount": 1,
+          "ShowQuantity": true
         },
         "itemTypeIcon": {
           "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.SpriteReference, Il2CppNinjaKiwi.Common",
@@ -14450,7 +16111,8 @@
           "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierPowerLoot, Assembly-CSharp",
           "powerId": "EnergisingTotem",
           "locsExtras": [],
-          "amount": 1
+          "amount": 1,
+          "ShowQuantity": true
         },
         "itemTypeIcon": {
           "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.SpriteReference, Il2CppNinjaKiwi.Common",
@@ -14467,7 +16129,8 @@
           "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierPowerLoot, Assembly-CSharp",
           "powerId": "SuperMonkeyStorm",
           "locsExtras": [],
-          "amount": 1
+          "amount": 1,
+          "ShowQuantity": true
         },
         "itemTypeIcon": {
           "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.SpriteReference, Il2CppNinjaKiwi.Common",
@@ -14484,7 +16147,8 @@
           "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierPowerLoot, Assembly-CSharp",
           "powerId": "SuperMonkeyBeacon",
           "locsExtras": [],
-          "amount": 1
+          "amount": 1,
+          "ShowQuantity": true
         },
         "itemTypeIcon": {
           "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.SpriteReference, Il2CppNinjaKiwi.Common",
@@ -14523,7 +16187,8 @@
               "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.SpriteReference, Il2CppNinjaKiwi.Common",
               "guidRef": "",
               "AssetGUID": ""
-            }
+            },
+            "ShowQuantity": true
           }
         ],
         "id": "looty1"
@@ -14539,7 +16204,8 @@
         "setLoot": [
           {
             "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierCurrencyLoot, Assembly-CSharp",
-            "amount": 1500
+            "amount": 1500,
+            "ShowQuantity": true
           }
         ],
         "id": "GoldChest"
@@ -14588,7 +16254,8 @@
               "name": "DeputyBadge",
               "hideFlags": 0
             },
-            "maxCopies": 6
+            "maxCopies": 6,
+            "ShowQuantity": true
           }
         ],
         "id": "SheriffBadgeChest"
@@ -14598,7 +16265,8 @@
         "setLoot": [
           {
             "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierCurrencyLoot, Assembly-CSharp",
-            "amount": 150
+            "amount": 150,
+            "ShowQuantity": true
           }
         ],
         "id": "Ore"
@@ -14608,7 +16276,8 @@
         "setLoot": [
           {
             "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierSheriffItemLoot, Assembly-CSharp",
-            "sheriffItemName": "BlueBowlHat"
+            "sheriffItemName": "BlueBowlHat",
+            "ShowQuantity": true
           }
         ],
         "id": "BlueBowlHatChest"
@@ -14618,7 +16287,8 @@
         "setLoot": [
           {
             "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierSheriffItemLoot, Assembly-CSharp",
-            "sheriffItemName": "TargetGlasses"
+            "sheriffItemName": "TargetGlasses",
+            "ShowQuantity": true
           }
         ],
         "id": "TargetGlassesChest"
@@ -14628,7 +16298,8 @@
         "setLoot": [
           {
             "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierSheriffItemLoot, Assembly-CSharp",
-            "sheriffItemName": "TinyStache"
+            "sheriffItemName": "TinyStache",
+            "ShowQuantity": true
           }
         ],
         "id": "TinyStacheChest"
@@ -14638,7 +16309,8 @@
         "setLoot": [
           {
             "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierSheriffItemLoot, Assembly-CSharp",
-            "sheriffItemName": "BlackTinfoilHat"
+            "sheriffItemName": "BlackTinfoilHat",
+            "ShowQuantity": true
           }
         ],
         "id": "BlackTinfoilHatChest"
@@ -14648,7 +16320,8 @@
         "setLoot": [
           {
             "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierSheriffItemLoot, Assembly-CSharp",
-            "sheriffItemName": "FuturisticSpectacles"
+            "sheriffItemName": "FuturisticSpectacles",
+            "ShowQuantity": true
           }
         ],
         "id": "FuturisticSpectaclesChest"
@@ -14658,7 +16331,8 @@
         "setLoot": [
           {
             "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierSheriffItemLoot, Assembly-CSharp",
-            "sheriffItemName": "MassiveStache"
+            "sheriffItemName": "MassiveStache",
+            "ShowQuantity": true
           }
         ],
         "id": "MassiveStacheChest"
@@ -14668,7 +16342,8 @@
         "setLoot": [
           {
             "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierSheriffItemLoot, Assembly-CSharp",
-            "sheriffItemName": "HatAndStache"
+            "sheriffItemName": "HatAndStache",
+            "ShowQuantity": true
           }
         ],
         "id": "HatAndStacheChest"
@@ -14678,7 +16353,8 @@
         "setLoot": [
           {
             "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierSheriffItemLoot, Assembly-CSharp",
-            "sheriffItemName": "LeadStache"
+            "sheriffItemName": "LeadStache",
+            "ShowQuantity": true
           }
         ],
         "id": "LeadStacheChest"
@@ -14688,7 +16364,8 @@
         "setLoot": [
           {
             "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierSheriffItemLoot, Assembly-CSharp",
-            "sheriffItemName": "GreenHat"
+            "sheriffItemName": "GreenHat",
+            "ShowQuantity": true
           }
         ],
         "id": "GreenHatChest"
@@ -14698,7 +16375,8 @@
         "setLoot": [
           {
             "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierSheriffItemLoot, Assembly-CSharp",
-            "sheriffItemName": "TinFoilHat"
+            "sheriffItemName": "TinFoilHat",
+            "ShowQuantity": true
           }
         ],
         "id": "TinFoilHatChest"
@@ -14708,7 +16386,8 @@
         "setLoot": [
           {
             "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierSheriffItemLoot, Assembly-CSharp",
-            "sheriffItemName": "GoldenHat"
+            "sheriffItemName": "GoldenHat",
+            "ShowQuantity": true
           }
         ],
         "id": "GoldenHatChest"
@@ -14718,7 +16397,8 @@
         "setLoot": [
           {
             "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierSheriffItemLoot, Assembly-CSharp",
-            "sheriffItemName": "WhitePoncho"
+            "sheriffItemName": "WhitePoncho",
+            "ShowQuantity": true
           }
         ],
         "id": "WhitePonchoChest"
@@ -14728,7 +16408,8 @@
         "setLoot": [
           {
             "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierSheriffItemLoot, Assembly-CSharp",
-            "sheriffItemName": "High Noon Suit"
+            "sheriffItemName": "High Noon Suit",
+            "ShowQuantity": true
           }
         ],
         "id": "High Noon Suit Chest"
@@ -14738,7 +16419,8 @@
         "setLoot": [
           {
             "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierSheriffItemLoot, Assembly-CSharp",
-            "sheriffItemName": "WaderOutfit"
+            "sheriffItemName": "WaderOutfit",
+            "ShowQuantity": true
           }
         ],
         "id": "WaderOutfitChest"
@@ -14748,7 +16430,8 @@
         "setLoot": [
           {
             "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierSheriffItemLoot, Assembly-CSharp",
-            "sheriffItemName": "GlueSplatterPoncho"
+            "sheriffItemName": "GlueSplatterPoncho",
+            "ShowQuantity": true
           }
         ],
         "id": "GlueSplatterPonchoChest"
@@ -14758,7 +16441,8 @@
         "setLoot": [
           {
             "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierSheriffItemLoot, Assembly-CSharp",
-            "sheriffItemName": "GunBelt"
+            "sheriffItemName": "GunBelt",
+            "ShowQuantity": true
           }
         ],
         "id": "GunBeltChest"
@@ -14768,7 +16452,8 @@
         "setLoot": [
           {
             "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierSheriffItemLoot, Assembly-CSharp",
-            "sheriffItemName": "SnowyPoncho"
+            "sheriffItemName": "SnowyPoncho",
+            "ShowQuantity": true
           }
         ],
         "id": "SnowyPonchoChest"
@@ -14778,7 +16463,8 @@
         "setLoot": [
           {
             "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierSheriffItemLoot, Assembly-CSharp",
-            "sheriffItemName": "GoldenGunBelt"
+            "sheriffItemName": "GoldenGunBelt",
+            "ShowQuantity": true
           }
         ],
         "id": "GoldenGunBeltChest"
@@ -14788,7 +16474,8 @@
         "setLoot": [
           {
             "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierSheriffItemLoot, Assembly-CSharp",
-            "sheriffItemName": "RedGunBelt"
+            "sheriffItemName": "RedGunBelt",
+            "ShowQuantity": true
           }
         ],
         "id": "RedGunBeltChest"
@@ -14798,7 +16485,8 @@
         "setLoot": [
           {
             "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierSheriffItemLoot, Assembly-CSharp",
-            "sheriffItemName": "DynamiteStick"
+            "sheriffItemName": "DynamiteStick",
+            "ShowQuantity": true
           }
         ],
         "id": "DynamiteStickChest"
@@ -14808,7 +16496,8 @@
         "setLoot": [
           {
             "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierSheriffItemLoot, Assembly-CSharp",
-            "sheriffItemName": "BoomerangPistol"
+            "sheriffItemName": "BoomerangPistol",
+            "ShowQuantity": true
           }
         ],
         "id": "BoomerangPistolChest"
@@ -14818,7 +16507,8 @@
         "setLoot": [
           {
             "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierSheriffItemLoot, Assembly-CSharp",
-            "sheriffItemName": "ZigZagPistol"
+            "sheriffItemName": "ZigZagPistol",
+            "ShowQuantity": true
           }
         ],
         "id": "ZigZagPistolChest"
@@ -14828,7 +16518,8 @@
         "setLoot": [
           {
             "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierSheriffItemLoot, Assembly-CSharp",
-            "sheriffItemName": "Magnum"
+            "sheriffItemName": "Magnum",
+            "ShowQuantity": true
           }
         ],
         "id": "MagnumChest"
@@ -14838,7 +16529,8 @@
         "setLoot": [
           {
             "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierSheriffItemLoot, Assembly-CSharp",
-            "sheriffItemName": "MarshmallowStick"
+            "sheriffItemName": "MarshmallowStick",
+            "ShowQuantity": true
           }
         ],
         "id": "MarshmallowStickChest"
@@ -14848,7 +16540,8 @@
         "setLoot": [
           {
             "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierSheriffItemLoot, Assembly-CSharp",
-            "sheriffItemName": "WaveyWaterPistol"
+            "sheriffItemName": "WaveyWaterPistol",
+            "ShowQuantity": true
           }
         ],
         "id": "WaveyWaterPistolChest"
@@ -14858,7 +16551,8 @@
         "setLoot": [
           {
             "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierSheriffItemLoot, Assembly-CSharp",
-            "sheriffItemName": "WhitePoncho"
+            "sheriffItemName": "WhitePoncho",
+            "ShowQuantity": true
           }
         ],
         "id": "WhitePonchoChest"
@@ -22957,6 +24651,7 @@
         "tokenValue": 63,
         "sizeMin": 0.05,
         "sizeMax": 0.2,
+        "staminaReward": 1.0,
         "fishMovementPatterns": [
           {
             "$type": "UnityEngine.AnimationCurve, UnityEngine.CoreModule",
@@ -23053,6 +24748,10 @@
           "AssetGUID": "c9332ade35255e74ebc18d6b44556839"
         },
         "blackFrame": 200,
+        "fishMaxStamina": 10.0,
+        "fishStaminaStartingPercent": 0.5,
+        "fishStaminaIncreaseRate": 1.5,
+        "fishStaminaDecreaseRate": 2.5,
         "shinyPercentage": 5.0,
         "shinyTokenValueMultiplier": 20.0,
         "shinyIcon": {
@@ -23075,6 +24774,7 @@
         "tokenValue": 1,
         "sizeMin": 100.0,
         "sizeMax": 1000.0,
+        "staminaReward": 10.0,
         "fishMovementPatterns": [
           {
             "$type": "UnityEngine.AnimationCurve, UnityEngine.CoreModule",
@@ -23271,6 +24971,10 @@
           "AssetGUID": "e39c4aa4748759c4da8a918eb3198b0b"
         },
         "blackFrame": 25,
+        "fishMaxStamina": 10.0,
+        "fishStaminaStartingPercent": 0.5,
+        "fishStaminaIncreaseRate": 1.5,
+        "fishStaminaDecreaseRate": 2.5,
         "shinyPercentage": 0.1,
         "shinyTokenValueMultiplier": 5.0,
         "shinyIcon": {
@@ -23293,6 +24997,7 @@
         "tokenValue": 2,
         "sizeMin": 150.0,
         "sizeMax": 300.0,
+        "staminaReward": 10.0,
         "fishMovementPatterns": [
           {
             "$type": "UnityEngine.AnimationCurve, UnityEngine.CoreModule",
@@ -23399,6 +25104,10 @@
           "AssetGUID": "e39c4aa4748759c4da8a918eb3198b0b"
         },
         "blackFrame": 25,
+        "fishMaxStamina": 10.0,
+        "fishStaminaStartingPercent": 0.5,
+        "fishStaminaIncreaseRate": 1.5,
+        "fishStaminaDecreaseRate": 2.5,
         "shinyPercentage": 1.0,
         "shinyTokenValueMultiplier": 5.0,
         "shinyIcon": {
@@ -23421,6 +25130,7 @@
         "tokenValue": 5,
         "sizeMin": 1.6,
         "sizeMax": 6.0,
+        "staminaReward": 3.0,
         "fishMovementPatterns": [
           {
             "$type": "UnityEngine.AnimationCurve, UnityEngine.CoreModule",
@@ -23567,6 +25277,10 @@
           "AssetGUID": "e1dff647f6619c74d9da1dcc7434e779"
         },
         "blackFrame": 100,
+        "fishMaxStamina": 10.0,
+        "fishStaminaStartingPercent": 0.5,
+        "fishStaminaIncreaseRate": 1.5,
+        "fishStaminaDecreaseRate": 2.5,
         "shinyPercentage": 3.0,
         "shinyTokenValueMultiplier": 3.0,
         "shinyIcon": {
@@ -23589,6 +25303,7 @@
         "tokenValue": 5,
         "sizeMin": 0.7,
         "sizeMax": 2.0,
+        "staminaReward": 1.0,
         "fishMovementPatterns": [
           {
             "$type": "UnityEngine.AnimationCurve, UnityEngine.CoreModule",
@@ -23755,6 +25470,10 @@
           "AssetGUID": "c9332ade35255e74ebc18d6b44556839"
         },
         "blackFrame": 200,
+        "fishMaxStamina": 10.0,
+        "fishStaminaStartingPercent": 0.5,
+        "fishStaminaIncreaseRate": 1.5,
+        "fishStaminaDecreaseRate": 2.5,
         "shinyPercentage": 5.0,
         "shinyTokenValueMultiplier": 20.0,
         "shinyIcon": {
@@ -23777,6 +25496,7 @@
         "tokenValue": 4,
         "sizeMin": 15.0,
         "sizeMax": 40.0,
+        "staminaReward": 5.0,
         "fishMovementPatterns": [
           {
             "$type": "UnityEngine.AnimationCurve, UnityEngine.CoreModule",
@@ -23923,6 +25643,10 @@
           "AssetGUID": "89828850c0cf3f548b323d3111bd2795"
         },
         "blackFrame": 50,
+        "fishMaxStamina": 10.0,
+        "fishStaminaStartingPercent": 0.5,
+        "fishStaminaIncreaseRate": 1.5,
+        "fishStaminaDecreaseRate": 2.5,
         "shinyPercentage": 2.0,
         "shinyTokenValueMultiplier": 4.0,
         "shinyIcon": {
@@ -23945,6 +25669,7 @@
         "tokenValue": 7,
         "sizeMin": 10.0,
         "sizeMax": 25.0,
+        "staminaReward": 5.0,
         "fishMovementPatterns": [
           {
             "$type": "UnityEngine.AnimationCurve, UnityEngine.CoreModule",
@@ -24041,6 +25766,10 @@
           "AssetGUID": "89828850c0cf3f548b323d3111bd2795"
         },
         "blackFrame": 50,
+        "fishMaxStamina": 10.0,
+        "fishStaminaStartingPercent": 0.5,
+        "fishStaminaIncreaseRate": 1.5,
+        "fishStaminaDecreaseRate": 2.5,
         "shinyPercentage": 2.0,
         "shinyTokenValueMultiplier": 4.0,
         "shinyIcon": {
@@ -24063,6 +25792,7 @@
         "tokenValue": 35,
         "sizeMin": 0.9,
         "sizeMax": 2.3,
+        "staminaReward": 1.0,
         "fishMovementPatterns": [
           {
             "$type": "UnityEngine.AnimationCurve, UnityEngine.CoreModule",
@@ -24229,6 +25959,10 @@
           "AssetGUID": "c9332ade35255e74ebc18d6b44556839"
         },
         "blackFrame": 200,
+        "fishMaxStamina": 10.0,
+        "fishStaminaStartingPercent": 0.5,
+        "fishStaminaIncreaseRate": 1.5,
+        "fishStaminaDecreaseRate": 2.5,
         "shinyPercentage": 5.0,
         "shinyTokenValueMultiplier": 20.0,
         "shinyIcon": {
@@ -24251,6 +25985,7 @@
         "tokenValue": 8,
         "sizeMin": 5.0,
         "sizeMax": 13.5,
+        "staminaReward": 5.0,
         "fishMovementPatterns": [
           {
             "$type": "UnityEngine.AnimationCurve, UnityEngine.CoreModule",
@@ -24357,6 +26092,10 @@
           "AssetGUID": "89828850c0cf3f548b323d3111bd2795"
         },
         "blackFrame": 50,
+        "fishMaxStamina": 10.0,
+        "fishStaminaStartingPercent": 0.5,
+        "fishStaminaIncreaseRate": 1.5,
+        "fishStaminaDecreaseRate": 2.5,
         "shinyPercentage": 2.0,
         "shinyTokenValueMultiplier": 4.0,
         "shinyIcon": {
@@ -24379,6 +26118,7 @@
         "tokenValue": 7,
         "sizeMin": 20.0,
         "sizeMax": 80.0,
+        "staminaReward": 5.0,
         "fishMovementPatterns": [
           {
             "$type": "UnityEngine.AnimationCurve, UnityEngine.CoreModule",
@@ -24445,6 +26185,10 @@
           "AssetGUID": "89828850c0cf3f548b323d3111bd2795"
         },
         "blackFrame": 50,
+        "fishMaxStamina": 10.0,
+        "fishStaminaStartingPercent": 0.5,
+        "fishStaminaIncreaseRate": 1.5,
+        "fishStaminaDecreaseRate": 2.5,
         "shinyPercentage": 2.0,
         "shinyTokenValueMultiplier": 4.0,
         "shinyIcon": {
@@ -24467,6 +26211,7 @@
         "tokenValue": 15,
         "sizeMin": 0.9,
         "sizeMax": 2.3,
+        "staminaReward": 1.0,
         "fishMovementPatterns": [
           {
             "$type": "UnityEngine.AnimationCurve, UnityEngine.CoreModule",
@@ -24563,6 +26308,10 @@
           "AssetGUID": "c9332ade35255e74ebc18d6b44556839"
         },
         "blackFrame": 200,
+        "fishMaxStamina": 10.0,
+        "fishStaminaStartingPercent": 0.5,
+        "fishStaminaIncreaseRate": 1.5,
+        "fishStaminaDecreaseRate": 2.5,
         "shinyPercentage": 5.0,
         "shinyTokenValueMultiplier": 20.0,
         "shinyIcon": {
@@ -24585,6 +26334,7 @@
         "tokenValue": 4000,
         "sizeMin": 0.5,
         "sizeMax": 4.0,
+        "staminaReward": 10.0,
         "fishMovementPatterns": [
           {
             "$type": "UnityEngine.AnimationCurve, UnityEngine.CoreModule",
@@ -25041,6 +26791,10 @@
           "AssetGUID": "e39c4aa4748759c4da8a918eb3198b0b"
         },
         "blackFrame": 25,
+        "fishMaxStamina": 10.0,
+        "fishStaminaStartingPercent": 0.5,
+        "fishStaminaIncreaseRate": 1.5,
+        "fishStaminaDecreaseRate": 2.5,
         "shinyPercentage": 0.01,
         "shinyTokenValueMultiplier": 2.0,
         "shinyIcon": {
@@ -25063,6 +26817,7 @@
         "tokenValue": 10,
         "sizeMin": 2.8,
         "sizeMax": 8.0,
+        "staminaReward": 5.0,
         "fishMovementPatterns": [
           {
             "$type": "UnityEngine.AnimationCurve, UnityEngine.CoreModule",
@@ -25219,7 +26974,11 @@
           "AssetGUID": "89828850c0cf3f548b323d3111bd2795"
         },
         "blackFrame": 50,
-        "shinyPercentage": 2.0,
+        "fishMaxStamina": 10.0,
+        "fishStaminaStartingPercent": 0.5,
+        "fishStaminaIncreaseRate": 1.5,
+        "fishStaminaDecreaseRate": 2.5,
+        "shinyPercentage": 5.0,
         "shinyTokenValueMultiplier": 4.0,
         "shinyIcon": {
           "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.SpriteReference, Il2CppNinjaKiwi.Common",
@@ -25241,6 +27000,7 @@
         "tokenValue": 5,
         "sizeMin": 2.7,
         "sizeMax": 8.0,
+        "staminaReward": 3.0,
         "fishMovementPatterns": [
           {
             "$type": "UnityEngine.AnimationCurve, UnityEngine.CoreModule",
@@ -25347,6 +27107,10 @@
           "AssetGUID": "e1dff647f6619c74d9da1dcc7434e779"
         },
         "blackFrame": 100,
+        "fishMaxStamina": 10.0,
+        "fishStaminaStartingPercent": 0.5,
+        "fishStaminaIncreaseRate": 1.5,
+        "fishStaminaDecreaseRate": 2.5,
         "shinyPercentage": 3.0,
         "shinyTokenValueMultiplier": 3.0,
         "shinyIcon": {
@@ -25369,6 +27133,7 @@
         "tokenValue": 2,
         "sizeMin": 0.02,
         "sizeMax": 10.0,
+        "staminaReward": 1.0,
         "fishMovementPatterns": [
           {
             "$type": "UnityEngine.AnimationCurve, UnityEngine.CoreModule",
@@ -25485,6 +27250,10 @@
           "AssetGUID": "c9332ade35255e74ebc18d6b44556839"
         },
         "blackFrame": 200,
+        "fishMaxStamina": 10.0,
+        "fishStaminaStartingPercent": 0.5,
+        "fishStaminaIncreaseRate": 1.5,
+        "fishStaminaDecreaseRate": 2.5,
         "shinyPercentage": 5.0,
         "shinyTokenValueMultiplier": 20.0,
         "shinyIcon": {
@@ -25507,6 +27276,7 @@
         "tokenValue": 30,
         "sizeMin": 5.0,
         "sizeMax": 20.0,
+        "staminaReward": 10.0,
         "fishMovementPatterns": [
           {
             "$type": "UnityEngine.AnimationCurve, UnityEngine.CoreModule",
@@ -25623,6 +27393,10 @@
           "AssetGUID": "e39c4aa4748759c4da8a918eb3198b0b"
         },
         "blackFrame": 25,
+        "fishMaxStamina": 10.0,
+        "fishStaminaStartingPercent": 0.5,
+        "fishStaminaIncreaseRate": 1.5,
+        "fishStaminaDecreaseRate": 2.5,
         "shinyPercentage": 1.0,
         "shinyTokenValueMultiplier": 5.0,
         "shinyIcon": {
@@ -25645,6 +27419,7 @@
         "tokenValue": 4,
         "sizeMin": 3.0,
         "sizeMax": 20.0,
+        "staminaReward": 3.0,
         "fishMovementPatterns": [
           {
             "$type": "UnityEngine.AnimationCurve, UnityEngine.CoreModule",
@@ -25791,6 +27566,10 @@
           "AssetGUID": "e1dff647f6619c74d9da1dcc7434e779"
         },
         "blackFrame": 100,
+        "fishMaxStamina": 10.0,
+        "fishStaminaStartingPercent": 0.5,
+        "fishStaminaIncreaseRate": 1.5,
+        "fishStaminaDecreaseRate": 2.5,
         "shinyPercentage": 3.0,
         "shinyTokenValueMultiplier": 3.0,
         "shinyIcon": {
@@ -25813,6 +27592,7 @@
         "tokenValue": 200,
         "sizeMin": 0.02,
         "sizeMax": 0.15,
+        "staminaReward": 1.0,
         "fishMovementPatterns": [
           {
             "$type": "UnityEngine.AnimationCurve, UnityEngine.CoreModule",
@@ -25919,6 +27699,10 @@
           "AssetGUID": "c9332ade35255e74ebc18d6b44556839"
         },
         "blackFrame": 200,
+        "fishMaxStamina": 10.0,
+        "fishStaminaStartingPercent": 0.5,
+        "fishStaminaIncreaseRate": 1.5,
+        "fishStaminaDecreaseRate": 2.5,
         "shinyPercentage": 5.0,
         "shinyTokenValueMultiplier": 20.0,
         "shinyIcon": {
@@ -25941,6 +27725,7 @@
         "tokenValue": 3,
         "sizeMin": 6.0,
         "sizeMax": 16.0,
+        "staminaReward": 3.0,
         "fishMovementPatterns": [
           {
             "$type": "UnityEngine.AnimationCurve, UnityEngine.CoreModule",
@@ -26097,6 +27882,10 @@
           "AssetGUID": "e1dff647f6619c74d9da1dcc7434e779"
         },
         "blackFrame": 100,
+        "fishMaxStamina": 10.0,
+        "fishStaminaStartingPercent": 0.5,
+        "fishStaminaIncreaseRate": 1.5,
+        "fishStaminaDecreaseRate": 2.5,
         "shinyPercentage": 3.0,
         "shinyTokenValueMultiplier": 3.0,
         "shinyIcon": {
@@ -26119,6 +27908,7 @@
         "tokenValue": 5,
         "sizeMin": 1.5,
         "sizeMax": 5.0,
+        "staminaReward": 3.0,
         "fishMovementPatterns": [
           {
             "$type": "UnityEngine.AnimationCurve, UnityEngine.CoreModule",
@@ -26195,6 +27985,10 @@
           "AssetGUID": "e1dff647f6619c74d9da1dcc7434e779"
         },
         "blackFrame": 100,
+        "fishMaxStamina": 10.0,
+        "fishStaminaStartingPercent": 0.5,
+        "fishStaminaIncreaseRate": 1.5,
+        "fishStaminaDecreaseRate": 2.5,
         "shinyPercentage": 3.0,
         "shinyTokenValueMultiplier": 3.0,
         "shinyIcon": {
@@ -26217,6 +28011,7 @@
         "tokenValue": 250,
         "sizeMin": 0.05,
         "sizeMax": 0.1,
+        "staminaReward": 1.0,
         "fishMovementPatterns": [
           {
             "$type": "UnityEngine.AnimationCurve, UnityEngine.CoreModule",
@@ -26373,6 +28168,10 @@
           "AssetGUID": "c9332ade35255e74ebc18d6b44556839"
         },
         "blackFrame": 200,
+        "fishMaxStamina": 10.0,
+        "fishStaminaStartingPercent": 0.5,
+        "fishStaminaIncreaseRate": 1.5,
+        "fishStaminaDecreaseRate": 2.5,
         "shinyPercentage": 5.0,
         "shinyTokenValueMultiplier": 20.0,
         "shinyIcon": {
@@ -26395,6 +28194,7 @@
         "tokenValue": 23,
         "sizeMin": 0.9,
         "sizeMax": 4.5,
+        "staminaReward": 5.0,
         "fishMovementPatterns": [
           {
             "$type": "UnityEngine.AnimationCurve, UnityEngine.CoreModule",
@@ -26551,6 +28351,10 @@
           "AssetGUID": "89828850c0cf3f548b323d3111bd2795"
         },
         "blackFrame": 50,
+        "fishMaxStamina": 10.0,
+        "fishStaminaStartingPercent": 0.5,
+        "fishStaminaIncreaseRate": 1.5,
+        "fishStaminaDecreaseRate": 2.5,
         "shinyPercentage": 2.0,
         "shinyTokenValueMultiplier": 4.0,
         "shinyIcon": {
@@ -26573,6 +28377,7 @@
         "tokenValue": 2,
         "sizeMin": 100.0,
         "sizeMax": 400.0,
+        "staminaReward": 10.0,
         "fishMovementPatterns": [
           {
             "$type": "UnityEngine.AnimationCurve, UnityEngine.CoreModule",
@@ -26649,6 +28454,10 @@
           "AssetGUID": "e39c4aa4748759c4da8a918eb3198b0b"
         },
         "blackFrame": 25,
+        "fishMaxStamina": 10.0,
+        "fishStaminaStartingPercent": 0.5,
+        "fishStaminaIncreaseRate": 1.5,
+        "fishStaminaDecreaseRate": 2.5,
         "shinyPercentage": 1.0,
         "shinyTokenValueMultiplier": 5.0,
         "shinyIcon": {
@@ -26671,6 +28480,7 @@
         "tokenValue": 2,
         "sizeMin": 9.0,
         "sizeMax": 20.0,
+        "staminaReward": 1.0,
         "fishMovementPatterns": [
           {
             "$type": "UnityEngine.AnimationCurve, UnityEngine.CoreModule",
@@ -26757,6 +28567,10 @@
           "AssetGUID": "c9332ade35255e74ebc18d6b44556839"
         },
         "blackFrame": 200,
+        "fishMaxStamina": 10.0,
+        "fishStaminaStartingPercent": 0.5,
+        "fishStaminaIncreaseRate": 1.5,
+        "fishStaminaDecreaseRate": 2.5,
         "shinyPercentage": 5.0,
         "shinyTokenValueMultiplier": 20.0,
         "shinyIcon": {
@@ -26779,6 +28593,7 @@
         "tokenValue": 1,
         "sizeMin": 200.0,
         "sizeMax": 5000.0,
+        "staminaReward": 10.0,
         "fishMovementPatterns": [
           {
             "$type": "UnityEngine.AnimationCurve, UnityEngine.CoreModule",
@@ -26975,6 +28790,10 @@
           "AssetGUID": "e39c4aa4748759c4da8a918eb3198b0b"
         },
         "blackFrame": 25,
+        "fishMaxStamina": 10.0,
+        "fishStaminaStartingPercent": 0.5,
+        "fishStaminaIncreaseRate": 1.5,
+        "fishStaminaDecreaseRate": 2.5,
         "shinyPercentage": 0.5,
         "shinyTokenValueMultiplier": 5.0,
         "shinyIcon": {
@@ -26997,6 +28816,7 @@
         "tokenValue": 18,
         "sizeMin": 2.5,
         "sizeMax": 5.0,
+        "staminaReward": 5.0,
         "fishMovementPatterns": [
           {
             "$type": "UnityEngine.AnimationCurve, UnityEngine.CoreModule",
@@ -27103,6 +28923,10 @@
           "AssetGUID": "89828850c0cf3f548b323d3111bd2795"
         },
         "blackFrame": 50,
+        "fishMaxStamina": 10.0,
+        "fishStaminaStartingPercent": 0.5,
+        "fishStaminaIncreaseRate": 1.5,
+        "fishStaminaDecreaseRate": 2.5,
         "shinyPercentage": 2.0,
         "shinyTokenValueMultiplier": 4.0,
         "shinyIcon": {
@@ -27114,6 +28938,122 @@
         "hideFlags": 0
       }
     ],
+    "fishRodChances": [
+      {
+        "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierFishTierChances, Assembly-CSharp",
+        "name": "Common Rod",
+        "fishingRod": 1,
+        "fishRarityChance": {
+          "$type": "Il2CppNinjaKiwi.Common.SerializableDictionary`2[[Il2CppAssets.Scripts.Data.Legends.FishingDifficulty, Assembly-CSharp],[System.Single, System.Private.CoreLib]], Il2CppNinjaKiwi.Common",
+          "keys": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "values": [
+            35.0,
+            60.0,
+            5.0,
+            0.0
+          ],
+          "Keys": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "Values": [
+            35.0,
+            60.0,
+            5.0,
+            0.0
+          ],
+          "Count": 4
+        }
+      },
+      {
+        "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierFishTierChances, Assembly-CSharp",
+        "name": "Great Rod",
+        "fishingRod": 2,
+        "fishRarityChance": {
+          "$type": "Il2CppNinjaKiwi.Common.SerializableDictionary`2[[Il2CppAssets.Scripts.Data.Legends.FishingDifficulty, Assembly-CSharp],[System.Single, System.Private.CoreLib]], Il2CppNinjaKiwi.Common",
+          "keys": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "values": [
+            10.0,
+            35.0,
+            55.0,
+            5.0
+          ],
+          "Keys": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "Values": [
+            10.0,
+            35.0,
+            55.0,
+            5.0
+          ],
+          "Count": 4
+        }
+      },
+      {
+        "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierFishTierChances, Assembly-CSharp",
+        "name": "Legendary Rod",
+        "fishingRod": 3,
+        "fishRarityChance": {
+          "$type": "Il2CppNinjaKiwi.Common.SerializableDictionary`2[[Il2CppAssets.Scripts.Data.Legends.FishingDifficulty, Assembly-CSharp],[System.Single, System.Private.CoreLib]], Il2CppNinjaKiwi.Common",
+          "keys": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "values": [
+            1.0,
+            14.0,
+            70.0,
+            15.0
+          ],
+          "Keys": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "Values": [
+            1.0,
+            14.0,
+            70.0,
+            15.0
+          ],
+          "Count": 4
+        }
+      }
+    ],
+    "shinySpeedPercentModifier": 30.0,
+    "fishWeightSpeedModifiers": [
+      {
+        "$type": "Assets.Scripts.Data.Legends.FrontierFishWeightSpeedModifiers, Assembly-CSharp",
+        "percentWeightBracket": "80,95",
+        "speedPercentIncrease": 15.0
+      },
+      {
+        "$type": "Assets.Scripts.Data.Legends.FrontierFishWeightSpeedModifiers, Assembly-CSharp",
+        "percentWeightBracket": "95,100",
+        "speedPercentIncrease": 25.0
+      }
+    ],
+    "fishingWaitTimeMin": 3.0,
+    "fishingWaitTimeMax": 15.0,
     "name": "FrontierAllFishData",
     "hideFlags": 0
   },
@@ -27129,27 +29069,15 @@
   },
   "playerStartingPet": "DesperadoArmadillo",
   "baseQuickDrawSpeedModifier": 2.0,
-  "quickDrawDeadZone": 30.0,
+  "quickDrawDeadZone": 20.0,
   "playerStartingCash": 500,
   "playerStartingLives": 200,
   "playerStartingMaxLives": 200,
   "maxPartyMembers": 6,
   "maxHomesteadMembers": 25,
-  "minigameCooldown": 3,
-  "fishingWaitTimeMin": 3.0,
-  "fishingWaitTimeMax": 15.0,
-  "shinySpeedPercentModifier": 30.0,
-  "fishWeightPercentSpeedModifiers": [
-    {
-      "x": 20.0,
-      "y": 15.0
-    },
-    {
-      "x": 5.0,
-      "y": 10.0
-    }
-  ],
-  "saloonRefreshMinutes": 120,
+  "invulnerableCooldown": 5,
+  "minigameCooldown": 2,
+  "saloonRefreshMinutes": 60,
   "generalStoreRefreshMinutes": 30,
   "saloonTraitTierChances": [
     10.0,
@@ -27494,6 +29422,32 @@
       ],
       "startingLevel": 5,
       "saloonCost": 6375
+    },
+    {
+      "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierHeroSkinData, Assembly-CSharp",
+      "skinName": "FirecrackerGwendolin",
+      "traits": [
+        {
+          "$type": "Il2CppAssets.Scripts.Data.Legends.TraitData, Assembly-CSharp",
+          "baseId": "StickyBombTrait",
+          "tier": 2,
+          "ArtifactName": "StickyBombTrait3"
+        },
+        {
+          "$type": "Il2CppAssets.Scripts.Data.Legends.TraitData, Assembly-CSharp",
+          "baseId": "RangeTrait",
+          "tier": 3,
+          "ArtifactName": "RangeTrait4"
+        },
+        {
+          "$type": "Il2CppAssets.Scripts.Data.Legends.TraitData, Assembly-CSharp",
+          "baseId": "RicochetTrait",
+          "tier": 2,
+          "ArtifactName": "RicochetTrait3"
+        }
+      ],
+      "startingLevel": 6,
+      "saloonCost": 17175
     },
     {
       "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierHeroSkinData, Assembly-CSharp",
@@ -28027,9 +29981,9 @@
         },
         {
           "$type": "Il2CppAssets.Scripts.Data.Legends.TraitData, Assembly-CSharp",
-          "baseId": "BlowbackTrait",
+          "baseId": "KnockbackTrait",
           "tier": 2,
-          "ArtifactName": "BlowbackTrait3"
+          "ArtifactName": "KnockbackTrait3"
         },
         {
           "$type": "Il2CppAssets.Scripts.Data.Legends.TraitData, Assembly-CSharp",
@@ -28230,14 +30184,14 @@
         {
           "$type": "Il2CppAssets.Scripts.Data.Legends.TraitData, Assembly-CSharp",
           "baseId": "ZombieTrait",
-          "tier": 3,
-          "ArtifactName": "ZombieTrait4"
+          "tier": 2,
+          "ArtifactName": "ZombieTrait3"
         },
         {
           "$type": "Il2CppAssets.Scripts.Data.Legends.TraitData, Assembly-CSharp",
           "baseId": "RangeTrait",
-          "tier": 3,
-          "ArtifactName": "RangeTrait4"
+          "tier": 2,
+          "ArtifactName": "RangeTrait3"
         },
         {
           "$type": "Il2CppAssets.Scripts.Data.Legends.TraitData, Assembly-CSharp",
@@ -28496,8 +30450,8 @@
       "location": 1,
       "customName": "One-Mile Morgan",
       "StaminaCost": 80.0,
-      "StaminaPercent": 1.0,
-      "StaminaPercentDisplay": 100
+      "StaminaPercent": 0.5,
+      "StaminaPercentDisplay": 50
     },
     {
       "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierInstaMonkey, Assembly-CSharp",
@@ -28535,8 +30489,8 @@
       "location": 1,
       "customName": "Ember Hellblast Graves",
       "StaminaCost": 80.0,
-      "StaminaPercent": 1.0,
-      "StaminaPercentDisplay": 100
+      "StaminaPercent": 0.5,
+      "StaminaPercentDisplay": 50
     },
     {
       "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierInstaMonkey, Assembly-CSharp",
@@ -28574,8 +30528,8 @@
       "location": 1,
       "customName": "Mar. Mathers",
       "StaminaCost": 80.0,
-      "StaminaPercent": 1.0,
-      "StaminaPercentDisplay": 100
+      "StaminaPercent": 0.5,
+      "StaminaPercentDisplay": 50
     },
     {
       "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierInstaMonkey, Assembly-CSharp",
@@ -28613,8 +30567,8 @@
       "location": 1,
       "customName": "Elmer Sticky Fingers",
       "StaminaCost": 80.0,
-      "StaminaPercent": 1.0,
-      "StaminaPercentDisplay": 100
+      "StaminaPercent": 0.5,
+      "StaminaPercentDisplay": 50
     },
     {
       "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierInstaMonkey, Assembly-CSharp",
@@ -28652,8 +30606,8 @@
       "location": 1,
       "customName": "Mar. Molasses",
       "StaminaCost": 80.0,
-      "StaminaPercent": 1.0,
-      "StaminaPercentDisplay": 100
+      "StaminaPercent": 0.5,
+      "StaminaPercentDisplay": 50
     },
     {
       "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierInstaMonkey, Assembly-CSharp",
@@ -28691,8 +30645,8 @@
       "location": 1,
       "customName": "Big Brass Tsunami",
       "StaminaCost": 80.0,
-      "StaminaPercent": 1.0,
-      "StaminaPercentDisplay": 100
+      "StaminaPercent": 0.5,
+      "StaminaPercentDisplay": 50
     },
     {
       "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierInstaMonkey, Assembly-CSharp",
@@ -28730,8 +30684,8 @@
       "location": 1,
       "customName": "Drifting Shade",
       "StaminaCost": 80.0,
-      "StaminaPercent": 1.0,
-      "StaminaPercentDisplay": 100
+      "StaminaPercent": 0.5,
+      "StaminaPercentDisplay": 50
     },
     {
       "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierInstaMonkey, Assembly-CSharp",
@@ -28769,8 +30723,8 @@
       "location": 1,
       "customName": "The Unforgiven",
       "StaminaCost": 80.0,
-      "StaminaPercent": 1.0,
-      "StaminaPercentDisplay": 100
+      "StaminaPercent": 0.5,
+      "StaminaPercentDisplay": 50
     },
     {
       "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierInstaMonkey, Assembly-CSharp",
@@ -28808,8 +30762,8 @@
       "location": 1,
       "customName": "Pale Rider",
       "StaminaCost": 80.0,
-      "StaminaPercent": 1.0,
-      "StaminaPercentDisplay": 100
+      "StaminaPercent": 0.5,
+      "StaminaPercentDisplay": 50
     },
     {
       "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierInstaMonkey, Assembly-CSharp",
@@ -28847,8 +30801,8 @@
       "location": 1,
       "customName": "Phantom Corsair",
       "StaminaCost": 80.0,
-      "StaminaPercent": 1.0,
-      "StaminaPercentDisplay": 100
+      "StaminaPercent": 0.5,
+      "StaminaPercentDisplay": 50
     },
     {
       "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierInstaMonkey, Assembly-CSharp",
@@ -28886,8 +30840,8 @@
       "location": 1,
       "customName": "Finn Rivers",
       "StaminaCost": 80.0,
-      "StaminaPercent": 1.0,
-      "StaminaPercentDisplay": 100
+      "StaminaPercent": 0.5,
+      "StaminaPercentDisplay": 50
     },
     {
       "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierInstaMonkey, Assembly-CSharp",
@@ -28925,8 +30879,8 @@
       "location": 1,
       "customName": "The Proposition",
       "StaminaCost": 80.0,
-      "StaminaPercent": 1.0,
-      "StaminaPercentDisplay": 100
+      "StaminaPercent": 0.5,
+      "StaminaPercentDisplay": 50
     },
     {
       "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierInstaMonkey, Assembly-CSharp",
@@ -28964,8 +30918,8 @@
       "location": 1,
       "customName": "Deadclaw Dan",
       "StaminaCost": 80.0,
-      "StaminaPercent": 1.0,
-      "StaminaPercentDisplay": 100
+      "StaminaPercent": 0.5,
+      "StaminaPercentDisplay": 50
     },
     {
       "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierInstaMonkey, Assembly-CSharp",
@@ -29003,8 +30957,8 @@
       "location": 1,
       "customName": "Skye Tombstone",
       "StaminaCost": 80.0,
-      "StaminaPercent": 1.0,
-      "StaminaPercentDisplay": 100
+      "StaminaPercent": 0.5,
+      "StaminaPercentDisplay": 50
     },
     {
       "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierInstaMonkey, Assembly-CSharp",
@@ -29042,8 +30996,8 @@
       "location": 1,
       "customName": "Sawbones Sam",
       "StaminaCost": 80.0,
-      "StaminaPercent": 1.0,
-      "StaminaPercentDisplay": 100
+      "StaminaPercent": 0.5,
+      "StaminaPercentDisplay": 50
     },
     {
       "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierInstaMonkey, Assembly-CSharp",
@@ -29081,8 +31035,8 @@
       "location": 1,
       "customName": "Blazing Saddle Bill",
       "StaminaCost": 40.0,
-      "StaminaPercent": 1.0,
-      "StaminaPercentDisplay": 100
+      "StaminaPercent": 0.5,
+      "StaminaPercentDisplay": 50
     },
     {
       "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierInstaMonkey, Assembly-CSharp",
@@ -29120,8 +31074,8 @@
       "location": 1,
       "customName": "Short Fuse Boone",
       "StaminaCost": 80.0,
-      "StaminaPercent": 1.0,
-      "StaminaPercentDisplay": 100
+      "StaminaPercent": 0.5,
+      "StaminaPercentDisplay": 50
     },
     {
       "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierInstaMonkey, Assembly-CSharp",
@@ -29159,8 +31113,8 @@
       "location": 1,
       "customName": "Masterplanner Charles",
       "StaminaCost": 30.0,
-      "StaminaPercent": 1.0,
-      "StaminaPercentDisplay": 100
+      "StaminaPercent": 0.5,
+      "StaminaPercentDisplay": 50
     },
     {
       "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierInstaMonkey, Assembly-CSharp",
@@ -29198,8 +31152,8 @@
       "location": 1,
       "customName": "Halt O'Carrick",
       "StaminaCost": 80.0,
-      "StaminaPercent": 1.0,
-      "StaminaPercentDisplay": 100
+      "StaminaPercent": 0.5,
+      "StaminaPercentDisplay": 50
     },
     {
       "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierInstaMonkey, Assembly-CSharp",
@@ -29237,8 +31191,8 @@
       "location": 1,
       "customName": "The Bulwark",
       "StaminaCost": 80.0,
-      "StaminaPercent": 1.0,
-      "StaminaPercentDisplay": 100
+      "StaminaPercent": 0.5,
+      "StaminaPercentDisplay": 50
     },
     {
       "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierInstaMonkey, Assembly-CSharp",
@@ -29276,8 +31230,8 @@
       "location": 1,
       "customName": "Funky Town",
       "StaminaCost": 80.0,
-      "StaminaPercent": 1.0,
-      "StaminaPercentDisplay": 100
+      "StaminaPercent": 0.5,
+      "StaminaPercentDisplay": 50
     },
     {
       "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierInstaMonkey, Assembly-CSharp",
@@ -29315,8 +31269,8 @@
       "location": 1,
       "customName": "Lazy Louie's Lookout",
       "StaminaCost": 30.0,
-      "StaminaPercent": 1.0,
-      "StaminaPercentDisplay": 100
+      "StaminaPercent": 0.5,
+      "StaminaPercentDisplay": 50
     },
     {
       "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierInstaMonkey, Assembly-CSharp",
@@ -29354,8 +31308,8 @@
       "location": 1,
       "customName": "Max Lidot",
       "StaminaCost": 160.0,
-      "StaminaPercent": 1.0,
-      "StaminaPercentDisplay": 100
+      "StaminaPercent": 0.5,
+      "StaminaPercentDisplay": 50
     },
     {
       "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierInstaMonkey, Assembly-CSharp",
@@ -29393,8 +31347,8 @@
       "location": 1,
       "customName": "Ironshot ISAB",
       "StaminaCost": 80.0,
-      "StaminaPercent": 1.0,
-      "StaminaPercentDisplay": 100
+      "StaminaPercent": 0.5,
+      "StaminaPercentDisplay": 50
     },
     {
       "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierInstaMonkey, Assembly-CSharp",
@@ -29432,8 +31386,8 @@
       "location": 1,
       "customName": "Super BomBattery",
       "StaminaCost": 80.0,
-      "StaminaPercent": 1.0,
-      "StaminaPercentDisplay": 100
+      "StaminaPercent": 0.5,
+      "StaminaPercentDisplay": 50
     },
     {
       "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierInstaMonkey, Assembly-CSharp",
@@ -29471,8 +31425,8 @@
       "location": 1,
       "customName": "Chewie Chompa",
       "StaminaCost": 80.0,
-      "StaminaPercent": 1.0,
-      "StaminaPercentDisplay": 100
+      "StaminaPercent": 0.5,
+      "StaminaPercentDisplay": 50
     },
     {
       "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierInstaMonkey, Assembly-CSharp",
@@ -29510,8 +31464,8 @@
       "location": 1,
       "customName": "Unrelenting Dragoon",
       "StaminaCost": 80.0,
-      "StaminaPercent": 1.0,
-      "StaminaPercentDisplay": 100
+      "StaminaPercent": 0.5,
+      "StaminaPercentDisplay": 50
     },
     {
       "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierInstaMonkey, Assembly-CSharp",
@@ -29549,8 +31503,8 @@
       "location": 1,
       "customName": "Highrule Mack",
       "StaminaCost": 80.0,
-      "StaminaPercent": 1.0,
-      "StaminaPercentDisplay": 100
+      "StaminaPercent": 0.5,
+      "StaminaPercentDisplay": 50
     },
     {
       "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierInstaMonkey, Assembly-CSharp",
@@ -29588,8 +31542,8 @@
       "location": 1,
       "customName": "Punji der Totengräber",
       "StaminaCost": 80.0,
-      "StaminaPercent": 1.0,
-      "StaminaPercentDisplay": 100
+      "StaminaPercent": 0.5,
+      "StaminaPercentDisplay": 50
     },
     {
       "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierInstaMonkey, Assembly-CSharp",
@@ -29627,8 +31581,8 @@
       "location": 1,
       "customName": "Hellfire H-Bomb",
       "StaminaCost": 80.0,
-      "StaminaPercent": 1.0,
-      "StaminaPercentDisplay": 100
+      "StaminaPercent": 0.5,
+      "StaminaPercentDisplay": 50
     },
     {
       "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierInstaMonkey, Assembly-CSharp",
@@ -29666,8 +31620,8 @@
       "location": 1,
       "customName": "Dab Lune Oakheart",
       "StaminaCost": 80.0,
-      "StaminaPercent": 1.0,
-      "StaminaPercentDisplay": 100
+      "StaminaPercent": 0.5,
+      "StaminaPercentDisplay": 50
     },
     {
       "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierInstaMonkey, Assembly-CSharp",
@@ -29705,8 +31659,8 @@
       "location": 1,
       "customName": "Tornado Tewtiy",
       "StaminaCost": 80.0,
-      "StaminaPercent": 1.0,
-      "StaminaPercentDisplay": 100
+      "StaminaPercent": 0.5,
+      "StaminaPercentDisplay": 50
     },
     {
       "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierInstaMonkey, Assembly-CSharp",
@@ -29744,8 +31698,8 @@
       "location": 1,
       "customName": "Desert Sabre",
       "StaminaCost": 80.0,
-      "StaminaPercent": 1.0,
-      "StaminaPercentDisplay": 100
+      "StaminaPercent": 0.5,
+      "StaminaPercentDisplay": 50
     },
     {
       "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierInstaMonkey, Assembly-CSharp",
@@ -29783,8 +31737,8 @@
       "location": 1,
       "customName": "Neo Trickshot Lawless",
       "StaminaCost": 80.0,
-      "StaminaPercent": 1.0,
-      "StaminaPercentDisplay": 100
+      "StaminaPercent": 0.5,
+      "StaminaPercentDisplay": 50
     },
     {
       "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierInstaMonkey, Assembly-CSharp",
@@ -29822,8 +31776,8 @@
       "location": 1,
       "customName": "Raider Ethan Reckless",
       "StaminaCost": 80.0,
-      "StaminaPercent": 1.0,
-      "StaminaPercentDisplay": 100
+      "StaminaPercent": 0.5,
+      "StaminaPercentDisplay": 50
     },
     {
       "$type": "Il2CppAssets.Scripts.Data.Legends.FrontierInstaMonkey, Assembly-CSharp",
@@ -29861,8 +31815,8 @@
       "location": 1,
       "customName": "Chillhands Frostee",
       "StaminaCost": 80.0,
-      "StaminaPercent": 1.0,
-      "StaminaPercentDisplay": 100
+      "StaminaPercent": 0.5,
+      "StaminaPercentDisplay": 50
     }
   ],
   "heroUpgradeCostMultipliers": [
@@ -29986,7 +31940,7 @@
   "placementStaminaCost": 80,
   "enterMapStaminaCost": 25,
   "enterGameStaminaPercentMax": 0.8,
-  "gameVictoryStaminaReward": 25,
+  "gameVictoryStaminaReward": 50,
   "perRoundStaminaCost": 10,
   "perRoundHeroLevelConverts": [
     -1,
@@ -29995,13 +31949,13 @@
   ],
   "speedUpRecoveryCost": 1,
   "lostMapCostPercent": 0.2,
-  "campfireStaminaRecoverySpeed": 1.0,
-  "campfireStaminaRecoveryMaxPercent": 0.8,
-  "passiveStaminaRecoverySpeed": 0.03333333,
+  "campfireStaminaRecoverySpeed": 10.0,
+  "campfireStaminaRecoveryMaxPercent": 1.0,
+  "passiveStaminaRecoverySpeed": 0.16666667,
   "passiveStaminaRecoveryMaxPercent": 0.8,
-  "homesteadStaminaRecoverySpeed": 4.0,
+  "homesteadStaminaRecoverySpeed": 30.0,
   "homesteadStaminaRecoveryMaxPercent": 1.0,
-  "maxStamina": 1000,
+  "maxStamina": 2000,
   "maxMorale": 1000,
   "frontierUIAudio": null,
   "modifiersModel": {

@@ -140,6 +140,7 @@
     "AssetGUID": null
   },
   "ignoreCoopAreas": false,
+  "ignoreAreaChanges": false,
   "canAlwaysBeSold": false,
   "blockSelling": false,
   "isParagon": false,
@@ -440,7 +441,6 @@
               "name": "GrowBlockModel_FreezeGrowBlock"
             },
             "applyAfterDamage": false,
-            "preventHealthPercentTriggers": false,
             "lifespan": 3.0,
             "lifespanFrames": 0,
             "Lifespan": 3.0,
@@ -809,7 +809,6 @@
                   "name": "GrowBlockModel_FreezeGrowBlock"
                 },
                 "applyAfterDamage": false,
-                "preventHealthPercentTriggers": false,
                 "lifespan": 3.0,
                 "lifespanFrames": 0,
                 "Lifespan": 3.0,
@@ -1187,13 +1186,12 @@
                           "$type": "Il2CppAssets.Scripts.Models.Bloons.Behaviors.GrowBlockModel, Assembly-CSharp",
                           "name": "GrowBlockModel_FreezeGrowBlock"
                         },
-                        "applyAfterDamage": false,
-                        "preventHealthPercentTriggers": false,
+                        "applyAfterDamage": true,
                         "lifespan": 6.0,
                         "lifespanFrames": 0,
                         "Lifespan": 6.0,
                         "overlayType": "Ice",
-                        "collisionPass": -1,
+                        "collisionPass": 1,
                         "name": "FreezeModel_Ice"
                       },
                       {
@@ -1264,7 +1262,7 @@
                       },
                       {
                         "$type": "Il2CppAssets.Scripts.Models.Towers.Projectiles.Behaviors.AddHeatToBloonModel, Assembly-CSharp",
-                        "heatAmount": -500.0,
+                        "heatAmount": -1000.0,
                         "collisionPass": 0,
                         "name": "AddHeatToBloonModel_SnowstormProjectile"
                       },
@@ -1297,7 +1295,8 @@
                     ],
                     "collisionPasses": [
                       -1,
-                      0
+                      0,
+                      1
                     ],
                     "canCollideWithBloons": true,
                     "radius": 9999999.0,
@@ -1516,6 +1515,7 @@
       "startOffCooldown": false,
       "alwaysSetAnimationState": false,
       "rechargeMonkeyMoneyCost": 0,
+      "activateOnRoundEnd": false,
       "restrictAbilityAfterMaxRoundTimer": false,
       "isHidden": false,
       "cooldownSpeedScale": 0.0,

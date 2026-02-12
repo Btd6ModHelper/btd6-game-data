@@ -137,6 +137,7 @@
     "AssetGUID": null
   },
   "ignoreCoopAreas": false,
+  "ignoreAreaChanges": false,
   "canAlwaysBeSold": false,
   "blockSelling": false,
   "isParagon": false,
@@ -627,12 +628,12 @@
             "behaviors": [
               {
                 "$type": "Il2CppAssets.Scripts.Models.Towers.Projectiles.Behaviors.TravelStraitModel, Assembly-CSharp",
-                "speed": 150.0,
+                "speed": 300.0,
                 "speedFrames": 0.0,
-                "lifespan": 2.0,
+                "lifespan": 1.0,
                 "lifespanFrames": 0,
-                "Speed": 150.0,
-                "Lifespan": 2.0,
+                "Speed": 300.0,
+                "Lifespan": 1.0,
                 "collisionPass": 0,
                 "name": "TravelStraitModel_Projectile"
               },
@@ -684,7 +685,7 @@
                     "rotateEffectWithBloon": true,
                     "initialDelay": 0.0,
                     "initialDelayFrames": 0,
-                    "damageOnDestroy": false,
+                    "damageOnDestroy": true,
                     "overrideDistributionBlocker": false,
                     "distributeToChildren": true,
                     "damageModifierModels": null,
@@ -728,7 +729,7 @@
                       },
                       "id": "DynamiteStickExplosion",
                       "maxPierce": 0.0,
-                      "pierce": 18.0,
+                      "pierce": 25.0,
                       "scale": 1.0,
                       "ignoreBlockers": true,
                       "usePointCollisionWithBloons": false,
@@ -740,7 +741,7 @@
                           "damage": 60.0,
                           "maxDamage": 0.0,
                           "distributeToChildren": true,
-                          "overrideDistributeBlocker": false,
+                          "overrideDistributeBlocker": true,
                           "createPopEffect": true,
                           "immuneBloonProperties": 2,
                           "immuneBloonPropertiesOriginal": 2,
@@ -854,7 +855,7 @@
                       "saveId": null,
                       "displayModel": null,
                       "cantCreateSubProjectiles": false,
-                      "CappedPierce": 18.0,
+                      "CappedPierce": 25.0,
                       "name": "ProjectileModel_DynamiteStickExplosion"
                     },
                     "emissionModel": {
@@ -874,7 +875,7 @@
                     "rotateEffectWithBloon": false,
                     "initialDelay": 0.0,
                     "initialDelayFrames": 0,
-                    "emitOnDestroy": false,
+                    "emitOnDestroy": true,
                     "collideWithSelf": false,
                     "Interval": 2.95,
                     "name": "DynamiteStickSplash"
@@ -2231,7 +2232,7 @@
             },
             "id": "Projectile",
             "maxPierce": 0.0,
-            "pierce": 6.0,
+            "pierce": 5.0,
             "scale": 1.0,
             "ignoreBlockers": true,
             "usePointCollisionWithBloons": false,
@@ -2334,7 +2335,7 @@
             "saveId": null,
             "displayModel": null,
             "cantCreateSubProjectiles": false,
-            "CappedPierce": 6.0,
+            "CappedPierce": 5.0,
             "name": "ProjectileModel_Projectile"
           },
           "fireWithoutTarget": false,
@@ -2406,7 +2407,7 @@
               "name": "CreateSoundOnProjectileCreatedModel_Weapon"
             }
           ],
-          "rate": 2.0,
+          "rate": 3.0,
           "rateFrames": 0,
           "useAttackPosition": false,
           "startInCooldown": false,
@@ -2414,7 +2415,7 @@
           "customStartCooldownFrames": 0,
           "animateOnMainAttack": false,
           "isStunned": false,
-          "Rate": 2.0,
+          "Rate": 3.0,
           "UseThrowMarker": true,
           "name": "WeaponModel_Weapon"
         }
@@ -2612,7 +2613,6 @@
                   "name": "GrowBlockModel_FreezeGrowBlock"
                 },
                 "applyAfterDamage": true,
-                "preventHealthPercentTriggers": false,
                 "lifespan": 2.0,
                 "lifespanFrames": 0,
                 "Lifespan": 2.0,
@@ -3201,6 +3201,17 @@
                 "name": "CreateSoundOnProjectileCollisionModel_Projectile"
               },
               {
+                "$type": "Il2CppAssets.Scripts.Models.Towers.Projectiles.Behaviors.AgeModel, Assembly-CSharp",
+                "rounds": 1,
+                "useRoundTime": true,
+                "lifespan": 30.0,
+                "lifespanFrames": 0,
+                "endOfRoundClearBypassModel": null,
+                "Lifespan": 30.0,
+                "collisionPass": 0,
+                "name": "AgeModel_Projectile"
+              },
+              {
                 "$type": "Il2CppAssets.Scripts.Models.GenericBehaviors.DisplayModel, Assembly-CSharp",
                 "display": {
                   "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.PrefabReference, Il2CppNinjaKiwi.Common",
@@ -3442,6 +3453,7 @@
       "startOffCooldown": true,
       "alwaysSetAnimationState": false,
       "rechargeMonkeyMoneyCost": 0,
+      "activateOnRoundEnd": false,
       "restrictAbilityAfterMaxRoundTimer": false,
       "isHidden": false,
       "cooldownSpeedScale": 0.0,
@@ -3505,6 +3517,7 @@
       "startOffCooldown": false,
       "alwaysSetAnimationState": false,
       "rechargeMonkeyMoneyCost": 0,
+      "activateOnRoundEnd": false,
       "restrictAbilityAfterMaxRoundTimer": false,
       "isHidden": false,
       "cooldownSpeedScale": 0.0,
@@ -3539,7 +3552,7 @@
         },
         {
           "$type": "Il2CppAssets.Scripts.Models.Towers.Behaviors.ControlledSheriffMoraleFillModel, Assembly-CSharp",
-          "fillAmount": 5.0,
+          "fillAmount": 10.0,
           "fillRate": 1.0,
           "fillRateFrames": 0,
           "name": ""
@@ -3618,7 +3631,7 @@
     },
     {
       "$type": "Il2CppAssets.Scripts.Models.Towers.Behaviors.ControlledSheriffMoraleFillModel, Assembly-CSharp",
-      "fillAmount": 5.0,
+      "fillAmount": 10.0,
       "fillRate": 1.0,
       "fillRateFrames": 0,
       "name": ""

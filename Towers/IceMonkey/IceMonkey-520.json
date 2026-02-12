@@ -133,6 +133,7 @@
     "AssetGUID": null
   },
   "ignoreCoopAreas": false,
+  "ignoreAreaChanges": false,
   "canAlwaysBeSold": false,
   "blockSelling": false,
   "isParagon": false,
@@ -345,10 +346,6 @@
             "isActive": false,
             "ignoreBroadPhase": false,
             "name": ""
-          },
-          {
-            "$type": "Il2CppAssets.Scripts.Models.Towers.Filters.FilterFrozenBloonsModel, Assembly-CSharp",
-            "name": ""
           }
         ],
         "behaviors": [
@@ -438,7 +435,7 @@
                   "behaviors": [
                     {
                       "$type": "Il2CppAssets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModel, Assembly-CSharp",
-                      "damage": 10.0,
+                      "damage": 5.0,
                       "maxDamage": -1.0,
                       "distributeToChildren": true,
                       "overrideDistributeBlocker": false,
@@ -447,7 +444,7 @@
                       "immuneBloonPropertiesOriginal": 1,
                       "ignoreImmunityDestroy": false,
                       "ignoreDamageMultipliers": false,
-                      "CappedDamage": 10.0,
+                      "CappedDamage": 5.0,
                       "collisionPass": 0,
                       "name": "DamageModel_Shard_"
                     },
@@ -455,10 +452,10 @@
                       "$type": "Il2CppAssets.Scripts.Models.Towers.Projectiles.Behaviors.TravelStraitModel, Assembly-CSharp",
                       "speed": 250.0,
                       "speedFrames": 0.0,
-                      "lifespan": 0.08,
+                      "lifespan": 0.16,
                       "lifespanFrames": 0,
                       "Speed": 250.0,
-                      "Lifespan": 0.08,
+                      "Lifespan": 0.16,
                       "collisionPass": 0,
                       "name": "TravelStraitModel_Shard"
                     },
@@ -606,7 +603,6 @@
               "name": "GrowBlockModel_FreezeGrowBlock"
             },
             "applyAfterDamage": false,
-            "preventHealthPercentTriggers": false,
             "lifespan": 2.2,
             "lifespanFrames": 0,
             "Lifespan": 2.2,
@@ -621,10 +617,6 @@
                 "$type": "Il2CppAssets.Scripts.Models.Towers.Filters.FilterInvisibleModel, Assembly-CSharp",
                 "isActive": false,
                 "ignoreBroadPhase": false,
-                "name": ""
-              },
-              {
-                "$type": "Il2CppAssets.Scripts.Models.Towers.Filters.FilterFrozenBloonsModel, Assembly-CSharp",
                 "name": ""
               }
             ],
@@ -645,7 +637,8 @@
           },
           {
             "$type": "Il2CppAssets.Scripts.Models.Towers.Projectiles.Behaviors.AddBonusDamagePerHitToBloonModel, Assembly-CSharp",
-            "mutationId": "SuperBrittle",
+            "mutationId": "Ice:Regular:SuperBrittle",
+            "priority": 0,
             "lifespan": 3.0,
             "lifespanFrames": 0,
             "perHitDamageAddition": 4.0,
@@ -654,6 +647,15 @@
             "lastAppliesFirst": false,
             "cascadeMutators": false,
             "overlayType": "",
+            "filter": {
+              "$type": "Il2CppAssets.Scripts.Models.Towers.Filters.FilterMutatedTargetModel, Assembly-CSharp",
+              "mutationId": "Ice:ParagonBrittle",
+              "mutationIds": [
+                "Ice:ParagonBrittle"
+              ],
+              "inverse": false,
+              "name": ""
+            },
             "collisionPass": 0,
             "name": ""
           },
@@ -694,6 +696,17 @@
             "ignoreTag": false,
             "collisionPass": 0,
             "name": "DamageModifierForTagModel_BaseProjectile"
+          },
+          {
+            "$type": "Il2CppAssets.Scripts.Models.Towers.Projectiles.Behaviors.RemoveMutatorsFromBloonModel, Assembly-CSharp",
+            "key": "",
+            "keys": [],
+            "mutatorIds": "Ice:Regular:Embrilttlement",
+            "mutatorIdList": [
+              "Ice:Regular:Embrilttlement"
+            ],
+            "collisionPass": 0,
+            "name": ""
           },
           {
             "$type": "Il2CppAssets.Scripts.Models.GenericBehaviors.DisplayModel, Assembly-CSharp",
@@ -941,10 +954,6 @@
                 "isActive": false,
                 "ignoreBroadPhase": false,
                 "name": ""
-              },
-              {
-                "$type": "Il2CppAssets.Scripts.Models.Towers.Filters.FilterFrozenBloonsModel, Assembly-CSharp",
-                "name": ""
               }
             ],
             "behaviors": [
@@ -1034,7 +1043,7 @@
                       "behaviors": [
                         {
                           "$type": "Il2CppAssets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModel, Assembly-CSharp",
-                          "damage": 10.0,
+                          "damage": 5.0,
                           "maxDamage": -1.0,
                           "distributeToChildren": true,
                           "overrideDistributeBlocker": false,
@@ -1043,7 +1052,7 @@
                           "immuneBloonPropertiesOriginal": 1,
                           "ignoreImmunityDestroy": false,
                           "ignoreDamageMultipliers": false,
-                          "CappedDamage": 10.0,
+                          "CappedDamage": 5.0,
                           "collisionPass": 0,
                           "name": "DamageModel_Shard_"
                         },
@@ -1051,10 +1060,10 @@
                           "$type": "Il2CppAssets.Scripts.Models.Towers.Projectiles.Behaviors.TravelStraitModel, Assembly-CSharp",
                           "speed": 250.0,
                           "speedFrames": 0.0,
-                          "lifespan": 0.08,
+                          "lifespan": 0.16,
                           "lifespanFrames": 0,
                           "Speed": 250.0,
-                          "Lifespan": 0.08,
+                          "Lifespan": 0.16,
                           "collisionPass": 0,
                           "name": "TravelStraitModel_Shard"
                         },
@@ -1202,7 +1211,6 @@
                   "name": "GrowBlockModel_FreezeGrowBlock"
                 },
                 "applyAfterDamage": false,
-                "preventHealthPercentTriggers": false,
                 "lifespan": 2.2,
                 "lifespanFrames": 0,
                 "Lifespan": 2.2,
@@ -1217,10 +1225,6 @@
                     "$type": "Il2CppAssets.Scripts.Models.Towers.Filters.FilterInvisibleModel, Assembly-CSharp",
                     "isActive": false,
                     "ignoreBroadPhase": false,
-                    "name": ""
-                  },
-                  {
-                    "$type": "Il2CppAssets.Scripts.Models.Towers.Filters.FilterFrozenBloonsModel, Assembly-CSharp",
                     "name": ""
                   }
                 ],
@@ -1241,7 +1245,8 @@
               },
               {
                 "$type": "Il2CppAssets.Scripts.Models.Towers.Projectiles.Behaviors.AddBonusDamagePerHitToBloonModel, Assembly-CSharp",
-                "mutationId": "SuperBrittle",
+                "mutationId": "Ice:Regular:SuperBrittle",
+                "priority": 0,
                 "lifespan": 3.0,
                 "lifespanFrames": 0,
                 "perHitDamageAddition": 4.0,
@@ -1250,6 +1255,15 @@
                 "lastAppliesFirst": false,
                 "cascadeMutators": false,
                 "overlayType": "",
+                "filter": {
+                  "$type": "Il2CppAssets.Scripts.Models.Towers.Filters.FilterMutatedTargetModel, Assembly-CSharp",
+                  "mutationId": "Ice:ParagonBrittle",
+                  "mutationIds": [
+                    "Ice:ParagonBrittle"
+                  ],
+                  "inverse": false,
+                  "name": ""
+                },
                 "collisionPass": 0,
                 "name": ""
               },
@@ -1290,6 +1304,17 @@
                 "ignoreTag": false,
                 "collisionPass": 0,
                 "name": "DamageModifierForTagModel_BaseProjectile"
+              },
+              {
+                "$type": "Il2CppAssets.Scripts.Models.Towers.Projectiles.Behaviors.RemoveMutatorsFromBloonModel, Assembly-CSharp",
+                "key": "",
+                "keys": [],
+                "mutatorIds": "Ice:Regular:Embrilttlement",
+                "mutatorIdList": [
+                  "Ice:Regular:Embrilttlement"
+                ],
+                "collisionPass": 0,
+                "name": ""
               },
               {
                 "$type": "Il2CppAssets.Scripts.Models.GenericBehaviors.DisplayModel, Assembly-CSharp",
@@ -1447,10 +1472,6 @@
               "$type": "Il2CppAssets.Scripts.Models.Towers.Filters.FilterInvisibleModel, Assembly-CSharp",
               "isActive": false,
               "ignoreBroadPhase": false,
-              "name": ""
-            },
-            {
-              "$type": "Il2CppAssets.Scripts.Models.Towers.Filters.FilterFrozenBloonsModel, Assembly-CSharp",
               "name": ""
             }
           ],

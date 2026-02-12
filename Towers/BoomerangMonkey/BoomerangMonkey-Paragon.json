@@ -162,6 +162,7 @@
     "AssetGUID": null
   },
   "ignoreCoopAreas": false,
+  "ignoreAreaChanges": false,
   "canAlwaysBeSold": false,
   "blockSelling": false,
   "isParagon": true,
@@ -406,12 +407,12 @@
       "reactSoundAlt2": null,
       "reactSound3": null,
       "reactSoundAlt3": null,
-      "towerType1": null,
-      "towerSkin1": null,
-      "towerType2": null,
-      "towerSkin2": null,
-      "towerType3": null,
-      "towerSkin3": null,
+      "towerType1": "",
+      "towerSkin1": "",
+      "towerType2": "",
+      "towerSkin2": "",
+      "towerType3": "",
+      "towerSkin3": "",
       "reactDelay": 0.0,
       "name": "CreateSoundOnTowerPlaceModel_BoomerangMonkey-Paragon"
     },
@@ -788,7 +789,7 @@
             "behaviors": [
               {
                 "$type": "Il2CppAssets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModel, Assembly-CSharp",
-                "damage": 20.0,
+                "damage": 25.0,
                 "maxDamage": 0.0,
                 "distributeToChildren": true,
                 "overrideDistributeBlocker": false,
@@ -797,7 +798,7 @@
                 "immuneBloonPropertiesOriginal": 0,
                 "ignoreImmunityDestroy": false,
                 "ignoreDamageMultipliers": false,
-                "CappedDamage": 20.0,
+                "CappedDamage": 25.0,
                 "collisionPass": 0,
                 "name": "DamageModel_Projectile_"
               },
@@ -2054,6 +2055,105 @@
       "drawRangeCircle": false,
       "disableOnCreate": false,
       "name": "AttackModel_MOABPressAttack_"
+    },
+    {
+      "$type": "Il2CppAssets.Scripts.Models.Towers.Behaviors.Abilities.AbilityModel, Assembly-CSharp",
+      "displayName": "Overcharge",
+      "description": "Makes this Monkey attack incredibly fast, with the bonus tapering off over 30 seconds.",
+      "icon": {
+        "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.SpriteReference, Il2CppNinjaKiwi.Common",
+        "guidRef": "3c4313bcff4009e4f8dc5d6ef38828f8",
+        "AssetGUID": "3c4313bcff4009e4f8dc5d6ef38828f8"
+      },
+      "behaviors": [
+        {
+          "$type": "Il2CppAssets.Scripts.Models.Towers.Behaviors.Abilities.Behaviors.CreateEffectOnAbilityModel, Assembly-CSharp",
+          "effectModel": {
+            "$type": "Il2CppAssets.Scripts.Models.Effects.EffectModel, Assembly-CSharp",
+            "assetId": {
+              "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.PrefabReference, Il2CppNinjaKiwi.Common",
+              "guidRef": "5001345d2b04e9a43b532759292b8327",
+              "AssetGUID": "5001345d2b04e9a43b532759292b8327"
+            },
+            "scale": 1.0,
+            "lifespan": 30.0,
+            "fullscreen": 0,
+            "useCenterPosition": false,
+            "useTransformPosition": true,
+            "useTransfromRotation": false,
+            "destroyOnTransformDestroy": false,
+            "alwaysUseAge": false,
+            "useRoundTime": false,
+            "name": ""
+          },
+          "randomRotation": false,
+          "centerEffect": false,
+          "destroyOnEnd": true,
+          "useAttackTransform": false,
+          "canSave": false,
+          "name": "CreateEffectOnAbilityModel_OverchargeAbilityParagon_"
+        },
+        {
+          "$type": "Il2CppAssets.Scripts.Models.Towers.Behaviors.Abilities.Behaviors.CreateSoundOnAbilityModel, Assembly-CSharp",
+          "sound": {
+            "$type": "Il2CppAssets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
+            "assetId": {
+              "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.AudioClipReference, Il2CppNinjaKiwi.Common",
+              "guidRef": "d47fbdfd4a8f03d44914d8bd36689fbf",
+              "AssetGUID": "d47fbdfd4a8f03d44914d8bd36689fbf"
+            },
+            "name": "SoundModel_ActivatedTurboCharge"
+          },
+          "heroSound": null,
+          "heroSound2": null,
+          "name": "CreateSoundOnAbilityModel_OverchargeAbilityParagon"
+        },
+        {
+          "$type": "Il2CppAssets.Scripts.Models.Towers.Behaviors.Abilities.Behaviors.OverchargeModel, Assembly-CSharp",
+          "mutationId": "ParagonOvercharge",
+          "maxStacks": 10,
+          "durationPerStack": 3.0,
+          "stacksLostPerDuration": 1,
+          "rateModifierPerStack": 0.9,
+          "projectileDisplay": null,
+          "buffLocsName": "BuffIconOvercharge",
+          "buffLocsFullName": "BuffIconOvercharge",
+          "StackDurationFrames": 180,
+          "name": ""
+        }
+      ],
+      "activateOnPreLeak": false,
+      "activateOnLeak": false,
+      "addedViaUpgrade": null,
+      "livesCost": 0,
+      "maxActivationsPerRound": 9999999,
+      "maxActivationsPerGame": 0,
+      "animation": 1,
+      "enabled": true,
+      "canActivateBetweenRounds": false,
+      "resetCooldownOnTierUpgrade": true,
+      "activateOnLivesLost": false,
+      "sharedCooldown": false,
+      "dontShowStacked": false,
+      "animateOnMainAttackDisplay": false,
+      "additionalCharges": 0,
+      "hideAbilityIfInCooldown": false,
+      "startOffCooldown": false,
+      "alwaysSetAnimationState": false,
+      "rechargeMonkeyMoneyCost": 0,
+      "activateOnRoundEnd": false,
+      "restrictAbilityAfterMaxRoundTimer": false,
+      "isHidden": false,
+      "cooldownSpeedScale": 0.0,
+      "animationOffset": -1.0,
+      "animationOffsetFrames": 0,
+      "cooldown": 45.0,
+      "cooldownFrames": 0,
+      "CooldownSpeedScale": 0.0,
+      "AnimationOffset": -1.0,
+      "IsPassive": false,
+      "Cooldown": 45.0,
+      "name": "AbilityModel_OverchargeAbilityParagon"
     },
     {
       "$type": "Il2CppAssets.Scripts.Models.Towers.Behaviors.RateSupportModel, Assembly-CSharp",
