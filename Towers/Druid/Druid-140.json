@@ -106,6 +106,7 @@
     "AssetGUID": null
   },
   "doesntRotate": false,
+  "hideInfoButton": false,
   "upgrades": [
     {
       "$type": "Il2CppAssets.Scripts.Models.Towers.Upgrades.UpgradePathModel, Assembly-CSharp",
@@ -180,6 +181,7 @@
   "isParagon": false,
   "ignoreMaxSellPercent": false,
   "isStunned": false,
+  "ignoreStun": false,
   "geraldoItemName": null,
   "sellbackModifierAdd": 0.0,
   "skinName": null,
@@ -620,6 +622,7 @@
           "customStartCooldownFrames": 0,
           "animateOnMainAttack": false,
           "isStunned": false,
+          "modelName": "Weapon",
           "Rate": 1.1,
           "UseThrowMarker": true,
           "name": "WeaponModel_Weapon"
@@ -1243,6 +1246,7 @@
           "customStartCooldownFrames": 0,
           "animateOnMainAttack": false,
           "isStunned": false,
+          "modelName": "Weapon",
           "Rate": 2.6,
           "UseThrowMarker": true,
           "name": "WeaponModel_Weapon"
@@ -1354,8 +1358,8 @@
             "$type": "Il2CppAssets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
             "assetId": {
               "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.AudioClipReference, Il2CppNinjaKiwi.Common",
-              "guidRef": "e3b73472f91c1484bb803abcb4f5d68e",
-              "AssetGUID": "e3b73472f91c1484bb803abcb4f5d68e"
+              "guidRef": "980e9d93d2bfe8e409800056a776285f",
+              "AssetGUID": "980e9d93d2bfe8e409800056a776285f"
             },
             "name": "SoundModel_ActivatedJunglesBounty"
           },
@@ -1364,7 +1368,11 @@
           "name": "CreateSoundOnAbilityModel_PassiveAbility"
         },
         {
-          "$type": "Il2CppAssets.Scripts.Models.Towers.Behaviors.Abilities.Behaviors.CashPerBananaFarmInRangeModel, Assembly-CSharp",
+          "$type": "Il2CppAssets.Scripts.Models.Towers.Behaviors.Abilities.Behaviors.CashPerTowerInRangeModel, Assembly-CSharp",
+          "towerIds": [
+            "BananaFarm",
+            "DruidParagonTree"
+          ],
           "baseCash": 120.0,
           "extraCashPerTier": [
             10.0,
@@ -1382,6 +1390,8 @@
             "AssetGUID": "80178409df24b3b479342ed73cffb63d"
           },
           "textLifespan": 1.0,
+          "badPopMultiplier": 0.0,
+          "bossSkullMultiplier": 0.0,
           "name": ""
         },
         {
@@ -1426,10 +1436,12 @@
     {
       "$type": "Il2CppAssets.Scripts.Models.Towers.Behaviors.BuffIconPerTowerInRangeModel, Assembly-CSharp",
       "towerIdFilter": [
-        "BananaFarm"
+        "BananaFarm",
+        "DruidParagonTree"
       ],
       "buffLocsName": "BuffIconDruidBananaFarm",
       "buffLocsFullName": "BuffIconDruidBananaFarm",
+      "rangeOverride": 0.0,
       "name": ""
     },
     {
@@ -1837,6 +1849,7 @@
                   "customStartCooldownFrames": 0,
                   "animateOnMainAttack": false,
                   "isStunned": false,
+                  "modelName": "Weapon",
                   "Rate": 99999.0,
                   "UseThrowMarker": true,
                   "name": "WeaponModel_Weapon"
@@ -1968,7 +1981,7 @@
       "animateOnMainAttackDisplay": false,
       "additionalCharges": 0,
       "hideAbilityIfInCooldown": false,
-      "startOffCooldown": true,
+      "startOffCooldown": false,
       "alwaysSetAnimationState": false,
       "rechargeMonkeyMoneyCost": 0,
       "activateOnRoundEnd": false,

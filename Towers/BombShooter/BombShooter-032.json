@@ -106,6 +106,7 @@
     "AssetGUID": null
   },
   "doesntRotate": false,
+  "hideInfoButton": false,
   "upgrades": [
     {
       "$type": "Il2CppAssets.Scripts.Models.Towers.Upgrades.UpgradePathModel, Assembly-CSharp",
@@ -174,6 +175,7 @@
   "isParagon": false,
   "ignoreMaxSellPercent": false,
   "isStunned": false,
+  "ignoreStun": false,
   "geraldoItemName": null,
   "sellbackModifierAdd": 0.0,
   "skinName": null,
@@ -243,46 +245,12 @@
   "behaviors": [
     {
       "$type": "Il2CppAssets.Scripts.Models.Towers.Behaviors.CreateEffectOnPlaceModel, Assembly-CSharp",
-      "effectModel": {
-        "$type": "Il2CppAssets.Scripts.Models.Effects.EffectModel, Assembly-CSharp",
-        "assetId": {
-          "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.PrefabReference, Il2CppNinjaKiwi.Common",
-          "guidRef": "d2bcad0f16bb76e408a107e13b2c0da3",
-          "AssetGUID": "d2bcad0f16bb76e408a107e13b2c0da3"
-        },
-        "scale": 1.0,
-        "lifespan": 6.0,
-        "fullscreen": 0,
-        "useCenterPosition": false,
-        "useTransformPosition": false,
-        "useTransfromRotation": false,
-        "destroyOnTransformDestroy": false,
-        "alwaysUseAge": false,
-        "useRoundTime": false,
-        "name": "EffectModel_PlacementEffect"
-      },
+      "effectModel": null,
       "name": "CreateEffectOnPlaceModel_BombShooter-032"
     },
     {
       "$type": "Il2CppAssets.Scripts.Models.Towers.Behaviors.CreateEffectOnSellModel, Assembly-CSharp",
-      "effectModel": {
-        "$type": "Il2CppAssets.Scripts.Models.Effects.EffectModel, Assembly-CSharp",
-        "assetId": {
-          "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.PrefabReference, Il2CppNinjaKiwi.Common",
-          "guidRef": "b1dec8a8d79593843bc2e2410eae944e",
-          "AssetGUID": "b1dec8a8d79593843bc2e2410eae944e"
-        },
-        "scale": 1.0,
-        "lifespan": 1.0,
-        "fullscreen": 0,
-        "useCenterPosition": false,
-        "useTransformPosition": false,
-        "useTransfromRotation": false,
-        "destroyOnTransformDestroy": false,
-        "alwaysUseAge": false,
-        "useRoundTime": false,
-        "name": "EffectModel_SellEffect"
-      },
+      "effectModel": null,
       "name": "CreateEffectOnSellModel_BombShooter-032"
     },
     {
@@ -643,6 +611,20 @@
                       "name": "ProjectileFilterModel_Frag"
                     },
                     {
+                      "$type": "Il2CppAssets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModifierForTagModel, Assembly-CSharp",
+                      "tag": "Moabs",
+                      "tags": [
+                        "Moabs"
+                      ],
+                      "damageMultiplier": 1.0,
+                      "damageAddative": 4.0,
+                      "mustIncludeAllTags": false,
+                      "applyOverMaxDamage": false,
+                      "ignoreTag": false,
+                      "collisionPass": 0,
+                      "name": "DamageModifierForTagModel_Frag"
+                    },
+                    {
                       "$type": "Il2CppAssets.Scripts.Models.GenericBehaviors.DisplayModel, Assembly-CSharp",
                       "display": {
                         "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.PrefabReference, Il2CppNinjaKiwi.Common",
@@ -675,7 +657,7 @@
                   "canCollideWithBloons": true,
                   "radius": 2.0,
                   "vsBlockerRadius": 0.0,
-                  "hasDamageModifiers": false,
+                  "hasDamageModifiers": true,
                   "dontUseCollisionChecker": false,
                   "checkCollisionInterval": 0.0,
                   "checkCollisionIntervalFrames": 0,
@@ -835,6 +817,7 @@
           "customStartCooldownFrames": 0,
           "animateOnMainAttack": false,
           "isStunned": false,
+          "modelName": "Weapon",
           "Rate": 0.825,
           "UseThrowMarker": true,
           "name": "WeaponModel_Weapon"

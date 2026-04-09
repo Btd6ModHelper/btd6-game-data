@@ -65,12 +65,6 @@
       "mod": "IncreasedLifespan",
       "target": "",
       "name": "DesperadoUpgrades"
-    },
-    {
-      "$type": "Il2CppAssets.Scripts.Models.Towers.Mods.ApplyModModel, Assembly-CSharp",
-      "mod": "ExtraDartPops",
-      "target": "",
-      "name": "DesperadoUpgrades"
     }
   ],
   "ignoreTowerForSelection": false,
@@ -94,6 +88,7 @@
     "AssetGUID": null
   },
   "doesntRotate": false,
+  "hideInfoButton": false,
   "upgrades": [
     {
       "$type": "Il2CppAssets.Scripts.Models.Towers.Upgrades.UpgradePathModel, Assembly-CSharp",
@@ -173,6 +168,7 @@
   "isParagon": false,
   "ignoreMaxSellPercent": false,
   "isStunned": false,
+  "ignoreStun": false,
   "geraldoItemName": null,
   "sellbackModifierAdd": 0.0,
   "skinName": null,
@@ -499,7 +495,7 @@
             "behaviors": [
               {
                 "$type": "Il2CppAssets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModel, Assembly-CSharp",
-                "damage": 16.0,
+                "damage": 6.0,
                 "maxDamage": 0.0,
                 "distributeToChildren": true,
                 "overrideDistributeBlocker": false,
@@ -508,7 +504,7 @@
                 "immuneBloonPropertiesOriginal": 0,
                 "ignoreImmunityDestroy": false,
                 "ignoreDamageMultipliers": false,
-                "CappedDamage": 16.0,
+                "CappedDamage": 6.0,
                 "collisionPass": 0,
                 "name": "DamageModel_Projectile_"
               },
@@ -539,7 +535,7 @@
                   "Ceramic"
                 ],
                 "damageMultiplier": 1.0,
-                "damageAddative": 16.0,
+                "damageAddative": 6.0,
                 "mustIncludeAllTags": false,
                 "applyOverMaxDamage": false,
                 "ignoreTag": false,
@@ -641,6 +637,7 @@
                 "guidRef": "3dcdbc19136c60846ab944ada06695c0",
                 "AssetGUID": "3dcdbc19136c60846ab944ada06695c0"
               },
+              "critSound": null,
               "name": ""
             }
           ],
@@ -652,6 +649,7 @@
           "customStartCooldownFrames": 0,
           "animateOnMainAttack": false,
           "isStunned": false,
+          "modelName": "Weapon",
           "Rate": 1.2,
           "UseThrowMarker": true,
           "name": "WeaponModel_Weapon"
@@ -824,7 +822,7 @@
             "behaviors": [
               {
                 "$type": "Il2CppAssets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModel, Assembly-CSharp",
-                "damage": 24.0,
+                "damage": 10.0,
                 "maxDamage": 0.0,
                 "distributeToChildren": true,
                 "overrideDistributeBlocker": false,
@@ -833,7 +831,7 @@
                 "immuneBloonPropertiesOriginal": 0,
                 "ignoreImmunityDestroy": false,
                 "ignoreDamageMultipliers": false,
-                "CappedDamage": 24.0,
+                "CappedDamage": 10.0,
                 "collisionPass": 0,
                 "name": "DamageModel_Projectile_"
               },
@@ -852,12 +850,13 @@
               },
               {
                 "$type": "Il2CppAssets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModifierForTagModel, Assembly-CSharp",
-                "tag": "Fortified",
+                "tag": "Fortified, Ceramic",
                 "tags": [
-                  "Fortified"
+                  "Fortified",
+                  "Ceramic"
                 ],
                 "damageMultiplier": 1.0,
-                "damageAddative": 24.0,
+                "damageAddative": 10.0,
                 "mustIncludeAllTags": false,
                 "applyOverMaxDamage": false,
                 "ignoreTag": false,
@@ -962,6 +961,7 @@
                 "guidRef": "3dcdbc19136c60846ab944ada06695c0",
                 "AssetGUID": "3dcdbc19136c60846ab944ada06695c0"
               },
+              "critSound": null,
               "name": ""
             }
           ],
@@ -973,6 +973,7 @@
           "customStartCooldownFrames": 0,
           "animateOnMainAttack": false,
           "isStunned": false,
+          "modelName": "Weapon",
           "Rate": 1.59,
           "UseThrowMarker": true,
           "name": "WeaponModel_Weapon"
@@ -1177,29 +1178,17 @@
               "AssetGUID": null
             },
             "id": "Projectile",
-            "maxPierce": 1.0,
-            "pierce": 1.0,
+            "maxPierce": 2.0,
+            "pierce": 2.0,
             "scale": 1.0,
             "ignoreBlockers": true,
             "usePointCollisionWithBloons": false,
             "canCollisionBeBlockedByMapLos": false,
-            "filters": [
-              {
-                "$type": "Il2CppAssets.Scripts.Models.Towers.Filters.FilterAllExceptTargetModel, Assembly-CSharp",
-                "cantbePaused": false,
-                "name": ""
-              }
-            ],
+            "filters": null,
             "behaviors": [
               {
                 "$type": "Il2CppAssets.Scripts.Models.Towers.Projectiles.Behaviors.ProjectileFilterModel, Assembly-CSharp",
-                "filters": [
-                  {
-                    "$type": "Il2CppAssets.Scripts.Models.Towers.Filters.FilterAllExceptTargetModel, Assembly-CSharp",
-                    "cantbePaused": false,
-                    "name": ""
-                  }
-                ],
+                "filters": null,
                 "collisionPass": 0,
                 "name": "ProjectileFilterModel_Projectile"
               },
@@ -1274,7 +1263,7 @@
               1
             ],
             "canCollideWithBloons": true,
-            "radius": 2.0,
+            "radius": 18.0,
             "vsBlockerRadius": 0.0,
             "hasDamageModifiers": false,
             "dontUseCollisionChecker": false,
@@ -1285,7 +1274,7 @@
             "saveId": null,
             "displayModel": null,
             "cantCreateSubProjectiles": false,
-            "CappedPierce": 1.0,
+            "CappedPierce": 2.0,
             "name": "ProjectileModel_Projectile"
           },
           "fireWithoutTarget": false,
@@ -1293,11 +1282,11 @@
           "behaviors": [
             {
               "$type": "Il2CppAssets.Scripts.Models.Towers.Weapons.Behaviors.WeaponRateMinModel, Assembly-CSharp",
-              "min": 9.0,
+              "min": 3.0,
               "name": ""
             }
           ],
-          "rate": 9.0,
+          "rate": 6.0,
           "rateFrames": 0,
           "useAttackPosition": false,
           "startInCooldown": false,
@@ -1305,7 +1294,8 @@
           "customStartCooldownFrames": 0,
           "animateOnMainAttack": false,
           "isStunned": false,
-          "Rate": 9.0,
+          "modelName": "Weapon",
+          "Rate": 6.0,
           "UseThrowMarker": true,
           "name": "WeaponModel_Weapon"
         }
@@ -1552,6 +1542,7 @@
                 "customStartCooldownFrames": 0,
                 "animateOnMainAttack": false,
                 "isStunned": false,
+                "modelName": "Weapon",
                 "Rate": 0.2,
                 "UseThrowMarker": false,
                 "name": "WeaponModel_Weapon"
@@ -1805,6 +1796,7 @@
                       "guidRef": "3dcdbc19136c60846ab944ada06695c0",
                       "AssetGUID": "3dcdbc19136c60846ab944ada06695c0"
                     },
+                    "critSound": null,
                     "name": ""
                   },
                   {
@@ -1873,6 +1865,7 @@
                 "customStartCooldownFrames": 0,
                 "animateOnMainAttack": false,
                 "isStunned": false,
+                "modelName": "Weapon",
                 "Rate": 0.05,
                 "UseThrowMarker": true,
                 "name": "WeaponModel_Weapon"

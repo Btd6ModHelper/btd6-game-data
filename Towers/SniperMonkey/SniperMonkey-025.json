@@ -112,6 +112,7 @@
     "AssetGUID": null
   },
   "doesntRotate": false,
+  "hideInfoButton": false,
   "upgrades": [],
   "appliedUpgrades": [
     "Night Vision Goggles",
@@ -175,6 +176,7 @@
   "isParagon": false,
   "ignoreMaxSellPercent": false,
   "isStunned": false,
+  "ignoreStun": false,
   "geraldoItemName": null,
   "sellbackModifierAdd": 0.0,
   "skinName": null,
@@ -554,7 +556,7 @@
                   "behaviors": [
                     {
                       "$type": "Il2CppAssets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModel, Assembly-CSharp",
-                      "damage": 2.0,
+                      "damage": 1.0,
                       "maxDamage": 0.0,
                       "distributeToChildren": true,
                       "overrideDistributeBlocker": false,
@@ -563,7 +565,7 @@
                       "immuneBloonPropertiesOriginal": 17,
                       "ignoreImmunityDestroy": false,
                       "ignoreDamageMultipliers": false,
-                      "CappedDamage": 2.0,
+                      "CappedDamage": 1.0,
                       "collisionPass": 0,
                       "name": "DamageModel_Shrapnel_"
                     },
@@ -613,6 +615,20 @@
                       ],
                       "damageMultiplier": 1.0,
                       "damageAddative": 0.0,
+                      "mustIncludeAllTags": false,
+                      "applyOverMaxDamage": false,
+                      "ignoreTag": false,
+                      "collisionPass": 0,
+                      "name": "DamageModifierForTagModel_Shrapnel"
+                    },
+                    {
+                      "$type": "Il2CppAssets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModifierForTagModel, Assembly-CSharp",
+                      "tag": "Ceramic",
+                      "tags": [
+                        "Ceramic"
+                      ],
+                      "damageMultiplier": 1.0,
+                      "damageAddative": 1.0,
                       "mustIncludeAllTags": false,
                       "applyOverMaxDamage": false,
                       "ignoreTag": false,
@@ -814,6 +830,7 @@
           "customStartCooldownFrames": 0,
           "animateOnMainAttack": false,
           "isStunned": false,
+          "modelName": "Weapon",
           "Rate": 0.064925,
           "UseThrowMarker": true,
           "name": "WeaponModel_Weapon"

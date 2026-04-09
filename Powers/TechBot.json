@@ -98,9 +98,27 @@
       "AssetGUID": null
     },
     "doesntRotate": false,
+    "hideInfoButton": true,
     "upgrades": [],
     "appliedUpgrades": [],
-    "targetTypes": null,
+    "targetTypes": [
+      {
+        "$type": "Il2CppAssets.Scripts.Models.Towers.TargetType, Assembly-CSharp",
+        "id": "AmbushPoints",
+        "isActionable": true,
+        "actionOnCreate": false,
+        "intID": -1,
+        "continueToNextPriority": false
+      },
+      {
+        "$type": "Il2CppAssets.Scripts.Models.Towers.TargetType, Assembly-CSharp",
+        "id": "NoAmbushPoints",
+        "isActionable": false,
+        "actionOnCreate": false,
+        "intID": -1,
+        "continueToNextPriority": false
+      }
+    ],
     "paragonUpgrade": null,
     "isSubTower": false,
     "isBakable": false,
@@ -120,6 +138,7 @@
     "isParagon": false,
     "ignoreMaxSellPercent": false,
     "isStunned": false,
+    "ignoreStun": false,
     "geraldoItemName": null,
     "sellbackModifierAdd": 0.0,
     "skinName": null,
@@ -145,7 +164,24 @@
     "BeastHandlerLeashMutationId": "BeastHandlerContributionTechBot",
     "powerProTowerModel": null,
     "IsBaseTower": true,
-    "TargetTypes": null,
+    "TargetTypes": [
+      {
+        "$type": "Il2CppAssets.Scripts.Models.Towers.TargetType, Assembly-CSharp",
+        "id": "AmbushPoints",
+        "isActionable": true,
+        "actionOnCreate": false,
+        "intID": -1,
+        "continueToNextPriority": false
+      },
+      {
+        "$type": "Il2CppAssets.Scripts.Models.Towers.TargetType, Assembly-CSharp",
+        "id": "NoAmbushPoints",
+        "isActionable": false,
+        "actionOnCreate": false,
+        "intID": -1,
+        "continueToNextPriority": false
+      }
+    ],
     "IsExclusivelyWaterBased": false,
     "baseId": "TechBot",
     "display": {
@@ -323,6 +359,9 @@
             },
             "travelEffectSpeed": 300.0,
             "ambushTechActive": false,
+            "linkedTowerMax": 1,
+            "radius": 0,
+            "activateInRadius": false,
             "name": ""
           },
           {
@@ -513,6 +552,55 @@
         "IsPassive": false,
         "Cooldown": -1.0,
         "name": "AbilityModel_AmbushTechAbility"
+      },
+      {
+        "$type": "Il2CppAssets.Scripts.Models.Towers.Behaviors.Attack.AttackModel, Assembly-CSharp",
+        "weapons": [],
+        "behaviors": [
+          {
+            "$type": "Il2CppAssets.Scripts.Models.Towers.Behaviors.Attack.Behaviors.AmbushPointsSettingModel, Assembly-CSharp",
+            "isSelectable": true,
+            "pointSwitchDistance": 0.0,
+            "pointSwitchDistanceSquared": 0.0,
+            "minimumPointDistance": 0.0,
+            "minimumPointDistanceSquared": 0.0,
+            "dotSpacing": 0.0,
+            "dotOffset": 0.0,
+            "display": {
+              "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.PrefabReference, Il2CppNinjaKiwi.Common",
+              "guidRef": "75f38c6d121ba53408b2ce1f352a6d87",
+              "AssetGUID": "75f38c6d121ba53408b2ce1f352a6d87"
+            },
+            "lineDisplay": {
+              "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.PrefabReference, Il2CppNinjaKiwi.Common",
+              "guidRef": null,
+              "AssetGUID": null
+            },
+            "lineDelay": 0.0,
+            "lineDelayFrames": 0,
+            "isOnSubTower": false,
+            "name": ""
+          },
+          {
+            "$type": "Il2CppAssets.Scripts.Models.Towers.Behaviors.Attack.Behaviors.NoAmbushSettingModel, Assembly-CSharp",
+            "isSelectable": true,
+            "isOnSubTower": false,
+            "name": ""
+          }
+        ],
+        "range": 0.0,
+        "targetProvider": null,
+        "offsetX": 0.0,
+        "offsetY": 0.0,
+        "offsetZ": 0.0,
+        "attackThroughWalls": false,
+        "fireWithoutTarget": false,
+        "framesBeforeRetarget": 0,
+        "addsToSharedGrid": false,
+        "sharedGridRange": 0.0,
+        "drawRangeCircle": false,
+        "disableOnCreate": false,
+        "name": "AttackModel_Attack_"
       },
       {
         "$type": "Il2CppAssets.Scripts.Models.GenericBehaviors.DisplayModel, Assembly-CSharp",

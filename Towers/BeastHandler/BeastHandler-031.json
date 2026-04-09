@@ -82,6 +82,7 @@
     "AssetGUID": null
   },
   "doesntRotate": false,
+  "hideInfoButton": false,
   "upgrades": [
     {
       "$type": "Il2CppAssets.Scripts.Models.Towers.Upgrades.UpgradePathModel, Assembly-CSharp",
@@ -155,6 +156,7 @@
   "isParagon": false,
   "ignoreMaxSellPercent": false,
   "isStunned": false,
+  "ignoreStun": false,
   "geraldoItemName": null,
   "sellbackModifierAdd": 0.0,
   "skinName": null,
@@ -318,6 +320,7 @@
           "AssetGUID": null
         },
         "doesntRotate": false,
+        "hideInfoButton": false,
         "upgrades": [],
         "appliedUpgrades": [],
         "targetTypes": [
@@ -373,6 +376,7 @@
         "isParagon": false,
         "ignoreMaxSellPercent": false,
         "isStunned": false,
+        "ignoreStun": false,
         "geraldoItemName": null,
         "sellbackModifierAdd": 0.0,
         "skinName": null,
@@ -499,8 +503,8 @@
             "maxPower": 24,
             "enableContribution": true,
             "cooldownScaleRange": 0.3439,
-            "pierceRange": 18,
-            "damageRange": 16,
+            "pierceRange": 14,
+            "damageRange": 8,
             "destroyTimeScaleRangePiranha": 0.0,
             "thrashKnockbackLifetimeRange": 0.0,
             "stunBonusDivideMicroraptor": 3.0,
@@ -781,7 +785,7 @@
                           },
                           {
                             "$type": "Il2CppAssets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModel, Assembly-CSharp",
-                            "damage": 8.0,
+                            "damage": 4.0,
                             "maxDamage": 0.0,
                             "distributeToChildren": true,
                             "overrideDistributeBlocker": false,
@@ -790,7 +794,7 @@
                             "immuneBloonPropertiesOriginal": 0,
                             "ignoreImmunityDestroy": false,
                             "ignoreDamageMultipliers": false,
-                            "CappedDamage": 8.0,
+                            "CappedDamage": 4.0,
                             "collisionPass": 0,
                             "name": "DamageModel_Splash_"
                           },
@@ -807,6 +811,20 @@
                             "mustBeModified": true,
                             "collisionPass": 0,
                             "name": ""
+                          },
+                          {
+                            "$type": "Il2CppAssets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModifierForTagModel, Assembly-CSharp",
+                            "tag": "Ceramic",
+                            "tags": [
+                              "Ceramic"
+                            ],
+                            "damageMultiplier": 1.0,
+                            "damageAddative": 4.0,
+                            "mustIncludeAllTags": false,
+                            "applyOverMaxDamage": false,
+                            "ignoreTag": false,
+                            "collisionPass": 0,
+                            "name": "DamageModifierForTagModel_Splash"
                           },
                           {
                             "$type": "Il2CppAssets.Scripts.Models.GenericBehaviors.DisplayModel, Assembly-CSharp",
@@ -952,6 +970,7 @@
                 "customStartCooldownFrames": 0,
                 "animateOnMainAttack": false,
                 "isStunned": false,
+                "modelName": "Weapon",
                 "Rate": 1.0,
                 "UseThrowMarker": true,
                 "name": "WeaponModel_Weapon"
@@ -1205,6 +1224,7 @@
           "AssetGUID": null
         },
         "doesntRotate": false,
+        "hideInfoButton": false,
         "upgrades": [],
         "appliedUpgrades": [],
         "targetTypes": [
@@ -1236,6 +1256,7 @@
         "isParagon": false,
         "ignoreMaxSellPercent": false,
         "isStunned": false,
+        "ignoreStun": false,
         "geraldoItemName": null,
         "sellbackModifierAdd": 0.0,
         "skinName": null,
@@ -2079,8 +2100,8 @@
         "maxPower": 24,
         "enableContribution": true,
         "cooldownScaleRange": 0.3439,
-        "pierceRange": 18,
-        "damageRange": 16,
+        "pierceRange": 14,
+        "damageRange": 8,
         "destroyTimeScaleRangePiranha": 0.0,
         "thrashKnockbackLifetimeRange": 0.0,
         "stunBonusDivideMicroraptor": 3.0,
@@ -2476,7 +2497,7 @@
           "areaType": "Water",
           "useInverted": true,
           "ignoreTerrain": false,
-          "idealDistanceWithinTrack": 20.0,
+          "idealDistanceWithinTrack": 24.0,
           "towerSet": "",
           "isOnSubTower": false,
           "name": ""
@@ -2505,7 +2526,7 @@
         "areaType": "Water",
         "useInverted": true,
         "ignoreTerrain": false,
-        "idealDistanceWithinTrack": 20.0,
+        "idealDistanceWithinTrack": 24.0,
         "towerSet": "",
         "isOnSubTower": false,
         "name": ""

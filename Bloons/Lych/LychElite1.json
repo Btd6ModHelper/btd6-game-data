@@ -16,8 +16,8 @@
   "tags": [
     "Moabs",
     "Boss",
-    "Elite",
-    "Bad"
+    "Bad",
+    "Elite"
   ],
   "behaviors": [
     {
@@ -94,6 +94,59 @@
       "name": ""
     },
     {
+      "$type": "Il2CppAssets.Scripts.Models.Bloons.Behaviors.LychBossSuperScriptModel, Assembly-CSharp",
+      "preventFallthrough": true,
+      "drainInterval": 12.0,
+      "drainInitialInterval": 2.0,
+      "drainEtherealExitInterval": 0.5,
+      "drainActionIds": [
+        "AbsorbBuffs",
+        "AbsorbBuffsAnimTrigger"
+      ],
+      "regrowInterval": 9.0,
+      "regrowInitialInterval": 2.0,
+      "regrowDrainInterval": 3.0,
+      "regrowEtherealExitInterval": 3.0,
+      "regrowActionIds": [
+        "RegrowHeal"
+      ],
+      "tombstoneInterval": 18.0,
+      "tombstoneInitialInterval": 10.0,
+      "tombstoneEtherealExitInterval": 2.0,
+      "tombstoneActionIds": [
+        "SpawnTombstone"
+      ],
+      "tombstoneHealthOverride": 1600.0,
+      "tombstoneMoabHealthOverride": 300.0,
+      "tombstoneBfbHealthOverride": 700.0,
+      "tombstoneZomgHealthOverride": 4000.0,
+      "tombstoneSpawnSpeedModifier": 1.1,
+      "etherealHealthPercentageValues": [
+        0.8333,
+        0.6666,
+        0.5,
+        0.3333,
+        0.1666
+      ],
+      "etherealEnterActionIds": [
+        "EtherealAnim",
+        "SpeedDown",
+        "RemoveMutators",
+        "SpawnLychSoul1",
+        "SpawnLychSoul2",
+        "SpawnLychSoul3",
+        "SpawnLychSoul4",
+        "SpawnLychSoul5"
+      ],
+      "etherealExitActionIds": [
+        "NonEtherealAnim",
+        "SpeedUp"
+      ],
+      "totalKills": 0,
+      "TombstoneSpawnHealthOverrides": null,
+      "name": ""
+    },
+    {
       "$type": "Il2CppAssets.Scripts.Models.Bloons.Behaviors.CreateSoundOnDamageBloonModel, Assembly-CSharp",
       "sounds": [
         {
@@ -146,19 +199,7 @@
       "name": ""
     },
     {
-      "$type": "Il2CppAssets.Scripts.Models.Bloons.Behaviors.TimeTriggerModel, Assembly-CSharp",
-      "interval": 12.0,
-      "triggerImmediately": true,
-      "actionIds": [
-        "AbsorbBuffs",
-        "AbsorbBuffsAnimTrigger"
-      ],
-      "name": ""
-    },
-    {
       "$type": "Il2CppAssets.Scripts.Models.Bloons.Behaviors.AbsorbTowerBuffsActionModel, Assembly-CSharp",
-      "healPerBuff": 0,
-      "healPercentPerBuff": 0.02,
       "towerFreezeDuration": 5.0,
       "towerFreezeDurationFrames": 0,
       "radius": 100.0,
@@ -244,21 +285,8 @@
     {
       "$type": "Il2CppAssets.Scripts.Models.Bloons.Behaviors.SellTriggerModel, Assembly-CSharp",
       "actionIds": [
-        "HealOnTowerSell",
         "SellLychAnimation"
       ],
-      "name": ""
-    },
-    {
-      "$type": "Il2CppAssets.Scripts.Models.Bloons.Behaviors.HealOnTowerSellActionModel, Assembly-CSharp",
-      "healAmount": 0,
-      "healPercentForHighestTier": 0.01,
-      "effectAtTower": {
-        "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.PrefabReference, Il2CppNinjaKiwi.Common",
-        "guidRef": "2ab71292b7513cd40a3532b6b84e823c",
-        "AssetGUID": "2ab71292b7513cd40a3532b6b84e823c"
-      },
-      "actionId": "HealOnTowerSell",
       "name": ""
     },
     {
@@ -269,83 +297,10 @@
       "name": ""
     },
     {
-      "$type": "Il2CppAssets.Scripts.Models.Bloons.Behaviors.HealthPercentTriggerModel, Assembly-CSharp",
-      "repeatFirst": false,
-      "preventFallthrough": true,
-      "percentageValues": [
-        0.875,
-        0.75,
-        0.625,
-        0.5,
-        0.375,
-        0.25,
-        0.125
-      ],
-      "actionIds": [
-        "ReanimateMoabs",
-        "ReanimateBloonsAnim",
-        "EtherealAnim",
-        "Invunerable",
-        "SpeedDown",
-        "RemoveMutators"
-      ],
-      "name": ""
-    },
-    {
-      "$type": "Il2CppAssets.Scripts.Models.Bloons.Behaviors.ReanimateMoabsActionModel, Assembly-CSharp",
-      "radius": 9999.0,
-      "maxTimeSince": 20.0,
-      "maxTimeSinceFrames": 0,
-      "maxRbe": 2500,
-      "reanimationEffect": {
-        "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.PrefabReference, Il2CppNinjaKiwi.Common",
-        "guidRef": "1735f6f704084f54da0be621e3ab0699",
-        "AssetGUID": "1735f6f704084f54da0be621e3ab0699"
-      },
-      "pauseMovementDuration": 1.0,
-      "speedMultiplier": 1.8,
-      "healthMultiplier": 7.0,
-      "timeUntilBloonsMove": 1.0,
-      "timeUntilBloonsMoveFrames": 0,
-      "reanimationActionIds": [
-        "EtherealAnim",
-        "Invunerable",
-        "SpeedDown"
-      ],
-      "postPopActionIds": [
-        "NonEtherealAnim",
-        "Vulnerable",
-        "SpeedUp"
-      ],
-      "bossName": "Lych",
-      "miniMeModelId": "MiniLychElite1",
-      "minTimeUntilPostActionsFrames": 360,
-      "actionId": "ReanimateMoabs",
-      "name": ""
-    },
-    {
-      "$type": "Il2CppAssets.Scripts.Models.Bloons.Behaviors.PlayAnimTriggerActionModel, Assembly-CSharp",
-      "triggerName": "ReanimateBloons",
-      "pauseMovementDuration": 0.0,
-      "actionId": "ReanimateBloonsAnim",
-      "name": ""
-    },
-    {
       "$type": "Il2CppAssets.Scripts.Models.Bloons.Behaviors.PlayAnimTriggerActionModel, Assembly-CSharp",
       "triggerName": "Ethereal",
       "pauseMovementDuration": 0.0,
       "actionId": "EtherealAnim",
-      "name": ""
-    },
-    {
-      "$type": "Il2CppAssets.Scripts.Models.Bloons.Behaviors.SetInvulnerableActionModel, Assembly-CSharp",
-      "set": true,
-      "sound": {
-        "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.AudioClipReference, Il2CppNinjaKiwi.Common",
-        "guidRef": "6cc3ddba14673e545b495bf51cbb0a11",
-        "AssetGUID": "6cc3ddba14673e545b495bf51cbb0a11"
-      },
-      "actionId": "Invunerable",
       "name": ""
     },
     {
@@ -366,9 +321,102 @@
         "CarpetSpikes",
         "SpiritOfTheForestClose",
         "SpiritOfTheForestMedium",
-        "SpiritOfTheForestFar"
+        "SpiritOfTheForestFar",
+        "GrowBlock",
+        "Heartstopper",
+        "RushBehaviorMutator"
       ],
       "actionId": "RemoveMutators",
+      "name": ""
+    },
+    {
+      "$type": "Il2CppAssets.Scripts.Models.Bloons.Behaviors.SpawnBloonsActionModel, Assembly-CSharp",
+      "bossName": "Lych",
+      "bloonType": "MiniLychElite1",
+      "spawnCount": 1,
+      "spawnOverTime": 0.0,
+      "spawnDistAhead": 0.0,
+      "spawnTrackMin": 0.1,
+      "spawnTrackMax": 0.15,
+      "animationLength": 0.0,
+      "invulnerableWhileAnimating": false,
+      "healthPercentOfSelf": 0.0,
+      "healthOverride": 0.0,
+      "animCurveIds": [],
+      "moabAnimCurveIds": [],
+      "actionId": "SpawnLychSoul1",
+      "name": ""
+    },
+    {
+      "$type": "Il2CppAssets.Scripts.Models.Bloons.Behaviors.SpawnBloonsActionModel, Assembly-CSharp",
+      "bossName": "Lych",
+      "bloonType": "MiniLychElite1",
+      "spawnCount": 1,
+      "spawnOverTime": 0.0,
+      "spawnDistAhead": 0.0,
+      "spawnTrackMin": 0.3,
+      "spawnTrackMax": 0.35,
+      "animationLength": 0.0,
+      "invulnerableWhileAnimating": false,
+      "healthPercentOfSelf": 0.0,
+      "healthOverride": 0.0,
+      "animCurveIds": [],
+      "moabAnimCurveIds": [],
+      "actionId": "SpawnLychSoul2",
+      "name": ""
+    },
+    {
+      "$type": "Il2CppAssets.Scripts.Models.Bloons.Behaviors.SpawnBloonsActionModel, Assembly-CSharp",
+      "bossName": "Lych",
+      "bloonType": "MiniLychElite1",
+      "spawnCount": 1,
+      "spawnOverTime": 0.0,
+      "spawnDistAhead": 0.0,
+      "spawnTrackMin": 0.45,
+      "spawnTrackMax": 0.5,
+      "animationLength": 0.0,
+      "invulnerableWhileAnimating": false,
+      "healthPercentOfSelf": 0.0,
+      "healthOverride": 0.0,
+      "animCurveIds": [],
+      "moabAnimCurveIds": [],
+      "actionId": "SpawnLychSoul3",
+      "name": ""
+    },
+    {
+      "$type": "Il2CppAssets.Scripts.Models.Bloons.Behaviors.SpawnBloonsActionModel, Assembly-CSharp",
+      "bossName": "Lych",
+      "bloonType": "MiniLychElite1",
+      "spawnCount": 1,
+      "spawnOverTime": 0.0,
+      "spawnDistAhead": 0.0,
+      "spawnTrackMin": 0.6,
+      "spawnTrackMax": 0.65,
+      "animationLength": 0.0,
+      "invulnerableWhileAnimating": false,
+      "healthPercentOfSelf": 0.0,
+      "healthOverride": 0.0,
+      "animCurveIds": [],
+      "moabAnimCurveIds": [],
+      "actionId": "SpawnLychSoul4",
+      "name": ""
+    },
+    {
+      "$type": "Il2CppAssets.Scripts.Models.Bloons.Behaviors.SpawnBloonsActionModel, Assembly-CSharp",
+      "bossName": "Lych",
+      "bloonType": "MiniLychElite1",
+      "spawnCount": 1,
+      "spawnOverTime": 0.0,
+      "spawnDistAhead": 0.0,
+      "spawnTrackMin": 0.75,
+      "spawnTrackMax": 0.8,
+      "animationLength": 0.0,
+      "invulnerableWhileAnimating": false,
+      "healthPercentOfSelf": 0.0,
+      "healthOverride": 0.0,
+      "animCurveIds": [],
+      "moabAnimCurveIds": [],
+      "actionId": "SpawnLychSoul5",
       "name": ""
     },
     {
@@ -379,23 +427,37 @@
       "name": ""
     },
     {
-      "$type": "Il2CppAssets.Scripts.Models.Bloons.Behaviors.SetInvulnerableActionModel, Assembly-CSharp",
-      "set": false,
-      "sound": {
-        "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.AudioClipReference, Il2CppNinjaKiwi.Common",
-        "guidRef": null,
-        "AssetGUID": null
-      },
-      "actionId": "Vulnerable",
-      "name": ""
-    },
-    {
       "$type": "Il2CppAssets.Scripts.Models.Bloons.Behaviors.SetSpeedPercentActionModel, Assembly-CSharp",
       "percent": 1.0,
       "revert": true,
       "time": 0.0,
       "distance": 0.0,
       "actionId": "SpeedUp",
+      "name": ""
+    },
+    {
+      "$type": "Il2CppAssets.Scripts.Models.Bloons.Behaviors.HealSelfActionModel, Assembly-CSharp",
+      "healAmount": 0,
+      "healPercent": 0.015,
+      "bossSkullIncreasePercent": 0.2,
+      "actionId": "RegrowHeal",
+      "name": ""
+    },
+    {
+      "$type": "Il2CppAssets.Scripts.Models.Bloons.Behaviors.LychTombstoneSpawnActionModel, Assembly-CSharp",
+      "bossName": "Lych",
+      "bloonType": "TombstoneElite1",
+      "spawnCount": 1,
+      "spawnOverTime": 0.0,
+      "spawnDistAhead": -50.0,
+      "spawnTrackMin": 0.0,
+      "spawnTrackMax": 0.0,
+      "actionId": "SpawnTombstone",
+      "name": ""
+    },
+    {
+      "$type": "Il2CppAssets.Scripts.Models.Bloons.Behaviors.WorthReductionModel, Assembly-CSharp",
+      "worthMultiplier": 0.35,
       "name": ""
     }
   ],

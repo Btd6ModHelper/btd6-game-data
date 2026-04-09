@@ -95,6 +95,7 @@
     "AssetGUID": null
   },
   "doesntRotate": false,
+  "hideInfoButton": false,
   "upgrades": [
     {
       "$type": "Il2CppAssets.Scripts.Models.Towers.Upgrades.UpgradePathModel, Assembly-CSharp",
@@ -164,6 +165,7 @@
   "isParagon": false,
   "ignoreMaxSellPercent": false,
   "isStunned": false,
+  "ignoreStun": false,
   "geraldoItemName": null,
   "sellbackModifierAdd": 0.0,
   "skinName": null,
@@ -713,8 +715,8 @@
                               "AssetGUID": null
                             },
                             "id": "Icicle",
-                            "maxPierce": 3.0,
-                            "pierce": 3.0,
+                            "maxPierce": 6.0,
+                            "pierce": 6.0,
                             "scale": 1.0,
                             "ignoreBlockers": true,
                             "usePointCollisionWithBloons": false,
@@ -746,8 +748,8 @@
                             "behaviors": [
                               {
                                 "$type": "Il2CppAssets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModel, Assembly-CSharp",
-                                "damage": 3.0,
-                                "maxDamage": 3.0,
+                                "damage": 6.0,
+                                "maxDamage": 6.0,
                                 "distributeToChildren": true,
                                 "overrideDistributeBlocker": false,
                                 "createPopEffect": true,
@@ -755,7 +757,7 @@
                                 "immuneBloonPropertiesOriginal": 1,
                                 "ignoreImmunityDestroy": false,
                                 "ignoreDamageMultipliers": false,
-                                "CappedDamage": 3.0,
+                                "CappedDamage": 6.0,
                                 "collisionPass": 0,
                                 "name": "DamageModel_Icicle_"
                               },
@@ -848,7 +850,7 @@
                             "saveId": null,
                             "displayModel": null,
                             "cantCreateSubProjectiles": false,
-                            "CappedPierce": 3.0,
+                            "CappedPierce": 6.0,
                             "name": "ProjectileModel_Icicle"
                           },
                           "emission": {
@@ -868,7 +870,7 @@
                       "stackCount": 0,
                       "dontCopy": false,
                       "parentDamageModel": null,
-                      "chance": 0.0,
+                      "chance": 0.25,
                       "dontRemoveOnBloonDegrade": false,
                       "overlayType": "Icicles",
                       "collisionPass": -1,
@@ -882,7 +884,7 @@
                       "mutatorIdList": [
                         "Ice:Icicles"
                       ],
-                      "collisionPass": -2,
+                      "collisionPass": -50,
                       "name": "RemoveMutatorsFromBloonModel_RemoveIcicles"
                     },
                     {
@@ -924,6 +926,12 @@
                       "name": "DamageModifierForTagModel_BaseProjectile"
                     },
                     {
+                      "$type": "Il2CppAssets.Scripts.Models.Towers.Projectiles.Behaviors.AddHeatToBloonModel, Assembly-CSharp",
+                      "heatAmount": -50.0,
+                      "collisionPass": 0,
+                      "name": "AddHeatToBloonModel_BaseProjectile"
+                    },
+                    {
                       "$type": "Il2CppAssets.Scripts.Models.GenericBehaviors.DisplayModel, Assembly-CSharp",
                       "display": {
                         "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.PrefabReference, Il2CppNinjaKiwi.Common",
@@ -951,7 +959,7 @@
                     }
                   ],
                   "collisionPasses": [
-                    -2,
+                    -50,
                     -1,
                     0
                   ],
@@ -1159,6 +1167,7 @@
           "customStartCooldownFrames": 0,
           "animateOnMainAttack": false,
           "isStunned": false,
+          "modelName": "Weapon",
           "Rate": 0.5625,
           "UseThrowMarker": true,
           "name": "WeaponModel_Weapon"

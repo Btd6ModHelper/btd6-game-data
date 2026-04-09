@@ -112,6 +112,7 @@
     "AssetGUID": null
   },
   "doesntRotate": false,
+  "hideInfoButton": false,
   "upgrades": [
     {
       "$type": "Il2CppAssets.Scripts.Models.Towers.Upgrades.UpgradePathModel, Assembly-CSharp",
@@ -167,7 +168,12 @@
       "continueToNextPriority": false
     }
   ],
-  "paragonUpgrade": null,
+  "paragonUpgrade": {
+    "$type": "Il2CppAssets.Scripts.Models.Towers.Upgrades.UpgradePathModel, Assembly-CSharp",
+    "tower": "Druid-Paragon",
+    "upgrade": "Druid Paragon",
+    "name": "UpgradePathModel_UpgradePathModel"
+  },
   "isSubTower": false,
   "isBakable": true,
   "powerName": null,
@@ -186,6 +192,7 @@
   "isParagon": false,
   "ignoreMaxSellPercent": false,
   "isStunned": false,
+  "ignoreStun": false,
   "geraldoItemName": null,
   "sellbackModifierAdd": 0.0,
   "skinName": null,
@@ -619,6 +626,7 @@
           "customStartCooldownFrames": 0,
           "animateOnMainAttack": false,
           "isStunned": false,
+          "modelName": "Weapon",
           "Rate": 1.1,
           "UseThrowMarker": true,
           "name": "WeaponModel_Weapon"
@@ -937,8 +945,8 @@
                   "distributeToChildren": false,
                   "overrideDistributeBlocker": false,
                   "createPopEffect": false,
-                  "immuneBloonProperties": 5,
-                  "immuneBloonPropertiesOriginal": 5,
+                  "immuneBloonProperties": 12,
+                  "immuneBloonPropertiesOriginal": 12,
                   "ignoreImmunityDestroy": false,
                   "ignoreDamageMultipliers": false,
                   "CappedDamage": 0.0,
@@ -966,8 +974,8 @@
                 "distributeToChildren": false,
                 "overrideDistributeBlocker": false,
                 "createPopEffect": false,
-                "immuneBloonProperties": 5,
-                "immuneBloonPropertiesOriginal": 5,
+                "immuneBloonProperties": 12,
+                "immuneBloonPropertiesOriginal": 12,
                 "ignoreImmunityDestroy": false,
                 "ignoreDamageMultipliers": false,
                 "CappedDamage": 0.0,
@@ -1006,7 +1014,7 @@
               0
             ],
             "canCollideWithBloons": true,
-            "radius": 0.0,
+            "radius": 8.0,
             "vsBlockerRadius": 0.0,
             "hasDamageModifiers": false,
             "dontUseCollisionChecker": false,
@@ -1089,6 +1097,7 @@
           "customStartCooldownFrames": 0,
           "animateOnMainAttack": false,
           "isStunned": false,
+          "modelName": "BallLightning",
           "Rate": 6.0,
           "UseThrowMarker": true,
           "name": "WeaponModel_BallLightning"
@@ -1144,7 +1153,7 @@
               },
               {
                 "$type": "Il2CppAssets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModel, Assembly-CSharp",
-                "damage": 120.0,
+                "damage": 150.0,
                 "maxDamage": 0.0,
                 "distributeToChildren": true,
                 "overrideDistributeBlocker": false,
@@ -1153,7 +1162,7 @@
                 "immuneBloonPropertiesOriginal": 0,
                 "ignoreImmunityDestroy": false,
                 "ignoreDamageMultipliers": false,
-                "CappedDamage": 120.0,
+                "CappedDamage": 150.0,
                 "collisionPass": 0,
                 "name": "DamageModel_Projectile_"
               },
@@ -1581,8 +1590,8 @@
                         "distributeToChildren": false,
                         "overrideDistributeBlocker": false,
                         "createPopEffect": false,
-                        "immuneBloonProperties": 5,
-                        "immuneBloonPropertiesOriginal": 5,
+                        "immuneBloonProperties": 12,
+                        "immuneBloonPropertiesOriginal": 12,
                         "ignoreImmunityDestroy": false,
                         "ignoreDamageMultipliers": false,
                         "CappedDamage": 0.0,
@@ -1610,8 +1619,8 @@
                       "distributeToChildren": false,
                       "overrideDistributeBlocker": false,
                       "createPopEffect": false,
-                      "immuneBloonProperties": 5,
-                      "immuneBloonPropertiesOriginal": 5,
+                      "immuneBloonProperties": 12,
+                      "immuneBloonPropertiesOriginal": 12,
                       "ignoreImmunityDestroy": false,
                       "ignoreDamageMultipliers": false,
                       "CappedDamage": 0.0,
@@ -1650,7 +1659,7 @@
                     0
                   ],
                   "canCollideWithBloons": true,
-                  "radius": 0.0,
+                  "radius": 8.0,
                   "vsBlockerRadius": 0.0,
                   "hasDamageModifiers": false,
                   "dontUseCollisionChecker": false,
@@ -1677,7 +1686,7 @@
                   "behaviors": null,
                   "name": ""
                 },
-                "intervalFrames": 60,
+                "intervalFrames": 180,
                 "onlyIfHasTarget": false,
                 "range": 0.0,
                 "targetType": {
@@ -1692,6 +1701,13 @@
                 "useRawWeaponRate": false,
                 "onlyEmitOnce": false,
                 "effect": null,
+                "collisionPass": 0,
+                "name": ""
+              },
+              {
+                "$type": "Il2CppAssets.Scripts.Models.Towers.Projectiles.Behaviors.ClearHitBloonsModel, Assembly-CSharp",
+                "interval": 1.0,
+                "intervalFrames": 0,
                 "collisionPass": 0,
                 "name": ""
               },
@@ -1757,6 +1773,7 @@
           "customStartCooldownFrames": 0,
           "animateOnMainAttack": false,
           "isStunned": false,
+          "modelName": "SuperstormTornado",
           "Rate": 4.0,
           "UseThrowMarker": true,
           "name": "WeaponModel_SuperstormTornado"
@@ -2030,6 +2047,7 @@
           "customStartCooldownFrames": 0,
           "animateOnMainAttack": false,
           "isStunned": false,
+          "modelName": "Lightning",
           "Rate": 2.3,
           "UseThrowMarker": true,
           "name": "WeaponModel_Lightning"
@@ -2363,6 +2381,7 @@
           "customStartCooldownFrames": 0,
           "animateOnMainAttack": false,
           "isStunned": false,
+          "modelName": "Tornado",
           "Rate": 2.5,
           "UseThrowMarker": true,
           "name": "WeaponModel_Tornado"

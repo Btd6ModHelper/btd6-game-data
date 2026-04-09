@@ -106,6 +106,7 @@
     "AssetGUID": null
   },
   "doesntRotate": false,
+  "hideInfoButton": false,
   "upgrades": [],
   "appliedUpgrades": [
     "Faster Reload",
@@ -174,6 +175,7 @@
   "isParagon": false,
   "ignoreMaxSellPercent": false,
   "isStunned": false,
+  "ignoreStun": false,
   "geraldoItemName": null,
   "sellbackModifierAdd": 0.0,
   "skinName": null,
@@ -243,46 +245,12 @@
   "behaviors": [
     {
       "$type": "Il2CppAssets.Scripts.Models.Towers.Behaviors.CreateEffectOnPlaceModel, Assembly-CSharp",
-      "effectModel": {
-        "$type": "Il2CppAssets.Scripts.Models.Effects.EffectModel, Assembly-CSharp",
-        "assetId": {
-          "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.PrefabReference, Il2CppNinjaKiwi.Common",
-          "guidRef": "d2bcad0f16bb76e408a107e13b2c0da3",
-          "AssetGUID": "d2bcad0f16bb76e408a107e13b2c0da3"
-        },
-        "scale": 1.0,
-        "lifespan": 6.0,
-        "fullscreen": 0,
-        "useCenterPosition": false,
-        "useTransformPosition": false,
-        "useTransfromRotation": false,
-        "destroyOnTransformDestroy": false,
-        "alwaysUseAge": false,
-        "useRoundTime": false,
-        "name": "EffectModel_PlacementEffect"
-      },
+      "effectModel": null,
       "name": "CreateEffectOnPlaceModel_BombShooter-052"
     },
     {
       "$type": "Il2CppAssets.Scripts.Models.Towers.Behaviors.CreateEffectOnSellModel, Assembly-CSharp",
-      "effectModel": {
-        "$type": "Il2CppAssets.Scripts.Models.Effects.EffectModel, Assembly-CSharp",
-        "assetId": {
-          "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.PrefabReference, Il2CppNinjaKiwi.Common",
-          "guidRef": "b1dec8a8d79593843bc2e2410eae944e",
-          "AssetGUID": "b1dec8a8d79593843bc2e2410eae944e"
-        },
-        "scale": 1.0,
-        "lifespan": 1.0,
-        "fullscreen": 0,
-        "useCenterPosition": false,
-        "useTransformPosition": false,
-        "useTransfromRotation": false,
-        "destroyOnTransformDestroy": false,
-        "alwaysUseAge": false,
-        "useRoundTime": false,
-        "name": "EffectModel_SellEffect"
-      },
+      "effectModel": null,
       "name": "CreateEffectOnSellModel_BombShooter-052"
     },
     {
@@ -510,20 +478,6 @@
                       "name": "DamageModifierForTagModel_Explosion"
                     },
                     {
-                      "$type": "Il2CppAssets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModifierForTagModel, Assembly-CSharp",
-                      "tag": "Ceramic",
-                      "tags": [
-                        "Ceramic"
-                      ],
-                      "damageMultiplier": 1.0,
-                      "damageAddative": 4.0,
-                      "mustIncludeAllTags": false,
-                      "applyOverMaxDamage": false,
-                      "ignoreTag": false,
-                      "collisionPass": 0,
-                      "name": "DamageModifierForTagModel_Explosion"
-                    },
-                    {
                       "$type": "Il2CppAssets.Scripts.Models.GenericBehaviors.DisplayModel, Assembly-CSharp",
                       "display": {
                         "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.PrefabReference, Il2CppNinjaKiwi.Common",
@@ -657,6 +611,20 @@
                       "name": "ProjectileFilterModel_Frag"
                     },
                     {
+                      "$type": "Il2CppAssets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModifierForTagModel, Assembly-CSharp",
+                      "tag": "Moabs",
+                      "tags": [
+                        "Moabs"
+                      ],
+                      "damageMultiplier": 1.0,
+                      "damageAddative": 29.0,
+                      "mustIncludeAllTags": false,
+                      "applyOverMaxDamage": false,
+                      "ignoreTag": false,
+                      "collisionPass": 0,
+                      "name": "DamageModifierForTagModel_Frag"
+                    },
+                    {
                       "$type": "Il2CppAssets.Scripts.Models.GenericBehaviors.DisplayModel, Assembly-CSharp",
                       "display": {
                         "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.PrefabReference, Il2CppNinjaKiwi.Common",
@@ -689,7 +657,7 @@
                   "canCollideWithBloons": true,
                   "radius": 2.0,
                   "vsBlockerRadius": 0.0,
-                  "hasDamageModifiers": false,
+                  "hasDamageModifiers": true,
                   "dontUseCollisionChecker": false,
                   "checkCollisionInterval": 0.0,
                   "checkCollisionIntervalFrames": 0,
@@ -849,6 +817,7 @@
           "customStartCooldownFrames": 0,
           "animateOnMainAttack": false,
           "isStunned": false,
+          "modelName": "Weapon",
           "Rate": 0.825,
           "UseThrowMarker": true,
           "name": "WeaponModel_Weapon"
@@ -1261,6 +1230,148 @@
                         "name": ""
                       },
                       {
+                        "$type": "Il2CppAssets.Scripts.Models.Towers.Projectiles.Behaviors.CreateProjectileOnContactModel, Assembly-CSharp",
+                        "projectile": {
+                          "$type": "Il2CppAssets.Scripts.Models.Towers.Projectiles.ProjectileModel, Assembly-CSharp",
+                          "display": {
+                            "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.PrefabReference, Il2CppNinjaKiwi.Common",
+                            "guidRef": "d15d481d5956b28449b8c87a578d8f07",
+                            "AssetGUID": "d15d481d5956b28449b8c87a578d8f07"
+                          },
+                          "id": "Frag",
+                          "maxPierce": 0.0,
+                          "pierce": 2.0,
+                          "scale": 1.0,
+                          "ignoreBlockers": false,
+                          "usePointCollisionWithBloons": false,
+                          "canCollisionBeBlockedByMapLos": false,
+                          "filters": [
+                            {
+                              "$type": "Il2CppAssets.Scripts.Models.Towers.Filters.FilterInvisibleModel, Assembly-CSharp",
+                              "isActive": true,
+                              "ignoreBroadPhase": false,
+                              "name": ""
+                            }
+                          ],
+                          "behaviors": [
+                            {
+                              "$type": "Il2CppAssets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModel, Assembly-CSharp",
+                              "damage": 1.0,
+                              "maxDamage": 0.0,
+                              "distributeToChildren": true,
+                              "overrideDistributeBlocker": false,
+                              "createPopEffect": true,
+                              "immuneBloonProperties": 17,
+                              "immuneBloonPropertiesOriginal": 17,
+                              "ignoreImmunityDestroy": false,
+                              "ignoreDamageMultipliers": false,
+                              "CappedDamage": 1.0,
+                              "collisionPass": 0,
+                              "name": "DamageModel_Frag_"
+                            },
+                            {
+                              "$type": "Il2CppAssets.Scripts.Models.Towers.Projectiles.Behaviors.TravelStraitModel, Assembly-CSharp",
+                              "speed": 300.0,
+                              "speedFrames": 0.0,
+                              "lifespan": 0.16666667,
+                              "lifespanFrames": 0,
+                              "Speed": 300.0,
+                              "Lifespan": 0.16666667,
+                              "collisionPass": 0,
+                              "name": "TravelStraitModel_Frag"
+                            },
+                            {
+                              "$type": "Il2CppAssets.Scripts.Models.Towers.Projectiles.Behaviors.ProjectileFilterModel, Assembly-CSharp",
+                              "filters": [
+                                {
+                                  "$type": "Il2CppAssets.Scripts.Models.Towers.Filters.FilterInvisibleModel, Assembly-CSharp",
+                                  "isActive": true,
+                                  "ignoreBroadPhase": false,
+                                  "name": ""
+                                }
+                              ],
+                              "collisionPass": 0,
+                              "name": "ProjectileFilterModel_Frag"
+                            },
+                            {
+                              "$type": "Il2CppAssets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModifierForTagModel, Assembly-CSharp",
+                              "tag": "Moabs",
+                              "tags": [
+                                "Moabs"
+                              ],
+                              "damageMultiplier": 1.0,
+                              "damageAddative": 29.0,
+                              "mustIncludeAllTags": false,
+                              "applyOverMaxDamage": false,
+                              "ignoreTag": false,
+                              "collisionPass": 0,
+                              "name": "DamageModifierForTagModel_Frag"
+                            },
+                            {
+                              "$type": "Il2CppAssets.Scripts.Models.GenericBehaviors.DisplayModel, Assembly-CSharp",
+                              "display": {
+                                "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.PrefabReference, Il2CppNinjaKiwi.Common",
+                                "guidRef": "d15d481d5956b28449b8c87a578d8f07",
+                                "AssetGUID": "d15d481d5956b28449b8c87a578d8f07"
+                              },
+                              "layer": 0,
+                              "positionOffset": {
+                                "$type": "Il2CppAssets.Scripts.Simulation.SMath.Vector3, Assembly-CSharp",
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": 0.0,
+                                "MagnitudeSquared": 0.0,
+                                "Magnitude": 0.0,
+                                "Rotation": 0.0,
+                                "SimToDispRotation": 180.0
+                              },
+                              "scale": 1.0,
+                              "ignoreRotation": false,
+                              "animationChanges": null,
+                              "delayedReveal": 0.0,
+                              "category": 16,
+                              "isAnimationPaused": false,
+                              "name": "DisplayModel_ProjectileDisplay"
+                            }
+                          ],
+                          "collisionPasses": [
+                            0
+                          ],
+                          "canCollideWithBloons": true,
+                          "radius": 2.0,
+                          "vsBlockerRadius": 0.0,
+                          "hasDamageModifiers": true,
+                          "dontUseCollisionChecker": false,
+                          "checkCollisionInterval": 0.0,
+                          "checkCollisionIntervalFrames": 0,
+                          "ignoreNonTargetable": false,
+                          "ignorePierceExhaustion": false,
+                          "saveId": null,
+                          "displayModel": null,
+                          "cantCreateSubProjectiles": false,
+                          "CappedPierce": 2.0,
+                          "name": "ProjectileModel_Frag"
+                        },
+                        "emission": {
+                          "$type": "Il2CppAssets.Scripts.Models.Towers.Behaviors.Emissions.ArcEmissionModel, Assembly-CSharp",
+                          "angle": 360.0,
+                          "offsetStart": 0.0,
+                          "offset": 0.0,
+                          "sliceSize": 0.0,
+                          "useProjectileRotation": false,
+                          "useAirUnitRotation": false,
+                          "Count": 16,
+                          "count": 16,
+                          "behaviors": null,
+                          "name": "ArcEmissionModel_arc"
+                        },
+                        "passOnCollidedWith": false,
+                        "dontCreateAtBloon": false,
+                        "passOnDirectionToContact": false,
+                        "collisionPass": 0,
+                        "name": "CreateProjectileOnContactModel_frag"
+                      },
+                      {
                         "$type": "Il2CppAssets.Scripts.Models.GenericBehaviors.DisplayModel, Assembly-CSharp",
                         "display": {
                           "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.PrefabReference, Il2CppNinjaKiwi.Common",
@@ -1316,6 +1427,7 @@
                   "customStartCooldownFrames": 0,
                   "animateOnMainAttack": false,
                   "isStunned": false,
+                  "modelName": "Weapon",
                   "Rate": 99999.0,
                   "UseThrowMarker": false,
                   "name": "WeaponModel_Weapon"

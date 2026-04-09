@@ -1,6 +1,6 @@
 {
   "$type": "Il2CppAssets.Scripts.Models.Towers.TowerModel, Assembly-CSharp",
-  "cost": 275.0,
+  "cost": 300.0,
   "range": 32.0,
   "ignoreBlockers": false,
   "isGlobalRange": false,
@@ -89,6 +89,7 @@
     "AssetGUID": null
   },
   "doesntRotate": false,
+  "hideInfoButton": false,
   "upgrades": [
     {
       "$type": "Il2CppAssets.Scripts.Models.Towers.Upgrades.UpgradePathModel, Assembly-CSharp",
@@ -163,6 +164,7 @@
   "isParagon": false,
   "ignoreMaxSellPercent": false,
   "isStunned": false,
+  "ignoreStun": false,
   "geraldoItemName": null,
   "sellbackModifierAdd": 0.0,
   "skinName": null,
@@ -523,12 +525,12 @@
               },
               {
                 "$type": "Il2CppAssets.Scripts.Models.Towers.Projectiles.Behaviors.TravelStraitModel, Assembly-CSharp",
-                "speed": 110.0,
+                "speed": 130.0,
                 "speedFrames": 0.0,
-                "lifespan": 1.8181819,
+                "lifespan": 1.5384616,
                 "lifespanFrames": 0,
-                "Speed": 110.0,
-                "Lifespan": 1.8181819,
+                "Speed": 130.0,
+                "Lifespan": 1.5384616,
                 "collisionPass": 0,
                 "name": "TravelStraitModel_Projectile"
               },
@@ -750,9 +752,9 @@
                         "name": "GrowBlockModel_FreezeGrowBlock"
                       },
                       "applyAfterDamage": true,
-                      "lifespan": 0.8,
+                      "lifespan": 1.0,
                       "lifespanFrames": 0,
-                      "Lifespan": 0.8,
+                      "Lifespan": 1.0,
                       "overlayType": "Ice",
                       "collisionPass": 1,
                       "name": ""
@@ -762,6 +764,18 @@
                       "heatAmount": -10.0,
                       "collisionPass": 0,
                       "name": "AddHeatToBloonModel_SplitProjectile"
+                    },
+                    {
+                      "$type": "Il2CppAssets.Scripts.Models.Towers.Projectiles.Behaviors.FreezeModifierForTagsModel, Assembly-CSharp",
+                      "tags": [
+                        "Ceramic"
+                      ],
+                      "freezeId": "Ice: MermonkeyFreeze",
+                      "freezeTimeMultiplier": 0.5,
+                      "resetToUnmodified": false,
+                      "preventMutation": false,
+                      "collisionPass": 0,
+                      "name": "FreezeModifierForTagsModel_CeramicPenalty"
                     },
                     {
                       "$type": "Il2CppAssets.Scripts.Models.GenericBehaviors.DisplayModel, Assembly-CSharp",
@@ -855,9 +869,9 @@
                   "name": "GrowBlockModel_FreezeGrowBlock"
                 },
                 "applyAfterDamage": true,
-                "lifespan": 0.8,
+                "lifespan": 1.0,
                 "lifespanFrames": 0,
-                "Lifespan": 0.8,
+                "Lifespan": 1.0,
                 "overlayType": "Ice",
                 "collisionPass": 1,
                 "name": ""
@@ -895,6 +909,18 @@
                 "heatAmount": -10.0,
                 "collisionPass": 0,
                 "name": "AddHeatToBloonModel_Projectile"
+              },
+              {
+                "$type": "Il2CppAssets.Scripts.Models.Towers.Projectiles.Behaviors.FreezeModifierForTagsModel, Assembly-CSharp",
+                "tags": [
+                  "Ceramic"
+                ],
+                "freezeId": "Ice: MermonkeyFreeze",
+                "freezeTimeMultiplier": 0.5,
+                "resetToUnmodified": false,
+                "preventMutation": false,
+                "collisionPass": 0,
+                "name": "FreezeModifierForTagsModel_CeramicPenalty"
               },
               {
                 "$type": "Il2CppAssets.Scripts.Models.GenericBehaviors.DisplayModel, Assembly-CSharp",
@@ -945,7 +971,7 @@
           "fireWithoutTarget": false,
           "fireBetweenRounds": false,
           "behaviors": null,
-          "rate": 0.96,
+          "rate": 1.2,
           "rateFrames": 0,
           "useAttackPosition": false,
           "startInCooldown": false,
@@ -953,7 +979,8 @@
           "customStartCooldownFrames": 0,
           "animateOnMainAttack": false,
           "isStunned": false,
-          "Rate": 0.96,
+          "modelName": "Weapon",
+          "Rate": 1.2,
           "UseThrowMarker": true,
           "name": "WeaponModel_Weapon"
         }
@@ -1111,12 +1138,12 @@
                       },
                       {
                         "$type": "Il2CppAssets.Scripts.Models.Towers.Projectiles.Behaviors.TravelStraitModel, Assembly-CSharp",
-                        "speed": 220.0,
+                        "speed": 260.0,
                         "speedFrames": 0.0,
-                        "lifespan": 10.0,
+                        "lifespan": 7.5,
                         "lifespanFrames": 0,
-                        "Speed": 220.0,
-                        "Lifespan": 10.0,
+                        "Speed": 260.0,
+                        "Lifespan": 7.5,
                         "collisionPass": 0,
                         "name": "TravelStraitModel_Projectile"
                       },
@@ -1195,7 +1222,7 @@
                       },
                       {
                         "$type": "Il2CppAssets.Scripts.Models.Towers.Projectiles.Behaviors.AddHeatToBloonModel, Assembly-CSharp",
-                        "heatAmount": -10.0,
+                        "heatAmount": -50.0,
                         "collisionPass": 0,
                         "name": "AddHeatToBloonModel_Projectile"
                       },
@@ -1256,6 +1283,7 @@
                   "customStartCooldownFrames": 0,
                   "animateOnMainAttack": false,
                   "isStunned": false,
+                  "modelName": "Weapon",
                   "Rate": 0.1,
                   "UseThrowMarker": false,
                   "name": "WeaponModel_Weapon"

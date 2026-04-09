@@ -1,6 +1,6 @@
 {
   "$type": "Il2CppAssets.Scripts.Models.Towers.TowerModel, Assembly-CSharp",
-  "cost": 275.0,
+  "cost": 300.0,
   "range": 32.0,
   "ignoreBlockers": false,
   "isGlobalRange": false,
@@ -89,6 +89,7 @@
     "AssetGUID": null
   },
   "doesntRotate": false,
+  "hideInfoButton": false,
   "upgrades": [
     {
       "$type": "Il2CppAssets.Scripts.Models.Towers.Upgrades.UpgradePathModel, Assembly-CSharp",
@@ -157,6 +158,7 @@
   "isParagon": false,
   "ignoreMaxSellPercent": false,
   "isStunned": false,
+  "ignoreStun": false,
   "geraldoItemName": null,
   "sellbackModifierAdd": 0.0,
   "skinName": null,
@@ -517,12 +519,12 @@
               },
               {
                 "$type": "Il2CppAssets.Scripts.Models.Towers.Projectiles.Behaviors.TravelStraitModel, Assembly-CSharp",
-                "speed": 165.0,
+                "speed": 195.0,
                 "speedFrames": 0.0,
-                "lifespan": 1.2121212,
+                "lifespan": 1.0256411,
                 "lifespanFrames": 0,
-                "Speed": 165.0,
-                "Lifespan": 1.2121212,
+                "Speed": 195.0,
+                "Lifespan": 1.0256411,
                 "collisionPass": 0,
                 "name": "TravelStraitModel_Projectile"
               },
@@ -730,12 +732,24 @@
                         "name": "GrowBlockModel_FreezeGrowBlock"
                       },
                       "applyAfterDamage": true,
-                      "lifespan": 0.8,
+                      "lifespan": 1.0,
                       "lifespanFrames": 0,
-                      "Lifespan": 0.8,
+                      "Lifespan": 1.0,
                       "overlayType": "Ice",
                       "collisionPass": 1,
                       "name": ""
+                    },
+                    {
+                      "$type": "Il2CppAssets.Scripts.Models.Towers.Projectiles.Behaviors.FreezeModifierForTagsModel, Assembly-CSharp",
+                      "tags": [
+                        "Ceramic"
+                      ],
+                      "freezeId": "Ice: MermonkeyFreeze",
+                      "freezeTimeMultiplier": 0.5,
+                      "resetToUnmodified": false,
+                      "preventMutation": false,
+                      "collisionPass": 0,
+                      "name": "FreezeModifierForTagsModel_CeramicPenalty"
                     },
                     {
                       "$type": "Il2CppAssets.Scripts.Models.GenericBehaviors.DisplayModel, Assembly-CSharp",
@@ -829,9 +843,9 @@
                   "name": "GrowBlockModel_FreezeGrowBlock"
                 },
                 "applyAfterDamage": true,
-                "lifespan": 0.8,
+                "lifespan": 1.0,
                 "lifespanFrames": 0,
-                "Lifespan": 0.8,
+                "Lifespan": 1.0,
                 "overlayType": "Ice",
                 "collisionPass": 1,
                 "name": ""
@@ -849,6 +863,18 @@
                 "mustBeModified": true,
                 "collisionPass": 0,
                 "name": ""
+              },
+              {
+                "$type": "Il2CppAssets.Scripts.Models.Towers.Projectiles.Behaviors.FreezeModifierForTagsModel, Assembly-CSharp",
+                "tags": [
+                  "Ceramic"
+                ],
+                "freezeId": "Ice: MermonkeyFreeze",
+                "freezeTimeMultiplier": 0.5,
+                "resetToUnmodified": false,
+                "preventMutation": false,
+                "collisionPass": 0,
+                "name": "FreezeModifierForTagsModel_CeramicPenalty"
               },
               {
                 "$type": "Il2CppAssets.Scripts.Models.GenericBehaviors.DisplayModel, Assembly-CSharp",
@@ -899,7 +925,7 @@
           "fireWithoutTarget": false,
           "fireBetweenRounds": false,
           "behaviors": null,
-          "rate": 0.66,
+          "rate": 0.825,
           "rateFrames": 0,
           "useAttackPosition": false,
           "startInCooldown": false,
@@ -907,7 +933,8 @@
           "customStartCooldownFrames": 0,
           "animateOnMainAttack": false,
           "isStunned": false,
-          "Rate": 0.66,
+          "modelName": "Weapon",
+          "Rate": 0.825,
           "UseThrowMarker": true,
           "name": "WeaponModel_Weapon"
         }
