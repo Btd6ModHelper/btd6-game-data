@@ -47,14 +47,7 @@
                   "ignoreBlockers": true,
                   "usePointCollisionWithBloons": false,
                   "canCollisionBeBlockedByMapLos": false,
-                  "filters": [
-                    {
-                      "$type": "Il2CppAssets.Scripts.Models.Towers.Filters.FilterInvisibleModel, Assembly-CSharp",
-                      "isActive": true,
-                      "ignoreBroadPhase": false,
-                      "name": ""
-                    }
-                  ],
+                  "filters": [],
                   "behaviors": [
                     {
                       "$type": "Il2CppAssets.Scripts.Models.Towers.Projectiles.Behaviors.EatBloonModel, Assembly-CSharp",
@@ -168,6 +161,24 @@
                       "destroyIfInvalid": false,
                       "ignoreTargetZ": false,
                       "dontFollowTarget": true,
+                      "collisionPass": 0,
+                      "name": ""
+                    },
+                    {
+                      "$type": "Il2CppAssets.Scripts.Models.Towers.Projectiles.Behaviors.ProjectileFilterModel, Assembly-CSharp",
+                      "filters": [
+                        {
+                          "$type": "Il2CppAssets.Scripts.Models.Towers.Filters.FilterInvisibleModel, Assembly-CSharp",
+                          "isActive": true,
+                          "ignoreBroadPhase": false,
+                          "name": ""
+                        },
+                        {
+                          "$type": "Il2CppAssets.Scripts.Models.Towers.Filters.FilterMoabModel, Assembly-CSharp",
+                          "flip": true,
+                          "name": ""
+                        }
+                      ],
                       "collisionPass": 0,
                       "name": ""
                     }
