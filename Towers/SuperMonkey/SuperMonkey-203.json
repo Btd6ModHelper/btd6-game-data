@@ -188,6 +188,8 @@
   "beastHandlerLeashMutationId": null,
   "loadedFromSave": false,
   "useAirUnitHeight": false,
+  "isTransformedTower": false,
+  "cantBeStunned": false,
   "_powerProTowerModel": null,
   "frontierId": -1,
   "towerSize": 0,
@@ -749,6 +751,7 @@
       "sharedGridRange": 0.0,
       "drawRangeCircle": false,
       "disableOnCreate": false,
+      "fixedRange": false,
       "name": "AttackModel_Attack_"
     },
     {
@@ -766,10 +769,20 @@
           "$type": "Il2CppAssets.Scripts.Models.Towers.Behaviors.Abilities.Behaviors.DarkshiftModel, Assembly-CSharp",
           "restrictToTowerRadius": true,
           "placementZoneAssetRadius": 40.0,
+          "helperMessageLocsKey": "DarkKnightDarkshift",
+          "yOffset": 30.0,
+          "towerSpawnDelay": 0.25,
+          "delaySpawnUntilEffectIsFinished": false,
+          "maxSpawnDelay": 0.0,
+          "resetRotation": false,
           "placementZoneAsset": {
-            "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.PrefabReference, Il2CppNinjaKiwi.Common",
-            "guidRef": "0b51091b90e723c4f9f1caaa123e2b8f",
-            "AssetGUID": "0b51091b90e723c4f9f1caaa123e2b8f"
+            "$type": "Il2CppAssets.Scripts.Models.Effects.AssetPathModel, Assembly-CSharp",
+            "assetPath": {
+              "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.PrefabReference, Il2CppNinjaKiwi.Common",
+              "guidRef": "0b51091b90e723c4f9f1caaa123e2b8f",
+              "AssetGUID": "0b51091b90e723c4f9f1caaa123e2b8f"
+            },
+            "name": ""
           },
           "darkshiftSound": {
             "$type": "Il2CppAssets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
@@ -816,6 +829,9 @@
             "useRoundTime": false,
             "name": "EffectModel_ReappearEffect"
           },
+          "createProjectileOnFinish": null,
+          "projectileEmission": null,
+          "towerSpawnDelayFrames": 0,
           "name": ""
         }
       ],

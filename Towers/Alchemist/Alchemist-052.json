@@ -183,6 +183,8 @@
   "beastHandlerLeashMutationId": null,
   "loadedFromSave": false,
   "useAirUnitHeight": false,
+  "isTransformedTower": false,
+  "cantBeStunned": false,
   "_powerProTowerModel": null,
   "frontierId": -1,
   "towerSize": 0,
@@ -1061,6 +1063,7 @@
       "sharedGridRange": 0.0,
       "drawRangeCircle": false,
       "disableOnCreate": false,
+      "fixedRange": false,
       "name": "AttackModel_Attack_"
     },
     {
@@ -1786,6 +1789,7 @@
       "sharedGridRange": 0.0,
       "drawRangeCircle": false,
       "disableOnCreate": false,
+      "fixedRange": false,
       "name": "AttackModel_Unstable Concoction_"
     },
     {
@@ -1845,7 +1849,6 @@
           "$type": "Il2CppAssets.Scripts.Models.Towers.Behaviors.Abilities.Behaviors.MorphTowerModel, Assembly-CSharp",
           "isUnique": true,
           "priority": 9999999,
-          "mutatorId": "TansformingTonic",
           "mutateAll": true,
           "mutateSelf": false,
           "towerModel": null,
@@ -2014,6 +2017,8 @@
             "beastHandlerLeashMutationId": "BeastHandlerContributionAlchemist",
             "loadedFromSave": false,
             "useAirUnitHeight": false,
+            "isTransformedTower": false,
+            "cantBeStunned": false,
             "_powerProTowerModel": null,
             "frontierId": -1,
             "towerSize": 0,
@@ -2406,6 +2411,7 @@
                 "sharedGridRange": 0.0,
                 "drawRangeCircle": false,
                 "disableOnCreate": false,
+                "fixedRange": false,
                 "name": "AttackModel_TransformedAttack_"
               },
               {
@@ -2502,9 +2508,23 @@
             "MonkeyFanClub",
             "MonkeyFanClubPlasma"
           ],
+          "canTowerStillUpgrade": false,
+          "saveMutator": false,
+          "animationIndexDuringMorphDelay": 0,
+          "effectDuringMorphDelay": null,
+          "LinkedAbilityCooldowns": {
+            "$type": "Il2CppSystem.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], Il2Cppmscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null",
+            "Teleport": "LeapingSmash",
+            "LeapingSmash": "Teleport",
+            "Battlecry": "Warcry",
+            "Warcry": "Battlecry"
+          },
           "lifespan": 20.0,
           "lifespanFrames": 0,
+          "morphDelay": 0.0,
+          "morphDelayFrames": 0,
           "Lifespan": 20.0,
+          "MorphDelay": 0.0,
           "name": "MorphTowerModel_TransformingTonic"
         },
         {
@@ -2720,6 +2740,7 @@
               "sharedGridRange": 0.0,
               "drawRangeCircle": false,
               "disableOnCreate": false,
+              "fixedRange": false,
               "name": "AttackModel_Transformed Attack_"
             }
           ],

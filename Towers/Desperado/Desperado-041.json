@@ -1,7 +1,7 @@
 {
   "$type": "Il2CppAssets.Scripts.Models.Towers.TowerModel, Assembly-CSharp",
   "cost": 300.0,
-  "range": 28.0,
+  "range": 80.0,
   "ignoreBlockers": false,
   "isGlobalRange": false,
   "tier": 4,
@@ -176,6 +176,8 @@
   "beastHandlerLeashMutationId": null,
   "loadedFromSave": false,
   "useAirUnitHeight": false,
+  "isTransformedTower": false,
+  "cantBeStunned": false,
   "_powerProTowerModel": null,
   "frontierId": -1,
   "towerSize": 0,
@@ -684,6 +686,11 @@
               "isActive": false,
               "ignoreBroadPhase": false,
               "name": ""
+            },
+            {
+              "$type": "Il2CppAssets.Scripts.Models.Towers.Filters.FilterIfAttackHasTargetModel, Assembly-CSharp",
+              "attackName": "AttackModel_AttackRifle_",
+              "name": ""
             }
           ],
           "name": ""
@@ -721,7 +728,7 @@
           "name": ""
         }
       ],
-      "range": 28.0,
+      "range": 40.0,
       "targetProvider": null,
       "offsetX": 0.0,
       "offsetY": 0.0,
@@ -731,8 +738,9 @@
       "framesBeforeRetarget": 0,
       "addsToSharedGrid": true,
       "sharedGridRange": 0.0,
-      "drawRangeCircle": false,
+      "drawRangeCircle": true,
       "disableOnCreate": false,
+      "fixedRange": true,
       "name": "AttackModel_Attack_"
     },
     {
@@ -1023,11 +1031,6 @@
               "isActive": false,
               "ignoreBroadPhase": false,
               "name": ""
-            },
-            {
-              "$type": "Il2CppAssets.Scripts.Models.Towers.Filters.FilterIfAttackHasTargetModel, Assembly-CSharp",
-              "attackName": "AttackModel_Attack_",
-              "name": ""
             }
           ],
           "name": ""
@@ -1063,6 +1066,11 @@
           "canPrioritiseCamo": true,
           "isOnSubTower": false,
           "name": ""
+        },
+        {
+          "$type": "Il2CppAssets.Scripts.Models.Towers.Behaviors.Attack.Behaviors.AttackMinimumRangeModel, Assembly-CSharp",
+          "minimumRange": 40.0,
+          "name": ""
         }
       ],
       "range": 80.0,
@@ -1075,8 +1083,9 @@
       "framesBeforeRetarget": 0,
       "addsToSharedGrid": true,
       "sharedGridRange": 0.0,
-      "drawRangeCircle": true,
+      "drawRangeCircle": false,
       "disableOnCreate": false,
+      "fixedRange": false,
       "name": "AttackModel_AttackRifle_"
     },
     {
@@ -1403,6 +1412,7 @@
       "sharedGridRange": 0.0,
       "drawRangeCircle": false,
       "disableOnCreate": false,
+      "fixedRange": false,
       "name": "AttackModel_AttackMark_"
     },
     {
@@ -1672,6 +1682,7 @@
             "sharedGridRange": 0.0,
             "drawRangeCircle": false,
             "disableOnCreate": false,
+            "fixedRange": false,
             "name": "AttackModel_MarkingAttack_"
           },
           "executionAttackModel": {
@@ -2010,6 +2021,7 @@
             "sharedGridRange": 0.0,
             "drawRangeCircle": false,
             "disableOnCreate": false,
+            "fixedRange": false,
             "name": "AttackModel_ExecutionAttack_"
           },
           "markingTimeFrames": 120,

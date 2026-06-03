@@ -127,6 +127,8 @@
     "beastHandlerLeashMutationId": null,
     "loadedFromSave": false,
     "useAirUnitHeight": true,
+    "isTransformedTower": false,
+    "cantBeStunned": false,
     "_powerProTowerModel": null,
     "frontierId": -1,
     "towerSize": 0,
@@ -219,14 +221,30 @@
           },
           "name": "SoundModel_PlaceSwordOfProtectionDarkSheRa"
         },
-        "reactSound2": null,
-        "reactSoundAlt2": null,
+        "reactSound2": {
+          "$type": "Il2CppAssets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
+          "assetId": {
+            "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.AudioClipReference, Il2CppNinjaKiwi.Common",
+            "guidRef": "003f73ccabb33a549b5cfea7263e799b",
+            "AssetGUID": "003f73ccabb33a549b5cfea7263e799b"
+          },
+          "name": "SoundModel_ReactSwordOfProtectionDanAdam"
+        },
+        "reactSoundAlt2": {
+          "$type": "Il2CppAssets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
+          "assetId": {
+            "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.AudioClipReference, Il2CppNinjaKiwi.Common",
+            "guidRef": "88ab584282afaf94e9a799bade378627",
+            "AssetGUID": "88ab584282afaf94e9a799bade378627"
+          },
+          "name": "SoundModel_ReactSwordOfProtectionDanHeMan"
+        },
         "reactSound3": null,
         "reactSoundAlt3": null,
         "towerType1": "Adora",
         "towerSkin1": "AdoraSheRa",
-        "towerType2": "",
-        "towerSkin2": "",
+        "towerType2": "DanDMonke",
+        "towerSkin2": "DanDMonkeHeMan",
         "towerType3": "",
         "towerSkin3": "",
         "reactDelay": 1.0,
@@ -555,6 +573,7 @@
         "sharedGridRange": 0.0,
         "drawRangeCircle": false,
         "disableOnCreate": false,
+        "fixedRange": false,
         "name": "AttackModel_Attack_"
       },
       {
@@ -810,6 +829,7 @@
         "sharedGridRange": 0.0,
         "drawRangeCircle": false,
         "disableOnCreate": false,
+        "fixedRange": false,
         "name": "AttackModel_Attack2_"
       },
       {
@@ -1065,6 +1085,7 @@
         "sharedGridRange": 0.0,
         "drawRangeCircle": false,
         "disableOnCreate": false,
+        "fixedRange": false,
         "name": "AttackModel_Attack3_"
       },
       {
@@ -1320,6 +1341,7 @@
         "sharedGridRange": 0.0,
         "drawRangeCircle": false,
         "disableOnCreate": false,
+        "fixedRange": false,
         "name": "AttackModel_Attack4_"
       },
       {
@@ -1575,7 +1597,37 @@
         "sharedGridRange": 0.0,
         "drawRangeCircle": false,
         "disableOnCreate": false,
+        "fixedRange": false,
         "name": "AttackModel_Attack5_"
+      },
+      {
+        "$type": "Il2CppAssets.Scripts.Models.Towers.Behaviors.AbilityCooldownScaleSupportModel, Assembly-CSharp",
+        "isUnique": true,
+        "abilityCooldownSpeedScale": 1.25,
+        "affectsOnlyWater": false,
+        "mutatorPriority": 1,
+        "mutatorId": "SheRaAbilityCooldownBuff",
+        "filters": [
+          {
+            "$type": "Il2CppAssets.Scripts.Models.Towers.TowerFilters.FilterInHeroSkinIdModel, Assembly-CSharp",
+            "skinIds": [
+              "AdoraSheRa",
+              "DanDMonkeHeMan"
+            ],
+            "name": ""
+          }
+        ],
+        "isGlobal": true,
+        "isCustomRadius": false,
+        "customRadius": 0.0,
+        "appliesToOwningTower": false,
+        "showBuffIcon": false,
+        "buffLocsName": "",
+        "buffIconName": "",
+        "maxStackSize": 0,
+        "onlyShowBuffIfMutated": false,
+        "onlyAffectParagon": false,
+        "name": ""
       },
       {
         "$type": "Il2CppAssets.Scripts.Models.GenericBehaviors.DisplayModel, Assembly-CSharp",
@@ -1625,8 +1677,8 @@
   },
   "showAsNew": false,
   "availableInMode": "",
-  "Cost": 0,
-  "CanBePurchasedWithMM": false,
+  "Cost": 500,
+  "CanBePurchasedWithMM": true,
   "IsPowerPro": false,
   "CanBeRewarded": true,
   "PowerId": "SheRa",

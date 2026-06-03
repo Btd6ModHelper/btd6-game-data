@@ -231,6 +231,8 @@
   "beastHandlerLeashMutationId": null,
   "loadedFromSave": false,
   "useAirUnitHeight": false,
+  "isTransformedTower": false,
+  "cantBeStunned": false,
   "_powerProTowerModel": null,
   "frontierId": -1,
   "towerSize": 0,
@@ -717,14 +719,30 @@
         "name": "SoundModel_ReactSheRaSkeletor"
       },
       "reactSoundAlt1": null,
-      "reactSound2": null,
-      "reactSoundAlt2": null,
+      "reactSound2": {
+        "$type": "Il2CppAssets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
+        "assetId": {
+          "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.AudioClipReference, Il2CppNinjaKiwi.Common",
+          "guidRef": "7d5e0be7b74c1dc4dba18b48ddb04b15",
+          "AssetGUID": "7d5e0be7b74c1dc4dba18b48ddb04b15"
+        },
+        "name": "SoundModel_ReactSheRaDanAdam"
+      },
+      "reactSoundAlt2": {
+        "$type": "Il2CppAssets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
+        "assetId": {
+          "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.AudioClipReference, Il2CppNinjaKiwi.Common",
+          "guidRef": "86f7da6f7557df341ba456e1312e486d",
+          "AssetGUID": "86f7da6f7557df341ba456e1312e486d"
+        },
+        "name": "SoundModel_ReactSheRaDanHeMan"
+      },
       "reactSound3": null,
       "reactSoundAlt3": null,
       "towerType1": "ObynGreenfoot",
       "towerSkin1": "ObynSkeletor",
-      "towerType2": "",
-      "towerSkin2": "",
+      "towerType2": "DanDMonke",
+      "towerSkin2": "DanDMonkeHeMan",
       "towerType3": "",
       "towerSkin3": "",
       "reactDelay": 2.5,
@@ -779,9 +797,9 @@
         },
         "name": "AssetPathModel_AdoraLevel20SunGod"
       },
-      "damageBonus": 8,
+      "damageBonus": 24,
       "pierceBonus": 30,
-      "ballOfLightDamageBonus": 72,
+      "ballOfLightDamageBonus": 180,
       "ballOfLightPierceBonus": 5,
       "upgradeAnimation": 4,
       "weaponDelay": 5.0,
@@ -921,7 +939,7 @@
           0
         ],
         "towerSet": 16,
-        "towerTheme": null,
+        "towerTheme": "",
         "icon": {
           "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.SpriteReference, Il2CppNinjaKiwi.Common",
           "guidRef": null,
@@ -1115,6 +1133,8 @@
         "beastHandlerLeashMutationId": "BeastHandlerContributionBallOfLight-Tower",
         "loadedFromSave": false,
         "useAirUnitHeight": false,
+        "isTransformedTower": false,
+        "cantBeStunned": false,
         "_powerProTowerModel": null,
         "frontierId": -1,
         "towerSize": 0,
@@ -1364,7 +1384,7 @@
                   "behaviors": [
                     {
                       "$type": "Il2CppAssets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModel, Assembly-CSharp",
-                      "damage": 15.0,
+                      "damage": 20.0,
                       "maxDamage": 0.0,
                       "distributeToChildren": true,
                       "overrideDistributeBlocker": false,
@@ -1373,7 +1393,7 @@
                       "immuneBloonPropertiesOriginal": 0,
                       "ignoreImmunityDestroy": false,
                       "ignoreDamageMultipliers": false,
-                      "CappedDamage": 15.0,
+                      "CappedDamage": 20.0,
                       "collisionPass": 0,
                       "name": "DamageModel_Projectile_"
                     },
@@ -1408,7 +1428,7 @@
                         "Fortified"
                       ],
                       "damageMultiplier": 1.0,
-                      "damageAddative": 15.0,
+                      "damageAddative": 20.0,
                       "mustIncludeAllTags": true,
                       "applyOverMaxDamage": false,
                       "ignoreTag": false,
@@ -1559,6 +1579,7 @@
             "sharedGridRange": 0.0,
             "drawRangeCircle": false,
             "disableOnCreate": false,
+            "fixedRange": false,
             "name": "AttackModel_Attack_"
           },
           {
@@ -2095,6 +2116,7 @@
       "sharedGridRange": 0.0,
       "drawRangeCircle": false,
       "disableOnCreate": false,
+      "fixedRange": false,
       "name": "AttackModel_Attack_"
     },
     {
@@ -2434,7 +2456,7 @@
               0
             ],
             "towerSet": 16,
-            "towerTheme": null,
+            "towerTheme": "",
             "icon": {
               "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.SpriteReference, Il2CppNinjaKiwi.Common",
               "guidRef": null,
@@ -2628,6 +2650,8 @@
             "beastHandlerLeashMutationId": "BeastHandlerContributionBallOfLight-Tower",
             "loadedFromSave": false,
             "useAirUnitHeight": false,
+            "isTransformedTower": false,
+            "cantBeStunned": false,
             "_powerProTowerModel": null,
             "frontierId": -1,
             "towerSize": 0,
@@ -2877,7 +2901,7 @@
                       "behaviors": [
                         {
                           "$type": "Il2CppAssets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModel, Assembly-CSharp",
-                          "damage": 15.0,
+                          "damage": 20.0,
                           "maxDamage": 0.0,
                           "distributeToChildren": true,
                           "overrideDistributeBlocker": false,
@@ -2886,7 +2910,7 @@
                           "immuneBloonPropertiesOriginal": 0,
                           "ignoreImmunityDestroy": false,
                           "ignoreDamageMultipliers": false,
-                          "CappedDamage": 15.0,
+                          "CappedDamage": 20.0,
                           "collisionPass": 0,
                           "name": "DamageModel_Projectile_"
                         },
@@ -2921,7 +2945,7 @@
                             "Fortified"
                           ],
                           "damageMultiplier": 1.0,
-                          "damageAddative": 15.0,
+                          "damageAddative": 20.0,
                           "mustIncludeAllTags": true,
                           "applyOverMaxDamage": false,
                           "ignoreTag": false,
@@ -3072,6 +3096,7 @@
                 "sharedGridRange": 0.0,
                 "drawRangeCircle": false,
                 "disableOnCreate": false,
+                "fixedRange": false,
                 "name": "AttackModel_Attack_"
               },
               {
@@ -3108,6 +3133,9 @@
           },
           "isAirBasedTower": true,
           "trackCirclePosition": false,
+          "hideMainTower": false,
+          "towerLifetime": 0.0,
+          "towerLifetimeFrames": 0,
           "name": ""
         }
       ],

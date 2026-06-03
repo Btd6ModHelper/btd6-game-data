@@ -1,7 +1,7 @@
 {
   "$type": "Il2CppAssets.Scripts.Models.Towers.TowerModel, Assembly-CSharp",
   "cost": 800.0,
-  "range": 29.0,
+  "range": 30.0,
   "ignoreBlockers": false,
   "isGlobalRange": false,
   "tier": 20,
@@ -226,6 +226,8 @@
   "beastHandlerLeashMutationId": null,
   "loadedFromSave": false,
   "useAirUnitHeight": false,
+  "isTransformedTower": false,
+  "cantBeStunned": false,
   "_powerProTowerModel": null,
   "frontierId": -1,
   "towerSize": 0,
@@ -689,7 +691,7 @@
                   },
                   "id": "AOE",
                   "maxPierce": 0.0,
-                  "pierce": 30.0,
+                  "pierce": 40.0,
                   "scale": 1.0,
                   "ignoreBlockers": false,
                   "usePointCollisionWithBloons": false,
@@ -863,7 +865,7 @@
                   "saveId": null,
                   "displayModel": null,
                   "cantCreateSubProjectiles": false,
-                  "CappedPierce": 30.0,
+                  "CappedPierce": 40.0,
                   "name": "ProjectileModel_AOE"
                 },
                 "emission": {
@@ -1085,7 +1087,7 @@
                       },
                       "id": "AOE",
                       "maxPierce": 0.0,
-                      "pierce": 30.0,
+                      "pierce": 40.0,
                       "scale": 1.0,
                       "ignoreBlockers": false,
                       "usePointCollisionWithBloons": false,
@@ -1259,7 +1261,7 @@
                       "saveId": null,
                       "displayModel": null,
                       "cantCreateSubProjectiles": false,
-                      "CappedPierce": 30.0,
+                      "CappedPierce": 40.0,
                       "name": "ProjectileModel_AOE"
                     },
                     "emission": {
@@ -1355,6 +1357,7 @@
               },
               "interval": 5,
               "alternateAnimation": 4,
+              "priority": 0,
               "name": ""
             }
           ],
@@ -1420,7 +1423,7 @@
           "name": ""
         }
       ],
-      "range": 29.0,
+      "range": 30.0,
       "targetProvider": null,
       "offsetX": 0.0,
       "offsetY": 0.0,
@@ -1432,6 +1435,7 @@
       "sharedGridRange": 0.0,
       "drawRangeCircle": false,
       "disableOnCreate": false,
+      "fixedRange": false,
       "name": "AttackModel_Attack_"
     },
     {
@@ -1819,6 +1823,153 @@
                         "name": ""
                       },
                       {
+                        "$type": "Il2CppAssets.Scripts.Models.Towers.Projectiles.Behaviors.CreateProjectileOnExhaustFractionModel, Assembly-CSharp",
+                        "projectile": {
+                          "$type": "Il2CppAssets.Scripts.Models.Towers.Projectiles.ProjectileModel, Assembly-CSharp",
+                          "display": {
+                            "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.PrefabReference, Il2CppNinjaKiwi.Common",
+                            "guidRef": null,
+                            "AssetGUID": null
+                          },
+                          "id": "SqueezeStun",
+                          "maxPierce": 0.0,
+                          "pierce": 40.0,
+                          "scale": 1.0,
+                          "ignoreBlockers": false,
+                          "usePointCollisionWithBloons": false,
+                          "canCollisionBeBlockedByMapLos": false,
+                          "filters": [
+                            {
+                              "$type": "Il2CppAssets.Scripts.Models.Towers.Filters.FilterInvisibleModel, Assembly-CSharp",
+                              "isActive": true,
+                              "ignoreBroadPhase": false,
+                              "name": ""
+                            }
+                          ],
+                          "behaviors": [
+                            {
+                              "$type": "Il2CppAssets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModel, Assembly-CSharp",
+                              "damage": 1.0,
+                              "maxDamage": 0.0,
+                              "distributeToChildren": true,
+                              "overrideDistributeBlocker": false,
+                              "createPopEffect": true,
+                              "immuneBloonProperties": 0,
+                              "immuneBloonPropertiesOriginal": 0,
+                              "ignoreImmunityDestroy": false,
+                              "ignoreDamageMultipliers": false,
+                              "CappedDamage": 1.0,
+                              "collisionPass": 0,
+                              "name": "DamageModel_SqueezeStun_"
+                            },
+                            {
+                              "$type": "Il2CppAssets.Scripts.Models.Towers.Projectiles.Behaviors.AgeModel, Assembly-CSharp",
+                              "rounds": 0,
+                              "useRoundTime": false,
+                              "lifespan": 0.05,
+                              "lifespanFrames": 0,
+                              "endOfRoundClearBypassModel": null,
+                              "Lifespan": 0.05,
+                              "collisionPass": 0,
+                              "name": "AgeModel_SqueezeStun"
+                            },
+                            {
+                              "$type": "Il2CppAssets.Scripts.Models.Towers.Projectiles.Behaviors.ProjectileFilterModel, Assembly-CSharp",
+                              "filters": [
+                                {
+                                  "$type": "Il2CppAssets.Scripts.Models.Towers.Filters.FilterInvisibleModel, Assembly-CSharp",
+                                  "isActive": true,
+                                  "ignoreBroadPhase": false,
+                                  "name": ""
+                                }
+                              ],
+                              "collisionPass": 0,
+                              "name": "ProjectileFilterModel_SqueezeStun"
+                            },
+                            {
+                              "$type": "Il2CppAssets.Scripts.Models.Towers.Projectiles.Behaviors.SlowModel, Assembly-CSharp",
+                              "effectModel": null,
+                              "layers": 9999999,
+                              "overlayLayer": 0,
+                              "glueLevel": 0,
+                              "isUnique": true,
+                              "dontRefreshDuration": false,
+                              "cascadeMutators": false,
+                              "removeMutatorIfNotMatching": false,
+                              "matchLayersWithDamage": false,
+                              "mutationId": "Stun:PatHug",
+                              "countGlueAchievement": false,
+                              "lifespan": 6.0,
+                              "lifespanFrames": 0,
+                              "multiplier": 0.0,
+                              "chance": 0.0,
+                              "dontRemoveOnBloonDegrade": true,
+                              "Lifespan": 6.0,
+                              "Multiplier": 0.0,
+                              "overlayType": "Stun",
+                              "collisionPass": -1,
+                              "name": ""
+                            },
+                            {
+                              "$type": "Il2CppAssets.Scripts.Models.GenericBehaviors.DisplayModel, Assembly-CSharp",
+                              "display": {
+                                "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.PrefabReference, Il2CppNinjaKiwi.Common",
+                                "guidRef": null,
+                                "AssetGUID": null
+                              },
+                              "layer": 0,
+                              "positionOffset": {
+                                "$type": "Il2CppAssets.Scripts.Simulation.SMath.Vector3, Assembly-CSharp",
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": 0.0,
+                                "MagnitudeSquared": 0.0,
+                                "Magnitude": 0.0,
+                                "Rotation": 0.0,
+                                "SimToDispRotation": 180.0
+                              },
+                              "scale": 1.0,
+                              "ignoreRotation": false,
+                              "animationChanges": null,
+                              "delayedReveal": 0.0,
+                              "category": 16,
+                              "isAnimationPaused": false,
+                              "name": "DisplayModel_ProjectileDisplay"
+                            }
+                          ],
+                          "collisionPasses": [
+                            -1,
+                            0
+                          ],
+                          "canCollideWithBloons": true,
+                          "radius": 50.0,
+                          "vsBlockerRadius": 0.0,
+                          "hasDamageModifiers": false,
+                          "dontUseCollisionChecker": false,
+                          "checkCollisionInterval": 0.0,
+                          "checkCollisionIntervalFrames": 0,
+                          "ignoreNonTargetable": false,
+                          "ignorePierceExhaustion": false,
+                          "saveId": null,
+                          "displayModel": null,
+                          "cantCreateSubProjectiles": true,
+                          "CappedPierce": 40.0,
+                          "name": "ProjectileModel_SqueezeStun"
+                        },
+                        "emission": {
+                          "$type": "Il2CppAssets.Scripts.Models.Towers.Behaviors.Emissions.SingleEmissionModel, Assembly-CSharp",
+                          "behaviors": null,
+                          "name": ""
+                        },
+                        "fraction": 0.0,
+                        "durationfraction": -1.0,
+                        "canCreateInBetweenRounds": false,
+                        "collideOnSubProjectile": false,
+                        "passOnCollidedWith": false,
+                        "collisionPass": 0,
+                        "name": "CreateProjectileOnExhaustFractionModel_squeezieStun"
+                      },
+                      {
                         "$type": "Il2CppAssets.Scripts.Models.GenericBehaviors.DisplayModel, Assembly-CSharp",
                         "display": {
                           "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.PrefabReference, Il2CppNinjaKiwi.Common",
@@ -1968,6 +2119,7 @@
               "sharedGridRange": 0.0,
               "drawRangeCircle": false,
               "disableOnCreate": false,
+              "fixedRange": false,
               "name": "AttackModel_Attack_"
             }
           ],
