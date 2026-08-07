@@ -102,6 +102,7 @@
   },
   "doesntRotate": false,
   "hideInfoButton": false,
+  "bonusSelectionRadius": 0.0,
   "upgrades": [],
   "appliedUpgrades": [
     "Permafrost",
@@ -147,6 +148,7 @@
   "ignoreMaxSellPercent": false,
   "isStunned": false,
   "ignoreStun": false,
+  "isPrimedForRedeploy": false,
   "geraldoItemName": null,
   "sellbackModifierAdd": 0.0,
   "skinName": null,
@@ -167,6 +169,7 @@
   "isPowerTower": false,
   "isPowerProTower": false,
   "isGeraldoItem": false,
+  "BaseId": "IceMonkey",
   "IsBeastHandlerPet": false,
   "SelectParentOnSelected": false,
   "DisplayScale": 1.0,
@@ -1453,12 +1456,12 @@
                           "$type": "Il2CppAssets.Scripts.Models.Bloons.Behaviors.GrowBlockModel, Assembly-CSharp",
                           "name": "GrowBlockModel_FreezeGrowBlock"
                         },
-                        "applyAfterDamage": false,
+                        "applyAfterDamage": true,
                         "lifespan": 10.0,
                         "lifespanFrames": 0,
                         "Lifespan": 10.0,
                         "overlayType": "Ice",
-                        "collisionPass": -1,
+                        "collisionPass": 1,
                         "name": "FreezeModel_AbsoluteZero"
                       },
                       {
@@ -1573,7 +1576,8 @@
                     ],
                     "collisionPasses": [
                       -1,
-                      0
+                      0,
+                      1
                     ],
                     "canCollideWithBloons": true,
                     "radius": 9999999.0,

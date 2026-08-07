@@ -113,6 +113,7 @@
   },
   "doesntRotate": false,
   "hideInfoButton": false,
+  "bonusSelectionRadius": 0.0,
   "upgrades": [],
   "appliedUpgrades": [
     "Hard Thorns",
@@ -176,6 +177,7 @@
   "ignoreMaxSellPercent": false,
   "isStunned": false,
   "ignoreStun": false,
+  "isPrimedForRedeploy": false,
   "geraldoItemName": null,
   "sellbackModifierAdd": 0.0,
   "skinName": null,
@@ -196,6 +198,7 @@
   "isPowerTower": false,
   "isPowerProTower": false,
   "isGeraldoItem": false,
+  "BaseId": "Druid",
   "IsBeastHandlerPet": false,
   "SelectParentOnSelected": false,
   "DisplayScale": 1.0,
@@ -1109,7 +1112,7 @@
             "behaviors": [
               {
                 "$type": "Il2CppAssets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModel, Assembly-CSharp",
-                "damage": 55.0,
+                "damage": 70.0,
                 "maxDamage": 0.0,
                 "distributeToChildren": true,
                 "overrideDistributeBlocker": false,
@@ -1118,7 +1121,7 @@
                 "immuneBloonPropertiesOriginal": 0,
                 "ignoreImmunityDestroy": false,
                 "ignoreDamageMultipliers": false,
-                "CappedDamage": 55.0,
+                "CappedDamage": 70.0,
                 "collisionPass": 0,
                 "name": "DamageModel_BaseProjectile_"
               },
@@ -1153,7 +1156,7 @@
                   "Boss"
                 ],
                 "damageMultiplier": 1.0,
-                "damageAddative": 110.0,
+                "damageAddative": 130.0,
                 "mustIncludeAllTags": true,
                 "applyOverMaxDamage": true,
                 "ignoreTag": false,
@@ -1223,7 +1226,7 @@
                   "Grow"
                 ],
                 "damageMultiplier": 1.0,
-                "damageAddative": 55.0,
+                "damageAddative": 70.0,
                 "mustIncludeAllTags": false,
                 "applyOverMaxDamage": true,
                 "ignoreTag": false,
@@ -1662,6 +1665,7 @@
                   },
                   "doesntRotate": false,
                   "hideInfoButton": false,
+                  "bonusSelectionRadius": 0.0,
                   "upgrades": [],
                   "appliedUpgrades": [],
                   "targetTypes": [
@@ -1718,6 +1722,7 @@
                   "ignoreMaxSellPercent": false,
                   "isStunned": false,
                   "ignoreStun": false,
+                  "isPrimedForRedeploy": false,
                   "geraldoItemName": null,
                   "sellbackModifierAdd": 0.0,
                   "skinName": null,
@@ -1738,6 +1743,7 @@
                   "isPowerTower": false,
                   "isPowerProTower": false,
                   "isGeraldoItem": false,
+                  "BaseId": "DruidParagonTree",
                   "IsBeastHandlerPet": false,
                   "SelectParentOnSelected": false,
                   "DisplayScale": 1.0,
@@ -2790,7 +2796,7 @@
             "behaviors": [
               {
                 "$type": "Il2CppAssets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModel, Assembly-CSharp",
-                "damage": 55.0,
+                "damage": 70.0,
                 "maxDamage": 0.0,
                 "distributeToChildren": true,
                 "overrideDistributeBlocker": false,
@@ -2799,7 +2805,7 @@
                 "immuneBloonPropertiesOriginal": 0,
                 "ignoreImmunityDestroy": false,
                 "ignoreDamageMultipliers": false,
-                "CappedDamage": 55.0,
+                "CappedDamage": 70.0,
                 "collisionPass": 0,
                 "name": "DamageModel_BaseProjectile_"
               },
@@ -2834,7 +2840,7 @@
                   "Boss"
                 ],
                 "damageMultiplier": 1.0,
-                "damageAddative": 110.0,
+                "damageAddative": 130.0,
                 "mustIncludeAllTags": true,
                 "applyOverMaxDamage": true,
                 "ignoreTag": false,
@@ -2904,7 +2910,7 @@
                   "Grow"
                 ],
                 "damageMultiplier": 1.0,
-                "damageAddative": 55.0,
+                "damageAddative": 70.0,
                 "mustIncludeAllTags": false,
                 "applyOverMaxDamage": true,
                 "ignoreTag": false,
@@ -3310,6 +3316,35 @@
       "IsPassive": false,
       "Cooldown": 9.0,
       "name": "AbilityModel_AbilityPrimordialWrath"
+    },
+    {
+      "$type": "Il2CppAssets.Scripts.Models.Towers.Behaviors.AddBehaviorToBloonInZoneModel, Assembly-CSharp",
+      "zoneRadius": 9999999.0,
+      "mutationId": "GrowBlock",
+      "isUnique": true,
+      "behaviors": [
+        {
+          "$type": "Il2CppAssets.Scripts.Models.Bloons.Behaviors.GrowBlockModel, Assembly-CSharp",
+          "name": ""
+        }
+      ],
+      "filters": [
+        {
+          "$type": "Il2CppAssets.Scripts.Models.Towers.Filters.FilterWithTagModel, Assembly-CSharp",
+          "moabTag": false,
+          "camoTag": false,
+          "growTag": true,
+          "fortifiedTag": false,
+          "tag": "Grow",
+          "inclusive": false,
+          "hasMoabTag": false,
+          "name": ""
+        }
+      ],
+      "bindRadiusToTowerRange": false,
+      "radiusOffset": 0.0,
+      "overlayType": "GrowBlock",
+      "name": ""
     },
     {
       "$type": "Il2CppAssets.Scripts.Models.GenericBehaviors.DisplayModel, Assembly-CSharp",

@@ -89,6 +89,7 @@
   },
   "doesntRotate": false,
   "hideInfoButton": false,
+  "bonusSelectionRadius": 0.0,
   "upgrades": [
     {
       "$type": "Il2CppAssets.Scripts.Models.Towers.Upgrades.UpgradePathModel, Assembly-CSharp",
@@ -164,6 +165,7 @@
   "ignoreMaxSellPercent": false,
   "isStunned": false,
   "ignoreStun": false,
+  "isPrimedForRedeploy": false,
   "geraldoItemName": null,
   "sellbackModifierAdd": 0.0,
   "skinName": null,
@@ -184,6 +186,7 @@
   "isPowerTower": false,
   "isPowerProTower": false,
   "isGeraldoItem": false,
+  "BaseId": "EngineerMonkey",
   "IsBeastHandlerPet": false,
   "SelectParentOnSelected": false,
   "DisplayScale": 1.0,
@@ -235,30 +238,144 @@
   "behaviors": [
     {
       "$type": "Il2CppAssets.Scripts.Models.Towers.Behaviors.CreateEffectOnSellModel, Assembly-CSharp",
-      "effectModel": null,
+      "effectModel": {
+        "$type": "Il2CppAssets.Scripts.Models.Effects.EffectModel, Assembly-CSharp",
+        "assetId": {
+          "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.PrefabReference, Il2CppNinjaKiwi.Common",
+          "guidRef": "b1dec8a8d79593843bc2e2410eae944e",
+          "AssetGUID": "b1dec8a8d79593843bc2e2410eae944e"
+        },
+        "scale": 1.0,
+        "lifespan": 1.0,
+        "fullscreen": 0,
+        "useCenterPosition": false,
+        "useTransformPosition": false,
+        "useTransfromRotation": false,
+        "destroyOnTransformDestroy": false,
+        "alwaysUseAge": false,
+        "useRoundTime": false,
+        "name": "EffectModel_SellEffect"
+      },
       "name": "CreateEffectOnSellModel_EngineerMonkey-401"
     },
     {
       "$type": "Il2CppAssets.Scripts.Models.Towers.Behaviors.CreateEffectOnPlaceModel, Assembly-CSharp",
-      "effectModel": null,
+      "effectModel": {
+        "$type": "Il2CppAssets.Scripts.Models.Effects.EffectModel, Assembly-CSharp",
+        "assetId": {
+          "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.PrefabReference, Il2CppNinjaKiwi.Common",
+          "guidRef": "d2bcad0f16bb76e408a107e13b2c0da3",
+          "AssetGUID": "d2bcad0f16bb76e408a107e13b2c0da3"
+        },
+        "scale": 1.0,
+        "lifespan": 6.0,
+        "fullscreen": 0,
+        "useCenterPosition": false,
+        "useTransformPosition": false,
+        "useTransfromRotation": false,
+        "destroyOnTransformDestroy": false,
+        "alwaysUseAge": false,
+        "useRoundTime": false,
+        "name": "EffectModel_PlacementEffect"
+      },
       "name": "CreateEffectOnPlaceModel_EngineerMonkey-401"
     },
     {
       "$type": "Il2CppAssets.Scripts.Models.Towers.Behaviors.CreateSoundOnUpgradeModel, Assembly-CSharp",
-      "sound": null,
-      "sound1": null,
-      "sound2": null,
-      "sound3": null,
-      "sound4": null,
-      "sound5": null,
-      "sound6": null,
-      "sound7": null,
-      "sound8": null,
+      "sound": {
+        "$type": "Il2CppAssets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
+        "assetId": {
+          "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.AudioClipReference, Il2CppNinjaKiwi.Common",
+          "guidRef": "f91dc7ea1b37815459e81e99254863ab",
+          "AssetGUID": "f91dc7ea1b37815459e81e99254863ab"
+        },
+        "name": "SoundModel_TowerUpgrade"
+      },
+      "sound1": {
+        "$type": "Il2CppAssets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
+        "assetId": {
+          "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.AudioClipReference, Il2CppNinjaKiwi.Common",
+          "guidRef": "f91dc7ea1b37815459e81e99254863ab",
+          "AssetGUID": "f91dc7ea1b37815459e81e99254863ab"
+        },
+        "name": "SoundModel_TowerUpgrade"
+      },
+      "sound2": {
+        "$type": "Il2CppAssets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
+        "assetId": {
+          "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.AudioClipReference, Il2CppNinjaKiwi.Common",
+          "guidRef": "f91dc7ea1b37815459e81e99254863ab",
+          "AssetGUID": "f91dc7ea1b37815459e81e99254863ab"
+        },
+        "name": "SoundModel_TowerUpgrade"
+      },
+      "sound3": {
+        "$type": "Il2CppAssets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
+        "assetId": {
+          "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.AudioClipReference, Il2CppNinjaKiwi.Common",
+          "guidRef": "f91dc7ea1b37815459e81e99254863ab",
+          "AssetGUID": "f91dc7ea1b37815459e81e99254863ab"
+        },
+        "name": "SoundModel_TowerUpgrade"
+      },
+      "sound4": {
+        "$type": "Il2CppAssets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
+        "assetId": {
+          "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.AudioClipReference, Il2CppNinjaKiwi.Common",
+          "guidRef": "f91dc7ea1b37815459e81e99254863ab",
+          "AssetGUID": "f91dc7ea1b37815459e81e99254863ab"
+        },
+        "name": "SoundModel_TowerUpgrade"
+      },
+      "sound5": {
+        "$type": "Il2CppAssets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
+        "assetId": {
+          "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.AudioClipReference, Il2CppNinjaKiwi.Common",
+          "guidRef": "f91dc7ea1b37815459e81e99254863ab",
+          "AssetGUID": "f91dc7ea1b37815459e81e99254863ab"
+        },
+        "name": "SoundModel_TowerUpgrade"
+      },
+      "sound6": {
+        "$type": "Il2CppAssets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
+        "assetId": {
+          "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.AudioClipReference, Il2CppNinjaKiwi.Common",
+          "guidRef": "f91dc7ea1b37815459e81e99254863ab",
+          "AssetGUID": "f91dc7ea1b37815459e81e99254863ab"
+        },
+        "name": "SoundModel_TowerUpgrade"
+      },
+      "sound7": {
+        "$type": "Il2CppAssets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
+        "assetId": {
+          "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.AudioClipReference, Il2CppNinjaKiwi.Common",
+          "guidRef": "f91dc7ea1b37815459e81e99254863ab",
+          "AssetGUID": "f91dc7ea1b37815459e81e99254863ab"
+        },
+        "name": "SoundModel_TowerUpgrade"
+      },
+      "sound8": {
+        "$type": "Il2CppAssets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
+        "assetId": {
+          "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.AudioClipReference, Il2CppNinjaKiwi.Common",
+          "guidRef": "f91dc7ea1b37815459e81e99254863ab",
+          "AssetGUID": "f91dc7ea1b37815459e81e99254863ab"
+        },
+        "name": "SoundModel_TowerUpgrade"
+      },
       "name": "CreateSoundOnUpgradeModel_EngineerMonkey-401"
     },
     {
       "$type": "Il2CppAssets.Scripts.Models.Towers.Behaviors.CreateSoundOnSellModel, Assembly-CSharp",
-      "sound": null,
+      "sound": {
+        "$type": "Il2CppAssets.Scripts.Models.Audio.SoundModel, Assembly-CSharp",
+        "assetId": {
+          "$type": "Il2CppNinjaKiwi.Common.ResourceUtils.AudioClipReference, Il2CppNinjaKiwi.Common",
+          "guidRef": "a8c789893d4275749af12c1efda9dd3e",
+          "AssetGUID": "a8c789893d4275749af12c1efda9dd3e"
+        },
+        "name": "SoundModel_UISell"
+      },
       "name": "CreateSoundOnSellModel_EngineerMonkey-401"
     },
     {
@@ -656,6 +773,7 @@
                   },
                   "doesntRotate": false,
                   "hideInfoButton": false,
+                  "bonusSelectionRadius": 0.0,
                   "upgrades": [],
                   "appliedUpgrades": [],
                   "targetTypes": [
@@ -712,6 +830,7 @@
                   "ignoreMaxSellPercent": false,
                   "isStunned": false,
                   "ignoreStun": false,
+                  "isPrimedForRedeploy": false,
                   "geraldoItemName": null,
                   "sellbackModifierAdd": 0.0,
                   "skinName": null,
@@ -732,6 +851,7 @@
                   "isPowerTower": false,
                   "isPowerProTower": false,
                   "isGeraldoItem": false,
+                  "BaseId": "SentryCrushing",
                   "IsBeastHandlerPet": false,
                   "SelectParentOnSelected": false,
                   "DisplayScale": 1.0,
@@ -1291,6 +1411,7 @@
                   },
                   "doesntRotate": false,
                   "hideInfoButton": false,
+                  "bonusSelectionRadius": 0.0,
                   "upgrades": [],
                   "appliedUpgrades": [],
                   "targetTypes": [
@@ -1347,6 +1468,7 @@
                   "ignoreMaxSellPercent": false,
                   "isStunned": false,
                   "ignoreStun": false,
+                  "isPrimedForRedeploy": false,
                   "geraldoItemName": null,
                   "sellbackModifierAdd": 0.0,
                   "skinName": null,
@@ -1367,6 +1489,7 @@
                   "isPowerTower": false,
                   "isPowerProTower": false,
                   "isGeraldoItem": false,
+                  "BaseId": "SentryBoom",
                   "IsBeastHandlerPet": false,
                   "SelectParentOnSelected": false,
                   "DisplayScale": 1.0,
@@ -2083,6 +2206,7 @@
                   },
                   "doesntRotate": false,
                   "hideInfoButton": false,
+                  "bonusSelectionRadius": 0.0,
                   "upgrades": [],
                   "appliedUpgrades": [],
                   "targetTypes": [
@@ -2139,6 +2263,7 @@
                   "ignoreMaxSellPercent": false,
                   "isStunned": false,
                   "ignoreStun": false,
+                  "isPrimedForRedeploy": false,
                   "geraldoItemName": null,
                   "sellbackModifierAdd": 0.0,
                   "skinName": null,
@@ -2159,6 +2284,7 @@
                   "isPowerTower": false,
                   "isPowerProTower": false,
                   "isGeraldoItem": false,
+                  "BaseId": "SentryCold",
                   "IsBeastHandlerPet": false,
                   "SelectParentOnSelected": false,
                   "DisplayScale": 1.0,
@@ -2982,6 +3108,7 @@
                   },
                   "doesntRotate": false,
                   "hideInfoButton": false,
+                  "bonusSelectionRadius": 0.0,
                   "upgrades": [],
                   "appliedUpgrades": [],
                   "targetTypes": [
@@ -3038,6 +3165,7 @@
                   "ignoreMaxSellPercent": false,
                   "isStunned": false,
                   "ignoreStun": false,
+                  "isPrimedForRedeploy": false,
                   "geraldoItemName": null,
                   "sellbackModifierAdd": 0.0,
                   "skinName": null,
@@ -3058,6 +3186,7 @@
                   "isPowerTower": false,
                   "isPowerProTower": false,
                   "isGeraldoItem": false,
+                  "BaseId": "SentryEnergy",
                   "IsBeastHandlerPet": false,
                   "SelectParentOnSelected": false,
                   "DisplayScale": 1.0,

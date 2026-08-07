@@ -144,6 +144,7 @@
   },
   "doesntRotate": false,
   "hideInfoButton": false,
+  "bonusSelectionRadius": 0.0,
   "upgrades": [
     {
       "$type": "Il2CppAssets.Scripts.Models.Towers.Upgrades.UpgradePathModel, Assembly-CSharp",
@@ -225,6 +226,7 @@
   "ignoreMaxSellPercent": false,
   "isStunned": false,
   "ignoreStun": false,
+  "isPrimedForRedeploy": false,
   "geraldoItemName": null,
   "sellbackModifierAdd": 0.0,
   "skinName": null,
@@ -245,6 +247,7 @@
   "isPowerTower": false,
   "isPowerProTower": false,
   "isGeraldoItem": false,
+  "BaseId": "Silas",
   "IsBeastHandlerPet": false,
   "SelectParentOnSelected": false,
   "DisplayScale": 1.0,
@@ -687,7 +690,7 @@
     },
     {
       "$type": "Il2CppAssets.Scripts.Models.Towers.Behaviors.ScaleHeroXpWithTowerCountModel, Assembly-CSharp",
-      "towerIds": "IceMonkey",
+      "towerIds": "IceMonkey,Skywarden",
       "tier": 3,
       "percentPerTower": 5,
       "maxPercent": 50,
@@ -2662,7 +2665,7 @@
         },
         {
           "$type": "Il2CppAssets.Scripts.Models.Towers.Behaviors.Abilities.Behaviors.FrozenCascadeModel, Assembly-CSharp",
-          "towerId": "IceMonkey",
+          "towerId": "IceMonkey,Skywarden",
           "maxExplosions": 10,
           "timeScale": 2.0,
           "emission": {
@@ -3634,6 +3637,7 @@
       "additive": 5.0,
       "mutatorId": "IceHero:IceMonkeyRange",
       "isUnique": true,
+      "maxStacks": 0,
       "filters": [
         {
           "$type": "Il2CppAssets.Scripts.Models.Towers.TowerFilters.FilterInBaseTowerIdModel, Assembly-CSharp",
@@ -3647,9 +3651,9 @@
       "isCustomRadius": false,
       "customRadius": 0.0,
       "appliesToOwningTower": false,
-      "showBuffIcon": false,
-      "buffLocsName": "",
-      "buffIconName": "",
+      "showBuffIcon": true,
+      "buffLocsName": "BuffIconSilasRange",
+      "buffIconName": "BuffIconSilasRange",
       "maxStackSize": 0,
       "onlyShowBuffIfMutated": false,
       "onlyAffectParagon": false,
@@ -3744,7 +3748,8 @@
         {
           "$type": "Il2CppAssets.Scripts.Models.Towers.TowerFilters.FilterTowerBehaviorModel, Assembly-CSharp",
           "towerBehaviors": [
-            "FreezeModel"
+            "FreezeModel",
+            "ChilledModel"
           ],
           "isInclusive": true,
           "requiresAllBehaviors": false,
@@ -3800,6 +3805,44 @@
     {
       "$type": "Il2CppAssets.Scripts.Models.Towers.Behaviors.SilasIceMonkeyUpgradeLockModel, Assembly-CSharp",
       "name": "SilasIceMonkeyUpgradeLockModel_Tier5MonkeySupport_"
+    },
+    {
+      "$type": "Il2CppAssets.Scripts.Models.Towers.Behaviors.RangeSupportModel, Assembly-CSharp",
+      "multiplier": 0.1,
+      "additive": 0.0,
+      "mutatorId": "SilasColdchainRangeBuff",
+      "isUnique": true,
+      "maxStacks": 0,
+      "filters": [
+        {
+          "$type": "Il2CppAssets.Scripts.Models.Towers.TowerFilters.FilterInBaseTowerIdModel, Assembly-CSharp",
+          "baseIds": [
+            "Skywarden"
+          ],
+          "name": ""
+        },
+        {
+          "$type": "Il2CppAssets.Scripts.Models.Towers.TowerFilters.FilterInTowerTiersModel, Assembly-CSharp",
+          "path1MinTier": 0,
+          "path1MaxTier": 9999999,
+          "path2MinTier": 0,
+          "path2MaxTier": 9999999,
+          "path3MinTier": 3,
+          "path3MaxTier": 9999999,
+          "name": ""
+        }
+      ],
+      "isGlobal": true,
+      "isCustomRadius": false,
+      "customRadius": 0.0,
+      "appliesToOwningTower": false,
+      "showBuffIcon": true,
+      "buffLocsName": "BuffIconSilasRange",
+      "buffIconName": "BuffIconSilasRange",
+      "maxStackSize": 0,
+      "onlyShowBuffIfMutated": false,
+      "onlyAffectParagon": false,
+      "name": "RangeSupportModel_RangeSupportSkywarden_SilasColdchainRange"
     },
     {
       "$type": "Il2CppAssets.Scripts.Models.GenericBehaviors.DisplayModel, Assembly-CSharp",
